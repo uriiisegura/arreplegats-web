@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 class Home extends Component {
 	render() {
 		return (<>
-			<section className="welcome-image">
+			<section className="welcome-image" style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}>
 				<div className="overlay"></div>
 				<div className="content">
 					<h1>ARREPLEGATS</h1>
@@ -16,9 +16,9 @@ class Home extends Component {
 				<h4>Els millors castells</h4>
 				<div className="top-gallery">
 					<div style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}></div>
-					<div style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}></div>
-					<div style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}></div>
-					<div style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}></div>
+					<div style={{backgroundImage: `url('images/pd7fmC-arreplegats-2022.jpg')`}}></div>
+					<div style={{backgroundImage: `url('images/4d8-arreplegats.jfif')`}}></div>
+					<div style={{backgroundImage: `url('images/9d7-arreplegats_2.jpg')`}}></div>
 				</div>
 			</section>
 		</>);

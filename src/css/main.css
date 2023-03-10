@@ -67,6 +67,9 @@ html {
     --transition: 0.3s ease-in-out all;
     --fixed-width: 600px;
     --overlay: rgba(0, 0, 0, 0.4);
+    --page-width: 80vw;
+    --navbar-height: 5rem;
+    --footer-height: 4rem;
 
     /* box shadow*/
     --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -283,11 +286,11 @@ Navbar
     align-items: center;
     background-color: var(--primary-600);
     z-index: 99999;
-    height: 6rem;
+    height: var(--navbar-height);
 }
 
 .nav-center {
-    width: 90vw;
+    width: var(--page-width);
     display: flex;
     align-items: center;
 }
@@ -333,7 +336,7 @@ Navbar
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: 6rem;
+    height: var(--navbar-height);
 }
 
 .nav-link {
@@ -365,7 +368,7 @@ Footer
 */
 
 .page-footer {
-    height: 4rem;
+    height: var(--footer-height);
     text-align: center;
     background: var(--black);
     color: var(--white);
@@ -390,11 +393,11 @@ Page
 */
 
 .page {
-    min-height: calc(100vh - (6rem + 4rem));
+    min-height: calc(100vh - (var(--navbar-height) + var(--footer-height)));
 }
 
 section {
-    width: 90vw;
+    width: var(--page-width);
     margin: 0 auto;
     padding: 2rem 0;
 }
@@ -413,8 +416,7 @@ Home
 */
 
 .welcome-image {
-    height: calc(100vh - 6rem);
-    background-image: url('../../public/images/2d8fm-arreplegats-2016_2.png');
+    height: calc(100vh - 5rem);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -435,7 +437,7 @@ Home
 .content {
     position: absolute;
     top: 25%;
-    left: 5vw;
+    left: calc((100vw - var(--page-width)) / 2);
     color: var(--white);
     z-index: 3;
 }
@@ -477,6 +479,9 @@ Home
 .top-gallery div {
     width: 100%;
     aspect-ratio: 0.7;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*
