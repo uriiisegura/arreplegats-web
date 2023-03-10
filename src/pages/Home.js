@@ -1,5 +1,7 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+
+import CastellCard from "../components/CastellCard";
 
 class Home extends Component {
 	render() {
@@ -15,10 +17,22 @@ class Home extends Component {
 			<section className="top-castells">
 				<h4>Els millors castells</h4>
 				<div className="top-gallery">
-					<div style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}></div>
-					<div style={{backgroundImage: `url('images/pd7fmC-arreplegats-2022.jpg')`}}></div>
-					<div style={{backgroundImage: `url('images/4d8-arreplegats.jfif')`}}></div>
-					<div style={{backgroundImage: `url('images/9d7-arreplegats_2.jpg')`}}></div>
+					<CastellCard
+						name="Torre de 8 amb folre i manilles"
+						link="images/2d8fm-arreplegats-2016_2.png"
+						/>
+					<CastellCard
+						name="Pilar de 7 amb folre i manilles"
+						link="images/pd7fmC-arreplegats-2022.jpg"
+						/>
+					<CastellCard
+						name="4 de 8 sense folre"
+						link="images/4d8-arreplegats.jfif"
+						/>
+					<CastellCard
+						name="9 de 7"
+						link="images/9d7-arreplegats_2.jpg"
+						/>
 				</div>
 			</section>
 		</>);

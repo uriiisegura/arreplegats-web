@@ -477,12 +477,37 @@ Home
     gap: 10px;
 }
 
-.top-gallery div {
+.castell-card {
     width: 100%;
     aspect-ratio: 0.7;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.castell-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-600);
+    padding: 10%;
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+.castell-link p {
+    font-family: 'Montserrat';
+    font-size: 2rem;
+    text-align: center;
+    color: var(--white);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.castell-card:hover .castell-link {
+    transform: none;
 }
 
 /*
