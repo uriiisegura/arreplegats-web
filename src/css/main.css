@@ -439,6 +439,7 @@ Home
     top: 25%;
     left: calc((100vw - var(--page-width)) / 2);
     color: var(--white);
+    user-select: none;
     z-index: 3;
 }
 .content * {
