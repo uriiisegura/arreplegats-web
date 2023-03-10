@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/arreplegats-web/static/css/main.073c9b0a.css",
-    "main.js": "/arreplegats-web/static/js/main.042ec9e6.js",
+    "main.css": "/arreplegats-web/static/css/main.c51c2056.css",
+    "main.js": "/arreplegats-web/static/js/main.fbb17b45.js",
     "static/js/787.055a36b5.chunk.js": "/arreplegats-web/static/js/787.055a36b5.chunk.js",
-    "static/media/logo.svg": "/arreplegats-web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/2d8fm-arreplegats-2016_2.png": "/arreplegats-web/static/media/2d8fm-arreplegats-2016_2.3108b84f695322ac89ba.png",
     "index.html": "/arreplegats-web/index.html",
-    "main.073c9b0a.css.map": "/arreplegats-web/static/css/main.073c9b0a.css.map",
-    "main.042ec9e6.js.map": "/arreplegats-web/static/js/main.042ec9e6.js.map",
+    "main.c51c2056.css.map": "/arreplegats-web/static/css/main.c51c2056.css.map",
+    "main.fbb17b45.js.map": "/arreplegats-web/static/js/main.fbb17b45.js.map",
     "787.055a36b5.chunk.js.map": "/arreplegats-web/static/js/787.055a36b5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.042ec9e6.js"
+    "static/css/main.c51c2056.css",
+    "static/js/main.fbb17b45.js"
   ]
 }
