@@ -499,13 +499,21 @@ Footer
     justify-content: center;
 }
 
-.page-footer p {
-    margin-bottom: 0;
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
 }
-
-.footer-logo,
-.page-footer a {
-    color: var(--primary-500);
+.social-media .icon {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+}
+.social-media .icon img {
+    filter: invert(1);
+    width: 100%;
 }
 
 /*
