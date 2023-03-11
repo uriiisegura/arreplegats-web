@@ -15,14 +15,63 @@ class Navbar extends Component {
 							Zona Universitària
 						</h3>
 					</div>
-					<div className="nav-links">
-						<NavLink to="/a" className="nav-link">AZU's</NavLink>
-						<NavLink to="/b" className="nav-link">Agenda</NavLink>
-						<NavLink to="/c" className="nav-link">Notícies</NavLink>
-						<NavLink to="/d" className="nav-link">Mèdia</NavLink>
-						<NavLink to="/e" className="nav-link">Contacte</NavLink>
-						<NavLink to="/f" className="nav-link">Contractacions</NavLink>
-					</div>
+					<ul className="nav-links">
+						<li className="nav-link">
+                            <NavLink to="/a">AZU's</NavLink>
+                            <div className="sub-menus">
+                                <div className="sub-menu">
+                                    <h4 className="sub-menu-title">La colla</h4>
+                                    <ul>
+                                        <li><NavLink to="/aa">Qui som?</NavLink></li>
+                                        <li><NavLink to="/ab">Gralles i tabals</NavLink></li>
+                                        <li><NavLink to="/ac">Vida universitària</NavLink></li>
+                                    </ul>
+                                </div>
+                                <div className="sub-menu">
+                                    <h4 className="sub-menu-title">Història</h4>
+                                    <ul>
+                                        <li><NavLink to="/ad">Història de la colla</NavLink></li>
+                                        <li><NavLink to="/ae">Llista de caps de colla</NavLink></li>
+                                        <li><NavLink to="/af">Llista de presidents</NavLink></li>
+                                        <li><NavLink to="/ag">Els castells universitaris</NavLink></li>
+                                    </ul>
+                                </div>
+                                <div className="sub-menu">
+                                    <h4 className="sub-menu-title">Castells</h4>
+                                    <ul>
+                                        <li><NavLink to="/ah">Millors castells</NavLink></li>
+                                        <li><NavLink to="/ai">Millors diades</NavLink></li>
+                                        <li><NavLink to="/aj">Resum històric</NavLink></li>
+                                        <li><NavLink to="/ak">Llista de diades</NavLink></li>
+                                    </ul>
+                                </div>
+                                <div className="sub-menu">
+                                    <h4 className="sub-menu-title">Organizazió</h4>
+                                    <ul>
+                                        <li><NavLink to="/al">Junta tècnica</NavLink></li>
+                                        <li><NavLink to="/am">Junta directiva</NavLink></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+						<li className="nav-link"><NavLink to="/b">Agenda</NavLink></li>
+						<li className="nav-link"><NavLink to="/c">Notícies</NavLink></li>
+						<li className="nav-link">
+                            <NavLink to="/d">Mèdia</NavLink>
+                            <div className="sub-menus">
+                                <div className="sub-menu">
+                                    <h4 className="sub-menu-title">Arxius multimèdia</h4>
+                                    <ul>
+                                        <li><NavLink to="/ba">Fotografies</NavLink></li>
+                                        <li><NavLink to="/bb">Vídeos</NavLink></li>
+                                        <li><NavLink to="/bc">L'Arreplegator</NavLink></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+						<li className="nav-link"><NavLink to="/e">Contacte</NavLink></li>
+						<li className="nav-link"><NavLink to="/f">Contractacions</NavLink></li>
+					</ul>
 				</div>
 			</nav>
 		</>);

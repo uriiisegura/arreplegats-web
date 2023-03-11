@@ -344,7 +344,9 @@ Navbar
 
 .nav-link {
     text-align: center;
-    color: var(--black);
+    height: 100%;
+    display: flex;
+    align-items: center;
     font-size: 1rem;
     letter-spacing: var(--letterSpacing);
     margin-left: 2rem;
@@ -356,14 +358,55 @@ Navbar
 }
 .nav-link:hover,
 .nav-link.active {
-    color: var(--white);
     border-bottom: 3px solid var(--white);
+}
+
+.nav-link a {
+    color: var(--black);
+
+}
+.nav-link:hover > a,
+.nav-link.active > a {
+    color: var(--white);
 }
 
 @media screen and (max-width: 1150px) {
     .nav-links {
         display: none;
     }
+}
+
+.sub-menus {
+    display: none;
+    position: absolute;
+    background-color: var(--grey-100);
+    top: var(--navbar-height);
+    padding: 1rem;
+}
+.nav-link:hover .sub-menus {
+    display: flex;
+}
+
+.sub-menu-title {
+    font-size: 0.85rem;
+    margin-bottom: 0.9rem;
+    text-align: left;
+}
+
+.sub-menu {
+    margin-right: 30px;
+}
+.sub-menu:last-of-type {
+    margin-right: 0;
+}
+
+.sub-menu li {
+    text-align: left;
+    font-size: 0.8rem;
+}
+.sub-menu a:hover,
+.sub-menu a.active {
+    color: var(--primary-600);
 }
 
 /*
@@ -476,6 +519,11 @@ Home
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+section h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
 .top-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -484,7 +532,7 @@ Home
 
 .castell-card {
     width: 100%;
-    aspect-ratio: 0.7;
+    aspect-ratio: 0.6;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
