@@ -26,7 +26,7 @@ class Navbar extends Component {
                     </div>
 					<ul id="nav-links">
 						<li className="nav-link">
-                            <span>AZU's</span>
+                            <span>AZU's<img src="font-awesome/caret-down.svg" alt="" /></span>
                             <div className="sub-menus">
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">La colla</h4>
@@ -48,7 +48,7 @@ class Navbar extends Component {
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">Castells</h4>
                                     <ul>
-                                        <li><NavLink to="/ah">Millors castells</NavLink></li>
+                                        <li><NavLink to="/millors-castells">Millors castells</NavLink></li>
                                         <li><NavLink to="/ai">Millors diades</NavLink></li>
                                         <li><NavLink to="/aj">Resum històric</NavLink></li>
                                         <li><NavLink to="/ak">Llista de diades</NavLink></li>
@@ -66,7 +66,7 @@ class Navbar extends Component {
 						<li className="nav-link"><NavLink to="/b">Agenda</NavLink></li>
 						<li className="nav-link"><NavLink to="/c">Notícies</NavLink></li>
 						<li className="nav-link">
-                            <NavLink to="/d">Mèdia</NavLink>
+                            <span>Mèdia<img src="font-awesome/caret-down.svg" alt="" /></span>
                             <div className="sub-menus">
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">Arxius multimèdia</h4>

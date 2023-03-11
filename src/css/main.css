@@ -369,6 +369,12 @@ Navbar
     border-bottom: 3px solid var(--white);
 }
 
+.nav-link span img {
+    width: 10px;
+    margin-left: 7px;
+    margin-bottom: 2px;
+}
+
 .nav-link a {
     color: var(--black);
 
@@ -516,6 +522,19 @@ Footer
     width: 100%;
 }
 
+.twitter:hover {
+    filter: invert(57%) sepia(38%) saturate(1592%) hue-rotate(169deg) brightness(116%) contrast(90%);
+}
+.instagram:hover {
+    filter: invert(70%) sepia(20%) saturate(6318%) hue-rotate(299deg) brightness(87%) contrast(86%);
+}
+.youtube:hover {
+    filter: invert(82%) sepia(95%) saturate(7086%) hue-rotate(360deg) brightness(107%) contrast(119%);
+}
+.tiktok:hover {
+    filter: invert(72%) sepia(100%) saturate(7497%) hue-rotate(335deg) brightness(98%) contrast(108%);
+}
+
 /*
 =============== 
 Page
@@ -619,6 +638,21 @@ section h4 {
     margin-bottom: 1rem;
 }
 
+.floating-titles {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.floating-titles a {
+    font-size: 1rem;
+    color: var(--black);
+}
+.floating-titles a:hover {
+    color: var(--primary-600);
+    text-decoration: underline;
+}
+
 .top-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -635,7 +669,21 @@ section h4 {
     .top-gallery {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .floating-titles {
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    .floating-titles h4 {
+        margin-bottom: 0;
+    }
 }
+
+/*
+=============== 
+Castell Card
+===============
+*/
 
 .castell-card {
     width: 100%;
@@ -657,6 +705,7 @@ section h4 {
     transform: translateX(-100%);
     transition: var(--transition);
 }
+
 .castell-link p {
     font-family: 'Montserrat';
     font-size: 2rem;
@@ -668,6 +717,52 @@ section h4 {
 
 .castell-card:hover .castell-link {
     transform: none;
+}
+
+/*
+=============== 
+Error 404
+===============
+*/
+
+.error-page {
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.error-page h1 {
+    font-size: 9rem;
+    margin: 0;
+    font-family: 'Share Tech Mono';
+}
+
+.error-page h3 {
+    margin-bottom: 0;
+    font-family: 'Share Tech Mono';
+}
+
+/*
+=============== 
+Castell Top
+===============
+*/
+
+.top-img {
+    max-width: 40%;
+    max-height: 50vh;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+    .top-img {
+        max-width: unset;
+        max-height: unset;
+        width: 100%;
+        float: none;
+        margin: 0;
+        margin-bottom: 10px;
+    }
 }
 
 /*

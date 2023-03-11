@@ -1,0 +1,58 @@
+{
+    "Td8fm": {
+        "name": "Torre de 8 amb folre i manilles",
+        "notation": "Td8fm",
+        "link": "images/2d8fm-arreplegats-2016_2.png",
+        "text": [
+            ""
+        ]
+    },
+    "Pd7fm": {
+        "name": "Pilar de 7 amb folre i manilles",
+        "notation": "Pd7fm",
+        "link": "images/pd7fmC-arreplegats-2022.jpg",
+        "text": [
+            ""
+        ]
+    },
+    "4d8": {
+        "name": "4 de 8 sense folre",
+        "notation": "4d8",
+        "link": "images/4d8-arreplegats.jfif",
+        "text": [
+            ""
+        ]
+    },
+    "9d7": {
+        "name": "9 de 7",
+        "notation": "9d7",
+        "link": "images/9d7-arreplegats_2.jpg",
+        "text": [
+            ""
+        ]
+    },
+    "3d8f": {
+        "name": "3 de 8 amb folre",
+        "notation": "3d8f",
+        "link": "images/3d8f-arreplegats.jfif",
+        "text": [
+            ""
+        ]
+    },
+    "3d7s": {
+        "name": "3 de 7 per sota",
+        "notation": "3d7s",
+        "link": "images/3d7ps-arreplegats.png",
+        "text": [
+            ""
+        ]
+    },
+    "5d7": {
+        "name": "5 de 7",
+        "notation": "5d7",
+        "link": "images/5d7-arreplegats.png",
+        "text": [
+            ""
+        ]
+    }
+}

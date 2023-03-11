@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-
 import CastellCard from "../components/CastellCard";
+import castells_map from "./../data/castells-top.json";
 
 class Home extends Component {
 	render() {
@@ -15,24 +15,20 @@ class Home extends Component {
 				</div>
 			</section>
 			<section className="top-castells">
-				<h4>Els millors castells</h4>
+                <div className="floating-titles">
+                    <h4>Els millors castells</h4>
+                    <NavLink to="/millors-castells">Descobreix-los tots!</NavLink>
+                </div>
 				<div className="top-gallery">
-					<CastellCard
-						name="Torre de 8 amb folre i manilles"
-						link="images/2d8fm-arreplegats-2016_2.png"
-						/>
-					<CastellCard
-						name="Pilar de 7 amb folre i manilles"
-						link="images/pd7fmC-arreplegats-2022.jpg"
-						/>
-					<CastellCard
-						name="4 de 8 sense folre"
-						link="images/4d8-arreplegats.jfif"
-						/>
-					<CastellCard
-						name="9 de 7"
-						link="images/9d7-arreplegats_2.jpg"
-						/>
+                    {
+                        Object.values(castells_map).slice(0, 4).map(e => {
+                            return <CastellCard
+                                name={e.name}
+                                link={e.link}
+                                notation={e.notation}
+                            />
+                        })
+                    }
 				</div>
 			</section>
 		</>);
