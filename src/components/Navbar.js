@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 class Navbar extends Component {
+    expandMobile() {
+        const nav = document.getElementById('nav-links');
+        nav.classList.toggle('show');
+    }
 	render() {
 		return (<>
 			<nav className="navbar">
@@ -15,9 +19,14 @@ class Navbar extends Component {
 							Zona Universitària
 						</h3>
 					</div>
-					<ul className="nav-links">
+                    <div className="nav-btn">
+                        <button onClick={this.expandMobile}>
+                            <img src="font-awesome/align-justify.svg" alt="" />
+                        </button>
+                    </div>
+					<ul id="nav-links">
 						<li className="nav-link">
-                            <NavLink to="/a">AZU's</NavLink>
+                            <span>AZU's</span>
                             <div className="sub-menus">
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">La colla</h4>

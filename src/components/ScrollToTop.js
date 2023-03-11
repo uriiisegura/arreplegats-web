@@ -8,6 +8,9 @@ function ScrollToTop() {
 		window.scrollTo(0, 0);
 	}, [pathname]);
 
+    const nav = document.getElementById('nav-links');
+    nav.classList.remove('show');
+
 	return null;
 }
 

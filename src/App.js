@@ -9,8 +9,8 @@ import './css/normalize.css';
 function App() {
   return (<>
     <Router>
-      <ScrollToTop />
       <NavBar />
+      <ScrollToTop />
       <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />

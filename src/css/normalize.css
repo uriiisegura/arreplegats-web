@@ -375,3 +375,11 @@ template {
 ::-webkit-scrollbar-button {
     display: none;
 }
+
+/* Unordered list
+	 ========================================================================== */
+
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}

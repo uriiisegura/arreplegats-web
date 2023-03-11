@@ -7,7 +7,10 @@
 /* fonts */
 html {
     font-size: 100%;
-    overflow-x: hidden;
+}
+
+#root {
+    overflow-x: clip;
 }
 
 /* variables */
@@ -69,6 +72,7 @@ html {
     --fixed-width: 600px;
     --overlay: rgba(0, 0, 0, 0.4);
     --page-width: 80vw;
+    --mobile-width: 95vw;
     --navbar-height: 5rem;
     --footer-height: 4rem;
 
@@ -334,12 +338,16 @@ Navbar
     padding-left: 1.5px;
 }
 
-.nav-links {
+#nav-links {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     width: 100%;
     height: var(--navbar-height);
+}
+
+.nav-btn {
+    display: none;
 }
 
 .nav-link {
@@ -368,12 +376,6 @@ Navbar
 .nav-link:hover > a,
 .nav-link.active > a {
     color: var(--white);
-}
-
-@media screen and (max-width: 1150px) {
-    .nav-links {
-        display: none;
-    }
 }
 
 .sub-menus {
@@ -407,6 +409,78 @@ Navbar
 .sub-menu a:hover,
 .sub-menu a.active {
     color: var(--primary-600);
+}
+
+@media screen and (max-width: 1250px) {
+    .nav-center {
+        width: var(--mobile-width);
+    }
+
+    .nav-btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 3rem;
+        width: 100%;
+    }
+    .nav-btn button {
+        height: 100%;
+        aspect-ratio: 1;
+        background-color: var(--primary-600);
+        border: none;
+    }
+    .nav-btn button:focus {
+        outline: none;
+    }
+
+    .nav-btn img {
+        width: 100%;
+        max-width: none;
+    }
+
+    #nav-links {
+        display: block;
+        transform: translateY(calc(-100% - var(--navbar-height)));
+        height: auto;
+        position: absolute;
+        top: var(--navbar-height);
+        left: 0;
+        background-color: var(--white);/* TODO: sticky in front
+        transition: var(--transition);*/
+    }
+    #nav-links.show {
+        transform: none;
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 1rem 0;
+        width: 100%;
+    }
+    .nav-link:hover > a,
+    .nav-link.active > a {
+        color: var(--primary-600);
+    }
+
+    .sub-menus {
+        top: unset;
+        background-color: unset;
+        padding: 1rem 1rem 0;
+        width: 100%;
+        position: relative;
+    }
+    .nav-link:hover .sub-menus {
+        display: block;
+    }
+
+    .sub-menu {
+        margin-bottom: 2rem;
+    }
+    .sub-menu:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
 /*
@@ -457,6 +531,12 @@ h4 {
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 1250px) {
+    section {
+        width: var(--mobile-width);
+    }
+}
+
 /*
 =============== 
 Home
@@ -495,15 +575,22 @@ Home
     font-family: 'Montserrat';
 }
 
+@media screen and (max-width: 1250px) {
+    .content {
+        left: calc((100vw - var(--mobile-width)) / 2);
+    }
+}
+
 .content h1 {
-    font-size: 10rem;
+    font-size: 10vw;
     font-weight: 700;
     line-height: 0.8;
 }
 
 .content h3 {
-    font-size: 2.5rem;
+    font-size: 3.5vw;
     font-weight: 700;
+    margin-top: 10px;
     margin-bottom: 3rem;
 }
 
@@ -528,6 +615,18 @@ section h4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .top-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .top-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .castell-card {
