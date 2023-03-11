@@ -9,9 +9,10 @@ function ScrollToTop() {
 	}, [pathname]);
 
     const nav = document.getElementById('nav-links');
-    nav.classList.remove('show');
+    if (nav !== null)
+        nav.classList.remove('show');
 
-	return null;
+	return;
 }
 
 export default ScrollToTop;
