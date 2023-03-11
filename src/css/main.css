@@ -7,6 +7,7 @@
 /* fonts */
 html {
     font-size: 100%;
+    overflow-x: hidden;
 }
 
 /* variables */
@@ -310,6 +311,7 @@ Navbar
 .nav-header img {
     margin-right: 0.5rem;
     height: 3rem;
+    user-select: none;
 }
 
 .header-name {
@@ -320,6 +322,7 @@ Navbar
     margin: 0;
     height: 3rem;
     white-space: nowrap;
+    user-select: none;
 }
 .header-name span {
     font-weight: 700;
@@ -347,7 +350,9 @@ Navbar
     margin-left: 2rem;
     padding: 0 0.5rem;
     transition: var(--transition);
+    border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
+    user-select: none;
 }
 .nav-link:hover,
 .nav-link.active {
