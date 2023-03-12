@@ -5,9 +5,10 @@ class CastellCard extends Component {
 	render() {
 		return (
 			<div className="castell-card" style={{backgroundImage: `url(${this.props.link})`}}>
-				<NavLink to={`/castells/${this.props.notation}`}><div className="castell-link">
+				<div className="castell-link">
 					<p>{this.props.name}</p>
-				</div></NavLink>
+                    <NavLink to={`/castells/${this.props.notation}`}>Saber-ne més</NavLink>
+				</div>
 			</div>
 		);
 	}

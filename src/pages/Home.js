@@ -11,7 +11,7 @@ class Home extends Component {
 				<div className="content">
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
-					<NavLink to="/a" className="hero-btn">UNEIX-T'HI</NavLink>
+					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
 				</div>
 			</section>
 			<section className="top-castells">

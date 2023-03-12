@@ -17,7 +17,7 @@ class Castell extends Component {
 
 		return (<>
 			<section>
-                <h1>{data.name}</h1>
+                <h2>{data.name}</h2>
                 <img className="top-img" src={data.link} alt={data.name} />
                 {
                     data.text.map(e => {

@@ -12,7 +12,7 @@ class Navbar extends Component {
 				<div className="nav-center">
 					<div className="nav-header">
 						<NavLink to="/" className="nav-logo">
-							<img src="logo.png" alt="Arreplegats" />
+							<img src="icon.png" alt="Arreplegats" />
 						</NavLink>
 						<h3 className="header-name">
 							<span>Arreplegats</span> de la<br />

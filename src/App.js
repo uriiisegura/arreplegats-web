@@ -3,6 +3,7 @@ import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from "./pages/Home";
+import Uneixthi from "./pages/Uneixthi";
 import QuiSom from "./pages/QuiSom";
 import Assajos from "./pages/Assajos";
 import HistoriaDeLaColla from "./pages/HistoriaDeLaColla";
@@ -20,6 +21,7 @@ function App() {
       <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/uneixthi" element={<Uneixthi />} />
           <Route path="/qui-som" element={<QuiSom />} />
           <Route path="/assajos" element={<Assajos />} />
           <Route path="/historia-de-la-colla" element={<HistoriaDeLaColla />} />
