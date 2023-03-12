@@ -1009,33 +1009,39 @@ Resum històric
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1500px) {
     .resum-wrap {
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1000px) {
     .resum-wrap {
         grid-template-columns: repeat(5, 1fr);
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .resum-wrap {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .resum-wrap {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .resum-wrap {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .resum-wrap {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
