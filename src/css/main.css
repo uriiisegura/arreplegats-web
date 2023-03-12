@@ -487,6 +487,10 @@ Navbar
         color: var(--primary-600);
     }
 
+    .nav-link span {
+        cursor: pointer;
+    }
+
     .sub-menus {
         top: unset;
         background-color: unset;
@@ -1268,6 +1272,50 @@ select {
 @media screen and (max-width: 800px) {
     .diades-table {
         font-size: 0.8rem;
+    }
+}
+
+/*
+=============== 
+Millors diades
+===============
+*/
+
+.best-diades {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.best-diades th,
+.best-diades td {
+    padding: 5px;
+}
+
+.best-diades thead th {
+	background-color: var(--primary-700);
+	position: sticky;
+	top: var(--navbar-height);
+    border-top: 3px solid var(--backgroundColor);
+	color: #ffffff;
+}
+
+.best-diades tbody tr td:nth-child(1) {
+    text-align: right;
+    padding: 0 0 0 5px;
+}
+.best-diades tbody tr td:nth-child(2),
+.best-diades tbody tr td:nth-child(6) {
+    text-align: center;
+}
+
+.best-diades tbody tr:nth-child(even) {
+	background-color: var(--primary-200);
+}
+
+@media screen and (max-width: 800px) {
+    .best-diades {
+        font-size: 0.7rem;
     }
 }
 

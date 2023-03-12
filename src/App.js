@@ -12,6 +12,7 @@ import HistoriaDeLaColla from "./pages/HistoriaDeLaColla";
 import CapsDeColla from "./pages/CapsDeColla";
 import Presidents from "./pages/Presidents";
 import MillorsCastells from "./pages/MillorsCastells";
+import MillorsDiades from "./pages/MillorsDiades";
 import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
 import Castell from "./pages/Castell";
@@ -51,6 +52,7 @@ function App() {
           <Route path="/llista-de-caps-de-colla" element={<CapsDeColla />} />
           <Route path="/llista-de-presidents" element={<Presidents />} />
           <Route path="/millors-castells" element={<MillorsCastells />} />
+          <Route path="/millors-diades" element={<MillorsDiades {...exports} />} />
           <Route path="/castells/:castell" element={<Castell />} />
           <Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
           <Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />

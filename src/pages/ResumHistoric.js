@@ -152,8 +152,8 @@ class ResumHistoric extends Component {
 			return [key, castells_dict[key]];
 		});
 		castells.sort(function(a, b) {
-			let scoreA = puntuacions[a[0].replace('T','2')];
-			let scoreB = puntuacions[b[0].replace('T','2')];
+			let scoreA = puntuacions[a[0].replace('T','2')][0];
+			let scoreB = puntuacions[b[0].replace('T','2')][0];
 	
 			if (scoreA === undefined) {
 				const structure = parseInt(a[0].split('d')[0].replace('T','2').replace('P','1'));

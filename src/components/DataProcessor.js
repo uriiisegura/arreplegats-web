@@ -62,13 +62,13 @@ function DataProcessor(props) {
     const process_puntuacions = (data) => {
         let puntuacions_dict = {};
         data.forEach(castell => {
-            puntuacions_dict[castell.castell] = parseInt(castell["Descarregat"]);
+            puntuacions_dict[castell.castell] = [parseInt(castell["Descarregat"]), parseInt(castell["Carregat"])];
         });
-        puntuacions_dict["Pd3cam"] = 14;
-        puntuacions_dict["Pd4cam"] = 119;
-        puntuacions_dict["Vd5"] = 571;
-        puntuacions_dict["Vd6f"] = 1911;
-        puntuacions_dict["3d7+4d7"] = 2301;
+        puntuacions_dict["Pd3cam"] = [14, 14];
+        puntuacions_dict["Pd4cam"] = [119, 119];
+        puntuacions_dict["Vd5"] = [571, 571];
+        puntuacions_dict["Vd6f"] = [1911, 1911];
+        puntuacions_dict["3d7+4d7"] = [2301, 2301];
 
         return puntuacions_dict;
     };
