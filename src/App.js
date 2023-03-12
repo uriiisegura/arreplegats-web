@@ -13,6 +13,7 @@ import CapsDeColla from "./pages/CapsDeColla";
 import Presidents from "./pages/Presidents";
 import MillorsCastells from "./pages/MillorsCastells";
 import ResumHistoric from "./pages/ResumHistoric";
+import LlistaDeDiades from "./pages/LlistaDeDiades";
 import Castell from "./pages/Castell";
 import NotFound from "./pages/NotFound";
 import './css/main.css';
@@ -52,6 +53,7 @@ function App() {
           <Route path="/millors-castells" element={<MillorsCastells />} />
           <Route path="/castells/:castell" element={<Castell />} />
           <Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
+          <Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

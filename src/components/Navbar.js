@@ -52,7 +52,7 @@ class Navbar extends Component {
                                         <li><NavLink to="/millors-castells">Millors castells</NavLink></li>
                                         <li><NavLink to="/ai">Millors diades</NavLink></li>
                                         <li><NavLink to="/resum-historic">Resum històric</NavLink></li>
-                                        <li><NavLink to="/ak">Llista de diades</NavLink></li>
+                                        <li><NavLink to="/llista-de-diades">Llista de diades</NavLink></li>
                                     </ul>
                                 </div>
                                 <div className="sub-menu">

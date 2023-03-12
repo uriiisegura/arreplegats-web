@@ -1083,6 +1083,148 @@ Resum Card
 
 /*
 =============== 
+Llista de diades
+===============
+*/
+
+.llista-diades {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.llista-diades .filters {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.llista-diades .filters .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.llista-diades .filters input,
+.llista-diades .filters select,
+.llista-diades .filter-btn {
+	outline: none;
+	border-radius: 0;
+}
+
+.llista-diades .filters input,
+.llista-diades .filters select {
+	border: 1px solid var(--grey-400);
+    background-color: var(--grey-200);
+    color: var(--black);
+	padding: 5px 10px;
+}
+
+.select-arrow,
+select {
+    width: 100%;
+}
+
+.dblarrow {
+    margin-left: -20px;
+    display: inline-block;
+    pointer-events: none;
+}
+
+.dblarrow b {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid black;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.dblarrow i {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    display: block;
+    margin-bottom: -1px;
+}
+
+.llista-diades .filter-btn {
+    width: 100%;
+    margin: 1rem 0 2rem;
+	padding: 10px;
+    border: 0;
+    background-color: var(--primary-600);
+    color: var(--white);
+    cursor: pointer;
+    opacity: 0.85;
+}
+.llista-diades .filter-btn:hover {
+    opacity: 1;
+}
+
+.llista-diades h6 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--primary-600);
+    margin: 0;
+}
+
+.llista-diades .error {
+	color: #ff6b6b !important;
+}
+
+.llista-diades .hidden {
+    display: none;
+}
+
+.diades-table {
+    width: 100%;
+	border-collapse: separate;
+    border-spacing: 0;
+}
+
+.diades-table th,
+.diades-table td {
+	padding: 5px;
+}
+
+.diades-table thead th {
+	background-color: var(--primary-600);
+	position: sticky;
+	top: var(--navbar-height);
+    border-top: 3px solid var(--backgroundColor);
+	color: #ffffff;
+}
+
+.diades-table tbody tr td:nth-child(1) {
+    text-align: center;
+}
+
+.diades-table tbody tr.stripe {
+	background-color: var(--primary-200);
+}
+
+@media screen and (max-width: 800px) {
+    .llista-diades .filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .llista-diades .filters {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .diades-table {
+        font-size: 0.8rem;
+    }
+}
+
+/*
+=============== 
 
 ===============
 */
