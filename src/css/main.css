@@ -1123,9 +1123,14 @@ Resum Card
 .resum-card {
     background-color: transparent;
     perspective: 1000px;
+    user-select: none;
 }
 .resum-card:not(.locked-card) {
     cursor: pointer;
+}
+
+.locked-card {
+    cursor: not-allowed;
 }
 
 .resum-card-inner {
