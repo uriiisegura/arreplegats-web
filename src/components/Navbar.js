@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 class Navbar extends Component {
+    showHide(id) {
+        const submenu = document.getElementById(id);
+        console.log(submenu)
+        if (submenu !== null)
+            submenu.classList.toggle('active');
+    }
     expandMobile() {
         const nav = document.getElementById('nav-links');
         nav.classList.toggle('show');
@@ -25,9 +31,9 @@ class Navbar extends Component {
                         </button>
                     </div>
 					<ul id="nav-links">
-						<li className="nav-link">
+						<li onClick={() => this.showHide('azus')} className="nav-link">
                             <span>AZU's<img src="font-awesome/caret-down.svg" alt="" /></span>
-                            <div className="sub-menus">
+                            <div id="azus" className="sub-menus">
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">La colla</h4>
                                     <ul>
@@ -66,9 +72,9 @@ class Navbar extends Component {
                         </li>
 						<li className="nav-link"><NavLink to="/b">Agenda</NavLink></li>
 						<li className="nav-link"><NavLink to="/c">Notícies</NavLink></li>
-						<li className="nav-link">
+						<li onClick={() => this.showHide('media')} className="nav-link">
                             <span>Mèdia<img src="font-awesome/caret-down.svg" alt="" /></span>
-                            <div className="sub-menus">
+                            <div id="media" className="sub-menus">
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">Arxius multimèdia</h4>
                                     <ul>
@@ -81,6 +87,7 @@ class Navbar extends Component {
                         </li>
 						<li className="nav-link"><NavLink to="/e">Contacte</NavLink></li>
 						<li className="nav-link"><NavLink to="/f">Contractacions</NavLink></li>
+                        <li className="nav-link join-btn"><NavLink to="/uneixthi">Uneix-t'hi</NavLink></li>
 					</ul>
 				</div>
 			</nav>

@@ -1,6 +1,7 @@
 # TODO
 
 - [x] Write `Història de la colla`
+- [ ] Add `Vd6f`
 - [ ] Write `Td8fm`
 - [ ] Write `Pd7fm`
 - [ ] Write `4d8sf`
@@ -9,10 +10,10 @@
 - [ ] Write `3d7s`
 - [ ] Write `3d7+4d7`
 - [ ] Write `5d7`
-- [ ] Add `Vd6`
+- [ ] Write `Vd6f`
 - [x] Link icon in `CastellCard`
 - [x] Do `Uneix-t'hi`
-- [ ] `Uneix-t'hi` button in `NavBar`
+- [x] `Uneix-t'hi` button in `NavBar`
 - [x] Do `Llista de Caps de Colla`
 - [x] Do `Llista de Presidents`
 - [ ] Ask pictures for `Llista de Caps de Colla`
