@@ -21,7 +21,7 @@ html {
     --primary-300: hsl(165.3,77.8%,70%); /* #77eed1 */
     --primary-200: hsl(165.3,77.8%,60%); /* #4ae8c1 */
     --primary-500: hsl(165.3,77.8%,50%);
-    --primary-600: hsl(165.3,77.8%,40%);
+    --primary-600: hsl(165.3,77.8%,40%); /* #17b58e */
     --primary-700: hsl(165.3,77.8%,30%); /* #11886b */
     --primary-800: hsl(165.3,77.8%,20%); /* #0b5b47 */
     --primary-900: hsl(165.3,77.8%,10%);
@@ -377,11 +377,18 @@ Navbar
 
 .nav-link a {
     color: var(--black);
-
 }
 .nav-link:hover > a,
 .nav-link a.active {
     color: var(--white);
+}
+
+.nav-link > a,
+.nav-link > span {
+    color: var(--black);
+    display: block;
+    height: 100%;
+    line-height: var(--navbar-height);
 }
 
 .sub-menus {
@@ -429,6 +436,8 @@ Navbar
 }
 
 .join-btn a {
+    display: unset;
+    line-height: unset;
     color: var(--white) !important;
 }
 
@@ -482,9 +491,20 @@ Navbar
         margin: 1rem 0;
         width: 100%;
     }
+    .nav-link > span:hover,
     .nav-link:hover > a,
     .nav-link.active > a {
         color: var(--primary-600);
+    }
+    .nav-link > span:hover img {
+        filter: invert(46%) sepia(99%) saturate(330%) hue-rotate(115deg) brightness(102%) contrast(101%);
+    }
+
+    .nav-link > a,
+    .nav-link > span {
+        line-height: unset;
+        height: 100%;
+        width: 100%;
     }
 
     .nav-link span {
