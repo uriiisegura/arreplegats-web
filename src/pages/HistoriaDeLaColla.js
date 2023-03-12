@@ -25,7 +25,7 @@ class HistoriaDeLaColla extends Component {
                     La gran revolució va venir el 2010, quan ens atrevíem a portar a plaça les primeres manilles universitàries de la mà del <NavLink to="/castells/Pd7fm">pilar de 7 amb folre i manilles</NavLink>. El vam haver de deixar en carregat, però no ens vam rendir, i el maig del 2013 el descarregàvem finalment.
                 </p>
                 <p>
-                    No gaire més tard, l'hivern del 2014, vam portar a la Diada dels Ganàpies de la UAB el primer <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink> del món universitari, que veia com es feia història un altre cop en descarregar aquest castell fins aleshores inèdit. Aquell mateix desembre, pel nostre 19è Aniversari, sorpreníem el món sencer obrint plaça amb el <NavLink to="/castells/Vd6">vano de 6</NavLink>.
+                    No gaire més tard, l'hivern del 2014, vam portar a la Diada dels Ganàpies de la UAB el primer <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink> del món universitari, que veia com es feia història un altre cop en descarregar aquest castell fins aleshores inèdit. Aquell mateix desembre, pel nostre 19è Aniversari, sorpreníem el món sencer obrint plaça amb el <NavLink to="/castells/Vd6f">vano de 6</NavLink>.
                 </p>
             </section>
             <section className="image-divider" style={{backgroundImage: `url('images/pd7fm-construccio-2022.jpg')`}}></section>

@@ -1,7 +1,7 @@
 # TODO
 
 - [x] Write `Història de la colla`
-- [ ] Add `Vd6f`
+- [x] Add `Vd6f`
 - [ ] Write `Td8fm`
 - [ ] Write `Pd7fm`
 - [ ] Write `4d8sf`
@@ -20,8 +20,10 @@
 - [ ] Ask pictures for `Llista de Presidents`
 - [ ] Write `Llista de Caps de Colla`
 - [ ] Write `Llista de Presidents`
-- [ ] Second surname of `Laura Gimeno`
+- [x] Second surname of `Laura Gimeno`
 - [x] Do `Resum Històric`
 - [x] Do `Llista de Diades`
 - [ ] Do `L'Arreplegator`
 - [ ] Log in `L'Arreplegator` with APPsistència to view all numbers
+- [ ] Do `Fotografies`
+- [ ] Do `Vídeos`
