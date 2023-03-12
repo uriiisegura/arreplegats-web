@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import CastellCard from "../components/CastellCard";
+import Quote from "../components/Quote";
 import castells_map from "./../data/castells-top.json";
+import quotes from "./../data/quotes.json";
 
 class Home extends Component {
 	render() {
@@ -14,7 +16,7 @@ class Home extends Component {
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
 				</div>
 			</section>
-			<section className="top-castells">
+			<section>
                 <div className="floating-titles">
                     <h4>Els millors castells</h4>
                     <NavLink to="/millors-castells">Descobreix-los tots!</NavLink>
@@ -31,6 +33,19 @@ class Home extends Component {
                     }
 				</div>
 			</section>
+            <section>
+                <h4>Què n'opina la gent?</h4>
+                <div className="quotes">
+                    {
+                        quotes.map(e => {
+                            return <Quote
+                                quote={e.quote}
+                                author={e.author}
+                            />
+                        })
+                    }
+                </div>
+            </section>
 		</>);
 	}
 }

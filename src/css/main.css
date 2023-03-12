@@ -687,6 +687,18 @@ section h4 {
     }
 }
 
+.quotes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .quotes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 /*
 =============== 
 Castell Card
@@ -933,6 +945,51 @@ Person Card
 
 .person-card p {
     font-size: 0.8rem;
+}
+
+/*
+=============== 
+Quote
+===============
+*/
+
+.quote p {
+    text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+}
+.quote p::before,
+.quote p::after {
+    font-size: 2rem;
+}
+.quote p::before {
+    content: '«';
+}
+.quote p::after {
+    content: '»';
+}
+
+.quote h4 {
+    color: var(--primary-600);
+    text-align: center;
+    margin: 1.2rem 0 0;
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .quote p {
+        font-size: 1.2rem;
+    }
+
+    .quote p::before,
+    .quote p::after {
+        font-size: 1.6rem;
+    }
+
+    .quote h4 {
+        font-size: 1.3rem;
+    }
 }
 
 /*
