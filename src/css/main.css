@@ -31,8 +31,8 @@ html {
     --secondary-200: hsl(345.2,78%,80%);
     --secondary-300: hsl(345.2,78%,70%);
     --secondary-400: hsl(345.2,78%,60%);
-    --secondary-500: hsl(345.2,78%,50%);
-    --secondary-600: hsl(345.2,78%,40%);
+    --secondary-500: hsl(345.2,78%,50%); /* #e31c4d */
+    --secondary-600: hsl(345.2,78%,40%); /* #b6163e */
     --secondary-700: hsl(345.2,78%,30%);
     --secondary-800: hsl(345.2,78%,20%);
     --secondary-900: hsl(345.2,78%,10%);
@@ -1377,12 +1377,13 @@ Millors diades
 	color: #ffffff;
 }
 
-.best-diades tbody tr td:nth-child(1) {
+.best-diades tbody tr td:nth-child(1),
+.best-diades tbody tr td:nth-child(2) {
     text-align: right;
     padding: 0 0 0 5px;
 }
-.best-diades tbody tr td:nth-child(2),
-.best-diades tbody tr td:nth-child(6) {
+.best-diades tbody tr td:nth-child(3),
+.best-diades tbody tr td:nth-child(7) {
     text-align: center;
 }
 
@@ -1390,9 +1391,18 @@ Millors diades
 	background-color: var(--primary-200);
 }
 
+.this-season {
+    height: 0.9rem;
+    filter: invert(16%) sepia(58%) saturate(4997%) hue-rotate(333deg) brightness(85%) contrast(95%);
+}
+
 @media screen and (max-width: 800px) {
     .best-diades {
         font-size: 0.7rem;
+    }
+
+    .this-season {
+        height: 0.5rem;
     }
 }
 

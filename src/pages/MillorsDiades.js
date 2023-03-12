@@ -4,6 +4,27 @@ class MillorsDiades extends Component {
 	render() {
 		const { diades, puntuacions } = this.props;
 
+		const getTemporada = (data) => {
+			const year = data.getFullYear();
+			if (isFromTemporada(data, year+'-'+(year+1)))
+				return year+'-'+(year+1);
+			return (year-1)+'-'+year;
+		};
+	
+		const isFromTemporada = (date, temporada) => {
+			const start_temporada = new Date(`09/01/${temporada.split('-')[0]}`);
+			const end_temporada = new Date(`08/31/${temporada.split('-')[1]}`);
+			return start_temporada <= date && date <= end_temporada;
+		};
+
+		const fromEuropean = (dateString, regex = '/') => {
+			const [day, month, year] = dateString.split(regex);
+			return new Date(`${month}/${day}/${year}`);
+		};
+
+		const todaySeason = getTemporada(new Date());
+		console.log(todaySeason);
+
 		const getCastell = castell => {
 			castell = castell.replace('Td', '2d');
 			if (castell.includes("C"))
@@ -91,6 +112,7 @@ class MillorsDiades extends Component {
 					<thead>
 						<tr>
 							<th></th>
+							<th></th>
 							<th>Data</th>
 							<th>Actuació</th>
 							<th>Població</th>
@@ -103,6 +125,7 @@ class MillorsDiades extends Component {
 							diades_array.map(d => {
 								count += 1;
 								return <tr>
+									<td>{getTemporada(fromEuropean(d.info.data)) === todaySeason ? <img src="font-awesome/star.svg" alt="star" className="this-season" /> : <></>}</td>
 									<td>{count}</td>
 									<td>{d.info.data}</td>
 									<td>{d.info.motiu}</td>
