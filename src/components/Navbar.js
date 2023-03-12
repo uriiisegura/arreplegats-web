@@ -51,7 +51,7 @@ class Navbar extends Component {
                                     <ul>
                                         <li><NavLink to="/millors-castells">Millors castells</NavLink></li>
                                         <li><NavLink to="/ai">Millors diades</NavLink></li>
-                                        <li><NavLink to="/aj">Resum històric</NavLink></li>
+                                        <li><NavLink to="/resum-historic">Resum històric</NavLink></li>
                                         <li><NavLink to="/ak">Llista de diades</NavLink></li>
                                     </ul>
                                 </div>
