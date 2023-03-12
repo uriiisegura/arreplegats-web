@@ -15,6 +15,7 @@ import MillorsCastells from "./pages/MillorsCastells";
 import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
 import Castell from "./pages/Castell";
+import Arreplegator from "./pages/Arreplegator";
 import NotFound from "./pages/NotFound";
 import './css/main.css';
 import './css/normalize.css';
@@ -44,7 +45,6 @@ function App() {
       <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/uneixthi" element={<Uneixthi />} />
           <Route path="/qui-som" element={<QuiSom />} />
           <Route path="/assajos" element={<Assajos />} />
           <Route path="/historia-de-la-colla" element={<HistoriaDeLaColla />} />
@@ -54,6 +54,8 @@ function App() {
           <Route path="/castells/:castell" element={<Castell />} />
           <Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
           <Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />
+          <Route path="/arreplegator" element={<Arreplegator />} />
+          <Route path="/uneixthi" element={<Uneixthi />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

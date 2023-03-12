@@ -80,7 +80,7 @@ class Navbar extends Component {
                                     <ul>
                                         <li><NavLink to="/ba">Fotografies</NavLink></li>
                                         <li><NavLink to="/bb">Vídeos</NavLink></li>
-                                        <li><NavLink to="/bc">L'Arreplegator</NavLink></li>
+                                        <li><NavLink to="/arreplegator">L'Arreplegator</NavLink></li>
                                     </ul>
                                 </div>
                             </div>

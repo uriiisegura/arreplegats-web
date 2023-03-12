@@ -23,3 +23,5 @@
 - [ ] Second surname of `Laura Gimeno`
 - [x] Do `Resum Històric`
 - [x] Do `Llista de Diades`
+- [ ] Do `L'Arreplegator`
+- [ ] Log in `L'Arreplegator` with APPsistència to view all numbers
