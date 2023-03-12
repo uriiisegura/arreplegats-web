@@ -41,8 +41,8 @@ class Navbar extends Component {
                                     <h4 className="sub-menu-title">Història</h4>
                                     <ul>
                                         <li><NavLink to="/historia-de-la-colla">Història de la colla</NavLink></li>
-                                        <li><NavLink to="/ae">Llista de caps de colla</NavLink></li>
-                                        <li><NavLink to="/af">Llista de presidents</NavLink></li>
+                                        <li><NavLink to="/llista-de-caps-de-colla">Llista de caps de colla</NavLink></li>
+                                        <li><NavLink to="/llista-de-presidents">Llista de presidents</NavLink></li>
                                         <li><NavLink to="/ag">Els castells universitaris</NavLink></li>
                                     </ul>
                                 </div>

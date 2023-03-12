@@ -26,6 +26,17 @@ html {
     --primary-800: hsl(165.3,77.8%,20%);
     --primary-900: hsl(165.3,77.8%,10%);
 
+    /* secondary */
+    --secondary-100: hsl(345.2,78%,90%);
+    --secondary-200: hsl(345.2,78%,80%);
+    --secondary-300: hsl(345.2,78%,70%);
+    --secondary-400: hsl(345.2,78%,60%);
+    --secondary-500: hsl(345.2,78%,50%);
+    --secondary-600: hsl(345.2,78%,40%);
+    --secondary-700: hsl(345.2,78%,30%);
+    --secondary-800: hsl(345.2,78%,20%);
+    --secondary-900: hsl(345.2,78%,10%);
+
     /* grey */
     --grey-50: #f8fafc;
     --grey-100: #f1f5f9;
@@ -792,8 +803,12 @@ section h3 span {
     color: var(--primary-600);
 }
 
-section a {
+section p a {
     color: var(--primary-600);
+    transition: var(--transition);
+}
+section p a:hover {
+    color: var(--secondary-500);
 }
 
 .image-divider {
@@ -854,6 +869,70 @@ Assajos
     max-height: 400px;
     margin: 1rem auto;
     display: block;
+}
+
+/*
+=============== 
+Llista de CdC
+===============
+*/
+
+.people-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    .people-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .people-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*
+=============== 
+Person Card
+===============
+*/
+
+.person-card {
+    width: 100%;
+}
+
+.person-img {
+    width: 100%;
+    aspect-ratio: 1.5;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.person-card h4 {
+    margin: 0.5rem 0;
+}
+
+.person-card span {
+    font-style: italic;
+    font-size: 0.85rem;
+}
+.person-card span::before,
+.person-card span::after {
+    content: '"';
+}
+
+.person-card h6 {
+    font-size: 0.8rem;
+    margin: 0 0 1rem;
+}
+
+.person-card p {
+    font-size: 0.8rem;
 }
 
 /*
