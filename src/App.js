@@ -3,6 +3,9 @@ import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from "./pages/Home";
+import QuiSom from "./pages/QuiSom";
+import Assajos from "./pages/Assajos";
+import HistoriaDeLaColla from "./pages/HistoriaDeLaColla";
 import MillorsCastells from "./pages/MillorsCastells";
 import Castell from "./pages/Castell";
 import NotFound from "./pages/NotFound";
@@ -17,6 +20,9 @@ function App() {
       <main className="page">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/qui-som" element={<QuiSom />} />
+          <Route path="/assajos" element={<Assajos />} />
+          <Route path="/historia-de-la-colla" element={<HistoriaDeLaColla />} />
           <Route path="/millors-castells" element={<MillorsCastells />} />
           <Route path="/castells/:castell" element={<Castell />} />
 

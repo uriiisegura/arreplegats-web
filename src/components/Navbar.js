@@ -31,7 +31,8 @@ class Navbar extends Component {
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">La colla</h4>
                                     <ul>
-                                        <li><NavLink to="/aa">Qui som?</NavLink></li>
+                                        <li><NavLink to="/qui-som">Qui som?</NavLink></li>
+                                        <li><NavLink to="/assajos">Assajos</NavLink></li>
                                         <li><NavLink to="/ab">Gralles i tabals</NavLink></li>
                                         <li><NavLink to="/ac">Vida universitària</NavLink></li>
                                     </ul>
@@ -39,7 +40,7 @@ class Navbar extends Component {
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">Història</h4>
                                     <ul>
-                                        <li><NavLink to="/ad">Història de la colla</NavLink></li>
+                                        <li><NavLink to="/historia-de-la-colla">Història de la colla</NavLink></li>
                                         <li><NavLink to="/ae">Llista de caps de colla</NavLink></li>
                                         <li><NavLink to="/af">Llista de presidents</NavLink></li>
                                         <li><NavLink to="/ag">Els castells universitaris</NavLink></li>
@@ -55,7 +56,7 @@ class Navbar extends Component {
                                     </ul>
                                 </div>
                                 <div className="sub-menu">
-                                    <h4 className="sub-menu-title">Organizazió</h4>
+                                    <h4 className="sub-menu-title">Organització</h4>
                                     <ul>
                                         <li><NavLink to="/al">Junta tècnica</NavLink></li>
                                         <li><NavLink to="/am">Junta directiva</NavLink></li>
