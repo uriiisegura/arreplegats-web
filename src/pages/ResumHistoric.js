@@ -187,7 +187,7 @@ class ResumHistoric extends Component {
 		castells = castells.concat(castells_no_puntuats);
 
 		return (<>
-			<section>
+			<section className="resum-historic">
 				<h2>Resum Històric</h2>
 
 				{

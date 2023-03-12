@@ -34,7 +34,7 @@ class Home extends Component {
 				</div>
 			</section>
             <section>
-                <h4>Què n'opina la gent?</h4>
+                <h4>Què diu la gent?</h4>
                 <div className="quotes">
                     {
                         quotes.map(e => {
