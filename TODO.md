@@ -1,6 +1,6 @@
 # TODO
 
-- [ ] Write `Història de la colla`
+- [x] Write `Història de la colla`
 - [ ] Write `Td8fm`
 - [ ] Write `Pd7fm`
 - [ ] Write `4d8sf`
@@ -20,3 +20,5 @@
 - [ ] Write `Llista de Caps de Colla`
 - [ ] Write `Llista de Presidents`
 - [ ] Second surname of `Laura Gimeno`
+- [x] Do `Resum Històric`
+- [x] Do `Llista de Diades`

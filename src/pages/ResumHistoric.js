@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ResumCard from "../components/ResumCard";
 import castells_map from "./../data/castells-top.json";
+import categories from "./../data/categories-castells.json";
 
 class ResumHistoric extends Component {
 	render() {
@@ -147,7 +148,7 @@ class ResumHistoric extends Component {
 			});
 		});
 	
-		const castells = Object.keys(castells_dict).map(function(key) {
+		let castells = Object.keys(castells_dict).map(function(key) {
 			return [key, castells_dict[key]];
 		});
 		castells.sort(function(a, b) {
@@ -168,7 +169,7 @@ class ResumHistoric extends Component {
 			return scoreB - scoreA;
 		});
 	
-		const castells_no_puntuats = Object.keys(not_scored_castells).map(function(key) {
+		let castells_no_puntuats = Object.keys(not_scored_castells).map(function(key) {
 			return [key, not_scored_castells[key]];
 		});
 		castells_no_puntuats.sort(function(a, b) {
@@ -182,35 +183,48 @@ class ResumHistoric extends Component {
 	
 			return scoreB - scoreA;
 		});
-	
+
+		castells = castells.concat(castells_no_puntuats);
+
 		return (<>
 			<section>
 				<h2>Resum Històric</h2>
 
-				<div className="resum-wrap">
 				{
-					castells.map(e => {
-						return <ResumCard
-							castell={e[0]}
-							descarregats={e[1][0]}
-							carregats={e[1][1]}
-							link={e[0] in castells_map}
-						/>
+					categories.map(e => {
+						const castells_category = castells.filter(c => {
+							return e.castells.includes(c[0]);
+						});
+						castells_category.forEach(c => castells.splice(castells.findIndex(k => k[0] === c[0]), 1));
+						return <>
+							<h4>{e.name}</h4>
+							<div className="resum-wrap">
+								{
+									castells_category.map(e => {
+										return <ResumCard
+											castell={e[0]}
+											descarregats={e[1][0]}
+											carregats={e[1][1]}
+											link={e[0] in castells_map}
+										/>
+									})
+								}
+							</div>
+						</>
 					})
 				}
-				</div>
-				<hr className="resum-divider" />
+				<h4>Castells no puntuats</h4>
 				<div className="resum-wrap">
-				{
-					castells_no_puntuats.map(e => {
-						return <ResumCard
-							castell={e[0]}
-							descarregats={e[1][0]}
-							carregats={e[1][1]}
-							link={e[0] in castells_map}
-						/>
-					})
-				}
+					{
+						castells.map(e => {
+							return <ResumCard
+								castell={e[0]}
+								descarregats={e[1][0]}
+								carregats={e[1][1]}
+								link={e[0] in castells_map}
+							/>
+						})
+					}
 				</div>
 			</section>
 		</>);

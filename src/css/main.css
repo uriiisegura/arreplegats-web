@@ -1003,14 +1003,10 @@ Resum històric
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 30px 15px;
+    margin-bottom: 2rem;
 }
-
-.resum-divider {
-	border: none;
-    height: 1px;
-    background-color: var(--primary-600);
-	width: 75%;
-	margin: 4rem auto;
+.resum-wrap:last-of-type {
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 1000px) {
@@ -1051,34 +1047,35 @@ Resum Card
 
 .resum-card {
 	text-align: center;
+    background-color: var(--primary-600);
+    padding: 15px 0 8px;
+    transition: var(--transition);
+}
+a:hover .resum-card {
+    background-color: var(--primary-500);
 }
 
-.resum-card a,
 .resum-card h4 {
     display: block;
     width: fit-content;
     margin: 0 auto;
 }
-.resum-card a:hover h4 {
-    color: var(--primary-400);
-}
 
 .resum-card h4 {
-    border-bottom: 2px solid var(--primary-600);
+    border-bottom: 2px solid var(--white);
     padding: 0 7px;
-	color: var(--primary-600);
-	font-size: 1.5em;
-    transition: var(--transition);
+	color: var(--white);
+	font-size: 1.3rem;
 }
 
 .resum-card h6 {
-	color: var(--grey-600);
-	font-size: 1.1em;
+	color: var(--white);
+	font-size: 1.5rem;
 	margin: 0;
 }
 
 .resum-card h6 span {
-	font-size: 0.75em;
+	font-size: 1.1rem;
 }
 
 /*
@@ -1190,7 +1187,7 @@ select {
 }
 
 .diades-table thead th {
-	background-color: var(--primary-600);
+	background-color: var(--primary-700);
 	position: sticky;
 	top: var(--navbar-height);
     border-top: 3px solid var(--backgroundColor);

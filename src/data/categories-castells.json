@@ -1,0 +1,84 @@
+[
+	{
+		"name": "Castells de 8 i amb manilles",
+		"castells": [
+			"Td8fm",
+			"Pd7fm",
+			"4d8sf"
+		]
+	},
+	{
+		"name": "Gamma alta de 7",
+		"castells": [
+			"3d7s",
+			"9d7",
+			"3d7+4d7",
+			"3d8f",
+			"5d7",
+			"Vd6f"
+		]
+	},
+	{
+		"name": "Gamma mitja de 7",
+		"castells": [
+			"Pd6f",
+			"Td7f",
+			"7d7",
+			"3d7a",
+			"4d7a",
+			"Pd5s"
+		]
+	},
+	{
+		"name": "Gamma bàsica de 7",
+		"castells": [
+			"3d7",
+			"Pd5",
+			"4d7"
+		]
+	},
+	{
+		"name": "Gamma alta de 6",
+		"castells": [
+			"Td6s",
+			"3d6s",
+			"Vd5",
+			"9d6"
+		]
+	},
+	{
+		"name": "Gamma mitja de 6",
+		"castells": [
+			"Td6",
+			"7d6",
+			"5d6",
+			"4d6a",
+			"3d6a"
+		]
+	},
+	{
+		"name": "Gamma bàsica de 6",
+		"castells": [
+			"3d6",
+			"4d6"
+		]
+	},
+	{
+		"name": "Castells de 5 o inferiors",
+		"castells": [
+			"Pd4s",
+			"Pd4cam",
+			"9d5",
+			"3d5s",
+			"5d5",
+			"Pd4",
+			"4d5a",
+			"Td5",
+			"4d5",
+			"3d5",
+			"Pd3s",
+			"Pd3cam",
+			"Pd3"
+		]
+	}
+]
