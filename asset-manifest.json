@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/arreplegats-web/static/css/main.aa88b38f.css",
-    "main.js": "/arreplegats-web/static/js/main.c84fec7b.js",
+    "main.css": "/arreplegats-web/static/css/main.ec1be0c6.css",
+    "main.js": "/arreplegats-web/static/js/main.96e7071c.js",
     "index.html": "/arreplegats-web/index.html",
-    "main.aa88b38f.css.map": "/arreplegats-web/static/css/main.aa88b38f.css.map",
-    "main.c84fec7b.js.map": "/arreplegats-web/static/js/main.c84fec7b.js.map"
+    "main.ec1be0c6.css.map": "/arreplegats-web/static/css/main.ec1be0c6.css.map",
+    "main.96e7071c.js.map": "/arreplegats-web/static/js/main.96e7071c.js.map"
   },
   "entrypoints": [
-    "static/css/main.aa88b38f.css",
-    "static/js/main.c84fec7b.js"
+    "static/css/main.ec1be0c6.css",
+    "static/js/main.96e7071c.js"
   ]
 }
