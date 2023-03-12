@@ -1121,36 +1121,88 @@ Resum Card
 */
 
 .resum-card {
+    background-color: transparent;
+    perspective: 1000px;
+}
+.resum-card:not(.locked-card) {
+    cursor: pointer;
+}
+
+.resum-card-inner {
+    transition: var(--transition);
+    transform-style: preserve-3d;
+}
+.resum-card:hover .resum-card-inner {
+    transform: rotateY(180deg);
+}
+.locked-card:hover .resum-card-inner {
+    transform: none;
+}
+
+.resum-card-front {
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.resum-card-back {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+}
+
+.resum-card-front,
+.resum-card-back {
 	text-align: center;
     background-color: var(--primary-600);
     padding: 15px 0 8px;
-    transition: var(--transition);
-}
-a:hover .resum-card {
-    background-color: var(--primary-500);
 }
 
-.resum-card h4 {
+.resum-card-back {
+    transform: rotateY(180deg);
+    background-color: var(--primary-500);
+    padding: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.resum-card-front h4 {
     display: block;
     width: fit-content;
     margin: 0 auto;
-}
-
-.resum-card h4 {
     border-bottom: 2px solid var(--white);
     padding: 0 7px;
 	color: var(--white);
 	font-size: 1.3rem;
 }
 
-.resum-card h6 {
+.resum-card-front h6 {
 	color: var(--white);
 	font-size: 1.5rem;
 	margin: 0;
 }
 
-.resum-card h6 span {
+.resum-card-front h6 span {
 	font-size: 1.1rem;
+}
+
+.resum-card-back a {
+    width: 100%;
+    height: 100%;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.resum-card-back a span {
+    width: 100%;
 }
 
 /*
