@@ -12,5 +12,10 @@
 - [x] Link icon in `CastellCard`
 - [x] Do `Uneix-t'hi`
 - [ ] `Uneix-t'hi` button in `NavBar`
-- [ ] Do `Historial de Caps de Colla`
-- [ ] Do `Historial de Presidents`
+- [x] Do `Llista de Caps de Colla`
+- [x] Do `Llista de Presidents`
+- [ ] Ask pictures for `Llista de Caps de Colla`
+- [ ] Ask pictures for `Llista de Presidents`
+- [ ] Write `Llista de Caps de Colla`
+- [ ] Write `Llista de Presidents`
+- [ ] Second surname of `Laura Gimeno`
