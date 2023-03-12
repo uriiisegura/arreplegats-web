@@ -79,7 +79,7 @@ class Navbar extends Component {
                                     <h4 className="sub-menu-title">Arxius multimèdia</h4>
                                     <ul>
                                         <li><NavLink to="/ba">Fotografies</NavLink></li>
-                                        <li><NavLink to="/bb">Vídeos</NavLink></li>
+                                        <li><NavLink to="/videos">Vídeos</NavLink></li>
                                         <li><NavLink to="/arreplegator">L'Arreplegator</NavLink></li>
                                     </ul>
                                 </div>

@@ -1341,6 +1341,44 @@ Millors diades
 
 /*
 =============== 
+Vídeos
+===============
+*/
+
+#videos-wrap {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+}
+
+#videos-wrap iframe {
+    border: 0;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+}
+
+@media screen and (max-width: 1500px) {
+    #videos-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #videos-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #videos-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*
+=============== 
 
 ===============
 */

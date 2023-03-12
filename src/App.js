@@ -16,6 +16,7 @@ import MillorsDiades from "./pages/MillorsDiades";
 import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
 import Castell from "./pages/Castell";
+import Videos from "./pages/Videos";
 import Arreplegator from "./pages/Arreplegator";
 import NotFound from "./pages/NotFound";
 import './css/main.css';
@@ -56,6 +57,7 @@ function App() {
           <Route path="/castells/:castell" element={<Castell />} />
           <Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
           <Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />
+          <Route path="/videos" element={<Videos />} />
           <Route path="/arreplegator" element={<Arreplegator />} />
           <Route path="/uneixthi" element={<Uneixthi />} />
 
