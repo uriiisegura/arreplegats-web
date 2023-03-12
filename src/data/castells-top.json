@@ -16,9 +16,9 @@
             "En la diada del nostre 27è Aniversari, el 22 de desembre del 2022, vam portar aquest castell per primer cop en ronda de pilars i el vam aconseguir carregat. Vam esdevenir, també la sisena colla del món en tornar a fer manilles després de la represa de la COVID-19 només de darrera dels Castellers de Vilafranca, la Colla Vella dels Xiquets de Valls, la Colla Joves Xiquets de Valls, i els Minyons de Terrassa."
         ]
     },
-    "4d8": {
+    "4d8sf": {
         "name": "4 de 8",
-        "notation": "4d8",
+        "notation": "4d8sf",
         "link": "images/4d8-arreplegats.jfif",
         "text": [
             "El maig del 2009 vam sorprendre a tot el món casteller descarregant un 4 de 8 format completament per castellers adults, sent a més la primera colla de la història a descarregar aquest castell al primer intent. Després de tants anys, seguim demostrant que allò no va ser casualitat, i l'hem descarregat ja en set ocasions, dos d'ells ben lluny de casa: a Girona."
@@ -46,6 +46,14 @@
         "link": "images/3d7ps-arreplegats.png",
         "text": [
             "L'11 de maig del 2009 descarregàvem per primera vegada aquest castell. L'hem repetit en diverses set ocasions, tot i ser l'única colla universitaria que l'ha fet."
+        ]
+    },
+    "3d7+4d7": {
+        "name": "3 i 4 de 7 simultanis",
+        "notation": "3d7+4d7",
+        "link": "images/3i4d7sim-2016.jfif",
+        "text": [
+            ""
         ]
     },
     "5d7": {

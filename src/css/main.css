@@ -547,12 +547,13 @@ Page
 
 .page {
     min-height: calc(100vh - (var(--navbar-height) + var(--footer-height)));
+    padding-bottom: 2rem;
 }
 
 section {
     width: var(--page-width);
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
 }
 
 h4 {
@@ -990,6 +991,94 @@ Quote
     .quote h4 {
         font-size: 1.3rem;
     }
+}
+
+/*
+=============== 
+Resum històric
+===============
+*/
+
+.resum-wrap {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 30px 15px;
+}
+
+.resum-divider {
+	border: none;
+    height: 1px;
+    background-color: var(--primary-600);
+	width: 75%;
+	margin: 4rem auto;
+}
+
+@media screen and (max-width: 1000px) {
+    .resum-wrap {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .resum-wrap {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .resum-wrap {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .resum-wrap {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .resum-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*
+=============== 
+Resum Card
+===============
+*/
+
+.resum-card {
+	text-align: center;
+}
+
+.resum-card a,
+.resum-card h4 {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+.resum-card a:hover h4 {
+    color: var(--primary-400);
+}
+
+.resum-card h4 {
+    border-bottom: 2px solid var(--primary-600);
+    padding: 0 7px;
+	color: var(--primary-600);
+	font-size: 1.5em;
+    transition: var(--transition);
+}
+
+.resum-card h6 {
+	color: var(--grey-600);
+	font-size: 1.1em;
+	margin: 0;
+}
+
+.resum-card h6 span {
+	font-size: 0.75em;
 }
 
 /*

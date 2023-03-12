@@ -3,10 +3,11 @@
 - [ ] Write `Història de la colla`
 - [ ] Write `Td8fm`
 - [ ] Write `Pd7fm`
-- [ ] Write `4d8`
+- [ ] Write `4d8sf`
 - [ ] Write `3d8f`
 - [ ] Write `9d7`
 - [ ] Write `3d7s`
+- [ ] Write `3d7+4d7`
 - [ ] Write `5d7`
 - [ ] Add `Vd6`
 - [x] Link icon in `CastellCard`

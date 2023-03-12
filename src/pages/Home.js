@@ -16,7 +16,7 @@ class Home extends Component {
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
 				</div>
 			</section>
-			<section>
+			<section style={{paddingTop: `2rem`}}>
                 <div className="floating-titles">
                     <h4>Els millors castells</h4>
                     <NavLink to="/millors-castells">Descobreix-los tots!</NavLink>

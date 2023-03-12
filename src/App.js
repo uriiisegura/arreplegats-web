@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import DataProcessor from "./components/DataProcessor";
 import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
@@ -17,7 +19,24 @@ import './css/main.css';
 import './css/normalize.css';
 
 function App() {
+  const [diades, setCastells] = useState({});
+  const [puntuacions, setPuntuacions] = useState({});
+
+  const exports = {
+    'diades': diades,
+    'setCastells': setCastells,
+    'puntuacions': puntuacions,
+    'setPuntuacions': setPuntuacions
+  };
+
+  useEffect(() => {
+  }, [diades]);
+  useEffect(() => {
+  }, [puntuacions]);
+  
   return (<>
+    <DataProcessor {...exports} />
+
     <Router>
       <NavBar />
       <ScrollToTop />
@@ -32,7 +51,7 @@ function App() {
           <Route path="/llista-de-presidents" element={<Presidents />} />
           <Route path="/millors-castells" element={<MillorsCastells />} />
           <Route path="/castells/:castell" element={<Castell />} />
-          <Route path="/resum-historic" element={<ResumHistoric />} />
+          <Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

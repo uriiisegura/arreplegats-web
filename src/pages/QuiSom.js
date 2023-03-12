@@ -20,7 +20,7 @@ class QuiSom extends Component {
                     Els Arreplegats som una colla castellera amb més de 25 anys d'història que només fem castells amb persones matrículades a la universitat. Fins i tot les enxanetes són adultes!
                 </p>
                 <p>
-                    Tot i aquesta restricció única, hem aconseguit arribar a nivells molt alts en les nostres actuacions. Alcem castells, torres i pilars de fins a 8 pisos com el <NavLink to="/castells/4d8">4 de 8</NavLink>, la <NavLink to="/castells/Td8fm">torre de 8 amb folre i manilles</NavLink>, o el <NavLink to="/castells/3d8f">tres de 8 amb folre</NavLink>, capaços de satisfer el públic més exigent.
+                    Tot i aquesta restricció única, hem aconseguit arribar a nivells molt alts en les nostres actuacions. Alcem castells, torres i pilars de fins a 8 pisos com el <NavLink to="/castells/4d8sf">4 de 8</NavLink>, la <NavLink to="/castells/Td8fm">torre de 8 amb folre i manilles</NavLink>, o el <NavLink to="/castells/3d8f">tres de 8 amb folre</NavLink>, capaços de satisfer el públic més exigent.
                 </p>
                 <div className="read-more">
                     <NavLink to="/historia-de-la-colla">DESCOBREIX LA NOSTRA HISTÒRIA!</NavLink>
