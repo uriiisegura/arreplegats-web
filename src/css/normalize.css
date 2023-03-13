@@ -358,7 +358,6 @@ template {
 	 ========================================================================== */
 
 ::-webkit-scrollbar {
-    display: none;
     background-color: #fff;
     width: 16px;
 }
