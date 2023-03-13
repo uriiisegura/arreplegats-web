@@ -33,7 +33,7 @@ class Home extends Component {
                     }
 				</div>
 			</section>
-            <section>
+            {/*<section>
                 <h4>Què diu la gent?</h4>
                 <div className="quotes">
                     {
@@ -45,7 +45,7 @@ class Home extends Component {
                         })
                     }
                 </div>
-            </section>
+            </section>*/}
 		</>);
 	}
 }

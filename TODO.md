@@ -1,7 +1,9 @@
 # TODO
 
+- [ ] Write `Home` quotes
 - [x] Write `Història de la colla`
 - [x] Add `Vd6f`
+- [ ] Write `Vida universitària`
 - [ ] Write `Td8fm`
 - [ ] Write `Pd7fm`
 - [ ] Write `4d8sf`
@@ -12,8 +14,6 @@
 - [ ] Write `5d7`
 - [ ] Write `Vd6f`
 - [x] Link icon in `CastellCard`
-- [x] Do `Uneix-t'hi`
-- [x] `Uneix-t'hi` button in `NavBar`
 - [x] Do `Llista de Caps de Colla`
 - [x] Do `Llista de Presidents`
 - [ ] Ask pictures for `Llista de Caps de Colla`
@@ -21,9 +21,18 @@
 - [ ] Write `Llista de Caps de Colla`
 - [ ] Write `Llista de Presidents`
 - [x] Second surname of `Laura Gimeno`
+- [ ] Write `Els castells universitaris`
 - [x] Do `Resum Històric`
 - [x] Do `Llista de Diades`
-- [ ] Do `L'Arreplegator`
-- [ ] Log in `L'Arreplegator` with APPsistència to view all numbers
+- [ ] Write `Junta tècnica`
+- [ ] Write `Junta directiva`
+- [ ] Do `Agenda`
+- [ ] Do `Notícies`
 - [ ] Do `Fotografies`
-- [ ] Do `Vídeos`
+- [x] Do `Vídeos`
+- [ ] Write `L'Arreplegator`
+- [ ] Log in `L'Arreplegator` with APPsistència to view all numbers
+- [ ] Do `Contacte`
+- [ ] Do `Contractacions`
+- [x] Do `Uneix-t'hi`
+- [x] `Uneix-t'hi` button in `NavBar`

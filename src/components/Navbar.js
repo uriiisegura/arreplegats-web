@@ -38,8 +38,8 @@ class Navbar extends Component {
                                     <ul>
                                         <li><NavLink to="/qui-som">Qui som?</NavLink></li>
                                         <li><NavLink to="/assajos">Assajos</NavLink></li>
-                                        <li><NavLink to="/ab">Gralles i tabals</NavLink></li>
-                                        <li><NavLink to="/ac">Vida universitària</NavLink></li>
+                                        <li><NavLink to="/gralles-i-tabals">Gralles i tabals</NavLink></li>
+                                        <li><NavLink to="/vida-universitaria">Vida universitària</NavLink></li>
                                     </ul>
                                 </div>
                                 <div className="sub-menu">
@@ -48,7 +48,7 @@ class Navbar extends Component {
                                         <li><NavLink to="/historia-de-la-colla">Història de la colla</NavLink></li>
                                         <li><NavLink to="/llista-de-caps-de-colla">Llista de caps de colla</NavLink></li>
                                         <li><NavLink to="/llista-de-presidents">Llista de presidents</NavLink></li>
-                                        <li><NavLink to="/ag">Els castells universitaris</NavLink></li>
+                                        <li><NavLink to="/els-castells-universitaris">Els castells universitaris</NavLink></li>
                                     </ul>
                                 </div>
                                 <div className="sub-menu">
@@ -63,29 +63,29 @@ class Navbar extends Component {
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">Organització</h4>
                                     <ul>
-                                        <li><NavLink to="/al">Junta tècnica</NavLink></li>
-                                        <li><NavLink to="/am">Junta directiva</NavLink></li>
+                                        <li><NavLink to="/junta-tecnica">Junta tècnica</NavLink></li>
+                                        <li><NavLink to="/junta-directiva">Junta directiva</NavLink></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-						<li className="nav-link"><NavLink to="/b">Agenda</NavLink></li>
-						<li className="nav-link"><NavLink to="/c">Notícies</NavLink></li>
+						<li className="nav-link"><NavLink to="/agenda">Agenda</NavLink></li>
+						<li className="nav-link"><NavLink to="/noticies">Notícies</NavLink></li>
 						<li onClick={() => this.showHide('media')} className="nav-link">
                             <span>Mèdia<img src="font-awesome/caret-down.svg" alt="" /></span>
                             <div id="media" className="sub-menus">
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">Arxius multimèdia</h4>
                                     <ul>
-                                        <li><NavLink to="/ba">Fotografies</NavLink></li>
+                                        <li><NavLink to="/fotografies">Fotografies</NavLink></li>
                                         <li><NavLink to="/videos">Vídeos</NavLink></li>
                                         <li><NavLink to="/arreplegator">L'Arreplegator</NavLink></li>
                                     </ul>
                                 </div>
                             </div>
                         </li>
-						<li className="nav-link"><NavLink to="/e">Contacte</NavLink></li>
-						<li className="nav-link"><NavLink to="/f">Contractacions</NavLink></li>
+						<li className="nav-link"><NavLink to="/contacte">Contacte</NavLink></li>
+						<li className="nav-link"><NavLink to="/contractacions">Contractacions</NavLink></li>
                         <li className="nav-link join-btn"><NavLink to="/uneixthi">Uneix-t'hi</NavLink></li>
 					</ul>
 				</div>
