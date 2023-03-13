@@ -1,39 +1,16 @@
 import React, { Component } from "react";
+import GetTemporada from "./../functions/GetTemporada";
+import GetCastellsDiada from "./../functions/GetCastellsDiada";
+import GetCastell from "./../functions/GetCastell";
 
 class MillorsDiades extends Component {
 	render() {
 		const { diades, puntuacions } = this.props;
 
-		const getTemporada = (data) => {
-			const year = data.getFullYear();
-			if (isFromTemporada(data, year+'-'+(year+1)))
-				return year+'-'+(year+1);
-			return (year-1)+'-'+year;
-		};
-	
-		const isFromTemporada = (date, temporada) => {
-			const start_temporada = new Date(`09/01/${temporada.split('-')[0]}`);
-			const end_temporada = new Date(`08/31/${temporada.split('-')[1]}`);
-			return start_temporada <= date && date <= end_temporada;
-		};
-
-		const fromEuropean = (dateString, regex = '/') => {
-			const [day, month, year] = dateString.split(regex);
-			return new Date(`${month}/${day}/${year}`);
-		};
-
-		const todaySeason = getTemporada(new Date());
-		console.log(todaySeason);
-
-		const getCastell = castell => {
-			castell = castell.replace('Td', '2d');
-			if (castell.includes("C"))
-				return [castell.slice(0, -1), false];
-			return [castell, true];
-		};
+		const todaySeason = GetTemporada(new Date());
 
 		const getCastellPuntuation = (castell) => {
-			const [c, descarregat] = getCastell(castell);
+			const [c, descarregat] = GetCastell(castell);
 			let points = 0;
 			try {
 				points = puntuacions[c][descarregat ? 0 : 1]
@@ -72,22 +49,25 @@ class MillorsDiades extends Component {
 			return top3;
 		}
 
-		const array_to_diada = (array) => {
-			let text = [];
-			array.forEach(c => {
-				text.push(c.castell);
+		const array_to_diada = (castells, top_castells) => {
+			let components = [];
+			castells.forEach(c => {
+				let found = false;
+				top_castells.forEach(k => {
+					if (k.castell === c) {
+						components.push(<span className="castell-count">{c}</span>);
+						found = true;
+					}
+				})
+				if (!found)
+					components.push(<span>{c}</span>);
 			});
-			return text.join(', ');
+			return components;
 		}
 
 		let diades_array = [...Object.values(diades)];
 		diades_array.forEach(d => {
 			d.top_castells = getTopThreeWithPilar(d.castells);
-			d.top_castells.sort((a,b) => {
-				if (a.castell.includes('Pd'))
-					return +1;
-				return b.score - a.score;
-			});
 			let score = 0;
 			d.top_castells.forEach(c => {
 				score += c.score;
@@ -124,13 +104,20 @@ class MillorsDiades extends Component {
 						{
 							diades_array.map(d => {
 								count += 1;
+								const castells = GetCastellsDiada(d.castells);
 								return <tr>
-									<td>{getTemporada(fromEuropean(d.info.data)) === todaySeason ? <img src="font-awesome/star.svg" alt="star" className="this-season" /> : <></>}</td>
+									<td>{GetTemporada(d.info.data) === todaySeason ? <img src="font-awesome/star.svg" alt="star" className="this-season" /> : <></>}</td>
 									<td>{count}</td>
 									<td>{d.info.data}</td>
 									<td>{d.info.motiu}</td>
 									<td>{d.info.ciutat}</td>
-									<td>{array_to_diada(d.top_castells)}</td>
+									<td>{
+										array_to_diada(castells, d.top_castells)
+											.map(c => {
+												return c;
+											})
+											.reduce((prev,curr) => [prev, ', ', curr])
+									}</td>
 									<td>{d.score}</td>
 								</tr>;
 							})

@@ -1,98 +1,14 @@
 import React, { Component } from "react";
+import GetCastellsDiada from "./../functions/GetCastellsDiada";
+import PopPd from "./../functions/PopPd";
+import GetClean from "./../functions/GetClean";
+import GetTemporada from "./../functions/GetTemporada";
+import FromEuropean from "./../functions/FromEuropean";
 
 class LlistaDeDiades extends Component {
 	render() {
 		const { diades } = this.props;
-		
-		const getTemporada = (data) => {
-			const year = data.getFullYear();
-			if (isFromTemporada(data, year+'-'+(year+1)))
-				return year+'-'+(year+1);
-			return (year-1)+'-'+year;
-		};
-	
-		const isFromTemporada = (date, temporada) => {
-			const start_temporada = new Date(`09/01/${temporada.split('-')[0]}`);
-			const end_temporada = new Date(`08/31/${temporada.split('-')[1]}`);
-			return start_temporada <= date && date <= end_temporada;
-		};
-	
-		const fromEuropean = (dateString, regex = '/') => {
-			const [day, month, year] = dateString.split(regex);
-			return new Date(`${month}/${day}/${year}`);
-		};
-	
-		const getCastellsDiada = (diada) => {
-			const castells = [];
-			const round = [];
-			diada.map(castell => round.push(Object.keys(castell)));
-			for (let i = Math.min.apply(null, round); i <= Math.max.apply(null, round); i++) {
-				const ronda = [];
-				diada.forEach(castell => { if (parseInt(Object.keys(castell)) === i) ronda.push(Object.values(castell)[0]); });
-				const formated = formatRound(ronda);
-				if (formated !== false)
-					castells.push(formated);
-			}
-			return castells;
-		};
-	
-		const formatRound = (castells) => {
-			castells = popPd(castells);	
-			if (castells.length < 1) return false;
-			switch (castells.length) {
-				case 1:
-					return castells[0];
-				case 2:
-					if (castells.includes('3d7') && castells.includes('4d7'))
-						return '3i4d7sim';
-					break;
-				case 3:
-					if (castells.includes('Pd5') && countInArray(castells, 'Pd4') === 2)
-						return 'Vd5';
-					if (castells.includes('Pd6f') && countInArray(castells, 'Pd5') === 2)
-						return 'Vd6f';
-					break;
-				default:
-			}
-	
-			if (allEqual(castells))
-				return castells.length + castells[0];
-			const cleanCastells = [];
-			castells.forEach(castell => cleanCastells.push(getClean(castell)));
-			if (allEqual(cleanCastells)) {
-				let count = 0;
-				const weird = [];
-				castells.forEach((castell, i) => { if (castell === cleanCastells[i]) count += 1; else weird.push(castell) });
-				return (count > 1 ? count : '') + cleanCastells[0] + '+' + weird.join('+');
-			}
-			// console.log(castells);
-			return castells.join('+');
-		};
-	
-		const getClean = (castell) => {
-			if (castell.includes('id')) return castell.replace('id', '');
-			if (castell.includes('i')) return castell.replace('i', '');
-			if (castell.includes('C')) return castell.replace('C', '');
-			return castell;
-		};
-	
-		const popPd = (castells) => {
-			const noPd = [];
-			castells.forEach(castell => { if (castell.indexOf('pd') === -1) noPd.push(castell); });
-			return noPd;
-		};
-	
-		const allEqual = (arr) => {
-			return arr.every(v => v === arr[0]);
-		};
-	
-		const countInArray = (array, value) => {
-			let count = 0;
-			for (const e of array)
-				if (e === value) count += 1;
-			return count;
-		};
-	
+
 		const getPoblacions = (diades) => {
 			const poblacions = [];
 			const poblacionsHTML = [];
@@ -108,7 +24,7 @@ class LlistaDeDiades extends Component {
 			});
 			return poblacionsHTML;
 		}
-	
+		
 		const getCastells = (diades) => {
 			const castells = [];
 			const castellsHTML = [];
@@ -126,7 +42,7 @@ class LlistaDeDiades extends Component {
 			});
 			return castellsHTML;
 		}
-	
+		
 		const getCastellsClean = (diada) => {
 			const castells = [];
 			const round = [];
@@ -134,9 +50,9 @@ class LlistaDeDiades extends Component {
 			for (let i = Math.min.apply(null, round); i <= Math.max.apply(null, round); i++) {
 				let ronda = [];
 				diada.forEach(castell => { if (parseInt(Object.keys(castell)) === i) ronda.push(Object.values(castell)[0]); });
-				ronda = popPd(ronda);
+				ronda = PopPd(ronda);
 				ronda.forEach(cast => {
-					castells.push(getClean(cast));
+					castells.push(GetClean(cast));
 				});
 			}
 			return castells;
@@ -145,8 +61,8 @@ class LlistaDeDiades extends Component {
 		const loadDiades = () => {
 			let results = 0;
 	
-			const date_from = fromEuropean(document.getElementById('date_from').value, '-');
-			const date_to = fromEuropean(document.getElementById('date_to').value, '-');
+			const date_from = FromEuropean(document.getElementById('date_from').value, '-');
+			const date_to = FromEuropean(document.getElementById('date_to').value, '-');
 			const poblacio = document.getElementById('poblacio').value;
 			const castell = document.getElementById('castell').value;
 	
@@ -165,7 +81,7 @@ class LlistaDeDiades extends Component {
 			}
 			let stripe = false;
 			for (var i = 1; i < table.rows.length; i++) {
-				const date = fromEuropean(table.rows[i].cells[0].innerHTML);
+				const date = FromEuropean(table.rows[i].cells[0].innerHTML);
 				if (date_from > date || date > date_to) {
 					table.rows[i].classList.add('hidden');
 					continue;
@@ -201,7 +117,7 @@ class LlistaDeDiades extends Component {
 			}
 		};
 	
-		const [year1, year2] = getTemporada(new Date()).split('-');
+		const [year1, year2] = GetTemporada(new Date()).split('-');
 		const actuacions = [...Object.values(diades)];
 		return (<>
 			<section>
@@ -256,7 +172,7 @@ class LlistaDeDiades extends Component {
 						<tbody>
 							{
 								actuacions.map(diada => {
-									const castells = getCastellsDiada(diada['castells']);
+									const castells = GetCastellsDiada(diada['castells']);
 									return (
 										<tr className="hidden">
 											<td>{diada['info']['data']}</td>

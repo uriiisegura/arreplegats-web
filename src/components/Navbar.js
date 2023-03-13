@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 class Navbar extends Component {
     showHide(id) {
         const submenu = document.getElementById(id);
-        console.log(submenu)
         if (submenu !== null)
             submenu.classList.toggle('active');
     }

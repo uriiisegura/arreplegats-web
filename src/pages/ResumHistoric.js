@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ResumCard from "../components/ResumCard";
+import GetCastell from "./../functions/GetCastell";
 import castells_map from "./../data/castells-top.json";
 import categories from "./../data/categories-castells.json";
 
@@ -7,12 +8,6 @@ class ResumHistoric extends Component {
 	render() {
 		const { diades, puntuacions } = this.props;
 
-		const getCastell = castell => {
-			if (castell.includes("C"))
-				return [castell.slice(0, -1), false];
-			return [castell, true];
-		};
-	
 		const isSpecialSim = dict => {
 			const keys = Object.keys(dict);
 			const values = Object.values(dict);
@@ -74,7 +69,7 @@ class ResumHistoric extends Component {
 			diada["castells"].forEach((dict) => {
 				const castell = Object.values(dict)[0];
 				if (castell[0] === "i" || (castell[0] === "p" && castell[1] === "d")) return;
-				const [cas, des] = getCastell(castell);
+				const [cas, des] = GetCastell(castell, false);
 				const is_same_round = last_diada === i && last_order === Object.keys(dict)[0] && last_order !== "" ? true : false;
 	
 				last_diada = i;
@@ -89,7 +84,7 @@ class ResumHistoric extends Component {
 				} else if (!is_same_round && have_same_round) {
 					const [isSpecial, specialName] = isSpecialSim(same_round);
 					if (isSpecial) {
-						const [thisCas, thisDes] = getCastell(specialName);
+						const [thisCas, thisDes] = GetCastell(specialName, false);
 	
 						if (!(thisCas.replace('T','2') in puntuacions)) {
 							if (!(thisCas in not_scored_castells))
@@ -106,7 +101,7 @@ class ResumHistoric extends Component {
 						}
 					} else {
 						Object.keys(same_round).forEach((thisCastell, i) => {
-							const [thisCas, thisDes] = getCastell(thisCastell);
+							const [thisCas, thisDes] = GetCastell(thisCastell, false);
 	
 							if (!(thisCas.replace('T','2') in puntuacions)) {
 								if (!(thisCas in not_scored_castells))

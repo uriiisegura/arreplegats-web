@@ -1396,6 +1396,11 @@ Millors diades
     filter: invert(16%) sepia(58%) saturate(4997%) hue-rotate(333deg) brightness(85%) contrast(95%);
 }
 
+.castell-count {
+    font-weight: 700;
+    font-style: italic;
+}
+
 @media screen and (max-width: 800px) {
     .best-diades {
         font-size: 0.7rem;
@@ -1403,6 +1408,11 @@ Millors diades
 
     .this-season {
         height: 0.5rem;
+    }
+
+    .best-diades thead tr th:nth-child(5),
+    .best-diades tbody tr td:nth-child(5) {
+        display: none;
     }
 }
 
