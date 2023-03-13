@@ -494,7 +494,7 @@ Navbar
     }
     .nav-link > span:hover,
     .nav-link:hover > a,
-    .nav-link.active > a {
+    .nav-link a.active {
         color: var(--primary-600);
     }
     .nav-link > span:hover img {
