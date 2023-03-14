@@ -433,13 +433,15 @@ Navbar
     padding: 0.2rem 1rem;
     background-color: var(--primary-700);
     height: auto;
-    border-bottom: 3px solid var(--primary-800);
+    border-bottom: 5px solid var(--primary-800);
+    transition: none;
 }
 .join-btn:has(a.active) {
     padding: 0.2rem 1rem;
     background-color: var(--primary-700);
     height: auto;
-    border-bottom: 3px solid var(--primary-800);
+    border-bottom: 5px solid var(--primary-800);
+    transition: none;
 }
 .join-btn:hover {
     border-bottom: none !important;
@@ -498,8 +500,8 @@ Navbar
         display: flex;
         flex-direction: column;
         padding: 0;
-        margin: 1rem 0;
         width: 100%;
+        margin: 0;
     }
     .nav-link > span:hover,
     .nav-link:hover > a,
@@ -515,6 +517,7 @@ Navbar
         line-height: unset;
         height: 100%;
         width: 100%;
+        margin: 0.6rem 0;
     }
 
     .nav-link span {
@@ -551,16 +554,18 @@ Navbar
 
     .join-btn {
         margin: 0;
-        padding: 0.8rem 0 !important;
         border: none !important;
+        transform: var(--transition);
     }
     .join-btn:hover {
         background-color: var(--primary-600) !important;
     }
 
     .join-btn a {
+        padding: 0.8rem 0 !important;
         height: 100%;
         width: 100%;
+        margin: unset;
     }
 }
 
