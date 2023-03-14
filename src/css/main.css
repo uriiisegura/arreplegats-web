@@ -365,7 +365,10 @@ Navbar
     border-bottom: 3px solid transparent;
     user-select: none;
 }
-.nav-link:hover,
+/* TODO: merge FireFox:has() */
+.nav-link:hover{
+    border-bottom: 3px solid var(--white);
+}
 .nav-link:has(a.active) {
     border-bottom: 3px solid var(--white);
 }
@@ -425,7 +428,13 @@ Navbar
     color: var(--primary-600);
 }
 
-.join-btn,
+/* TODO: merge FireFox:has() */
+.join-btn {
+    padding: 0.2rem 1rem;
+    background-color: var(--primary-700);
+    height: auto;
+    border-bottom: 3px solid var(--primary-800);
+}
 .join-btn:has(a.active) {
     padding: 0.2rem 1rem;
     background-color: var(--primary-700);
@@ -478,8 +487,8 @@ Navbar
         position: absolute;
         top: var(--navbar-height);
         left: 0;
-        background-color: var(--white);
-        transition: var(--transition);
+        background-color: var(--white);/*
+        transition: var(--transition);*/
     }
     #nav-links.show {
         transform: none;

@@ -10,9 +10,11 @@ class PersonCard extends Component {
                 years.push(this.props.from[i] + '-' + this.props.to[i]);
         }
 
+        const img = this.props.link || 'none.webp';
+
 		return (
 			<div className="person-card">
-                <div className="person-img" style={{backgroundImage: `url(${this.props.link})`}}></div>
+                <div className="person-img" style={{backgroundImage: `url(${img})`}}></div>
                 <h4>{this.props.name} {this.props.mote === undefined ? <></> : <span>{this.props.mote}</span>}</h4>
                 <h6>{years.join(', ')}</h6>
                 {
