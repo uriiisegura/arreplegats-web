@@ -1483,6 +1483,43 @@ Vídeos
 
 /*
 =============== 
+Junta tècnica
+===============
+*/
+
+.juntes {
+    margin-top: 3rem;
+    display: grid;
+    gap: 0 50px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.junta-team {
+    margin-bottom: 2rem;
+}
+
+.junta-team h4 {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.junta-team p {
+    margin: 0;
+    color: var(--grey-500);
+}
+
+.junta-team span {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+    .juntes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*
+=============== 
 
 ===============
 */
