@@ -37,6 +37,20 @@ class JuntaTecnica extends Component {
 							<p>Arnau Espinalt</p>
 							<p>Edgar Castellanos</p>
 						</div>
+
+						<div className="junta-team">
+							<h4>Equip d'acollida</h4>
+							<p><span>Cap d'acollida</span>: Maria Babià</p>
+							<p>Pere Llopart</p>
+							<p>Aida Sanfeliu</p>
+							<p>Jordina Rué</p>
+							<p>Núria Fonts</p>
+							<p>Aina Oliu</p>
+							<p>Anna Santamaria</p>
+							<p>Queralt Casademont</p>
+							<p>Gina Giró</p>
+							<p>Berta Ramírez</p>
+						</div>
 					</div>
 					<div className="junta-column">
 						<div className="junta-team">
