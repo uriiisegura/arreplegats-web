@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-class JuntaTecnica extends Component {
+class ComissioTecnica extends Component {
 	render() {
 		return (<>
 			<section>
-                <h2>Junta tècnica</h2>
+                <h2>Comissió tècnica</h2>
 
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula.
@@ -77,4 +77,4 @@ class JuntaTecnica extends Component {
 	}
 }
 
-export default JuntaTecnica;
+export default ComissioTecnica;

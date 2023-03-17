@@ -18,8 +18,8 @@ import Castell from "./pages/Castell";
 import MillorsDiades from "./pages/MillorsDiades";
 import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
-import JuntaTecnica from "./pages/JuntaTecnica";
 import JuntaDirectiva from "./pages/JuntaDirectiva";
+import ComissioTecnica from "./pages/ComissioTecnica";
 import Agenda from "./pages/Agenda";
 import Noticies from "./pages/Noticies";
 import Fotografies from "./pages/Fotografies";
@@ -70,8 +70,8 @@ function App() {
           <Route path="/millors-diades" element={<MillorsDiades {...exports} />} />
           <Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
           <Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />
-          <Route path="/junta-tecnica" element={<JuntaTecnica />} />
           <Route path="/junta-directiva" element={<JuntaDirectiva />} />
+          <Route path="/comissio-tecnica" element={<ComissioTecnica />} />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/noticies" element={<Noticies />} />
           <Route path="/fotografies" element={<Fotografies />} />
