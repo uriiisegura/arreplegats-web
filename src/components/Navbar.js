@@ -63,8 +63,8 @@ class Navbar extends Component {
                                 <div className="sub-menu">
                                     <h4 className="sub-menu-title">Organització</h4>
                                     <ul>
-                                        <li><NavLink to="/junta-tecnica">Junta tècnica</NavLink></li>
                                         <li><NavLink to="/junta-directiva">Junta directiva</NavLink></li>
+                                        <li><NavLink to="/junta-tecnica">Junta tècnica</NavLink></li>
                                     </ul>
                                 </div>
                             </div>
