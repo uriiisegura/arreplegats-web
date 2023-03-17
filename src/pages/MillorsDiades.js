@@ -65,6 +65,8 @@ class MillorsDiades extends Component {
 				if (!found[c])
 					components.push(<span>{c}</span>);
 			});
+			if (components.length < 1)
+				return [<></>];
 			return components;
 		}
 
