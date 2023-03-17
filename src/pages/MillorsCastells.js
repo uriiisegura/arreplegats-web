@@ -10,11 +10,12 @@ class MillorsCastells extends Component {
 
                 <div className="top-gallery">
                     {
-                        Object.values(castells_map).map(e => {
+                        Object.values(castells_map).map((e, i) => {
                             return <CastellCard
                                 name={e.name}
                                 link={e.link}
                                 notation={e.notation}
+                                key={i}
                             />
                         })
                     }

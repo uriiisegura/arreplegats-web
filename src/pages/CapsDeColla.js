@@ -10,7 +10,7 @@ class CapsDeColla extends Component {
 
                 <div className="people-gallery">
                     {
-                        caps_de_colla.map(e => {
+                        caps_de_colla.map((e, i) => {
                             return <PersonCard
                                 name={e.name}
                                 mote={e.mote}
@@ -18,6 +18,7 @@ class CapsDeColla extends Component {
                                 to={e.to}
                                 link={e.link}
                                 text={e.text}
+                                key={i}
                             />
                         })
                     }

@@ -10,7 +10,7 @@ class Presidents extends Component {
 
                 <div className="people-gallery">
                     {
-                        presidents.map(e => {
+                        presidents.map((e, i) => {
                             return <PersonCard
                                 name={e.name}
                                 mote={e.mote}
@@ -18,6 +18,7 @@ class Presidents extends Component {
                                 to={e.to}
                                 link={e.link}
                                 text={e.text}
+                                key={i}
                             />
                         })
                     }

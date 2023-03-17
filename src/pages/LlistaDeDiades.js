@@ -141,7 +141,7 @@ class LlistaDeDiades extends Component {
 								<select type="text" id="poblacio">
 									{getPoblacions(actuacions)}
 								</select>
-								<div class="dblarrow"><b></b><i></i></div>
+								<div className="dblarrow"><b></b><i></i></div>
 							</div>
 						</div>
 						<div className="container">
@@ -150,7 +150,7 @@ class LlistaDeDiades extends Component {
 								<select type="text" id="castell">
 									{getCastells(actuacions)}
 								</select>
-								<div class="dblarrow"><b></b><i></i></div>
+								<div className="dblarrow"><b></b><i></i></div>
 							</div>
 						</div>
 					</div>

@@ -18,8 +18,8 @@ class PersonCard extends Component {
                 <h4>{this.props.name} {this.props.mote === undefined ? <></> : <span>{this.props.mote}</span>}</h4>
                 <h6>{years.join(', ')}</h6>
                 {
-                    this.props.text.map(e => {
-                        return <p>{e}</p>;
+                    this.props.text.map((e, i) => {
+                        return <p key={i}>{e}</p>;
                     })
                 }
 			</div>

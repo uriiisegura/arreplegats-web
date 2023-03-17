@@ -20,8 +20,8 @@ class Castell extends Component {
                 <h2>{data.name}</h2>
                 <img className="top-img" src={data.link} alt={data.name} />
                 {
-                    data.text.map(e => {
-                        return <p>{e}</p>;
+                    data.text.map((e, i) => {
+                        return <p key={i}>{e}</p>;
                     })
                 }
 			</section>

@@ -23,11 +23,12 @@ class Home extends Component {
                 </div>
 				<div className="top-gallery">
                     {
-                        Object.values(castells_map).slice(0, 4).map(e => {
+                        Object.values(castells_map).slice(0, 4).map((e, i) => {
                             return <CastellCard
                                 name={e.name}
                                 link={e.link}
                                 notation={e.notation}
+                                key={i}
                             />
                         })
                     }
