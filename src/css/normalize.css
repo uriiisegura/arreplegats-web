@@ -359,7 +359,7 @@ template {
 
 ::-webkit-scrollbar {
     background-color: #fff;
-    width: 16px;
+    width: 0;
 }
 
 /* background of the scrollbar except button or resizer */

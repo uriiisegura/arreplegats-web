@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import GetTemporada from "./../functions/GetTemporada";
-import GetCastellsDiada from "./../functions/GetCastellsDiada";
 import GetCastell from "./../functions/GetCastell";
 
 class MillorsDiades extends Component {
@@ -51,15 +50,19 @@ class MillorsDiades extends Component {
 
 		const array_to_diada = (castells, top_castells) => {
 			let components = [];
+			let found = {};
+			top_castells.forEach(k => { found[k.castell] = false; });
 			castells.forEach(c => {
-				let found = false;
+				c = Object.values(c)[0];
+				if (c.includes("Pd4")) return;
 				top_castells.forEach(k => {
+					if (found[k.castell]) return;
 					if (k.castell === c) {
 						components.push(<span className="castell-count">{c}</span>);
-						found = true;
+						found[k.castell] = true;
 					}
 				})
-				if (!found)
+				if (!found[c])
 					components.push(<span>{c}</span>);
 			});
 			return components;
@@ -88,6 +91,10 @@ class MillorsDiades extends Component {
 
 				<h4>Top 100</h4>
 
+				<p>
+					La columna "Castells" no inclou els Pd4 de l'actuació.
+				</p>
+
 				<table className="best-diades">
 					<thead>
 						<tr>
@@ -104,7 +111,6 @@ class MillorsDiades extends Component {
 						{
 							diades_array.map(d => {
 								count += 1;
-								const castells = GetCastellsDiada(d.castells);
 								return <tr>
 									<td>{GetTemporada(d.info.data) === todaySeason ? <img src="font-awesome/star.svg" alt="star" className="this-season" /> : <></>}</td>
 									<td>{count}</td>
@@ -112,7 +118,7 @@ class MillorsDiades extends Component {
 									<td>{d.info.motiu}</td>
 									<td>{d.info.ciutat}</td>
 									<td>{
-										array_to_diada(castells, d.top_castells)
+										array_to_diada(d.castells, d.top_castells)
 											.map(c => {
 												return c;
 											})
