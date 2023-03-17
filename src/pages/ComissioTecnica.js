@@ -16,59 +16,65 @@ class ComissioTecnica extends Component {
 							<h4>Direcció tècnica</h4>
 							<p><span>Cap de colla</span>: Xavier Marín Rísquez</p>
 							<p><span>Sots-cap de colla</span>: Pau Coll Casellas</p>
-							<p><span>Cap de pinyes</span>: Pau Coll Casellas</p>
-							<p><span>Cap de troncs</span>: Júlia Font</p>
+						</div>
+					</div>
+					<div className="junta-column">
+						<div className="junta-team">
+							<h4>Equip de troncs</h4>
+							<p><span>Cap de troncs</span>: Júlia Font Aguilar</p>
+							<p>Laia Boixet Lladó</p>
+							<p>Ana Paula Monzón</p>
+							<p>Pau Rosselló Carreras</p>
+							<p>Júlia Montserrat</p>
+							<p>Eduard Llorens Pomé</p>
+						</div>
+
+						<div className="junta-team">
+							<h4>Equip de pilars</h4>
+							<p><span>Cap de pilars</span>: Joan Massip Camprodon</p>
+							<p>David Torras Martín</p>
+							<p>Aina Vila</p>
+							<p>Biel Romera Muñoz</p>
+							<p>Queralt Bautista Rosas</p>
+						</div>
+
+						<div className="junta-team">
+							<h4>Equip de poms</h4>
 							<p><span>Cap de poms</span>: Paula Olivé</p>
+							<p>Carlota Fornells</p>
+							<p>Carla Falguera Garrido</p>
+							<p>Núria Bautista Rosas</p>
 						</div>
 					</div>
 					<div className="junta-column">
 						<div className="junta-team">
 							<h4>Equip de pinyes, folres, i manilles</h4>
 							<p><span>Cap de pinyes</span>: Pau Coll Casellas</p>
-							<p>Pau Sánchez Viol</p>
 							<p>Oriol Segura Niño</p>
+							<p>Edgar Castellanos Offroy</p>
 							<p>Aida Sanfeliu</p>
+							<p>Pau Sánchez Viol</p>
 							<p>Martí Puig Vall</p>
-							<p>Bet Romera</p>
-							<p>Laia Homs</p>
-							<p>Anna Santamaria</p>
-							<p>Jordi Torrens</p>
-							<p>Eudald Rovira</p>
+							<p>Bet Romera Mirabent</p>
+							<p>Laia Homs Vilaseca</p>
+							<p>Anna Santamaria Balaguer</p>
+							<p>Jordi Torrens Camprubí</p>
+							<p>Eudald Rovira Rovira</p>
 							<p>Arnau Espinalt</p>
-							<p>Edgar Castellanos</p>
 						</div>
 
 						<div className="junta-team">
 							<h4>Equip d'acollida</h4>
-							<p><span>Cap d'acollida</span>: Maria Babià</p>
+							<p><span>Cap d'acollida</span>: Maria Babià Soler</p>
 							<p>Pere Llopart</p>
 							<p>Aida Sanfeliu</p>
-							<p>Jordina Rué</p>
+							<p>Jordina Rué Alcové</p>
 							<p>Núria Fonts</p>
-							<p>Aina Oliu</p>
-							<p>Anna Santamaria</p>
+							<p>Aina Oliu Cordomí</p>
+							<p>Anna Santamaria Balaguer</p>
 							<p>Queralt Casademont</p>
-							<p>Gina Giró</p>
-							<p>Berta Ramírez</p>
-						</div>
-					</div>
-					<div className="junta-column">
-						<div className="junta-team">
-							<h4>Equip de troncs</h4>
-							<p><span>Cap de troncs</span>: Júlia Font</p>
-							<p>xxx</p>
-							<p>xxx</p>
-							<p>xxx</p>
-							<p>xxx</p>
-						</div>
-
-						<div className="junta-team">
-							<h4>Equip de poms</h4>
-							<p><span>Cap de poms</span>: Paula Olivé</p>
-							<p>xxx</p>
-							<p>xxx</p>
-							<p>xxx</p>
-							<p>xxx</p>
+							<p>Gina Giró Aguilar</p>
+							<p>Berta Ramírez Jou</p>
 						</div>
 					</div>
 				</div>
