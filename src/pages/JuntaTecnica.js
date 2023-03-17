@@ -24,6 +24,7 @@ class JuntaTecnica extends Component {
 					<div className="junta-column">
 						<div className="junta-team">
 							<h4>Equip de pinyes, folres, i manilles</h4>
+							<p><span>Cap de pinyes</span>: Pau Coll Casellas</p>
 							<p>Pau Sánchez Viol</p>
 							<p>Oriol Segura Niño</p>
 							<p>Aida Sanfeliu</p>
@@ -40,6 +41,7 @@ class JuntaTecnica extends Component {
 					<div className="junta-column">
 						<div className="junta-team">
 							<h4>Equip de troncs</h4>
+							<p><span>Cap de troncs</span>: Júlia Font</p>
 							<p>xxx</p>
 							<p>xxx</p>
 							<p>xxx</p>
@@ -48,6 +50,7 @@ class JuntaTecnica extends Component {
 
 						<div className="junta-team">
 							<h4>Equip de poms</h4>
+							<p><span>Cap de poms</span>: Paula Olivé</p>
 							<p>xxx</p>
 							<p>xxx</p>
 							<p>xxx</p>
