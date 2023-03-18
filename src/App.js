@@ -28,6 +28,7 @@ import Arreplegator from "./pages/Arreplegator";
 import Contacte from "./pages/Contacte";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
+import BarraLliure from "./pages/BarraLliure";
 import NotFound from "./pages/NotFound";
 import './css/main.css';
 import './css/normalize.css';
@@ -80,6 +81,7 @@ function App() {
           <Route path="/contacte" element={<Contacte />} />
           <Route path="/contractacions" element={<Contractacions />} />
           <Route path="/uneixthi" element={<Uneixthi />} />
+          <Route path="/barra-lliure" element={<BarraLliure />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

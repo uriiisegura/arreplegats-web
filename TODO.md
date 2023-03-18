@@ -36,3 +36,4 @@
 - [ ] Do `Contractacions`
 - [x] Do `Uneix-t'hi`
 - [x] `Uneix-t'hi` button in `NavBar`
+- [x] Do `BarraLliure`

@@ -1520,6 +1520,33 @@ Junta tècnica
 
 /*
 =============== 
+Barra Lliure
+===============
+*/
+
+.barcode-wrap {
+    width: 30rem;
+    max-width: var(--page-width);
+    margin: 0 auto;
+}
+
+.barcode {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bar {
+    height: 12rem;
+    background-color: var(--black);
+}
+
+.barcode-wrap p {
+    text-align: center;
+}
+
+/*
+=============== 
 
 ===============
 */
