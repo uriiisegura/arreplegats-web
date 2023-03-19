@@ -1524,6 +1524,23 @@ Barra Lliure
 ===============
 */
 
+.confirmation {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: 0 auto 3rem;
+}
+
+.confirmation img {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 2rem;
+}
+
+.confirmation h3 {
+    margin: 0;
+}
+
 .barcode-wrap {
     width: 30rem;
     max-width: var(--page-width);
@@ -1543,6 +1560,57 @@ Barra Lliure
 
 .barcode-wrap p {
     text-align: center;
+}
+
+@media screen and (max-width: 1900px) {
+    .confirmation {
+        width: 90%;
+    }
+
+    .confirmation h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .confirmation img {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1rem;
+    }
+
+    .confirmation h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .confirmation {
+        width: 100%;
+    }
+
+    .confirmation img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .confirmation h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .confirmation h3 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 605px) {
+    .confirmation h3 {
+        font-size: 0.9rem;
+    }
 }
 
 /*
