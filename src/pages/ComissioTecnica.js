@@ -62,20 +62,6 @@ class ComissioTecnica extends Component {
 							<p>Eudald Rovira Rovira</p>
 							<p>Arnau Espinalt</p>
 						</div>
-
-						<div className="junta-team">
-							<h4>Equip d'acollida</h4>
-							<p><span>Cap d'acollida</span>: Maria Babià Soler</p>
-							<p>Pere Llopart</p>
-							<p>Aida Sanfeliu</p>
-							<p>Jordina Rué Alcové</p>
-							<p>Núria Fonts</p>
-							<p>Aina Oliu Cordomí</p>
-							<p>Anna Santamaria Balaguer</p>
-							<p>Queralt Casademont</p>
-							<p>Gina Giró Aguilar</p>
-							<p>Berta Ramírez Jou</p>
-						</div>
 					</div>
 				</div>
 			</section>
