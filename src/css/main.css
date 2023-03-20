@@ -1615,6 +1615,28 @@ Barra Lliure
 
 /*
 =============== 
+Arreplegator
+===============
+*/
+
+.arreplegator-wrap {
+    margin-top: 2rem;
+    display: grid;
+    gap: 40px 20px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.arreplegator {
+    width: 100%;
+    aspect-ratio: calc(1 / 1.41421);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: var(--shadow-5);
+}
+
+/*
+=============== 
 
 ===============
 */

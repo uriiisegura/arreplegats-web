@@ -19,10 +19,12 @@ class Navbar extends Component {
 						<NavLink to="/" className="nav-logo">
 							<img src="icon.png" alt="Arreplegats" />
 						</NavLink>
-						<h3 className="header-name">
-							<span>Arreplegats</span> de la<br />
-							Zona Universitària
-						</h3>
+                        <NavLink to="/">
+                            <h3 className="header-name">
+                                <span>Arreplegats</span> de la<br />
+                                Zona Universitària
+                            </h3>
+                        </NavLink>
 					</div>
                     <div className="nav-btn">
                         <button onClick={this.expandMobile}>
