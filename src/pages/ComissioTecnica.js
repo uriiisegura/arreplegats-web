@@ -14,6 +14,8 @@ class ComissioTecnica extends Component {
 					<div className="junta-column">
 						<div className="junta-team">
 							<h4>Direcció tècnica</h4>
+							<p><span>Presidenta</span>: Clara Montoya García</p>
+							<p><span>Vice-president</span>: Benet Antius Lozano</p>
 							<p><span>Cap de colla</span>: Xavier Marín Rísquez</p>
 							<p><span>Sots-cap de colla</span>: Pau Coll Casellas</p>
 						</div>
