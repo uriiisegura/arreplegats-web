@@ -555,7 +555,7 @@ Navbar
     .join-btn {
         margin: 0;
         border: none !important;
-        transform: var(--transition);
+        transition: var(--transition);
     }
     .join-btn:hover {
         background-color: var(--primary-600) !important;
@@ -832,7 +832,6 @@ Castell Card
 .castell-card:hover .castell-link {
     transform: none;
 }
-
 
 /*
 =============== 

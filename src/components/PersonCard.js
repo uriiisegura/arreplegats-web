@@ -4,10 +4,12 @@ class PersonCard extends Component {
 	render() {
         let years = [];
         for (let i = 0; i < this.props.from.length; i++) {
-            if (this.props.from[i] === this.props.to[i] || this.props.to[i] === null)
+            if (this.props.from[i] === this.props.to[i])
                 years.push(this.props.from[i]);
+            else if (this.props.to[i] === null)
+                years.push(`${this.props.from[i]} (actualment)`);
             else
-                years.push(this.props.from[i] + '-' + this.props.to[i]);
+                years.push(`${this.props.from[i]}-${this.props.to[i]}`);
         }
 
         const img = this.props.link || 'none.webp';
