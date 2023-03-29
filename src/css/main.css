@@ -665,7 +665,7 @@ Home
 }
 
 .overlay {
-    background-color: rgba(21, 168, 132, 0.4);
+    background-color: rgba(21, 168, 132, 0.5);
     position: absolute;
     top: 0;
     right: 0;
@@ -718,6 +718,17 @@ Home
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+.content h5 {
+    margin: 2rem 0 0;
+    font-size: 2rem;
+}
+
+.content h6 {
+    margin: 0.5rem 0 0;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
 section h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -749,6 +760,14 @@ section h4 {
 }
 
 @media screen and (max-width: 800px) {
+    .content h5 {
+        font-size: 1.2rem;
+    }
+
+    .content h6 {
+        font-size: 0.8rem;
+    }
+
     .top-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1632,6 +1651,60 @@ Arreplegator
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: var(--shadow-5);
+}
+
+/*
+=============== 
+Notícies
+===============
+*/
+
+.news-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    overflow-y: scroll;
+}
+
+.news {
+    padding: 20px;
+    border: 1px solid var(--grey-300);
+    background-color: var(--grey-200);
+    box-sizing: border-box;
+}
+
+.news .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.news h3 {
+    margin: 0;
+}
+
+.news h4 {
+    margin: 1rem 0;
+    color: var(--grey-500);
+}
+
+.news h6 {
+    margin: 0 0 0 10px;
+    white-space: nowrap;
+    text-align: right;
+    color: var(--grey-400);
+}
+
+@media screen and (max-width: 1200px) {
+    .news-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .news-wrap {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 /*
