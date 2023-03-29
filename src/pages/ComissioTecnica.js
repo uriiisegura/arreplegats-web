@@ -25,15 +25,9 @@ class ComissioTecnica extends Component {
 							<h4>Equip de troncs</h4>
 							<p><span>Cap de troncs</span>: Júlia Font Aguilar</p>
 							<p>Laia Boixet Lladó</p>
-							<p>Ana Paula Monzón</p>
 							<p>Pau Rosselló Carreras</p>
 							<p>Júlia Montserrat</p>
 							<p>Eduard Llorens Pomé</p>
-						</div>
-
-						<div className="junta-team">
-							<h4>Equip de pilars</h4>
-							<p><span>Cap de pilars</span>: Joan Massip Camprodon</p>
 							<p>David Torras Martín</p>
 							<p>Aina Vila</p>
 							<p>Biel Romera Muñoz</p>
@@ -46,6 +40,7 @@ class ComissioTecnica extends Component {
 							<p>Carlota Fornells</p>
 							<p>Carla Falguera Garrido</p>
 							<p>Núria Bautista Rosas</p>
+							<p>Ana Paula Monzón</p>
 						</div>
 					</div>
 					<div className="junta-column">

@@ -26,7 +26,7 @@
 - [ ] Write `Junta tècnica`
 - [ ] Write `Junta directiva`
 - [ ] Do `Agenda`
-- [ ] Do `Notícies`
+- [x] ~~Do `Notícies`~~
 - [ ] Do `Fotografies`
 - [x] ~~Do `Vídeos`~~
 - [ ] Write `L'Arreplegator`
