@@ -16,8 +16,6 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
-                    <h5>Et donem 2 ECTS l'any!</h5>
-                    <h6>T'esperem dimarts i dijous al pati de l'ETSEIB</h6>
 				</div>
 			</section>
 			<section style={{paddingTop: `2rem`}}>

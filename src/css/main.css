@@ -718,17 +718,6 @@ Home
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-.content h5 {
-    margin: 2rem 0 0;
-    font-size: 2rem;
-}
-
-.content h6 {
-    margin: 0.5rem 0 0;
-    font-weight: 300;
-    font-size: 1rem;
-}
-
 section h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
@@ -760,14 +749,6 @@ section h4 {
 }
 
 @media screen and (max-width: 800px) {
-    .content h5 {
-        font-size: 1.2rem;
-    }
-
-    .content h6 {
-        font-size: 0.8rem;
-    }
-
     .top-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
