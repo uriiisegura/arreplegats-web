@@ -32,6 +32,7 @@ class ComissioTecnica extends Component {
 							<p>Aina Vila</p>
 							<p>Biel Romera Muñoz</p>
 							<p>Queralt Bautista Rosas</p>
+							<p>Ignasi Tortras</p>
 						</div>
 
 						<div className="junta-team">
