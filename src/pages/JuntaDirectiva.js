@@ -17,6 +17,7 @@ class JuntaDirectiva extends Component {
 							<p><span>Presidenta</span>: Clara Montoya García</p>
 							<p><span>Vice-president</span>: Benet Antius Lozano</p>
 							<p><span>Secretàries</span>: Cristina Oliveira Coll i Aina Oliu Cordomí</p>
+							<p><span>Cap de colla</span>: Xavier Marín Rísquez</p>
 						</div>
 					</div>
 					<div className="junta-column">

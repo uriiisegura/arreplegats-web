@@ -7,6 +7,8 @@ import quotes from "./../data/quotes.json";
 
 class Home extends Component {
 	render() {
+        const random_quotes = quotes.sort(() => 0.5 - Math.random()).slice(0, 3);
+
 		return (<>
 			<section className="welcome-image" style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}>
 				<div className="overlay"></div>
@@ -14,6 +16,8 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+                    <h5>Et donem 2 ECTS l'any!</h5>
+                    <h6>T'esperem dimarts i dijous al pati de l'ETSEIB</h6>
 				</div>
 			</section>
 			<section style={{paddingTop: `2rem`}}>
@@ -38,7 +42,7 @@ class Home extends Component {
                 <h4>Què diu la gent?</h4>
                 <div className="quotes">
                     {
-                        quotes.map(e => {
+                        random_quotes.map(e => {
                             return <Quote
                                 quote={e.quote}
                                 author={e.author}
