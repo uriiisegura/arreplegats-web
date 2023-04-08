@@ -29,6 +29,7 @@ import Contacte from "./pages/Contacte";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
 import BarraLliure from "./pages/BarraLliure";
+import Palette from "./pages/Palette";
 import NotFound from "./pages/NotFound";
 import './css/main.css';
 import './css/normalize.css';
@@ -81,6 +82,7 @@ function App() {
           <Route path="/contacte" element={<Contacte />} />
           <Route path="/contractacions" element={<Contractacions />} />
           <Route path="/uneixthi" element={<Uneixthi />} />
+          <Route path="/palette" element={<Palette />} />
           <Route path="/barra-lliure" element={<BarraLliure />} />
 
           <Route path="*" element={<NotFound />} />
