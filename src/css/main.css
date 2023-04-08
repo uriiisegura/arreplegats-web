@@ -657,7 +657,7 @@ Home
 
 .welcome-image {
     height: calc(100vh - 5rem);
-    background-position: center;
+    background-position: center 15%;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
