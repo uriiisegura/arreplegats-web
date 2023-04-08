@@ -36,23 +36,18 @@ import './css/normalize.css';
 function App() {
   const [diades, setCastells] = useState({});
   const [puntuacions, setPuntuacions] = useState({});
-  const [noticies, setNoticies] = useState({});
 
   const exports = {
     'diades': diades,
     'setCastells': setCastells,
     'puntuacions': puntuacions,
-    'setPuntuacions': setPuntuacions,
-    'noticies': noticies,
-    'setNoticies': setNoticies
+    'setPuntuacions': setPuntuacions
   };
 
   useEffect(() => {
   }, [diades]);
   useEffect(() => {
   }, [puntuacions]);
-  useEffect(() => {
-  }, [noticies]);
   
   return (<>
     <DataProcessor {...exports} />
@@ -79,7 +74,7 @@ function App() {
           <Route path="/junta-directiva" element={<JuntaDirectiva />} />
           <Route path="/comissio-tecnica" element={<ComissioTecnica />} />
           <Route path="/agenda" element={<Agenda />} />
-          <Route path="/noticies" element={<Noticies {...exports} />} />
+          <Route path="/noticies" element={<Noticies />} />
           <Route path="/fotografies" element={<Fotografies />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/arreplegator" element={<Arreplegator />} />

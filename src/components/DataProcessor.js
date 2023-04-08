@@ -2,10 +2,9 @@ import { useEffect } from "react";
 import * as Papa from 'papaparse';
 
 function DataProcessor(props) {
-    const { setCastells, setPuntuacions, setNoticies } = props;
+    const { setCastells, setPuntuacions } = props;
     const CASTELLS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzvM_JNeX_MUNi4ZarVZDcj5CdyrDBTPbf3lDUrvUs_HvaX3S0k07yLmJKolAPf0BA6iM1FW4w1u83/pub?gid=0&single=true&output=csv";
     const SCORE_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQeAif6pgFuLUAXHif4IsrSXzG8itYhirTHGdmNzA5RmrEPcJe7lcfwfNVLBEcgnn3mZbThqaZdouiP/pub?gid=1401475200&single=true&output=csv";
-    const NEWS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vT20Dy9NNUwDDN3xDGlB2udXBmB99o1x-aI-FcvqTCQk9nYxN7d6hYBtSNO-QcJgR8rN3kYDS-WWomz/pub?output=csv";
 
     const get_data = (link, callback) => Papa.parse(link, {
         download: true,
@@ -82,10 +81,6 @@ function DataProcessor(props) {
         get_data(SCORE_URL, (results) => {
             setPuntuacions(process_puntuacions(results.data));
         });
-
-        get_data(NEWS_URL, (results => {
-            setNoticies(results.data);
-        }));
 		// eslint-disable-next-line
     }, []);
 }
