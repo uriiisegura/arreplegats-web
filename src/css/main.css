@@ -1691,6 +1691,7 @@ Jocs
 
 .square-table {
     border-collapse: collapse;
+    user-select: none;
 }
 
 .square-table td {
@@ -1755,16 +1756,17 @@ Sopa de lletres
 
 .word-search-table td {
     border: 1px solid var(--black);
+    cursor: pointer;
 }
 
-#selector {
+.selector {
     position: absolute;
     box-sizing: content-box;
     border: 1.25rem solid var(--primary-700);
     border-radius: 99999px;
     opacity: 0;
 }
-#selector.show {
+.selector.show {
     opacity: 0.5;
 }
 
@@ -1772,14 +1774,20 @@ Sopa de lletres
     text-transform: uppercase;
 }
 
+.word-search-list .done {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    color: var(--grey-400);
+}
+
 @media screen and (max-width: 1200px) {
-    #selector {
+    .selector {
         border: 1rem solid var(--primary-700);
     }
 }
 
 @media screen and (max-width: 950px) {
-    #selector {
+    .selector {
         border: 0.75rem solid var(--primary-700);
     }
 }
