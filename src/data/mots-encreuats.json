@@ -1,0 +1,127 @@
+[
+	{
+		"columns": 13,
+		"rows": 17,
+		"words": [
+			{
+				"word": "Soca",
+				"hint": "Tenim la millor de l'univers.",
+				"direction": 0,
+				"x": 1,
+				"y": 3
+			},
+			{
+				"word": "Gralla",
+				"hint": "Instrument de vent que acompanya les construccions castelleres.",
+				"direction": 0,
+				"x": 5,
+				"y": 2
+			},
+			{
+				"word": "Castells",
+				"hint": "En fem de 6, de 7, i de 8 pisos.",
+				"direction": 0,
+				"x": 1,
+				"y": 5
+			},
+			{
+				"word": "Pilar",
+				"hint": "Estructura d'un sol casteller per pis.",
+				"direction": 1,
+				"x": 9,
+				"y": 0
+			},
+			{
+				"word": "Faixa",
+				"hint": "Peça de roba que proteix les lumbars.",
+				"direction": 1,
+				"x": 5,
+				"y": 12
+			},
+			{
+				"word": "Mocador",
+				"hint": "Peça de roba triangular, generalment vermella amb cercles blancs.",
+				"direction": 1,
+				"x": 2,
+				"y": 2
+			},
+			{
+				"word": "Verd",
+				"hint": "Color de la nostra colla.",
+				"direction": 1,
+				"x": 3,
+				"y": 10
+			},
+			{
+				"word": "Diada",
+				"hint": "Esdeveniment on es fan els castells.",
+				"direction": 0,
+				"x": 4,
+				"y": 14
+			},
+			{
+				"word": "Pom",
+				"hint": "Cúpula del castell.",
+				"direction": 0,
+				"x": 10,
+				"y": 5
+			},
+			{
+				"word": "Universitaris",
+				"hint": "Els castells no convencionals.",
+				"direction": 0,
+				"x": 0,
+				"y": 10
+			},
+			{
+				"word": "Folre",
+				"hint": "Petita pinya que es col·loca sobre la soca.",
+				"direction": 1,
+				"x": 11,
+				"y": 4
+			},
+			{
+				"word": "Arreplegats",
+				"hint": "La millor colla.",
+				"direction": 1,
+				"x": 6,
+				"y": 0
+			},
+			{
+				"word": "Tronc",
+				"hint": "Part del castell que comprèn des de baixos fins immediatament sota dosos, i que perfila l'estructura del castell.",
+				"direction": 0,
+				"x": 0,
+				"y": 7
+			},
+			{
+				"word": "Camisa",
+				"hint": "Cada colla hi du l'escut brodat.",
+				"direction": 0,
+				"x": 1,
+				"y": 0
+			},
+			{
+				"word": "Timbal",
+				"hint": "Instrument de percusió que acompanya les construccions castelleres.",
+				"direction": 1,
+				"x": 8,
+				"y": 10
+			},
+			{
+				"word": "Manilles",
+				"hint": "Les posem a la torre i al pilar.",
+				"direction": 0,
+				"x": 5,
+				"y": 8
+			},
+			{
+				"word": "Colla",
+				"hint": "Agrupació de castellers.",
+				"direction": 1,
+				"x": 9,
+				"y": 6
+			}
+		]
+	}
+]

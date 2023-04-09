@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* fonts */
 html {
     font-size: 100%;
     overflow-y: overlay;
@@ -1676,6 +1675,139 @@ Palette
 
 .palette div div {
 	height: 100%;
+}
+
+/*
+=============== 
+Jocs
+===============
+*/
+
+.game-two-columns {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 3fr 2fr;
+}
+
+.square-table {
+    border-collapse: collapse;
+}
+
+.square-table td {
+    position: relative;
+    width: 2.5rem;
+}
+.square-table td:after{
+    content: '';
+    display: block;
+    margin-top: 100%;
+}
+
+.square-table td .content {
+    position: absolute;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    user-select: none;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+@media screen and (max-width: 1200px) {
+    .square-table td {
+        width: 2rem;
+    }
+
+    .square-table td .content {
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .square-table td {
+        width: 1.5rem;
+    }
+
+    .square-table td .content {
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .game-two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*
+=============== 
+Sopa de lletres
+===============
+*/
+
+.word-search-table td {
+    border: 1px solid var(--black);
+}
+
+#selector {
+    position: absolute;
+    box-sizing: content-box;
+    border: 1.25rem solid var(--primary-700);
+    border-radius: 99999px;
+    opacity: 0;
+}
+#selector.show {
+    opacity: 0.5;
+}
+
+.word-search-list {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+    #selector {
+        border: 1rem solid var(--primary-700);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #selector {
+        border: 0.75rem solid var(--primary-700);
+    }
+}
+
+/*
+=============== 
+Mots encreuats
+===============
+*/
+
+.crossword-table {
+    display: block;
+    border-collapse: separate;
+}
+
+.cw-number {
+    position: absolute;
+    font-size: 0.5rem;
+    top: 0;
+    left: 3px;
+    z-index: 1000;
+    color: var(--grey-600);
+}
+
+input.content {
+    outline: none;
+    border-radius: 0;
+    padding: 0;
 }
 
 /*

@@ -34,6 +34,9 @@ import NotFound from "./pages/NotFound";
 import './css/main.css';
 import './css/normalize.css';
 
+import SopaLletres from "./pages/SopaLletres";
+import MotsEncreuats from "./pages/MotsEncreuats";
+
 function App() {
   const [diades, setCastells] = useState({});
   const [puntuacions, setPuntuacions] = useState({});
@@ -84,6 +87,9 @@ function App() {
           <Route path="/uneixthi" element={<Uneixthi />} />
           <Route path="/palette" element={<Palette />} />
           <Route path="/barra-lliure" element={<BarraLliure />} />
+
+          <Route path="/sopa-de-lletres" element={<SopaLletres />} />
+          <Route path="/mots-encreuats" element={<MotsEncreuats />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
