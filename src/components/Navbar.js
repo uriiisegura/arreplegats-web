@@ -2,16 +2,35 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 class Navbar extends Component {
+    state = {
+        height: document.documentElement.clientHeight,
+        width: document.documentElement.clientWidth
+    }
     showHide(id) {
         const submenu = document.getElementById(id);
         if (submenu !== null)
             submenu.classList.toggle('active');
     }
     expandMobile() {
-        const nav = document.getElementById('nav-links');
-        nav.classList.toggle('show');
+        document.getElementById('nav-links').classList.toggle('show');
+    }
+    hideAll() {
+        if (document.documentElement.clientHeight === this.state.height &&
+            document.documentElement.clientWidth === this.state.width)
+            return;
+        this.setState({
+            height: document.documentElement.clientHeight,
+            width: document.documentElement.clientWidth
+        });
+
+        document.getElementById('nav-links').classList.remove('show');
+        const subs = document.getElementsByClassName('sub-menus');
+        for (let e of subs)
+            e.classList.remove('active');
     }
 	render() {
+        window.addEventListener('resize', this.hideAll.bind(this));
+
 		return (<>
 			<nav className="navbar">
 				<div className="nav-center">

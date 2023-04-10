@@ -512,11 +512,13 @@ Navbar
         display: block;
         transform: translateX(-100vw);
         height: auto;
+        max-height: calc(100vh - var(--navbar-height));
+        overflow: scroll;
         position: absolute;
         top: var(--navbar-height);
+        right: 0;
         left: 0;
-        background-color: var(--white);/*
-        transition: var(--transition);*/
+        background-color: var(--white);
     }
     #nav-links.show {
         transform: none;

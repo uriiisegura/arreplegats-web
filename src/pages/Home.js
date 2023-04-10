@@ -40,10 +40,11 @@ class Home extends Component {
                 <h4>Què diu la gent?</h4>
                 <div className="quotes">
                     {
-                        random_quotes.map(e => {
+                        random_quotes.map((e, i) => {
                             return <Quote
                                 quote={e.quote}
                                 author={e.author}
+                                key={i}
                             />
                         })
                     }
