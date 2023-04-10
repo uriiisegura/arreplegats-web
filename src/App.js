@@ -4,6 +4,7 @@ import DataProcessor from "./components/DataProcessor";
 import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
+import RequireAuth from './components/RequireAuth';
 import Home from "./pages/Home";
 import QuiSom from "./pages/QuiSom";
 import Assajos from "./pages/Assajos";
@@ -25,6 +26,7 @@ import Noticies from "./pages/Noticies";
 import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
 import Arreplegator from "./pages/Arreplegator";
+import ArreplegatorList from "./pages/ArreplegatorList";
 import Contacte from "./pages/Contacte";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
@@ -82,6 +84,7 @@ function App() {
           <Route path="/fotografies" element={<Fotografies />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/arreplegator" element={<Arreplegator />} />
+          <Route path="/arreplegator-llista" element={<RequireAuth e={<ArreplegatorList />} />} />
           <Route path="/contacte" element={<Contacte />} />
           <Route path="/contractacions" element={<Contractacions />} />
           <Route path="/uneixthi" element={<Uneixthi />} />

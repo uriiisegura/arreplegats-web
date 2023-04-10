@@ -60,7 +60,10 @@ html {
     --red-dark: #a70000;
     --green-light: #d1e7dd;
     --green-dark: #0f5132;
-    --gold: #ffc000;
+    --orange-light: #ffeac1;
+    --orange-dark: #ffc000;
+    --blue-light: #d3e6ff;
+    --blue-dark: #4b69ff;
 
     /* fonts  */
     --headingFont: 'Roboto', sans-serif;
@@ -169,12 +172,12 @@ ul {
     letter-spacing: var(--letterSpacing);
     padding: 0.375rem 0.75rem;
     box-shadow: var(--shadow-1);
-    transition: var(--transtion);
+    transition: var(--transition);
     text-transform: capitalize;
     display: inline-block;
 }
 .btn:hover {
-    background: var(--primary-700);
+    background: var(--primary-600);
     box-shadow: var(--shadow-3);
 }
 .btn-hipster {
@@ -247,6 +250,24 @@ ul {
     color: var(--red-dark);
     letter-spacing: var(--letterSpacing);
     text-transform: capitalize;
+}
+
+input {
+    outline: none;
+    border-radius: var(--borderRadius);
+    border: 1px solid var(--grey-400);
+    padding: 5px;
+}
+input[type="date"] {
+    appearance: none;
+    background-color: var(--white);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 0s ease-in-out 9999999s;
 }
 
 /* alert */
@@ -456,11 +477,13 @@ Navbar
     color: var(--white) !important;
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1250px) {
     .nav-center {
         width: var(--mobile-width);
     }
+}
 
+@media screen and (max-width: 1550px) {
     .nav-btn {
         display: flex;
         justify-content: flex-end;
@@ -1637,6 +1660,25 @@ Arreplegator
     box-shadow: var(--shadow-5);
 }
 
+.link-btn {
+    cursor: pointer;
+    color: var(--white);
+    background: var(--primary-500);
+    border: transparent;
+    border-radius: var(--borderRadius);
+    letter-spacing: var(--letterSpacing);
+    padding: 0.375rem 0.75rem;
+    margin: 3rem auto 0;
+    width: fit-content;
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+    display: block;
+}
+.link-btn:hover {
+    background: var(--primary-600);
+    box-shadow: var(--shadow-3);
+}
+
 /*
 =============== 
 Notícies
@@ -1816,6 +1858,80 @@ input.content {
     outline: none;
     border-radius: 0;
     padding: 0;
+}
+
+/*
+=============== 
+Log In
+===============
+*/
+
+.appsistencia-login {
+    text-align: center;
+}
+
+.appsistencia-login h1 {
+    margin: 0 auto 1rem;
+    text-transform: uppercase;
+}
+
+.appsistencia-login p {
+    color: var(--grey-400);
+    text-align: left;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+}
+
+.appsistencia-login .message {
+    max-width: 400px;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+.appsistencia-login .message span::before {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+}
+.appsistencia-login .warning {
+    background-color: var(--orange-light);
+}
+.appsistencia-login .warning span::before {
+    content: 'Advertència';
+    color: var(--orange-dark);
+}
+.appsistencia-login .error {
+    background-color: var(--red-light);
+}
+.appsistencia-login .error span::before {
+    content: 'Error';
+    color: var(--red-dark);
+}
+.appsistencia-login .info {
+    background-color: var(--blue-light);
+}
+.appsistencia-login .info span::before {
+    content: 'Informació';
+    color: var(--blue-dark);
+}
+
+.appsistencia-login form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.appsistencia-login form * {
+    width: 100%;
+}
+.appsistencia-login input {
+    margin-bottom: 3px;
+}
+.appsistencia-login button {
+    width: fit-content;
+    margin: 1rem auto 0;
 }
 
 /*
