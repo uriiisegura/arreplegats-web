@@ -1879,7 +1879,8 @@ Log In
     color: var(--grey-400);
     text-align: left;
     font-size: 0.8rem;
-    padding-bottom: 0.5rem;
+    max-width: 400px;
+    margin: 0 auto 0.5rem !important;
 }
 
 .appsistencia-login .message {
