@@ -1,200 +1,202 @@
 [
-    {
-        "name": "Albert Vila Casesnoves",
-        "from": [1995],
-        "to": [1995],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Jordi Paretas Martínez",
-        "from": [1996, 2006],
-        "to": [1997, 2007],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Fèlix Casanova Fernàndez",
-        "from": [1997],
-        "to": [1999],
-        "link": "caps-de-colla/casanova.jpg",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Sergi Udina Oliva",
-        "from": [1999],
-        "to": [2001],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Roger Moncusí Claramunt",
-        "from": [2001],
-        "to": [2004],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Xavier Rius Orpinell",
-        "from": [2004],
-        "to": [2006],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Aina Mallol Capellà",
-        "from": [2007],
-        "to": [2008],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Miquel Bonet Alomar",
-        "from": [2008],
-        "to": [2010],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Antoni Sanisteban Moreno",
-        "from": [2010],
-        "to": [2011],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Arnau Cobo Vives",
-        "mote": "Cobo",
-        "from": [2011],
-        "to": [2012],
-        "link": "caps-de-colla/cobo.jpg",
-        "text": [
-            "Va ser un curs de canvi generacional, molta gent de l'època del primer 4d8, el Pd7fmC, els 3d7s, o l'intent de 3d8f havia plegat, i se sabia que anava a ser un anys de fer molta feina de formiga pel futur. Juntament amb un grup de persones que ja havien encadenat un parell de tècniques, es vam motivar per posar-se al capdavant de la colla. El primer tram va ser complicat fins la Td7f que es va descarregar a l'Aniversari i que va marcar un punt d'inflexió. A partir d'allà, al segon tram es van anar recuperant altres castells i sobretot estrenant molta gent als troncs i poms de dalt, recuperant la motivació i el bon ambient de colla, els dos ingredients que esdevindrien la base del que vindria als anys següents."
-        ]
-    },
-    {
-        "name": "Pol Batlló Casadesús",
-        "from": [2012],
-        "to": [2013],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Jaume Galofré Gras",
-        "mote": "Galu",
-        "from": [2013],
-        "to": [2014],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Roderic Picó Maya",
-        "mote": "Rode",
-        "from": [2014],
-        "to": [2015],
-        "link": "caps-de-colla/rode.jpg",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Agustí Viladrich Colell",
-        "from": [2015],
-        "to": [2015],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Gerard Ion Gállego Olsina",
-        "mote": "Ge",
-        "from": [2015],
-        "to": [2017],
-        "link": "caps-de-colla/ge.jpeg",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Joana Tarrés Sanz",
-        "from": [2017],
-        "to": [2018],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Sandra Manso Camp",
-        "mote": "Manso",
-        "from": [2018],
-        "to": [2019],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Gerard Martorell Rodríguez",
-        "mote": "Martu",
-        "from": [2019],
-        "to": [2020],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Oriol Camprubí Fábregas",
-        "mote": "Campru",
-        "from": [2020],
-        "to": [2021],
-        "link": "",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Biel Romera Muñoz",
-        "mote": "Biel KNY",
-        "from": [2021],
-        "to": [2022],
-        "link": "caps-de-colla/biel.jpg",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    },
-    {
-        "name": "Xavier Marín Rísquez",
-        "mote": "Xinu",
-        "from": [2022],
-        "to": [null],
-        "link": "caps-de-colla/xinu.jpg",
-        "text": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula."
-        ]
-    }
+	{
+		"name": "Albert Vila Casesnoves",
+		"from": [1995],
+		"to": [1995],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Jordi Paretas Martínez",
+		"from": [1996, 2006],
+		"to": [1997, 2007],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Fèlix Casanova Fernàndez",
+		"from": [1997],
+		"to": [1999],
+		"link": "caps-de-colla/casanova.jpg",
+		"text": [
+			"Va ser elegit cap de colla el març de 1997, a mitja temporada, perquè l'actual cap de colla havia de deixar-ho per motius de feina. Eren els inicis de la colla i teniem la sensació d'avançar en terreny desconegut, d'obrir camí fent uns castells que tenien unes característiques úniques, molt diferents dels castells convencionals. En aquella època, com diria el poeta, tot estava per fer i tot era possible. No sabíem ben bé quin podia ser el límit d'un castell universitari, però mai ens en vem imposar cap.",
+			"Durant el seu mandat es van assolir grans objectius per aleshores —com la torre de 6, el 3 de 6 per sota, el 4 de 7, o el 3 de 6 net— que acabarien sent el ciment sobre el que edificar les properes temporades."
+		]
+	},
+	{
+		"name": "Sergi Udina Oliva",
+		"from": [1999],
+		"to": [2001],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Roger Moncusí Claramunt",
+		"from": [2001],
+		"to": [2004],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Xavier Rius Orpinell",
+		"from": [2004],
+		"to": [2006],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Aina Mallol Capellà",
+		"from": [2007],
+		"to": [2008],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Miquel Bonet Alomar",
+		"from": [2008],
+		"to": [2010],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Antoni Sanisteban Moreno",
+		"from": [2010],
+		"to": [2011],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Arnau Cobo Vives",
+		"mote": "Cobo",
+		"from": [2011],
+		"to": [2012],
+		"link": "caps-de-colla/cobo.jpg",
+		"text": [
+			"Va ser un curs de canvi generacional, molta gent de l'època del primer 4d8, el Pd7fmC, els 3d7s, o l'intent de 3d8f havia plegat, i se sabia que anava a ser un anys de fer molta feina de formiga pel futur. Juntament amb un grup de persones que ja havien encadenat un parell de tècniques, es vam motivar per posar-se al capdavant de la colla. El primer tram va ser complicat fins la Td7f que es va descarregar a l'Aniversari i que va marcar un punt d'inflexió. A partir d'allà, al segon tram es van anar recuperant altres castells i sobretot estrenant molta gent als troncs i poms de dalt, recuperant la motivació i el bon ambient de colla, els dos ingredients que esdevindrien la base del que vindria als anys següents."
+		]
+	},
+	{
+		"name": "Pol Batlló Casadesús",
+		"from": [2012],
+		"to": [2013],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Jaume Galofré Gras",
+		"mote": "Galu",
+		"from": [2013],
+		"to": [2014],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Roderic Picó Maya",
+		"mote": "Rode",
+		"from": [2014],
+		"to": [2015],
+		"link": "caps-de-colla/rode.jpg",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Agustí Viladrich Colell",
+		"from": [2015],
+		"to": [2015],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Gerard Ion Gállego Olsina",
+		"mote": "Ge",
+		"from": [2015],
+		"to": [2017],
+		"link": "caps-de-colla/ge.jpeg",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Joana Tarrés Sanz",
+		"from": [2017],
+		"to": [2018],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Sandra Manso Camp",
+		"mote": "Manso",
+		"from": [2018],
+		"to": [2019],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Gerard Martorell Rodríguez",
+		"mote": "Martu",
+		"from": [2019],
+		"to": [2020],
+		"link": "",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Oriol Camprubí Fábregas",
+		"mote": "Campru",
+		"from": [2020],
+		"to": [2021],
+		"link": "",
+		"text": [
+			"La seva etapa com a cap de colla es va iniciar de manera improvisada. Després d'una parada obligada per la COVID-19, durant l'estiu del 2020 els membres de la tècnica que quedaven van estar debatent com encarar el nou curs. Una mica per estima a la colla i una mica per no cremar els més joves, l'Oriol Camprubí va fer un pas endavant.",
+			"Al setembre es muntar una nova tècnica reduïda per començar a plantejar la temporada, però una nova onada de la pandèmia va obligar a deixar-ho estar. Al començament del segon tram, però, seguint les indicacions de la CCCC, es van començar a fer assajos de novatos, considerant que era la cosa més urgent i prioritària que s'havia de fer. S'haguessin pogut començar a fer assajos bombolla amb 25 persones —tal i com van fer altres colles—, però es va decidir esperar a poder ser-hi tots."
+		]
+	},
+	{
+		"name": "Biel Romera Muñoz",
+		"mote": "Biel KNY",
+		"from": [2021],
+		"to": [2022],
+		"link": "caps-de-colla/biel.jpg",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Xavier Marín Rísquez",
+		"mote": "Xinu",
+		"from": [2022],
+		"to": [null],
+		"link": "caps-de-colla/xinu.jpg",
+		"text": [
+			"—"
+		]
+	}
 ]

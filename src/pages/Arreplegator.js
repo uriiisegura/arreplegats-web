@@ -12,7 +12,7 @@ class Arreplegator extends Component {
 				</p>
 
 				<Link className="link-btn" to="/arreplegator-llista">Accedir a tots els números</Link>
-            </section>
+			</section>
 		</>);
 	}
 }

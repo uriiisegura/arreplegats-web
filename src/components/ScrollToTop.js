@@ -8,9 +8,9 @@ function ScrollToTop() {
 		window.scrollTo(0, 0);
 	}, [pathname]);
 
-    const nav = document.getElementById('nav-links');
-    if (nav !== null)
-        nav.classList.remove('show');
+	const nav = document.getElementById('nav-links');
+	if (nav !== null)
+		nav.classList.remove('show');
 
 	return;
 }

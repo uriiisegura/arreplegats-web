@@ -5,7 +5,7 @@ class ArreplegatorList extends Component {
 		return (<>
 			<section>
 				<h2>Llista d'Arreplegators</h2>
-            </section>
+			</section>
 		</>);
 	}
 }

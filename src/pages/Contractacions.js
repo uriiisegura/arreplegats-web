@@ -4,7 +4,7 @@ class Contractacions extends Component {
 	render() {
 		return (<>
 			<section>
-                <h2>Contractacions</h2>
+				<h2>Contractacions</h2>
 			</section>
 		</>);
 	}

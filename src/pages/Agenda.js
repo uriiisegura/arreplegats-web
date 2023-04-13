@@ -4,7 +4,7 @@ class Agenda extends Component {
 	render() {
 		return (<>
 			<section>
-                <h2>Agenda</h2>
+				<h2>Agenda</h2>
 			</section>
 		</>);
 	}
