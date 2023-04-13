@@ -35,7 +35,7 @@
 				"word": "Faixa",
 				"hint": "Peça de roba que proteix les lumbars.",
 				"direction": 1,
-				"x": 5,
+				"x": 10,
 				"y": 12
 			},
 			{
@@ -56,8 +56,8 @@
 				"word": "Diada",
 				"hint": "Esdeveniment on es fan els castells.",
 				"direction": 0,
-				"x": 4,
-				"y": 14
+				"x": 6,
+				"y": 13
 			},
 			{
 				"word": "Pom",
@@ -102,8 +102,8 @@
 				"y": 0
 			},
 			{
-				"word": "Timbal",
-				"hint": "Instrument de percusió que acompanya les construccions castelleres.",
+				"word": "Tabals",
+				"hint": "Instruments de percusió que acompanyen les construccions castelleres.",
 				"direction": 1,
 				"x": 8,
 				"y": 10
