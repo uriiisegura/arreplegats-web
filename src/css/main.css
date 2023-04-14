@@ -166,7 +166,7 @@ ul {
 .btn {
 	cursor: pointer;
 	color: var(--white);
-	background: var(--primary-500);
+	background: var(--primary-600);
 	border: transparent;
 	border-radius: var(--borderRadius);
 	letter-spacing: var(--letterSpacing);
@@ -177,7 +177,7 @@ ul {
 	display: inline-block;
 }
 .btn:hover {
-	background: var(--primary-600);
+	background: var(--primary-700);
 	box-shadow: var(--shadow-3);
 }
 .btn-hipster {
@@ -1724,147 +1724,6 @@ Palette
 
 /*
 =============== 
-Jocs
-===============
-*/
-
-.game-two-columns {
-	display: grid;
-	gap: 2rem;
-	grid-template-columns: 3fr 2fr;
-}
-
-.square-table {
-	border-collapse: collapse;
-	user-select: none;
-}
-
-.square-table td {
-	position: relative;
-	width: 2.5rem;
-}
-.square-table td:after{
-	content: '';
-	display: block;
-	margin-top: 100%;
-}
-
-.square-table td .content {
-	position: absolute;
-	line-height: 2.5rem;
-	font-size: 1.5rem;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	user-select: none;
-	text-transform: uppercase;
-	color: var(--black);
-}
-
-@media screen and (max-width: 1200px) {
-	.square-table td {
-		width: 2rem;
-	}
-
-	.square-table td .content {
-		line-height: 2rem;
-		font-size: 1.3rem;
-	}
-}
-
-@media screen and (max-width: 950px) {
-	.square-table td {
-		width: 1.5rem;
-	}
-
-	.square-table td .content {
-		line-height: 1.5rem;
-		font-size: 1rem;
-	}
-}
-
-@media screen and (max-width: 700px) {
-	.game-two-columns {
-		grid-template-columns: 1fr;
-	}
-}
-
-/*
-=============== 
-Sopa de lletres
-===============
-*/
-
-.word-search-table td {
-	border: 1px solid var(--black);
-	cursor: pointer;
-}
-
-.selector {
-	position: absolute;
-	box-sizing: content-box;
-	border: 1.25rem solid var(--primary-700);
-	border-radius: 99999px;
-	opacity: 0;
-}
-.selector.show {
-	opacity: 0.5;
-}
-
-.word-search-list {
-	text-transform: uppercase;
-}
-
-.word-search-list .done {
-	text-decoration: line-through;
-	text-decoration-thickness: 2px;
-	color: var(--grey-400);
-}
-
-@media screen and (max-width: 1200px) {
-	.selector {
-		border: 1rem solid var(--primary-700);
-	}
-}
-
-@media screen and (max-width: 950px) {
-	.selector {
-		border: 0.75rem solid var(--primary-700);
-	}
-}
-
-/*
-=============== 
-Mots encreuats
-===============
-*/
-
-.crossword-table {
-	display: block;
-	border-collapse: separate;
-}
-
-.cw-number {
-	position: absolute;
-	font-size: 0.5rem;
-	top: 0;
-	left: 3px;
-	z-index: 1000;
-	color: var(--grey-600);
-}
-
-input.content {
-	outline: none;
-	border-radius: 0;
-	padding: 0;
-}
-
-/*
-=============== 
 Log In
 ===============
 */
@@ -1936,6 +1795,209 @@ Log In
 .appsistencia-login button {
 	width: fit-content;
 	margin: 1rem auto 0;
+}
+
+/*
+=============== 
+Jocs
+===============
+*/
+
+.games {
+	display: grid;
+	gap: 3rem;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.game {
+	text-align: center;
+	text-transform: none;
+}
+
+@media screen and (max-width: 1000px) {
+	.games {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.games {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.games {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+/*
+=============== 
+Sopa de lletres
+===============
+*/
+
+.levels {
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+.level {
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: calc(1.5rem - 4px);
+	border-radius: 50%;
+	font-size: 0.8rem;
+	text-align: center;
+	border: 2px solid;
+	user-select: none;
+}
+.level.prev {
+	background-color: var(--primary-600);
+	color: var(--white);
+	border-color: var(--primary-700);
+	cursor: pointer;
+}
+.level.current {
+	background-color: var(--white);
+	color: var(--primary-600);
+}
+.level.next {
+	background-color: var(--grey-300);
+	color: var(--grey-500);
+	cursor: not-allowed;
+}
+
+.game-two-columns {
+	display: grid;
+	gap: 2rem;
+	grid-template-columns: 3fr 2fr;
+}
+
+.square-table {
+	border-collapse: collapse;
+	user-select: none;
+}
+
+.square-table td {
+	position: relative;
+	width: 2.5rem;
+}
+.square-table td:after{
+	content: '';
+	display: block;
+	margin-top: 100%;
+}
+
+.square-table td .content {
+	position: absolute;
+	line-height: 2.5rem;
+	font-size: 1.5rem;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	user-select: none;
+	text-transform: uppercase;
+	color: var(--black);
+}
+
+@media screen and (max-width: 1200px) {
+	.square-table td {
+		width: 2rem;
+	}
+
+	.square-table td .content {
+		line-height: 2rem;
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.square-table td {
+		width: 1.5rem;
+	}
+
+	.square-table td .content {
+		line-height: 1.5rem;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.game-two-columns {
+		grid-template-columns: 1fr;
+	}
+}
+
+.word-search-table td {
+	border: 1px solid var(--black);
+	cursor: pointer;
+}
+
+.selector {
+	position: absolute;
+	box-sizing: content-box;
+	border: 1.25rem solid var(--primary-700);
+	border-radius: 99999px;
+	opacity: 0;
+}
+.selector.show {
+	opacity: 0.5;
+}
+
+.word-search-list {
+	text-transform: uppercase;
+}
+
+.word-search-list .done {
+	text-decoration: line-through;
+	text-decoration-thickness: 2px;
+	color: var(--grey-400);
+}
+
+@media screen and (max-width: 1200px) {
+	.selector {
+		border: 1rem solid var(--primary-700);
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.selector {
+		border: 0.75rem solid var(--primary-700);
+	}
+}
+
+/*
+=============== 
+Mots encreuats
+===============
+*/
+
+.crossword-table {
+	display: block;
+	border-collapse: separate;
+}
+
+.cw-number {
+	position: absolute;
+	font-size: 0.5rem;
+	top: 0;
+	left: 3px;
+	z-index: 1000;
+	color: var(--grey-600);
+}
+
+input.content {
+	outline: none;
+	border-radius: 0;
+	padding: 0;
 }
 
 /*

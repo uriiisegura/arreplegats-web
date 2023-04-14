@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 
 class GrallesTabals extends Component {
 	render() {
@@ -19,9 +18,9 @@ class GrallesTabals extends Component {
 				<p>
 					Sense músics, no hi ha castells!
 				</p>
-				<div className="read-more">
+				{/*<div className="read-more">
 					<NavLink to="/contacte">CONTACTA'NS</NavLink>
-				</div>
+				</div>*/}
 			</section>
 		</>);
 	}

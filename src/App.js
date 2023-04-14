@@ -27,7 +27,7 @@ import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
 import Arreplegator from "./pages/Arreplegator";
 import ArreplegatorList from "./pages/ArreplegatorList";
-import Contacte from "./pages/Contacte";
+import Jocs from "./pages/Jocs";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
 import BarraLliure from "./pages/BarraLliure";
@@ -40,67 +40,67 @@ import SopaLletres from "./pages/SopaLletres";
 import MotsEncreuats from "./pages/MotsEncreuats";
 
 function App() {
-  const [diades, setCastells] = useState({});
-  const [puntuacions, setPuntuacions] = useState({});
+	const [diades, setCastells] = useState({});
+	const [puntuacions, setPuntuacions] = useState({});
 
-  const exports = {
-    'diades': diades,
-    'setCastells': setCastells,
-    'puntuacions': puntuacions,
-    'setPuntuacions': setPuntuacions
-  };
+	const exports = {
+		'diades': diades,
+		'setCastells': setCastells,
+		'puntuacions': puntuacions,
+		'setPuntuacions': setPuntuacions
+	};
 
-  useEffect(() => {
-  }, [diades]);
-  useEffect(() => {
-  }, [puntuacions]);
-  
-  return (<>
-    <DataProcessor {...exports} />
+	useEffect(() => {
+	}, [diades]);
+	useEffect(() => {
+	}, [puntuacions]);
+	
+	return (<>
+		<DataProcessor {...exports} />
 
-    <Router>
-      <NavBar />
-      <ScrollToTop />
-      <main className="page">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/qui-som" element={<QuiSom />} />
-          <Route path="/assajos" element={<Assajos />} />
-          <Route path="/gralles-i-tabals" element={<GrallesTabals />} />
-          <Route path="/vida-universitaria" element={<VidaUniversitaria />} />
-          <Route path="/historia-de-la-colla" element={<HistoriaDeLaColla />} />
-          <Route path="/llista-de-caps-de-colla" element={<CapsDeColla />} />
-          <Route path="/llista-de-presidents" element={<Presidents />} />
-          <Route path="/els-castells-universitaris" element={<CastellsUniversitaris />} />
-          <Route path="/millors-castells" element={<MillorsCastells />} />
-          <Route path="/castells/:castell" element={<Castell />} />
-          <Route path="/millors-diades" element={<MillorsDiades {...exports} />} />
-          <Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
-          <Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />
-          <Route path="/junta-directiva" element={<JuntaDirectiva />} />
-          <Route path="/comissio-tecnica" element={<ComissioTecnica />} />
-          <Route path="/agenda" element={<Agenda />} />
-          <Route path="/noticies" element={<Noticies />} />
-          <Route path="/fotografies" element={<Fotografies />} />
-          <Route path="/videos" element={<Videos />} />
-          <Route path="/arreplegator" element={<Arreplegator />} />
-          <Route path="/arreplegator-llista" element={<RequireAuth e={<ArreplegatorList />} />} />
-          <Route path="/contacte" element={<Contacte />} />
-          <Route path="/contractacions" element={<Contractacions />} />
-          <Route path="/uneixthi" element={<Uneixthi />} />
-          <Route path="/palette" element={<Palette />} />
-          <Route path="/barra-lliure" element={<BarraLliure />} />
+		<Router>
+			<NavBar />
+			<ScrollToTop />
+			<main className="page">
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/qui-som" element={<QuiSom />} />
+					<Route path="/assajos" element={<Assajos />} />
+					<Route path="/gralles-i-tabals" element={<GrallesTabals />} />
+					<Route path="/vida-universitaria" element={<VidaUniversitaria />} />
+					<Route path="/historia-de-la-colla" element={<HistoriaDeLaColla />} />
+					<Route path="/llista-de-caps-de-colla" element={<CapsDeColla />} />
+					<Route path="/llista-de-presidents" element={<Presidents />} />
+					<Route path="/els-castells-universitaris" element={<CastellsUniversitaris />} />
+					<Route path="/millors-castells" element={<MillorsCastells />} />
+					<Route path="/castells/:castell" element={<Castell />} />
+					<Route path="/millors-diades" element={<MillorsDiades {...exports} />} />
+					<Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
+					<Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />
+					<Route path="/junta-directiva" element={<JuntaDirectiva />} />
+					<Route path="/comissio-tecnica" element={<ComissioTecnica />} />
+					<Route path="/agenda" element={<Agenda />} />
+					<Route path="/noticies" element={<Noticies />} />
+					<Route path="/fotografies" element={<Fotografies />} />
+					<Route path="/videos" element={<Videos />} />
+					<Route path="/arreplegator" element={<Arreplegator />} />
+					<Route path="/arreplegator-llista" element={<RequireAuth e={<ArreplegatorList />} />} />
+					<Route path="/jocs" element={<Jocs />} />
+					<Route path="/sopa-de-lletres" element={<SopaLletres />} />
+					<Route path="/mots-encreuats" element={<MotsEncreuats />} />
+					<Route path="/contractacions" element={<Contractacions />} />
+					<Route path="/uneixthi" element={<Uneixthi />} />
+					<Route path="/palette" element={<Palette />} />
+					<Route path="/barra-lliure" element={<BarraLliure />} />
 
-          <Route path="/sopa-de-lletres" element={<SopaLletres />} />
-          <Route path="/mots-encreuats" element={<MotsEncreuats />} />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-    </Router>
-    <Footer />
-  </>
-  );
+					<Route path="*" element={<NotFound />} />
+				</Routes>
+			</main>
+		</Router>
+		<Footer />
+	</>
+	);
 }
 
 export default App;
