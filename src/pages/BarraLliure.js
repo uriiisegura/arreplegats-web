@@ -5,7 +5,8 @@ class BarraLliure extends Component {
 		const cookies = document.cookie.split(';');
 		for (let cookie of cookies) {
 			const [k, v] = cookie.split('=');
-			if (k.trim() === name) return v;
+			if (k.trim() === name)
+				return v.split(',')[0];
 		}
 		return null;
 	}
@@ -17,9 +18,9 @@ class BarraLliure extends Component {
 			code = Math.floor(Math.random() * 10000000000000);
 			secret_p1 = Math.floor(Math.random() * 10000000000000);
 			secret_p2 = Math.floor(Math.random() * 10000000000000);
-			document.cookie = 'code='+code;
-			document.cookie = 'secret_p1='+secret_p1;
-			document.cookie = 'secret_p2='+secret_p2;
+			document.cookie = `code=${code},secure`;
+			document.cookie = `secret_p1=${secret_p1}`;
+			document.cookie = `secret_p2=${secret_p2},secure`;
 		}
 
 		return (<>
@@ -31,18 +32,18 @@ class BarraLliure extends Component {
 				<div className="barcode-wrap">
 					<div className="barcode">
 						{
-							String(code).split('').map(d => {
-								return <div className="bar" style={{width: `${parseInt(d)+1}px`}}></div>;
+							String(code).split('').map((d, i) => {
+								return <div key={i} className="bar" style={{width: `${parseInt(d)+1}px`}}></div>;
 							})
 						}
 						{
-							String(secret_p1).split('').map(d => {
-								return <div className="bar" style={{width: `${parseInt(d)+1}px`}}></div>;
+							String(secret_p1).split('').map((d, i) => {
+								return <div key={i} className="bar" style={{width: `${parseInt(d)+1}px`}}></div>;
 							})
 						}
 						{
-							String(secret_p2).split('').map(d => {
-								return <div className="bar" style={{width: `${parseInt(d)+1}px`}}></div>;
+							String(secret_p2).split('').map((d, i) => {
+								return <div key={i} className="bar" style={{width: `${parseInt(d)+1}px`}}></div>;
 							})
 						}
 					</div>
