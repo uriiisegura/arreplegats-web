@@ -513,7 +513,7 @@ Navbar
 		transform: translateX(-100vw);
 		height: auto;
 		max-height: calc(100vh - var(--navbar-height));
-		overflow: scroll;
+		overflow: clip scroll;
 		position: absolute;
 		top: var(--navbar-height);
 		right: 0;
