@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import "./ImageResizes.css"
 
 class Uneixthi extends Component {
 	render() {
@@ -11,7 +12,7 @@ class Uneixthi extends Component {
 					Vine i forma part de la gran família verd quiròfan!
 				</p>
 			</section>
-			<section className="image-divider" style={{backgroundImage: `url('images/colla-all.jpg')`}}></section>
+			<section className="image-divider qui-som" style={{backgroundImage: `url('images/colla-all.jpg')`}}></section>
 			<section>
 				<h3>Fes-te <span>Arreplegat</span></h3>
 
