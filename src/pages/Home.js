@@ -4,13 +4,14 @@ import CastellCard from "../components/CastellCard";
 import Quote from "../components/Quote";
 import castells_map from "./../data/castells-top.json";
 import quotes from "./../data/quotes.json";
+import "./ImageResizes.css"
 
 class Home extends Component {
 	render() {
 		const random_quotes = quotes.sort(() => 0.5 - Math.random()).slice(0, 3);
 
 		return (<>
-			<section className="welcome-image" style={{backgroundImage: `url('images/2d8fm-arreplegats-2016_2.png')`}}>
+			<section className="welcome-image">
 				<div className="overlay"></div>
 				<div className="content">
 					<h1>ARREPLEGATS</h1>
