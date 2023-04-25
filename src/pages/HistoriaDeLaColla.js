@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import "./ImageResizes.css"
 
 class HistoriaDeLaColla extends Component {
 	render() {
