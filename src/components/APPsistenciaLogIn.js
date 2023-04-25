@@ -68,9 +68,6 @@ class APPsistenciaLogIn extends Component {
 			}
 		});
 	}
-	componentDidMount() {
-		document.getElementById('bday').valueAsDate = new Date();
-	}
 	render() {
 		return (<>
 			<section className="appsistencia-login">
@@ -90,7 +87,7 @@ class APPsistenciaLogIn extends Component {
 				}
 				<form style={{display: this.state.ok ? 'none' : 'block'}}>
 					<input id="email" type="email" placeholder="Correu electrònic" />
-					<input id="bday" type="date" placeholder="Data de naixement" />
+					<input id="bday" type="text" placeholder="Data de naixement" onFocus={(e) => { e.target.type = 'date'; }} onBlur={(e) => { if (e.target.value.length === 0) e.target.type = 'text'; }} />
 					<button id="btn" className="btn" type="submit" onClick={this.sendRequest.bind(this)}>Envia</button> 
 				</form>
 				{

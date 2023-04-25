@@ -1666,11 +1666,11 @@ Arreplegator
 .link-btn {
 	cursor: pointer;
 	color: var(--white);
-	background: var(--primary-500);
+	background: var(--primary-600);
 	border: transparent;
 	border-radius: var(--borderRadius);
 	letter-spacing: var(--letterSpacing);
-	padding: 0.375rem 0.75rem;
+	padding: 0.375rem 1rem;
 	margin: 3rem auto 0;
 	width: fit-content;
 	box-shadow: var(--shadow-1);
@@ -1678,7 +1678,7 @@ Arreplegator
 	display: block;
 }
 .link-btn:hover {
-	background: var(--primary-600);
+	background: var(--primary-700);
 	box-shadow: var(--shadow-3);
 }
 
@@ -1791,10 +1791,12 @@ Log In
 }
 .appsistencia-login input {
 	margin-bottom: 3px;
+	height: 2rem;
 }
 .appsistencia-login button {
 	width: fit-content;
 	margin: 1rem auto 0;
+	padding: 0.5rem 1rem;
 }
 
 /*
