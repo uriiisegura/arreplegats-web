@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import "./ImageResizes.css"
 
 class QuiSom extends Component {
 	render() {
@@ -12,7 +13,7 @@ class QuiSom extends Component {
 					<p><span>adj. i m. i f.</span> [LC] Considerat incopenent per a una feina concreta. <i>Una colla d'arreplegats.</i></p>
 				</div>
 			</section>
-			<section className="image-divider" style={{backgroundImage: `url('images/3d8f-cors.jpg')`}}></section>
+			<section className="image-divider qui-som"></section>
 			<section>
 				<h3>Som els <span>Arreplegats</span> de la Zona Universitària</h3>
 
