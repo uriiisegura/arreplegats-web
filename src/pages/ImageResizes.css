@@ -1,132 +1,132 @@
 /* Default styles for extra small devices */
 .historia1 {
-  background-image: url('images/3d8f-sant-albert-576x323.jpg');
+  background-image: url('images/resized/3d8f-sant-albert-576x323.jpg');
 }
 
 .historia2 {
-  background-image: url('images/pd7fm-construccio-2022-576x383.jpg');
+  background-image: url('images/resized/pd7fm-construccio-2022-576x383.jpg');
 }
 
 .uneixthi {
-  background-image: url('images/colla-all-576x273.jpg');
+  background-image: url('images/resized/colla-all-576x273.jpg');
 }
 
 .welcome-image {
-  background-image: url('images/welcome-full-576x384.jpeg');
+  background-image: url('images/resized/welcome-full-576x384.jpeg');
 }
 
 .qui-som {
-  background-image: url('images/3d8f-cors-576x384.jpg');
+  background-image: url('images/resized/3d8f-cors-576x384.jpg');
 }
 
 .assaigos {
-  background-image: url('images/assaig-novembre-2022-576x324.jpg');
+  background-image: url('images/resized/assaig-novembre-2022-576x324.jpg');
 }
 
 /* Small devices */
 @media (min-width: 576px) {
   .historia1 {
-    background-image: url('images/3d8f-sant-albert-768x431.jpg');
+    background-image: url('images/resized/3d8f-sant-albert-768x431.jpg');
   }
 
   .historia2 {
-    background-image: url('images/pd7fm-construccio-2022-768x512.jpg');
+    background-image: url('images/resized/pd7fm-construccio-2022-768x512.jpg');
   }
 
   .uneixthi {
-    background-image: url('images/colla-all-768x365.jpg');
+    background-image: url('images/resized/colla-all-768x365.jpg');
   }
 
   .welcome-image {
-    background-image: url('images/welcome-full-768x512.jpeg');
+    background-image: url('images/resized/welcome-full-768x512.jpeg');
   }
 
   .qui-som {
-    background-image: url('images/3d8f-cors-768x511.jpg');
+    background-image: url('images/resized/3d8f-cors-768x511.jpg');
   }
 
   .assaigos {
-    background-image: url('images/assaig-novembre-2022-768x432.jpg');
+    background-image: url('images/resized/assaig-novembre-2022-768x432.jpg');
   }
 }
 
 /* Medium devices */
 @media (min-width: 768px) {
   .historia1 {
-    background-image: url('images/3d8f-sant-albert-992x557.jpg');
+    background-image: url('images/resized/3d8f-sant-albert-992x557.jpg');
   }
 
   .historia2 {
-    background-image: url('images/pd7fm-construccio-2022-992x661.jpg');
+    background-image: url('images/resized/pd7fm-construccio-2022-992x661.jpg');
   }
 
   .uneixthi {
-    background-image: url('images/colla-all-992x472.jpg');
+    background-image: url('images/resized/colla-all-992x472.jpg');
   }
 
   .welcome-image {
-    background-image: url('images/welcome-full-992x661.jpeg');
+    background-image: url('images/resized/welcome-full-992x661.jpeg');
   }
 
   .qui-som {
-    background-image: url('images/3d8f-cors-992x660.jpg');
+    background-image: url('images/resized/3d8f-cors-992x660.jpg');
   }
 
   .assaigos {
-    background-image: url('images/assaig-novembre-2022-992x558.jpg');
+    background-image: url('images/resized/assaig-novembre-2022-992x558.jpg');
   }
 }
 
 /* Large devices */
 @media (min-width: 992px) {
   .historia1 {
-    background-image: url('images/3d8f-sant-albert-1200x674.jpg');
+    background-image: url('images/resized/3d8f-sant-albert-1200x674.jpg');
   }
 
   .historia2 {
-    background-image: url('images/pd7fm-construccio-2022-992_x_661.jpg');
+    background-image: url('images/resized/pd7fm-construccio-2022-992_x_661.jpg');
   }
 
   .uneixthi {
-    background-image: url('images/colla-all-1200x571.jpg');
+    background-image: url('images/resized/colla-all-1200x571.jpg');
   }
 
   .welcome-image {
-    background-image: url('images/welcome-full-1200x800.jpeg');
+    background-image: url('images/resized/welcome-full-1200x800.jpeg');
   }
 
   .qui-som {
-    background-image: url('images/3d8f-cors-1200x799.jpg');
+    background-image: url('images/resized/3d8f-cors-1200x799.jpg');
   }
 
   .assaigos {
-    background-image: url('images/assaig-novembre-2022-1200x675.jpg');
+    background-image: url('images/resized/assaig-novembre-2022-1200x675.jpg');
   }
 }
 
 /* Extra large devices */
 @media (min-width: 1200px) {
   .historia1 {
-    background-image: url('images/3d8f-sant-albert-1200_x_674.jpg');
+    background-image: url('images/resized/3d8f-sant-albert-1200_x_674.jpg');
   }
 
   .historia2 {
-    background-image: url('images/pd7fm-construccio-2022-992_x_661.jpg');
+    background-image: url('images/resized/pd7fm-construccio-2022-992_x_661.jpg');
   }
 
   .uneixthi {
-    background-image: url('images/colla-all-1920x914.jpg');
+    background-image: url('images/resized/colla-all-1920x914.jpg');
   }
 
   .welcome-image {
-    background-image: url('images/welcome-full-1920x1280.jpeg');
+    background-image: url('images/resized/welcome-full-1920x1280.jpeg');
   }
 
   .qui-som {
-    background-image: url('images/3d8f-cors-1920x1279.jpg');
+    background-image: url('images/resized/3d8f-cors-1920x1279.jpg');
   }
 
   .assaigos {
-    background-image: url('images/assaig-novembre-2022-1920x1080.jpg');
+    background-image: url('images/resized/assaig-novembre-2022-1920x1080.jpg');
   }
 }
