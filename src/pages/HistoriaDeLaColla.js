@@ -21,7 +21,7 @@ class HistoriaDeLaColla extends Component {
 					Aquest castell, el 3 de 7, es va fer esperar més, sent el primer descarregat al final de la temporada 2000-2001. El següent any, es va carregar el primer 4 de 7 amb l'agulla, descarregat un any després. La temporada 2003-2004 va acabar amb dos nous castells: el <NavLink to="/castells/5d7">5 de 7</NavLink> i la torre de 7 amb folre, ambdós descarregats. El següent castell amb folre va arribar durant la temporada 2006-2007, quan vam carregar el primer pilar de 6 amb folre de la història castellera universitària. Aquest castell finalment es va descarregar a les acaballes de la temporada 2007-2008, en la Diada de Primavera dels Ganàpies de l'Autònoma.
 				</p>
 			</section>
-			<section className="image-divider" style={{backgroundImage: `url('images/3d8f-sant-albert.jpg')`}}></section>
+			<section className="image-divider historia1"></section>
 			<section className="historia">
 				<h5>Els únics que ho poden fer</h5>
 				<p>
@@ -34,7 +34,7 @@ class HistoriaDeLaColla extends Component {
 					No gaire més tard, l'hivern del 2014, vam portar a la Diada dels Ganàpies de la UAB el primer <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink> del món universitari, que veia com es feia història un altre cop en descarregar aquest castell fins aleshores inèdit. Aquell mateix desembre, pel nostre 19è Aniversari, sorpreníem el món sencer obrint plaça amb el <NavLink to="/castells/Vd6f">vano de 6</NavLink>.
 				</p>
 			</section>
-			<section className="image-divider" style={{backgroundImage: `url('images/pd7fm-construccio-2022.jpg')`}}></section>
+			<section className="image-divider historia2"></section>
 			<section className="historia">
 				<h5>L'època d'or</h5>
 				<p>
