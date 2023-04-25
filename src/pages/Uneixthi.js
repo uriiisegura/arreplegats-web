@@ -12,7 +12,7 @@ class Uneixthi extends Component {
 					Vine i forma part de la gran família verd quiròfan!
 				</p>
 			</section>
-			<section className="image-divider qui-som" style={{backgroundImage: `url('images/colla-all.jpg')`}}></section>
+			<section className="image-divider qui-som"></section>
 			<section>
 				<h3>Fes-te <span>Arreplegat</span></h3>
 
