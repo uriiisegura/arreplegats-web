@@ -8,7 +8,7 @@ class Arreplegator extends Component {
 				<h2>L'Arreplegator</h2>
 
 				<p>
-					Des del moment en que es va crear la colla l'any 1995, els Arreplegats hem tingut una revista interna anomenada, l'Arreplegator.
+					Des del moment en que es va crear la colla l'any 1995, els Arreplegats hem tingut una revista interna: l'Arreplegator.
 				</p>
 
 				<Link className="link-btn" to="/arreplegator-llista">Accedir a tots els números</Link>
