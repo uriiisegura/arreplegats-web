@@ -252,7 +252,8 @@ ul {
 	text-transform: capitalize;
 }
 
-input {
+input,
+textarea {
 	outline: none;
 	border-radius: var(--borderRadius);
 	border: 1px solid var(--grey-400);
@@ -2004,6 +2005,69 @@ input.content {
 	outline: none;
 	border-radius: 0;
 	padding: 0;
+}
+
+/*
+=============== 
+Contractacions
+===============
+*/
+
+.middle-btn {
+	margin: 2rem auto;
+}
+
+.big-btn {
+	font-size: 1.2rem;
+}
+
+.contract-list {
+	padding-left: 3rem;
+}
+
+.contract-list li {
+	list-style: disc;
+}
+
+.contract-vid {
+	border: 0;
+	width: 100%;
+	max-width: 700px;
+	margin: 2rem auto 0;
+	aspect-ratio: 16/9;
+	display: block;
+}
+
+/*
+=============== 
+Contactar
+===============
+*/
+
+.contact-form {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+label.required::after {
+	content: '*';
+	color: var(--red-dark);
+}
+
+.contact-form input {
+	margin-bottom: 0.5rem;
+}
+
+.contact-form textarea {
+	resize: vertical;
+	height: 10rem;
+}
+
+.contact-form button {
+	margin-top: 1rem;
 }
 
 /*

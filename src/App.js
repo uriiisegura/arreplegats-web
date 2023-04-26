@@ -32,6 +32,7 @@ import SopaLletres from "./pages/SopaLletres";
 import MotsEncreuats from "./pages/MotsEncreuats";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
+import Contactar from "./pages/Contactar";
 import BarraLliure from "./pages/BarraLliure";
 import Palette from "./pages/Palette";
 import NotFound from "./pages/NotFound";
@@ -90,9 +91,9 @@ function App() {
 					<Route path="/mots-encreuats" element={<MotsEncreuats />} />
 					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
+					<Route path="/contactar" element={<Contactar />} />
 					<Route path="/palette" element={<Palette />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
-
 
 					<Route path="*" element={<NotFound />} />
 				</Routes>
