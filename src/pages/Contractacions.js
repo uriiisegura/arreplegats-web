@@ -17,23 +17,37 @@ class Contractacions extends Component {
 
 				<Link className="link-btn middle-btn big-btn" to="/contactar">CONTACTA'NS</Link>
 
-				<p>
-					Tenim una àmplia experiència actuant a:
-				</p>
+				<div className="contract-two-cols">
+					<div>
+						<p>
+							Tenim una àmplia experiència actuant a:
+						</p>
 
-				<ul className="contract-list">
-					<li>Eufòria (programa de la TV3).</li>
-					<li>Festa de les Associacions d'Industrials de Barcelona.</li>
-					<li>Saló de l'Ensenyament.</li>
-					<li>XII Symposium on Computational Statistics.</li>
-					<li>4º Congreso Internacional de la Sociedad Española de Didáctica de la Lengua y la Literatura.</li>
-					<li>Posada de la primera pedra de la nova seu de la ONCE.</li>
-					<li>International Conference on Advancements in Palliative and End of Life Care.</li>
-				</ul>
+						<ul className="contract-list">
+							<li>Eufòria (programa de la TV3).</li>
+							<li>Festa de les Associacions d'Industrials de Barcelona.</li>
+							<li>Saló de l'Ensenyament.</li>
+							<li>XII Symposium on Computational Statistics.</li>
+							<li>4º Congreso Internacional de la Sociedad Española de Didáctica de la Lengua y la Literatura.</li>
+							<li>Posada de la primera pedra de la nova seu de la ONCE.</li>
+							<li>International Conference on Advancements in Palliative and End of Life Care.</li>
+						</ul>
 
-				<p>
-					...i molt més!
-				</p>
+						<p>
+							...i molt més!
+						</p>
+					</div>
+					<div className="spinner-wrap">
+						<div className="spinner">
+							<div className="face1" style={{backgroundImage: `url('images/comercial-boda.jpeg')`}}></div>
+							<div className="face2" style={{backgroundImage: `url('images/cavall-bernat.jpeg')`}}></div>
+							<div className="face3" style={{backgroundImage: `url('images/comercial-blanes.jpeg')`}}></div>
+							<div className="face4" style={{backgroundImage: `url('images/comercial-vertex.jpeg')`}}></div>
+							<div className="face5" style={{backgroundImage: `url('none.webp')`}}></div>
+							<div className="face6" style={{backgroundImage: `url('none.webp')`}}></div>
+						</div>
+					</div>
+				</div>
 
 				<iframe
 					className="contract-vid"
