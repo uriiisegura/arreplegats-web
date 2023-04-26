@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import "./ImageResizes.css"
 
 class QuiSom extends Component {
 	render() {
@@ -13,7 +12,12 @@ class QuiSom extends Component {
 					<p><span>adj. i m. i f.</span> [LC] Considerat incopenent per a una feina concreta. <i>Una colla d'arreplegats.</i></p>
 				</div>
 			</section>
-			<section className="image-divider qui-som"></section>
+			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/3d8f-cors-576_x_384.jpg')`}}></section>
+			<section className="image-divider img-768" style={{backgroundImage: `url('images/resized/3d8f-cors-768_x_511.jpg')`}}></section>
+			<section className="image-divider img-992" style={{backgroundImage: `url('images/resized/3d8f-cors-992_x_660.jpg')`}}></section>
+			<section className="image-divider img-1200" style={{backgroundImage: `url('images/resized/3d8f-cors-1200_x_799.jpg')`}}></section>
+			<section className="image-divider img-1920" style={{backgroundImage: `url('images/resized/3d8f-cors-1920_x_1279.jpg')`}}></section>
+			<section className="image-divider img-max" style={{backgroundImage: `url('images/3d8f-cors.jpg')`}}></section>
 			<section>
 				<h3>Som els <span>Arreplegats</span> de la Zona Universitària</h3>
 

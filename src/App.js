@@ -28,16 +28,16 @@ import Videos from "./pages/Videos";
 import Arreplegator from "./pages/Arreplegator";
 import ArreplegatorList from "./pages/ArreplegatorList";
 import Jocs from "./pages/Jocs";
+import SopaLletres from "./pages/SopaLletres";
+import MotsEncreuats from "./pages/MotsEncreuats";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
 import BarraLliure from "./pages/BarraLliure";
 import Palette from "./pages/Palette";
 import NotFound from "./pages/NotFound";
-import './css/main.css';
 import './css/normalize.css';
-
-import SopaLletres from "./pages/SopaLletres";
-import MotsEncreuats from "./pages/MotsEncreuats";
+import './css/main.css';
+import './css/resizer.css';
 
 function App() {
 	const [diades, setCastells] = useState({});

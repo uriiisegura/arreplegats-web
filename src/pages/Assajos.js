@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./ImageResizes.css"
 
 class Assajos extends Component {
 	render() {
@@ -14,7 +13,11 @@ class Assajos extends Component {
 					Amb l'esforç col·lectiu de cada integrant d'Arreplegats, el cel és el nostre límit.
 				</p>
 			</section>
-			<section className="image-divider assaigos"></section>
+			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-576_x_324.jpg')`}}></section>
+			<section className="image-divider img-768" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-768_x_432.jpg')`}}></section>
+			<section className="image-divider img-992" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-992_x_558.jpg')`}}></section>
+			<section className="image-divider img-1200" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-1200_x_675.jpg')`}}></section>
+			<section className="image-divider img-max" style={{backgroundImage: `url('images/assaig-novembre-2022.jpg')`}}></section>
 			<section>
 				<div className="rehearsal">
 					<h3>Dimarts i dijous al migdia</h3>
