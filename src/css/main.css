@@ -2010,10 +2010,6 @@ Contractacions
 	margin: 2rem auto;
 }
 
-.big-btn {
-	font-size: 1.2rem;
-}
-
 .contract-two-cols {
 	display: grid;
 	grid-template-columns: 3fr 2fr;

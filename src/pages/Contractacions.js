@@ -15,7 +15,7 @@ class Contractacions extends Component {
 					No dubtis en contactar-nos. Et respondrem en menys de 24 hores! Cap compromís. 
 				</p>
 
-				<Link className="link-btn middle-btn big-btn" to="/contactar">CONTACTA'NS</Link>
+				<Link className="link-btn middle-btn" to="/contactar">CONTACTA'NS</Link>
 
 				<div className="contract-two-cols">
 					<div>
