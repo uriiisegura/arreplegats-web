@@ -382,8 +382,8 @@ Navbar
 	align-items: center;
 	font-size: 1rem;
 	letter-spacing: var(--letterSpacing);
-	margin-left: 2rem;
-	padding: 0 0.5rem;
+	margin-left: 1rem;
+	padding: 0 1rem;
 	transition: var(--transition);
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
@@ -416,6 +416,7 @@ Navbar
 	color: var(--black);
 	display: block;
 	height: 100%;
+	width: 100%;
 	line-height: var(--navbar-height);
 }
 
@@ -950,6 +951,8 @@ section p a:hover {
 	padding: 10px 25px;
 	margin: 0 auto;
 	transition: var(--transition);
+	border-radius: var(--borderRadius);
+	box-shadow: var(--shadow-1);
 }
 .read-more a:hover {
 	background-color: var(--primary-700);
