@@ -1066,7 +1066,7 @@ Quote
 .quote p {
 	text-align: center;
 	margin: 0;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	padding: 0 2rem;
 }
 .quote p::before,
@@ -1084,7 +1084,7 @@ Quote
 	color: var(--primary-600);
 	text-align: center;
 	margin: 1.2rem 0 0;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
