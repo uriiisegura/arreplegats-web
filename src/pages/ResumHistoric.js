@@ -143,7 +143,7 @@ class ResumHistoric extends Component {
 			});
 		});
 	
-		let castells = Object.keys(castells_dict).map(function(key) {
+		let castells = Object.keys(castells_dict).map((key) => {
 			return [key, castells_dict[key]];
 		});
 		castells.sort(function(a, b) {
@@ -164,7 +164,7 @@ class ResumHistoric extends Component {
 			return scoreB - scoreA;
 		});
 	
-		let castells_no_puntuats = Object.keys(not_scored_castells).map(function(key) {
+		let castells_no_puntuats = Object.keys(not_scored_castells).map((key) => {
 			return [key, not_scored_castells[key]];
 		});
 		castells_no_puntuats.sort(function(a, b) {
@@ -195,8 +195,9 @@ class ResumHistoric extends Component {
 							<h4>{e.name}</h4>
 							<div className="resum-wrap">
 								{
-									castells_category.map(e => {
+									castells_category.map((e, i) => {
 										return <ResumCard
+											key={i}
 											castell={e[0]}
 											descarregats={e[1][0]}
 											carregats={e[1][1]}
@@ -211,8 +212,9 @@ class ResumHistoric extends Component {
 				<h4>Castells no puntuats</h4>
 				<div className="resum-wrap">
 					{
-						castells.map(e => {
+						castells.map((e, i) => {
 							return <ResumCard
+								key={i}
 								castell={e[0]}
 								descarregats={e[1][0]}
 								carregats={e[1][1]}

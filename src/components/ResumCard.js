@@ -13,7 +13,23 @@ class ResumCard extends Component {
 			</div>
 		</>;
 
-		return this.props.link ? <div className="resum-card"><div className="resum-card-inner">{card}<div className="resum-card-back"><NavLink to={`/castells/${this.props.castell}`}><span>Saber-ne més</span></NavLink></div></div></div> : <div className="resum-card locked-card"><div className="resum-card-inner">{card}<div className="resum-card-back"></div></div></div>;
+		return this.props.link ?
+			<div className="resum-card">
+				<div className="resum-card-inner">
+					{card}
+					<div className="resum-card-back">
+						<NavLink to={`/castells/${this.props.castell}`}>
+							<span>Saber-ne més</span>
+						</NavLink>
+					</div>
+				</div>
+			</div>
+		:
+			<div className="resum-card locked-card">
+				<div className="resum-card-inner">
+					{card}
+				</div>
+			</div>;
 	}
 }
 

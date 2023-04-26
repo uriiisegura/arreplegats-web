@@ -19,8 +19,8 @@ class LlistaDeDiades extends Component {
 			});
 			poblacions.sort();
 			poblacionsHTML.push(<option value="none">--- TOTES ---</option>);
-			poblacions.forEach(city => {
-				poblacionsHTML.push(<option value={city}>{city}</option>);
+			poblacions.forEach((city, i) => {
+				poblacionsHTML.push(<option value={city} key={i}>{city}</option>);
 			});
 			return poblacionsHTML;
 		}
@@ -37,8 +37,8 @@ class LlistaDeDiades extends Component {
 			});
 			castells.sort();
 			castellsHTML.push(<option value="none">--- TOTS ---</option>);
-			castells.forEach(cast => {
-				castellsHTML.push(<option value={cast}>{cast}</option>);
+			castells.forEach((cast, i) => {
+				castellsHTML.push(<option value={cast} key={i}>{cast}</option>);
 			});
 			return castellsHTML;
 		}
@@ -46,7 +46,7 @@ class LlistaDeDiades extends Component {
 		const getCastellsClean = (diada) => {
 			const castells = [];
 			const round = [];
-			diada.map(castell => round.push(Object.keys(castell)));
+			diada.forEach(castell => round.push(Object.keys(castell)));
 			for (let i = Math.min.apply(null, round); i <= Math.max.apply(null, round); i++) {
 				let ronda = [];
 				diada.forEach(castell => { if (parseInt(Object.keys(castell)) === i) ronda.push(Object.values(castell)[0]); });
@@ -61,24 +61,17 @@ class LlistaDeDiades extends Component {
 		const loadDiades = () => {
 			let results = 0;
 	
-			const date_from = FromEuropean(document.getElementById('date_from').value, '-');
-			const date_to = FromEuropean(document.getElementById('date_to').value, '-');
+			const date_from = new Date(document.getElementById('date_from').value);
+			const date_to = new Date(document.getElementById('date_to').value);
 			const poblacio = document.getElementById('poblacio').value;
 			const castell = document.getElementById('castell').value;
 	
 			const table = document.getElementById('results');
 			const help = document.getElementById('help');
 			const noResults = document.getElementById('no-results');
-			const error = document.getElementById('error');
 			table.classList.remove('hidden');
 			help.classList.add('hidden');
 			noResults.classList.add('hidden');
-			error.classList.add('hidden');
-			if (isNaN(date_from) || isNaN(date_to)) {
-				table.classList.add('hidden');
-				error.classList.remove('hidden');
-				return;
-			}
 			let stripe = false;
 			for (var i = 1; i < table.rows.length; i++) {
 				const date = FromEuropean(table.rows[i].cells[0].innerHTML);
@@ -129,11 +122,11 @@ class LlistaDeDiades extends Component {
 					<div className="filters">
 						<div className="container">
 							<label htmlFor="date_from">Des de:</label>
-							<input type="text" id="date_from" defaultValue={"01-09-"+year1}/>
+							<input type="date" id="date_from" defaultValue={year1+"-09-01"}/>
 						</div>
 						<div className="container">
 							<label htmlFor="date_to">Fins a:</label>
-							<input type="text" id="date_to" defaultValue={"31-08-"+year2}/>
+							<input type="date" id="date_to" defaultValue={year2+"-08-31"}/>
 						</div>
 						<div className="container">
 							<label htmlFor="poblacio">Població:</label>
@@ -154,11 +147,10 @@ class LlistaDeDiades extends Component {
 							</div>
 						</div>
 					</div>
-					<button className="filter-btn" onClick={loadDiades}>Filtrar</button>
+					<button className="btn filter-btn" onClick={loadDiades}>Filtrar</button>
 
 					<h6 id="help">Utilitza els filtres de dalt per a buscar diades.</h6>
 					<h6 id="no-results" className="error hidden">No s'han trobat resultats per a aquesta búsqueda.</h6>
-					<h6 id="error" className="error hidden">El format de data introduïda no és correcte (dd-mm-aaaa).</h6>
 
 					<table id="results" className="diades-table hidden">
 						<thead>
@@ -171,10 +163,10 @@ class LlistaDeDiades extends Component {
 						</thead>
 						<tbody>
 							{
-								actuacions.map(diada => {
+								actuacions.map((diada, i) => {
 									const castells = GetCastellsDiada(diada['castells']);
 									return (
-										<tr className="hidden">
+										<tr className="hidden" key={i}>
 											<td>{diada['info']['data']}</td>
 											<td>{diada['info']['motiu']}</td>
 											<td>{diada['info']['ciutat']}</td>
