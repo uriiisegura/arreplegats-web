@@ -382,8 +382,7 @@ Navbar
 	align-items: center;
 	font-size: 1rem;
 	letter-spacing: var(--letterSpacing);
-	margin-left: 1rem;
-	padding: 0 1rem;
+	margin-left: 0.5rem;
 	transition: var(--transition);
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
@@ -417,6 +416,7 @@ Navbar
 	display: block;
 	height: 100%;
 	width: 100%;
+	padding: 0 1.25rem;
 	line-height: var(--navbar-height);
 }
 
@@ -455,14 +455,14 @@ Navbar
 
 /* TODO: merge FireFox:has() */
 .join-btn {
-	padding: 0.2rem 1rem;
+	padding: 0.2rem 0;
 	background-color: var(--primary-700);
 	height: auto;
 	border-bottom: 5px solid var(--primary-800);
 	transition: none;
 }
 .join-btn:has(a.active) {
-	padding: 0.2rem 1rem;
+	padding: 0.2rem 0;
 	background-color: var(--primary-700);
 	height: auto;
 	border-bottom: 5px solid var(--primary-800);
