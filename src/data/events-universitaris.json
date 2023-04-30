@@ -1,0 +1,125 @@
+[
+	{
+		"date": "1994",
+		"title": "Fundació dels Ganàpies",
+		"description": "Els Ganàpies de la UAB són la colla castellera universitària més antiga, amb gairebé 30 anys d'història!",
+		"color": "ganapies"
+	},
+	{
+		"date": "4 d'abril de 1995",
+		"title": "Fundació dels Arreplegats",
+		"description": "Després ja vam venir nosaltres! La nostra primera diada va ser el 5 de maig, a la festa de la FIB, on hi vam carregar un Pd4. Des d'aleshores hem seguit actuant i em esdevingut la colla universitària més gran d'entre totes!",
+		"color": "arreplegats"
+	},
+	{
+		"date": "1998",
+		"title": "Fundació dels Xoriguers",
+		"description": "",
+		"color": "xoriguers"
+	},
+	{
+		"date": "2001",
+		"title": "Fundació dels Marracos",
+		"description": "",
+		"color": "marracos"
+	},
+	{
+		"date": "2003",
+		"title": "Fundació dels Emboirats",
+		"description": "",
+		"color": "emboirats"
+	},
+	{
+		"date": "2007",
+		"title": "Fundació dels Pataquers",
+		"description": "",
+		"color": "pataquers"
+	},
+	{
+		"date": "2011",
+		"title": "Fundació dels Passerells",
+		"description": "",
+		"color": "passerells"
+	},
+	{
+		"date": "2013",
+		"title": "Fundació dels Bergants",
+		"description": "",
+		"color": "bergants"
+	},
+	{
+		"date": "2013",
+		"title": "Fundació dels Engrescats",
+		"description": "",
+		"color": "engrescats"
+	},
+	{
+		"date": "2013",
+		"title": "Fundació dels Penjats",
+		"description": "",
+		"color": "penjats"
+	},
+	{
+		"date": "2013",
+		"title": "Fundació dels Llunàtics",
+		"description": "",
+		"color": "llunatics"
+	},
+	{
+		"date": "2014",
+		"title": "Fundació dels Trempats",
+		"description": "",
+		"color": "trempats"
+	},
+	{
+		"date": "2015",
+		"title": "Fundació dels Grillats",
+		"description": "",
+		"color": "grillats"
+	},
+	{
+		"date": "30 de novembre de 2022",
+		"title": "Fundació del Baròmetre Universitari",
+		"description": [
+			{
+				"type": "span",
+				"text": "El món casteller convencional ja tenia el seu propi baròmetre, però no va ser fins fa poc que va aparèixer-ne un pel món universitari. El podeu consultar "
+			},
+			{
+				"type": "a",
+				"props": {
+					"href": "https://barometreuniversitari.cat/",
+					"target": "_blank"
+				},
+				"text": "aquí"
+			},
+			{
+				"type": "span",
+				"text": "."
+			}
+		],
+		"color": "barometre"
+	},
+	{
+		"date": "22 de desembre de 2022",
+		"title": "Primeres manilles post-COVID",
+		"description": [
+			{
+				"type": "span",
+				"text": "Els Arreplegats vam ser la colla que va retornar les manilles universitàries després de la COVID-19. En el nostre 27è Aniversari vam portar per primer cop el "
+			},
+			{
+				"type": "a",
+				"props" : {
+					"href": "/#/castells/Pd7fm"
+				},
+				"text": "pilar de 7 amb folre i manilles"
+			},
+			{
+				"type": "span",
+				"text": " en ronda de pilars, i el vam carregar, completant així la que seria la tercera millor actuació de la història!"
+			}
+		],
+		"color": "arreplegats"
+	}
+]

@@ -65,6 +65,22 @@ html {
 	--blue-light: #d3e6ff;
 	--blue-dark: #4b69ff;
 
+	/* colles */
+	--barometre: #e43800;
+	--arreplegats: #15a884;
+	--pataquers: #f26e00;
+	--passerells: #c99fd0;
+    --ganapies: #257ba2;
+    --marracos: #979db5;
+    --trempats: #a48970;
+    --xoriguers: #12c3f4;
+    --emboirats: #c80036;
+    --bergants: #9dd237;
+    --engrescats: #ffdd00;
+    --penjats: #f80000;
+    --grillats: #cd157a;
+    --llunatics: #21277c;
+
 	/* fonts  */
 	--headingFont: 'Roboto', sans-serif;
 	--bodyFont: 'Montserrat', sans-serif;
@@ -2157,6 +2173,7 @@ Castells Universitaris
 	list-style: none;
 	width: min(60rem, 90%);
 	margin-inline: auto;
+	margin-top: 2rem;
 }
 
 /* line */
@@ -2167,13 +2184,6 @@ Castells Universitaris
 	background: rgb(225, 225, 225);
 	border-radius: calc(var(--line-w) / 2);
 }
-
-/* columns*/
-.timeline li:nth-child(1) { --accent-color: #41516C; }
-.timeline li:nth-child(2) { --accent-color: #FBCA3E; }
-.timeline li:nth-child(3) { --accent-color: #E24A68; }
-.timeline li:nth-child(4) { --accent-color: #1B5F8C; }
-.timeline li:nth-child(5) { --accent-color: #4CADAD; }
 
 /* row gaps */
 .timeline li:not(:last-child) {
@@ -2196,7 +2206,6 @@ Castells Universitaris
 	height: var(--dateH);
 	margin-inline: calc(var(--inlineP) * -1);
 	text-align: center;
-	background-color: var(--accent-color);
 	color: white;
 	font-size: 1.25rem;
 	font-weight: 700;
@@ -2211,7 +2220,7 @@ Castells Universitaris
 	content: "";
 	width: var(--inlineP);
 	aspect-ratio: 1;
-	background: var(--accent-color);
+	background: inherit;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
 	position: absolute;
 	top: 100%;
@@ -2226,7 +2235,7 @@ Castells Universitaris
 	width: 2rem;
 	aspect-ratio: 1;
 	background: var(--bgColor);
-	border: 0.3rem solid var(--accent-color);
+	border: 0.3rem solid rgb(143, 143, 143);
 	border-radius: 50%;
 	top: 50%;
 	transform: translate(50%, -50%);
@@ -2249,6 +2258,15 @@ Castells Universitaris
 .timeline li .descr {
 	padding-block-end: 1.5rem;
 	font-weight: 300;
+}
+
+.timeline li .descr a {
+	color: var(--primary-600);
+	transition: var(--transition);
+}
+.timeline li .descr a:hover {
+	color: var(--secondary-600);
+	text-decoration: underline;
 }
 
 /* shadows */

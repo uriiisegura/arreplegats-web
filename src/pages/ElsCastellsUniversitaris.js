@@ -1,37 +1,46 @@
 import React, { Component } from "react";
+import events from "./../data/events-universitaris.json";
 
 class CastellsUniversitaris extends Component {
+	renderComponent(e, i) {
+		let component;
+		const props = e.props ? e.props : {};
+		props.key = i;
+		if (e.text) {
+			component = React.createElement(e.type, props, e.text);
+		} else {
+			const children = e.components.map((c, j) => {
+				return this.renderComponent(c, j);
+			});
+			component = React.createElement(e.type, props, children);
+		}
+		return component;
+	}
 	render() {
 		return (<>
 			<section>
 				<h2>Els castells universitaris</h2>
 
+				<p>
+					Tot i ser la millor, els Arreplegats de la Zona Universitària no som l'única colla castellera universitària. A continuació hi podeu trobar un eix cronològic dels esdeveniments que més han marcat el món casteller universitari:
+				</p>
+
 				<ul className="timeline">
-					<li>
-						<div className="date">2002</div>
-						<div className="title">Title 1</div>
-						<div className="descr">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas itaque hic quibusdam fugiat est numquam harum, accusamus suscipit consequatur laboriosam!</div>
-					</li>
-					<li>
-						<div className="date">2007</div>
-						<div className="title">Title 2</div>
-						<div className="descr">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos adipisci nobis nostrum vero nihil veniam.</div>
-					</li>
-					<li>
-						<div className="date">2012</div>
-						<div className="title">Title 3</div>
-						<div className="descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga minima consequuntur soluta placeat iure totam commodi repellendus ea delectus, libero fugit quod reprehenderit, sequi quo, et dolorum saepe nulla hic.</div>
-					</li>
-					<li>
-						<div className="date">2017</div>
-						<div className="title">Title 4</div>
-						<div className="descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, cumque.</div>
-					</li>
-					<li>
-						<div className="date">2022</div>
-						<div className="title">Title 5</div>
-						<div className="descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, non.</div>
-					</li>
+					{
+						events.map((e, i) => {
+							return <li key={i}>
+								<div className="date" style={{backgroundColor: `var(--${e.color})`}}>{e.date}</div>
+								<div className="title">{e.title}</div>
+								<div className="descr">{
+									e.description instanceof Object ?
+										e.description.map((c, j) => {
+											return this.renderComponent(c, j)
+										})
+									: e.description
+								}</div>
+							</li>
+						})
+					}
 				</ul>
 			</section>
 		</>);
