@@ -4,7 +4,7 @@ import DataProcessor from "./components/DataProcessor";
 import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
-import RequireAuth from './components/RequireAuth';
+// import RequireAuth from './components/RequireAuth';
 import Home from "./pages/Home";
 import QuiSom from "./pages/QuiSom";
 import Assajos from "./pages/Assajos";
@@ -25,8 +25,6 @@ import Agenda from "./pages/Agenda";
 import Noticies from "./pages/Noticies";
 import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
-import Arreplegator from "./pages/Arreplegator";
-import ArreplegatorList from "./pages/ArreplegatorList";
 import Jocs from "./pages/Jocs";
 import SopaLletres from "./pages/SopaLletres";
 import MotsEncreuats from "./pages/MotsEncreuats";
@@ -84,8 +82,6 @@ function App() {
 					<Route path="/noticies" element={<Noticies />} />
 					<Route path="/fotografies" element={<Fotografies />} />
 					<Route path="/videos" element={<Videos />} />
-					<Route path="/arreplegator" element={<Arreplegator />} />
-					<Route path="/arreplegator-llista" element={<RequireAuth e={<ArreplegatorList />} />} />
 					<Route path="/jocs" element={<Jocs />} />
 					<Route path="/sopa-de-lletres" element={<SopaLletres />} />
 					<Route path="/mots-encreuats" element={<MotsEncreuats />} />
