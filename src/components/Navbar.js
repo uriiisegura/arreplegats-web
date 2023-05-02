@@ -100,12 +100,11 @@ class Navbar extends Component {
 									<ul>
 										<li><NavLink to="/fotografies">Fotografies</NavLink></li>
 										<li><NavLink to="/videos">Vídeos</NavLink></li>
-										<li><NavLink to="/arreplegator">L'Arreplegator</NavLink></li>
 									</ul>
 								</div>
 							</div>
 						</li>
-						<li className="nav-link"><NavLink to="/jocs">Jocs</NavLink></li>
+						{/*<li className="nav-link"><NavLink to="/jocs">Jocs</NavLink></li>*/}
 						<li className="nav-link"><NavLink to="/contractacions">Contractacions</NavLink></li>
 						<li className="nav-link join-btn"><NavLink to="/uneixthi">Uneix-t'hi</NavLink></li>
 					</ul>
