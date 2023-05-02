@@ -57,6 +57,7 @@ html {
 	--black: #222;
 	--white: #fff;
 	--red-light: #f8d7da;
+	--red-medium: #f07272;
 	--red-dark: #a70000;
 	--green-light: #d1e7dd;
 	--green-dark: #0f5132;
@@ -64,6 +65,7 @@ html {
 	--orange-dark: #ffc000;
 	--blue-light: #d3e6ff;
 	--blue-dark: #4b69ff;
+	--purple: #d467ff;
 
 	/* colles */
 	--barometre: #e43800;
@@ -2162,7 +2164,7 @@ Castells Universitaris
 
 .timeline {
 	--color: rgba(30, 30, 30);
-	--bgColor: rgba(245, 245, 245);
+	--bgColor: rgba(240, 240, 240);
 	--col-gap: 2rem;
 	--row-gap: 2rem;
 	--line-w: 0.25rem;
@@ -2242,9 +2244,10 @@ Castells Universitaris
 	right: calc(100% + var(--col-gap) + var(--line-w) / 2);
 }
 
-/* title descr */
+/* title descr img */
 .timeline li .title,
-.timeline li .descr {
+.timeline li .descr,
+.timeline li .img {
 	background: var(--bgColor);
 	position: relative;
 	padding-inline: 1.5rem;
@@ -2267,6 +2270,11 @@ Castells Universitaris
 .timeline li .descr a:hover {
 	color: var(--secondary-600);
 	text-decoration: underline;
+}
+
+.timeline li .img {
+	padding-inline: 3rem;
+	padding-block-end: 1rem;
 }
 
 /* shadows */
@@ -2322,6 +2330,220 @@ Castells Universitaris
 	.timeline li:nth-child(odd) .date {
 		border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
 	}
+}
+
+/*
+=============== 
+Agenda
+===============
+*/
+
+.calendar {
+	width: 800px;
+}
+
+#calendar .header {
+	margin-bottom: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#calendar .header span {
+	color: var(--grey-500);
+}
+
+#calendar .header button {
+	width: 2rem;
+	height: 2rem;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: var(--grey-500);
+}
+#calendar .header button:hover {
+	background-color: var(--grey-200);
+}
+
+#calendar table {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+#calendar th {
+	padding-bottom: 0.5rem;
+	background-color: transparent;
+}
+
+#calendar td {
+	height: 110px;
+	overflow: hidden;
+	position: relative;
+	width: calc(100% / 7);
+}
+#calendar td:not(.blank) {
+	border: 1px solid var(--grey-200);
+}
+#calendar td:hover .day {
+	text-decoration: underline;
+}
+
+#calendar .day {
+	position: absolute;
+	top: 0;
+	right: 0;
+	user-select: none;
+	padding: 1px 3px;
+	font-size: 0.8rem;
+}
+#calendar .weekend .day {
+	color: var(--barometre);
+}
+#calendar .today {
+	background-color: var(--primary-100);
+}
+#calendar .today .day {
+	color: var(--black);
+}
+
+#calendar .event {
+	top: 20px;
+	width: calc(100% - 4px);
+	padding: 0 2px;
+	position: absolute;
+	left: 0;
+	white-space: nowrap;
+}
+#calendar .event div {
+	font-size: 0.8rem;
+	padding-left: 5px;
+	border-radius: 3px;
+	margin-bottom: 2px;
+	line-height: 1.5;
+	overflow: hidden;
+	text-align: left;
+	user-select: none;
+}
+#calendar .event div:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+#calendar .jump-today {
+	margin-top: 1rem;
+	width: 100%;
+	text-transform: none;
+}
+
+#calendar .event-info {
+	padding: 10px;
+	padding-right: 50px;
+	max-width: 450px;
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	background-color: #ffffff;
+	border: 3px solid var(--primary-600);
+	box-shadow: 0 0 20px var(--grey-700);
+}
+
+#calendar .event-info p {
+	margin: 0;
+}
+
+#calendar .event-info h2 {
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+#calendar .event-info #event-desc {
+	margin: 1rem 0 0 1rem;
+	font-weight: 700;
+}
+
+#calendar .event-info #event-link {
+	margin-left: 2rem;
+	font-size: 0.85rem;
+	color: var(--primary-600);
+	transition: var(--transition);
+}
+#calendar .event-info #event-link:hover {
+	color: var(--secondary-600);
+}
+
+#calendar .countdown {
+	display: flex;
+	margin: 25px auto 10px;
+	padding: 5px 10px;
+	width: fit-content;
+	text-align: center;
+	background-color: var(--primary-600);
+	color: #ffffff;
+}
+
+#calendar .close::after {
+	width: 20px;
+	height: 20px;
+	line-height: 23px;
+	top: 5px;
+	right: 5px;
+	content: '×';
+	color: var(--white);
+	background-color: var(--primary-600);
+	border: 2px solid var(--primary-700);
+	overflow: hidden;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: var(--transition);
+}
+#calendar .close:hover::after {
+	color: var(--primary-700);
+	background-color: var(--white);
+}
+
+@media (max-width: 850px) {
+	.calendar {
+		width: 98%;
+	}
+	#calendar td {
+		height: 80px;
+	}
+	#calendar .event {
+		width: calc(100% - 2px);
+		padding: 0 1px;
+	}
+	#calendar .event div {
+		padding: 0 1px;
+		font-size: 9px;
+		margin-bottom: 1px;
+	}
+	#calendar .event-info {
+		max-width: 75%;
+	}
+}
+
+/*
+=============== 
+En construcció
+===============
+*/
+
+.in-construction h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 5rem;
+	color: var(--primary-600);
+}
+
+.in-construction h4 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2rem;
+	color: var(--primary-600);
 }
 
 /*
