@@ -41,9 +41,9 @@ class Contractacions extends Component {
 						<div className="spinner">
 							<div className="face1" style={{backgroundImage: `url('images/comercial-boda.jpeg')`}}></div>
 							<div className="face2" style={{backgroundImage: `url('images/cavall-bernat.jpeg')`}}></div>
-							<div className="face3" style={{backgroundImage: `url('images/comercial-blanes.jpeg')`}}></div>
-							<div className="face4" style={{backgroundImage: `url('images/comercial-vertex.jpeg')`}}></div>
-							<div className="face5" style={{backgroundImage: `url('none.webp')`}}></div>
+							<div className="face3" style={{backgroundImage: `url('images/comercial-vertex.jpeg')`}}></div>
+							<div className="face4" style={{backgroundImage: `url('images/comercial-blanes.jpeg')`}}></div>
+							<div className="face5" style={{backgroundImage: `url('images/comercial-ub-nadal.jpeg')`}}></div>
 							<div className="face6" style={{backgroundImage: `url('none.webp')`}}></div>
 						</div>
 					</div>
