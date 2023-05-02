@@ -36,6 +36,51 @@
 		"color": "pataquers"
 	},
 	{
+		"date": "9 de maig de 2009",
+		"title": "Primer castell de 8",
+		"description": [
+			{
+				"type": "span",
+				"text": "En la nostra 14a Diada vam sorprendre tot el món casteller descarregant el primer "
+			},
+			{
+				"type": "a",
+				"props" : {
+					"href": "/#/castells/4d8sf"
+				},
+				"text": "4 de 8"
+			},
+			{
+				"type": "span",
+				"text": " universitari, que seria també el primer castell de 8 format únicament per persones adultes. A més, vam esdevenir la primera colla en descarregar-lo al primer intent!"
+			}
+		],
+		"image": "/images/4d8-2009.jpeg",
+		"color": "arreplegats"
+	},
+	{
+		"date": "7 de maig de 2010",
+		"title": "Primeres manilles (carregades)",
+		"description": [
+			{
+				"type": "span",
+				"text": "Només un any més tard del primer castell de 8 van arribar les primeres manilles! Ho vam fer amb el "
+			},
+			{
+				"type": "a",
+				"props" : {
+					"href": "/#/castells/Pd7fm"
+				},
+				"text": "pilar de 7 amb folre i manilles"
+			},
+			{
+				"type": "span",
+				"text": " que aconseguiríem descarregar 3 anys més tard."
+			}
+		],
+		"color": "arreplegats"
+	},
+	{
 		"date": "2011",
 		"title": "Fundació dels Passerells",
 		"description": "",

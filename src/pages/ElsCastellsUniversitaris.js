@@ -38,6 +38,9 @@ class CastellsUniversitaris extends Component {
 										})
 									: e.description
 								}</div>
+								{
+									e.image ? <img className="img" src={e.image} alt={e.title} /> : <></>
+								}
 							</li>
 						})
 					}
