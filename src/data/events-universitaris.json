@@ -46,7 +46,7 @@
 			{
 				"type": "a",
 				"props" : {
-					"href": "/#/castells/4d8sf"
+					"href": "#/castells/4d8sf"
 				},
 				"text": "4 de 8"
 			},
@@ -69,7 +69,7 @@
 			{
 				"type": "a",
 				"props" : {
-					"href": "/#/castells/Pd7fm"
+					"href": "#/castells/Pd7fm"
 				},
 				"text": "pilar de 7 amb folre i manilles"
 			},
@@ -156,7 +156,7 @@
 			{
 				"type": "a",
 				"props" : {
-					"href": "/#/castells/Pd7fm"
+					"href": "#/castells/Pd7fm"
 				},
 				"text": "pilar de 7 amb folre i manilles"
 			},
