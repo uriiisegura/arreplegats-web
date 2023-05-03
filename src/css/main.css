@@ -2143,7 +2143,7 @@ Spinner
 }
 
 .spinner {
-	animation: spincube 12s ease-in-out infinite;
+	animation: spincube 22s ease-in-out infinite;
 	transform-style: preserve-3d;
 	transform-origin: calc(var(--cube-size) / 2) calc(var(--cube-size) / 2) 0;
 }
@@ -2472,6 +2472,7 @@ Agenda
 #calendar .event-info #event-desc {
 	margin: 1rem 0 0 1rem;
 	font-weight: 700;
+	line-height: 1.5;
 }
 
 #calendar .event-info #event-link {
