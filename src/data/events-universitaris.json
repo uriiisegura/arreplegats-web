@@ -8,7 +8,7 @@
 	{
 		"date": "4 d'abril de 1995",
 		"title": "Fundació dels Arreplegats",
-		"description": "Després ja vam venir nosaltres! La nostra primera diada va ser el 5 de maig, a la festa de la FIB, on hi vam carregar un Pd4. Des d'aleshores hem seguit actuant i em esdevingut la colla universitària més gran d'entre totes!",
+		"description": "Després ja vam venir nosaltres! La nostra primera diada va ser el 5 de maig, a la festa de la FIB, on hi vam carregar un Pd4. Des d'aleshores hem seguit actuant i hem esdevingut la colla universitària més gran d'entre totes!",
 		"color": "arreplegats"
 	},
 	{
@@ -60,7 +60,7 @@
 	},
 	{
 		"date": "7 de maig de 2010",
-		"title": "Primeres manilles (carregades)",
+		"title": "Primeres manilles carregades",
 		"description": [
 			{
 				"type": "span",
@@ -85,6 +85,29 @@
 		"title": "Fundació dels Passerells",
 		"description": "",
 		"color": "passerells"
+	},
+	{
+		"date": "3 de maig de 2013",
+		"title": "Primeres manilles descarregades",
+		"description": [
+			{
+				"type": "span",
+				"text": "Després d'haver-lo carregat el maig de 2010, en la 18a Diada de la colla vam aconseguir descarregar el "
+			},
+			{
+				"type": "a",
+				"props" : {
+					"href": "#/castells/Pd7fm"
+				},
+				"text": "pilar de 7 amb folre i manilles"
+			},
+			{
+				"type": "span",
+				"text": " per primer cop en la història."
+			}
+		],
+		"image": "images/pd7fm-2013.jpeg",
+		"color": "arreplegats"
 	},
 	{
 		"date": "2013",
