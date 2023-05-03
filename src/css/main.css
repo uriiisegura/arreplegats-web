@@ -2359,6 +2359,9 @@ Agenda
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	color: var(--grey-500);
 }
 #calendar .header button:hover {
@@ -2372,7 +2375,7 @@ Agenda
 }
 
 #calendar th {
-	padding-bottom: 0.5rem;
+	padding-bottom: 0.3rem;
 	background-color: transparent;
 }
 
@@ -2445,7 +2448,7 @@ Agenda
 	left: 5%;
 	background-color: #ffffff;
 	border: 3px solid var(--primary-600);
-	box-shadow: 0 0 20px var(--grey-700);
+	box-shadow: var(--shadow-2);
 }
 
 #calendar .event-info p {
@@ -2466,20 +2469,11 @@ Agenda
 	margin-left: 2rem;
 	font-size: 0.85rem;
 	color: var(--primary-600);
+	width: fit-content;
 	transition: var(--transition);
 }
 #calendar .event-info #event-link:hover {
 	color: var(--secondary-600);
-}
-
-#calendar .countdown {
-	display: flex;
-	margin: 25px auto 10px;
-	padding: 5px 10px;
-	width: fit-content;
-	text-align: center;
-	background-color: var(--primary-600);
-	color: #ffffff;
 }
 
 #calendar .close::after {
@@ -2497,8 +2491,8 @@ Agenda
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	cursor: pointer;
 	transition: var(--transition);
+	cursor: pointer;
 }
 #calendar .close:hover::after {
 	color: var(--primary-700);
@@ -2535,7 +2529,7 @@ En construcció
 .in-construction h2 {
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 5rem;
+	font-size: 4rem;
 	color: var(--primary-600);
 }
 

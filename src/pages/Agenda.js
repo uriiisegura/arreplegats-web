@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import * as Papa from 'papaparse';
-import ToAmerican from "./../functions/ToAmerican";
-import Pad from "./../functions/Pad";
 
 const backgrounds = {
 	'ASSAIG': '--primary-600',
@@ -12,7 +10,6 @@ const backgrounds = {
 };
 const months = ["gener","febrer","març","abril","maig","juny","juliol","agost","setembre","octubre","novembre","desembre"];
 const CALENDAR_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSkqrUBB_E4K51C2-smUpmqShVH73TjIKtrFGA1DkofnTRPVthiv3USU-kSl3Cm0VgjxQ7ZIOqsQ2od/pub?gid=0&single=true&output=csv";
-let countdown_interval;
 
 class Agenda extends Component {
 	constructor(props) {
@@ -93,7 +90,7 @@ class Agenda extends Component {
 	}
 	addEvents(month, year) {
 		this.state.calendar.forEach(event => {
-			const [d,m,y] = event["DATA"].split('/');
+			const [d, m, y] = event["DATA"].split('/');
 			if (parseInt(m) === month+1 && parseInt(y) === year) {
 				const wrap = document.getElementById("day-"+parseInt(d));
 				const event_div = document.createElement("div");
@@ -133,45 +130,22 @@ class Agenda extends Component {
 			time.innerHTML = "🕒 " + diada["DATA"] + " a les " + diada["HORA"];
 		else
 			time.innerHTML = "🕒 " + diada["DATA"];
-		if (diada["DESCRIPCIÓ"])
+		if (diada["DESCRIPCIÓ"]) {
+			desc.style.display = "block";
 			desc.innerHTML = diada["DESCRIPCIÓ"];
-		else
-			desc.innerHTML = "";
+		} else
+			desc.style.display = "none";
 		if (diada["LINK"]) {
+			link.style.display = "block";
 			link.innerHTML = "🔗 ENLLAÇ";
 			link.href = diada["LINK"];
-		} else {
-			link.innerHTML = "";
-		}
+		} else
+			link.style.display = "none";
 		panel.style.display = "block";
-
-		const countdown = new Date(ToAmerican(diada["DATA"])+"T"+Pad(diada["HOTA"] || "00:00", 5)+":00").getTime();
-		document.getElementById("event-countdown").style.display = "block";
-		this.doCountdown(countdown);
-		countdown_interval = setInterval(() => {
-			this.doCountdown(countdown);
-		}, 1000);
 	}
 	hideEventInfo() {
 		const panel = document.getElementById('info-panel');
 		panel.style.display = "none";
-		clearInterval(countdown_interval);
-	}
-	doCountdown(target_date) {
-		const now = new Date().getTime();
-		const dist = target_date - now;
-
-		if (dist < 0) {
-			document.getElementById("event-countdown").style.display = "none";
-			return;
-		}
-
-		const days = Math.floor(dist / (1000 * 60 * 60 * 24));
-		const hours = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		const minutes = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
-		const seconds = Math.floor((dist % (1000 * 60)) / 1000);
-
-		document.getElementById("event-countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 	}
 	getEventById(id) {
 		let event = null;
@@ -205,9 +179,9 @@ class Agenda extends Component {
 					<div className="table-wrap">
 						<div className="calendar">
 							<div className="header">
-								<button onClick={this.previous}>❮</button>
+								<button onClick={this.previous}><span>❮</span></button>
 								<span id="monthAndYear"></span>
-								<button onClick={this.next}>❯</button>
+								<button onClick={this.next}><span>❯</span></button>
 							</div>
 							<table className="table table-bordered table-responsive-sm" id="calendar">
 								<thead>
@@ -234,7 +208,6 @@ class Agenda extends Component {
 							<p id="event-desc"></p>
 							{/* eslint-disable-next-line */}
 							<a id="event-link" target="_blank"></a>
-							<div id="event-countdown" className="countdown"></div>
 							<div className="close" onClick={this.hideEventInfo}></div>
 						</div>
 					</div>
