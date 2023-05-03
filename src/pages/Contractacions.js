@@ -44,7 +44,7 @@ class Contractacions extends Component {
 							<div className="face3" style={{backgroundImage: `url('images/comercial-vertex.jpeg')`}}></div>
 							<div className="face4" style={{backgroundImage: `url('images/comercial-blanes.jpeg')`}}></div>
 							<div className="face5" style={{backgroundImage: `url('images/comercial-ub-nadal.jpeg')`}}></div>
-							<div className="face6" style={{backgroundImage: `url('none.webp')`}}></div>
+							<div className="face6" style={{backgroundImage: `url('images/taller-2022.jpeg')`}}></div>
 						</div>
 					</div>
 				</div>
