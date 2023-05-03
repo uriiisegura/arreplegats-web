@@ -107,6 +107,7 @@ class Agenda extends Component {
 		const diada = this.getEventById(e.target.id);
 
 		const title = document.getElementById('event-name');
+		const cat = document.getElementById('event-cat');
 		const place = document.getElementById('event-lloc');
 		const time = document.getElementById('event-hora');
 		const desc = document.getElementById('event-desc');
@@ -114,6 +115,8 @@ class Agenda extends Component {
 		const panel = document.getElementById('info-panel');
 
 		title.innerHTML = diada["NOM LLARG"];
+		cat.style.backgroundColor = `var(${backgrounds[diada['CATEGORIA']]})`;
+		cat.innerHTML = diada["CATEGORIA"];
 		const ubi = diada["UBICACIÓ"] || null;
 		const city = diada["POBLACIÓ"] || null;
 		if (ubi || city) {
@@ -203,6 +206,8 @@ class Agenda extends Component {
 						<div className="event-info" style={{display: "none"}} id="info-panel">
 							{/* eslint-disable-next-line */}
 							<h2 id="event-name"></h2>
+							{/* eslint-disable-next-line */}
+							<h4 id="event-cat"></h4>
 							<p id="event-lloc"></p>
 							<p id="event-hora"></p>
 							<p id="event-desc"></p>

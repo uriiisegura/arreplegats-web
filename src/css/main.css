@@ -2457,7 +2457,16 @@ Agenda
 
 #calendar .event-info h2 {
 	font-size: 20px;
-	margin-bottom: 15px;
+	margin: 0;
+}
+
+#calendar .event-info h4 {
+	font-size: 0.7rem;
+	margin: 0.5rem 0 1rem;
+	padding: 5px 10px 3px;
+	border-radius: var(--borderRadius);
+	box-shadow: var(--shadow-1);
+	width: fit-content;
 }
 
 #calendar .event-info #event-desc {
