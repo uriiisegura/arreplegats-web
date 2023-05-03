@@ -14,24 +14,24 @@ class ComissioTecnica extends Component {
 					<div className="junta-column">
 						<div className="junta-team">
 							<h4>Direcció tècnica</h4>
-							<p><span>Cap de colla</span>: Xavier Marín Rísquez</p>
-							<p><span>Sots-cap de colla</span>: Pau Coll Casellas</p>
-							<p><span>Presidenta</span>: Clara Montoya García</p>
-							<p><span>Vice-president</span>: Benet Antius Lozano</p>
+							<p><span>Cap de colla</span>: Xavier Marín i Rísquez</p>
+							<p><span>Sots-cap de colla</span>: Pau Coll i Casellas</p>
+							<p><span>Presidenta</span>: Clara Montoya i García</p>
+							<p><span>Vice-president</span>: Benet Antius i Lozano</p>
 						</div>
 					</div>
 					<div className="junta-column">
 						<div className="junta-team">
 							<h4>Equip de troncs</h4>
-							<p><span>Cap de troncs</span>: Júlia Font Aguilar</p>
-							<p>Laia Boixet Lladó</p>
-							<p>Pau Rosselló Carreras</p>
+							<p><span>Cap de troncs</span>: Júlia Font i Aguilar</p>
+							<p>Laia Boixet i Lladó</p>
+							<p>Pau Rosselló i Carreras</p>
 							<p>Júlia Montserrat</p>
-							<p>Eduard Llorens Pomé</p>
-							<p>David Torras Martín</p>
+							<p>Eduard Llorens i Pomé</p>
+							<p>David Torras i Martín</p>
 							<p>Aina Vila</p>
-							<p>Biel Romera Muñoz</p>
-							<p>Queralt Bautista Rosas</p>
+							<p>Biel Romera i Muñoz</p>
+							<p>Queralt Bautista i Rosas</p>
 							<p>Ignasi Tortras</p>
 						</div>
 
@@ -39,25 +39,25 @@ class ComissioTecnica extends Component {
 							<h4>Equip de poms</h4>
 							<p><span>Cap de poms</span>: Paula Olivé</p>
 							<p>Carlota Fornells</p>
-							<p>Carla Falguera Garrido</p>
-							<p>Núria Bautista Rosas</p>
-							<p>Ana Paula Monzón</p>
+							<p>Carla Falguera i Garrido</p>
+							<p>Núria Bautista i Rosas</p>
+							<p>Ana Paula i Monzón</p>
 						</div>
 					</div>
 					<div className="junta-column">
 						<div className="junta-team">
 							<h4>Equip de pinyes, folres, i manilles</h4>
-							<p><span>Cap de pinyes</span>: Pau Coll Casellas</p>
-							<p>Oriol Segura Niño</p>
-							<p>Edgar Castellanos Offroy</p>
+							<p><span>Cap de pinyes</span>: Pau Coll i Casellas</p>
+							<p>Oriol Segura i Niño</p>
+							<p>Edgar Castellanos i Offroy</p>
 							<p>Aida Sanfeliu</p>
-							<p>Pau Sánchez Viol</p>
-							<p>Martí Puig Vall</p>
-							<p>Bet Romera Mirabent</p>
-							<p>Laia Homs Vilaseca</p>
-							<p>Anna Santamaria Balaguer</p>
-							<p>Jordi Torrens Camprubí</p>
-							<p>Eudald Rovira Rovira</p>
+							<p>Pau Sánchez i Viol</p>
+							<p>Martí Puig i Vall</p>
+							<p>Bet Romera i Mirabent</p>
+							<p>Laia Homs i Vilaseca</p>
+							<p>Anna Santamaria i Balaguer</p>
+							<p>Jordi Torrens i Camprubí</p>
+							<p>Eudald Rovira i Rovira</p>
 							<p>Arnau Espinalt</p>
 						</div>
 					</div>
