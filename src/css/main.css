@@ -2182,7 +2182,7 @@ Castells Universitaris
 .timeline::before {
 	content: "";
 	grid-column: 1;
-	grid-row: 1 / span 100;
+	grid-row: 1 / span 10000;
 	background: rgb(225, 225, 225);
 	border-radius: calc(var(--line-w) / 2);
 }
@@ -2204,7 +2204,7 @@ Castells Universitaris
 
 /* date */
 .timeline li .date {
-	--dateH: 3rem;
+	--dateH: 2.5rem;
 	height: var(--dateH);
 	margin-inline: calc(var(--inlineP) * -1);
 	text-align: center;
@@ -2275,6 +2275,8 @@ Castells Universitaris
 .timeline li .img {
 	padding-inline: 3rem;
 	padding-block-end: 1rem;
+	max-height: 350px;
+	object-fit: contain;
 }
 
 /* shadows */
