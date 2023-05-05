@@ -28,9 +28,10 @@
 	},
 	{
 		"name": "Marta Llahona i Ponce",
+		"mote": "Toli",
 		"from": [2000],
 		"to": [2001],
-		"link": "",
+		"link": "presidents/toli.jpg",
 		"text": [
 			"—"
 		]
@@ -129,7 +130,7 @@
 		"name": "Andrea Martín i Almendros",
 		"from": [2012],
 		"to": [2013],
-		"link": "",
+		"link": "presidents/andrea.jpg",
 		"text": [
 			"—"
 		]
@@ -213,7 +214,7 @@
 		"mote": "Clarote",
 		"from": [2022],
 		"to": [null],
-		"link": "",
+		"link": "presidents/clarote.jpg",
 		"text": [
 			"—"
 		]
