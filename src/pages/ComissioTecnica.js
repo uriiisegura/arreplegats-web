@@ -7,7 +7,11 @@ class ComissioTecnica extends Component {
                 <h2>Comissió tècnica</h2>
 
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula.
+					La Comissió Tècnica està formada per cap de colla i sots-cap de colla al capdavant. Forma part de la Junta Directiva. Els equips de la Comissió Tècnica els decideixen cap i sots-cap de colla. Actualment consta de l'equip de troncs; l'equip de pinyes folre, i manilles; i l'equip de poms.
+				</p>
+
+				<p>
+					S'encarrega de vetllar pel desenvolupament de l'activitat castellera. Organitza els assajos i decideix els castells que es faran durant el curs. Forma i prepara als castellers per a fer correctament la seva tasca. La Comissió Tècnica és qui decideix, valorant els assajos durant el curs, quins castells es podran fer a les diades.
 				</p>
 
 				<div className="juntes tecnica">

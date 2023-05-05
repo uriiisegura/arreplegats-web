@@ -7,7 +7,11 @@ class JuntaDirectiva extends Component {
                 <h2>Junta directiva</h2>
 
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt enim volutpat elit ullamcorper commodo. Nam tristique dictum justo quis elementum. Praesent auctor scelerisque lacinia. Nulla nisi justo, commodo ut pulvinar quis, imperdiet nec dolor. Curabitur id felis nec mauris tempus tempus tincidunt eu leo. Praesent mattis ac lacus in pulvinar. Phasellus id mauris blandit, pellentesque mi eget, tincidunt ligula.
+					La Junta Directiva està dirigida per l'equip de presidència. Ha de constar també de secretaria, tresoreria, comissió tècnica i comissió feminista. Actualment, també existeixen les comissions: material, acolliment social, músics, logística i contractació, promoció i difusió, equip sanitari i activitats.
+				</p>
+
+				<p>
+					La funció de la Junta Directiva és representar, dirigir i administrar l'associació. Es controla el funcionament de la colla, el balanç i l'estat de comptes, s'organitzen les activitats i espais que es puguin necessitar. També es manté el control de les altes i baixes dins la colla i es convoquen assemblees.
 				</p>
 
 				<div className="juntes tecnica">

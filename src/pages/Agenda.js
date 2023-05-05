@@ -179,7 +179,7 @@ class Agenda extends Component {
 				<h2>Agenda</h2>
 
 				<div id="calendar">
-					<div className="table-wrap">
+					<div className="table-wrap" style={{position: 'relative'}}>
 						<div className="calendar">
 							<div className="header">
 								<button onClick={this.previous}><span>❮</span></button>
