@@ -5,7 +5,7 @@ class EnConstruccio extends Component {
 		return (<>
 			<section className="in-construction">
 				<h2>Secció en construcció</h2>
-				<h4>Consulteu la pàgina en el futur</h4>
+				<h4>Consulteu la pàgina més endavant</h4>
 			</section>
 		</>);
 	}
