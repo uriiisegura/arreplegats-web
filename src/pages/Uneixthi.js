@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import Assajos from "./Assajos";
 
 class Uneixthi extends Component {
 	render() {
@@ -26,10 +26,8 @@ class Uneixthi extends Component {
 				<p>
 					Quan arribis el primer dia l'equip d'acolliment t'explicarà tot el que necessites saber dels castells universitaris i del funcionament de la colla.
 				</p>
-				<div className="read-more">
-					<NavLink to="/assajos">HORARIS D'ASSAIG</NavLink>
-				</div>
 			</section>
+			<Assajos />
 		</>);
 	}
 }
