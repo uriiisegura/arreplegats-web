@@ -87,7 +87,7 @@ function App() {
 					<Route path="/mots-encreuats" element={<MotsEncreuats />} />
 					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
-					<Route path="/contactar" element={<Contactar />} />
+					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />
 					<Route path="/palette" element={<Palette />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
 

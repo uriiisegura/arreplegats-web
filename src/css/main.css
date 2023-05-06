@@ -2024,36 +2024,48 @@ Contractacions
 ===============
 */
 
-.middle-btn {
-	margin: 2rem auto;
-}
-
-.contract-two-cols {
-	display: grid;
-	grid-template-columns: 3fr 2fr;
-	gap: 2rem;
-}
-
-.contract-list {
-	padding-left: 3rem;
-}
-
-.contract-list li {
-	list-style: disc;
-}
-
 .contract-vid {
 	border: 0;
 	width: 100%;
 	max-width: 700px;
-	margin: 2rem auto 0;
+	margin: 2rem auto;
 	aspect-ratio: 16/9;
 	display: block;
+}
+
+.img-gallery {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.img-gallery img {
+	width: 30%;
+	margin-bottom: 1rem;
+}
+
+.contract-img {
+	object-fit: cover;
+	margin: 0 auto;
+	width: 70%;
+	max-height: 400px;
+	margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 900px) {
 	.contract-two-cols {
 		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.img-gallery {
+		flex-direction: column;
+	}
+
+	.img-gallery img {
+		width: 40%;
 	}
 }
 
@@ -2087,73 +2099,6 @@ label.required::after {
 
 .contact-form button {
 	margin-top: 1rem;
-}
-
-/*
-=============== 
-Spinner
-===============
-*/
-
-.spinner-wrap {
-	--cube-size: 250px;
-	margin: 2.5rem 0;
-	display: flex;
-	width: 100%;
-	height: var(--cube-size);
-	justify-content: center;
-}
-
-.spinner {
-	margin-left: calc(-1 * var(--cube-size));
-}
-
-.spinner div {
-	position: absolute;
-	width: var(--cube-size);
-	height: var(--cube-size);
-	border: 2px solid var(--black);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	text-align: center;
-	line-height: var(--cube-size);
-	font-size: 100px;
-	user-select: none;
-	backface-visibility: hidden;
-}
-
-.spinner .face1 { 
-	transform: translateZ(calc(var(--cube-size) / 2));
-}
-.spinner .face2 { 
-	transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2)); 
-}
-.spinner .face3 { 
-	transform: rotateY(90deg) rotateX(90deg) translateZ(calc(var(--cube-size) / 2)); 
-}
-.spinner .face4 { 
-	transform: rotateY(180deg) rotateZ(90deg) translateZ(calc(var(--cube-size) / 2)); 
-}
-.spinner .face5 { 
-	transform: rotateY(-90deg) rotateZ(90deg) translateZ(calc(var(--cube-size) / 2)); 
-}
-.spinner .face6 { 
-	transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2)); 
-}
-
-.spinner {
-	animation: spincube 22s ease-in-out infinite;
-	transform-style: preserve-3d;
-	transform-origin: calc(var(--cube-size) / 2) calc(var(--cube-size) / 2) 0;
-}
-
-@keyframes spincube {
-	16% { transform: rotateY(-90deg);					}
-	33% { transform: rotateY(-90deg) rotateZ(90deg);	}
-	50% { transform: rotateY(-180deg) rotateZ(90deg);	}
-	66% { transform: rotateY(90deg) rotateX(90deg);		}
-	83% { transform: rotateX(90deg);					}
 }
 
 /*

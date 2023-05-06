@@ -1,58 +1,84 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import Contactar from "./Contactar";
 
 class Contractacions extends Component {
 	render() {
 		return (<>
 			<section>
-				<h2>Contractacions</h2>
+				<h1>Contractar castellers</h1>
 
 				<p>
-					Tant esteu buscant afegir un toc d'emoció i autenticitat a la vostra pròxima conferència o congrés, com si busqueu una imatge espectacular i única que quedarà gravada en la ment dels nuvis a qualsevol boda: Arreplegats pot ser la solució perfecta!
+					Contracta castellers pel teu congrés, sopar d’empresa, conferència, boda… D’una colla amb més de 25 anys d’experiència, els Arreplegats de la Zona Universitària.
+				</p>
+
+				<h3>Cas d’èxit: Arreplegats a Eufòria (TV3)</h3>
+
+				<iframe
+					className="contract-vid"
+					src="https://youtube.com/embed/bXJlnNdIobY?controls=0&showinfo=0&rel=0"
+					title="Els Arreplegats a Eufòria (TV3)"
+					/>
+				
+				<p>
+					Si vols sorprendre els teus convidats amb un espectacle emocionant i autèntic, contracta castellers Arreplegats de la Zona Universitària.
 				</p>
 
 				<p>
 					No dubtis en contactar-nos. Et respondrem en menys de 24 hores! Cap compromís. 
 				</p>
 
-				<Link className="link-btn middle-btn" to="/contactar">CONTACTA'NS</Link>
+				<h3>Què t’oferim al contractar castellers?</h3>
 
-				<div className="contract-two-cols">
-					<div>
-						<p>
-							Tenim una àmplia experiència actuant a:
-						</p>
+				<p>
+					Alcem castells, torres o pilars al teu esdeveniment. Si vols, pots contractar un sol pilar o castell o una actuació completa.
+				</p>
 
-						<ul className="contract-list">
-							<li>Eufòria (programa de la TV3).</li>
-							<li>Festa de les Associacions d'Industrials de Barcelona.</li>
-							<li>Saló de l'Ensenyament.</li>
-							<li>XII Symposium on Computational Statistics.</li>
-							<li>4º Congreso Internacional de la Sociedad Española de Didáctica de la Lengua y la Literatura.</li>
-							<li>Posada de la primera pedra de la nova seu de la ONCE.</li>
-							<li>International Conference on Advancements in Palliative and End of Life Care.</li>
-						</ul>
+				<div className="img-gallery">
+					<img
+						src="/images/comercial-boda.jpeg"
+						alt="Contracte d'un pilar a una boda al Penedès"
+						/>
 
-						<p>
-							...i molt més!
-						</p>
-					</div>
-					<div className="spinner-wrap">
-						<div className="spinner">
-							<div className="face1" style={{backgroundImage: `url('images/comercial-boda.jpeg')`}}></div>
-							<div className="face2" style={{backgroundImage: `url('images/cavall-bernat.jpeg')`}}></div>
-							<div className="face3" style={{backgroundImage: `url('images/comercial-vertex.jpeg')`}}></div>
-							<div className="face4" style={{backgroundImage: `url('images/comercial-blanes.jpeg')`}}></div>
-							<div className="face5" style={{backgroundImage: `url('images/comercial-ub-nadal.jpeg')`}}></div>
-							<div className="face6" style={{backgroundImage: `url('images/taller-2022.jpeg')`}}></div>
-						</div>
-					</div>
+					<img
+						src="/images/comercial-blanes.jpeg"
+						alt="Contracte d'un castell a un sopar d'empresa"
+						/>
 				</div>
 
-				<iframe
-					className="contract-vid"
-					src="https://youtube.com/embed/bXJlnNdIobY?controls=0&showinfo=0&rel=0"
-					title="Els Arreplegats a Eufòria (TV3)"
+				<h3>Qui som els castellers Arreplegats?</h3>
+
+				<p>
+					Els Arreplegats som una colla amb més d’un quart de segle d’història – fundada al 1995 – i només fem castells amb persones matrículades a la universitat. Fins i tot les enxanetes són adultes!
+				</p>
+
+				<p>
+					Tot i aquesta restricció única, hem aconseguit arribar a nivells d’altíssima qualitat en les nostres actuacions. Ara alcem castells, torres i pilars de fins a 8 pisos com el 4d8, td8fm, pd7fm i el 3d8f, capaços de satisfer el públic més exigent.
+				</p>
+
+				<img
+					className="img contract-img"
+					style={{objectFit: 'contain'}}
+					alt="Contractació castellers Arreplegats al Cavall Bernat (Montserrat) Moreneta"
+					src="/images/td8fm-arreplegats-2016.png"
+					/>
+
+				<p>
+					Contractar castellers Arreplegats de la Zona Universitària és una oportunitat perfecta per a qualsevol organitzador que busqui regalar un record inoblidable al seu públic local o extranger.
+				</p>
+
+				<img
+					className="img contract-img"
+					alt="Contractació castellers Arreplegats al Cavall Bernat (Montserrat) Moreneta"
+					src="/images/cavall-bernat.jpeg"
+					/>
+
+				<p>
+					Envia’ns un missatge per conèixer les nostres tarifes i disponibilitat. Et respondrem en menys de 24 hores amb tota la informació!
+				</p>
+
+				<Contactar
+					subject="El vostre correu electrònic"
+					text="Quin tipus de servei busqueu contractar?"
 					/>
 			</section>
 		</>);

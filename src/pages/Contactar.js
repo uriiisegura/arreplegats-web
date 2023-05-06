@@ -4,15 +4,15 @@ class Contactar extends Component {
 	render() {
 		return (<>
 			<section>
-				<h2>Contacta'ns</h2>
+				<h2>Contactar</h2>
 
 				<form className="contact-form" action="mailto:junta.arreplegats@gmail.com">
-					<label className="required">Subjecte</label>
+					<label className="required">{this.props.subject}</label>
 					<input type="text" name="subject" required />
-					<label className="required">Missatge</label>
+					<label className="required">{this.props.text}</label>
 					<textarea name="body" required />
 
-					<button className="btn" type="submit">Envia</button>
+					<button style={{textTransform: 'none'}} className="btn" type="submit">Parla amb nosaltres</button>
 				</form>
 			</section>
 		</>);
