@@ -8,10 +8,10 @@ class Contractacions extends Component {
 				<h1>Contractar castellers</h1>
 
 				<p>
-					Contracta castellers pel teu congrés, sopar d’empresa, conferència, boda… D’una colla amb més de 25 anys d’experiència, els Arreplegats de la Zona Universitària.
+					Contracta castellers pel teu congrés, sopar d'empresa, conferència, boda… D'una colla amb més de 25 anys d'experiència, els Arreplegats de la Zona Universitària.
 				</p>
 
-				<h3>Cas d’èxit: Arreplegats a Eufòria (TV3)</h3>
+				<h3>Cas d'èxit: Arreplegats a Eufòria (TV3)</h3>
 
 				<iframe
 					className="contract-vid"
@@ -27,7 +27,7 @@ class Contractacions extends Component {
 					No dubtis en contactar-nos. Et respondrem en menys de 24 hores! Cap compromís. 
 				</p>
 
-				<h3>Què t’oferim al contractar castellers?</h3>
+				<h3>Què t'oferim al contractar castellers?</h3>
 
 				<p>
 					Alcem castells, torres o pilars al teu esdeveniment. Si vols, pots contractar un sol pilar o castell o una actuació completa.
@@ -48,11 +48,11 @@ class Contractacions extends Component {
 				<h3>Qui som els castellers Arreplegats?</h3>
 
 				<p>
-					Els Arreplegats som una colla amb més d’un quart de segle d’història – fundada al 1995 – i només fem castells amb persones matrículades a la universitat. Fins i tot les enxanetes són adultes!
+					Els Arreplegats som una colla amb més d'un quart de segle d'història –fundada el 1995– i només fem castells amb persones matrículades a la universitat. Fins i tot les enxanetes són adultes!
 				</p>
 
 				<p>
-					Tot i aquesta restricció única, hem aconseguit arribar a nivells d’altíssima qualitat en les nostres actuacions. Ara alcem castells, torres i pilars de fins a 8 pisos com el 4d8, td8fm, pd7fm i el 3d8f, capaços de satisfer el públic més exigent.
+					Tot i aquesta restricció única, hem aconseguit arribar a nivells d'altíssima qualitat en les nostres actuacions. Ara alcem castells, torres i pilars de fins a 8 pisos com el 4d8, la Td8fm, el Pd7fm, i el 3d8f, capaços de satisfer el públic més exigent.
 				</p>
 
 				<img
@@ -73,7 +73,7 @@ class Contractacions extends Component {
 					/>
 
 				<p>
-					Envia’ns un missatge per conèixer les nostres tarifes i disponibilitat. Et respondrem en menys de 24 hores amb tota la informació!
+					Envia'ns un missatge per conèixer les nostres tarifes i disponibilitat. Et respondrem en menys de 24 hores amb tota la informació!
 				</p>
 
 				<Contactar

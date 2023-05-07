@@ -54,7 +54,7 @@ class ComissioTecnica extends Component {
 							<p><span>Cap de pinyes</span>: Pau Coll i Casellas</p>
 							<p>Oriol Segura i Niño</p>
 							<p>Edgar Castellanos i Offroy</p>
-							<p>Aida Sanfeliu</p>
+							<p>Aida Sanfeliu Gubern</p>
 							<p>Pau Sánchez i Viol</p>
 							<p>Martí Puig i Vall</p>
 							<p>Bet Romera i Mirabent</p>
