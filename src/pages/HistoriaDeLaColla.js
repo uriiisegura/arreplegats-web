@@ -30,7 +30,7 @@ class HistoriaDeLaColla extends Component {
 			<section className="historia">
 				<h5>Els únics que ho poden fer</h5>
 				<p>
-					La temporada 2008-2009 va estar marcada pel domini absolut de la gamma de castells de set i de set i mig, duts a diverses places. Aquest alt nivell va permetre la colla assolir a finals de temporada l'èxit més sonat, descarregant en la mateixa actuació dos castells universitaris inèdits: el <NavLink to="/castells/3d7s">3 de 7 per sota</NavLink> i el <NavLink to="/castells/4d8sf">4 de 8</NavLink>. Aquest últim es va convertir en el primer castell de vuit pisos fet mai per una colla castellera universitària.
+					La temporada 2008-2009 va estar marcada pel domini absolut de la gamma de castells de set i de set i mig, duts a diverses places. Aquest alt nivell va permetre la colla assolir a finals de temporada l'èxit més sonat, descarregant en la mateixa actuació dos castells universitaris inèdits: el <NavLink to="/castells/3d7s">3 de 7 per sota</NavLink> i el <NavLink to="/castells/4d8">4 de 8</NavLink>. Aquest últim es va convertir en el primer castell de vuit pisos fet mai per una colla castellera universitària.
 				</p>
 				<p>
 					La gran revolució va venir el 2010, quan ens atrevíem a portar a plaça les primeres manilles universitàries de la mà del <NavLink to="/castells/Pd7fm">pilar de 7 amb folre i manilles</NavLink>. El vam haver de deixar en carregat, però no ens vam rendir, i el maig del 2013 el descarregàvem finalment.
@@ -51,10 +51,10 @@ class HistoriaDeLaColla extends Component {
 					La següent temporada els Arreplegats vam seguir escribint la història dels castells. El maig de 2015, en la nostra 20a Diada, vam descarregar el primer <NavLink to="/castells/9d7">9 de 7</NavLink> universitari que mai ningú ha tornat a intentar.
 				</p>
 				<p>
-					Aquests anys vam dominar tots els grans castells. Podiem fer, amb relativa facilitat, els castells més complicats del món casteller universitari, castells que ningú ha pogut igualar encara. Vam passejar per tot arreu els ja esmentats <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink>, <NavLink to="/castells/3d7s">3 de 7 per sota</NavLink>, <NavLink to="/castells/5d7">5 de 7</NavLink>, i <NavLink to="/castells/4d8sf">4 de 8</NavLink> demostrant per totes les places on passàvem en nostre domini.
+					Aquests anys vam dominar tots els grans castells. Podiem fer, amb relativa facilitat, els castells més complicats del món casteller universitari, castells que ningú ha pogut igualar encara. Vam passejar per tot arreu els ja esmentats <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink>, <NavLink to="/castells/3d7s">3 de 7 per sota</NavLink>, <NavLink to="/castells/5d7">5 de 7</NavLink>, i <NavLink to="/castells/4d8">4 de 8</NavLink> demostrant per totes les places on passàvem en nostre domini.
 				</p>
 				<p>
-					Aquesta època gloriosa va assolir el seu punt més àlgid el 5 de maig del 2016, on vam juntar el <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink>, el <NavLink to="/castells/4d8sf">4 de 8</NavLink>, i vam carregar la inèdita <NavLink to="/castells/Td8fm">torre de 8 amb folre i manilles</NavLink> en una diada històrica.
+					Aquesta època gloriosa va assolir el seu punt més àlgid el 5 de maig del 2016, on vam juntar el <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink>, el <NavLink to="/castells/4d8">4 de 8</NavLink>, i vam carregar la inèdita <NavLink to="/castells/Td8fm">torre de 8 amb folre i manilles</NavLink> en una diada històrica.
 				</p>
 			</section>
 			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/3d8f-sentiment-2022-576_x_418.jpg')`}}></section>
