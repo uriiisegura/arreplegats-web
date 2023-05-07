@@ -9,7 +9,7 @@ class QuiSom extends Component {
 				
 				<div className="dictionary-entry">
 					<h4>arreplegat -ada</h4>
-					<p><span>adj. i m. i f.</span> [LC] Considerat incopenent per a una feina concreta. <i>Una colla d'arreplegats.</i></p>
+					<p><span>adj. i m. i f.</span> [LC] Considerat incompetent per a una feina concreta. <i>Una colla d'arreplegats.</i></p>
 				</div>
 			</section>
 			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/3d8f-cors-576_x_384.jpg')`}}></section>
