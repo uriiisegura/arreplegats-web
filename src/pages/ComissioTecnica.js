@@ -7,7 +7,7 @@ class ComissioTecnica extends Component {
                 <h2>Comissió tècnica</h2>
 
 				<p>
-					La Comissió Tècnica està formada per cap de colla i sots-cap de colla al capdavant. Forma part de la Junta Directiva. Els equips de la Comissió Tècnica els decideixen cap i sots-cap de colla. Actualment consta de l'equip de troncs; l'equip de pinyes folre, i manilles; i l'equip de poms.
+					La Comissió Tècnica està formada per cap de colla i sots-cap de colla al capdavant. Forma part de la Junta Directiva. Els equips de la Comissió Tècnica els decideixen cap i sots-cap de colla. Actualment consta de l'equip de troncs; l'equip de pinyes, folres, i manilles; i l'equip de poms.
 				</p>
 
 				<p>

@@ -91,6 +91,10 @@ class MillorsDiades extends Component {
 			<section>
 				<h2>Millors Diades</h2>
 
+				<p>
+					Les puntuacions s'extreuen del Baròmectre Universitari. Podu consultar la la taula de puntuacions <a href="https://barometreuniversitari.cat/#/score" target="_blank" rel="noreferrer">aquí</a>.
+				</p>
+
 				<h4>Top 100</h4>
 
 				<p>

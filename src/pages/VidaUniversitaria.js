@@ -7,13 +7,13 @@ class VidaUniversitaria extends Component {
 				<h2>Vida universitària</h2>
 
 				<p>
-					Arreplegats no només són castells. Dins la colla també es duen a terme diferents activitats en l'àmbit social que ajuden a fomentar l'amistat i la germanor entre els arreplegats i les arreplegades. N'hi ha que són activitats de cada dia, com el post-assaig, però també se n'organitzen d'altres periòdicaments. Aquí us n'expliquem algunes.
+					Arreplegats no només són castells. Dins la colla també es duen a terme diferents activitats en l'àmbit social que ajuden a fomentar l'amistat i la germanor entre els arreplegats i les arreplegades. N'hi ha que són activitats de cada dia, com el post-assaig, però també se n'organitzen d'altres periòdicament. Aquí us n'expliquem algunes.
 				</p>
 
 				<h4>Sopar del novato</h4>
 
 				<p>
-					Aquest és un sopar on les persones que acaben d'entrar a la colla s'inicien dins el món casteller universitari. El sopar del novato és molt més que un sopar; hi ha proves, jocs, i sobretot molta festa! Es realitza cada any, generalment a finals d'octubre, quan ja tothom es coneix una mica però abans d'encarar el tram de diades d'hivern.
+					Aquest és un sopar on les persones que acaben d'entrar a la colla s'inicien dins el món casteller universitari. El sopar del novato és molt més que un sopar; hi ha proves, jocs, i sobretot molta festa! Es realitza cada any, generalment a finals d'octubre, quan ja tothom es coneix una mica, però abans d'encarar el tram de diades d'hivern.
 				</p>
 
 				<h4>Capdesetmanazu</h4>
