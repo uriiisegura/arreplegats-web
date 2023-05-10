@@ -2153,7 +2153,7 @@ Castells Universitaris
 	height: var(--dateH);
 	margin-inline: calc(var(--inlineP) * -1);
 	text-align: center;
-	color: white;
+	color: var(--white);
 	font-size: 1.25rem;
 	font-weight: 700;
 	display: grid;
