@@ -20,8 +20,23 @@
 		"name": "4 de 8",
 		"notation": "4d8",
 		"link": "images/4d8-arreplegats.jpg",
+		"gallery": [
+			{
+				"link": "images/4d8-arreplegats.jpg",
+				"caption": "4 de 8 descarregat en la diada del XXIè Aniversari dels Arreplegats de la Zona Universitària, el 22 de desembre de 2016"
+			},
+			{
+				"link": "images/gallery/4d8-diada-2023.jpg",
+				"caption": "4 de 8 descarregat en la XXVIIIa Diada dels Arreplegats de la Zona Universitària, l'11 de maig de 2023"
+			},
+			{
+				"link": "images/gallery/4d8-diada-2009.jpeg",
+				"caption": "Primer 4 de 8 descarregat, el 8 de maig de 2009"
+			}
+		],
 		"text": [
-			"El maig del 2009 vam sorprendre a tot el món casteller descarregant un 4 de 8 format completament per castellers adults, sent a més la primera colla de la història a descarregar aquest castell al primer intent. Després de tants anys, seguim demostrant que allò no va ser casualitat, i l'hem descarregat ja en set ocasions, dos d'ells ben lluny de casa: a Girona."
+			"El maig del 2009 vam sorprendre a tot el món casteller descarregant un 4 de 8 format completament per castellers adults, sent a més la primera colla de la història a descarregar aquest castell al primer intent. Després de tants anys, seguim demostrant que allò no va ser casualitat, i l'hem descarregat ja en vuit ocasions, alguns d'ells ben lluny de casa: dos a Girona.",
+			"El castell ha estat recuperat en diverses ocasions després d'haver-se perdut durant unes temporades. Sent especialment remarcable la seva recuperació l'11 de maig de 2023, que va ser descarregat en segona ronda després de més de 6 anys des de l'últim. En aquella diada, el carro gros va ser acompanyat del 5 de 7, el 3 de 8 amb folre, i el pilar de 7 amb folre i manilles (carregat), anotant la que seria la millor diada universitària de la història."
 		]
 	},
 	"3d8f": {

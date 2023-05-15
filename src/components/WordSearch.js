@@ -5,7 +5,7 @@ let cell = null;
 class WordSearch extends Component {
 	constructor(props) {
 		super(props);
-		this.handleMouseMove=this.handleMouseMove.bind(this);
+		this.handleMouseMove = this.handleMouseMove.bind(this);
 	}
 	selectLetter(i, j) {
 		document.getElementById(`selector${this.props.map_id}`).classList.toggle('show');
