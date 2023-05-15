@@ -38,9 +38,10 @@
 	},
 	{
 		"name": "Francesc Figueras i Miret",
+		"mote": "Figo",
 		"from": [2001],
 		"to": [2022],
-		"link": "",
+		"link": "presidents/figo.jpg",
 		"text": [
 			"—"
 		]
@@ -49,7 +50,7 @@
 		"name": "Manel Mendoza i García",
 		"from": [2002],
 		"to": [2003],
-		"link": "",
+		"link": "presidents/mendoza.jpg",
 		"text": [
 			"—"
 		]
