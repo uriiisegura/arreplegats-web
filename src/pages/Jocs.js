@@ -3,7 +3,8 @@ import { NavLink } from "react-router-dom";
 
 const jocs_list = {
 	'Mots encreuats': 'mots-encreuats',
-	'Sopa de lletres': 'sopa-de-lletres'
+	'Sopa de lletres': 'sopa-de-lletres',
+	'Memory': 'memory',
 };
 
 class Jocs extends Component {

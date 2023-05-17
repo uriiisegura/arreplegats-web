@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
 class Quote extends Component {
-	render() {return (
+	render() {
+		return (
 			<div className="quote">
 				<p>{this.props.quote}</p>
 				<h4>{this.props.author}</h4>

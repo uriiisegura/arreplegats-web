@@ -1,0 +1,38 @@
+[
+	{
+		"items": [
+			{
+				"name": "faixa",
+				"image": "/memory/faixa.png"
+			},
+			{
+				"name": "vilafranca",
+				"image": "/memory/vilafranca.png"
+			},
+			{
+				"name": "sanfeliu",
+				"image": "/memory/sanfeliu.png"
+			},
+			{
+				"name": "mataro",
+				"image": "/memory/mataro.png"
+			},
+			{
+				"name": "sants",
+				"image": "/memory/sants.png"
+			},
+			{
+				"name": "poblesec",
+				"image": "/memory/poblesec.webp"
+			},
+			{
+				"name": "berlin",
+				"image": "/memory/berlin.png"
+			},
+			{
+				"name": "logo",
+				"image": "/logo.png"
+			}
+		]
+	}
+]

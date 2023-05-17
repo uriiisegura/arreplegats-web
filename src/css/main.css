@@ -2626,6 +2626,60 @@ Slideshow
 
 /*
 =============== 
+Memory
+===============
+*/
+
+.memory-container {
+	width: fit-content;
+	display: grid;
+	gap: 0.6rem;
+	user-select: none;
+}
+
+.memory-card {
+	position: relative;
+	width: 7rem;
+	aspect-ratio: 1;
+	cursor: pointer;
+}
+
+.memory-card .before,
+.memory-card .after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 3px solid var(--black);
+	transition: var(--transition);
+	backface-visibility: hidden;
+}
+
+.memory-card .before {
+	background-color: var(--primary-600);
+	font-size: 2.8em;
+	font-weight: 600;
+}
+.memory-card .after {
+	background-color: var(--orange-dark);
+	transform: rotateY(180deg);
+}
+.memory-card.flipped .before {
+	transform: rotateY(180deg);
+}
+.memory-card.flipped .after {
+	transform: rotateY(0deg);
+}
+
+.memory-card img {
+	max-width: 90%;
+	max-height: 90%;
+}
+
+/*
+=============== 
 
 ===============
 */
