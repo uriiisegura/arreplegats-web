@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import WinGamePopup from "./WinGamePopup";
 
 let cell = null;
 
@@ -73,13 +74,22 @@ class WordSearch extends Component {
 	}
 	markWord(oi, oj, di, dj, word) {
 		const words = document.getElementsByClassName('words');
+		let done = true;
 		for (let li of words) {
 			if (parseInt(li.getAttribute('data-map')) !== this.props.map_id) continue;
 			if (li.getAttribute('data-word') === word) {
-				if (li.className.includes('done')) return;
+				if (li.classList.contains('done')) return;
 				li.classList.add('done');
 			}
 		}
+		for (let li of words) {
+			if (!li.classList.contains('done')) {
+				done = false;
+				break;
+			}
+		}
+		if (done)
+			this.popup.showPopup();
 
 		const selector = document.createElement('div');
 		const table = document.getElementById(`wordsearch${this.props.map_id}`);
@@ -110,7 +120,7 @@ class WordSearch extends Component {
 	render() {
 		window.addEventListener('mousemove', this.handleMouseMove);
 		
-		return (
+		return (<>
 			<div className="game-two-columns">
 				<div style={{position: 'relative'}} id={`wordsearch-wrap${this.props.map_id}`}>
 					<table className="word-search-table square-table" id={`wordsearch${this.props.map_id}`}><tbody>
@@ -143,7 +153,10 @@ class WordSearch extends Component {
 					</ul>
 				</div>
 			</div>
-		);
+			<WinGamePopup
+				ref={instance => { this.popup = instance; }}
+				/>
+		</>);
 	}
 }
 

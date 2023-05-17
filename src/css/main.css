@@ -2691,6 +2691,7 @@ Memory
 	padding: 1rem;
 	box-shadow: var(--shadow-7);
 	display: none;
+	z-index: 1000;
 }
 .win-popup.show {
 	display: flex;
