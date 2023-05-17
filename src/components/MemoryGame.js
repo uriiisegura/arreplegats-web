@@ -62,10 +62,11 @@ class MemoryGame extends Component {
 			card.style.pointerEvents = 'all';
 	}
 	render() {
-		return (<div className="memory-container" style={{gridTemplateColumns: `repeat(${Math.sqrt(this.state.random.length)},auto)`}}>
+		const columns = Math.sqrt(this.state.random.length);
+		return (<div className="memory-container" style={{maxWidth: `calc(${columns}*7.5rem)`}}>
 			{
 				this.state.random.map((c, i) => {
-					return <div key={i} className="memory-card" data-card={c.name} onClick={this.flipCard.bind(this)}>
+					return <div key={i} className="memory-card" data-card={c.name} onClick={this.flipCard.bind(this)} style={{width: `calc(${100/columns}% - 0.5rem)`}}>
 						<div className="before">?</div>
 						<div className="after"><img src={c.image} alt="" /></div>
 					</div>;
