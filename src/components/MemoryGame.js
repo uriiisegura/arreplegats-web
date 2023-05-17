@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import WinGamePopup from "./WinGamePopup";
 
 class MemoryGame extends Component {
 	constructor(props) {
@@ -24,8 +25,10 @@ class MemoryGame extends Component {
 			if (this.state.card.dataset.card === card.dataset.card) {
 				this.setState({ found: this.state.found+1 }, () => {
 					if (this.state.found === this.state.pairs) {
-						// TODO: detect win
-						this.disableClick();
+						setTimeout(function() {
+							this.disableClick();
+							this.popup.showPopup();
+						}.bind(this), 500);
 					}
 				});
 				this.setState({
@@ -42,7 +45,7 @@ class MemoryGame extends Component {
 						active: false,
 						card: null
 					});
-				}.bind(this), 1000);
+				}.bind(this), 500);
 			}
 		} else {
 			this.setState({
@@ -61,18 +64,39 @@ class MemoryGame extends Component {
 		for (let card of cards)
 			card.style.pointerEvents = 'all';
 	}
+	resetGame() {
+		const cards = document.getElementsByClassName('memory-card');
+		for (let card of cards)
+			card.classList.remove('flipped');
+		const random = this.state.random.sort(() => Math.random() - 0.5);
+		setTimeout(function() {
+			this.enableClick();
+			this.setState({
+				random: random,
+				found: 0,
+				active: false,
+				card: null
+			});
+		}.bind(this), 500);
+	}
 	render() {
-		const columns = Math.sqrt(this.state.random.length);
-		return (<div className="memory-container" style={{maxWidth: `calc(${columns}*7.5rem)`}}>
-			{
-				this.state.random.map((c, i) => {
-					return <div key={i} className="memory-card" data-card={c.name} onClick={this.flipCard.bind(this)} style={{width: `calc(${100/columns}% - 0.5rem)`}}>
-						<div className="before">?</div>
-						<div className="after"><img src={c.image} alt="" /></div>
-					</div>;
-				})
-			}
-		</div>);
+		const columns = Math.floor(Math.sqrt(this.state.random.length));
+		return (<>
+			<div className="memory-container" style={{maxWidth: `calc(${columns}*7.5rem)`}}>
+				{
+					this.state.random.map((c, i) => {
+						return <div key={i} className="memory-card" data-card={c.name} onClick={this.flipCard.bind(this)} style={{width: `calc(${100/columns}% - 0.5rem)`}}>
+							<div className="before">?</div>
+							<div className="after"><img src={c.image} alt="" /></div>
+						</div>;
+					})
+				}
+			</div>
+			<WinGamePopup
+				ref={instance => { this.popup = instance; }}
+				function={this.resetGame.bind(this)}
+				/>
+		</>);
 	}
 }
 

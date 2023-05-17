@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import WinGamePopup from "./WinGamePopup";
 
 class Crossword extends Component {
 	checkResult() {
@@ -20,10 +21,10 @@ class Crossword extends Component {
 			if (!correct) break;
 		}
 		if (correct)
-			alert('MOLT BÉ! FELICITATS!');
+			this.popup.showPopup();
 	}
 	render() {
-		return(
+		return(<>
 			<div className="game-two-columns">
 				<table className="crossword-table square-table" id={`crossword${this.props.map_id}`}><tbody>
 					{
@@ -52,7 +53,7 @@ class Crossword extends Component {
 												: <></>
 											}
 											{
-												s ? <input onChange={this.checkResult} maxLength="1" className="content" data-letter={s} />
+												s ? <input onChange={this.checkResult.bind(this)} maxLength="1" className="content" data-letter={s} />
 												: <></>
 											}
 										</td>);
@@ -72,7 +73,10 @@ class Crossword extends Component {
 					</ol>
 				</div>
 			</div>
-		);
+			<WinGamePopup
+				ref={instance => { this.popup = instance; }}
+				/>
+		</>);
 	}
 }
 
