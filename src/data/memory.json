@@ -6,32 +6,24 @@
 				"image": "/memory/faixa.png"
 			},
 			{
-				"name": "vilafranca",
-				"image": "/memory/vilafranca.png"
+				"name": "camisa",
+				"image": "/memory/camisa.png"
 			},
 			{
-				"name": "sanfeliu",
-				"image": "/memory/sanfeliu.png"
+				"name": "escut",
+				"image": "/memory/escut.png"
 			},
 			{
-				"name": "mataro",
-				"image": "/memory/mataro.png"
+				"name": "pantalo",
+				"image": "/memory/pantalo.png"
 			},
 			{
-				"name": "sants",
-				"image": "/memory/sants.png"
+				"name": "espardenyes",
+				"image": "/memory/espardenyes.png"
 			},
 			{
-				"name": "poblesec",
-				"image": "/memory/poblesec.webp"
-			},
-			{
-				"name": "berlin",
-				"image": "/memory/berlin.png"
-			},
-			{
-				"name": "logo",
-				"image": "/logo.png"
+				"name": "gralla",
+				"image": "/memory/gralla.png"
 			}
 		]
 	}
