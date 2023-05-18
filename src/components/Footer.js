@@ -11,6 +11,16 @@ class Footer extends Component {
 					<a href="https://www.tiktok.com/@arreplegats" className="icon tiktok" target="_blank" rel="noreferrer"><img src="font-awesome/tiktok.svg" alt="" /></a>
 					<a href="https://www.facebook.com/arreplegats" className="icon facebook" target="_blank" rel="noreferrer"><img src="font-awesome/facebook.svg" alt="" /></a>
 				</div>
+				<div className="universities">
+					<img
+						src="/ub.png"
+						alt="Universitat de Barcelona"
+						/>
+					<img
+						src="/upc.png"
+						alt="Universitat Politècnica de Catalunya"
+						/>
+				</div>
 			</footer>
 		);
 	}

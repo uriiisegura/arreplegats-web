@@ -99,7 +99,7 @@ html {
 	--page-width: 80vw;
 	--mobile-width: 95vw;
 	--navbar-height: 5rem;
-	--footer-height: 4rem;
+	--footer-height: 7rem;
 
 	/* box shadow*/
 	--shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -631,12 +631,14 @@ Footer
 	background: var(--black);
 	color: var(--white);
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
 .social-media {
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	width: 12rem;
 }
@@ -667,6 +669,21 @@ Footer
 }
 .facebook:hover {
 	filter: invert(67%) sepia(99%) saturate(497%) hue-rotate(185deg) brightness(90%) contrast(81%);
+}
+
+.universities {
+	display: flex;
+	flex-direction: row;
+	margin: 1rem auto 0;
+}
+
+.universities img {
+	width: 150px;
+	object-fit: contain;
+	margin-right: 2rem;
+}
+.universities img:last-of-type {
+	margin-right: 0;
 }
 
 /*
