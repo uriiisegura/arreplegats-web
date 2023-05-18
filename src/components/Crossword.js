@@ -20,8 +20,13 @@ class Crossword extends Component {
 			}
 			if (!correct) break;
 		}
-		if (correct)
+		if (correct) {
+			document.cookie = `mots-${this.props.map_id}=true,secure`;
 			this.popup.showPopup();
+		}
+	}
+	finish() {
+		window.location.hash = '#/mots-encreuats';
 	}
 	render() {
 		return(<>
@@ -75,6 +80,7 @@ class Crossword extends Component {
 			</div>
 			<WinGamePopup
 				ref={instance => { this.popup = instance; }}
+				function={this.finish}
 				/>
 		</>);
 	}

@@ -88,8 +88,10 @@ class WordSearch extends Component {
 				break;
 			}
 		}
-		if (done)
+		if (done) {
+			document.cookie = `sopa-${this.props.map_id}=true,secure`;
 			this.popup.showPopup();
+		}
 
 		const selector = document.createElement('div');
 		const table = document.getElementById(`wordsearch${this.props.map_id}`);
@@ -116,6 +118,9 @@ class WordSearch extends Component {
 		selector.style.width = `${length}px`;
 		selector.style.transform = `rotate(${angle}deg)`;
 		document.getElementById(`wordsearch-wrap${this.props.map_id}`).appendChild(selector);
+	}
+	finish() {
+		window.location.hash = '#/sopa-de-lletres';
 	}
 	render() {
 		window.addEventListener('mousemove', this.handleMouseMove);
@@ -155,6 +160,7 @@ class WordSearch extends Component {
 			</div>
 			<WinGamePopup
 				ref={instance => { this.popup = instance; }}
+				function={this.finish}
 				/>
 		</>);
 	}

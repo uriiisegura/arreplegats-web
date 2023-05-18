@@ -26,7 +26,9 @@ import Noticies from "./pages/Noticies";
 import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
 import Jocs from "./pages/Jocs";
+import NivellsSopaDeLletres from "./pages/NivellsSopaDeLletres";
 import SopaLletres from "./pages/SopaLletres";
+import NivellsMotsEncreuats from "./pages/NivellsMotsEncreuats";
 import MotsEncreuats from "./pages/MotsEncreuats";
 import Memory from "./pages/Memory";
 import Contractacions from "./pages/Contractacions";
@@ -84,8 +86,10 @@ function App() {
 					<Route path="/fotografies" element={<Fotografies />} />
 					<Route path="/videos" element={<Videos />} />
 					<Route path="/jocs" element={<Jocs />} />
-					<Route path="/sopa-de-lletres" element={<SopaLletres />} />
-					<Route path="/mots-encreuats" element={<MotsEncreuats />} />
+					<Route path="/sopa-de-lletres" element={<NivellsSopaDeLletres />} />
+					<Route path="/sopa-de-lletres/:idx" element={<SopaLletres />} />
+					<Route path="/mots-encreuats" element={<NivellsMotsEncreuats />} />
+					<Route path="/mots-encreuats/:idx" element={<MotsEncreuats />} />
 					<Route path="/memory" element={<Memory />} />
 					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />

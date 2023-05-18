@@ -1822,6 +1822,32 @@ Jocs
 ===============
 */
 
+.game-levels {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	gap: 0.5rem;
+	width: 100%;
+}
+
+.game-levels > * {
+	min-width: 6rem;
+	text-align: center;
+	border: 3px solid var(--primary-600);
+}
+.game-levels > *:hover {
+	border: 3px solid var(--primary-700);
+}
+
+.game-levels .incomplete {
+	background-color: var(--white);
+	color: var(--primary-600);
+	font-weight: 400;
+}
+.game-levels .incomplete:hover {
+	border: 3px solid var(--primary-600);
+}
+
 .games {
 	display: grid;
 	gap: 3rem;
