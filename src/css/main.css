@@ -2707,7 +2707,8 @@ Memory
 	max-height: 95%;
 }
 
-.win-popup {
+.win-popup,
+.lose-popup {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -2720,20 +2721,36 @@ Memory
 	display: none;
 	z-index: 1000;
 }
-.win-popup.show {
+.lose-popup {
+	border-color: var(--red-medium);
+}
+.win-popup.show,
+.lose-popup.show {
 	display: flex;
 	flex-direction: column;
 }
 
-.win-popup h3 {
+.win-popup h3,
+.lose-popup h3 {
 	color: var(--primary-600);
 	margin: 0;
 }
+.lose-popup h3 {
+	color: var(--red-medium);
+}
 
-.win-popup h5 {
+.win-popup h5,
+.lose-popup h5 {
 	margin: 1rem auto 2rem;
 	font-weight: 300;
 	font-size: 1.2rem;
+}
+
+.lose-popup .btn {
+	background-color: var(--red-medium);
+}
+.lose-popup .btn:hover {
+	background-color: var(--red-dark);
 }
 
 /*
@@ -2757,17 +2774,24 @@ Penjat
 
 .penjat-word .letter {
 	border-bottom: 5px solid var(--grey-400);
-	min-width: 20px;
+}
+.penjat-word .letter,
+.penjat-word .geminada {
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
+	min-width: 20px;
 }
-.penjat-word .letter span {
+.penjat-word .letter span,
+.penjat-word .geminada span {
 	text-align: center;
 	width: 100%;
-	font-size: min(8vi, 8vb);
+	font-size: 6cqmin;
 	margin: 0 -100vw;
 	line-height: 0.8;
+}
+.penjat-word .geminada span {
+	line-height: 1;
 }
 .penjat-word .space {
 	min-width: 15px;
@@ -2782,8 +2806,9 @@ Penjat
 }
 
 .penjat-keyboard div {
-	width: 2rem;
-	padding: 1rem 0.5rem;
+	width: 4rem;
+	padding: 2rem 1rem;
+	font-size: 2rem;
 	text-align: center;
 	aspect-ratio: 1;
 	line-height: 0;
@@ -2810,6 +2835,14 @@ Penjat
 .penjat-keyboard .valid:hover,
 .penjat-keyboard .invalid:hover {
 	transform: none;
+}
+
+@media screen and (max-width: 900px) {
+	.penjat-keyboard div {
+		width: 2rem;
+		padding: 1rem 0.5rem;
+		font-size: 1rem;
+	}
 }
 
 /*
