@@ -30,6 +30,8 @@ import NivellsSopaDeLletres from "./pages/NivellsSopaDeLletres";
 import SopaLletres from "./pages/SopaLletres";
 import NivellsMotsEncreuats from "./pages/NivellsMotsEncreuats";
 import MotsEncreuats from "./pages/MotsEncreuats";
+import NivellsPenjat from "./pages/NivellsPenjat";
+import Penjat from "./pages/Penjat";
 import Memory from "./pages/Memory";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
@@ -91,6 +93,8 @@ function App() {
 					<Route path="/mots-encreuats" element={<NivellsMotsEncreuats />} />
 					<Route path="/mots-encreuats/:idx" element={<MotsEncreuats />} />
 					<Route path="/memory" element={<Memory />} />
+					<Route path="/penjat" element={<NivellsPenjat />} />
+					<Route path="/penjat/:idx" element={<Penjat />} />
 					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />

@@ -393,6 +393,7 @@ Navbar
 
 .nav-btn {
 	display: none;
+	user-select: none;
 }
 
 .nav-link {
@@ -2733,6 +2734,82 @@ Memory
 	margin: 1rem auto 2rem;
 	font-weight: 300;
 	font-size: 1.2rem;
+}
+
+/*
+=============== 
+Penjat
+===============
+*/
+
+.penjat-word {
+	display: flex;
+	gap: 0.1rem;
+	margin-bottom: 3rem;
+}
+
+.penjat-word > * {
+	aspect-ratio: 2/3;
+	flex-grow: 1;
+	max-width: 4rem;
+	user-select: none;
+}
+
+.penjat-word .letter {
+	border-bottom: 5px solid var(--grey-400);
+	min-width: 20px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.penjat-word .letter span {
+	text-align: center;
+	width: 100%;
+	font-size: min(8vi, 8vb);
+	margin: 0 -100vw;
+	line-height: 0.8;
+}
+.penjat-word .space {
+	min-width: 15px;
+}
+
+.penjat-keyboard {
+	display: grid;
+	width: fit-content;
+	margin: 0 auto;
+	gap: 0.3rem;
+	grid-template-columns: repeat(5, auto);
+}
+
+.penjat-keyboard div {
+	width: 2rem;
+	padding: 1rem 0.5rem;
+	text-align: center;
+	aspect-ratio: 1;
+	line-height: 0;
+	background-color: var(--primary-200);
+	transition: var(--transition);
+	cursor: pointer;
+	user-select: none;
+}
+.penjat-keyboard div:hover {
+	transform: scale(1.2);
+	background-color: var(--primary-500);
+}
+
+.penjat-keyboard .valid {
+	background-color: var(--primary-600) !important;
+	color: var(--white);
+	font-weight: 500;
+}
+.penjat-keyboard .invalid {
+	background-color: var(--grey-200) !important;
+	color: var(--red-dark);
+	font-weight: 500;
+}
+.penjat-keyboard .valid:hover,
+.penjat-keyboard .invalid:hover {
+	transform: none;
 }
 
 /*

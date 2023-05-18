@@ -5,6 +5,7 @@ const jocs_list = {
 	'Mots encreuats': 'mots-encreuats',
 	'Sopa de lletres': 'sopa-de-lletres',
 	'Memory': 'memory',
+	'Penjat': 'penjat'
 };
 
 class Jocs extends Component {
