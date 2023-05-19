@@ -29,7 +29,7 @@ class SopaLletres extends Component {
 					map={map}
 					words={sopa.words}
 					map_id={parseInt(idx)}
-					/>;
+					/>
 			</section>
 		</>);
 	}
