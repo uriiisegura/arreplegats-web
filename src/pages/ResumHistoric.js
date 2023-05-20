@@ -118,7 +118,6 @@ class ResumHistoric extends Component {
 							}
 						});
 					}
-	
 					have_same_round = false;
 					same_round = {};
 					same_round[castell] = 1;
@@ -142,6 +141,44 @@ class ResumHistoric extends Component {
 				}
 			});
 		});
+		if (have_same_round) {
+			const [isSpecial, specialName] = isSpecialSim(same_round);
+			if (isSpecial) {
+				const [thisCas, thisDes] = GetCastell(specialName, false);
+
+				if (!(thisCas.replace('T','2') in puntuacions)) {
+					if (!(thisCas in not_scored_castells))
+						not_scored_castells[thisCas] = [0, 0];
+					
+					if (thisDes) not_scored_castells[thisCas][0] += 1;
+					else		 not_scored_castells[thisCas][1] += 1;
+				} else {
+					if (!(thisCas in castells_dict))
+					castells_dict[thisCas] = [0, 0];
+	
+					if (thisDes) castells_dict[thisCas][0] += 1;
+					else		 castells_dict[thisCas][1] += 1;
+				}
+			} else {
+				Object.keys(same_round).forEach((thisCastell, i) => {
+					const [thisCas, thisDes] = GetCastell(thisCastell, false);
+
+					if (!(thisCas.replace('T','2') in puntuacions)) {
+						if (!(thisCas in not_scored_castells))
+							not_scored_castells[thisCas] = [0, 0];
+						
+						if (thisDes) not_scored_castells[thisCas][0] += Object.values(same_round)[i];
+						else		 not_scored_castells[thisCas][1] += Object.values(same_round)[i];
+					} else {
+						if (!(thisCas in castells_dict))
+							castells_dict[thisCas] = [0, 0];
+			
+						if (thisDes) castells_dict[thisCas][0] += Object.values(same_round)[i];
+						else		 castells_dict[thisCas][1] += Object.values(same_round)[i];
+					}
+				});
+			}
+		}
 	
 		let castells = Object.keys(castells_dict).map((key) => {
 			return [key, castells_dict[key]];
