@@ -56,7 +56,7 @@ class JuntaDirectiva extends Component {
 							<h4>Equip d'acollida</h4>
 							<p><span>Cap d'acollida</span>: Maria Babià i Soler</p>
 							<p>Pere Llopart</p>
-							<p>Aida Sanfeliu Gubern</p>
+							<p>Aida Sanfeliu i Gubern</p>
 							<p>Jordina Rué i Alcové</p>
 							<p>Núria Fonts</p>
 							<p>Aina Oliu i Cordomí</p>
