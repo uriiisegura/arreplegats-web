@@ -2963,6 +2963,11 @@ Joc Castells
 	line-height: 1;
 }
 
+#screen {
+	width: 100%;
+	height: 100%;
+}
+
 /*
 =============== 
 

@@ -79,6 +79,7 @@ class CastellsGame extends Component {
 					<div className="sub-bar">
 						<span>{this.state.colla.castellers} persones a la colla</span>
 					</div>
+					<div id="screen"></div>
 				</>
 			}
 			<div id="create-game" className="game-popup create-colla">
