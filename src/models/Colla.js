@@ -1,4 +1,5 @@
 import HexToRgb from "../functions/HexToRgb";
+import HexToFilter from "../functions/HexToFilter";
 
 class Colla {
 	constructor(name,
@@ -9,6 +10,11 @@ class Colla {
 		this.color = color;
 		const rgb = HexToRgb(color);
 		this.highContrast = 0.2126*rgb.r + 0.7152*rgb.g + 0.0722*rgb.b < 128 ? 'white' : 'black';
+		let filter;
+		do {
+			filter = HexToFilter(rgb);
+			this.filter = filter.filter;
+		} while(filter.loss > 0.1);
 		this.castellers = castellers;
 	}
 	static fromJson(json) {
