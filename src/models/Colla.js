@@ -25,6 +25,19 @@ class Colla {
 			return new Colla(name, color, castellers);
 		throw new Error("L'arxiu no conté cap partida.");
 	}
+	addCastellers(castellers) {
+		this.castellers += castellers;
+		return castellers;
+	}
+	takeCastellers(castellers) {
+		let max = this.castellers;
+		if (max > castellers) {
+			this.castellers = 0;
+			return max;
+		}
+		this.castellers -= castellers;
+		return castellers;
+	}
 }
 
 export default Colla;
