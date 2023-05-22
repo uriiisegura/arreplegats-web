@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ValidateEmail from "./../functions/ValidateEmail";
+import ValidateEmail from "../functions/ValidateEmail";
 
 class APPsistenciaLogIn extends Component {
 	state = {

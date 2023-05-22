@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import GetCastellsDiada from "./../functions/GetCastellsDiada";
-import PopPd from "./../functions/PopPd";
-import GetClean from "./../functions/GetClean";
-import GetTemporada from "./../functions/GetTemporada";
-import FromEuropean from "./../functions/FromEuropean";
+import GetCastellsDiada from "../functions/GetCastellsDiada";
+import PopPd from "../functions/PopPd";
+import GetClean from "../functions/GetClean";
+import GetTemporada from "../functions/GetTemporada";
+import FromEuropean from "../functions/FromEuropean";
 
 class LlistaDeDiades extends Component {
 	render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import events from "./../data/events-universitaris.json";
+import events from "../data/events-universitaris.json";
 
 class CastellsUniversitaris extends Component {
 	renderComponent(e, i) {

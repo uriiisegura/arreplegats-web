@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import CastellCard from "../components/CastellCard";
 import Quote from "../components/Quote";
-import castells_map from "./../data/castells-top.json";
-import quotes from "./../data/quotes.json";
+import castells_map from "../data/castells-top.json";
+import quotes from "../data/quotes.json";
 
 class Home extends Component {
 	render() {

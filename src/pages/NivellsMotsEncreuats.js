@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import maps from "./../data/mots-encreuats.json";
+import maps from "../data/mots-encreuats.json";
 
 class NivellsMotsEncreuats extends Component {
 	getCookie(name) {

@@ -489,6 +489,7 @@ Navbar
 	transition: none;
 }
 .join-btn:hover {
+	border-top: 5px solid var(--primary-600);
 	border-bottom: none !important;
 }
 
@@ -693,6 +694,15 @@ Page
 .page {
 	min-height: calc(100vh - (var(--navbar-height) + var(--footer-height)));
 	padding-bottom: 2rem;
+}
+.page:empty {
+	display: none;
+}
+
+.page-full {
+	height: 100vh;
+	padding: 0;
+	position: relative;
 }
 
 section {
@@ -2858,6 +2868,98 @@ Penjat
 		padding: 1rem 0.5rem;
 		font-size: 1rem;
 	}
+}
+
+/*
+=============== 
+Joc Castells
+===============
+*/
+
+.flex-page {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+}
+
+.btn-wrap {
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	width: max(30%, 15rem);
+}
+
+.btn-wrap * {
+	text-align: center;
+	line-height: 1.5;
+	margin-bottom: 0.5rem;
+}
+.btn-wrap :last-child {
+	margin: 0;
+}
+
+.game-error {
+	color: var(--red-dark);
+}
+.game-error:empty {
+	display: none;
+}
+
+.game-popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--white);
+	border: 5px solid var(--primary-600);
+	border-radius: var(--borderRadius);
+	padding: 0.5rem;
+	box-shadow: var(--shadow-7);
+	display: none;
+	z-index: 1000;
+}
+.game-popup input {
+	margin-bottom: 0.5rem;
+}
+.game-popup button {
+	margin-top: 1rem;
+}
+.game-popup .cancel-btn {
+	color: var(--grey-400);
+	text-align: center;
+	margin: 0.5rem 0 0;
+	cursor: pointer;
+}
+.game-popup .cancel-btn:hover {
+	text-decoration: underline;
+}
+
+.create-colla {
+	flex-direction: column;
+}
+
+.top-bar {
+	padding: 0.25rem 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top-bar span {
+	font-size: 1.25rem;
+}
+
+.top-bar button {
+	box-shadow: none;
+}
+
+.sub-bar {
+	padding: 0.15rem 0.5rem;
+	background-color: var(--grey-300);
+	line-height: 1;
 }
 
 /*

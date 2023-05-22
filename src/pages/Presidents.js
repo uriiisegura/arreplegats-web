@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PersonCard from "../components/PersonCard";
-import presidents from "./../data/presidents.json";
+import presidents from "../data/presidents.json";
 
 class Presidents extends Component {
 	render() {

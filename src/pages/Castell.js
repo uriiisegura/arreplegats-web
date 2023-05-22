@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
-import castells_map from "./../data/castells-top.json";
+import castells_map from "../data/castells-top.json";
 
 function withParams(Component) {
 	return props => <Component {...props} params={useParams()} />;

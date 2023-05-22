@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import maps from "./../data/penjat.json";
+import maps from "../data/penjat.json";
 
 class NivellsPenjat extends Component {
 	getCookie(name) {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PersonCard from "../components/PersonCard";
-import caps_de_colla from "./../data/caps-de-colla.json";
+import caps_de_colla from "../data/caps-de-colla.json";
 
 class CapsDeColla extends Component {
 	render() {

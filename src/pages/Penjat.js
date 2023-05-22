@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 import PenjatGame from "../components/PenjatGame";
-import maps from "./../data/penjat.json";
+import maps from "../data/penjat.json";
 
 function withParams(Component) {
 	return props => <Component {...props} params={useParams()} />;

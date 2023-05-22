@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
-import WordSearch from "./../components/WordSearch";
-import maps from "./../data/sopa-de-lletres.json";
+import WordSearch from "../components/WordSearch";
+import maps from "../data/sopa-de-lletres.json";
 
 function withParams(Component) {
 	return props => <Component {...props} params={useParams()} />;

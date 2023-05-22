@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import DataProcessor from "./components/DataProcessor";
 import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/Navbar';
@@ -31,8 +31,9 @@ import SopaLletres from "./pages/SopaLletres";
 import NivellsMotsEncreuats from "./pages/NivellsMotsEncreuats";
 import MotsEncreuats from "./pages/MotsEncreuats";
 import NivellsPenjat from "./pages/NivellsPenjat";
-import Penjat from "./pages/Penjat";
 import Memory from "./pages/Memory";
+import Penjat from "./pages/Penjat";
+import CastellsGame from "./pages/CastellsGame";
 import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
 import Contactar from "./pages/Contactar";
@@ -63,8 +64,11 @@ function App() {
 		<DataProcessor {...exports} />
 
 		<Router>
-			<NavBar />
 			<ScrollToTop />
+			<Routes>
+				<Route path="/joc-castells" element={<></>} />
+				<Route path="*" element={<NavBar />} />
+			</Routes>
 			<main className="page">
 				<Routes>
 					<Route path="/" element={<Home />} />
@@ -94,6 +98,7 @@ function App() {
 					<Route path="/mots-encreuats/:idx" element={<MotsEncreuats />} />
 					<Route path="/memory" element={<Memory />} />
 					<Route path="/penjat" element={<NivellsPenjat />} />
+					<Route path="/joc-castells" element={<></>} />
 					<Route path="/penjat/:idx" element={<Penjat />} />
 					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
@@ -104,8 +109,11 @@ function App() {
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</main>
+			<Routes>
+				<Route path="/joc-castells" element={<main className="page page-full"><CastellsGame /></main>} />
+				<Route path="*" element={<Footer />} />
+			</Routes>
 		</Router>
-		<Footer />
 	</>
 	);
 }

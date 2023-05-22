@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import maps from "./../data/sopa-de-lletres.json";
+import maps from "../data/sopa-de-lletres.json";
 
 class NivellsSopaDeLletres extends Component {
 	getCookie(name) {

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WinGamePopup from "./WinGamePopup";
 import LoseGamePopup from "./LoseGamePopup";
-import RemoveAccents from "./../functions/RemoveAccents";
+import RemoveAccents from "../functions/RemoveAccents";
 
 class PenjatGame extends Component {
 	constructor(props) {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import GetTemporada from "./../functions/GetTemporada";
-import GetCastell from "./../functions/GetCastell";
+import GetTemporada from "../functions/GetTemporada";
+import GetCastell from "../functions/GetCastell";
 
 class MillorsDiades extends Component {
 	render() {

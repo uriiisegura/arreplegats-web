@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
-import Crossword from "./../components/Crossword";
-import maps from "./../data/mots-encreuats.json";
+import Crossword from "../components/Crossword";
+import maps from "../data/mots-encreuats.json";
 
 function withParams(Component) {
 	return props => <Component {...props} params={useParams()} />;

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CastellCard from "../components/CastellCard";
-import castells_map from "./../data/castells-top.json";
+import castells_map from "../data/castells-top.json";
 
 class MillorsCastells extends Component {
 	render() {

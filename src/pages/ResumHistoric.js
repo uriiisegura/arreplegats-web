@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import ResumCard from "../components/ResumCard";
-import GetCastell from "./../functions/GetCastell";
-import castells_map from "./../data/castells-top.json";
-import categories from "./../data/categories-castells.json";
+import GetCastell from "../functions/GetCastell";
+import castells_map from "../data/castells-top.json";
+import categories from "../data/categories-castells.json";
 
 class ResumHistoric extends Component {
 	render() {
