@@ -403,7 +403,6 @@ Navbar
 	align-items: center;
 	font-size: 1rem;
 	letter-spacing: var(--letterSpacing);
-	margin-left: 0.5rem;
 	transition: var(--transition);
 	border-top: 3px solid transparent;
 	border-bottom: 3px solid transparent;
@@ -505,7 +504,7 @@ Navbar
 	}
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1300px) {
 	.nav-btn {
 		display: flex;
 		justify-content: flex-end;
@@ -551,7 +550,6 @@ Navbar
 		flex-direction: column;
 		padding: 0;
 		width: 100%;
-		margin: 0;
 	}
 	.nav-link > span:hover,
 	.nav-link:hover > a,
