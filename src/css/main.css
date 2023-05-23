@@ -3067,9 +3067,7 @@ Joc Castells
 .score-table {
 	color: var(--white);
 	border-collapse: collapse;
-	table-layout: fixed;
 	height: fit-content;
-	width: max-content;
 	margin: 0;
 	margin-right: 1rem;
 }
