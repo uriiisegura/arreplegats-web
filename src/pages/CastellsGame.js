@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import castells from "../data/joc-castells.json";
 import Colla from "../models/Colla";
 
 class CastellsGame extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			colla: null
+			colla: null,
+			screen: 'HOME',
+			history: ['HOME']
 		};
 	}
 	loadGame(e) {
@@ -61,8 +64,24 @@ class CastellsGame extends Component {
 							)
 		});
 	}
+	changeScreen(screen) {
+		const history = this.state.history;
+		history.push(this.state.screen)
+		this.setState({
+			screen: screen,
+			history: history
+		});
+	}
+	goBack() {
+		const history = this.state.history;
+		const lastScreen = history.pop();
+		this.setState({
+			screen: lastScreen,
+			history: history
+		});
+	}
 	render() {
-		return (<>
+		return (<><div className="castells-game">
 			{
 				this.state.colla === null
 				? <div className="flex-page"><div className="btn-wrap">
@@ -74,12 +93,68 @@ class CastellsGame extends Component {
 				: <>
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
-						<button className="btn" onClick={this.saveGame.bind(this)}>Guardar</button>
+						<button className="btn" onClick={this.saveGame.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Guardar</button>
 					</div>
 					<div className="sub-bar">
 						<span>{this.state.colla.castellers} persones a la colla</span>
 					</div>
 					<div id="screen"></div>
+					{
+						this.state.screen === 'HOME' ? <>
+							<div className="menu">
+								<button><span>ASSAIG</span></button>
+								<button><span>ACTUACIÓ</span></button>
+								<button onClick={() => this.changeScreen('CASTELLS')}>
+									<span>CASTELLS</span>
+								</button>
+								<button className="disabled">
+									<span>HISTÒRIC</span>
+								</button>
+								<button><span>MISSIONS</span></button>
+								<button><span>AJUDA</span></button>
+							</div>
+						</> : <></>
+					}
+					{
+						this.state.screen === 'CASTELLS' ? <>
+							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+							<div className="game-table-wrap">
+								{
+									[...Array(9).keys()].map((g, i) => {
+										return <table className="score-table" key={i}>
+											<thead>
+												<tr>
+													<th colSpan="4">Grup {g}</th>
+												</tr>
+												<tr>
+													<th>Castell</th>
+													<th>Carregat</th>
+													<th>Descarregat</th>
+													<th>Gent</th>
+												</tr>
+											</thead>
+											<tbody>
+												{
+													castells.map((c, j) => {
+														if (c.grup !== g) return <></>;
+														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={j}>
+															<td>{c.castell}</td>
+															<td>{c.carregat}</td>
+															<td>{c.descarregat}</td>
+															<td>
+																{c.gent}
+																<span className="help">?</span>
+															</td>
+														</tr>;
+													})
+												}
+											</tbody>
+										</table>;
+									})
+								}
+							</div>
+						</> : <></>
+					}
 				</>
 			}
 			<div id="create-game" className="game-popup create-colla">
@@ -90,7 +165,10 @@ class CastellsGame extends Component {
 				<button className="btn" onClick={this.createColla.bind(this)}>Comença!</button>
 				<p className="cancel-btn" onClick={this.cancelCreate}>Cancel·la</p>
 			</div>
-		</>);
+		</div>
+		<div className="cant-play">
+			<h2>Cal una pantalla d'almenys 1200px d'amplada per poder jugar a aquest joc</h2>
+		</div></>);
 	}
 }
 

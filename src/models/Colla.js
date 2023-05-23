@@ -4,7 +4,8 @@ import HexToFilter from "../functions/HexToFilter";
 class Colla {
 	constructor(name,
 				color,
-				castellers=50
+				castellers=50,
+				date=Date.parse('2022-09-01')
 		) {
 		this.name = name;
 		this.color = color;
@@ -14,15 +15,17 @@ class Colla {
 		do {
 			filter = HexToFilter(rgb);
 			this.filter = filter.filter;
-		} while(filter.loss > 0.1);
+		} while(filter.loss > 0.15);
 		this.castellers = castellers;
+		this.date = date;
 	}
 	static fromJson(json) {
 		const name = json.name;
 		const color = json.color;
 		const castellers = json.castellers;
-		if (name && color && castellers)
-			return new Colla(name, color, castellers);
+		const date = json.date;
+		if (name && color && castellers && date)
+			return new Colla(name, color, castellers, date);
 		throw new Error("L'arxiu no conté cap partida.");
 	}
 	addCastellers(castellers) {

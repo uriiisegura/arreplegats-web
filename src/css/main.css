@@ -83,6 +83,14 @@ html {
     --grillats: #cd157a;
     --llunatics: #21277c;
 
+	/* joc castells */
+	--game-lightBlue: #2857aa;
+	--game-mediuBlue: #1b243c;
+	--game-darkBlue: #121c32;
+	--game-cream: #ffe1c9;
+	--game-lightGray: #6a6a6a;
+	--game-darkGray: #2b2b2b;
+
 	/* fonts  */
 	--headingFont: 'Roboto', sans-serif;
 	--bodyFont: 'Montserrat', sans-serif;
@@ -2877,6 +2885,24 @@ Joc Castells
 ===============
 */
 
+.cant-play {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	background-color: var(--grey-200);
+}
+
+.cant-play h2 {
+	color: var(--primary-600);
+	margin: auto;
+	text-align: center;
+	min-width: 25rem;
+	width: 50%;
+}
+
 .flex-page {
 	position: absolute;
 	top: 0;
@@ -2956,6 +2982,9 @@ Joc Castells
 .top-bar button {
 	box-shadow: none;
 }
+.top-bar button:hover {
+	box-shadow: var(--shadow-7);
+}
 
 .sub-bar {
 	padding: 0.15rem 0.5rem;
@@ -2964,8 +2993,128 @@ Joc Castells
 }
 
 #screen {
-	width: 100%;
-	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: var(--game-darkBlue);
+	z-index: -1;
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0.5rem;
+	width: calc(3 * 20rem);
+	margin: 10rem auto 0;
+}
+
+.menu button {
+	border-radius: 0;
+	background-color: var(--game-mediuBlue);
+	border: 1px solid var(--game-lightBlue);
+	color: var(--white);
+	display: flex;
+	padding: 0.5rem;
+	height: 10rem;
+	align-items: flex-end;
+	transition: 0.15s;
+	cursor: pointer;
+}
+.menu button:hover {
+	background-color: var(--game-cream);
+	color: var(--black);
+	transform: scale(1.02);
+}
+.menu button.disabled {
+	pointer-events: none;
+	background-color: var(--game-darkGray);
+	border-color: var(--game-lightGray);
+	color: var(--game-lightGray);
+}
+
+.menu button span {
+	font-style: italic;
+	user-select: none;
+}
+
+.back-btn {
+	width: calc(100% - 2rem);
+	margin: 1rem;
+	padding: 10px;
+	background-color: var(--game-lightBlue);
+	border: none;
+	color: var(--white);
+	text-align: center;
+	transition: 0.15s;
+	cursor: pointer;
+	opacity: 0.85;
+}
+.back-btn:hover {
+	opacity: 1;
+}
+
+.game-table-wrap {
+	display: flex;
+	margin: 0 1rem;
+	overflow: scroll;
+}
+.game-table-wrap::-webkit-scrollbar {
+	display: none;
+}
+
+.score-table {
+	color: var(--white);
+	border-collapse: collapse;
+	table-layout: fixed;
+	height: fit-content;
+	width: max-content;
+	margin: 0;
+	margin-right: 1rem;
+}
+.score-table:last-of-type {
+	margin: 0;
+}
+
+tr.locked {
+	opacity: 0.5;
+}
+
+.score-table th,
+.score-table td {
+	padding: 2px 10px;
+	border: 1px solid var(--game-lightBlue);
+}
+.score-table th {
+	background-color: var(--game-lightBlue);
+}
+.score-table td {
+	background-color: var(--game-mediuBlue);
+	white-space: nowrap;
+}
+
+span.help {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 50%;
+	width: 1rem;
+	height: 1rem;
+	line-height: 1.2;
+	margin-left: 0.5rem;
+	font-size: 0.85rem;
+	text-align: center;
+	background-color: var(--game-lightBlue);
+}
+
+@media screen and (max-width: 1200px) {
+	.castells-game {
+		display: none;
+	}
+
+	.cant-play {
+		display: flex;
+	}
 }
 
 /*
