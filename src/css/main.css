@@ -483,6 +483,7 @@ Navbar
 
 /* TODO: merge FireFox:has() */
 .join-btn {
+	margin-left: 1.5rem;
 	padding: 0.2rem 0;
 	background-color: var(--primary-700);
 	height: auto;
@@ -490,6 +491,7 @@ Navbar
 	transition: none;
 }
 .join-btn:has(a.active) {
+	margin-left: 1.5rem;
 	padding: 0.2rem 0;
 	background-color: var(--primary-700);
 	height: auto;
