@@ -2497,6 +2497,9 @@ Agenda
 	color: var(--secondary-600);
 }
 
+#calendar .close {
+	cursor: pointer;
+}
 #calendar .close::after {
 	width: 20px;
 	height: 20px;
@@ -2513,7 +2516,6 @@ Agenda
 	align-items: center;
 	justify-content: center;
 	transition: var(--transition);
-	cursor: pointer;
 }
 #calendar .close:hover::after {
 	color: var(--primary-700);
