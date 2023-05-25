@@ -171,6 +171,8 @@ class Agenda extends Component {
 		
 	}
 	firstLoad() {
+		document.getElementById('loading').style.display = 'none';
+		document.getElementById('agenda').style.display = 'block';
 		this.showCalendar(this.state.currentMonth, this.state.currentYear);
 	}
 	render() {
@@ -180,7 +182,10 @@ class Agenda extends Component {
 
 				<div id="calendar">
 					<div className="table-wrap" style={{position: 'relative'}}>
-						<div className="calendar">
+						<div className="calendar" id="loading">
+							<div className="loading"></div>
+						</div>
+						<div className="calendar" id="agenda" style={{display: 'none'}}>
 							<div className="header">
 								<button onClick={this.previous}><span>❮</span></button>
 								<span id="monthAndYear"></span>
