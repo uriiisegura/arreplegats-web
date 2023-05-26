@@ -2480,12 +2480,17 @@ Agenda
 	width: fit-content;
 }
 
+#calendar .event-info #event-map {
+	margin-bottom: 0.5rem;
+}
+
 #calendar .event-info #event-desc {
 	margin: 1rem 0 0 1rem;
 	font-weight: 700;
 	line-height: 1.5;
 }
 
+#calendar .event-info #event-map,
 #calendar .event-info #event-link {
 	margin-left: 2rem;
 	font-size: 0.85rem;
@@ -2493,6 +2498,7 @@ Agenda
 	width: fit-content;
 	transition: var(--transition);
 }
+#calendar .event-info #event-map:hover,
 #calendar .event-info #event-link:hover {
 	color: var(--secondary-600);
 }

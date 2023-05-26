@@ -109,6 +109,7 @@ class Agenda extends Component {
 		const title = document.getElementById('event-name');
 		const cat = document.getElementById('event-cat');
 		const place = document.getElementById('event-lloc');
+		const map = document.getElementById('event-map');
 		const time = document.getElementById('event-hora');
 		const desc = document.getElementById('event-desc');
 		const link = document.getElementById('event-link');
@@ -129,6 +130,12 @@ class Agenda extends Component {
 				place.innerHTML += city;
 		} else
 			place.innerHTML = "";
+		if (diada["MAPA"]) {
+			map.style.display = "block";
+			map.innerHTML = "➤ VEURE EN EL MAPA";
+			map.href = diada["MAPA"];
+		} else
+		map.style.display = "none";
 		if (diada["HORA"])
 			time.innerHTML = "🕒 " + diada["DATA"] + " a les " + diada["HORA"];
 		else
@@ -214,6 +221,8 @@ class Agenda extends Component {
 							{/* eslint-disable-next-line */}
 							<h4 id="event-cat"></h4>
 							<p id="event-lloc"></p>
+							{/* eslint-disable-next-line */}
+							<a id="event-map" target="_blank"></a>
 							<p id="event-hora"></p>
 							<p id="event-desc"></p>
 							{/* eslint-disable-next-line */}
