@@ -89,6 +89,7 @@ class CastellsGame extends Component {
 					<input id="import" type="file" onChange={this.loadGame.bind(this)} accept=".json" style={{display: 'none'}} />
 					<button className="btn" onClick={this.newGame.bind(this)} id="new-game">Nova partida</button>
 					<p id="initial-error" className="game-error"></p>
+					<div className="person-animation" style={{backgroundImage: 'url("/joc-castells/person-animation.png")'}}></div>
 				</div></div>
 				: <>
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
@@ -102,15 +103,21 @@ class CastellsGame extends Component {
 					{
 						this.state.screen === 'HOME' ? <>
 							<div className="menu">
-								<button><span>ASSAIG</span></button>
-								<button><span>ACTUACIÓ</span></button>
+								<button onClick={() => this.changeScreen('ASSAIG')}>
+									<span>ASSAIG</span>
+								</button>
+								<button className="disabled">
+									<span>ACTUACIÓ</span>
+								</button>
 								<button onClick={() => this.changeScreen('CASTELLS')}>
 									<span>CASTELLS</span>
 								</button>
 								<button className="disabled">
 									<span>HISTÒRIC</span>
 								</button>
-								<button><span>MISSIONS</span></button>
+								<button className="disabled">
+									<span>MISSIONS</span>
+								</button>
 								<button><span>AJUDA</span></button>
 							</div>
 						</> : <></>
@@ -152,6 +159,13 @@ class CastellsGame extends Component {
 										</table>;
 									})
 								}
+							</div>
+						</> : <></>
+					}
+					{
+						this.state.screen === 'ASSAIG' ? <>
+							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+							<div className="assaig-wrap">
 							</div>
 						</> : <></>
 					}

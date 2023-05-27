@@ -21,7 +21,7 @@
 		"castell": "3d5",
 		"carregat": 15,
 		"descarregat": 20,
-		"gent": 46
+		"gent": 34
 	},
 	{
 		"grup": 0,
@@ -29,7 +29,7 @@
 		"castell": "4d5",
 		"carregat": 17,
 		"descarregat": 22,
-		"gent": 60
+		"gent": 44
 	},
 	{
 		"grup": 0,
@@ -37,7 +37,7 @@
 		"castell": "2d5",
 		"carregat": 25,
 		"descarregat": 30,
-		"gent": 39
+		"gent": 27
 	},
 	{
 		"grup": 0,
@@ -45,7 +45,7 @@
 		"castell": "3d5a",
 		"carregat": 30,
 		"descarregat": 40,
-		"gent": 49
+		"gent": 37
 	},
 	{
 		"grup": 0,
@@ -53,7 +53,7 @@
 		"castell": "4d5a",
 		"carregat": 32,
 		"descarregat": 42,
-		"gent": 62
+		"gent": 46
 	},
 	{
 		"grup": 0,
@@ -69,7 +69,7 @@
 		"castell": "5d5",
 		"carregat": 45,
 		"descarregat": 50,
-		"gent": 0
+		"gent": 55
 	},
 	{
 		"grup": 0,
@@ -77,7 +77,7 @@
 		"castell": "5d5m",
 		"carregat": 50,
 		"descarregat": 55,
-		"gent": 0
+		"gent": 55
 	},
 	{
 		"grup": 0,
@@ -85,7 +85,7 @@
 		"castell": "3d5s",
 		"carregat": 60,
 		"descarregat": 70,
-		"gent": 0
+		"gent": 40
 	},
 	{
 		"grup": 0,
@@ -93,7 +93,7 @@
 		"castell": "2d5s",
 		"carregat": 65,
 		"descarregat": 75,
-		"gent": 0
+		"gent": 35
 	},
 	{
 		"grup": 0,
@@ -101,7 +101,7 @@
 		"castell": "7d5",
 		"carregat": 70,
 		"descarregat": 80,
-		"gent": 0
+		"gent": 73
 	},
 	{
 		"grup": 0,
@@ -109,7 +109,7 @@
 		"castell": "9d5",
 		"carregat": 80,
 		"descarregat": 90,
-		"gent": 0
+		"gent": 94
 	},
 	{
 		"grup": 1,
@@ -117,7 +117,7 @@
 		"castell": "Pd4s",
 		"carregat": 90,
 		"descarregat": 120,
-		"gent": 0
+		"gent": 30
 	},
 	{
 		"grup": 1,
@@ -125,7 +125,7 @@
 		"castell": "4d6",
 		"carregat": 140,
 		"descarregat": 185,
-		"gent": 0
+		"gent": 48
 	},
 	{
 		"grup": 1,
@@ -133,7 +133,7 @@
 		"castell": "3d6",
 		"carregat": 150,
 		"descarregat": 195,
-		"gent": 0
+		"gent": 37
 	},
 	{
 		"grup": 1,
@@ -141,7 +141,7 @@
 		"castell": "3d6a",
 		"carregat": 200,
 		"descarregat": 250,
-		"gent": 0
+		"gent": 53
 	},
 	{
 		"grup": 1,
@@ -149,7 +149,7 @@
 		"castell": "4d6a",
 		"carregat": 215,
 		"descarregat": 265,
-		"gent": 0
+		"gent": 67
 	},
 	{
 		"grup": 2,
@@ -157,7 +157,7 @@
 		"castell": "5d6",
 		"carregat": 270,
 		"descarregat": 340,
-		"gent": 0
+		"gent": 60
 	},
 	{
 		"grup": 2,
@@ -165,7 +165,7 @@
 		"castell": "5d6m",
 		"carregat": 280,
 		"descarregat": 350,
-		"gent": 0
+		"gent": 60
 	},
 	{
 		"grup": 2,
@@ -173,7 +173,7 @@
 		"castell": "7d6",
 		"carregat": 285,
 		"descarregat": 355,
-		"gent": 0
+		"gent": 80
 	},
 	{
 		"grup": 2,
@@ -181,7 +181,7 @@
 		"castell": "2d6",
 		"carregat": 300,
 		"descarregat": 375,
-		"gent": 0
+		"gent": 41
 	},
 	{
 		"grup": 2,
@@ -189,7 +189,7 @@
 		"castell": "10d6",
 		"carregat": 350,
 		"descarregat": 450,
-		"gent": 0
+		"gent": 118
 	},
 	{
 		"grup": 2,
@@ -197,7 +197,7 @@
 		"castell": "9d6",
 		"carregat": 380,
 		"descarregat": 470,
-		"gent": 0
+		"gent": 103
 	},
 	{
 		"grup": 3,
@@ -205,7 +205,7 @@
 		"castell": "3d6s",
 		"carregat": 480,
 		"descarregat": 610,
-		"gent": 0
+		"gent": 43
 	},
 	{
 		"grup": 3,
@@ -213,7 +213,7 @@
 		"castell": "2d6s",
 		"carregat": 500,
 		"descarregat": 640,
-		"gent": 0
+		"gent": 49
 	},
 	{
 		"grup": 3,
@@ -221,7 +221,7 @@
 		"castell": "4d7",
 		"carregat": 540,
 		"descarregat": 690,
-		"gent": 0
+		"gent": 68
 	},
 	{
 		"grup": 3,
@@ -229,7 +229,7 @@
 		"castell": "Pd5",
 		"carregat": 590,
 		"descarregat": 750,
-		"gent": 0
+		"gent": 33
 	},
 	{
 		"grup": 3,
@@ -237,7 +237,7 @@
 		"castell": "3d7",
 		"carregat": 615,
 		"descarregat": 785,
-		"gent": 0
+		"gent": 64
 	},
 	{
 		"grup": 4,
@@ -245,7 +245,7 @@
 		"castell": "Pd5s",
 		"carregat": 730,
 		"descarregat": 920,
-		"gent": 0
+		"gent": 31
 	},
 	{
 		"grup": 4,
@@ -253,7 +253,7 @@
 		"castell": "4d7a",
 		"carregat": 800,
 		"descarregat": 1075,
-		"gent": 0
+		"gent": 88
 	},
 	{
 		"grup": 4,
@@ -261,7 +261,7 @@
 		"castell": "3d7a",
 		"carregat": 1025,
 		"descarregat": 1200,
-		"gent": 0
+		"gent": 69
 	},
 	{
 		"grup": 4,
@@ -269,7 +269,7 @@
 		"castell": "7d7",
 		"carregat": 1115,
 		"descarregat": 1300,
-		"gent": 0
+		"gent": 109
 	},
 	{
 		"grup": 4,
@@ -277,7 +277,7 @@
 		"castell": "2d7f",
 		"carregat": 1270,
 		"descarregat": 1650,
-		"gent": 0
+		"gent": 123
 	},
 	{
 		"grup": 4,
@@ -285,7 +285,7 @@
 		"castell": "Pd6f",
 		"carregat": 1370,
 		"descarregat": 1750,
-		"gent": 0
+		"gent": 115
 	},
 	{
 		"grup": 4,
@@ -293,7 +293,7 @@
 		"castell": "10d7",
 		"carregat": 1410,
 		"descarregat": 1875,
-		"gent": 0
+		"gent": 156
 	},
 	{
 		"grup": 4,
@@ -301,7 +301,7 @@
 		"castell": "5d7",
 		"carregat": 1565,
 		"descarregat": 2010,
-		"gent": 0
+		"gent": 111
 	},
 	{
 		"grup": 5,
@@ -309,7 +309,7 @@
 		"castell": "3d8f",
 		"carregat": 1785,
 		"descarregat": 2300,
-		"gent": 0
+		"gent": 160
 	},
 	{
 		"grup": 6,
@@ -317,7 +317,7 @@
 		"castell": "9d7",
 		"carregat": 2050,
 		"descarregat": 2600,
-		"gent": 0
+		"gent": 160
 	},
 	{
 		"grup": 6,
@@ -325,7 +325,7 @@
 		"castell": "3d7s",
 		"carregat": 2250,
 		"descarregat": 2825,
-		"gent": 0
+		"gent": 88
 	},
 	{
 		"grup": 6,
@@ -333,7 +333,7 @@
 		"castell": "4d8",
 		"carregat": 2380,
 		"descarregat": 3000,
-		"gent": 0
+		"gent": 136
 	},
 	{
 		"grup": 6,
@@ -357,7 +357,7 @@
 		"castell": "2d7sf",
 		"carregat": 2850,
 		"descarregat": 3715,
-		"gent": 0
+		"gent": 89
 	},
 	{
 		"grup": 7,

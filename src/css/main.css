@@ -3086,7 +3086,7 @@ Joc Castells
 }
 
 tr.locked {
-	opacity: 0.5;
+	opacity: 0.3;
 }
 
 .score-table th,
@@ -3113,6 +3113,7 @@ span.help {
 	font-size: 0.85rem;
 	text-align: center;
 	background-color: var(--game-lightBlue);
+	user-select: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -3123,6 +3124,28 @@ span.help {
 	.cant-play {
 		display: flex;
 	}
+}
+
+/*
+=============== 
+Animations
+===============
+*/
+
+div.person-animation {
+	height: 102px;
+	width: 85px;
+	animation: playX 0.15s steps(6) infinite, playY 0.75s steps(5) infinite;
+}
+
+@keyframes playX {
+	from {background-position-x: 0px;}
+	to {background-position-x: -512px;}
+}
+
+@keyframes playY {
+	from {background-position-y: 0px;}
+	to {background-position-y: -512px;}
 }
 
 /*

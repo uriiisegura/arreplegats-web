@@ -4,7 +4,7 @@ import HexToFilter from "../functions/HexToFilter";
 class Colla {
 	constructor(name,
 				color,
-				castellers=50,
+				castellers=30,
 				date=Date.parse('2022-09-01')
 		) {
 		this.name = name;
@@ -15,7 +15,7 @@ class Colla {
 		do {
 			filter = HexToFilter(rgb);
 			this.filter = filter.filter;
-		} while(filter.loss > 0.15);
+		} while(filter.loss > 0.1);
 		this.castellers = castellers;
 		this.date = date;
 	}

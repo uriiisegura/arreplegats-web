@@ -38,6 +38,7 @@ import Contractacions from "./pages/Contractacions";
 import Uneixthi from "./pages/Uneixthi";
 import Contactar from "./pages/Contactar";
 import BarraLliure from "./pages/BarraLliure";
+import PartsCastell from "./pages/PartsCastell";
 import Palette from "./pages/Palette";
 import NotFound from "./pages/NotFound";
 import './css/normalize.css';
@@ -103,8 +104,9 @@ function App() {
 					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />
-					<Route path="/palette" element={<Palette />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
+					<Route path="/parts-castell" element={<PartsCastell />} />
+					<Route path="/palette" element={<Palette />} />
 
 					<Route path="*" element={<NotFound />} />
 				</Routes>
