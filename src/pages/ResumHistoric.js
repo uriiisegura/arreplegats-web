@@ -1,12 +1,107 @@
 import React, { Component } from "react";
+import * as Papa from 'papaparse';
 import ResumCard from "../components/ResumCard";
 import GetCastell from "../functions/GetCastell";
 import castells_map from "../data/castells-top.json";
 import categories from "../data/categories-castells.json";
 
+const CASTELLS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzvM_JNeX_MUNi4ZarVZDcj5CdyrDBTPbf3lDUrvUs_HvaX3S0k07yLmJKolAPf0BA6iM1FW4w1u83/pub?gid=0&single=true&output=csv";
+const SCORE_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQeAif6pgFuLUAXHif4IsrSXzG8itYhirTHGdmNzA5RmrEPcJe7lcfwfNVLBEcgnn3mZbThqaZdouiP/pub?gid=1401475200&single=true&output=csv";
+
 class ResumHistoric extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			diades: {},
+			puntuacions: {},
+			load: false
+		};
+	}
+	aggregate(rows) {
+		const pad = (n, width, z) => {
+			z = z || '0';
+			n = n + '';
+			return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+		};
+		const parseDate = (row) => pad(row["dia"],2)+"/"+pad(row["mes"],2)+"/"+row["any"];
+		const get_diada_hash = (row) => parseDate(row) + " - " + row["motiu"];
+		const diades = [...new Set(rows.map(row => get_diada_hash(row)))];
+
+		let diades_dict = {};
+		diades.forEach(diada_hash => {
+			diades_dict[diada_hash] = {};
+			const by_diada = rows.filter(row => get_diada_hash(row) === diada_hash);
+			if (by_diada.length === 0) return;
+			diades_dict[diada_hash]["info"] = (({ dia, mes, any, situació, ciutat, motiu }) => ({ dia, mes, any, situació, ciutat, motiu }))(by_diada[0]);
+			
+			diades_dict[diada_hash]["castells"] = by_diada.map(castell => (({ tipus, alçada, agulla, pinya, altres, ordre, resolució }) => ({ tipus, alçada, agulla, pinya, altres, ordre, resolució }))(castell));
+			diades_dict[diada_hash]["castells"].forEach((castell, i) => {
+				let resultat = castell["resolució"];
+				const ordre = castell["ordre"];
+				let resultatDavant = "";
+				if (resultat.includes("pd") || resultat.includes("i")) {
+					resultatDavant = resultat;
+					resultat = "";
+				}
+				const agulla = castell["agulla"] === "1" ? "a" : "";
+				const perSota = castell["altres"] === "ps" ? "s" : "";
+				const caminant = castell["altres"] === "cam" ? "cam" : "";
+				const build = castell["tipus"].toUpperCase() + "d" + castell["alçada"] + perSota + agulla + castell["pinya"] + caminant;
+				diades_dict[diada_hash]["castells"][i] = {};
+				diades_dict[diada_hash]["castells"][i][ordre] = resultatDavant + build + resultat.toUpperCase();
+			});
+			diades_dict[diada_hash]["info"]["data"] = parseDate(diades_dict[diada_hash]["info"]);
+			delete diades_dict[diada_hash]["info"]["dia"];
+			delete diades_dict[diada_hash]["info"]["mes"];
+			delete diades_dict[diada_hash]["info"]["any"];
+		});
+
+		return diades_dict;
+	}
+	process_puntuacions(data) {
+		let puntuacions_dict = {};
+		data.forEach(castell => {
+			puntuacions_dict[castell.castell] = [parseInt(castell["Descarregat"]), parseInt(castell["Carregat"])];
+		});
+		puntuacions_dict["Pd3cam"] = [14, 14];
+		puntuacions_dict["Pd4cam"] = [119, 119];
+		puntuacions_dict["Vd5"] = [571, 571];
+		puntuacions_dict["Vd6f"] = [1911, 1911];
+		puntuacions_dict["3d7+4d7"] = [2301, 2301];
+
+		return puntuacions_dict;
+	}
+	componentDidMount() {
+		Papa.parse(CASTELLS_URL, {
+			download: true,
+			header: true,
+			complete: (results) => {
+				this.setState({
+					diades: this.aggregate(results.data),
+					load: true
+				});
+			}
+		});
+		Papa.parse(SCORE_URL, {
+			download: true,
+			header: true,
+			complete: (results) => {
+				this.setState({
+					puntuacions: this.process_puntuacions(results.data),
+					load: true
+				});
+			}
+		});
+	}
 	render() {
-		const { diades, puntuacions } = this.props;
+		if (!this.state.load) {
+			return (<>
+				<section className="resum-historic">
+					<h2>Resum Històric</h2>
+					<div className="loading"></div>
+				</section>
+			</>);
+		}
 
 		const isSpecialSim = dict => {
 			const keys = Object.keys(dict);
@@ -65,7 +160,7 @@ class ResumHistoric extends Component {
 		let last_order = 0;
 		let same_round = {};
 		let have_same_round = false;
-		[...Object.values(diades)].forEach((diada, i) => {
+		[...Object.values(this.state.diades)].forEach((diada, i) => {
 			diada["castells"].forEach((dict) => {
 				const castell = Object.values(dict)[0];
 				if (castell[0] === "i" || (castell[0] === "p" && castell[1] === "d")) return;
@@ -86,7 +181,7 @@ class ResumHistoric extends Component {
 					if (isSpecial) {
 						const [thisCas, thisDes] = GetCastell(specialName, false);
 	
-						if (!(thisCas.replace('T','2') in puntuacions)) {
+						if (!(thisCas.replace('T','2') in this.state.puntuacions)) {
 							if (!(thisCas in not_scored_castells))
 								not_scored_castells[thisCas] = [0, 0];
 							
@@ -103,7 +198,7 @@ class ResumHistoric extends Component {
 						Object.keys(same_round).forEach((thisCastell, i) => {
 							const [thisCas, thisDes] = GetCastell(thisCastell, false);
 	
-							if (!(thisCas.replace('T','2') in puntuacions)) {
+							if (!(thisCas.replace('T','2') in this.state.puntuacions)) {
 								if (!(thisCas in not_scored_castells))
 									not_scored_castells[thisCas] = [0, 0];
 								
@@ -126,7 +221,7 @@ class ResumHistoric extends Component {
 					same_round[castell] = 1;
 				}
 	
-				if (!(cas.replace('T','2') in puntuacions)) {
+				if (!(cas.replace('T','2') in this.state.puntuacions)) {
 					if (!(cas in not_scored_castells))
 						not_scored_castells[cas] = [0, 0];
 					
@@ -146,7 +241,7 @@ class ResumHistoric extends Component {
 			if (isSpecial) {
 				const [thisCas, thisDes] = GetCastell(specialName, false);
 
-				if (!(thisCas.replace('T','2') in puntuacions)) {
+				if (!(thisCas.replace('T','2') in this.state.puntuacions)) {
 					if (!(thisCas in not_scored_castells))
 						not_scored_castells[thisCas] = [0, 0];
 					
@@ -163,7 +258,7 @@ class ResumHistoric extends Component {
 				Object.keys(same_round).forEach((thisCastell, i) => {
 					const [thisCas, thisDes] = GetCastell(thisCastell, false);
 
-					if (!(thisCas.replace('T','2') in puntuacions)) {
+					if (!(thisCas.replace('T','2') in this.state.puntuacions)) {
 						if (!(thisCas in not_scored_castells))
 							not_scored_castells[thisCas] = [0, 0];
 						
@@ -183,9 +278,9 @@ class ResumHistoric extends Component {
 		let castells = Object.keys(castells_dict).map((key) => {
 			return [key, castells_dict[key]];
 		});
-		castells.sort(function(a, b) {
-			let scoreA = puntuacions[a[0].replace('T','2')][0];
-			let scoreB = puntuacions[b[0].replace('T','2')][0];
+		castells.sort((a, b) => {
+			let scoreA = this.state.puntuacions[a[0].replace('T','2')][0];
+			let scoreB = this.state.puntuacions[b[0].replace('T','2')][0];
 	
 			if (scoreA === undefined) {
 				const structure = parseInt(a[0].split('d')[0].replace('T','2').replace('P','1'));
@@ -223,7 +318,7 @@ class ResumHistoric extends Component {
 				<h2>Resum Històric</h2>
 
 				{
-					categories.map(e => {
+					categories.map((e, i) => {
 						const castells_category = castells.filter(c => {
 							return e.castells.includes(c[0]);
 						});
@@ -232,9 +327,9 @@ class ResumHistoric extends Component {
 							<h4>{e.name}</h4>
 							<div className="resum-wrap">
 								{
-									castells_category.map((e, i) => {
+									castells_category.map((e, j) => {
 										return <ResumCard
-											key={i}
+											key={j}
 											castell={e[0]}
 											descarregats={e[1][0]}
 											carregats={e[1][1]}

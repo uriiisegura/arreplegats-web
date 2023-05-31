@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import DataProcessor from "./components/DataProcessor";
 import ScrollToTop from './components/ScrollToTop';
 import NavBar from './components/Navbar';
 import Footer from './components/Footer';
@@ -46,24 +44,7 @@ import './css/main.css';
 import './css/resizer.css';
 
 function App() {
-	const [diades, setCastells] = useState({});
-	const [puntuacions, setPuntuacions] = useState({});
-
-	const exports = {
-		'diades': diades,
-		'setCastells': setCastells,
-		'puntuacions': puntuacions,
-		'setPuntuacions': setPuntuacions
-	};
-
-	useEffect(() => {
-	}, [diades]);
-	useEffect(() => {
-	}, [puntuacions]);
-	
 	return (<>
-		<DataProcessor {...exports} />
-
 		<Router>
 			<ScrollToTop />
 			<Routes>
@@ -83,9 +64,9 @@ function App() {
 					<Route path="/els-castells-universitaris" element={<CastellsUniversitaris />} />
 					<Route path="/millors-castells" element={<MillorsCastells />} />
 					<Route path="/castells/:castell" element={<Castell />} />
-					<Route path="/millors-diades" element={<MillorsDiades {...exports} />} />
-					<Route path="/resum-historic" element={<ResumHistoric {...exports} />} />
-					<Route path="/llista-de-diades" element={<LlistaDeDiades {...exports} />} />
+					<Route path="/millors-diades" element={<MillorsDiades />} />
+					<Route path="/resum-historic" element={<ResumHistoric />} />
+					<Route path="/llista-de-diades" element={<LlistaDeDiades />} />
 					<Route path="/junta-directiva" element={<JuntaDirectiva />} />
 					<Route path="/comissio-tecnica" element={<ComissioTecnica />} />
 					<Route path="/agenda" element={<Agenda />} />

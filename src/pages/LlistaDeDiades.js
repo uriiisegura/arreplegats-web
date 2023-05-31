@@ -1,13 +1,116 @@
 import React, { Component } from "react";
+import * as Papa from 'papaparse';
 import GetCastellsDiada from "../functions/GetCastellsDiada";
 import PopPd from "../functions/PopPd";
 import GetClean from "../functions/GetClean";
 import GetTemporada from "../functions/GetTemporada";
 import FromEuropean from "../functions/FromEuropean";
 
+const CASTELLS_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRzvM_JNeX_MUNi4ZarVZDcj5CdyrDBTPbf3lDUrvUs_HvaX3S0k07yLmJKolAPf0BA6iM1FW4w1u83/pub?gid=0&single=true&output=csv";
+
 class LlistaDeDiades extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			diades: {},
+			load: false
+		};
+	}
+	aggregate(rows) {
+		const pad = (n, width, z) => {
+			z = z || '0';
+			n = n + '';
+			return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+		};
+		const parseDate = (row) => pad(row["dia"],2)+"/"+pad(row["mes"],2)+"/"+row["any"];
+		const get_diada_hash = (row) => parseDate(row) + " - " + row["motiu"];
+		const diades = [...new Set(rows.map(row => get_diada_hash(row)))];
+
+		let diades_dict = {};
+		diades.forEach(diada_hash => {
+			diades_dict[diada_hash] = {};
+			const by_diada = rows.filter(row => get_diada_hash(row) === diada_hash);
+			if (by_diada.length === 0) return;
+			diades_dict[diada_hash]["info"] = (({ dia, mes, any, situació, ciutat, motiu }) => ({ dia, mes, any, situació, ciutat, motiu }))(by_diada[0]);
+			
+			diades_dict[diada_hash]["castells"] = by_diada.map(castell => (({ tipus, alçada, agulla, pinya, altres, ordre, resolució }) => ({ tipus, alçada, agulla, pinya, altres, ordre, resolució }))(castell));
+			diades_dict[diada_hash]["castells"].forEach((castell, i) => {
+				let resultat = castell["resolució"];
+				const ordre = castell["ordre"];
+				let resultatDavant = "";
+				if (resultat.includes("pd") || resultat.includes("i")) {
+					resultatDavant = resultat;
+					resultat = "";
+				}
+				const agulla = castell["agulla"] === "1" ? "a" : "";
+				const perSota = castell["altres"] === "ps" ? "s" : "";
+				const caminant = castell["altres"] === "cam" ? "cam" : "";
+				const build = castell["tipus"].toUpperCase() + "d" + castell["alçada"] + perSota + agulla + castell["pinya"] + caminant;
+				diades_dict[diada_hash]["castells"][i] = {};
+				diades_dict[diada_hash]["castells"][i][ordre] = resultatDavant + build + resultat.toUpperCase();
+			});
+			diades_dict[diada_hash]["info"]["data"] = parseDate(diades_dict[diada_hash]["info"]);
+			delete diades_dict[diada_hash]["info"]["dia"];
+			delete diades_dict[diada_hash]["info"]["mes"];
+			delete diades_dict[diada_hash]["info"]["any"];
+		});
+
+		return diades_dict;
+	}
+	componentDidMount() {
+		Papa.parse(CASTELLS_URL, {
+			download: true,
+			header: true,
+			complete: (results) => {
+				this.setState({
+					diades: this.aggregate(results.data),
+					load: true
+				});
+			}
+		});
+	}
 	render() {
-		const { diades } = this.props;
+		const [year1, year2] = GetTemporada(new Date()).split('-');
+
+		if (!this.state.load) {
+			return (<section>
+				<h2>Llista de diades</h2>
+
+				<p>Durant la temporada 2020-2021 no hi va haver castells universitaris a causa de l'aturada de l'activitat provocada per la COVID-19.</p>
+
+				<div className="llista-diades">
+					<div className="filters">
+						<div className="container">
+							<label htmlFor="date_from">Des de:</label>
+							<input type="date" id="date_from" defaultValue={year1+"-09-01"}/>
+						</div>
+						<div className="container">
+							<label htmlFor="date_to">Fins a:</label>
+							<input type="date" id="date_to" defaultValue={year2+"-08-31"}/>
+						</div>
+						<div className="container">
+							<label htmlFor="poblacio">Població:</label>
+							<div className="select-arrow">
+								<select type="text" id="poblacio">
+									<option value="none">--- TOTES ---</option>
+								</select>
+								<div className="dblarrow"><b></b><i></i></div>
+							</div>
+						</div>
+						<div className="container">
+							<label htmlFor="castell">Castell:</label>
+							<div className="select-arrow">
+								<select type="text" id="castell">
+									<option value="none">--- TOTS ---</option>
+								</select>
+								<div className="dblarrow"><b></b><i></i></div>
+							</div>
+						</div>
+					</div>
+					<div className="loading" style={{marginTop: '2rem'}}></div>
+				</div>
+			</section>);
+		}
 
 		const getPoblacions = (diades) => {
 			const poblacions = [];
@@ -88,7 +191,7 @@ class LlistaDeDiades extends Component {
 				}
 				if (castell !== 'none') {
 					const diada_hash = table.rows[i].cells[0].innerHTML + ' - ' + table.rows[i].cells[1].innerHTML;
-					if (!getCastellsClean(diades[diada_hash]['castells']).includes(castell)) {
+					if (!getCastellsClean(this.state.diades[diada_hash]['castells']).includes(castell)) {
 						table.rows[i].classList.add('hidden');
 						continue;
 					}
@@ -110,8 +213,7 @@ class LlistaDeDiades extends Component {
 			}
 		};
 	
-		const [year1, year2] = GetTemporada(new Date()).split('-');
-		const actuacions = [...Object.values(diades)];
+		const actuacions = [...Object.values(this.state.diades)];
 		return (<>
 			<section>
 				<h2>Llista de diades</h2>
