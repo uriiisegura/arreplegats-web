@@ -64,6 +64,7 @@ html {
 	--orange-light: #ffeac1;
 	--orange-dark: #ffc000;
 	--blue-light: #d3e6ff;
+	--blue-medium: #6699ff;
 	--blue-dark: #4b69ff;
 	--purple: #d467ff;
 
@@ -2478,6 +2479,7 @@ Agenda
 	border-radius: var(--borderRadius);
 	box-shadow: var(--shadow-1);
 	width: fit-content;
+	user-select: none;
 }
 
 #calendar .event-info #event-map {

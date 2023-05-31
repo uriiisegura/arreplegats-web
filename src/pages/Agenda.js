@@ -6,6 +6,7 @@ const backgrounds = {
 	'COMIFEMI': '--purple',
 	'ACTUACIÓ': '--red-medium',
 	'DINAR / SOPAR': '--orange-dark',
+	'ASSEMBLEA': '--blue-medium',
 	'': '--grey-200'
 };
 const months = ["gener","febrer","març","abril","maig","juny","juliol","agost","setembre","octubre","novembre","desembre"];
