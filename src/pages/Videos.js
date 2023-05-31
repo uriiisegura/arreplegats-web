@@ -12,6 +12,10 @@ class Videos extends Component {
 			iframe.title = e.title;
 			wrap.appendChild(iframe);
 		})
+		this.hideLoading();
+	}
+	hideLoading() {
+		document.getElementById('videos-load').style.display = 'none';
 	}
 	render() {
 		const CHANNEL_ID = 'UC-RVCefwipBS8WutREwbTmw';
@@ -41,6 +45,7 @@ class Videos extends Component {
 					A continuació hi trobaràs els 10 últims vídeos perquè comencis a nodrir-te d'essència Arreplegada:
 				</p>
 
+				<div id="videos-load" className="loading" style={{marginTop: '2rem'}}></div>
 				<div id="videos-wrap"></div>
 			</section>
 		</>);
