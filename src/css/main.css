@@ -1747,11 +1747,17 @@ Notícies
 	height: calc(100vh - (var(--navbar-height) + var(--footer-height) + 4rem));
 }
 
+.twitter-loading {
+	width: 100%;
+	max-width: 800px;
+}
+
 .twitter-iframe {
 	width: 100%;
 	max-width: 800px;
 	height: 100%;
 	border: none;
+	display: none;
 }
 
 /*
