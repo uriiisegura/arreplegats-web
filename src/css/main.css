@@ -2424,9 +2424,6 @@ Agenda
 #calendar .today {
 	background-color: var(--primary-100);
 }
-#calendar .today .day {
-	color: var(--black);
-}
 
 #calendar .event {
 	top: 20px;
