@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import RemoveAccents from "../functions/RemoveAccents";
 import WinGamePopup from "./WinGamePopup";
 
 class Crossword extends Component {
@@ -12,7 +13,7 @@ class Crossword extends Component {
 				if (input === undefined) continue;
 
 				const letter = input.getAttribute('data-letter');
-				const value = input.value.toUpperCase();
+				const value = RemoveAccents(input.value.toUpperCase());
 				if (letter !== value) {
 					correct = false;
 					break;
