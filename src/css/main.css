@@ -516,7 +516,7 @@ Navbar
 	}
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
 	.nav-btn {
 		display: flex;
 		justify-content: flex-end;
