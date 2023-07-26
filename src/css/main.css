@@ -3008,10 +3008,16 @@ Joc Castells
 
 .top-bar span {
 	font-size: 1.25rem;
+	white-space: nowrap;
+	overflow: scroll;
+}
+.top-bar span::-webkit-scrollbar {
+	display: none;
 }
 
 .top-bar button {
 	box-shadow: none;
+	margin-left: 1rem;
 }
 .top-bar button:hover {
 	box-shadow: var(--shadow-7);
@@ -3038,8 +3044,8 @@ Joc Castells
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0.5rem;
-	width: calc(3 * 20rem);
-	margin: 10rem auto 0;
+	width: min(60rem, 95%);
+	margin: min(10rem, 30%) auto 0;
 }
 
 .menu button {
@@ -3152,7 +3158,7 @@ span.help {
 	left: 0;
 	background-color: var(--game-clearBlue);
 	border: 3px solid var(--game-lightBlue);
-	width: 500px;
+	width: min(500px, 95%);
 	height: 300px;
 	padding: 8px;
 	display: flex;
@@ -3245,7 +3251,7 @@ span.help {
 	margin-top: 2rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 0px) {
 	.castells-game {
 		display: none;
 	}
