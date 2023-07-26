@@ -33,6 +33,11 @@ class CastellsGame extends Component {
 		aleta.pause();
 		sortida.pause();
 		caiguda.pause();
+
+		if (this.state.colla) {
+			if (window.confirm('Vols guardar la partida abans de marxar?\n\nAquest missatge apareix sempre que surts del joc, hagis o no guardat la partida prèviament. Si ja l\'has guardat, ignora\'l.'))
+				this.saveGame();
+		}
 	}
 	loadGame(e) {
 		const files = e.target.files;
@@ -106,11 +111,10 @@ class CastellsGame extends Component {
 		});
 	}
 	selectCastell(castell) {
-		this.setState({selectedCastell: castell}, this.solveCastell);
+		this.setState({selectedCastell: castells.filter(c => c.castell === castell)[0]}, this.solveCastell);
 	}
 	solveCastell() {
-		const result = this.state.results[(Math.random() * this.state.results.length) | 0];
-		this.playCastell(result);
+		this.playCastell(this.state.colla.getCastellResult(this.state.selectedCastell));
 	}
 	waitAudioToFinish(audio) {
 		return new Promise(res => {
@@ -160,6 +164,9 @@ class CastellsGame extends Component {
 
 		document.getElementById('game-screen').style.pointerEvents = 'all';
 
+		this.state.colla.addCastellers(30);
+		this.state.colla.takeCastellers(30);
+
 		this.setState({
 			selectedResult: resultat
 		});
@@ -207,7 +214,9 @@ class CastellsGame extends Component {
 								<button className="disabled">
 									<span>MISSIONS</span>
 								</button>
-								<button><span>AJUDA</span></button>
+								<button className="disabled">
+									<span>AJUDA</span>
+								</button>
 							</div>
 						</> : <></>
 					}
@@ -258,14 +267,13 @@ class CastellsGame extends Component {
 								{
 									this.state.selectedCastell ? <>
 										<div className="game-canvas-center">
-											<h1>{this.state.selectedCastell}</h1>
+											<h1>{this.state.selectedCastell.castell}</h1>
 											{
 												this.state.selectedResult ? <>
-													<p>{this.state.selectedResult}</p>
+													<h5 className={this.state.selectedResult.toLowerCase()}>{this.state.selectedResult}</h5>
 													<button className="back-btn" onClick={this.restartAssaig.bind(this)}>CONTINUA</button>
 												</> : <>
-													<p>Ara es faria el castell LOL</p>
-													<div className="person-animation" style={{backgroundImage: 'url("/joc-castells/person-animation.png")'}}></div>
+													<div className="loading game-loading"></div>
 												</>
 											}
 										</div>
@@ -296,5 +304,9 @@ class CastellsGame extends Component {
 		</div></>);
 	}
 }
+
+/*
+<div className="person-animation" style={{backgroundImage: 'url("/joc-castells/person-animation.png")'}}></div>
+*/
 
 export default CastellsGame;

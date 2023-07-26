@@ -5,7 +5,9 @@
 		"castell": "Pd3",
 		"carregat": 5,
 		"descarregat": 10,
-		"gent": 15
+		"gent": 15,
+		"probabilitatsInicials": [0.65, 0.25, 0.1, 0],
+		"probabilitatsLimit": [0.99, 0.6]
 	},
 	{
 		"grup": 0,
@@ -13,7 +15,9 @@
 		"castell": "Pd3s",
 		"carregat": 10,
 		"descarregat": 15,
-		"gent": 22
+		"gent": 22,
+		"probabilitatsInicials": [0.5, 0.3, 0.2, 0],
+		"probabilitatsLimit": [0.99, 0.4]
 	},
 	{
 		"grup": 0,
@@ -21,7 +25,9 @@
 		"castell": "3d5",
 		"carregat": 15,
 		"descarregat": 20,
-		"gent": 34
+		"gent": 28,
+		"probabilitatsInicials": [0.5, 0.25, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.4]
 	},
 	{
 		"grup": 0,
@@ -29,7 +35,9 @@
 		"castell": "4d5",
 		"carregat": 17,
 		"descarregat": 22,
-		"gent": 44
+		"gent": 36,
+		"probabilitatsInicials": [0.5, 0.25, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.4]
 	},
 	{
 		"grup": 0,
@@ -37,7 +45,9 @@
 		"castell": "Td5",
 		"carregat": 25,
 		"descarregat": 30,
-		"gent": 27
+		"gent": 27,
+		"probabilitatsInicials": [0.45, 0.2, 0.2, 0.15],
+		"probabilitatsLimit": [0.99, 0.4]
 	},
 	{
 		"grup": 0,
@@ -45,7 +55,9 @@
 		"castell": "3d5a",
 		"carregat": 30,
 		"descarregat": 40,
-		"gent": 37
+		"gent": 31,
+		"probabilitatsInicials": [0.45, 0.2, 0.2, 0.15],
+		"probabilitatsLimit": [0.99, 0.4]
 	},
 	{
 		"grup": 0,
@@ -53,7 +65,9 @@
 		"castell": "4d5a",
 		"carregat": 32,
 		"descarregat": 42,
-		"gent": 46
+		"gent": 38,
+		"probabilitatsInicials": [0.45, 0.2, 0.2, 0.15],
+		"probabilitatsLimit": [0.99, 0.4]
 	},
 	{
 		"grup": 0,
@@ -61,7 +75,9 @@
 		"castell": "Pd4",
 		"carregat": 35,
 		"descarregat": 45,
-		"gent": 24
+		"gent": 24,
+		"probabilitatsInicials": [0.4, 0.35, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 0,
@@ -69,7 +85,9 @@
 		"castell": "5d5",
 		"carregat": 45,
 		"descarregat": 50,
-		"gent": 55
+		"gent": 55,
+		"probabilitatsInicials": [0.4, 0.35, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 0,
@@ -77,7 +95,9 @@
 		"castell": "5d5m",
 		"carregat": 50,
 		"descarregat": 55,
-		"gent": 55
+		"gent": 55,
+		"probabilitatsInicials": [0.4, 0.35, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 0,
@@ -85,7 +105,9 @@
 		"castell": "3d5s",
 		"carregat": 60,
 		"descarregat": 70,
-		"gent": 40
+		"gent": 40,
+		"probabilitatsInicials": [0.4, 0.35, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 0,
@@ -93,7 +115,9 @@
 		"castell": "Td5s",
 		"carregat": 65,
 		"descarregat": 75,
-		"gent": 35
+		"gent": 42,
+		"probabilitatsInicials": [0.4, 0.35, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 0,
@@ -101,7 +125,9 @@
 		"castell": "7d5",
 		"carregat": 70,
 		"descarregat": 80,
-		"gent": 73
+		"gent": 73,
+		"probabilitatsInicials": [0.4, 0.35, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 0,
@@ -109,7 +135,9 @@
 		"castell": "9d5",
 		"carregat": 80,
 		"descarregat": 90,
-		"gent": 94
+		"gent": 94,
+		"probabilitatsInicials": [0.4, 0.35, 0.15, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 1,
@@ -117,7 +145,9 @@
 		"castell": "Pd4s",
 		"carregat": 90,
 		"descarregat": 120,
-		"gent": 30
+		"gent": 30,
+		"probabilitatsInicials": [0.3, 0.4, 0.3, 0],
+		"probabilitatsLimit": [0.99, 0.25]
 	},
 	{
 		"grup": 1,
@@ -125,7 +155,9 @@
 		"castell": "4d6",
 		"carregat": 140,
 		"descarregat": 185,
-		"gent": 48
+		"gent": 48,
+		"probabilitatsInicials": [0.35, 0.15, 0.4, 0.1],
+		"probabilitatsLimit": [0.99, 0.3]
 	},
 	{
 		"grup": 1,
@@ -133,7 +165,9 @@
 		"castell": "3d6",
 		"carregat": 150,
 		"descarregat": 195,
-		"gent": 37
+		"gent": 37,
+		"probabilitatsInicials": [0.35, 0.15, 0.4, 0.1],
+		"probabilitatsLimit": [0.99, 0.3]
 	},
 	{
 		"grup": 1,
@@ -141,7 +175,9 @@
 		"castell": "3d6a",
 		"carregat": 200,
 		"descarregat": 250,
-		"gent": 53
+		"gent": 53,
+		"probabilitatsInicials": [0.2, 0.4, 0.25, 0.15],
+		"probabilitatsLimit": [0.99, 0.15]
 	},
 	{
 		"grup": 1,
@@ -149,7 +185,9 @@
 		"castell": "4d6a",
 		"carregat": 215,
 		"descarregat": 265,
-		"gent": 67
+		"gent": 67,
+		"probabilitatsInicials": [0.2, 0.4, 0.25, 0.15],
+		"probabilitatsLimit": [0.99, 0.15]
 	},
 	{
 		"grup": 2,
@@ -157,7 +195,9 @@
 		"castell": "5d6",
 		"carregat": 270,
 		"descarregat": 340,
-		"gent": 60
+		"gent": 60,
+		"probabilitatsInicials": [0.4, 0.2, 0.25, 0.15],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 2,
@@ -165,7 +205,9 @@
 		"castell": "5d6m",
 		"carregat": 280,
 		"descarregat": 350,
-		"gent": 60
+		"gent": 60,
+		"probabilitatsInicials": [0.4, 0.2, 0.25, 0.15],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 2,
@@ -173,7 +215,9 @@
 		"castell": "7d6",
 		"carregat": 285,
 		"descarregat": 355,
-		"gent": 80
+		"gent": 80,
+		"probabilitatsInicials": [0.4, 0.2, 0.25, 0.15],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 2,
@@ -181,7 +225,9 @@
 		"castell": "Td6",
 		"carregat": 300,
 		"descarregat": 375,
-		"gent": 41
+		"gent": 41,
+		"probabilitatsInicials": [0.2, 0.4, 0.25, 0.15],
+		"probabilitatsLimit": [0.95, 0.15]
 	},
 	{
 		"grup": 2,
@@ -189,7 +235,9 @@
 		"castell": "10d6",
 		"carregat": 350,
 		"descarregat": 450,
-		"gent": 118
+		"gent": 118,
+		"probabilitatsInicials": [0.55, 0.25, 0.1, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 2,
@@ -197,7 +245,9 @@
 		"castell": "9d6",
 		"carregat": 380,
 		"descarregat": 470,
-		"gent": 103
+		"gent": 103,
+		"probabilitatsInicials": [0.55, 0.25, 0.1, 0.1],
+		"probabilitatsLimit": [0.99, 0.35]
 	},
 	{
 		"grup": 3,
@@ -205,7 +255,9 @@
 		"castell": "3d6s",
 		"carregat": 480,
 		"descarregat": 610,
-		"gent": 43
+		"gent": 43,
+		"probabilitatsInicials": [0.2, 0.4, 0.25, 0.15],
+		"probabilitatsLimit": [0.94, 0.15]
 	},
 	{
 		"grup": 3,
@@ -213,7 +265,9 @@
 		"castell": "Td6s",
 		"carregat": 500,
 		"descarregat": 640,
-		"gent": 49
+		"gent": 49,
+		"probabilitatsInicials": [0.2, 0.3, 0.4, 0.1],
+		"probabilitatsLimit": [0.95, 0.15]
 	},
 	{
 		"grup": 3,
@@ -221,7 +275,9 @@
 		"castell": "4d7",
 		"carregat": 540,
 		"descarregat": 690,
-		"gent": 68
+		"gent": 68,
+		"probabilitatsInicials": [0.25, 0.2, 0.35, 0.2],
+		"probabilitatsLimit": [0.96, 0.15]
 	},
 	{
 		"grup": 3,
@@ -229,7 +285,9 @@
 		"castell": "Pd5",
 		"carregat": 590,
 		"descarregat": 750,
-		"gent": 33
+		"gent": 33,
+		"probabilitatsInicials": [0.1, 0.3, 0.45, 0.15],
+		"probabilitatsLimit": [0.99, 0.05]
 	},
 	{
 		"grup": 3,
@@ -237,7 +295,9 @@
 		"castell": "3d7",
 		"carregat": 615,
 		"descarregat": 785,
-		"gent": 64
+		"gent": 64,
+		"probabilitatsInicials": [0.25, 0.2, 0.35, 0.2],
+		"probabilitatsLimit": [0.92, 0.15]
 	},
 	{
 		"grup": 4,
@@ -245,7 +305,9 @@
 		"castell": "Pd5s",
 		"carregat": 730,
 		"descarregat": 920,
-		"gent": 31
+		"gent": 31,
+		"probabilitatsInicials": [0.05, 0.25, 0.55, 0.15],
+		"probabilitatsLimit": [0.85, 0.05]
 	},
 	{
 		"grup": 4,
@@ -253,7 +315,9 @@
 		"castell": "4d7a",
 		"carregat": 800,
 		"descarregat": 1075,
-		"gent": 88
+		"gent": 88,
+		"probabilitatsInicials": [0.15, 0.4, 0.35, 0.1],
+		"probabilitatsLimit": [0.93, 0.1]
 	},
 	{
 		"grup": 4,
@@ -261,7 +325,9 @@
 		"castell": "3d7a",
 		"carregat": 1025,
 		"descarregat": 1200,
-		"gent": 69
+		"gent": 69,
+		"probabilitatsInicials": [0.1, 0.4, 0.35, 0.15],
+		"probabilitatsLimit": [0.9, 0.05]
 	},
 	{
 		"grup": 4,
@@ -269,7 +335,9 @@
 		"castell": "7d7",
 		"carregat": 1115,
 		"descarregat": 1300,
-		"gent": 109
+		"gent": 109,
+		"probabilitatsInicials": [0.35, 0.3, 0.2, 0.15],
+		"probabilitatsLimit": [0.99, 0.3]
 	},
 	{
 		"grup": 4,
@@ -277,7 +345,9 @@
 		"castell": "Td7f",
 		"carregat": 1270,
 		"descarregat": 1650,
-		"gent": 123
+		"gent": 123,
+		"probabilitatsInicials": [0.2, 0.25, 0.35, 0.2],
+		"probabilitatsLimit": [0.94, 0.2]
 	},
 	{
 		"grup": 4,
@@ -285,7 +355,9 @@
 		"castell": "Pd6f",
 		"carregat": 1370,
 		"descarregat": 1750,
-		"gent": 115
+		"gent": 115,
+		"probabilitatsInicials": [0.2, 0.25, 0.35, 0.2],
+		"probabilitatsLimit": [0.94, 0.2]
 	},
 	{
 		"grup": 4,
@@ -293,7 +365,9 @@
 		"castell": "10d7",
 		"carregat": 1410,
 		"descarregat": 1875,
-		"gent": 156
+		"gent": 156,
+		"probabilitatsInicials": [0.35, 0.3, 0.2, 0.15],
+		"probabilitatsLimit": [0.99, 0.3]
 	},
 	{
 		"grup": 4,
@@ -301,7 +375,9 @@
 		"castell": "5d7",
 		"carregat": 1565,
 		"descarregat": 2010,
-		"gent": 111
+		"gent": 111,
+		"probabilitatsInicials": [0.35, 0.3, 0.2, 0.15],
+		"probabilitatsLimit": [0.99, 0.3]
 	},
 	{
 		"grup": 5,
@@ -309,7 +385,9 @@
 		"castell": "3d8f",
 		"carregat": 1785,
 		"descarregat": 2300,
-		"gent": 160
+		"gent": 160,
+		"probabilitatsInicials": [0.1, 0.2, 0.5, 0.2],
+		"probabilitatsLimit": [0.9, 0.1]
 	},
 	{
 		"grup": 6,
@@ -317,7 +395,9 @@
 		"castell": "9d7",
 		"carregat": 2050,
 		"descarregat": 2600,
-		"gent": 160
+		"gent": 160,
+		"probabilitatsInicials": [0.1, 0.15, 0.55, 0.2],
+		"probabilitatsLimit": [0.85, 0.1]
 	},
 	{
 		"grup": 6,
@@ -325,7 +405,9 @@
 		"castell": "3d7s",
 		"carregat": 2250,
 		"descarregat": 2825,
-		"gent": 88
+		"gent": 88,
+		"probabilitatsInicials": [0.1, 0.1, 0.65, 0.15],
+		"probabilitatsLimit": [0.7, 0.1]
 	},
 	{
 		"grup": 6,
@@ -333,7 +415,9 @@
 		"castell": "4d8",
 		"carregat": 2380,
 		"descarregat": 3000,
-		"gent": 136
+		"gent": 136,
+		"probabilitatsInicials": [0.05, 0.1, 0.6, 0.25],
+		"probabilitatsLimit": [0.75, 0.05]
 	},
 	{
 		"grup": 6,
@@ -341,7 +425,9 @@
 		"castell": "Pd7fm",
 		"carregat": 2500,
 		"descarregat": 3250,
-		"gent": 162
+		"gent": 162,
+		"probabilitatsInicials": [0.05, 0.1, 0.6, 0.25],
+		"probabilitatsLimit": [0.7, 0.05]
 	},
 	{
 		"grup": 6,
@@ -349,7 +435,9 @@
 		"castell": "Td8fm",
 		"carregat": 2680,
 		"descarregat": 3450,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.05, 0.15, 0.7, 0.1],
+		"probabilitatsLimit": [0.7, 0.05]
 	},
 	{
 		"grup": 7,
@@ -357,7 +445,9 @@
 		"castell": "Td7sf",
 		"carregat": 2850,
 		"descarregat": 3715,
-		"gent": 89
+		"gent": 89,
+		"probabilitatsInicials": [0.05, 0.1, 0.75, 0.1],
+		"probabilitatsLimit": [0.7, 0.05]
 	},
 	{
 		"grup": 7,
@@ -365,7 +455,9 @@
 		"castell": "7d8f",
 		"carregat": 3015,
 		"descarregat": 3865,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.15, 0.1, 0.4, 0.35],
+		"probabilitatsLimit": [0.85, 0.1]
 	},
 	{
 		"grup": 7,
@@ -373,7 +465,9 @@
 		"castell": "5d8f",
 		"carregat": 3270,
 		"descarregat": 4215,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.1, 0.2, 0.4, 0.3],
+		"probabilitatsLimit": [0.8, 0.1]
 	},
 	{
 		"grup": 7,
@@ -381,7 +475,9 @@
 		"castell": "3d8fa",
 		"carregat": 3415,
 		"descarregat": 4055,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.07, 0.03, 0.55, 0.35],
+		"probabilitatsLimit": [0.65, 0.05]
 	},
 	{
 		"grup": 7,
@@ -389,7 +485,9 @@
 		"castell": "4d8fa",
 		"carregat": 3485,
 		"descarregat": 4120,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.1, 0.05, 0.5, 0.35],
+		"probabilitatsLimit": [0.75, 0.1]
 	},
 	{
 		"grup": 7,
@@ -397,7 +495,9 @@
 		"castell": "7d8sf",
 		"carregat": 3615,
 		"descarregat": 4625,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.05, 0.1, 0.6, 0.25],
+		"probabilitatsLimit": [0.7, 0.05]
 	},
 	{
 		"grup": 7,
@@ -405,7 +505,9 @@
 		"castell": "3d8sf",
 		"carregat": 3745,
 		"descarregat": 4875,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.05, 0.07, 0.53, 0.35],
+		"probabilitatsLimit": [0.65, 0.05]
 	},
 	{
 		"grup": 7,
@@ -413,7 +515,9 @@
 		"castell": "Pd6sf",
 		"carregat": 4105,
 		"descarregat": 5145,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.04, 0.06, 0.7, 0.2],
+		"probabilitatsLimit": [0.7, 0.04]
 	},
 	{
 		"grup": 8,
@@ -421,7 +525,9 @@
 		"castell": "3d9fm",
 		"carregat": 5220,
 		"descarregat": 6105,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.03, 0.05, 0.75, 0.17],
+		"probabilitatsLimit": [0.7, 0.03]
 	},
 	{
 		"grup": 8,
@@ -429,7 +535,9 @@
 		"castell": "Pd8fmp",
 		"carregat": 5235,
 		"descarregat": 6475,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.01, 0.05, 0.75, 0.19],
+		"probabilitatsLimit": [0.7, 0.01]
 	},
 	{
 		"grup": 8,
@@ -437,6 +545,8 @@
 		"castell": "4d9f",
 		"carregat": 5510,
 		"descarregat": 7120,
-		"gent": 0
+		"gent": 0,
+		"probabilitatsInicials": [0.05, 0.05, 0.7, 0.2],
+		"probabilitatsLimit": [0.7, 0.05]
 	}
 ]
