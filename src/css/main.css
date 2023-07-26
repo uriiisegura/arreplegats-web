@@ -85,12 +85,17 @@ html {
     --llunatics: #21277c;
 
 	/* joc castells */
+	--game-clearBlue: #8fb1ec;
 	--game-lightBlue: #2857aa;
-	--game-mediuBlue: #1b243c;
+	--game-mediumBlue: #1b243c;
 	--game-darkBlue: #121c32;
 	--game-cream: #ffe1c9;
 	--game-lightGray: #6a6a6a;
 	--game-darkGray: #2b2b2b;
+
+	--game-top-bar-height: 2.6rem;
+	--game-sub-bar-height: 1.3rem;
+	--game-back-btn-height: 2.5rem;
 
 	/* fonts  */
 	--headingFont: 'Roboto', sans-serif;
@@ -733,6 +738,7 @@ h4 {
 @media screen and (max-width: 1250px) {
 	section {
 		width: var(--mobile-width);
+		padding-top: 0.3rem;
 	}
 }
 
@@ -2902,6 +2908,10 @@ Joc Castells
 ===============
 */
 
+.castells-game {
+	user-select: none;
+}
+
 .cant-play {
 	position: absolute;
 	top: 0;
@@ -2986,11 +2996,11 @@ Joc Castells
 }
 
 .top-bar {
-	padding: 0.25rem 0.5rem;
+	padding: 0 0.5rem;
+	height: var(--game-top-bar-height);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	user-select: none;
 }
 
 .top-bar span {
@@ -3006,9 +3016,9 @@ Joc Castells
 
 .sub-bar {
 	padding: 0.15rem 0.5rem;
+	height: var(--game-sub-bar-height);
 	background-color: var(--grey-300);
 	line-height: 1;
-	user-select: none;
 }
 
 #screen {
@@ -3031,7 +3041,7 @@ Joc Castells
 
 .menu button {
 	border-radius: 0;
-	background-color: var(--game-mediuBlue);
+	background-color: var(--game-mediumBlue);
 	border: 1px solid var(--game-lightBlue);
 	color: var(--white);
 	display: flex;
@@ -3055,23 +3065,23 @@ Joc Castells
 
 .menu button span {
 	font-style: italic;
-	user-select: none;
 }
 
 .back-btn {
 	width: calc(100% - 2rem);
 	margin: 1rem;
-	padding: 10px;
+	height: var(--game-back-btn-height);
 	background-color: var(--game-lightBlue);
 	border: none;
 	color: var(--white);
 	text-align: center;
 	transition: 0.15s;
 	cursor: pointer;
-	opacity: 0.85;
+	opacity: 0.75;
 }
 .back-btn:hover {
 	opacity: 1;
+	box-shadow: 0 0 5px var(--game-lightBlue);
 }
 
 .game-table-wrap {
@@ -3107,7 +3117,7 @@ tr.locked {
 	background-color: var(--game-lightBlue);
 }
 .score-table td {
-	background-color: var(--game-mediuBlue);
+	background-color: var(--game-mediumBlue);
 	white-space: nowrap;
 }
 
@@ -3122,7 +3132,99 @@ span.help {
 	font-size: 0.85rem;
 	text-align: center;
 	background-color: var(--game-lightBlue);
-	user-select: none;
+}
+
+.game-full-wrap {
+	position: relative;
+	display: flex;
+	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height) - var(--game-back-btn-height) - 2rem);
+}
+
+.game-castell-selector {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: var(--game-clearBlue);
+	border: 3px solid var(--game-lightBlue);
+	width: 500px;
+	height: 300px;
+	padding: 8px;
+	display: flex;
+	gap: 0.3rem;
+	flex-direction: column;
+}
+
+.game-castell-selector h4 {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.game-castell-selector .box-wrap {
+	flex: 1 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: 1fr;
+	gap: 3px;
+}
+
+.game-castell-selector .box-wrap div {
+	background-color: var(--game-lightBlue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	opacity: 0.75;
+}
+.game-castell-selector .box-wrap div:hover {
+	transition: var(--transition);
+	opacity: 1;
+}
+.game-castell-selector .box-wrap div.disabled {
+	pointer-events: none;
+	background-color: var(--game-darkGray);
+}
+
+.game-castell-selector .box-wrap div .castell {
+	line-height: 0.7;
+	text-align: center;
+	height: fit-content;
+	color: var(--white);
+}
+.game-castell-selector .box-wrap div.disabled .castell {
+	color: var(--game-lightGray);
+}
+
+.game-castell-selector .box-wrap div .castell .gent {
+	font-size: 0.5rem;
+	height: fit-content;
+}
+
+.game-castell-selector .back-btn {
+	margin: 0.25rem 0 0;
+	width: 100%;
+}
+.game-castell-selector .back-btn:hover {
+	box-shadow: none;
+}
+
+.game-canvas-center {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: fit-content;
+	height: fit-content;
+	color: var(--white);
+	text-align: center;
+}
+
+.game-canvas-center div {
+	margin: auto;
 }
 
 @media screen and (max-width: 1200px) {

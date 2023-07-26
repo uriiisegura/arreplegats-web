@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import castells from "../data/joc-castells.json";
+import CastellSelector from "../components/CastellSelector";
 import Colla from "../models/Colla";
 
 class CastellsGame extends Component {
@@ -8,7 +9,8 @@ class CastellsGame extends Component {
 		this.state = {
 			colla: null,
 			screen: 'HOME',
-			history: ['HOME']
+			history: ['HOME'],
+			selectedCastell: null
 		};
 	}
 	loadGame(e) {
@@ -77,8 +79,12 @@ class CastellsGame extends Component {
 		const lastScreen = history.pop();
 		this.setState({
 			screen: lastScreen,
-			history: history
+			history: history,
+			selectedCastell: null
 		});
+	}
+	selectCastell(castell) {
+		this.setState({selectedCastell: castell});
 	}
 	render() {
 		return (<><div className="castells-game">
@@ -89,7 +95,6 @@ class CastellsGame extends Component {
 					<input id="import" type="file" onChange={this.loadGame.bind(this)} accept=".json" style={{display: 'none'}} />
 					<button className="btn" onClick={this.newGame.bind(this)} id="new-game">Nova partida</button>
 					<p id="initial-error" className="game-error"></p>
-					<div className="person-animation" style={{backgroundImage: 'url("/joc-castells/person-animation.png")'}}></div>
 				</div></div>
 				: <>
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
@@ -165,7 +170,22 @@ class CastellsGame extends Component {
 					{
 						this.state.screen === 'ASSAIG' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
-							<div className="assaig-wrap">
+							<div className="game-full-wrap">
+								{
+									this.state.selectedCastell ? <>
+										<div className="game-canvas-center">
+											<h1>{this.state.selectedCastell}</h1>
+											<p>Ara es faria el castell LOL</p>
+											<div className="person-animation" style={{backgroundImage: 'url("/joc-castells/person-animation.png")'}}></div>
+										</div>
+									</> : <>
+										<CastellSelector
+											castells={castells}
+											castellers={this.state.colla.castellers}
+											onSelectCastell={this.selectCastell.bind(this)}
+											/>
+									</>
+								}
 							</div>
 						</> : <></>
 					}
