@@ -10,8 +10,8 @@ class CastellSelector extends Component {
 					name: 'Pilar'
 				},
 				2: {
-					component: '2d',
-					name: 'Dos / Torre'
+					component: 'Td',
+					name: 'Torre'
 				},
 				3: {
 					component: '3d',

@@ -1,7 +1,14 @@
 import React, { Component } from "react";
 import castells from "../data/joc-castells.json";
 import CastellSelector from "../components/CastellSelector";
+import Delay from "../functions/Delay";
 import Colla from "../models/Colla";
+
+const pujada = new Audio('/sounds/toc-de-castells-pujada.ogg');
+const baixada = new Audio('/sounds/toc-de-castells-baixada.ogg');
+const aleta = new Audio('/sounds/toc-de-castells-aleta.ogg');
+const sortida = new Audio('/sounds/toc-de-castells-sortida.ogg');
+const caiguda = new Audio('/sounds/caiguda.ogg');
 
 class CastellsGame extends Component {
 	constructor(props) {
@@ -10,8 +17,22 @@ class CastellsGame extends Component {
 			colla: null,
 			screen: 'HOME',
 			history: ['HOME'],
-			selectedCastell: null
+			selectedCastell: null,
+			selectedResult: null,
+			results: [
+				'DESCARREGAT',
+				'CARREGAT',
+				'INTENT',
+				'INTENT DESMUNTAT'
+			]
 		};
+	}
+	componentWillUnmount() {
+		pujada.pause();
+		baixada.pause();
+		aleta.pause();
+		sortida.pause();
+		caiguda.pause();
 	}
 	loadGame(e) {
 		const files = e.target.files;
@@ -80,14 +101,77 @@ class CastellsGame extends Component {
 		this.setState({
 			screen: lastScreen,
 			history: history,
-			selectedCastell: null
+			selectedCastell: null,
+			selectedResult: null
 		});
 	}
 	selectCastell(castell) {
-		this.setState({selectedCastell: castell});
+		this.setState({selectedCastell: castell}, this.solveCastell);
+	}
+	solveCastell() {
+		const result = this.state.results[(Math.random() * this.state.results.length) | 0];
+		this.playCastell(result);
+	}
+	waitAudioToFinish(audio) {
+		return new Promise(res => {
+			audio.play();
+			audio.onended = res;
+		});
+	}
+	async playCastell(resultat) {
+		pujada.currentTime = 0;
+		baixada.currentTime = 0;
+		aleta.currentTime = 0;
+		sortida.currentTime = 0;
+		caiguda.currentTime = 0;
+
+		document.getElementById('game-screen').style.pointerEvents = 'none';
+
+		pujada.play();
+		await Delay(13000);
+		if (resultat === this.state.results[2]) { // INTENT
+			pujada.pause();
+			caiguda.play();
+			await Delay(3000);
+			caiguda.pause();
+		} else {
+			await Delay(5000);
+			pujada.pause();
+			if (resultat !== this.state.results[3]) { // not INTENT DESMUNTAT = DESCARREGAT or CARREGAT
+				await this.waitAudioToFinish(aleta);
+				baixada.play();
+				await Delay(6000);
+				if (resultat === this.state.results[1]) { // CARREGAT
+					baixada.pause();
+					caiguda.play();
+					await Delay(2000);
+					caiguda.pause();
+				} else { // not CARREGAT = DESCARREGAT
+					await Delay(8000);
+					baixada.pause();
+				}
+			}
+			if (resultat !== this.state.results[1]) { // not CARREGAT = DESCARREGAT or INTENT DESMUNTAT
+				sortida.play();
+				await Delay(8000);
+				sortida.pause();
+			}
+		}
+
+		document.getElementById('game-screen').style.pointerEvents = 'all';
+
+		this.setState({
+			selectedResult: resultat
+		});
+	}
+	restartAssaig() {
+		this.setState({
+			selectedCastell: null,
+			selectedResult: null
+		});
 	}
 	render() {
-		return (<><div className="castells-game">
+		return (<><div id="game-screen" className="castells-game">
 			{
 				this.state.colla === null
 				? <div className="flex-page"><div className="btn-wrap">
@@ -175,8 +259,15 @@ class CastellsGame extends Component {
 									this.state.selectedCastell ? <>
 										<div className="game-canvas-center">
 											<h1>{this.state.selectedCastell}</h1>
-											<p>Ara es faria el castell LOL</p>
-											<div className="person-animation" style={{backgroundImage: 'url("/joc-castells/person-animation.png")'}}></div>
+											{
+												this.state.selectedResult ? <>
+													<p>{this.state.selectedResult}</p>
+													<button className="back-btn" onClick={this.restartAssaig.bind(this)}>CONTINUA</button>
+												</> : <>
+													<p>Ara es faria el castell LOL</p>
+													<div className="person-animation" style={{backgroundImage: 'url("/joc-castells/person-animation.png")'}}></div>
+												</>
+											}
 										</div>
 									</> : <>
 										<CastellSelector
