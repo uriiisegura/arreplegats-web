@@ -4,11 +4,11 @@ import CastellSelector from "../components/CastellSelector";
 import Delay from "../functions/Delay";
 import Colla from "../models/Colla";
 
-const pujada = new Audio('/sounds/toc-de-castells-pujada.ogg');
-const baixada = new Audio('/sounds/toc-de-castells-baixada.ogg');
-const aleta = new Audio('/sounds/toc-de-castells-aleta.ogg');
-const sortida = new Audio('/sounds/toc-de-castells-sortida.ogg');
-const caiguda = new Audio('/sounds/caiguda.ogg');
+const pujada = new Audio('/sounds/toc-de-castells-pujada.mp3');
+const baixada = new Audio('/sounds/toc-de-castells-baixada.mp3');
+const aleta = new Audio('/sounds/toc-de-castells-aleta.mp3');
+const sortida = new Audio('/sounds/toc-de-castells-sortida.mp3');
+const caiguda = new Audio('/sounds/caiguda.mp3');
 
 class CastellsGame extends Component {
 	constructor(props) {
