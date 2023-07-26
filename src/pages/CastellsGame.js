@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import castells from "../data/joc-castells.json";
-import CastellSelector from "../components/CastellSelector";
 import Delay from "../functions/Delay";
 import Colla from "../models/Colla";
+
+import CastellSelector from "../components/CastellSelector";
+import CastellResultat from "../components/CastellResultat";
 
 const pujada = new Audio('/sounds/toc-de-castells-pujada.mp3');
 const baixada = new Audio('/sounds/toc-de-castells-baixada.mp3');
@@ -268,17 +270,12 @@ class CastellsGame extends Component {
 							<div className="game-full-wrap">
 								{
 									this.state.selectedCastell !== null &&
-									<div className="game-canvas-center">
-										<h1>{this.state.selectedCastell.castell}</h1>
-										{
-											this.state.selectedResult ? <>
-												<h5 className={this.state.selectedResult.toLowerCase()}>{this.state.selectedResult}</h5>
-												<button className="back-btn" onClick={this.restartAssaig.bind(this)}>CONTINUA</button>
-											</> : <>
-												<div className="loading game-loading"></div>
-											</>
-										}
-									</div>
+									<CastellResultat
+										selectedCastell={this.state.selectedCastell}
+										selectedResult={this.state.selectedResult}
+										restartAssaig={this.restartAssaig.bind(this)}
+									/>
+										
 								}
 
 								<CastellSelector
