@@ -3311,7 +3311,7 @@ span.help {
 
 .game-historic-table th,
 .game-historic-table td {
-	padding: 2px 10px;
+	padding: 1px 5px;
 	border: 1px solid var(--game-lightBlue);
 }
 .game-historic-table th {
@@ -3319,6 +3319,10 @@ span.help {
 }
 .game-historic-table td {
 	background-color: var(--game-mediumBlue);
+}
+.game-historic-table td:nth-child(1),
+.game-historic-table td:nth-child(2),
+.game-historic-table td:nth-child(4) {
 	white-space: nowrap;
 }
 

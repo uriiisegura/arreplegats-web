@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import castells from "../data/joc-castells.json";
 import CastellSelector from "../components/CastellSelector";
+import CastellResult from "../components/CastellResult";
 import Delay from "../functions/Delay";
 import Colla from "../models/Colla";
 
@@ -124,46 +125,48 @@ class CastellsGame extends Component {
 		});
 	}
 	async playCastell(resultat) {
-		pujada.currentTime = 0;
-		baixada.currentTime = 0;
-		aleta.currentTime = 0;
-		sortida.currentTime = 0;
-		caiguda.currentTime = 0;
+		if (process.env.NODE_ENV !== 'development') {
+			pujada.currentTime = 0;
+			baixada.currentTime = 0;
+			aleta.currentTime = 0;
+			sortida.currentTime = 0;
+			caiguda.currentTime = 0;
 
-		document.getElementById('game-screen').style.pointerEvents = 'none';
+			document.getElementById('game-screen').style.pointerEvents = 'none';
 
-		pujada.play();
-		await Delay(13000);
-		if (resultat === this.state.results[2]) { // INTENT
-			pujada.pause();
-			caiguda.play();
-			await Delay(3000);
-			caiguda.pause();
-		} else {
-			await Delay(5000);
-			pujada.pause();
-			if (resultat !== this.state.results[3]) { // not INTENT DESMUNTAT = DESCARREGAT or CARREGAT
-				await this.waitAudioToFinish(aleta);
-				baixada.play();
-				await Delay(6000);
-				if (resultat === this.state.results[1]) { // CARREGAT
-					baixada.pause();
-					caiguda.play();
-					await Delay(2000);
-					caiguda.pause();
-				} else { // not CARREGAT = DESCARREGAT
+			pujada.play();
+			await Delay(13000);
+			if (resultat === this.state.results[2]) { // INTENT
+				pujada.pause();
+				caiguda.play();
+				await Delay(3000);
+				caiguda.pause();
+			} else {
+				await Delay(5000);
+				pujada.pause();
+				if (resultat !== this.state.results[3]) { // not INTENT DESMUNTAT = DESCARREGAT or CARREGAT
+					await this.waitAudioToFinish(aleta);
+					baixada.play();
+					await Delay(6000);
+					if (resultat === this.state.results[1]) { // CARREGAT
+						baixada.pause();
+						caiguda.play();
+						await Delay(2000);
+						caiguda.pause();
+					} else { // not CARREGAT = DESCARREGAT
+						await Delay(8000);
+						baixada.pause();
+					}
+				}
+				if (resultat !== this.state.results[1]) { // not CARREGAT = DESCARREGAT or INTENT DESMUNTAT
+					sortida.play();
 					await Delay(8000);
-					baixada.pause();
+					sortida.pause();
 				}
 			}
-			if (resultat !== this.state.results[1]) { // not CARREGAT = DESCARREGAT or INTENT DESMUNTAT
-				sortida.play();
-				await Delay(8000);
-				sortida.pause();
-			}
-		}
 
-		document.getElementById('game-screen').style.pointerEvents = 'all';
+			document.getElementById('game-screen').style.pointerEvents = 'all';
+		}
 
 		this.setState({
 			selectedResult: resultat
@@ -254,17 +257,11 @@ class CastellsGame extends Component {
 							<div className="game-full-wrap">
 								{
 									this.state.selectedCastell ? <>
-										<div className="game-canvas-center">
-											<h1>{this.state.selectedCastell.castell}</h1>
-											{
-												this.state.selectedResult ? <>
-													<h5 className={this.state.selectedResult.toLowerCase()}>{this.state.selectedResult}</h5>
-													<button className="back-btn" onClick={this.restartAssaig.bind(this)}>CONTINUA</button>
-												</> : <>
-													<div className="loading game-loading"></div>
-												</>
-											}
-										</div>
+										<CastellResult
+											castell={this.state.selectedCastell.castell}
+											result={this.state.selectedResult}
+											onNext={this.restartAssaig.bind(this)}
+											/>
 									</> : <>
 										<CastellSelector
 											castells={castells}
@@ -283,17 +280,11 @@ class CastellsGame extends Component {
 									<div className="game-full-wrap game-bigger-wrap">
 										{
 											this.state.selectedCastell ? <>
-												<div className="game-canvas-center">
-													<h1>{this.state.selectedCastell.castell}</h1>
-													{
-														this.state.selectedResult ? <>
-															<h5 className={this.state.selectedResult.toLowerCase()}>{this.state.selectedResult}</h5>
-															<button className="back-btn" onClick={this.nextRonda.bind(this)}>CONTINUA</button>
-														</> : <>
-															<div className="loading game-loading"></div>
-														</>
-													}
-												</div>
+												<CastellResult
+													castell={this.state.selectedCastell.castell}
+													result={this.state.selectedResult}
+													onNext={this.nextRonda.bind(this)}
+													/>
 											</> : <>
 												<CastellSelector
 													castells={castells}
