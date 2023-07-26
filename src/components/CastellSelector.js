@@ -41,6 +41,16 @@ class CastellSelector extends Component {
 			from_group: null
 		};
 	}
+	componentDidMount() {
+		if (this.props.ronda) {
+			if (this.props.ronda < 4) {
+				const no_pilars = this.state.structures;
+				delete no_pilars[1];
+				this.setState({structures: no_pilars});
+			} else
+				this.setGroup('Pd');
+		}
+	}
 	setGroup(group) {
 		this.setState({from_group: this.props.castells.filter(c => c.castell.includes(group))});
 	}
@@ -82,7 +92,7 @@ class CastellSelector extends Component {
 					}
 				</div>
 				{
-					this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
+					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
 				}
 			</div>
 		);
