@@ -274,6 +274,7 @@ class CastellsGame extends Component {
 										selectedCastell={this.state.selectedCastell}
 										selectedResult={this.state.selectedResult}
 										restartAssaig={this.restartAssaig.bind(this)}
+										stats={this.state.colla.stats}
 									/>
 										
 								}
