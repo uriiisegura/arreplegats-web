@@ -122,43 +122,46 @@ class CastellsGame extends Component {
 		});
 	}
 	async playCastell(resultat) {
-		pujada.currentTime = 0;
-		baixada.currentTime = 0;
-		aleta.currentTime = 0;
-		sortida.currentTime = 0;
-		caiguda.currentTime = 0;
+		if (!process.env.REACT_APP_DEV_MODE === 'true') {
+			pujada.currentTime = 0;
+			baixada.currentTime = 0;
+			aleta.currentTime = 0;
+			sortida.currentTime = 0;
+			caiguda.currentTime = 0;
 
-		document.getElementById('game-screen').style.pointerEvents = 'none';
+			document.getElementById('game-screen').style.pointerEvents = 'none';
 
-		pujada.play();
-		await Delay(13000);
-		if (resultat === this.state.results[2]) { // INTENT
-			pujada.pause();
-			caiguda.play();
-			await Delay(3000);
-			caiguda.pause();
-		} else {
-			await Delay(5000);
-			pujada.pause();
-			if (resultat !== this.state.results[3]) { // not INTENT DESMUNTAT = DESCARREGAT or CARREGAT
-				await this.waitAudioToFinish(aleta);
-				baixada.play();
-				await Delay(6000);
-				if (resultat === this.state.results[1]) { // CARREGAT
-					baixada.pause();
-					caiguda.play();
-					await Delay(2000);
-					caiguda.pause();
-				} else { // not CARREGAT = DESCARREGAT
+			pujada.play();
+			await Delay(13000);
+			if (resultat === this.state.results[2]) { // INTENT
+				pujada.pause();
+				caiguda.play();
+				await Delay(3000);
+				caiguda.pause();
+			} else {
+				await Delay(5000);
+				pujada.pause();
+				if (resultat !== this.state.results[3]) { // not INTENT DESMUNTAT = DESCARREGAT or CARREGAT
+					await this.waitAudioToFinish(aleta);
+					baixada.play();
+					await Delay(6000);
+					if (resultat === this.state.results[1]) { // CARREGAT
+						baixada.pause();
+						caiguda.play();
+						await Delay(2000);
+						caiguda.pause();
+					} else { // not CARREGAT = DESCARREGAT
+						await Delay(8000);
+						baixada.pause();
+					}
+				}
+				if (resultat !== this.state.results[1]) { // not CARREGAT = DESCARREGAT or INTENT DESMUNTAT
+					sortida.play();
 					await Delay(8000);
-					baixada.pause();
+					sortida.pause();
 				}
 			}
-			if (resultat !== this.state.results[1]) { // not CARREGAT = DESCARREGAT or INTENT DESMUNTAT
-				sortida.play();
-				await Delay(8000);
-				sortida.pause();
-			}
+
 		}
 
 		document.getElementById('game-screen').style.pointerEvents = 'all';
