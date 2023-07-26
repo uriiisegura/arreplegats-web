@@ -10,6 +10,7 @@ class Colla {
 				color,
 				castellers=MIN_CASTELLERS,
 				stats=null,
+				historic=[],
 				date=Date.parse('2022-09-01')
 		) {
 		this.name = name;
@@ -32,6 +33,7 @@ class Colla {
 			this.stats = stats_dict;
 		} else
 			this.stats = stats;
+		this.historic = historic;
 		this.date = date;
 	}
 	static fromJson(json) {
@@ -39,9 +41,10 @@ class Colla {
 		const color = json.color;
 		const castellers = json.castellers;
 		const stats = json.stats;
+		const historic = json.historic;
 		const date = json.date;
-		if (name && color && castellers && stats && date)
-			return new Colla(name, color, castellers, stats, date);
+		if (name && color && castellers && stats && historic && date)
+			return new Colla(name, color, castellers, stats, historic, date);
 		throw new Error("L'arxiu no conté cap partida.");
 	}
 	addCastellers(castellers) {
@@ -90,6 +93,13 @@ class Colla {
 		this.stats[castell.castell].probabilitatsActual = Normalize(new_probabilities);
 		
 		return results[result];
+	}
+	addActuacio(actuacio) {
+		this.historic.push({
+			'castells': actuacio,
+			'punts': actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts,
+			'data': new Date()
+		});
 	}
 }
 

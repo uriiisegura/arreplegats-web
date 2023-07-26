@@ -21,6 +21,7 @@ class CastellsGame extends Component {
 			history: ['HOME'],
 			selectedCastell: null,
 			selectedResult: null,
+			actuacio: [],
 			results: [
 				'DESCARREGAT',
 				'CARREGAT',
@@ -108,7 +109,8 @@ class CastellsGame extends Component {
 			screen: lastScreen,
 			history: history,
 			selectedCastell: null,
-			selectedResult: null
+			selectedResult: null,
+			actuacio: []
 		});
 	}
 	selectCastell(castell) {
@@ -165,9 +167,6 @@ class CastellsGame extends Component {
 
 		document.getElementById('game-screen').style.pointerEvents = 'all';
 
-		this.state.colla.addCastellers(30);
-		this.state.colla.takeCastellers(30);
-
 		this.setState({
 			selectedResult: resultat
 		});
@@ -177,6 +176,34 @@ class CastellsGame extends Component {
 			selectedCastell: null,
 			selectedResult: null
 		});
+	}
+	nextRonda() {
+		const actuacio = this.state.actuacio;
+		actuacio.push({
+			ronda: this.state.actuacio.length + 1,
+			castell: this.state.selectedCastell.castell,
+			resultat: this.state.selectedResult,
+			punts: this.state.selectedResult.includes('INTENT') ? 0 : this.state.selectedCastell[this.state.selectedResult.toLowerCase()]
+		});
+
+		this.setState({
+			selectedCastell: null,
+			selectedResult: null,
+			actuacio: actuacio
+		});
+	}
+	endActuacio() {
+		this.state.colla.addActuacio(this.state.actuacio);
+		this.goBack();
+	}
+	formatCastell(castell, result) {
+		if (result === this.state.results[1])
+			return castell + 'C';
+		if (result === this.state.results[2])
+			return 'i' + castell;
+		if (result === this.state.results[3])
+			return 'id' + castell;
+		return castell;
 	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
@@ -191,25 +218,27 @@ class CastellsGame extends Component {
 				: <>
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
-						<button className="btn" onClick={this.saveGame.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Guardar</button>
+						{
+							this.state.screen !== 'ACTUACIO' ? <button className="btn" onClick={this.saveGame.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Guardar</button> : <></>
+						}
 					</div>
 					<div className="sub-bar">
 						<span>{this.state.colla.castellers} persones a la colla</span>
 					</div>
-					<div id="screen"></div>
+					<div id="game-background"></div>
 					{
 						this.state.screen === 'HOME' ? <>
 							<div className="menu">
 								<button onClick={() => this.changeScreen('ASSAIG')}>
 									<span>ASSAIG</span>
 								</button>
-								<button className="disabled">
+								<button onClick={() => this.changeScreen('ACTUACIO')}>
 									<span>ACTUACIÓ</span>
 								</button>
 								<button onClick={() => this.changeScreen('CASTELLS')}>
 									<span>CASTELLS</span>
 								</button>
-								<button className="disabled">
+								<button onClick={() => this.changeScreen('HISTORIC')}>
 									<span>HISTÒRIC</span>
 								</button>
 								<button className="disabled">
@@ -219,6 +248,78 @@ class CastellsGame extends Component {
 									<span>AJUDA</span>
 								</button>
 							</div>
+						</> : <></>
+					}
+					{
+						this.state.screen === 'ASSAIG' ? <>
+							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+							<div className="game-full-wrap">
+								{
+									this.state.selectedCastell !== null &&
+										<CastellResultat
+											selectedCastell={this.state.selectedCastell}
+											selectedResult={this.state.selectedResult}
+											restartAssaig={this.restartAssaig.bind(this)}
+											stats={this.state.colla.stats}
+										/>
+								}
+
+								<CastellSelector
+									castells={castells}
+									castellers={this.state.colla.castellers}
+									onSelectCastell={this.selectCastell.bind(this)}
+									hide={this.state.selectedCastell !== null}
+								/>
+							</div>
+						</> : <></>
+					}
+					{
+						this.state.screen === 'ACTUACIO' ? <>
+							{
+								this.state.actuacio.length < 4 ? <>
+									<div className="game-full-wrap game-bigger-wrap">
+										{
+											this.state.selectedCastell ? <>
+												<div className="game-canvas-center">
+													<h1>{this.state.selectedCastell.castell}</h1>
+													{
+														this.state.selectedResult ? <>
+															<h5 className={this.state.selectedResult.toLowerCase()}>{this.state.selectedResult}</h5>
+															<button className="back-btn" onClick={this.nextRonda.bind(this)}>CONTINUA</button>
+														</> : <>
+															<div className="loading game-loading"></div>
+														</>
+													}
+												</div>
+											</> : <>
+												<CastellSelector
+													castells={castells}
+													castellers={this.state.colla.castellers}
+													onSelectCastell={this.selectCastell.bind(this)}
+													ronda={this.state.actuacio.length + 1}
+													/>
+											</>
+										}
+									</div>
+								</> : <>
+									<button className="back-btn" onClick={this.endActuacio.bind(this)}>ENRERE</button>
+									<div className="game-full-wrap">
+										<div className="game-actuacio-result">
+											{
+												this.state.actuacio.map((r, i) => {
+													return <div key={i}>
+														<h4>{r.ronda}a Ronda<span>{r.punts} punts</span></h4>
+														<p>{r.castell}{
+															r.resultat !== 'DESCARREGAT' ? <span className={r.resultat.toLowerCase()}>{r.resultat.toLowerCase()}</span> : <></>
+														}</p>
+													</div>;
+												})
+											}
+											<h3>TOTAL: {this.state.actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts}</h3>
+										</div>
+									</div>
+								</>
+							}
 						</> : <></>
 					}
 					{
@@ -262,26 +363,44 @@ class CastellsGame extends Component {
 						</> : <></>
 					}
 					{
-						this.state.screen === 'ASSAIG' ? <>
+						this.state.screen === 'HISTORIC' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
-							<div className="game-full-wrap">
+							<div className="game-table-wrap">
 								{
-									this.state.selectedCastell !== null &&
-									<CastellResultat
-										selectedCastell={this.state.selectedCastell}
-										selectedResult={this.state.selectedResult}
-										restartAssaig={this.restartAssaig.bind(this)}
-										stats={this.state.colla.stats}
-									/>
-										
+									this.state.colla.historic.length === 0 ? <>
+										<h5 className="game-info">Encara no has actuat.</h5>
+									</> : <>
+										<table className="game-historic-table">
+											<thead>
+												<tr>
+													<th>Dia</th>
+													<th>Hora</th>
+													<th>Actuació</th>
+													<th>Punts</th>
+												</tr>
+											</thead>
+											<tbody>
+												{
+													this.state.colla.historic.map((a, i) => {
+														const og_date = new Date(a.data);
+														const offset = og_date.getTimezoneOffset();
+														const date = new Date(og_date.getTime() - (offset * 60000));
+														const datetime = date.toISOString().split('T');
+														const rondes = [];
+														for (let castell of a.castells)
+															rondes.push(this.formatCastell(castell.castell, castell.resultat));
+														return <tr key={i}>
+															<td>{datetime[0]}</td>
+															<td>{datetime[1].split(':').reverse().slice(1).reverse().join(':')}</td>
+															<td>{rondes.join(', ')}</td>
+															<td>{a.punts}</td>
+														</tr>;
+													})
+												}
+											</tbody>
+										</table>
+									</>
 								}
-
-								<CastellSelector
-									castells={castells}
-									castellers={this.state.colla.castellers}
-									onSelectCastell={this.selectCastell.bind(this)}
-									hide={this.state.selectedCastell !== null}
-								/>
 							</div>
 						</> : <></>
 					}
