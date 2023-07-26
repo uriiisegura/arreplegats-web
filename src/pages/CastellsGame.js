@@ -45,7 +45,7 @@ class CastellsGame extends Component {
 			return;
 		const fr = new FileReader();
 		fr.onload = (e) => {
-			const result = JSON.parse(e.target.result);
+			const result = JSON.parse(atob(e.target.result));
 			try {
 				this.setState({
 					colla: Colla.fromJson(result)
@@ -57,15 +57,14 @@ class CastellsGame extends Component {
 		fr.readAsText(files[0]);
 	}
 	saveGame() {
-		// TODO: save all, not just: this.state.colla
-		const file = new Blob([JSON.stringify(this.state.colla, null, 4)], {type: 'json'});
+		const file = new Blob([btoa(JSON.stringify(this.state.colla, null, 4))], {type: 'bin'});
 		if (window.navigator.msSaveOrOpenBlob)
-			window.navigator.msSaveOrOpenBlob(file, 'joc-castells.json');
+			window.navigator.msSaveOrOpenBlob(file, 'joc-castells.bin');
 		else {
 			const a = document.createElement('a');
 			const url = URL.createObjectURL(file);
 			a.href = url;
-			a.download = 'joc-castells.json';
+			a.download = 'joc-castells.bin';
 			document.body.appendChild(a);
 			a.click();
 			setTimeout(() => {
@@ -183,7 +182,7 @@ class CastellsGame extends Component {
 				this.state.colla === null
 				? <div className="flex-page"><div className="btn-wrap">
 					<label htmlFor="import" className="btn" id="load-game">Carregar partida</label>
-					<input id="import" type="file" onChange={this.loadGame.bind(this)} accept=".json" style={{display: 'none'}} />
+					<input id="import" type="file" onChange={this.loadGame.bind(this)} accept=".bin" style={{display: 'none'}} />
 					<button className="btn" onClick={this.newGame.bind(this)} id="new-game">Nova partida</button>
 					<p id="initial-error" className="game-error"></p>
 				</div></div>
