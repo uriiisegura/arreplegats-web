@@ -23,7 +23,9 @@ class Navbar extends Component {
 			width: document.documentElement.clientWidth
 		});
 
-		document.getElementById('nav-links').classList.remove('show');
+		try {
+			document.getElementById('nav-links').classList.remove('show');
+		} catch {}
 		const subs = document.getElementsByClassName('sub-menus');
 		for (let e of subs)
 			e.classList.remove('active');
