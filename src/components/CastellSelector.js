@@ -51,7 +51,7 @@ class CastellSelector extends Component {
 		this.props.onSelectCastell(castell);
 	}
 	render() {
-		return (
+		return !this.props.hide && (
 			<div className="game-castell-selector">
 				<h4>Escull un castell</h4>
 				<div className="box-wrap">

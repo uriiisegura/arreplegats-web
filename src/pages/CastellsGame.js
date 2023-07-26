@@ -264,26 +264,26 @@ class CastellsGame extends Component {
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
 							<div className="game-full-wrap">
 								{
-									this.state.selectedCastell ? <>
-										<div className="game-canvas-center">
-											<h1>{this.state.selectedCastell.castell}</h1>
-											{
-												this.state.selectedResult ? <>
-													<h5 className={this.state.selectedResult.toLowerCase()}>{this.state.selectedResult}</h5>
-													<button className="back-btn" onClick={this.restartAssaig.bind(this)}>CONTINUA</button>
-												</> : <>
-													<div className="loading game-loading"></div>
-												</>
-											}
-										</div>
-									</> : <>
-										<CastellSelector
-											castells={castells}
-											castellers={this.state.colla.castellers}
-											onSelectCastell={this.selectCastell.bind(this)}
-											/>
-									</>
+									this.state.selectedCastell !== null &&
+									<div className="game-canvas-center">
+										<h1>{this.state.selectedCastell.castell}</h1>
+										{
+											this.state.selectedResult ? <>
+												<h5 className={this.state.selectedResult.toLowerCase()}>{this.state.selectedResult}</h5>
+												<button className="back-btn" onClick={this.restartAssaig.bind(this)}>CONTINUA</button>
+											</> : <>
+												<div className="loading game-loading"></div>
+											</>
+										}
+									</div>
 								}
+
+								<CastellSelector
+									castells={castells}
+									castellers={this.state.colla.castellers}
+									onSelectCastell={this.selectCastell.bind(this)}
+									hide={this.state.selectedCastell !== null}
+								/>
 							</div>
 						</> : <></>
 					}
