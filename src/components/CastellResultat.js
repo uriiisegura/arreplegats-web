@@ -23,6 +23,8 @@ function CastellResultat({ stats, selectedCastell, selectedResult, restartAssaig
         .slice(-5)  // Només les últimes 5
         .map((outcome, i) => <span key={i} style={styles.historyOutcome} className={outcome.toLowerCase()}>{outcome}</span>)
 
+    console.log(castellStats?.probabilitatsActual)
+
     // Render
     return (
         <div className="game-canvas-center">
