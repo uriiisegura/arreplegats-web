@@ -3250,6 +3250,33 @@ span.help {
 	color: var(--red-medium);
 }
 
+.game-canvas-center .game-castell-history {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	margin: 10px 0;
+}
+
+.game-canvas-center .game-castell-history span {
+	width: 20px;
+	border-radius: 5px;
+	background-color: var(--white);
+	color: var(--black);
+	line-height: 1.5;
+}
+.game-canvas-center .game-castell-history span.c {
+	background-color: var(--game-carregat);
+}
+.game-canvas-center .game-castell-history span.i {
+	background-color: var(--red-dark);
+	color: var(--white);
+}
+.game-canvas-center .game-castell-history span.id {
+	background-color: var(--red-medium);
+}
+
 .game-canvas-center .back-btn {
 	margin-top: 2rem;
 }
@@ -3297,6 +3324,11 @@ span.help {
 
 .game-actuacio-result h3 {
 	margin: 0;
+}
+
+.game-actuacio-result .back-btn {
+	margin: 2rem auto 0;
+	width: 100%;
 }
 
 .game-info {

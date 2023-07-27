@@ -36,9 +36,8 @@ class CastellsGame extends Component {
 		sortida.pause();
 		caiguda.pause();
 
-		if (this.state.colla) {
+		if (this.state.colla)
 			this.saveGame();
-		}
 	}
 	loadGameFile(e) {
 		const files = e.target.files;
@@ -145,7 +144,7 @@ class CastellsGame extends Component {
 		});
 	}
 	async playCastell(resultat) {
-		if (process.env.NODE_ENV !== 'development') {
+		if (process.env.NODE_ENV === 'development') {
 			pujada.currentTime = 0;
 			baixada.currentTime = 0;
 			aleta.currentTime = 0;
@@ -230,12 +229,7 @@ class CastellsGame extends Component {
 		this.loadGame()
 	}
 	componentDidUpdate(prevProps, prevState) {
-		const prevColla = JSON.stringify(prevState.colla);
-		const currColla = JSON.stringify(this.state.colla);
-
-		if (prevColla !== currColla) {
-			this.saveGame();
-		}
+		this.saveGame();
 	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
@@ -288,19 +282,19 @@ class CastellsGame extends Component {
 							<div className="game-full-wrap">
 								{
 									this.state.selectedCastell &&
-										<CastellResultat
-											selectedCastell={this.state.selectedCastell}
-											selectedResult={this.state.selectedResult}
-											restartAssaig={this.restartAssaig.bind(this)}
-											stats={this.state.colla.stats}
-										  />
+										<CastellResult
+											castell={this.state.selectedCastell.castell}
+											result={this.state.selectedResult}
+											onNext={this.restartAssaig.bind(this)}
+											stats={this.state.colla.stats[this.state.selectedCastell.castell]}
+											/>
 								}
 								<CastellSelector
 									castells={castells}
 									castellers={this.state.colla.castellers}
 									onSelectCastell={this.selectCastell.bind(this)}
 									hide={this.state.selectedCastell !== null}
-								  />
+									/>
 							</div>
 						</> : <></>
 					}
@@ -315,10 +309,9 @@ class CastellsGame extends Component {
 													castell={this.state.selectedCastell.castell}
 													result={this.state.selectedResult}
 													onNext={this.nextRonda.bind(this)}
+													stats={this.state.colla.stats[this.state.selectedCastell.castell]}
 													/>
 											</> : <>
-												<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
-
 												<CastellSelector
 													castells={castells}
 													castellers={this.state.colla.castellers}
@@ -329,7 +322,7 @@ class CastellsGame extends Component {
 										}
 									</div>
 								</> : <>
-									<div className="game-full-wrap">
+									<div className="game-full-wrap game-bigger-wrap">
 										<div className="game-actuacio-result">
 											{
 												this.state.actuacio.map((r, i) => {
