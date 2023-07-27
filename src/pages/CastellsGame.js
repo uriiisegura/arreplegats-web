@@ -304,7 +304,6 @@ class CastellsGame extends Component {
 										}
 									</div>
 								</> : <>
-									<button className="back-btn" onClick={this.endActuacio.bind(this)}>ENRERE</button>
 									<div className="game-full-wrap">
 										<div className="game-actuacio-result">
 											{
@@ -318,6 +317,10 @@ class CastellsGame extends Component {
 												})
 											}
 											<h3>TOTAL: {this.state.actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts}</h3>
+
+											<button className="back-btn" onClick={this.endActuacio.bind(this)}>
+												CONTINUA
+											</button>
 										</div>
 									</div>
 								</>
