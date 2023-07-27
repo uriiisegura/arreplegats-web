@@ -1,5 +1,5 @@
-async function Delay (ms = 1000) {
-	await new Promise(res => setTimeout(res, ms));
+function Delay (ms = 1000) {
+	return new Promise(res => setTimeout(res, ms));
 };
 
 export default Delay;
