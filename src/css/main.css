@@ -3043,6 +3043,7 @@ Joc Castells
 .menu {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 1fr;
 	gap: 0.5rem;
 	width: min(60rem, 95%);
 	margin: min(10rem, 15%) auto 0;
@@ -3054,8 +3055,7 @@ Joc Castells
 	border: 1px solid var(--game-lightBlue);
 	color: var(--white);
 	display: flex;
-	padding: 0.5rem;
-	height: 10rem;
+	padding: 3rem 0.5rem 0.5rem;
 	align-items: flex-end;
 	transition: 0.15s;
 	cursor: pointer;
@@ -3328,10 +3328,6 @@ span.help {
 .game-actuacio-result .back-btn {
 	margin: 2rem auto 0;
 	width: 100%;
-}
-
-.game-info {
-	color: var(--game-clearBlue);
 }
 
 .game-historic-table {

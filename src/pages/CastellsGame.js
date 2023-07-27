@@ -141,7 +141,7 @@ class CastellsGame extends Component {
 		});
 	}
 	async playCastell(resultat) {
-		if (process.env.NODE_ENV !== 'development') {
+		if (process.env.NODE_ENV === 'development') {
 			pujada.currentTime = 0;
 			baixada.currentTime = 0;
 			aleta.currentTime = 0;
@@ -266,13 +266,13 @@ class CastellsGame extends Component {
 								<button onClick={() => this.changeScreen('ASSAIG')}>
 									<span>ASSAIG</span>
 								</button>
-								<button className="disabled" onClick={() => this.changeScreen('ACTUACIO')}>
+								<button className={this.state.colla.castellers < 31 ? 'disabled' : ''} onClick={() => this.changeScreen('ACTUACIO')}>
 									<span>ACTUACIÓ</span>
 								</button>
 								<button onClick={() => this.changeScreen('CASTELLS')}>
 									<span>CASTELLS</span>
 								</button>
-								<button onClick={() => this.changeScreen('HISTORIC')}>
+								<button className={this.state.colla.historic.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('HISTORIC')}>
 									<span>HISTÒRIC</span>
 								</button>
 								<button className="disabled">
@@ -284,8 +284,8 @@ class CastellsGame extends Component {
 								<button className={this.state.colla.tried.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('STATS')}>
 									<span>ESTADÍSTIQUES</span>
 								</button>
-								<button className="disabled">
-									<span>GESTIONAR LA COLLA</span>
+								<button onClick={() => {this.state.colla.addCastellers(10)}}>
+									<span>+10 castellers</span>
 								</button>
 							</div>
 						</> : <></>
@@ -406,41 +406,35 @@ class CastellsGame extends Component {
 						this.state.screen === 'HISTORIC' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
 							<div className="game-table-wrap">
-								{
-									this.state.colla.historic.length === 0 ? <>
-										<h5 className="game-info">Encara no has actuat.</h5>
-									</> : <>
-										<table className="game-historic-table">
-											<thead>
-												<tr>
-													<th>Dia</th>
-													<th>Hora</th>
-													<th>Actuació</th>
-													<th>Punts</th>
-												</tr>
-											</thead>
-											<tbody>
-												{
-													this.state.colla.historic.map((a, i) => {
-														const og_date = new Date(a.data);
-														const offset = og_date.getTimezoneOffset();
-														const date = new Date(og_date.getTime() - (offset * 60000));
-														const datetime = date.toISOString().split('T');
-														const rondes = [];
-														for (let castell of a.castells)
-															rondes.push(this.formatCastell(castell.castell, castell.resultat));
-														return <tr key={`historic-${i}`}>
-															<td>{datetime[0]}</td>
-															<td>{datetime[1].split(':').reverse().slice(1).reverse().join(':')}</td>
-															<td>{rondes.join(', ')}</td>
-															<td>{a.punts}</td>
-														</tr>;
-													})
-												}
-											</tbody>
-										</table>
-									</>
-								}
+								<table className="game-historic-table">
+									<thead>
+										<tr>
+											<th>Dia</th>
+											<th>Hora</th>
+											<th>Actuació</th>
+											<th>Punts</th>
+										</tr>
+									</thead>
+									<tbody>
+										{
+											this.state.colla.historic.map((a, i) => {
+												const og_date = new Date(a.data);
+												const offset = og_date.getTimezoneOffset();
+												const date = new Date(og_date.getTime() - (offset * 60000));
+												const datetime = date.toISOString().split('T');
+												const rondes = [];
+												for (let castell of a.castells)
+													rondes.push(this.formatCastell(castell.castell, castell.resultat));
+												return <tr key={`historic-${i}`}>
+													<td>{datetime[0]}</td>
+													<td>{datetime[1].split(':').reverse().slice(1).reverse().join(':')}</td>
+													<td>{rondes.join(', ')}</td>
+													<td>{a.punts}</td>
+												</tr>;
+											})
+										}
+									</tbody>
+								</table>
 							</div>
 						</> : <></>
 					}
