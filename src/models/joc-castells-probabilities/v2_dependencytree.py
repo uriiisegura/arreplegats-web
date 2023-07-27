@@ -20,9 +20,9 @@ DECREMENT = {
 }
 
 PROBABILITIES = {
-    'Pd3':  { 'prob': [ 0.65, 0.25, 0.10, 0.00 ], 'max': 0.99 },
-    'Pd3s': { 'prob': [ 0.50, 0.30, 0.20, 0.00 ], 'max': 0.99 },
-    'Pd4':  { 'prob': [ 0.40, 0.35, 0.15, 0.10 ], 'max': 0.99 },
+    'Pd3':  { 'prob': [ 0.65, 0.25, 0.10, 0.00 ], 'max': 0.99, 'delta': 0.12 },
+    'Pd3s': { 'prob': [ 0.50, 0.30, 0.20, 0.00 ], 'max': 0.99, 'delta': 0.15 },
+    'Pd4':  { 'prob': [ 0.40, 0.35, 0.15, 0.10 ], 'max': 0.99, 'delta': 0.10 },
 }
 
 DEPENDENCY_TREE = {
@@ -37,11 +37,6 @@ DEPENDENCY_TREE = {
         }
     ]
 }
-
-
-def probability_delta(castell):
-    delta = 0.2
-    return delta
 
 
 def new_probabilities(castell, delta, outcome, index=1):
@@ -69,7 +64,7 @@ def main(castell, n=100):
     for iter in range(n):
         outcome = np.random.choice(RESULTS, p=PROBABILITIES[castell]['prob'])
 
-        delta = probability_delta(castell)
+        delta = PROBABILITIES[castell]['delta']
 
         print(f'===== Iter {iter + 1}/{n} =====')
         print(f'{outcome} | {delta}')
