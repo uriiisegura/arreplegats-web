@@ -262,31 +262,33 @@ class CastellsGame extends Component {
 					<div id="game-background"></div>
 					{
 						this.state.screen === 'HOME' ? <>
-							<div className="menu">
-								<button onClick={() => this.changeScreen('ASSAIG')}>
-									<span>ASSAIG</span>
-								</button>
-								<button className={this.state.colla.castellers < 31 ? 'disabled' : ''} onClick={() => this.changeScreen('ACTUACIO')}>
-									<span>ACTUACIÓ</span>
-								</button>
-								<button onClick={() => this.changeScreen('CASTELLS')}>
-									<span>CASTELLS</span>
-								</button>
-								<button className={this.state.colla.historic.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('HISTORIC')}>
-									<span>HISTÒRIC</span>
-								</button>
-								<button className="disabled">
-									<span>MISSIONS</span>
-								</button>
-								<button className="disabled">
-									<span>AJUDA</span>
-								</button>
-								<button className={this.state.colla.tried.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('STATS')}>
-									<span>ESTADÍSTIQUES</span>
-								</button>
-								<button onClick={() => {this.state.colla.addCastellers(10)}}>
-									<span>+10 castellers</span>
-								</button>
+							<div className="game-full-wrap game-bigger-wrap">
+								<div className="menu">
+									<button onClick={() => this.changeScreen('ASSAIG')}>
+										<span>ASSAIG</span>
+									</button>
+									<button className={this.state.colla.castellers < 31 ? 'disabled' : ''} onClick={() => this.changeScreen('ACTUACIO')}>
+										<span>ACTUACIÓ</span>
+									</button>
+									<button onClick={() => this.changeScreen('CASTELLS')}>
+										<span>CASTELLS</span>
+									</button>
+									<button className={this.state.colla.historic.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('HISTORIC')}>
+										<span>HISTÒRIC</span>
+									</button>
+									<button className="disabled">
+										<span>MISSIONS</span>
+									</button>
+									<button className="disabled">
+										<span>AJUDA</span>
+									</button>
+									<button className={this.state.colla.tried.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('STATS')}>
+										<span>ESTADÍSTIQUES</span>
+									</button>
+									<button onClick={() => {this.state.colla.addCastellers(10)}}>
+										<span>+10 castellers</span>
+									</button>
+								</div>
 							</div>
 						</> : <></>
 					}
