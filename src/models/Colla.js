@@ -3,14 +3,16 @@ import HexToFilter from "../functions/HexToFilter";
 import Normalize from "../functions/Normalize";
 import castells from "../data/joc-castells.json";
 
-const MIN_CASTELLERS = 15;
+const INITIAL_CASTELLERS = 15;
+const MIN_CASTELLERS = 31;
 
 class Colla {
 	constructor(name,
 				color,
-				castellers=MIN_CASTELLERS,
+				castellers=INITIAL_CASTELLERS,
 				stats=null,
 				historic=[],
+				tried=[],
 				date=Date.parse('2022-09-01')
 		) {
 		this.name = name;
@@ -34,6 +36,7 @@ class Colla {
 		} else
 			this.stats = stats;
 		this.historic = historic;
+		this.tried = tried;
 		this.date = date;
 	}
 	static fromJson(json) {
@@ -42,9 +45,10 @@ class Colla {
 		const castellers = json.castellers;
 		const stats = json.stats;
 		const historic = json.historic;
+		const tried = json.tried;
 		const date = json.date;
-		if (name && color && castellers && stats && historic && date)
-			return new Colla(name, color, castellers, stats, historic, date);
+		if (name && color && castellers && stats && historic && tried && date)
+			return new Colla(name, color, castellers, stats, historic, tried, date);
 		throw new Error("L'arxiu no conté cap partida.");
 	}
 	addCastellers(castellers) {
@@ -56,7 +60,7 @@ class Colla {
 		this.castellers -= castellers;
 		return castellers;
 	}
-	getCastellResult(castell) {
+	getCastellResult(castell, is_assaig) {
 		const results = ['DESCARREGAT', 'CARREGAT', 'INTENT', 'INTENT DESMUNTAT'];
 		const coeficients = [
 			[ 1.1, 1.05, 0.95, 0.9  ],
@@ -89,8 +93,15 @@ class Colla {
 		else if (new_probabilities[0] < castell.probabilitatsLimit[1])
 			new_probabilities[0] = castell.probabilitatsLimit[1]
 		
-		this.stats[castell.castell].stats.push(results[result]);
+		this.stats[castell.castell].stats.push({
+			resultat: results[result],
+			intentat_at: new Date(),
+			context: is_assaig ? 'assaig' : 'actuacio',
+			probabilitats: probabilities
+		});
 		this.stats[castell.castell].probabilitatsActual = Normalize(new_probabilities);
+		if (!this.tried.includes(castell.castell))
+			this.tried.push(castell.castell);
 		
 		return results[result];
 	}

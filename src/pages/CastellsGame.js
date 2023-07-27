@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import castells from "../data/joc-castells.json";
 import CastellSelector from "../components/CastellSelector";
 import CastellResult from "../components/CastellResult";
+import CastellStats from "../components/CastellStats";
 import Delay from "../functions/Delay";
 import Colla from "../models/Colla";
 
@@ -26,8 +27,15 @@ class CastellsGame extends Component {
 				'CARREGAT',
 				'INTENT',
 				'INTENT DESMUNTAT'
-			]
+			],
+			showStatsCastell: null
 		};
+	}
+	componentDidMount() {
+		this.loadGame()
+	}
+	componentDidUpdate(prevProps, prevState) {
+		this.saveGame();
 	}
 	componentWillUnmount() {
 		pujada.pause();
@@ -120,22 +128,11 @@ class CastellsGame extends Component {
 			history: history
 		});
 	}
-	goBack() {
-		const history = this.state.history;
-		const lastScreen = history.pop();
-		this.setState({
-			screen: lastScreen,
-			history: history,
-			selectedCastell: null,
-			selectedResult: null,
-			actuacio: []
-		});
-	}
 	selectCastell(castell) {
 		this.setState({selectedCastell: castells.filter(c => c.castell === castell)[0]}, this.solveCastell);
 	}
 	solveCastell() {
-		this.playCastell(this.state.colla.getCastellResult(this.state.selectedCastell));
+		this.playCastell(this.state.colla.getCastellResult(this.state.selectedCastell, this.state.screen === 'ASSAIG'));
 	}
 	waitAudioToFinish(audio) {
 		return new Promise(res => {
@@ -225,11 +222,22 @@ class CastellsGame extends Component {
 			return 'id' + castell;
 		return castell;
 	}
-	componentDidMount() {
-		this.loadGame()
+	statsSelect(e) {
+		this.setState({
+			showStatsCastell: e.target.value ? this.state.colla.stats[e.target.value] : null
+		})
 	}
-	componentDidUpdate(prevProps, prevState) {
-		this.saveGame();
+	goBack() {
+		const history = this.state.history;
+		const lastScreen = history.pop();
+		this.setState({
+			screen: lastScreen,
+			history: history,
+			selectedCastell: null,
+			selectedResult: null,
+			actuacio: [],
+			showStatsCastell: null
+		});
 	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
@@ -258,7 +266,7 @@ class CastellsGame extends Component {
 								<button onClick={() => this.changeScreen('ASSAIG')}>
 									<span>ASSAIG</span>
 								</button>
-								<button onClick={() => this.changeScreen('ACTUACIO')}>
+								<button className="disabled" onClick={() => this.changeScreen('ACTUACIO')}>
 									<span>ACTUACIÓ</span>
 								</button>
 								<button onClick={() => this.changeScreen('CASTELLS')}>
@@ -273,8 +281,11 @@ class CastellsGame extends Component {
 								<button className="disabled">
 									<span>AJUDA</span>
 								</button>
-								<button className="disabled">
+								<button className={this.state.colla.tried.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('STATS')}>
 									<span>ESTADÍSTIQUES</span>
+								</button>
+								<button className="disabled">
+									<span>GESTIONAR LA COLLA</span>
 								</button>
 							</div>
 						</> : <></>
@@ -429,6 +440,28 @@ class CastellsGame extends Component {
 											</tbody>
 										</table>
 									</>
+								}
+							</div>
+						</> : <></>
+					}
+					{
+						this.state.screen === 'STATS' ? <>
+							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+							<div className="game-full-wrap game-stats-wrap">
+								<select className="game-stats-selector" onChange={this.statsSelect.bind(this)}>
+									<option value={null}>SELECCIONA UN CASTELL PER VEURE'N LES ESTADÍSTIQUES</option>
+									{
+										this.state.colla.tried.map((c, i) => {
+											return <option value={c} key={`stats-sel-${i}`}>{c}</option>;
+										})
+									}
+								</select>
+								{
+									this.state.showStatsCastell ? <>
+										<CastellStats
+											stats={this.state.showStatsCastell}
+											/>
+									</> : <></>
 								}
 							</div>
 						</> : <></>

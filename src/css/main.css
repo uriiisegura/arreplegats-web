@@ -3358,6 +3358,36 @@ span.help {
 	white-space: nowrap;
 }
 
+.game-stats-wrap {
+	margin: 0 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.game-stats-selector {
+	outline: none;
+	height: 2rem;
+	width: 100%;
+	margin-bottom: 1rem;
+	color: var(--white);
+	background-color: var(--game-lightBlue);
+	border: none;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+
+.game-stats-graphic-wrap {
+	height: calc(100% - 4rem);
+}
+
+.game-stats-graph {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	height: 100% !important;
+	max-height: 50vh;
+}
+
 @media screen and (max-width: 0px) {
 	.castells-game {
 		display: none;

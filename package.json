@@ -41,7 +41,9 @@
     ]
   },
   "devDependencies": {
+    "chartjs": "^0.3.24",
     "gh-pages": "^5.0.0",
+    "react-chartjs-2": "^5.2.0",
     "react-router-dom": "^6.8.2"
   }
 }
