@@ -3,7 +3,7 @@ import HexToFilter from "../functions/HexToFilter";
 import Normalize from "../functions/Normalize";
 import castells from "../data/joc-castells.json";
 
-const MIN_CASTELLERS = 35;
+const MIN_CASTELLERS = 15;
 
 class Colla {
 	constructor(name,

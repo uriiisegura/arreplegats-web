@@ -245,7 +245,7 @@ class CastellsGame extends Component {
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
 						{
-							this.state.screen !== 'ACTUACIO' ? <button className="btn" onClick={this.saveGameFile.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Exportar</button> : <></>
+							this.state.screen === 'HOME' ? <button className="btn" onClick={this.saveGameFile.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Exportar</button> : <></>
 						}
 					</div>
 					<div className="sub-bar">
@@ -273,13 +273,16 @@ class CastellsGame extends Component {
 								<button className="disabled">
 									<span>AJUDA</span>
 								</button>
+								<button className="disabled">
+									<span>ESTADÍSTIQUES</span>
+								</button>
 							</div>
 						</> : <></>
 					}
 					{
 						this.state.screen === 'ASSAIG' ? <>
-							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
-							<div className="game-full-wrap">
+							{!this.state.selectedCastell && <button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>}
+							<div className={`game-full-wrap ${this.state.selectedCastell ? 'game-bigger-wrap' : ''}`}>
 								{
 									this.state.selectedCastell &&
 										<CastellResult
@@ -301,8 +304,11 @@ class CastellsGame extends Component {
 					{
 						this.state.screen === 'ACTUACIO' ? <>
 							{
+								this.state.actuacio.length === 0 && !this.state.selectedCastell ? <button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button> : <></>
+							}
+							{
 								this.state.actuacio.length < 4 ? <>
-									<div className="game-full-wrap game-bigger-wrap">
+									<div className={`game-full-wrap ${this.state.actuacio.length === 0 && !this.state.selectedCastell ? '' : 'game-bigger-wrap'}`}>
 										{
 											this.state.selectedCastell ? <>
 												<CastellResult
@@ -326,7 +332,7 @@ class CastellsGame extends Component {
 										<div className="game-actuacio-result">
 											{
 												this.state.actuacio.map((r, i) => {
-													return <div key={i}>
+													return <div key={`ronda-${i}`}>
 														<h4>{r.ronda}a Ronda<span>{r.punts} punts</span></h4>
 														<p>{r.castell}{
 															r.resultat !== 'DESCARREGAT' ? <span className={r.resultat.toLowerCase()}>{r.resultat.toLowerCase()}</span> : <></>
@@ -351,7 +357,7 @@ class CastellsGame extends Component {
 							<div className="game-table-wrap">
 								{
 									[...Array(9).keys()].map((g, i) => {
-										return <table className="score-table" key={i}>
+										return <table className="score-table" key={`group-${i}`}>
 											<thead>
 												<tr>
 													<th colSpan="4">Grup {g}</th>
@@ -367,7 +373,7 @@ class CastellsGame extends Component {
 												{
 													castells.map((c, j) => {
 														if (c.grup !== g) return <></>;
-														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={j}>
+														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={`group-${i}-row-${j}`}>
 															<td>{c.castell}</td>
 															<td>{c.carregat}</td>
 															<td>{c.descarregat}</td>
@@ -412,7 +418,7 @@ class CastellsGame extends Component {
 														const rondes = [];
 														for (let castell of a.castells)
 															rondes.push(this.formatCastell(castell.castell, castell.resultat));
-														return <tr key={i}>
+														return <tr key={`historic-${i}`}>
 															<td>{datetime[0]}</td>
 															<td>{datetime[1].split(':').reverse().slice(1).reverse().join(':')}</td>
 															<td>{rondes.join(', ')}</td>

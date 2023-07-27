@@ -3045,7 +3045,7 @@ Joc Castells
 	grid-template-columns: repeat(3, 1fr);
 	gap: 0.5rem;
 	width: min(60rem, 95%);
-	margin: min(10rem, 30%) auto 0;
+	margin: min(10rem, 15%) auto 0;
 }
 
 .menu button {
@@ -3155,14 +3155,13 @@ span.help {
 .game-castell-selector {
 	position: absolute;
 	margin: auto;
-	top: 0;
+	top: min(15rem, 10%);
 	right: 0;
-	bottom: 0;
 	left: 0;
 	background-color: var(--game-clearBlue);
 	border: 3px solid var(--game-lightBlue);
 	width: min(500px, 95%);
-	height: 300px;
+	height: 400px;
 	padding: 8px;
 	display: flex;
 	gap: 0.3rem;
@@ -3339,6 +3338,7 @@ span.help {
 	color: var(--white);
 	border-collapse: collapse;
 	width: 100%;
+	overflow: unset;
 }
 
 .game-historic-table th,
