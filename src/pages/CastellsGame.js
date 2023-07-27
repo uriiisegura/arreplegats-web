@@ -37,11 +37,10 @@ class CastellsGame extends Component {
 		caiguda.pause();
 
 		if (this.state.colla) {
-			if (window.confirm('Vols guardar la partida abans de marxar?\n\nAquest missatge apareix sempre que surts del joc, hagis o no guardat la partida prèviament. Si ja l\'has guardat, ignora\'l.'))
-				this.saveGame();
+			this.saveGame();
 		}
 	}
-	loadGame(e) {
+	loadGameFile(e) {
 		const files = e.target.files;
 		if (files.length <= 0)
 			return;
@@ -58,7 +57,7 @@ class CastellsGame extends Component {
 		};
 		fr.readAsText(files[0]);
 	}
-	saveGame() {
+	saveGameFile() {
 		const file = new Blob([btoa(JSON.stringify(this.state.colla, null, 4))], {type: 'bin'});
 		if (window.navigator.msSaveOrOpenBlob)
 			window.navigator.msSaveOrOpenBlob(file, 'joc-castells.bin');
@@ -75,6 +74,27 @@ class CastellsGame extends Component {
 			}, 0);
 		}
 	}
+	loadGame() {
+		try {
+			const fromLocalStorage = localStorage.getItem('game');
+			if (!fromLocalStorage) return;
+
+			const result = JSON.parse(atob(fromLocalStorage));
+
+			this.setState({
+				colla: Colla.fromJson(result)
+			});
+		} catch (e) {
+			document.getElementById('initial-error').innerHTML = e.message;
+		}
+	}
+	saveGame() {
+		try {
+			localStorage.setItem('game', btoa(JSON.stringify(this.state.colla, null, 4)));
+		} catch (e) {
+			console.error(e);
+		}
+	}	
 	newGame() {
 		document.getElementById('create-game').style.display = 'flex';
 		document.getElementById('load-game').style.pointerEvents = 'none';
@@ -206,13 +226,24 @@ class CastellsGame extends Component {
 			return 'id' + castell;
 		return castell;
 	}
+	componentDidMount() {
+		this.loadGame()
+	}
+	componentDidUpdate(prevProps, prevState) {
+		const prevColla = JSON.stringify(prevState.colla);
+		const currColla = JSON.stringify(this.state.colla);
+
+		if (prevColla !== currColla) {
+			this.saveGame();
+		}
+	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
 			{
 				this.state.colla === null
 				? <div className="flex-page"><div className="btn-wrap">
 					<label htmlFor="import" className="btn" id="load-game">Carregar partida</label>
-					<input id="import" type="file" onChange={this.loadGame.bind(this)} accept=".bin" style={{display: 'none'}} />
+					<input id="import" type="file" onChange={this.loadGameFile.bind(this)} accept=".bin" style={{display: 'none'}} />
 					<button className="btn" onClick={this.newGame.bind(this)} id="new-game">Nova partida</button>
 					<p id="initial-error" className="game-error"></p>
 				</div></div>
@@ -220,7 +251,7 @@ class CastellsGame extends Component {
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
 						{
-							this.state.screen !== 'ACTUACIO' ? <button className="btn" onClick={this.saveGame.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Guardar</button> : <></>
+							this.state.screen !== 'ACTUACIO' ? <button className="btn" onClick={this.saveGameFile.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Exportar</button> : <></>
 						}
 					</div>
 					<div className="sub-bar">
@@ -256,20 +287,20 @@ class CastellsGame extends Component {
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
 							<div className="game-full-wrap">
 								{
-									this.state.selectedCastell ? <>
-										<CastellResult
-											castell={this.state.selectedCastell.castell}
-											result={this.state.selectedResult}
-											onNext={this.restartAssaig.bind(this)}
-											/>
-									</> : <>
-										<CastellSelector
-											castells={castells}
-											castellers={this.state.colla.castellers}
-											onSelectCastell={this.selectCastell.bind(this)}
-											/>
-									</>
+									this.state.selectedCastell &&
+										<CastellResultat
+											selectedCastell={this.state.selectedCastell}
+											selectedResult={this.state.selectedResult}
+											restartAssaig={this.restartAssaig.bind(this)}
+											stats={this.state.colla.stats}
+										  />
 								}
+								<CastellSelector
+									castells={castells}
+									castellers={this.state.colla.castellers}
+									onSelectCastell={this.selectCastell.bind(this)}
+									hide={this.state.selectedCastell !== null}
+								  />
 							</div>
 						</> : <></>
 					}
@@ -286,17 +317,18 @@ class CastellsGame extends Component {
 													onNext={this.nextRonda.bind(this)}
 													/>
 											</> : <>
+												<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+
 												<CastellSelector
 													castells={castells}
 													castellers={this.state.colla.castellers}
 													onSelectCastell={this.selectCastell.bind(this)}
 													ronda={this.state.actuacio.length + 1}
-													/>
+												/>
 											</>
 										}
 									</div>
 								</> : <>
-									<button className="back-btn" onClick={this.endActuacio.bind(this)}>ENRERE</button>
 									<div className="game-full-wrap">
 										<div className="game-actuacio-result">
 											{
@@ -310,6 +342,10 @@ class CastellsGame extends Component {
 												})
 											}
 											<h3>TOTAL: {this.state.actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts}</h3>
+
+											<button className="back-btn" onClick={this.endActuacio.bind(this)}>
+												CONTINUA
+											</button>
 										</div>
 									</div>
 								</>
