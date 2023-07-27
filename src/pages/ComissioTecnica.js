@@ -1,7 +1,25 @@
 import React, { Component } from "react";
+import junta from "../data/junta-tecnica.json";
 
 class ComissioTecnica extends Component {
+	renderTeam(team, key) {
+		return (
+			<div className="junta-team" key={key}>
+				<h4>{team.titol}</h4>
+				{
+					team.components.map((p, i) => {
+						return <p key={i}>{p.carrec ? <><span>{p.carrec}</span>: </> : <></>}{p.nom}</p>;
+					})
+				}
+			</div>
+		);
+	}
 	render() {
+		const dirreccio = junta.actual.direccio;
+		const equips = junta.actual.junta;
+		const col_1 = equips.slice(0, Math.ceil(equips.length / 2));
+		const col_2 = equips.slice(Math.ceil(equips.length / 2), equips.length);
+
 		return (<>
 			<section>
                 <h2>Comissió tècnica</h2>
@@ -14,56 +32,25 @@ class ComissioTecnica extends Component {
 					S'encarrega de vetllar pel desenvolupament de l'activitat castellera. Organitza els assajos i decideix els castells que es faran durant el curs. Forma i prepara als castellers per a fer correctament la seva tasca. La Comissió Tècnica és qui decideix, valorant els assajos durant el curs, quins castells es podran fer a les diades.
 				</p>
 
-				<div className="juntes tecnica">
+				<div className="juntes">
 					<div className="junta-column">
-						<div className="junta-team">
-							<h4>Direcció tècnica</h4>
-							<p><span>Cap de colla</span>: Xavier Marín i Rísquez</p>
-							<p><span>Sots-cap de colla</span>: Pau Coll i Casellas</p>
-							<p><span>Presidenta</span>: Clara Montoya i García</p>
-							<p><span>Vice-president</span>: Benet Antius i Lozano</p>
-						</div>
+						{
+							this.renderTeam(dirreccio, 0)
+						}
 					</div>
 					<div className="junta-column">
-						<div className="junta-team">
-							<h4>Equip de troncs</h4>
-							<p><span>Cap de troncs</span>: Júlia Font i Aguilar</p>
-							<p>Laia Boixet i Lladó</p>
-							<p>Pau Rosselló i Carreras</p>
-							<p>Júlia Montserrat</p>
-							<p>Eduard Llorens i Pomé</p>
-							<p>David Torras i Martín</p>
-							<p>Aina Vila</p>
-							<p>Biel Romera i Muñoz</p>
-							<p>Queralt Bautista i Rosas</p>
-							<p>Ignasi Tortras</p>
-						</div>
-
-						<div className="junta-team">
-							<h4>Equip de poms</h4>
-							<p><span>Cap de poms</span>: Paula Olivé</p>
-							<p>Carlota Fornells</p>
-							<p>Carla Falguera i Garrido</p>
-							<p>Núria Bautista i Rosas</p>
-							<p>Ana Paula i Monzón</p>
-						</div>
+						{
+							col_1.map((t, i) => {
+								return this.renderTeam(t, i);
+							})
+						}
 					</div>
 					<div className="junta-column">
-						<div className="junta-team">
-							<h4>Equip de pinyes, folres, i manilles</h4>
-							<p><span>Cap de pinyes</span>: Pau Coll i Casellas</p>
-							<p>Oriol Segura i Niño</p>
-							<p>Edgar Castellanos i Offroy</p>
-							<p>Aida Sanfeliu i Gubern</p>
-							<p>Pau Sánchez i Viol</p>
-							<p>Martí Puig i Vall</p>
-							<p>Bet Romera i Mirabent</p>
-							<p>Laia Homs i Vilaseca</p>
-							<p>Anna Santamaria i Balaguer</p>
-							<p>Jordi Torrens i Camprubí</p>
-							<p>Eudald Rovira i Rovira</p>
-							<p>Arnau Espinalt</p>
-						</div>
+						{
+							col_2.map((t, i) => {
+								return this.renderTeam(t, i);
+							})
+						}
 					</div>
 				</div>
 			</section>

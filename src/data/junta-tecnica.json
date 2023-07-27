@@ -1,0 +1,119 @@
+{
+	"actual": {
+		"direccio": {
+			"titol": "Direcció tècnica",
+			"components": [
+				{
+					"carrec": "Cap de colla",
+					"nom": "Xavier Marín i Rísquez"
+				},
+				{
+					"carrec": "Sots-cap de colla",
+					"nom": "Pau Coll i Casellas"
+				}
+			]
+		},
+		"junta": [
+			{
+				"titol": "Equip de troncs",
+				"components": [
+					{
+						"carrec": "Cap de troncs",
+						"nom": "Júlia Font i Aguilar"
+					},
+					{
+						"nom": "Laia Boixet i Lladó"
+					},
+					{
+						"nom": "Pau Rosselló i Carreras"
+					},
+					{
+						"nom": "Júlia Montserrat"
+					},
+					{
+						"nom": "Eduard Llorens i Pomé"
+					},
+					{
+						"nom": "David Torras i Martín"
+					},
+					{
+						"nom": "Aina Vila"
+					},
+					{
+						"nom": "Biel Romera i Muñoz"
+					},
+					{
+						"nom": "Queralt Bautista i Rosas"
+					},
+					{
+						"nom": "Ignasi Tortras"
+					}
+				]
+			},
+			{
+				"titol": "Equip de poms",
+				"components": [
+					{
+						"carrec": "Cap de poms",
+						"nom": "Paula Olivé"
+					},
+					{
+						"nom": "Carlota Fornells"
+					},
+					{
+						"nom": "Carla Falguera i Garrido"
+					},
+					{
+						"nom": "Núria Bautista i Rosas"
+					},
+					{
+						"nom": "Ana Paula i Monzón"
+					}
+				]
+			},
+			{
+				"titol": "Equip de pinyes, folres, i manilles",
+				"components": [
+					{
+						"carrec": "Cap de pinyes",
+						"nom": "Pau Coll i Casellas"
+					},
+					{
+						"nom": "Edgar Castellanos i Offroy"
+					},
+					{
+						"nom": "Aida Sanfeliu i Gubern"
+					},
+					{
+						"nom": "Oriol Segura i Niño"
+					},
+					{
+						"nom": "Pau Sánchez i Viol"
+					},
+					{
+						"nom": "Martí Puig i Vall"
+					},
+					{
+						"nom": "Bet Romera i Mirabent"
+					},
+					{
+						"nom": "Laia Homs i Vilaseca"
+					},
+					{
+						"nom": "Anna Santamaria i Balaguer"
+					},
+					{
+						"nom": "Jordi Torrens i Camprubí"
+					},
+					{
+						"nom": "Eudald Rovira i Rovira"
+					},
+					{
+						"nom": "Arnau Espinalt"
+					}
+				]
+			}
+		]
+	},
+	"antigues": {}
+}
