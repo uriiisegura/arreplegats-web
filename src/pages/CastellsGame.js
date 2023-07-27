@@ -292,12 +292,14 @@ class CastellsGame extends Component {
 													}
 												</div>
 											</> : <>
+												<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+
 												<CastellSelector
 													castells={castells}
 													castellers={this.state.colla.castellers}
 													onSelectCastell={this.selectCastell.bind(this)}
 													ronda={this.state.actuacio.length + 1}
-													/>
+												/>
 											</>
 										}
 									</div>
