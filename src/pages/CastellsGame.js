@@ -250,7 +250,7 @@ class CastellsGame extends Component {
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
 						{
-							this.state.screen !== 'ACTUACIO' ? <button className="btn" onClick={this.saveGameFile.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Guardar</button> : <></>
+							this.state.screen !== 'ACTUACIO' ? <button className="btn" onClick={this.saveGameFile.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Exportar</button> : <></>
 						}
 					</div>
 					<div className="sub-bar">
