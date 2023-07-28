@@ -5,18 +5,11 @@ from pprint import pprint
 
 RESULTS = ['D', 'C', 'I', 'ID']
 
-INCREMENT = {
-    'D':  [ 0.75, 0.00, 0.00, 0.25 ],
-    'C':  [ 0.65, 0.35, 0.00, 0.00 ],
-    'I':  [ 0.00, 0.40, 0.00, 0.60 ],
-    'ID': [ 0.40, 0.00, 0.60, 0.00 ]
-}
-
-DECREMENT = {
-    'D':  [ 0.00, 0.20, 0.80, 0.00 ],
-    'C':  [ 0.00, 0.00, 0.60, 0.40 ],
-    'I':  [ 0.65, 0.00, 0.35, 0.00 ],
-    'ID': [ 0.00, 0.30, 0.00, 0.70 ]
+EFFECT = {
+    'D':  [ +0.75, -0.20, -0.80, +0.25 ],
+    'C':  [ +0.65, +0.35, -0.60, -0.40 ],
+    'I':  [ -0.65, +0.40, -0.35, +0.60 ],
+    'ID': [ +0.40, -0.30, +0.60, -0.70 ]
 }
 
 PROBABILITIES = {
@@ -41,13 +34,11 @@ DEPENDENCY_TREE = {
 
 def new_probabilities(castell, delta, outcome, index=1):
     old_prob = PROBABILITIES[castell]['prob']
-    inc_deltas = [index * k * delta for k in INCREMENT[outcome]]
-    dec_deltas = [index * k * delta for k in DECREMENT[outcome]]
+    deltas = [index * k * delta for k in EFFECT[outcome]]
 
     new_prob = []
     for i in range(4):
-        prob  = old_prob[i] + inc_deltas[i]
-        prob -= dec_deltas[i]
+        prob = old_prob[i] + deltas[i]
         if prob < 0:
             prob = 0
         new_prob.append(prob)
@@ -67,7 +58,7 @@ def main(castell, n=100):
         delta = PROBABILITIES[castell]['delta']
 
         print(f'===== Iter {iter + 1}/{n} =====')
-        print(f'{outcome} | {delta}')
+        print(f'{outcome} | delta: {delta}')
         print(PROBABILITIES[castell]['prob'])
 
         PROBABILITIES[castell]['prob'] = new_probabilities(castell, delta, outcome)
