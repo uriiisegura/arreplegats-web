@@ -13,9 +13,14 @@ EFFECT = {
 }
 
 PROBABILITIES = {
-    'Pd3':  { 'prob': [ 0.65, 0.25, 0.10, 0.00 ], 'max': 0.99, 'delta': 0.12 },
-    'Pd3s': { 'prob': [ 0.25, 0.35, 0.40, 0.00 ], 'max': 0.99, 'delta': 0.15 },
-    'Pd4':  { 'prob': [ 0.20, 0.30, 0.40, 0.10 ], 'max': 0.99, 'delta': 0.10 },
+    'Pd3' : { 'prob': [ 0.65, 0.25, 0.10, 0.00 ], 'max': 0.99, 'k': 0.12 },
+    'Pd3s': { 'prob': [ 0.25, 0.35, 0.40, 0.00 ], 'max': 0.99, 'k': 0.15 },
+    '3d5' : { 'prob': [ 0.40, 0.30, 0.10, 0.20 ], 'max': 0.99, 'k': 0.15 },
+    '4d5' : { 'prob': [ 0.40, 0.30, 0.10, 0.20 ], 'max': 0.99, 'k': 0.17 },
+    'Td5' : { 'prob': [ 0.35, 0.25, 0.25, 0.15 ], 'max': 0.99, 'k': 0.13 },
+    '3d5a': { 'prob': [ 0.20, 0.35, 0.15, 0.30 ], 'max': 0.99, 'k': 0.12 },
+    '4d5a': { 'prob': [ 0.20, 0.35, 0.15, 0.30 ], 'max': 0.99, 'k': 0.14 },
+    'Pd4' : { 'prob': [ 0.20, 0.30, 0.40, 0.10 ], 'max': 0.99, 'k': 0.10 },
 }
 
 DEPENDENCY_TREE = {
@@ -27,9 +32,24 @@ DEPENDENCY_TREE = {
         {
             'castell': 'Pd4',
             'index': 0.01
+        },
+        {
+            'castell': '3d5a',
+            'index': 0.03
+        },
+        {
+            'castell': '4d5a',
+            'index': 0.03
         }
     ]
 }
+
+
+# TODO: get delta depending on the castell's k constant
+# This must be a 'fun' funcion (exponential, logarithmical, ...) so that the
+# progress is not linear and the player gets catched by the game
+def calculate_delta(castell):
+    return PROBABILITIES[castell]['k']
 
 
 def new_probabilities(castell, delta, outcome, index=1):
@@ -50,12 +70,12 @@ def new_probabilities(castell, delta, outcome, index=1):
 
 
 def main(castell, n=100):
-    total = { 'D': 0, 'C': 0, 'I': 0, 'ID': 0}
+    total = {k: 0 for k in RESULTS}
 
     for iter in range(n):
         outcome = np.random.choice(RESULTS, p=PROBABILITIES[castell]['prob'])
 
-        delta = PROBABILITIES[castell]['delta']
+        delta = calculate_delta(castell)
 
         print(f'===== Iter {iter + 1}/{n} =====')
         print(f'{outcome} | delta: {delta}')
