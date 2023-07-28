@@ -9,13 +9,13 @@ EFFECT = {
     'D':  [ +0.75, -0.20, -0.80, +0.25 ],
     'C':  [ +0.65, +0.35, -0.60, -0.40 ],
     'I':  [ -0.65, +0.40, -0.35, +0.60 ],
-    'ID': [ +0.40, -0.30, +0.60, -0.70 ]
+    'ID': [ +0.30, -0.30, +0.70, -0.70 ]
 }
 
 PROBABILITIES = {
     'Pd3':  { 'prob': [ 0.65, 0.25, 0.10, 0.00 ], 'max': 0.99, 'delta': 0.12 },
-    'Pd3s': { 'prob': [ 0.50, 0.30, 0.20, 0.00 ], 'max': 0.99, 'delta': 0.15 },
-    'Pd4':  { 'prob': [ 0.40, 0.35, 0.15, 0.10 ], 'max': 0.99, 'delta': 0.10 },
+    'Pd3s': { 'prob': [ 0.25, 0.35, 0.40, 0.00 ], 'max': 0.99, 'delta': 0.15 },
+    'Pd4':  { 'prob': [ 0.20, 0.30, 0.40, 0.10 ], 'max': 0.99, 'delta': 0.10 },
 }
 
 DEPENDENCY_TREE = {
@@ -67,8 +67,11 @@ def main(castell, n=100):
 
         total[outcome] += 1
 
-        for c in DEPENDENCY_TREE[castell]:
-            PROBABILITIES[c['castell']]['prob'] = new_probabilities(c['castell'], delta, outcome, index=c['index'])
+        try:
+            for c in DEPENDENCY_TREE[castell]:
+                PROBABILITIES[c['castell']]['prob'] = new_probabilities(c['castell'], delta, outcome, index=c['index'])
+        except KeyError:
+            print(f'No dependencies for {castell}, skipping...')
     
     print(
         f'==============================================',
