@@ -435,7 +435,7 @@
 		"castell": "Td8fm",
 		"carregat": 2680,
 		"descarregat": 3450,
-		"gent": 0,
+		"gent": 215,
 		"probabilitatsInicials": [0.05, 0.15, 0.7, 0.1],
 		"probabilitatsLimit": [0.7, 0.05]
 	},
@@ -495,7 +495,7 @@
 		"castell": "7d8sf",
 		"carregat": 3615,
 		"descarregat": 4625,
-		"gent": 0,
+		"gent": 198,
 		"probabilitatsInicials": [0.05, 0.1, 0.6, 0.25],
 		"probabilitatsLimit": [0.7, 0.05]
 	},
@@ -505,7 +505,7 @@
 		"castell": "3d8sf",
 		"carregat": 3745,
 		"descarregat": 4875,
-		"gent": 0,
+		"gent": 103,
 		"probabilitatsInicials": [0.05, 0.07, 0.53, 0.35],
 		"probabilitatsLimit": [0.65, 0.05]
 	},
@@ -515,7 +515,7 @@
 		"castell": "Pd6sf",
 		"carregat": 4105,
 		"descarregat": 5145,
-		"gent": 0,
+		"gent": 58,
 		"probabilitatsInicials": [0.04, 0.06, 0.7, 0.2],
 		"probabilitatsLimit": [0.7, 0.04]
 	},
