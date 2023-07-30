@@ -15,7 +15,7 @@ class Contractacions extends Component {
 
 				<iframe
 					className="contract-vid"
-					src="https://youtube.com/embed/bXJlnNdIobY?controls=0&showinfo=0&rel=0"
+					src="https://youtube.com/embed/bXJlnNdIobY?showinfo=0&rel=0"
 					title="Els Arreplegats a Eufòria (TV3)"
 					/>
 				
