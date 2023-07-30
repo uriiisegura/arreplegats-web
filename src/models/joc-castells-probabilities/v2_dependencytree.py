@@ -45,11 +45,11 @@ DEPENDENCY_TREE = {
 }
 
 
-# TODO: get delta depending on the castell's k constant
-# This must be a 'fun' funcion (exponential, logarithmical, ...) so that the
-# progress is not linear and the player gets catched by the game
-def calculate_delta(castell):
-    return PROBABILITIES[castell]['k']
+def calculate_delta(castell, n):
+    def f(x):
+        k = PROBABILITIES[castell]['k']
+        return (k * x) / (x - 100 * (1 - k))
+    return f(-n)
 
 
 def new_probabilities(castell, delta, outcome, index=1):
@@ -74,8 +74,9 @@ def main(castell, n=100):
 
     for iter in range(n):
         outcome = np.random.choice(RESULTS, p=PROBABILITIES[castell]['prob'])
+        total[outcome] += 1
 
-        delta = calculate_delta(castell)
+        delta = calculate_delta(castell, sum(total.values()))
 
         print(f'===== Iter {iter + 1}/{n} =====')
         print(f'{outcome} | delta: {delta}')
@@ -85,7 +86,6 @@ def main(castell, n=100):
 
         print(PROBABILITIES[castell]['prob'])
 
-        total[outcome] += 1
 
         try:
             for c in DEPENDENCY_TREE[castell]:
