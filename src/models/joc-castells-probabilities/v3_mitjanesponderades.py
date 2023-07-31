@@ -212,8 +212,33 @@ def simulate_play(castell):
     return result, newProbs
 
 # Main
-print("start:", PFinal("pd3"))
+print("start pd3:", PFinal("pd3"))
+print("start pd4:", PFinal("pd4"))
+print("start pd5:", PFinal("pd5"))
+
+# pd3
+print("before pd3, pd3:", PFinal("pd3"))
 
 for i in range(20):
     result, newProbs = simulate_play("pd3")
-    print(result, newProbs)
+    # print(result, newProbs)
+
+print("after pd3, pd3:", PFinal("pd3"))
+
+# pd4
+print("before pd4, pd4:", PFinal("pd4"))
+
+for i in range(20):
+    result, newProbs = simulate_play("pd4")
+    # print(result, newProbs)
+
+print("after pd4, pd4:", PFinal("pd4"))
+
+# pd5
+print("before pd5, pd5:", PFinal("pd5"))
+
+for i in range(20):
+    result, newProbs = simulate_play("pd5")
+    # print(result, newProbs)
+
+print("after pd5, pd5:", PFinal("pd5"))
