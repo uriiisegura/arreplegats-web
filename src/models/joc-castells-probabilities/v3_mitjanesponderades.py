@@ -1,7 +1,7 @@
 CASTELLS = {
     "pd3": {
         "pes_dependencies": 0,
-        "unique": [0.05, 0.15, 0.4, 0.4],
+        "unique": [0.1, 0.2, 0.4, 0.3],
         "dependencies": {}
     },
     "pd3s": {
