@@ -327,6 +327,7 @@ class CastellsGame extends Component {
 									castellers={this.state.colla.castellers}
 									onSelectCastell={this.selectCastell.bind(this)}
 									hide={this.state.selectedCastell !== null}
+									stats={this.state.colla.stats}
 									/>
 							</div>
 						</> : <></>
@@ -353,6 +354,7 @@ class CastellsGame extends Component {
 													castellers={this.state.colla.castellers}
 													onSelectCastell={this.selectCastell.bind(this)}
 													ronda={this.state.actuacio.length + 1}
+													stats={this.state.colla.stats}
 												/>
 											</>
 										}
