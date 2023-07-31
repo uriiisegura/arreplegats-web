@@ -12,6 +12,13 @@ EFFECT = {
     'ID': [ +0.30, -0.30, +0.70, -0.70 ]
 }
 
+# IMPORTANT !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+# IMPORTANT !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+# IMPORTANT !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!! IMPORTANT !!!
+# Les probabilitats inicials han de respondre a la pregunta:
+#       Un grup de penya ràndom (no han fet castells mai), quina probabilititat
+#       tindrien de D/C/I/ID un _d_ a la primera?
+# Això vol dir que s'ha de canviar les que hi ha ara xD
 PROBABILITIES = {
     'Pd3'   : { 'prob': [ 0.65, 0.25, 0.10, 0.00 ], 'max': 0.99, 'k': 0.120 },
     'Pd3s'  : { 'prob': [ 0.25, 0.35, 0.40, 0.00 ], 'max': 0.99, 'k': 0.150 },
