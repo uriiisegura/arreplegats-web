@@ -82,8 +82,8 @@ class CastellSelector extends Component {
 									)
 									const difficulty_color = {
 										1: 'red',
-										2: 'yellow',
-										3: 'orange',
+										2: 'orange',
+										3: 'yellow',
 										4: 'green'
 									}
 										[difficulty]
