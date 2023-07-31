@@ -89,24 +89,28 @@ class CastellSelector extends Component {
 										[difficulty]
 
 									return <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }} className={`${blocked ? 'disabled' : ''}`} onClick={() => this.selectCastell(c.castell)} key={i}>
-										<div className="castell">
+										<span className="castell">
 											{c.castell}
-											{
-												blocked && <><br /><span className="gent">{c.gent} persones</span></>
-											}
-										</div>
+										</span>
 
-										<div
-											style={{
-												display: 'flex',
-												gap: 5
-											}}
-										>
-											<div style={{ width: 10, height: 10, backgroundColor: difficulty > 0 ? difficulty_color : '#eee' }}></div>
-											<div style={{ width: 10, height: 10, backgroundColor: difficulty > 1 ? difficulty_color : '#eee' }}></div>
-											<div style={{ width: 10, height: 10, backgroundColor: difficulty > 2 ? difficulty_color : '#eee' }}></div>
-											<div style={{ width: 10, height: 10, backgroundColor: difficulty > 3 ? difficulty_color : '#eee' }}></div>
-										</div>
+										{
+											blocked && <span className="gent">{c.gent} persones</span>
+										}
+
+										{
+											!blocked &&
+											<div
+												style={{
+													display: 'flex',
+													gap: 5
+												}}
+											>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 0 ? difficulty_color : '#eee' }}></div>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 1 ? difficulty_color : '#eee' }}></div>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 2 ? difficulty_color : '#eee' }}></div>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 3 ? difficulty_color : '#eee' }}></div>
+											</div>
+										}
 									</div>;
 								})
 							}

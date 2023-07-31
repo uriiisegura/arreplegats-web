@@ -3214,9 +3214,10 @@ span.help {
 	color: var(--game-lightGray);
 }
 
-.game-castell-selector .box-wrap div .castell .gent {
+.game-castell-selector .box-wrap div .gent {
 	font-size: 0.5rem;
 	height: fit-content;
+	color: #ccc;
 }
 
 .game-castell-selector .back-btn {
