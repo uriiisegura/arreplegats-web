@@ -141,7 +141,7 @@ class CastellsGame extends Component {
 		});
 	}
 	async playCastell(resultat) {
-		if (process.env.NODE_ENV === 'development') {
+		if (process.env.NODE_ENV !== 'development') {
 			pujada.currentTime = 0;
 			baixada.currentTime = 0;
 			aleta.currentTime = 0;
