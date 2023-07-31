@@ -3214,9 +3214,10 @@ span.help {
 	color: var(--game-lightGray);
 }
 
-.game-castell-selector .box-wrap div .castell .gent {
+.game-castell-selector .box-wrap div .gent {
 	font-size: 0.5rem;
 	height: fit-content;
+	color: #ccc;
 }
 
 .game-castell-selector .back-btn {
@@ -3378,6 +3379,7 @@ span.help {
 	padding: 0 10px;
 }
 
+/*
 .game-stats-graphic-wrap {
 	height: calc(100% - 4rem);
 }
@@ -3389,6 +3391,7 @@ span.help {
 	height: 100% !important;
 	max-height: 50vh;
 }
+*/
 
 @media screen and (max-width: 0px) {
 	.castells-game {

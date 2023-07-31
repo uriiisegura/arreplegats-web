@@ -141,7 +141,7 @@ class CastellsGame extends Component {
 		});
 	}
 	async playCastell(resultat) {
-		if (process.env.NODE_ENV === 'development') {
+		if (process.env.NODE_ENV !== 'development') {
 			pujada.currentTime = 0;
 			baixada.currentTime = 0;
 			aleta.currentTime = 0;
@@ -239,6 +239,23 @@ class CastellsGame extends Component {
 			showStatsCastell: null
 		});
 	}
+	sortByIntentatAt(a, b) {
+		const intentatAtA = this.state.colla.stats[a].stats[
+			this.state.colla.stats[a].stats
+				.map(intent => intent.intentat_at)
+				.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+		]
+			.intentat_at
+
+		const intentatAtB = this.state.colla.stats[b].stats[
+			this.state.colla.stats[b].stats
+				.map(intent => intent.intentat_at)
+				.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+		]
+			.intentat_at
+
+		return intentatAtA > intentatAtB ? -1 : 1;
+	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
 			{
@@ -310,6 +327,7 @@ class CastellsGame extends Component {
 									castellers={this.state.colla.castellers}
 									onSelectCastell={this.selectCastell.bind(this)}
 									hide={this.state.selectedCastell !== null}
+									stats={this.state.colla.stats}
 									/>
 							</div>
 						</> : <></>
@@ -336,6 +354,7 @@ class CastellsGame extends Component {
 													castellers={this.state.colla.castellers}
 													onSelectCastell={this.selectCastell.bind(this)}
 													ronda={this.state.actuacio.length + 1}
+													stats={this.state.colla.stats}
 												/>
 											</>
 										}
@@ -443,22 +462,41 @@ class CastellsGame extends Component {
 					{
 						this.state.screen === 'STATS' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
-							<div className="game-full-wrap game-stats-wrap">
-								<select className="game-stats-selector" onChange={this.statsSelect.bind(this)}>
-									<option value={null}>SELECCIONA UN CASTELL PER VEURE'N LES ESTADÍSTIQUES</option>
+
+							<div
+							>
+								<h3
+									style={{
+										color: 'white',
+										textAlign: 'center',
+									}}
+								>
+									Progrés dels últims castells intentats
+								</h3>
+
+								<div
+									style={{
+										display: 'flex',
+										flexWrap: 'wrap',
+										justifyContent: 'space-around',
+										overflowY: 'scroll',
+										height: '65vh',
+										padding: 20,
+									}}
+								>
 									{
-										this.state.colla.tried.map((c, i) => {
-											return <option value={c} key={`stats-sel-${i}`}>{c}</option>;
-										})
+										this.state.colla.tried
+											.filter(castell => this.state.colla.stats[castell])
+											.sort(this.sortByIntentatAt.bind(this))
+											.map(castell => {
+												return <CastellStats
+													castell={castell}
+													stats={this.state.colla.stats[castell]}
+													key={`stats-${castell}`}
+												/>
+											})
 									}
-								</select>
-								{
-									this.state.showStatsCastell ? <>
-										<CastellStats
-											stats={this.state.showStatsCastell}
-											/>
-									</> : <></>
-								}
+								</div>
 							</div>
 						</> : <></>
 					}

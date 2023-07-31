@@ -60,6 +60,12 @@ class CastellSelector extends Component {
 	selectCastell(castell) {
 		this.props.onSelectCastell(castell);
 	}
+	probToBracket(prob) {
+		if (prob > 0.75) return 4
+		else if (prob > 0.5) return 3
+		else if (prob > 0.25) return 2
+		else return 1
+	}
 	render() {
 		return !this.props.hide && (
 			<div className="game-castell-selector">
@@ -70,13 +76,41 @@ class CastellSelector extends Component {
 							{
 								this.state.from_group.map((c, i) => {
 									const blocked = c.gent > this.props.castellers;
-									return <div className={`${blocked ? 'disabled' : ''}`} onClick={() => this.selectCastell(c.castell)} key={i}>
+									
+									const difficulty = this.probToBracket(
+										this.props.stats?.[c.castell]?.probabilitatsActual[0]
+									)
+									const difficulty_color = {
+										1: 'red',
+										2: 'orange',
+										3: 'yellow',
+										4: 'green'
+									}
+										[difficulty]
+
+									return <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }} className={`${blocked ? 'disabled' : ''}`} onClick={() => this.selectCastell(c.castell)} key={i}>
 										<span className="castell">
 											{c.castell}
-											{
-												blocked && <><br /><span className="gent">{c.gent} persones</span></>
-											}
 										</span>
+
+										{
+											blocked && <span className="gent">{c.gent} persones</span>
+										}
+
+										{
+											!blocked &&
+											<div
+												style={{
+													display: 'flex',
+													gap: 5
+												}}
+											>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 0 ? difficulty_color : '#eee' }}></div>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 1 ? difficulty_color : '#eee' }}></div>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 2 ? difficulty_color : '#eee' }}></div>
+												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 3 ? difficulty_color : '#eee' }}></div>
+											</div>
+										}
 									</div>;
 								})
 							}

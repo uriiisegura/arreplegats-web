@@ -51,12 +51,29 @@ class CastellStats extends Component {
 		};
 
 		return (
-			<div className="game-stats-graphic-wrap">
-				<Line
-					className="game-stats-graph"
-					data={data}
-					options={options}
+			<div
+				style={{
+					padding: 20,
+					margin: 20,
+					backgroundColor: '#00000030',
+					borderRadius: 10,
+				}}
+			>
+				<h3
+					style={{
+						color: '#ffffff',
+					}}
+				>
+					{this.props.castell}
+				</h3>
+
+				<div className="game-stats-graphic-wrap">
+					<Line
+						className="game-stats-graph"
+						data={data}
+						options={options}
 					/>
+				</div>
 			</div>
 		);
 	}
