@@ -244,15 +244,13 @@ class CastellsGame extends Component {
 			this.state.colla.stats[a].stats
 				.map(intent => intent.intentat_at)
 				.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
-		]
-			.intentat_at
+		].intentat_at;
 
 		const intentatAtB = this.state.colla.stats[b].stats[
 			this.state.colla.stats[b].stats
 				.map(intent => intent.intentat_at)
 				.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
-		]
-			.intentat_at
+		].intentat_at;
 
 		return intentatAtA > intentatAtB ? -1 : 1;
 	}
@@ -463,27 +461,10 @@ class CastellsGame extends Component {
 						this.state.screen === 'STATS' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
 
-							<div
-							>
-								<h3
-									style={{
-										color: 'white',
-										textAlign: 'center',
-									}}
-								>
-									Progrés dels últims castells intentats
-								</h3>
+							<div className="game-stats">
+								<h3>Progrés dels últims castells intentats</h3>
 
-								<div
-									style={{
-										display: 'flex',
-										flexWrap: 'wrap',
-										justifyContent: 'space-around',
-										overflowY: 'scroll',
-										height: '65vh',
-										padding: 20,
-									}}
-								>
+								<div className="game-stats-wrap">
 									{
 										this.state.colla.tried
 											.filter(castell => this.state.colla.stats[castell])

@@ -89,6 +89,7 @@ html {
 	--game-lightBlue: #2857aa;
 	--game-mediumBlue: #1b243c;
 	--game-darkBlue: #121c32;
+	--game-darkerBlue: #0e1528;
 	--game-cream: #ffe1c9;
 	--game-lightGray: #6a6a6a;
 	--game-darkGray: #2b2b2b;
@@ -3215,9 +3216,21 @@ span.help {
 }
 
 .game-castell-selector .box-wrap div .gent {
-	font-size: 0.5rem;
+	font-size: 0.6rem;
 	height: fit-content;
-	color: #ccc;
+	color: var(--game-lightGray);
+}
+
+.game-castell-difficulty-wrap {
+	display: flex;
+	gap: 2px;
+	opacity: 1 !important;
+}
+
+.game-castell-difficulty-wrap div {
+	width: 13px;
+	height: 5px;
+	opacity: 1 !important;
 }
 
 .game-castell-selector .back-btn {
@@ -3361,37 +3374,34 @@ span.help {
 	white-space: nowrap;
 }
 
-.game-stats-wrap {
-	margin: 0 1rem;
-	display: flex;
-	flex-direction: column;
-}
-
-.game-stats-selector {
-	outline: none;
-	height: 2rem;
-	width: 100%;
-	margin-bottom: 1rem;
+.game-stats h3 {
+	text-align: center;
 	color: var(--white);
-	background-color: var(--game-lightBlue);
-	border: none;
-	border-radius: 5px;
-	padding: 0 10px;
 }
 
-/*
-.game-stats-graphic-wrap {
-	height: calc(100% - 4rem);
+.game-stats-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	overflow-y: scroll;
+	margin: 0 1rem;
 }
 
-.game-stats-graph {
+.game-stats-single-graphic {
 	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
-	height: 100% !important;
-	max-height: 50vh;
+	max-width: 300px;
+	padding: 16px;
+	background-color: var(--game-darkerBlue);
 }
-*/
+
+.game-stats-single-graphic h4 {
+	color: var(--white);
+}
+
+.game-stats-single-graphic canvas {
+	width: 100% !important;
+}
 
 @media screen and (max-width: 0px) {
 	.castells-game {

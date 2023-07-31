@@ -79,36 +79,24 @@ class CastellSelector extends Component {
 									
 									const difficulty = this.probToBracket(
 										this.props.stats?.[c.castell]?.probabilitatsActual[0]
-									)
+									);
+
 									const difficulty_color = {
-										1: 'red',
-										2: 'orange',
-										3: 'yellow',
-										4: 'green'
-									}
-										[difficulty]
+										1: 'darkred',
+										2: 'salmon',
+										3: 'gold',
+										4: 'seagreen'
+									}[difficulty];
 
 									return <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }} className={`${blocked ? 'disabled' : ''}`} onClick={() => this.selectCastell(c.castell)} key={i}>
-										<span className="castell">
-											{c.castell}
-										</span>
+										<span className="castell">{c.castell}</span>
 
 										{
-											blocked && <span className="gent">{c.gent} persones</span>
-										}
-
-										{
-											!blocked &&
-											<div
-												style={{
-													display: 'flex',
-													gap: 5
-												}}
-											>
-												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 0 ? difficulty_color : '#eee' }}></div>
-												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 1 ? difficulty_color : '#eee' }}></div>
-												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 2 ? difficulty_color : '#eee' }}></div>
-												<div style={{ width: 10, height: 10, backgroundColor: difficulty > 3 ? difficulty_color : '#eee' }}></div>
+											blocked ? <span className="gent">{c.gent} persones</span> : <div className="game-castell-difficulty-wrap">
+												<div style={{backgroundColor: difficulty > 0 ? difficulty_color : '#eee'}}></div>
+												<div style={{backgroundColor: difficulty > 1 ? difficulty_color : '#eee'}}></div>
+												<div style={{backgroundColor: difficulty > 2 ? difficulty_color : '#eee'}}></div>
+												<div style={{backgroundColor: difficulty > 3 ? difficulty_color : '#eee'}}></div>
 											</div>
 										}
 									</div>;

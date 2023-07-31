@@ -51,25 +51,11 @@ class CastellStats extends Component {
 		};
 
 		return (
-			<div
-				style={{
-					padding: 20,
-					margin: 20,
-					backgroundColor: '#00000030',
-					borderRadius: 10,
-				}}
-			>
-				<h3
-					style={{
-						color: '#ffffff',
-					}}
-				>
-					{this.props.castell}
-				</h3>
+			<div className="game-stats-single-graphic">
+				<h4>{this.props.castell}</h4>
 
-				<div className="game-stats-graphic-wrap">
+				<div>
 					<Line
-						className="game-stats-graph"
 						data={data}
 						options={options}
 					/>
