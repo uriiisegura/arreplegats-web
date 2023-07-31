@@ -461,7 +461,7 @@ class CastellsGame extends Component {
 						this.state.screen === 'STATS' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
 
-							<div className="game-stats">
+							<div className="game-full-wrap game-stats">
 								<h3>Progrés dels últims castells intentats</h3>
 
 								<div className="game-stats-wrap">

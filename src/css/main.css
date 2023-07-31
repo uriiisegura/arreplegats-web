@@ -3374,6 +3374,11 @@ span.help {
 	white-space: nowrap;
 }
 
+.game-stats {
+	flex-direction: column;
+	padding: 0 1rem 2rem;
+}
+
 .game-stats h3 {
 	text-align: center;
 	color: var(--white);
@@ -3385,7 +3390,6 @@ span.help {
 	justify-content: center;
 	gap: 1rem;
 	overflow-y: scroll;
-	margin: 0 1rem;
 }
 
 .game-stats-single-graphic {
