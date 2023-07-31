@@ -90,7 +90,6 @@ class CastellSelector extends Component {
 
 									return <div className={`game-selector-single ${blocked ? 'disabled' : ''}`} onClick={() => this.selectCastell(c.castell)} key={i}>
 										<span className="castell">{c.castell}</span>
-
 										{
 											blocked ? <span className="gent">{c.gent} persones</span> : <div className="game-castell-difficulty-wrap">
 												<div style={{backgroundColor: difficulty > 0 ? difficulty_color : '#eee'}}></div>
@@ -114,10 +113,10 @@ class CastellSelector extends Component {
 					}
 				</div>
 				{
-					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
+					this.props.is_assaig && this.state.from_group && <div className="game-proves-extra"><div>Netes</div><div>Folres a terra</div></div>
 				}
 				{
-					this.props.is_assaig && <div className="game-proves-extra"><div>Netes</div><div>Folres a terra</div></div>
+					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
 				}
 			</div>
 		);
