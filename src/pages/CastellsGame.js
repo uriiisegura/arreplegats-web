@@ -471,7 +471,7 @@ class CastellsGame extends Component {
 										textAlign: 'center',
 									}}
 								>
-									Progrés dels diferents castells intentats
+									Progrés dels últims castells intentats
 								</h3>
 
 								<div
