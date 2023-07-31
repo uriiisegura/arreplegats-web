@@ -443,22 +443,40 @@ class CastellsGame extends Component {
 					{
 						this.state.screen === 'STATS' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
-							<div className="game-full-wrap game-stats-wrap">
-								<select className="game-stats-selector" onChange={this.statsSelect.bind(this)}>
-									<option value={null}>SELECCIONA UN CASTELL PER VEURE'N LES ESTADÍSTIQUES</option>
+
+							<div
+							>
+								<h3
+									style={{
+										color: 'white',
+										textAlign: 'center',
+									}}
+								>
+									Progrés dels diferents castells intentats
+								</h3>
+
+								<div
+									style={{
+										display: 'flex',
+										flexWrap: 'wrap',
+										justifyContent: 'space-around',
+										overflowY: 'scroll',
+										height: '65vh',
+										padding: 20,
+									}}
+								>
 									{
-										this.state.colla.tried.map((c, i) => {
-											return <option value={c} key={`stats-sel-${i}`}>{c}</option>;
-										})
+										this.state.colla.tried
+											.filter(castell => this.state.colla.stats[castell])
+											.map(castell => {
+												return <CastellStats
+													castell={castell}
+													stats={this.state.colla.stats[castell]}
+													key={`stats-${castell}`}
+												/>
+											})
 									}
-								</select>
-								{
-									this.state.showStatsCastell ? <>
-										<CastellStats
-											stats={this.state.showStatsCastell}
-											/>
-									</> : <></>
-								}
+								</div>
 							</div>
 						</> : <></>
 					}

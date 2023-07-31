@@ -3378,6 +3378,7 @@ span.help {
 	padding: 0 10px;
 }
 
+/*
 .game-stats-graphic-wrap {
 	height: calc(100% - 4rem);
 }
@@ -3389,6 +3390,7 @@ span.help {
 	height: 100% !important;
 	max-height: 50vh;
 }
+*/
 
 @media screen and (max-width: 0px) {
 	.castells-game {
