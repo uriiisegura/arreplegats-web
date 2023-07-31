@@ -455,7 +455,8 @@
 		"castell": "7d8f",
 		"carregat": 3015,
 		"descarregat": 3865,
-		"gent": 0,
+		"gent": 348,
+		"comment": "TODO: 7d8f people",
 		"probabilitatsInicials": [0.15, 0.1, 0.4, 0.35],
 		"probabilitatsLimit": [0.85, 0.1]
 	},
@@ -465,7 +466,7 @@
 		"castell": "5d8f",
 		"carregat": 3270,
 		"descarregat": 4215,
-		"gent": 0,
+		"gent": 279,
 		"probabilitatsInicials": [0.1, 0.2, 0.4, 0.3],
 		"probabilitatsLimit": [0.8, 0.1]
 	},
@@ -475,7 +476,7 @@
 		"castell": "3d8fa",
 		"carregat": 3415,
 		"descarregat": 4055,
-		"gent": 0,
+		"gent": 182,
 		"probabilitatsInicials": [0.07, 0.03, 0.55, 0.35],
 		"probabilitatsLimit": [0.65, 0.05]
 	},
@@ -485,7 +486,7 @@
 		"castell": "4d8fa",
 		"carregat": 3485,
 		"descarregat": 4120,
-		"gent": 0,
+		"gent": 249,
 		"probabilitatsInicials": [0.1, 0.05, 0.5, 0.35],
 		"probabilitatsLimit": [0.75, 0.1]
 	},
@@ -525,7 +526,7 @@
 		"castell": "3d9fm",
 		"carregat": 5220,
 		"descarregat": 6105,
-		"gent": 0,
+		"gent": 283,
 		"probabilitatsInicials": [0.03, 0.05, 0.75, 0.17],
 		"probabilitatsLimit": [0.7, 0.03]
 	},
@@ -535,7 +536,8 @@
 		"castell": "Pd8fmp",
 		"carregat": 5235,
 		"descarregat": 6475,
-		"gent": 0,
+		"gent": 322,
+		"comment": "TODO: Pd8fmp people",
 		"probabilitatsInicials": [0.01, 0.05, 0.75, 0.19],
 		"probabilitatsLimit": [0.7, 0.01]
 	},
@@ -545,7 +547,7 @@
 		"castell": "4d9f",
 		"carregat": 5510,
 		"descarregat": 7120,
-		"gent": 0,
+		"gent": 252,
 		"probabilitatsInicials": [0.05, 0.05, 0.7, 0.2],
 		"probabilitatsLimit": [0.7, 0.05]
 	}
