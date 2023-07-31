@@ -1,7 +1,7 @@
 CASTELLS = {
     "pd3": {
         "pes_dependencies": 0,
-        "unique": [0.05, 0.15, 0.4, 0.3],
+        "unique": [0.05, 0.15, 0.4, 0.4],
         "dependencies": {}
     },
     "pd3s": {
@@ -156,13 +156,64 @@ def PFinal(castell):
     if len(deps) == 0:
         return unique
     else:
-        return PD*np.sum(deps) + (1-PD)*unique
+        return PD*np.sum(deps, axis=0) + (1-PD)*unique
+
+def improve_unique(result, castell):
+    import numpy as np
+
+    probs = CASTELLS[castell]
+    npU = np.array(probs["unique"])
+
+    if result == "D":
+        npU[0] *= 1.1
+        npU[1] *= 0.9
+        npU[2] *= 0.85
+        npU[3] *= 0.9
+    elif result == "C":
+        npU[0] *= 1.05
+        npU[1] *= 1.05
+        npU[2] *= 0.9
+        npU[3] *= 1.05
+    elif result == "I":
+        npU[0] *= 0.95
+        npU[1] *= 0.95
+        npU[2] *= 0.8
+        npU[3] *= 1.1
+    elif result == "ID":
+        npU[0] *= 1
+        npU[1] *= 1
+        npU[2] *= 1.05
+        npU[3] *= 0.8
+
+    # Cap
+    npU[0] = min(npU[0], 0.95)
+    npU[1] = min(npU[1], 0.95)
+    npU[2] = max(0.05, min(npU[2], 0.95))
+    npU[3] = max(0.05, min(npU[3], 0.95))
+    
+    # Normalize
+    if np.sum(npU) != 0:
+        npU /= np.sum(npU)
+    else:
+        npU = np.array([0, 0, 0, 1])
+
+    # Update probabilities
+    probs["unique"] = npU.tolist()
+
+    return npU
 
 def simulate_play(castell):
     import random
 
     probs = PFinal(castell)
-    return random.choices(["D", "C", "I", "ID"], probs)[0]
+    result = random.choices(["D", "C", "I", "ID"], probs)[0]
+    newProbs = improve_unique(result, castell)
+    
+    return result, newProbs
 
-for i in range(10):
-    print(simulate_play("pd4"))
+# Main
+print("start:", PFinal("pd3"))
+
+for i in range(20):
+    result, newProbs = simulate_play("pd3")
+    print(result, newProbs)
