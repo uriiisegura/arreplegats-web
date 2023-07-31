@@ -95,7 +95,6 @@ def main(castell, n=100):
 
         print(PROBABILITIES[castell]['prob'])
 
-
         try:
             for c in DEPENDENCY_TREE[castell]:
                 PROBABILITIES[c['castell']]['prob'] = new_probabilities(c['castell'], delta, outcome, index=c['index'])

@@ -3171,7 +3171,7 @@ span.help {
 	height: 400px;
 	padding: 8px;
 	display: flex;
-	gap: 0.3rem;
+	gap: 3px;
 	flex-direction: column;
 }
 
@@ -3205,20 +3205,26 @@ span.help {
 	background-color: var(--game-darkGray);
 }
 
-.game-castell-selector .box-wrap div .castell {
-	line-height: 0.7;
-	text-align: center;
-	height: fit-content;
+.game-castell-selector .castell {
 	color: var(--white);
 }
-.game-castell-selector .box-wrap div.disabled .castell {
+
+.game-selector-single {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.game-selector-single span {
+	line-height: 0.7;
+}
+.game-selector-single.disabled span {
 	color: var(--game-lightGray);
 }
 
-.game-castell-selector .box-wrap div .gent {
+.game-selector-single .gent {
 	font-size: 0.6rem;
 	height: fit-content;
-	color: var(--game-lightGray);
 }
 
 .game-castell-difficulty-wrap {
@@ -3228,8 +3234,8 @@ span.help {
 }
 
 .game-castell-difficulty-wrap div {
-	width: 13px;
-	height: 5px;
+	width: 15px;
+	height: 4px;
 	opacity: 1 !important;
 }
 
@@ -3239,6 +3245,25 @@ span.help {
 }
 .game-castell-selector .back-btn:hover {
 	box-shadow: none;
+}
+
+.game-proves-extra {
+	display: flex;
+	gap: 3px;
+}
+
+.game-proves-extra div {
+	width: 100%;
+	padding: 0.3rem 0;
+	background-color: var(--game-lightBlue);
+	color: var(--white);
+	text-align: center;
+	transition: var(--transition);
+	cursor: pointer;
+	opacity: 0.75;
+}
+.game-proves-extra div:hover {
+	opacity: 1;
 }
 
 .game-canvas-center {

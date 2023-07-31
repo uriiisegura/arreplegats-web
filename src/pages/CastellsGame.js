@@ -326,6 +326,7 @@ class CastellsGame extends Component {
 									onSelectCastell={this.selectCastell.bind(this)}
 									hide={this.state.selectedCastell !== null}
 									stats={this.state.colla.stats}
+									is_assaig={true}
 									/>
 							</div>
 						</> : <></>
@@ -353,6 +354,7 @@ class CastellsGame extends Component {
 													onSelectCastell={this.selectCastell.bind(this)}
 													ronda={this.state.actuacio.length + 1}
 													stats={this.state.colla.stats}
+													is_assaig={false}
 												/>
 											</>
 										}
@@ -409,7 +411,7 @@ class CastellsGame extends Component {
 															<td>{c.descarregat}</td>
 															<td>
 																{c.gent}
-																<span className="help">?</span>
+																{/* TODO: <span className="help">?</span>*/}
 															</td>
 														</tr>;
 													})
