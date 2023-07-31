@@ -141,3 +141,28 @@ CASTELLS = {
         }
     }
 }
+
+def PFinal(castell):
+    import numpy as np
+
+    probs = CASTELLS[castell]
+    PD = probs["pes_dependencies"]
+    U = probs["unique"]
+    D = probs["dependencies"]
+
+    deps = np.array([ k*PFinal(d) for d, k in D.items() ])
+    unique = np.array(U)
+
+    if len(deps) == 0:
+        return unique
+    else:
+        return PD*np.sum(deps) + (1-PD)*unique
+
+def simulate_play(castell):
+    import random
+
+    probs = PFinal(castell)
+    return random.choices(["D", "C", "I", "ID"], probs)[0]
+
+for i in range(10):
+    print(simulate_play("pd4"))
