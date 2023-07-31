@@ -239,6 +239,23 @@ class CastellsGame extends Component {
 			showStatsCastell: null
 		});
 	}
+	sortByIntentatAt(a, b) {
+		const intentatAtA = this.state.colla.stats[a].stats[
+			this.state.colla.stats[a].stats
+				.map(intent => intent.intentat_at)
+				.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+		]
+			.intentat_at
+
+		const intentatAtB = this.state.colla.stats[b].stats[
+			this.state.colla.stats[b].stats
+				.map(intent => intent.intentat_at)
+				.reduce((iMax, x, i, arr) => x > arr[iMax] ? i : iMax, 0)
+		]
+			.intentat_at
+
+		return intentatAtA > intentatAtB ? -1 : 1;
+	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
 			{
@@ -468,6 +485,7 @@ class CastellsGame extends Component {
 									{
 										this.state.colla.tried
 											.filter(castell => this.state.colla.stats[castell])
+											.sort(this.sortByIntentatAt.bind(this))
 											.map(castell => {
 												return <CastellStats
 													castell={castell}
