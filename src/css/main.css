@@ -3421,7 +3421,7 @@ span.help {
 
 .game-stats-single-graphic {
 	width: 100%;
-	max-width: 300px;
+	max-width: 400px;
 	padding: 16px;
 	background-color: var(--game-darkerBlue);
 }
@@ -3432,6 +3432,16 @@ span.help {
 
 .game-stats-single-graphic canvas {
 	width: 100% !important;
+}
+
+.game-missions {
+	flex-direction: column;
+	padding: 0 1rem 2rem;
+}
+
+.game-missions h3 {
+	text-align: center;
+	color: var(--white);
 }
 
 @media screen and (max-width: 0px) {

@@ -13,6 +13,8 @@ class Colla {
 				stats=null,
 				historic=[],
 				tried=[],
+				missions_accepted=[],
+				missions_completed=[],
 				date=Date.parse('2022-09-01')
 		) {
 		this.name = name;
@@ -37,6 +39,8 @@ class Colla {
 			this.stats = stats;
 		this.historic = historic;
 		this.tried = tried;
+		this.missions_accepted = missions_accepted;
+		this.missions_completed = missions_completed;
 		this.date = date;
 	}
 	static fromJson(json) {
@@ -46,9 +50,11 @@ class Colla {
 		const stats = json.stats;
 		const historic = json.historic;
 		const tried = json.tried;
+		const missions_accepted = json.missions_accepted;
+		const missions_completed = json.missions_completed;
 		const date = json.date;
-		if (name && color && castellers && stats && historic && tried && date)
-			return new Colla(name, color, castellers, stats, historic, tried, date);
+		if (name && color && castellers && stats && historic && tried && missions_accepted && missions_completed && date)
+			return new Colla(name, color, castellers, stats, historic, tried, missions_accepted, missions_completed, date);
 		throw new Error("L'arxiu no conté cap partida.");
 	}
 	addCastellers(castellers) {
@@ -102,7 +108,7 @@ class Colla {
 		this.stats[castell.castell].probabilitatsActual = Normalize(new_probabilities);
 		if (!this.tried.includes(castell.castell))
 			this.tried.push(castell.castell);
-		
+
 		return results[result];
 	}
 	addActuacio(actuacio) {

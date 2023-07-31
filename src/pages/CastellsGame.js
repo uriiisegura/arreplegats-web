@@ -291,7 +291,7 @@ class CastellsGame extends Component {
 									<button className={this.state.colla.historic.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('HISTORIC')}>
 										<span>HISTÒRIC</span>
 									</button>
-									<button className="disabled">
+									<button className="disabled" onClick={() => this.changeScreen('MISSIONS')}>
 										<span>MISSIONS</span>
 									</button>
 									<button className="disabled">
@@ -460,9 +460,18 @@ class CastellsGame extends Component {
 						</> : <></>
 					}
 					{
+						this.state.screen === 'MISSIONS' ? <>
+							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+							<div className="game-full-wrap game-missions">
+								<h3>Missions</h3>
+								<div className="game-missions-wrap">
+								</div>
+							</div>
+						</> : <></>
+					}
+					{
 						this.state.screen === 'STATS' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
-
 							<div className="game-full-wrap game-stats">
 								<h3>Progrés dels últims castells intentats</h3>
 
