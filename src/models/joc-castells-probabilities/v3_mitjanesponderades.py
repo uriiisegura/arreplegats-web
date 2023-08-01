@@ -25,6 +25,13 @@ HARD_MULTIPLIERS = {
     "ID": [1, 1, 1.05, 0.85],
 }
 
+IMPOSSIBLE_MULTIPLIERS = {
+    "D": [1.1, 0.95, 0.95, 0.95],
+    "C": [1.05, 1.05, 0.95, 1.05],
+    "I": [0.95, 0.95, 0.95, 1.05],
+    "ID": [1, 1, 1.05, 0.95],
+}
+
 # Define the caps
 DEFAULT_LOWER_CAP = 0.02
 DEFAULT_UPPER_CAP = 0.96
@@ -105,8 +112,8 @@ CASTELLS = {
         }
     },
     "pd5n": {
-        "pes_dependencies": 0.05,
-        "multipliers": HARD_MULTIPLIERS,
+        "pes_dependencies": 0.2,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -115,7 +122,7 @@ CASTELLS = {
     },
     "pd6sf": {
         "pes_dependencies": 0.8,
-        "multipliers": HARD_MULTIPLIERS,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -138,7 +145,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "ftpd6f": 0.8
+            "ftpd6f": 1
         }
     },
     "mtpd7fm": {
@@ -162,7 +169,7 @@ CASTELLS = {
     },
     "pd7fm": {
         "pes_dependencies": 0.2,
-        "multipliers": HARD_MULTIPLIERS,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
@@ -190,7 +197,7 @@ CASTELLS = {
     },
     "ftpd8fmp": {
         "pes_dependencies": 0.8,
-        "multipliers": HARD_MULTIPLIERS,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
@@ -200,7 +207,7 @@ CASTELLS = {
     },
     "pd8fmp": {
         "pes_dependencies": 0.3,
-        "multipliers": HARD_MULTIPLIERS,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
@@ -276,19 +283,49 @@ for j in range(1000):
     for i in range(20):
         result, newProbs = simulate_play("pd4")
 
-    for i in range(60):
+    for i in range(100):
         result, newProbs = simulate_play("pd4n")
 
-    for i in range(20):
+    for i in range(100):
         result, newProbs = simulate_play("pd5")
 
-    for i in range(80):
-        result, newProbs = simulate_play("pd5n")
+    for i in range(40):
+        result, newProbs = simulate_play("ftpd6f")
+
+    for i in range(50):
+        result, newProbs = simulate_play("pd6f")
 
     for i in range(20):
+        result, newProbs = simulate_play("mtpd7fm")
+
+    for i in range(40):
+        result, newProbs = simulate_play("ftpd7fm")
+
+    for i in range(80):
+        result, newProbs = simulate_play("pd7fm")
+
+    for i in range(30):
+        result, newProbs = simulate_play("ptpd8fmp")
+
+    for i in range(30):
+        result, newProbs = simulate_play("mtftpd8fmp")
+
+    for i in range(40):
+        result, newProbs = simulate_play("ftpd8fmp")
+
+    for i in range(80):
+        result, newProbs = simulate_play("pd8fmp")
+
+    for i in range(200):
+        result, newProbs = simulate_play("pd5n")
+
+    for i in range(40):
         result, newProbs = simulate_play("pd6sf")
 
-    DOMINATS += 1 if PFinal("pd6sf")[0] > 0.5 else 0
+    if j % 100 == 0:
+        print(PFinal("pd8fmp"), [ PFinal(d) for d in CASTELLS["pd8fmp"]['dependencies'] ])
+
+    DOMINATS += 1 if PFinal("pd8fmp")[0] > 0.5 else 0
     CASTELLS = copy.deepcopy(CLONE_CASTELLS)
 
-print(DOMINATS, "pd6sf", "dominats de 1000", sep=" ")
+print(DOMINATS, "pd8fmp", "dominats de 1000", sep=" ")
