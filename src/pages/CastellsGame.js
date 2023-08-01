@@ -306,9 +306,9 @@ class CastellsGame extends Component {
 									<button className={this.state.colla.tried.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('STATS')}>
 										<span>ESTADÍSTIQUES</span>
 									</button>
-									<button onClick={() => {this.state.colla.addCastellers(10)}}>
+									{process.env.NODE_ENV === 'development' && <button onClick={() => {this.state.colla.addCastellers(10)}}>
 										<span>+10 castellers</span>
-									</button>
+									</button>}
 									<button onClick={this.deleteGame}>
 										<span>BORRA PARTIDA</span>
 									</button>
