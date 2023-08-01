@@ -165,7 +165,7 @@ def improve_unique(result, castell):
     npU = np.array(probs["unique"])
 
     # Cap
-    npU = np.clip(npU, 0.05, 0.95)
+    npU = np.clip(npU, 0.02, 0.96)
 
     if result == "D":
         npU[0] *= 1.2
@@ -214,10 +214,7 @@ def simulate_play(castell):
     
     return result, newProbs
 
-# Main
-print("start pd3:", PFinal("pd3"))
-print("start pd3n:", PFinal("pd3n"))
-print("start pd4:", PFinal("pd4"))
+# STRATEGY
 
 # pd3
 print("before pd3, pd3:", PFinal("pd3"))
@@ -249,7 +246,7 @@ print("after pd4, pd4:", PFinal("pd4"))
 # pd4n
 print("before pd4n, pd4n:", PFinal("pd4n"))
 
-for i in range(40):
+for i in range(60):
     result, newProbs = simulate_play("pd4n")
     # print(result, newProbs)
 
@@ -263,3 +260,21 @@ for i in range(30):
     # print(result, newProbs)
 
 print("after pd5, pd5:", PFinal("pd5"))
+
+# pd5n
+print("before pd5n, pd5n:", PFinal("pd5n"))
+
+for i in range(60):
+    result, newProbs = simulate_play("pd5n")
+    # print(result, newProbs)
+
+print("after pd5n, pd5n:", PFinal("pd5n"))
+
+# pd6sf
+print("before pd6sf, pd6sf:", PFinal("pd6sf"))
+
+for i in range(10):
+    result, newProbs = simulate_play("pd6sf")
+    # print(result, newProbs)
+
+print("after pd6sf, pd6sf:", PFinal("pd6sf"))
