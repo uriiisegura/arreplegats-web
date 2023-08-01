@@ -185,6 +185,8 @@ class CastellsGame extends Component {
 			document.getElementById('game-screen').style.pointerEvents = 'all';
 		}
 
+		console.log(this.state.colla.today);
+
 		this.setState({
 			selectedResult: resultat
 		});
@@ -351,6 +353,8 @@ class CastellsGame extends Component {
 									hide={this.state.selectedCastell !== null}
 									stats={this.state.colla.stats}
 									is_assaig={true}
+									proves_left={this.state.colla.today.provesLeft}
+									onBack={this.goBack.bind(this)}
 									/>
 							</div>
 						</> : <></>

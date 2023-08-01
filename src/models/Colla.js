@@ -94,6 +94,9 @@ class Colla {
 		});
 		if (!this.tried.includes(castell.castell))
 			this.tried.push(castell.castell);
+		
+		if (this.today.type === 'assaig')
+			this.today.provesLeft -= 1;
 
 		return result;
 	}
