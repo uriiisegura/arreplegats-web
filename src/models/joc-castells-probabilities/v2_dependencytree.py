@@ -80,7 +80,7 @@ def new_probabilities(castell, delta, outcome, index=1):
         new_prob.append(prob)
     
     if new_prob[0] > PROBABILITIES[castell]['max']:
-        PROBABILITIES[castell]['prob'][0] = PROBABILITIES[castell]['max']
+        new_prob[0] = PROBABILITIES[castell]['max']
 
     return [x / sum(new_prob) for x in new_prob]
 
