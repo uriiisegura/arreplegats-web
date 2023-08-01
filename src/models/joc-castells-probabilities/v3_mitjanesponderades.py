@@ -455,6 +455,18 @@ STRATEGY = [
         "castell": "td8fm",
         "tries": 80
     },
+    {
+        "castell": "td6",
+        "tries": 20
+    },
+    {
+        "castell": "td6n",
+        "tries": 80
+    },
+    {
+        "castell": "td7sf",
+        "tries": 30
+    },
 ]
 
 TRIED_CASTELLS = [
