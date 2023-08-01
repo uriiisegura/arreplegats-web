@@ -3,7 +3,7 @@ import HexToFilter from "../functions/HexToFilter";
 import Normalize from "../functions/Normalize";
 import castells from "../data/joc-castells.json";
 
-import * as v3 from './joc-castells-probabilities/v3/getCastellResult.js'
+import * as v3 from './joc-castells-probabilities/v3/generateCastellResult.js'
 
 const INITIAL_CASTELLERS = 15;
 const MIN_CASTELLERS = 31;
@@ -30,13 +30,13 @@ class Colla {
 		} while(filter.loss > 0.1);
 		this.castellers = castellers;
 		if (!stats) {
-			const stats_dict = {};
-			for (let castell of castells)
-				stats_dict[castell.castell] = {
-					probabilitatsActual: castell.probabilitatsInicials,
-					stats: []
-				};
-			this.stats = stats_dict;
+			this.stats = Object.fromEntries(
+				Object.entries(castells)
+					.map(([castell, attrs]) => [castell, {
+						...attrs,
+						stats: []
+					}])
+			);
 		} else
 			this.stats = stats;
 		this.historic = historic;
@@ -69,16 +69,16 @@ class Colla {
 		return castellers;
 	}
 	getCastellResult(castell, is_assaig) {
-		const { result, oldProbs } = v3.getCastellResult({
+		const { result, oldProbs } = v3.generateCastellResult({
 			stats: this.stats,
-			castell: castell,
+			castell: castell.castell,
 		})
 
-		const { newProbs } = v3.updateProbs({
-			stats: this.stats,
-			castell: castell,
-			result: result,
-		})
+		// const { newProbs } = v3.updateProbs({
+		// 	stats: this.stats,
+		// 	castell: castell.castell,
+		// 	result: result,
+		// })
 
 		this.stats[castell.castell].stats.push({
 			resultat: result,
@@ -86,7 +86,6 @@ class Colla {
 			context: is_assaig ? 'assaig' : 'actuacio',
 			probabilitats: oldProbs
 		});
-		this.stats[castell.castell].probabilitatsActual = Normalize(newProbs);
 		if (!this.tried.includes(castell.castell))
 			this.tried.push(castell.castell);
 

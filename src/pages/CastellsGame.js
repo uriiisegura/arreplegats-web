@@ -129,7 +129,7 @@ class CastellsGame extends Component {
 		});
 	}
 	selectCastell(castell) {
-		this.setState({selectedCastell: castells.filter(c => c.castell === castell)[0]}, this.solveCastell);
+		this.setState({selectedCastell: castells[castell]}, this.solveCastell);
 	}
 	solveCastell() {
 		this.playCastell(this.state.colla.getCastellResult(this.state.selectedCastell, this.state.screen === 'ASSAIG'));
@@ -403,7 +403,7 @@ class CastellsGame extends Component {
 											</thead>
 											<tbody>
 												{
-													castells.map((c, j) => {
+													Object.values(castells).map((c, j) => {
 														if (c.grup !== g) return <></>;
 														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={`group-${i}-row-${j}`}>
 															<td>{c.castell}</td>
