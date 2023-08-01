@@ -124,7 +124,9 @@ class CastellSelector extends Component {
 				</div>
 				{
 					this.props.is_assaig && this.state.from_group && <div className="game-proves-extra">
-						<div onClick={() => this.setNeta(!this.state.neta)}>Proves netes i a terra</div>
+						<div onClick={() => this.setNeta(!this.state.neta)}>
+							{ !this.state.neta ? <>Proves netes i a terra</> : <>Proves amb pinya</> }
+						</div>
 					</div>
 				}
 				{
