@@ -18,7 +18,9 @@ ChartJS.register(
 class CastellStats extends Component {
 	render() {
 		let stats_data = this.props.stats.stats.map(s => s.probabilitats[0]);
-		stats_data = [this.props.initial[0]].concat(stats_data);
+		stats_data = stats_data.length < 2 ?
+			[this.props.initial[0]].concat(stats_data) :
+			stats_data
 
 		const data = {
 			labels: Array(stats_data.length).join('.').split('.'),
