@@ -1,3 +1,8 @@
+import numpy as np
+import random
+from os import system
+import copy
+
 CASTELLS = {
     "pd3": {
         "pes_dependencies": 0,
@@ -142,12 +147,9 @@ CASTELLS = {
     }
 }
 
-import copy
 CLONE_CASTELLS = copy.deepcopy(CASTELLS)
 
 def PFinal(castell):
-    import numpy as np
-
     probs = CASTELLS[castell]
     PD = probs["pes_dependencies"]
     U = probs["unique"]
@@ -162,8 +164,6 @@ def PFinal(castell):
         return PD*np.sum(deps, axis=0) + (1-PD)*unique
 
 def improve_unique(result, castell):
-    import numpy as np
-
     probs = CASTELLS[castell]
     npU = np.array(probs["unique"])
 
@@ -209,8 +209,6 @@ def improve_unique(result, castell):
     return npU
 
 def simulate_play(castell):
-    import random
-
     probs = PFinal(castell)
     result = random.choices(["D", "C", "I", "ID"], probs)[0]
     newProbs = improve_unique(result, castell)
@@ -292,4 +290,4 @@ for j in range(1000):
     DOMINATS += 1 if PFinal("pd6sf")[0] > 0.5 else 0
     CASTELLS = copy.deepcopy(CLONE_CASTELLS)
 
-print("dominats:", DOMINATS, "de 1000")
+print(DOMINATS, "pd6sf", "dominats de 1000", sep=" ")
