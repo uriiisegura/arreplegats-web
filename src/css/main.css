@@ -3503,6 +3503,33 @@ span.help {
 	color: var(--white);
 }
 
+.game-help {
+	flex-direction: column;
+	padding: 0 1rem 2rem;
+}
+
+.game-help h3 {
+	text-align: center;
+	color: var(--white);
+}
+
+.game-help p {
+	color: var(--white);
+}
+
+.game-delete-game {
+	width: fit-content;
+	margin: 1rem auto 0;
+	border-radius: 0;
+	background-color: var(--game-lightBlue);
+	transition: none;
+	opacity: 0.85;
+}
+.game-delete-game:hover {
+	background-color: var(--red-dark);
+	opacity: 1;
+}
+
 @media screen and (max-width: 0px) {
 	.castells-game {
 		display: none;

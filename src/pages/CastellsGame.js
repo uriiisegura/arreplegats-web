@@ -269,11 +269,11 @@ class CastellsGame extends Component {
 			this.forceUpdate();
 		}
 	}
-	deleteGame() {
-		// if (window.confirm('Segur que vols eliminar la partida? Aquesta acció no es pot desfer.')) {
+	deleteGame(root) {
+		if (root || window.confirm('Segur que vols eliminar la partida? Aquesta acció no es pot desfer.')) {
 			localStorage.removeItem('game');
 			window.location.reload();
-		// }
+		}
 	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
@@ -317,7 +317,7 @@ class CastellsGame extends Component {
 									<button className="btn disabled" onClick={() => this.changeScreen('MISSIONS')}>
 										<span>MISSIONS</span>
 									</button>
-									<button className="btn disabled">
+									<button className="btn" onClick={() => this.changeScreen('AJUDA')}>
 										<span>AJUDA</span>
 									</button>
 									<button className={`btn ${this.state.colla.tried.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('STATS')}>
@@ -326,7 +326,7 @@ class CastellsGame extends Component {
 									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.addTenCastellers.bind(this)}>
 										<span>+10 castellers</span>
 									</button>}
-									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.deleteGame}>
+									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={() => {this.deleteGame(true)}}>
 										<span>BORRA PARTIDA</span>
 									</button>}
 								</div>
@@ -496,6 +496,18 @@ class CastellsGame extends Component {
 								<h3>Missions</h3>
 								<div className="game-missions-wrap">
 								</div>
+							</div>
+						</> : <></>
+					}
+					{
+						this.state.screen === 'AJUDA' ? <>
+							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
+							<div className="game-full-wrap game-help">
+								<h3>Ajuda</h3>
+								<p>
+									LMAO vaya clown ets que mires l'ajuda. L'ajuda és per putaganàpies que són subnormals LOL. Enfaixa't i posat a la feina!
+								</p>
+								<div className="btn game-delete-game" onClick={() => {this.deleteGame(false)}}>BORRA PARTIDA</div>
 							</div>
 						</> : <></>
 					}
