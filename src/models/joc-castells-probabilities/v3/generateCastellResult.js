@@ -1,11 +1,26 @@
 const RESULTS = ['DESCARREGAT', 'CARREGAT', 'INTENT', 'INTENT DESMUNTAT'];
 
-function sum_lists(...list) {
-    const result = [];
-    for (let i = 0; i < list[0].length; i++) {
-        result.push(list.reduce((a, b) => a + b[i], 0));
+function sum_lists(lists) {
+    if (lists.length == 0) {
+        return [];
     }
-    return result;
+
+    // Check that all arrays have the same length.
+    const length = lists[0].length;
+    if (!lists.every(list => list.length === length)) {
+        throw new Error('All lists must have the same length');
+    }
+
+    // Sum all the lists.
+    const sum = [...new Array(length)].fill(0.0);
+
+    for (let i = 0; i < length; i++) {
+        for (const list of lists) {
+            sum[i] += parseFloat(list[i])
+        }
+    }
+
+    return sum;
 }
 
 function PFinal(stats, castell) {
@@ -14,15 +29,15 @@ function PFinal(stats, castell) {
     const D = probs["dependencies"];
     const unique = probs["unique"];
 
-    const deps = Object.keys(D).map(d => PFinal(d).map(el => el * D[d]));
+    const deps = Object.keys(D).map(d => PFinal(stats, d).map(el => el * D[d]));
 
     if (deps.length == 0) {
         return unique;
     } else {
-        return sum_lists(
+        return sum_lists([
             sum_lists(deps).map(el => PD * el),
             unique.map(el => (1 - PD) * el)
-        )
+        ])
     }
 }
 
