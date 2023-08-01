@@ -190,7 +190,7 @@ CASTELLS = {
             "MT Pd7fm": 1
         }
     },
-    "MT FT Pd8fmp": {
+    "MT Pd8fmp": {
         "pes_dependencies": 0.7,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
@@ -207,7 +207,7 @@ CASTELLS = {
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "Pd7fm": 0.8,
-            "MT FT Pd8fmp": 0.2
+            "MT Pd8fmp": 0.2
         }
     },
     "Pd8fmp": {
@@ -217,7 +217,7 @@ CASTELLS = {
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "FT Pd8fmp": 0.7,
-            "MT FT Pd8fmp": 0.2,
+            "MT Pd8fmp": 0.2,
             "PT Pd8fmp": 0.1
         }
     },
