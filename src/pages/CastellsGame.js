@@ -4,6 +4,7 @@ import CastellSelector from "../components/CastellSelector";
 import CastellResult from "../components/CastellResult";
 import CastellStats from "../components/CastellStats";
 import Delay from "../functions/Delay";
+import TimestampToString from "../functions/TimestampToString";
 import Colla from "../models/Colla";
 
 const pujada = new Audio('/sounds/toc-de-castells-pujada.mp3');
@@ -285,31 +286,33 @@ class CastellsGame extends Component {
 						this.state.screen === 'HOME' ? <>
 							<div className="game-full-wrap game-bigger-wrap">
 								<div className="menu">
-									<button onClick={() => this.changeScreen('ASSAIG')}>
+									<div className="game-menu-time game-current-day"><img src="/font-awesome/calendar.svg" alt="calendar"/><span>{TimestampToString(this.state.colla.date)}</span></div>
+									<button className="game-menu-time game-advance-day">Avança al següent dia</button>
+									<button className="btn" onClick={() => this.changeScreen('ASSAIG')}>
 										<span>ASSAIG</span>
 									</button>
-									<button className={this.state.colla.castellers < 31 ? 'disabled' : ''} onClick={() => this.changeScreen('ACTUACIO')}>
+									<button className={`btn ${this.state.colla.castellers < 31 ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
 										<span>ACTUACIÓ</span>
 									</button>
-									<button onClick={() => this.changeScreen('CASTELLS')}>
+									<button className="btn" onClick={() => this.changeScreen('CASTELLS')}>
 										<span>CASTELLS</span>
 									</button>
-									<button className={this.state.colla.historic.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('HISTORIC')}>
+									<button className={`btn ${this.state.colla.historic.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('HISTORIC')}>
 										<span>HISTÒRIC</span>
 									</button>
-									<button className="disabled" onClick={() => this.changeScreen('MISSIONS')}>
+									<button className="btn disabled" onClick={() => this.changeScreen('MISSIONS')}>
 										<span>MISSIONS</span>
 									</button>
-									<button className="disabled">
+									<button className="btn disabled">
 										<span>AJUDA</span>
 									</button>
-									<button className={this.state.colla.tried.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('STATS')}>
+									<button className={`btn ${this.state.colla.tried.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('STATS')}>
 										<span>ESTADÍSTIQUES</span>
 									</button>
-									{process.env.NODE_ENV === 'development' && <button onClick={() => {this.state.colla.addCastellers(10)}}>
+									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={() => {this.state.colla.addCastellers(10)}}>
 										<span>+10 castellers</span>
 									</button>}
-									{process.env.NODE_ENV === 'development' && <button onClick={this.deleteGame}>
+									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.deleteGame}>
 										<span>BORRA PARTIDA</span>
 									</button>}
 								</div>

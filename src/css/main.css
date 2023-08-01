@@ -3049,23 +3049,46 @@ Joc Castells
 	bottom: auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-auto-rows: 1fr;
 	gap: 0.5rem;
 	width: min(60rem, 95%);
 	margin: auto;
 }
 
+.game-menu-time {
+	grid-column: span 3;
+	color: var(--white);
+}
+
+.game-current-day {
+	display: flex;
+	line-height: 1;
+	gap: 5px;
+}
+
+.game-current-day img {
+	filter: invert(100%) opacity(90%);
+}
+
+.game-current-day span {
+	padding-top: 2px;
+}
+.game-current-day span::first-letter {
+	text-transform: uppercase;
+}
+
+.game-advance-day {
+	padding: 0.5rem;
+}
+
 .menu button {
 	border-radius: 0;
-	height: min(10rem, 20vh);
 	background-color: var(--game-mediumBlue);
 	border: 1px solid var(--game-lightBlue);
 	color: var(--white);
-	display: flex;
-	padding: 0.5rem;
-	align-items: flex-end;
 	transition: 0.15s;
 	cursor: pointer;
+	text-transform: unset;
+	text-align: left;
 }
 .menu button:hover {
 	background-color: var(--game-cream);
@@ -3079,7 +3102,14 @@ Joc Castells
 	color: var(--game-lightGray);
 }
 
-.menu button span {
+.menu .btn {
+	height: min(10rem, 15vh);
+	display: flex;
+	padding: 0.5rem;
+	align-items: flex-end;
+}
+
+.menu .btn span {
 	font-style: italic;
 }
 
