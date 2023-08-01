@@ -231,7 +231,7 @@ print("after pd3, pd3:", PFinal("pd3"))
 # pd3n
 print("before pd3n, pd3n:", PFinal("pd3n"))
 
-for i in range(30):
+for i in range(40):
     result, newProbs = simulate_play("pd3n")
     # print(result, newProbs)
 
@@ -245,3 +245,21 @@ for i in range(20):
     # print(result, newProbs)
 
 print("after pd4, pd4:", PFinal("pd4"))
+
+# pd4n
+print("before pd4n, pd4n:", PFinal("pd4n"))
+
+for i in range(40):
+    result, newProbs = simulate_play("pd4n")
+    # print(result, newProbs)
+
+print("after pd4n, pd4n:", PFinal("pd4n"))
+
+# pd5
+print("before pd5, pd5:", PFinal("pd5"))
+
+for i in range(30):
+    result, newProbs = simulate_play("pd5")
+    # print(result, newProbs)
+
+print("after pd5, pd5:", PFinal("pd5"))
