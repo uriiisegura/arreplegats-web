@@ -3,6 +3,30 @@ import random
 from os import system
 import copy
 
+def histogram(data, max_width=40):
+    # extract the first elements
+    first_elements = [sub_list[0] for sub_list in data]
+
+    # define the number of bins
+    bins = 4
+
+    # create histogram
+    histogram = [0]*bins
+    for value in first_elements:
+        index = int(value * bins)
+        if index == bins:  # include 1.0 in the last bin
+            index -= 1
+        histogram[index] += 1
+
+    # calculate width of each bar
+    max_count = max(histogram)
+    bar_widths = [int((count / max_count) * max_width) for count in histogram]
+
+    # print histogram
+    for i in range(bins):
+        upper_limit = (i + 1) / bins
+        print(f'{upper_limit:.2f}: {"|" * bar_widths[i]}')
+
 # Define the multipliers
 EASY_MULTIPLIERS = {
     "D": [1.2, 0.85, 0.85, 0.85],
@@ -206,7 +230,7 @@ CASTELLS = {
         }
     },
     "pd8fmp": {
-        "pes_dependencies": 0.3,
+        "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
@@ -271,9 +295,12 @@ def simulate_play(castell):
     return result, newProbs
 
 # STRATEGY
-DOMINATS = 0
+N_ITERS = 10
+COUNTS = {}
 
-for j in range(1000):
+for j in range(N_ITERS):
+    CASTELLS = copy.deepcopy(CLONE_CASTELLS)
+
     for i in range(20):
         result, newProbs = simulate_play("pd3")
 
@@ -316,16 +343,20 @@ for j in range(1000):
     for i in range(80):
         result, newProbs = simulate_play("pd8fmp")
 
-    for i in range(200):
+    for i in range(160):
         result, newProbs = simulate_play("pd5n")
 
     for i in range(40):
         result, newProbs = simulate_play("pd6sf")
 
-    if j % 100 == 0:
-        print(PFinal("pd8fmp"), [ PFinal(d) for d in CASTELLS["pd8fmp"]['dependencies'] ])
+    # Calculate counts
+    for castell in CASTELLS:
+        if castell not in COUNTS:
+            COUNTS[castell] = [np.array(PFinal(castell))]
+        else:
+            COUNTS[castell] += [np.array(PFinal(castell))]
 
-    DOMINATS += 1 if PFinal("pd8fmp")[0] > 0.5 else 0
-    CASTELLS = copy.deepcopy(CLONE_CASTELLS)
-
-print(DOMINATS, "pd8fmp", "dominats de 1000", sep=" ")
+# HISTOGRAMES
+for castell in CASTELLS:
+    print(castell)
+    histogram(COUNTS[castell])
