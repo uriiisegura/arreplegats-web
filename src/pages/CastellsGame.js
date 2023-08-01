@@ -483,6 +483,7 @@ class CastellsGame extends Component {
 											.map(castell => {
 												return <CastellStats
 													castell={castell}
+													initial={castells[castell]['probabilitats']['unique']}
 													stats={this.state.colla.stats[castell]}
 													key={`stats-${castell}`}
 												/>
