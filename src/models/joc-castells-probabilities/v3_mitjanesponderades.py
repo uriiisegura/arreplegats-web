@@ -3,7 +3,7 @@ import random
 from os import system
 import copy
 
-from v3.calculateProbs import CASTELLS, CLONE_CASTELLS
+from v3.calculateProbs import CASTELLS, CLONE_CASTELLS, RESULTS
 
 def histogram(data, max_width=40):
     # extract the first elements
@@ -75,7 +75,7 @@ def improve_unique(result, castell):
 
 def simulate_play(castell):
     probs = PFinal(castell)
-    result = random.choices(["D", "C", "I", "ID"], probs)[0]
+    result = random.choices(RESULTS, probs)[0]
     newProbs = improve_unique(result, castell)
     
     return result, newProbs
