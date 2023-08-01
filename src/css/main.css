@@ -3418,7 +3418,7 @@ span.help {
 }
 
 .game-stats-single-graphic {
-	max-width: 200px;
+	max-width: 300px;
 	padding: 16px;
 	background-color: var(--game-darkerBlue);
 }
