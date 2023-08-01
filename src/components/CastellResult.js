@@ -1,9 +1,24 @@
 import React, { Component } from "react";
 
 class CastellResult extends Component {
+	constructor(props) {
+        super(props);
+        this.handleKeyDown = this.handleKeyDown.bind(this);
+    }
 	next() {
 		this.props.onNext();
 	}
+	handleKeyDown(event) {
+        if (event.key === 'Enter') {
+			this.props.onNext();
+        }
+    }
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeyDown);
+    }
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.handleKeyDown);
+    }
 	render() {
 		const history = this.props.stats.stats.map(r => r?.resultat?.split(' ')?.map(w => w.charAt(0))?.join('') || '?').slice(-5);
 
