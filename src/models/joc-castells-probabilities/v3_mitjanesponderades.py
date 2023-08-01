@@ -938,6 +938,64 @@ CASTELLS = {
             "9d6": 0.2
         }
     },
+    "10d4n": {
+        "pes_dependencies": 0.5,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0.1, 0.2, 0.4, 0.3],
+        "dependencies": {
+            "4d4n": 1
+        }
+    },
+    "10d5": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "10d4n": 1,
+        }
+    },
+    "10d5n": {
+        "pes_dependencies": 0.6,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "10d4n": 0.7,
+            "4d5n": 0.3
+        }
+    },
+    "10d6": {
+        "pes_dependencies": 0.8,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "10d5n": 0.8,
+            "10d5": 0.2
+        }
+    },
+    "10d6n": {
+        "pes_dependencies": 0.6,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "10d5n": 0.7,
+            "4d6n": 0.3
+        }
+    },
+    "10d7": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "10d6n": 0.8,
+            "10d6": 0.2
+        }
+    },
 }
 
 CLONE_CASTELLS = copy.deepcopy(CASTELLS)
@@ -998,39 +1056,39 @@ COUNTS = {}
 
 STRATEGY = [
     {
-        "castell": "3d4n",
+        "castell": "4d4n",
         "tries": 20
     },
     {
-        "castell": "9d4n",
+        "castell": "10d4n",
         "tries": 20
     },
     {
-        "castell": "9d5",
+        "castell": "10d5",
         "tries": 20
     },
     {
-        "castell": "3d5n",
+        "castell": "4d5n",
         "tries": 20
     },
     {
-        "castell": "9d5n",
+        "castell": "10d5n",
         "tries": 30
     },
     {
-        "castell": "9d6",
+        "castell": "10d6",
         "tries": 20
     },
     {
-        "castell": "3d6n",
+        "castell": "4d6n",
         "tries": 30
     },
     {
-        "castell": "9d6n",
-        "tries": 80
+        "castell": "10d6n",
+        "tries": 40
     },
     {
-        "castell": "9d7",
+        "castell": "10d7",
         "tries": 40
     },
 ]
