@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { probCastell } from '../models/joc-castells-probabilities/v3/generateCastellResult'
 
 class CastellSelector extends Component {
 	constructor(props) {
@@ -88,7 +89,7 @@ class CastellSelector extends Component {
 									const blocked = c.gent > this.props.castellers;
 									
 									const difficulty = this.probToBracket(
-										this.props.stats?.[c.castell]?.stats?.at(-1)?.probabilitats?.[0] || 0
+										probCastell(this.props.stats, c.castell)?.[0] || 0
 									);
 
 									const difficulty_color = {

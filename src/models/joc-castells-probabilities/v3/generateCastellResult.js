@@ -41,6 +41,10 @@ function PFinal(stats, castell) {
     }
 }
 
+export function probCastell(stats, castell) {
+    return PFinal(stats, castell)
+}
+
 function improveUniques(stats, castell, result) {
     let uniques = stats[castell]['probabilitats']["unique"]
     const multipliers = stats[castell]['probabilitats']["multipliers"]
