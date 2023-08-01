@@ -34,7 +34,7 @@ for castell in probs:
         data_dict[castell] = {}
         data_dict[castell]["probabilitats"] = probs[castell]
         data_dict[castell]["castell"] = castell
-        data_dict[castell]["neta"] = 1
+        data_dict[castell]["neta"] = True
 
 # Export to JSON
 with open("./src/data/joc-castells.json", "w") as file:
