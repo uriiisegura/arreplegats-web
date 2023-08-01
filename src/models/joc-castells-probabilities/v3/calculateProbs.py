@@ -1,6 +1,11 @@
 import copy
 
-RESULTS = ["D", "C", "I", "ID"]
+RESULTS = [
+    "DESCARREGAT",
+    "CARREGAT",
+    "INTENT",
+    "INTENT DESMUNTAT"
+]
 
 # Define the multipliers
 EASY_MULTIPLIERS = {
