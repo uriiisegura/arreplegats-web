@@ -3,6 +3,18 @@ import random
 from os import system
 import copy
 
+# Define the multipliers
+MULTIPLIERS = {
+    "D": [1.2, 0.85, 0.85, 0.85],
+    "C": [1.1, 1.05, 0.9, 1.05],
+    "I": [0.95, 0.95, 0.8, 1.1],
+    "ID": [1, 1, 1.05, 0.8],
+}
+
+# Define the caps
+LOWER_CAP = 0.02
+UPPER_CAP = 0.96
+
 CASTELLS = {
     "pd3": {
         "pes_dependencies": 0,
@@ -168,35 +180,18 @@ def improve_unique(result, castell):
     npU = np.array(probs["unique"])
 
     # Cap
-    npU = np.clip(npU, 0.02, 0.96)
+    npU = np.clip(npU, LOWER_CAP, UPPER_CAP)
 
-    if result == "D":
-        npU[0] *= 1.2
-        npU[1] *= 0.85
-        npU[2] *= 0.85
-        npU[3] *= 0.85
-    elif result == "C":
-        npU[0] *= 1.1
-        npU[1] *= 1.05
-        npU[2] *= 0.9
-        npU[3] *= 1.05
-    elif result == "I":
-        npU[0] *= 0.95
-        npU[1] *= 0.95
-        npU[2] *= 0.8
-        npU[3] *= 1.1
-    elif result == "ID":
-        npU[0] *= 1
-        npU[1] *= 1
-        npU[2] *= 1.05
-        npU[3] *= 0.8
+    # Apply multipliers
+    if result in MULTIPLIERS:
+        npU *= MULTIPLIERS[result]
 
     # Cap
-    npU[0] = min(npU[0], 0.95)
-    npU[1] = min(npU[1], 0.95)
-    npU[2] = max(0.05, min(npU[2], 0.95))
-    npU[3] = max(0.05, min(npU[3], 0.95))
-    
+    npU[0] = min(npU[0], UPPER_CAP)
+    npU[1] = min(npU[1], UPPER_CAP)
+    npU[2] = max(LOWER_CAP, min(npU[2], UPPER_CAP))
+    npU[3] = max(LOWER_CAP, min(npU[3], UPPER_CAP))
+
     # Normalize
     if np.sum(npU) != 0:
         npU /= np.sum(npU)
