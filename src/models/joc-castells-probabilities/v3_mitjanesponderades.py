@@ -6,10 +6,10 @@ from os import system
 RESULTS = ['D', 'C', 'I', 'ID']
 
 EFFECTS = {
-    'D':  [ 1.10, 0.90, 0.85, 1.00 ],
-    'C':  [ 1.05, 1.05, 0.90, 1.05 ],
+    'D':  [ 1.20, 0.85, 0.85, 0.85 ],
+    'C':  [ 1.10, 1.05, 0.90, 1.05 ],
     'I':  [ 0.95, 1.05, 0.80, 1.10 ],
-    'ID': [ 1.05, 1.00, 1.05, 0.80 ]
+    'ID': [ 1.00, 1.00, 1.05, 0.80 ]
 }
 
 CASTELLS = {
@@ -176,6 +176,8 @@ def improve_unique(result, castell):
     probs = CASTELLS[castell]
     npU = np.array(probs['unique'])
 
+    npU = np.clip(npU, 0.02, 0.96)
+
     npU *= EFFECTS[result]
 
     npU[0] = min(npU[0], 0.95)
@@ -233,4 +235,6 @@ def main(castell, n=100, must_print=True):
 if __name__ == '__main__':
     system('clear')
 
-    main('Pd3', n=20)
+    main('Pd3', n=100, must_print=False)
+    main('Pd3n', n=1000, must_print=False)
+    main('Pd4', n=100)
