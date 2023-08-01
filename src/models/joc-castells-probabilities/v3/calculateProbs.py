@@ -42,305 +42,305 @@ DEFAULT_UPPER_CAP = 0.96
 
 CASTELLS = {
     # PILARS
-    "pd3": {
+    "Pd3": {
         "pes_dependencies": 0,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0.3, 0.4, 0.1, 0.2],
         "dependencies": {},
     },
-    "pd3s": {
+    "Pd3s": {
         "pes_dependencies": 0.6,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0.1, 0.8, 0.1],
         "dependencies": {
-            "pd3": 1
+            "Pd3": 1
         }
     },
-    "pd3n": {
+    "Pd3n": {
         "pes_dependencies": 0.15,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0.1, 0.8, 0.1],
         "dependencies": {
-            "pd3": 1
+            "Pd3": 1
         }
     },
-    "pd4": {
+    "Pd4": {
         "pes_dependencies": 0.8,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
-            "pd3n": 0.8,
-            "pd3": 0.2
+            "Pd3n": 0.8,
+            "Pd3": 0.2
         }
     },
-    "pd4s": {
+    "Pd4s": {
         "pes_dependencies": 0.6,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
-            "pd3n": 0.8,
-            "pd3s": 0.2
+            "Pd3n": 0.8,
+            "Pd3s": 0.2
         }
     },
-    "pd4n": {
+    "Pd4n": {
         "pes_dependencies": 0.3,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
-            "pd3n": 1,
+            "Pd3n": 1,
         }
     },
-    "pd5": {
+    "Pd5": {
         "pes_dependencies": 0.8,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "pd4n": 0.8,
-            "pd4": 0.2
+            "Pd4n": 0.8,
+            "Pd4": 0.2
         }
     },
-    "pd5s": {
+    "Pd5s": {
         "pes_dependencies": 0.4,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "pd4n": 0.8,
-            "pd4s": 0.2
+            "Pd4n": 0.8,
+            "Pd4s": 0.2
         }
     },
-    "pd5n": {
+    "Pd5n": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, 0.8],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "pd4n": 1,
+            "Pd4n": 1,
         }
     },
-    "pd6sf": {
+    "Pd6sf": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, 0.8],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "pd5n": 0.95,
-            "pd5": 0.05
+            "Pd5n": 0.95,
+            "Pd5": 0.05
         }
     },
-    "ftpd6f": {
+    "FT Pd6f": {
         "pes_dependencies": 0.8,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "pd5": 1
+            "Pd5": 1
         }
     },
-    "pd6f": {
+    "Pd6f": {
         "pes_dependencies": 0.3,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "ftpd6f": 1
+            "FT Pd6f": 1
         }
     },
-    "mtpd7fm": {
+    "MT Pd7fm": {
         "pes_dependencies": 0.9,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "ftpd6f": 1,
+            "FT Pd6f": 1,
         }
     },
-    "ftpd7fm": {
+    "FT Pd7fm": {
         "pes_dependencies": 0.7,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "pd6f": 0.8,
-            "mtpd7fm": 0.2
+            "Pd6f": 0.8,
+            "MT Pd7fm": 0.2
         }
     },
-    "pd7fm": {
+    "Pd7fm": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, 0.8],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "ftpd7fm": 1
+            "FT Pd7fm": 1
         }
     },
-    "ptpd8fmp": {
+    "PT Pd8fmp": {
         "pes_dependencies": 0.7,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "mtpd7fm": 1
+            "MT Pd7fm": 1
         }
     },
-    "mtftpd8fmp": {
+    "MT FT Pd8fmp": {
         "pes_dependencies": 0.7,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "ftpd7fm": 0.8,
-            "ptpd8fmp": 0.2
+            "FT Pd7fm": 0.8,
+            "PT Pd8fmp": 0.2
         }
     },
-    "ftpd8fmp": {
+    "FT Pd8fmp": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "pd7fm": 0.8,
-            "mtftpd8fmp": 0.2
+            "Pd7fm": 0.8,
+            "MT FT Pd8fmp": 0.2
         }
     },
-    "pd8fmp": {
+    "Pd8fmp": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, 0.6],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "ftpd8fmp": 0.7,
-            "mtftpd8fmp": 0.2,
-            "ptpd8fmp": 0.1
+            "FT Pd8fmp": 0.7,
+            "MT FT Pd8fmp": 0.2,
+            "PT Pd8fmp": 0.1
         }
     },
 
     # Torres
-    "td4n": {
+    "Td4n": {
         "pes_dependencies": 0,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0.1, 0.2, 0.4, 0.3],
         "dependencies": {}
     },
-    "td5": {
+    "Td5": {
         "pes_dependencies": 0.8,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "td4n": 1
+            "Td4n": 1
         }
     },
-    "td5s": {
+    "Td5s": {
         "pes_dependencies": 0.4,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
-            "td4n": 0.7,
-            "td5": 0.3
+            "Td4n": 0.7,
+            "Td5": 0.3
         }
     },
-    "td5n": {
+    "Td5n": {
         "pes_dependencies": 0.6,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
-            "td4n": 1
+            "Td4n": 1
         }
     },
-    "td6": {
+    "Td6": {
         "pes_dependencies": 0.8,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "td5n": 0.8,
-            "td5": 0.2
+            "Td5n": 0.8,
+            "Td5": 0.2
         }
     },
-    "td6s": {
+    "Td6s": {
         "pes_dependencies": 0.3,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
-            "td5n": 0.7,
-            "td6": 0.3,
+            "Td5n": 0.7,
+            "Td6": 0.3,
         }
     },
-    "td6n": {
+    "Td6n": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "td5n": 1
+            "Td5n": 1
         }
     },
-    "td7sf": {
+    "Td7sf": {
         "pes_dependencies": 0.8,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "td6n": 0.9,
-            "td6": 0.1
+            "Td6n": 0.9,
+            "Td6": 0.1
         }
     },
-    "fttd7f": {
+    "FT Td7f": {
         "pes_dependencies": 0.8,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "td6": 1
+            "Td6": 1
         }
     },
-    "td7f": {
+    "Td7f": {
         "pes_dependencies": 0.4,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "fttd7f": 1
+            "FT Td7f": 1
         }
     },
-    "mttd8fm": {
+    "MT Td8fm": {
         "pes_dependencies": 0.8,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "fttd7f": 1
+            "FT Td7f": 1
         }
     },
-    "fttd8fm": {
+    "FT Td8fm": {
         "pes_dependencies": 0.8,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "td7f": 0.6,
-            "mttd8fm": 0.4
+            "Td7f": 0.6,
+            "MT Td8fm": 0.4
         }
     },
-    "td8fm": {
+    "Td8fm": {
         "pes_dependencies": 0.3,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, 0.7],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "fttd8fm": 1
+            "FT Td8fm": 1
         }
     },
     "3d4n": {
@@ -445,7 +445,7 @@ CASTELLS = {
             "3d7n": 1,
         }
     },
-    "ft3d8f": {
+    "FT 3d8f": {
         "pes_dependencies": 0.8,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
@@ -460,26 +460,26 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "ft3d8f": 1
+            "FT 3d8f": 1
         }
     },
-    "mt3d9fm": {
+    "MT 3d9fm": {
         "pes_dependencies": 0.8,
         "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "ft3d8f": 1
+            "FT 3d8f": 1
         }
     },
-    "ft3d9fm": {
+    "FT 3d9fm": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "3d8f": 0.8,
-            "mt3d9fm": 0.2
+            "MT 3d9fm": 0.2
         }
     },
     "3d9fm": {
@@ -488,7 +488,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, 0.6],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "ft3d9fm": 1
+            "FT 3d9fm": 1
         }
     },
     "3d5a": {
@@ -498,7 +498,7 @@ CASTELLS = {
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "3d5": 0.6,
-            "pd3": 0.4
+            "Pd3": 0.4
         }
     },
     "3d6a": {
@@ -508,7 +508,7 @@ CASTELLS = {
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "3d6": 0.6,
-            "pd4": 0.4
+            "Pd4": 0.4
         }
     },
     "3d7a": {
@@ -518,10 +518,10 @@ CASTELLS = {
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "3d7": 0.6,
-            "pd5": 0.4
+            "Pd5": 0.4
         }
     },
-    "ft3d8fa": {
+    "FT 3d8fa": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
@@ -537,7 +537,7 @@ CASTELLS = {
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "3d8f": 0.6,
-            "ft3d8fa": 0.4,
+            "FT 3d8fa": 0.4,
         }
     },
     "4d4n": {
@@ -612,7 +612,7 @@ CASTELLS = {
             "4d7n": 1,
         }
     },
-    "ft4d9f": {
+    "FT 4d9f": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
@@ -627,7 +627,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, 0.6],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "ft4d9f": 1
+            "FT 4d9f": 1
         }
     },
     "4d5a": {
@@ -637,7 +637,7 @@ CASTELLS = {
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "4d5": 0.6,
-            "pd3": 0.4
+            "Pd3": 0.4
         }
     },
     "4d6a": {
@@ -647,7 +647,7 @@ CASTELLS = {
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "4d6": 0.6,
-            "pd4": 0.4
+            "Pd4": 0.4
         }
     },
     "4d7a": {
@@ -657,10 +657,10 @@ CASTELLS = {
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "4d7": 0.6,
-            "pd5": 0.4
+            "Pd5": 0.4
         }
     },
-    "ft4d8fa": {
+    "FT 4d8fa": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
@@ -676,7 +676,7 @@ CASTELLS = {
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "4d8f": 0.6,
-            "ft4d8fa": 0.4,
+            "FT 4d8fa": 0.4,
         }
     },
     "5d4n": {
@@ -755,7 +755,7 @@ CASTELLS = {
             "5d6": 0.2
         }
     },
-    "ft5d8f": {
+    "FT 5d8f": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
@@ -770,7 +770,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, 0.7],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "ft5d8f": 1,
+            "FT 5d8f": 1,
         }
     },
     "7d4n": {
@@ -831,7 +831,7 @@ CASTELLS = {
             "7d6": 0.2
         }
     },
-    "ft7d8f": {
+    "FT 7d8f": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
@@ -846,7 +846,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "ft7d8f": 1,
+            "FT 7d8f": 1,
         }
     },
     "7d8sf": {
