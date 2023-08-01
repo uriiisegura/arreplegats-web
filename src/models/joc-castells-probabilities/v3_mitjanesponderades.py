@@ -299,74 +299,35 @@ def simulate_play(castell):
 N_ITERS = 100
 COUNTS = {}
 
+STRATEGY = [
+    {
+        "castell": "pd3",
+        "tries": 20
+    }
+]
+
+TRIED_CASTELLS = [
+    step["castell"] for step in STRATEGY
+]
+
 for j in range(N_ITERS):
     CASTELLS = copy.deepcopy(CLONE_CASTELLS)
 
-    for i in range(20):
-        result, newProbs = simulate_play("pd3")
+    for step in STRATEGY:
+        castell = step["castell"]
+        tries = step["tries"]
 
-    for i in range(40):
-        result, newProbs = simulate_play("pd3s")
-
-    for i in range(40):
-        result, newProbs = simulate_play("pd3n")
-
-    for i in range(20):
-        result, newProbs = simulate_play("pd4")
-
-    for i in range(40):
-        result, newProbs = simulate_play("pd4s")
-
-    for i in range(100):
-        result, newProbs = simulate_play("pd4n")
-
-    for i in range(100):
-        result, newProbs = simulate_play("pd5")
-
-    for i in range(40):
-        result, newProbs = simulate_play("pd5s")
-
-    for i in range(20):
-        result, newProbs = simulate_play("ftpd6f")
-
-    for i in range(40):
-        result, newProbs = simulate_play("pd6f")
-
-    for i in range(20):
-        result, newProbs = simulate_play("mtpd7fm")
-
-    for i in range(30):
-        result, newProbs = simulate_play("ftpd7fm")
-
-    for i in range(90):
-        result, newProbs = simulate_play("pd7fm")
-
-    for i in range(30):
-        result, newProbs = simulate_play("ptpd8fmp")
-
-    for i in range(30):
-        result, newProbs = simulate_play("mtftpd8fmp")
-
-    for i in range(50):
-        result, newProbs = simulate_play("ftpd8fmp")
-
-    for i in range(100):
-        result, newProbs = simulate_play("pd8fmp")
-
-    for i in range(160):
-        result, newProbs = simulate_play("pd5n")
-
-    for i in range(40):
-        result, newProbs = simulate_play("pd6sf")
+        for i in range(tries):
+            result, newProbs = simulate_play(castell)
 
     # Calculate counts
-    for castell in CASTELLS:
+    for castell in TRIED_CASTELLS:
         if castell not in COUNTS:
             COUNTS[castell] = [np.array(PFinal(castell))]
         else:
             COUNTS[castell] += [np.array(PFinal(castell))]
 
 # HISTOGRAMES
-for castell in CASTELLS:
+for castell in TRIED_CASTELLS:
     print(castell)
     histogram(COUNTS[castell])
