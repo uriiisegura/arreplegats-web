@@ -64,7 +64,10 @@ class CastellSelector extends Component {
 		});
 	}
 	unsetGroup() {
-		this.setState({from_group: null});
+		this.setState({
+			from_group: null,
+			neta: false
+		});
 	}
 	selectCastell(castell) {
 		this.props.onSelectCastell(castell);

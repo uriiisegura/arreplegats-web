@@ -25,7 +25,10 @@ function PFinal(stats, castell) {
     const D = probs["dependencies"];
     const unique = probs["unique"];
 
-    const deps = Object.keys(D).map(d => PFinal(stats, d).map(el => el * D[d]));
+    const deps = Object.keys(D)
+        .map(d => PFinal(stats, d).map(el => el * D[d]))
+        // If unique is better than the dependency, use unique.
+        .map(dep => dep?.[0] > unique?.[0] ? dep : unique)
 
     if (deps.length === 0)
         return unique;
