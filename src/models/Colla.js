@@ -17,7 +17,7 @@ class Colla {
 				assajos=[],
 				missions_accepted=[],
 				missions_completed=[],
-				date=Date.parse('2022-09-12') // dilluns
+				date=Date.parse('2023-09-18') // dilluns
 		) {
 		this.name = name;
 		this.color = color;
@@ -100,6 +100,19 @@ class Colla {
 			'punts': actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts,
 			'data': new Date()
 		});
+	}
+	nextDay() {
+		const date = new Date(this.date);
+		const weekday = date.getDay();
+
+		if (weekday === 1)
+			date.setDate(date.getDate() + 1)
+		if (weekday === 2)
+			date.setDate(date.getDate() + 2)
+		if (weekday === 4)
+			date.setDate(date.getDate() + 4)
+		
+		this.date = date;
 	}
 }
 

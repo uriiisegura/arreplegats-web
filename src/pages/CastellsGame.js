@@ -255,6 +255,14 @@ class CastellsGame extends Component {
 
 		return intentatAtA > intentatAtB ? -1 : 1;
 	}
+	addTenCastellers() {
+		this.state.colla.addCastellers(10);
+		this.forceUpdate();
+	}
+	advanceDay() {
+		this.state.colla.nextDay();
+		this.forceUpdate();
+	}
 	deleteGame() {
 		// if (window.confirm('Segur que vols eliminar la partida? Aquesta acció no es pot desfer.')) {
 			localStorage.removeItem('game');
@@ -287,7 +295,7 @@ class CastellsGame extends Component {
 							<div className="game-full-wrap game-bigger-wrap">
 								<div className="menu">
 									<div className="game-menu-time game-current-day"><img src="/font-awesome/calendar.svg" alt="calendar"/><span>{TimestampToString(this.state.colla.date)}</span></div>
-									<button className="game-menu-time game-advance-day">Avança al següent dia</button>
+									<button className="game-menu-time game-advance-day" onClick={this.advanceDay.bind(this)}>Avança al següent dia</button>
 									<button className="btn" onClick={() => this.changeScreen('ASSAIG')}>
 										<span>ASSAIG</span>
 									</button>
@@ -309,7 +317,7 @@ class CastellsGame extends Component {
 									<button className={`btn ${this.state.colla.tried.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('STATS')}>
 										<span>ESTADÍSTIQUES</span>
 									</button>
-									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={() => {this.state.colla.addCastellers(10)}}>
+									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.addTenCastellers.bind(this)}>
 										<span>+10 castellers</span>
 									</button>}
 									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.deleteGame}>
