@@ -561,6 +561,145 @@ CASTELLS = {
             "ft3d8fa": 0.4,
         }
     },
+    "4d4n": {
+        "pes_dependencies": 0,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0.1, 0.2, 0.4, 0.3],
+        "dependencies": {}
+    },
+    "4d5": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d4n": 1
+        }
+    },
+    "4d5n": {
+        "pes_dependencies": 0.6,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "4d4n": 1
+        }
+    },
+    "4d6": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d5n": 0.8,
+            "4d5": 0.2
+        }
+    },
+    "4d6n": {
+        "pes_dependencies": 0.4,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "4d5n": 1
+        }
+    },
+    "4d7": {
+        "pes_dependencies": 0.8,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d6n": 0.8,
+            "4d6": 0.2
+        }
+    },
+    "4d7n": {
+        "pes_dependencies": 0.3,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 1, 0],
+        "dependencies": {
+            "4d6n": 1
+        }
+    },
+    "4d8": {
+        "pes_dependencies": 0.7,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 1, 0],
+        "dependencies": {
+            "4d7n": 1,
+        }
+    },
+    "ft4d9f": {
+        "pes_dependencies": 0.8,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d8": 1
+        }
+    },
+    "4d9f": {
+        "pes_dependencies": 0.2,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "ft4d9f": 1
+        }
+    },
+    "4d5a": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d5": 0.6,
+            "pd3": 0.4
+        }
+    },
+    "4d6a": {
+        "pes_dependencies": 0.8,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d6": 0.6,
+            "pd4": 0.4
+        }
+    },
+    "4d7a": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d7": 0.6,
+            "pd5": 0.4
+        }
+    },
+    "ft4d8fa": {
+        "pes_dependencies": 0.8,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "4d7a": 1
+        }
+    },
+    "4d8fa": {
+        "pes_dependencies": 0.5,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "4d8f": 0.6,
+            "ft4d8fa": 0.4,
+        }
+    },
 }
 
 CLONE_CASTELLS = copy.deepcopy(CASTELLS)
@@ -621,44 +760,40 @@ COUNTS = {}
 
 STRATEGY = [
     {
-        "castell": "3d4n",
+        "castell": "4d4n",
         "tries": 30
     },
     {
-        "castell": "3d5n",
+        "castell": "4d5n",
         "tries": 30
     },
     {
-        "castell": "3d6",
+        "castell": "4d6",
         "tries": 30
     },
     {
-        "castell": "3d6n",
+        "castell": "4d6n",
         "tries": 30
     },
     {
-        "castell": "3d7",
+        "castell": "4d7",
         "tries": 30
     },
     {
-        "castell": "ft3d8f",
-        "tries": 30
+        "castell": "4d7n",
+        "tries": 120
     },
     {
-        "castell": "3d8f",
+        "castell": "4d8",
         "tries": 50
     },
     {
-        "castell": "mt3d9fm",
-        "tries": 30
+        "castell": "ft4d9f",
+        "tries": 50
     },
     {
-        "castell": "ft3d9fm",
-        "tries": 40
-    },
-    {
-        "castell": "3d9fm",
-        "tries": 80
+        "castell": "4d9f",
+        "tries": 100
     },
 ]
 
