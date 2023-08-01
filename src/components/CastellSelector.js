@@ -78,7 +78,7 @@ class CastellSelector extends Component {
 									const blocked = c.gent > this.props.castellers;
 									
 									const difficulty = this.probToBracket(
-										this.props.stats?.[c.castell]?.stats?.at(-1)?.[0] || 0
+										this.props.stats?.[c.castell]?.stats?.at(-1)?.probabilitats?.[0] || 0
 									);
 
 									const difficulty_color = {
