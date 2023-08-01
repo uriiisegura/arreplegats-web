@@ -5,7 +5,7 @@ class CastellResult extends Component {
 		this.props.onNext();
 	}
 	render() {
-		const history = this.props.stats.stats.map(r => r.resultat.split(' ').map(w => w.charAt(0)).join('')).slice(-5);
+		const history = this.props.stats.stats.map(r => r?.resultat?.split(' ')?.map(w => w.charAt(0))?.join('') || '?').slice(-5);
 
 		return (
 			<div className="game-canvas-center">

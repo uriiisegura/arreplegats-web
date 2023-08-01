@@ -74,11 +74,11 @@ class Colla {
 			castell: castell.castell,
 		})
 
-		// const { newProbs } = v3.updateProbs({
-		// 	stats: this.stats,
-		// 	castell: castell.castell,
-		// 	result: result,
-		// })
+		const { newProbs } = v3.updateProbs({
+			stats: this.stats,
+			castell: castell.castell,
+			result: result,
+		})
 
 		this.stats[castell.castell].stats.push({
 			resultat: result,

@@ -27,16 +27,16 @@ function PFinal(stats, castell) {
 }
 
 function improveUniques(stats, castell, result) {
-    let uniques = [...stats[castell]['probabilitats']["unique"]];
-    const multipliers = stats[castell]['probabilitats']["multipliers"];
-    const [lower_cap, upper_cap] = stats[castell]['probabilitats']["caps"];
+    let uniques = stats[castell]['probabilitats']["unique"]
+    const multipliers = stats[castell]['probabilitats']["multipliers"]
+    const [lower_cap, upper_cap] = stats[castell]['probabilitats']["caps"]
 
     // Cap
     uniques = uniques.map(val => Math.max(lower_cap, Math.min(val, upper_cap)));
 
     // Apply multipliers
     if (result in multipliers) {
-        uniques = uniques.map(val => val * multipliers[result]);
+        uniques = uniques.map((val, i) => val * multipliers[result][i]);
     }
 
     // Cap
@@ -54,7 +54,7 @@ function improveUniques(stats, castell, result) {
     }
 
     // Update probabilities
-    stats[castell]['probabilitats']["unique"] = [...uniques];
+    stats[castell]['probabilitats']["unique"] = uniques
 
     return {
         newProbs: PFinal(stats, castell)
