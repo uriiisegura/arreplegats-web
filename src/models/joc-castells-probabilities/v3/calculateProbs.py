@@ -675,8 +675,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0, 1],
         "dependencies": {
-            "4d8f": 0.6,
-            "FT 4d8fa": 0.4,
+            "FT 4d8fa": 1
         }
     },
     "5d4n": {
