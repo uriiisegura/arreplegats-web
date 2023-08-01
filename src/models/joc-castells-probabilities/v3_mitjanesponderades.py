@@ -140,7 +140,7 @@ CASTELLS = {
     "pd5n": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.8],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "pd4n": 1,
@@ -149,7 +149,7 @@ CASTELLS = {
     "pd6sf": {
         "pes_dependencies": 0.8,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.8],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "pd5n": 0.95,
@@ -196,7 +196,7 @@ CASTELLS = {
     "pd7fm": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.8],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "ftpd7fm": 1
@@ -234,7 +234,7 @@ CASTELLS = {
     "pd8fmp": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.6],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "ftpd8fmp": 0.7,
@@ -302,7 +302,7 @@ CASTELLS = {
     "td6n": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "td5n": 1
@@ -311,7 +311,7 @@ CASTELLS = {
     "td7sf": {
         "pes_dependencies": 0.8,
         "multipliers": HARD_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
             "td6n": 0.9,
@@ -358,7 +358,7 @@ CASTELLS = {
     "td8fm": {
         "pes_dependencies": 0.3,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.7],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "fttd8fm": 1
@@ -441,7 +441,7 @@ CASTELLS = {
     "3d7s": {
         "pes_dependencies": 0.3,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 1, 0],
         "dependencies": {
             "3d6n": 0.7,
@@ -449,9 +449,9 @@ CASTELLS = {
         }
     },
     "3d7n": {
-        "pes_dependencies": 0.1,
+        "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 1, 0],
         "dependencies": {
             "3d6n": 1
@@ -460,7 +460,7 @@ CASTELLS = {
     "3d8sf": {
         "pes_dependencies": 0.6,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.7],
         "unique": [0, 0, 1, 0],
         "dependencies": {
             "3d7n": 1,
@@ -506,7 +506,7 @@ CASTELLS = {
     "3d9fm": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.6],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "ft3d9fm": 1
@@ -554,7 +554,7 @@ CASTELLS = {
     "3d8fa": {
         "pes_dependencies": 0.5,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "3d8f": 0.6,
@@ -618,7 +618,7 @@ CASTELLS = {
     "4d7n": {
         "pes_dependencies": 0.3,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 1, 0],
         "dependencies": {
             "4d6n": 1
@@ -627,7 +627,7 @@ CASTELLS = {
     "4d8": {
         "pes_dependencies": 0.7,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 1, 0],
         "dependencies": {
             "4d7n": 1,
@@ -645,7 +645,7 @@ CASTELLS = {
     "4d9f": {
         "pes_dependencies": 0.2,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.6],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "ft4d9f": 1
@@ -693,7 +693,7 @@ CASTELLS = {
     "4d8fa": {
         "pes_dependencies": 0.5,
         "multipliers": IMPOSSIBLE_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "4d8f": 0.6,
@@ -760,52 +760,36 @@ COUNTS = {}
 
 STRATEGY = [
     {
-        "castell": "4d4n",
+        "castell": "3d4n",
         "tries": 20
     },
     {
-        "castell": "4d5",
+        "castell": "3d5",
         "tries": 20
     },
     {
-        "castell": "4d5n",
+        "castell": "3d5n",
         "tries": 20
     },
     {
-        "castell": "4d6",
+        "castell": "3d6",
         "tries": 20
     },
     {
-        "castell": "4d6n",
-        "tries": 30
+        "castell": "3d6n",
+        "tries": 100
     },
     {
-        "castell": "4d7",
+        "castell": "3d7",
         "tries": 20
     },
     {
-        "castell": "pd3",
-        "tries": 10
+        "castell": "3d7n",
+        "tries": 160
     },
     {
-        "castell": "pd3n",
+        "castell": "3d8sf",
         "tries": 40
-    },
-    {
-        "castell": "pd4",
-        "tries": 30
-    },
-    {
-        "castell": "pd4n",
-        "tries": 50
-    },
-    {
-        "castell": "pd5",
-        "tries": 30
-    },
-    {
-        "castell": "4d7a",
-        "tries": 30
     },
 ]
 
