@@ -880,7 +880,64 @@ CASTELLS = {
             "7d7": 0.1,
         }
     },
-    
+    "9d4n": {
+        "pes_dependencies": 0.5,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0.1, 0.2, 0.4, 0.3],
+        "dependencies": {
+            "3d4n": 1
+        }
+    },
+    "9d5": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "9d4n": 1,
+        }
+    },
+    "9d5n": {
+        "pes_dependencies": 0.6,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "9d4n": 0.7,
+            "3d5n": 0.3
+        }
+    },
+    "9d6": {
+        "pes_dependencies": 0.8,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "9d5n": 0.8,
+            "9d5": 0.2
+        }
+    },
+    "9d6n": {
+        "pes_dependencies": 0.4,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "9d5n": 0.7,
+            "3d6n": 0.3
+        }
+    },
+    "9d7": {
+        "pes_dependencies": 0.8,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, 0.9],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "9d6n": 0.8,
+            "9d6": 0.2
+        }
+    },
 }
 
 CLONE_CASTELLS = copy.deepcopy(CASTELLS)
@@ -941,48 +998,40 @@ COUNTS = {}
 
 STRATEGY = [
     {
-        "castell": "4d4n",
+        "castell": "3d4n",
         "tries": 20
     },
     {
-        "castell": "7d4n",
+        "castell": "9d4n",
         "tries": 20
     },
     {
-        "castell": "7d5",
+        "castell": "9d5",
         "tries": 20
     },
     {
-        "castell": "4d5n",
+        "castell": "3d5n",
         "tries": 20
     },
     {
-        "castell": "7d5n",
+        "castell": "9d5n",
         "tries": 30
     },
     {
-        "castell": "7d6",
+        "castell": "9d6",
         "tries": 20
     },
     {
-        "castell": "4d6n",
+        "castell": "3d6n",
         "tries": 30
     },
     {
-        "castell": "7d6n",
-        "tries": 40
+        "castell": "9d6n",
+        "tries": 80
     },
     {
-        "castell": "7d7",
+        "castell": "9d7",
         "tries": 40
-    },
-    {
-        "castell": "ft7d8f",
-        "tries": 40
-    },
-    {
-        "castell": "7d8f",
-        "tries": 60
     },
 ]
 
