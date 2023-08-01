@@ -303,6 +303,12 @@ class CastellsGame extends Component {
 									<button onClick={() => {this.state.colla.addCastellers(10)}}>
 										<span>+10 castellers</span>
 									</button>
+									<button onClick={() => {
+										localStorage.removeItem('game')
+										window.location.reload()
+									}}>
+										<span>BORRA PARTIDA</span>
+									</button>
 								</div>
 							</div>
 						</> : <></>
