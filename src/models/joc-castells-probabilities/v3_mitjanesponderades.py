@@ -4,7 +4,7 @@ from os import system
 import copy
 
 # Define the multipliers
-MULTIPLIERS = {
+DEFAULT_MULTIPLIERS = {
     "D": [1.2, 0.85, 0.85, 0.85],
     "C": [1.1, 1.05, 0.9, 1.05],
     "I": [0.95, 0.95, 0.8, 1.1],
@@ -12,17 +12,21 @@ MULTIPLIERS = {
 }
 
 # Define the caps
-LOWER_CAP = 0.02
-UPPER_CAP = 0.96
+DEFAULT_LOWER_CAP = 0.02
+DEFAULT_UPPER_CAP = 0.96
 
 CASTELLS = {
     "pd3": {
         "pes_dependencies": 0,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0.1, 0.2, 0.4, 0.3],
-        "dependencies": {}
+        "dependencies": {},
     },
     "pd3s": {
         "pes_dependencies": 0.6,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0.1, 0.8, 0.1],
         "dependencies": {
             "pd3": 1
@@ -30,6 +34,8 @@ CASTELLS = {
     },
     "pd3n": {
         "pes_dependencies": 0.15,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0.1, 0.8, 0.1],
         "dependencies": {
             "pd3": 1
@@ -37,6 +43,8 @@ CASTELLS = {
     },
     "pd4": {
         "pes_dependencies": 0.8,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
             "pd3n": 0.8,
@@ -45,6 +53,8 @@ CASTELLS = {
     },
     "pd4s": {
         "pes_dependencies": 0.6,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
             "pd3n": 0.8,
@@ -53,6 +63,8 @@ CASTELLS = {
     },
     "pd4n": {
         "pes_dependencies": 0.15,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
             "pd3n": 1,
@@ -60,6 +72,8 @@ CASTELLS = {
     },
     "pd5": {
         "pes_dependencies": 0.8,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "pd4n": 0.8,
@@ -68,6 +82,8 @@ CASTELLS = {
     },
     "pd5s": {
         "pes_dependencies": 0.4,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "pd4n": 0.8,
@@ -76,6 +92,8 @@ CASTELLS = {
     },
     "pd5n": {
         "pes_dependencies": 0.05,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "pd4n": 1,
@@ -83,6 +101,8 @@ CASTELLS = {
     },
     "pd6sf": {
         "pes_dependencies": 0.8,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "pd5n": 0.95,
@@ -91,6 +111,8 @@ CASTELLS = {
     },
     "ftpd6f": {
         "pes_dependencies": 0.8,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "pd5": 1
@@ -98,6 +120,8 @@ CASTELLS = {
     },
     "pd6f": {
         "pes_dependencies": 0.3,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
             "ftpd6f": 0.8
@@ -105,6 +129,8 @@ CASTELLS = {
     },
     "mtpd7fm": {
         "pes_dependencies": 0.9,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "ftpd6f": 1,
@@ -112,6 +138,8 @@ CASTELLS = {
     },
     "ftpd7fm": {
         "pes_dependencies": 0.7,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
             "pd6f": 0.8,
@@ -120,6 +148,8 @@ CASTELLS = {
     },
     "pd7fm": {
         "pes_dependencies": 0.2,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "ftpd7fm": 1
@@ -127,6 +157,8 @@ CASTELLS = {
     },
     "ptpd8fmp": {
         "pes_dependencies": 0.7,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
             "mtpd7fm": 1
@@ -134,6 +166,8 @@ CASTELLS = {
     },
     "mtftpd8fmp": {
         "pes_dependencies": 0.7,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
             "ftpd7fm": 0.8,
@@ -142,6 +176,8 @@ CASTELLS = {
     },
     "ftpd8fmp": {
         "pes_dependencies": 0.8,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "pd7fm": 0.8,
@@ -150,6 +186,8 @@ CASTELLS = {
     },
     "pd8fmp": {
         "pes_dependencies": 0.3,
+        "multipliers": DEFAULT_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "ftpd8fmp": 0.7,
@@ -176,21 +214,22 @@ def PFinal(castell):
         return PD*np.sum(deps, axis=0) + (1-PD)*unique
 
 def improve_unique(result, castell):
-    probs = CASTELLS[castell]
-    npU = np.array(probs["unique"])
+    npU = np.array(CASTELLS[castell]["unique"])
+    multipliers = CASTELLS[castell]["multipliers"]
+    [lower_cap, upper_cap] = CASTELLS[castell]["caps"]
 
     # Cap
-    npU = np.clip(npU, LOWER_CAP, UPPER_CAP)
+    npU = np.clip(npU, lower_cap, upper_cap)
 
     # Apply multipliers
-    if result in MULTIPLIERS:
-        npU *= MULTIPLIERS[result]
+    if result in multipliers:
+        npU *= multipliers[result]
 
     # Cap
-    npU[0] = min(npU[0], UPPER_CAP)
-    npU[1] = min(npU[1], UPPER_CAP)
-    npU[2] = max(LOWER_CAP, min(npU[2], UPPER_CAP))
-    npU[3] = max(LOWER_CAP, min(npU[3], UPPER_CAP))
+    npU[0] = min(npU[0], upper_cap)
+    npU[1] = min(npU[1], upper_cap)
+    npU[2] = max(lower_cap, min(npU[2], upper_cap))
+    npU[3] = max(lower_cap, min(npU[3], upper_cap))
 
     # Normalize
     if np.sum(npU) != 0:
@@ -199,7 +238,7 @@ def improve_unique(result, castell):
         npU = np.array([0, 0, 0, 1])
 
     # Update probabilities
-    probs["unique"] = npU.tolist()
+    CASTELLS[castell]["unique"] = npU.tolist()
 
     return npU
 
