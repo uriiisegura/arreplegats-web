@@ -4,11 +4,25 @@ from os import system
 import copy
 
 # Define the multipliers
-DEFAULT_MULTIPLIERS = {
+EASY_MULTIPLIERS = {
     "D": [1.2, 0.85, 0.85, 0.85],
     "C": [1.1, 1.05, 0.9, 1.05],
     "I": [0.95, 0.95, 0.8, 1.1],
     "ID": [1, 1, 1.05, 0.8],
+}
+
+MEDIUM_MULTIPLIERS = {
+    "D": [1.1, 0.85, 0.85, 0.85],
+    "C": [1.05, 1.05, 0.95, 1.05],
+    "I": [0.95, 0.95, 0.85, 1.1],
+    "ID": [1, 1, 1.05, 0.85],
+}
+
+HARD_MULTIPLIERS = {
+    "D": [1.1, 0.9, 0.9, 0.9],
+    "C": [1.05, 1.05, 0.95, 1.05],
+    "I": [0.95, 0.95, 0.85, 1.1],
+    "ID": [1, 1, 1.05, 0.85],
 }
 
 # Define the caps
@@ -18,14 +32,14 @@ DEFAULT_UPPER_CAP = 0.96
 CASTELLS = {
     "pd3": {
         "pes_dependencies": 0,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0.1, 0.2, 0.4, 0.3],
         "dependencies": {},
     },
     "pd3s": {
         "pes_dependencies": 0.6,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0.1, 0.8, 0.1],
         "dependencies": {
@@ -34,7 +48,7 @@ CASTELLS = {
     },
     "pd3n": {
         "pes_dependencies": 0.15,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0.1, 0.8, 0.1],
         "dependencies": {
@@ -43,7 +57,7 @@ CASTELLS = {
     },
     "pd4": {
         "pes_dependencies": 0.8,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
@@ -53,7 +67,7 @@ CASTELLS = {
     },
     "pd4s": {
         "pes_dependencies": 0.6,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
@@ -63,7 +77,7 @@ CASTELLS = {
     },
     "pd4n": {
         "pes_dependencies": 0.15,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
@@ -72,7 +86,7 @@ CASTELLS = {
     },
     "pd5": {
         "pes_dependencies": 0.8,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -82,7 +96,7 @@ CASTELLS = {
     },
     "pd5s": {
         "pes_dependencies": 0.4,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -92,7 +106,7 @@ CASTELLS = {
     },
     "pd5n": {
         "pes_dependencies": 0.05,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -101,7 +115,7 @@ CASTELLS = {
     },
     "pd6sf": {
         "pes_dependencies": 0.8,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -111,7 +125,7 @@ CASTELLS = {
     },
     "ftpd6f": {
         "pes_dependencies": 0.8,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -120,7 +134,7 @@ CASTELLS = {
     },
     "pd6f": {
         "pes_dependencies": 0.3,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
@@ -129,7 +143,7 @@ CASTELLS = {
     },
     "mtpd7fm": {
         "pes_dependencies": 0.9,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -138,7 +152,7 @@ CASTELLS = {
     },
     "ftpd7fm": {
         "pes_dependencies": 0.7,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
@@ -148,7 +162,7 @@ CASTELLS = {
     },
     "pd7fm": {
         "pes_dependencies": 0.2,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
@@ -157,7 +171,7 @@ CASTELLS = {
     },
     "ptpd8fmp": {
         "pes_dependencies": 0.7,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
@@ -166,7 +180,7 @@ CASTELLS = {
     },
     "mtftpd8fmp": {
         "pes_dependencies": 0.7,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
@@ -176,7 +190,7 @@ CASTELLS = {
     },
     "ftpd8fmp": {
         "pes_dependencies": 0.8,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
@@ -186,7 +200,7 @@ CASTELLS = {
     },
     "pd8fmp": {
         "pes_dependencies": 0.3,
-        "multipliers": DEFAULT_MULTIPLIERS,
+        "multipliers": HARD_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0, 1],
         "dependencies": {
@@ -250,76 +264,29 @@ def simulate_play(castell):
     return result, newProbs
 
 # STRATEGY
-TOTAL_STEPS = 0
 DOMINATS = 0
 
 for j in range(1000):
-    # pd3
-    # print("before pd3, pd3:", PFinal("pd3"))
-
     for i in range(20):
         result, newProbs = simulate_play("pd3")
-        # print(result, newProbs)
-
-    TOTAL_STEPS += 20
-    # print("after pd3, pd3:", PFinal("pd3"))
-    # print("total steps for pd3:", TOTAL_STEPS)
-
-    # pd3n
-    # print("before pd3n, pd3n:", PFinal("pd3n"))
 
     for i in range(40):
         result, newProbs = simulate_play("pd3n")
-        # print(result, newProbs)
-
-    TOTAL_STEPS += 40
-    # print("after pd3n, pd3n:", round(PFinal("pd3n")[0]*100), PFinal("pd3n"))
-    # print("total steps for pd3n:", TOTAL_STEPS)
-
-    # pd4
-    # print("before pd4, pd4:", PFinal("pd4"))
 
     for i in range(20):
         result, newProbs = simulate_play("pd4")
-        # print(result, newProbs)
 
-    # print("after pd4, pd4:", PFinal("pd4"))
-
-    # pd4n
-    # print("before pd4n, pd4n:", PFinal("pd4n"))
-
-    for i in range(40):
+    for i in range(60):
         result, newProbs = simulate_play("pd4n")
-        # print(result, newProbs)
-
-    # print("after pd4n, pd4n:", PFinal("pd4n"))
-
-    # pd5
-    # print("before pd5, pd5:", PFinal("pd5"))
 
     for i in range(20):
         result, newProbs = simulate_play("pd5")
-        # print(result, newProbs)
 
-    # print("after pd5, pd5:", PFinal("pd5"))
-
-    # pd5n
-    # print("before pd5n, pd5n:", PFinal("pd5n"))
-
-    for i in range(40):
+    for i in range(80):
         result, newProbs = simulate_play("pd5n")
-        # print(result, newProbs)
-
-    # print("after pd5n, pd5n:", PFinal("pd5n"))
-
-    # pd6sf
-    # print("before pd6sf, pd6sf:", PFinal("pd6sf"))
 
     for i in range(20):
         result, newProbs = simulate_play("pd6sf")
-        # print(result, newProbs)
-
-    # print("after pd6sf, pd6sf:", PFinal("pd6sf"))
 
     DOMINATS += 1 if PFinal("pd6sf")[0] > 0.5 else 0
     CASTELLS = copy.deepcopy(CLONE_CASTELLS)
