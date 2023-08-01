@@ -3940,90 +3940,6 @@
             "9d6": 0.2
         }
     },
-    "10d4n": {
-        "pes_dependencies": 0.5,
-        "multipliers": {
-            "DESCARREGAT": [
-                1.2,
-                0.85,
-                0.85,
-                0.8
-            ],
-            "CARREGAT": [
-                1.1,
-                1.1,
-                0.9,
-                1.05
-            ],
-            "INTENT": [
-                0.95,
-                0.95,
-                0.8,
-                1.1
-            ],
-            "INTENT DESMUNTAT": [
-                1,
-                1,
-                1.05,
-                0.8
-            ]
-        },
-        "caps": [
-            0.02,
-            0.96
-        ],
-        "unique": [
-            0.1,
-            0.2,
-            0.4,
-            0.3
-        ],
-        "dependencies": {
-            "4d4n": 1
-        }
-    },
-    "10d5": {
-        "pes_dependencies": 0.8,
-        "multipliers": {
-            "DESCARREGAT": [
-                1.2,
-                0.85,
-                0.85,
-                0.8
-            ],
-            "CARREGAT": [
-                1.1,
-                1.1,
-                0.9,
-                1.05
-            ],
-            "INTENT": [
-                0.95,
-                0.95,
-                0.8,
-                1.1
-            ],
-            "INTENT DESMUNTAT": [
-                1,
-                1,
-                1.05,
-                0.8
-            ]
-        },
-        "caps": [
-            0.02,
-            0.96
-        ],
-        "unique": [
-            0,
-            0,
-            0.2,
-            0.8
-        ],
-        "dependencies": {
-            "10d4n": 1
-        }
-    },
     "10d5n": {
         "pes_dependencies": 0.6,
         "multipliers": {
@@ -4063,8 +3979,7 @@
             0.2
         ],
         "dependencies": {
-            "10d4n": 0.7,
-            "4d5n": 0.3
+            "4d5n": 1
         }
     },
     "10d6": {
@@ -4106,8 +4021,7 @@
             0.8
         ],
         "dependencies": {
-            "10d5n": 0.8,
-            "10d5": 0.2
+            "10d5n": 1
         }
     },
     "10d6n": {

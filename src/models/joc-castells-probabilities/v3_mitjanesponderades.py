@@ -89,14 +89,6 @@ STRATEGY = [
         "tries": 20
     },
     {
-        "castell": "10d4n",
-        "tries": 20
-    },
-    {
-        "castell": "10d5",
-        "tries": 20
-    },
-    {
         "castell": "4d5n",
         "tries": 20
     },

@@ -916,32 +916,13 @@ CASTELLS = {
             "9d6": 0.2
         }
     },
-    "10d4n": {
-        "pes_dependencies": 0.5,
-        "multipliers": EASY_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
-        "unique": [0.1, 0.2, 0.4, 0.3],
-        "dependencies": {
-            "4d4n": 1
-        }
-    },
-    "10d5": {
-        "pes_dependencies": 0.8,
-        "multipliers": EASY_MULTIPLIERS,
-        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
-        "unique": [0, 0, 0.2, 0.8],
-        "dependencies": {
-            "10d4n": 1,
-        }
-    },
     "10d5n": {
         "pes_dependencies": 0.6,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
         "dependencies": {
-            "10d4n": 0.7,
-            "4d5n": 0.3
+            "4d5n": 1
         }
     },
     "10d6": {
@@ -950,8 +931,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.2, 0.8],
         "dependencies": {
-            "10d5n": 0.8,
-            "10d5": 0.2
+            "10d5n": 1
         }
     },
     "10d6n": {
