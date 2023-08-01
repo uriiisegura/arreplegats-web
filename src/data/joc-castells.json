@@ -425,7 +425,7 @@
 		"castell": "Pd7fm",
 		"carregat": 2500,
 		"descarregat": 3250,
-		"gent": 162,
+		"gent": 190,
 		"probabilitatsInicials": [0.05, 0.1, 0.6, 0.25],
 		"probabilitatsLimit": [0.7, 0.05]
 	},
