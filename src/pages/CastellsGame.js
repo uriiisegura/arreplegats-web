@@ -260,8 +260,12 @@ class CastellsGame extends Component {
 		this.forceUpdate();
 	}
 	advanceDay() {
-		this.state.colla.nextDay();
-		this.forceUpdate();
+		const confirm = this.state.colla.today['type'] === 'assaig' && this.state.colla.today['provesLeft'] > 0;
+
+		if (!confirm || window.confirm(`Segur que vols avançar de dia? Encara tens ${this.state.colla.today['provesLeft']} prov${this.state.colla.today['provesLeft'] > 1 ? 'es' : 'a'} per fer.`)) {
+			this.state.colla.nextDay();
+			this.forceUpdate();
+		}
 	}
 	deleteGame() {
 		// if (window.confirm('Segur que vols eliminar la partida? Aquesta acció no es pot desfer.')) {
@@ -295,11 +299,11 @@ class CastellsGame extends Component {
 							<div className="game-full-wrap game-bigger-wrap">
 								<div className="menu">
 									<div className="game-menu-time game-current-day"><img src="/font-awesome/calendar.svg" alt="calendar"/><span>{TimestampToString(this.state.colla.date)}</span></div>
-									<button className="game-menu-time game-advance-day" onClick={this.advanceDay.bind(this)}>Avança al següent dia</button>
-									<button className="btn" onClick={() => this.changeScreen('ASSAIG')}>
+									<button className={`game-menu-time game-advance-day ${this.state.colla.today['type'] === 'actuacio' && !this.state.colla.today['done'] ? 'disabled' : ''}`} onClick={this.advanceDay.bind(this)}>Avança al següent dia</button>
+									<button className={`btn ${this.state.colla.today['type'] === 'assaig' ? '' : 'disabled'}`} onClick={() => this.changeScreen('ASSAIG')}>
 										<span>ASSAIG</span>
 									</button>
-									<button className={`btn ${this.state.colla.castellers < 31 ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
+									<button className={`btn ${this.state.colla.castellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done']) ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
 										<span>ACTUACIÓ</span>
 									</button>
 									<button className="btn" onClick={() => this.changeScreen('CASTELLS')}>

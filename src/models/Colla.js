@@ -14,10 +14,10 @@ class Colla {
 				stats=null,
 				historic=[],
 				tried=[],
-				assajos=[],
 				missions_accepted=[],
 				missions_completed=[],
-				date=Date.parse('2023-09-18') // dilluns
+				date=Date.parse('2023-09-18'), // dilluns
+				today=null
 		) {
 		this.name = name;
 		this.color = color;
@@ -41,10 +41,13 @@ class Colla {
 			this.stats = stats;
 		this.historic = historic;
 		this.tried = tried;
-		this.assajos = assajos;
 		this.missions_accepted = missions_accepted;
 		this.missions_completed = missions_completed;
 		this.date = date;
+		if (!today)
+			this.today = this.getToday();
+		else
+			this.today = today;
 	}
 	static fromJson(json) {
 		const name = json.name;
@@ -53,12 +56,12 @@ class Colla {
 		const stats = json.stats;
 		const historic = json.historic;
 		const tried = json.tried;
-		const assajos = json.assajos;
 		const missions_accepted = json.missions_accepted;
 		const missions_completed = json.missions_completed;
 		const date = json.date;
-		if (name && color && castellers && stats && historic && tried && assajos && missions_accepted && missions_completed && date)
-			return new Colla(name, color, castellers, stats, historic, tried, assajos, missions_accepted, missions_completed, date);
+		const today = json.today;
+		if (name && color && castellers && stats && historic && tried && missions_accepted && missions_completed && date && today)
+			return new Colla(name, color, castellers, stats, historic, tried, missions_accepted, missions_completed, date, today);
 		throw new Error("L'arxiu no conté cap partida.");
 	}
 	addCastellers(castellers) {
@@ -95,11 +98,27 @@ class Colla {
 		return result;
 	}
 	addActuacio(actuacio) {
+		if (this.today.type === 'actuacio')
+			this.today.done = true;
+		
 		this.historic.push({
 			'castells': actuacio,
 			'punts': actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts,
 			'data': new Date()
 		});
+	}
+	getToday() {
+		const weekday = new Date(this.date).getDay();
+
+		if (weekday === 4)
+			return {
+				type: 'actuacio',
+				done: this.castellers < MIN_CASTELLERS
+			}
+		return {
+			type: 'assaig',
+			provesLeft: 15
+		}
 	}
 	nextDay() {
 		const date = new Date(this.date);
@@ -113,6 +132,7 @@ class Colla {
 			date.setDate(date.getDate() + 4)
 		
 		this.date = date;
+		this.today = this.getToday();
 	}
 }
 
