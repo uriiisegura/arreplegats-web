@@ -17,8 +17,10 @@ ChartJS.register(
 
 class CastellStats extends Component {
 	render() {
-		const stats_data = this.props.stats.stats.map(s => s.probabilitats[0]);
-		stats_data.push(this.props.stats.probabilitatsActual[0]);
+		let stats_data = this.props.stats.stats.map(s => s.probabilitats[0]);
+		stats_data = stats_data.length < 2 ?
+			[this.props.initial[0]].concat(stats_data) :
+			stats_data
 
 		const data = {
 			labels: Array(stats_data.length).join('.').split('.'),
@@ -52,7 +54,62 @@ class CastellStats extends Component {
 
 		return (
 			<div className="game-stats-single-graphic">
-				<h4>{this.props.castell}</h4>
+				<div style={{
+					display: 'flex',
+					alignItems: 'center',
+					gap: '1rem',
+				}}>
+					<div
+						style={{
+							color: 'white',
+							fontSize: 20,
+						}}
+					>
+						{this.props.castell}
+					</div>
+
+					<div
+						style={{
+							display: 'flex',
+							alignItems: 'center',
+							gap: '0.5rem',
+						}}
+					>
+						{
+							this.props.stats?.descarregat &&
+							<div
+								style={{
+									color: 'white',
+									display: 'flex',
+									alignItems: 'center',
+									backgroundColor: '#2857aa',
+									padding: '1px 5px',
+									borderRadius: 5,
+									fontSize: 12
+								}}
+							>
+								{this.props.stats?.descarregat}p
+							</div>
+						}
+
+						{
+							this.props.stats?.carregat &&
+							<div
+								style={{
+									color: 'white',
+									display: 'flex',
+									alignItems: 'center',
+									backgroundColor: '#af6000',
+									padding: '1px 5px',
+									borderRadius: 5,
+									fontSize: 12
+								}}
+							>
+								{this.props.stats?.carregat}p
+							</div>
+						}
+					</div>
+				</div>
 
 				<div>
 					<Line

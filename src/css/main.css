@@ -3255,18 +3255,16 @@ span.help {
 .game-proves-extra div {
 	width: 100%;
 	padding: 0.3rem 0;
-	/*background-color: var(--game-lightBlue);*/
-	background-color: var(--game-darkGray);
-	/*color: var(--white);*/
-	color: var(--game-lightGray);
+	background-color: var(--game-lightBlue);
+	color: var(--white);
 	text-align: center;
 	transition: var(--transition);
-	/*cursor: pointer;*/
+	cursor: pointer;
 	opacity: 0.75;
-}/*
+}
 .game-proves-extra div:hover {
 	opacity: 1;
-}*/
+}
 
 .game-canvas-center {
 	position: absolute;
@@ -3420,8 +3418,7 @@ span.help {
 }
 
 .game-stats-single-graphic {
-	width: 100%;
-	max-width: 400px;
+	max-width: 300px;
 	padding: 16px;
 	background-color: var(--game-darkerBlue);
 }

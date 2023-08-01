@@ -129,7 +129,7 @@ class CastellsGame extends Component {
 		});
 	}
 	selectCastell(castell) {
-		this.setState({selectedCastell: castells.filter(c => c.castell === castell)[0]}, this.solveCastell);
+		this.setState({selectedCastell: castells[castell]}, this.solveCastell);
 	}
 	solveCastell() {
 		this.playCastell(this.state.colla.getCastellResult(this.state.selectedCastell, this.state.screen === 'ASSAIG'));
@@ -254,6 +254,12 @@ class CastellsGame extends Component {
 
 		return intentatAtA > intentatAtB ? -1 : 1;
 	}
+	deleteGame() {
+		if (window.confirm('Segur que vols eliminar la partida? Aquesta acció no es pot desfer.')) {
+			localStorage.removeItem('game');
+			window.location.reload();
+		}
+	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
 			{
@@ -300,8 +306,11 @@ class CastellsGame extends Component {
 									<button className={this.state.colla.tried.length === 0 ? 'disabled' : ''} onClick={() => this.changeScreen('STATS')}>
 										<span>ESTADÍSTIQUES</span>
 									</button>
-									<button onClick={() => {this.state.colla.addCastellers(10)}}>
+									{process.env.NODE_ENV === 'development' && <button onClick={() => {this.state.colla.addCastellers(10)}}>
 										<span>+10 castellers</span>
+									</button>}
+									<button onClick={this.deleteGame}>
+										<span>BORRA PARTIDA</span>
 									</button>
 								</div>
 							</div>
@@ -403,7 +412,9 @@ class CastellsGame extends Component {
 											</thead>
 											<tbody>
 												{
-													castells.map((c, j) => {
+													Object.values(castells)
+													.filter(c => !c?.neta)
+													.map((c, j) => {
 														if (c.grup !== g) return <></>;
 														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={`group-${i}-row-${j}`}>
 															<td>{c.castell}</td>
@@ -483,6 +494,7 @@ class CastellsGame extends Component {
 											.map(castell => {
 												return <CastellStats
 													castell={castell}
+													initial={castells[castell]['probabilitats']['unique']}
 													stats={this.state.colla.stats[castell]}
 													key={`stats-${castell}`}
 												/>
