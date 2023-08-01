@@ -62,6 +62,7 @@ DEFAULT_LOWER_CAP = 0.02
 DEFAULT_UPPER_CAP = 0.96
 
 CASTELLS = {
+    # PILARS
     "pd3": {
         "pes_dependencies": 0,
         "multipliers": EASY_MULTIPLIERS,
@@ -240,7 +241,129 @@ CASTELLS = {
             "mtftpd8fmp": 0.2,
             "ptpd8fmp": 0.1
         }
-    }
+    },
+
+    # Torres
+    "td4n": {
+        "pes_dependencies": 0,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0.1, 0.2, 0.4, 0.3],
+        "dependencies": {}
+    },
+    "td5": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "td4n": 1
+        }
+    },
+    "td5s": {
+        "pes_dependencies": 0.4,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "td4n": 0.7,
+            "td5": 0.3
+        }
+    },
+    "td5n": {
+        "pes_dependencies": 0.6,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "td4n": 1
+        }
+    },
+    "td6": {
+        "pes_dependencies": 0.8,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "td5n": 0.8,
+            "td5": 0.2
+        }
+    },
+    "td6s": {
+        "pes_dependencies": 0.3,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "td5n": 0.7,
+            "td6": 0.3,
+        }
+    },
+    "td6n": {
+        "pes_dependencies": 0.2,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "td5n": 1
+        }
+    },
+    "td7sf": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.05, 0.95],
+        "dependencies": {
+            "td6n": 0.9,
+            "td6": 0.1
+        }
+    },
+    "fttd7f": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.05, 0.95],
+        "dependencies": {
+            "td6": 1
+        }
+    },
+    "td7f": {
+        "pes_dependencies": 0.4,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.05, 0.95],
+        "dependencies": {
+            "fttd7f": 1
+        }
+    },
+    "mttd8fm": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.05, 0.95],
+        "dependencies": {
+            "td6": 1
+        }
+    },
+    "fttd8fm": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.05, 0.95],
+        "dependencies": {
+            "td7f": 0.6,
+            "mttd8fm": 0.4
+        }
+    },
+    "td8fm": {
+        "pes_dependencies": 0.3,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "fttd8fm": 1
+        }
+    },
 }
 
 CLONE_CASTELLS = copy.deepcopy(CASTELLS)
@@ -301,9 +424,37 @@ COUNTS = {}
 
 STRATEGY = [
     {
-        "castell": "pd3",
-        "tries": 20
-    }
+        "castell": "td4n",
+        "tries": 30
+    },
+    {
+        "castell": "td5n",
+        "tries": 30
+    },
+    {
+        "castell": "td6",
+        "tries": 30
+    },
+    {
+        "castell": "fttd7f",
+        "tries": 30
+    },
+    {
+        "castell": "td7f",
+        "tries": 40
+    },
+    {
+        "castell": "mttd8fm",
+        "tries": 30
+    },
+    {
+        "castell": "fttd8fm",
+        "tries": 30
+    },
+    {
+        "castell": "td8fm",
+        "tries": 80
+    },
 ]
 
 TRIED_CASTELLS = [
