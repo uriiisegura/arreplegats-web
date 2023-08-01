@@ -30,8 +30,8 @@ def histogram(data, max_width=40):
 
 # Define the multipliers
 EASY_MULTIPLIERS = {
-    "D": [1.2, 0.85, 0.85, 0.85],
-    "C": [1.1, 1.05, 0.9, 1.05],
+    "D": [1.2, 0.85, 0.85, 0.8],
+    "C": [1.1, 1.1, 0.9, 1.05],
     "I": [0.95, 0.95, 0.8, 1.1],
     "ID": [1, 1, 1.05, 0.8],
 }
@@ -67,7 +67,7 @@ CASTELLS = {
         "pes_dependencies": 0,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
-        "unique": [0.1, 0.2, 0.4, 0.3],
+        "unique": [0.3, 0.4, 0.1, 0.2],
         "dependencies": {},
     },
     "pd3s": {
@@ -109,7 +109,7 @@ CASTELLS = {
         }
     },
     "pd4n": {
-        "pes_dependencies": 0.15,
+        "pes_dependencies": 0.3,
         "multipliers": MEDIUM_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.8, 0.2],
@@ -368,7 +368,7 @@ CASTELLS = {
         "pes_dependencies": 0,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
-        "unique": [0.1, 0.2, 0.4, 0.3],
+        "unique": [0.2, 0.2, 0.3, 0.3],
         "dependencies": {}
     },
     "3d5": {
@@ -565,7 +565,7 @@ CASTELLS = {
         "pes_dependencies": 0,
         "multipliers": EASY_MULTIPLIERS,
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
-        "unique": [0.1, 0.2, 0.4, 0.3],
+        "unique": [0.2, 0.2, 0.3, 0.3],
         "dependencies": {}
     },
     "4d5": {
@@ -761,15 +761,19 @@ COUNTS = {}
 STRATEGY = [
     {
         "castell": "4d4n",
-        "tries": 30
+        "tries": 20
+    },
+    {
+        "castell": "4d5",
+        "tries": 20
     },
     {
         "castell": "4d5n",
-        "tries": 30
+        "tries": 20
     },
     {
         "castell": "4d6",
-        "tries": 30
+        "tries": 20
     },
     {
         "castell": "4d6n",
@@ -777,23 +781,31 @@ STRATEGY = [
     },
     {
         "castell": "4d7",
+        "tries": 20
+    },
+    {
+        "castell": "pd3",
+        "tries": 10
+    },
+    {
+        "castell": "pd3n",
+        "tries": 40
+    },
+    {
+        "castell": "pd4",
         "tries": 30
     },
     {
-        "castell": "4d7n",
-        "tries": 120
-    },
-    {
-        "castell": "4d8",
+        "castell": "pd4n",
         "tries": 50
     },
     {
-        "castell": "ft4d9f",
-        "tries": 50
+        "castell": "pd5",
+        "tries": 30
     },
     {
-        "castell": "4d9f",
-        "tries": 100
+        "castell": "4d7a",
+        "tries": 30
     },
 ]
 
