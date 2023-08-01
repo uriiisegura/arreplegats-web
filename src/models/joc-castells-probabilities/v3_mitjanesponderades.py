@@ -342,7 +342,7 @@ CASTELLS = {
         "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
         "unique": [0, 0, 0.05, 0.95],
         "dependencies": {
-            "td6": 1
+            "fttd7f": 1
         }
     },
     "fttd8fm": {
@@ -362,6 +362,203 @@ CASTELLS = {
         "unique": [0, 0, 0, 1],
         "dependencies": {
             "fttd8fm": 1
+        }
+    },
+    "3d4n": {
+        "pes_dependencies": 0,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0.1, 0.2, 0.4, 0.3],
+        "dependencies": {}
+    },
+    "3d5": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d4n": 1
+        }
+    },
+    "3d5s": {
+        "pes_dependencies": 0.4,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "3d4n": 0.7,
+            "3d5": 0.3
+        }
+    },
+    "3d5n": {
+        "pes_dependencies": 0.6,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "3d4n": 1
+        }
+    },
+    "3d6": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d5n": 0.8,
+            "3d5": 0.2
+        }
+    },
+    "3d6s": {
+        "pes_dependencies": 0.3,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "3d5n": 0.7,
+            "3d6": 0.3,
+        }
+    },
+    "3d6n": {
+        "pes_dependencies": 0.4,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "3d5n": 1
+        }
+    },
+    "3d7": {
+        "pes_dependencies": 0.8,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d6n": 0.8,
+            "3d6": 0.2
+        }
+    },
+    "3d7s": {
+        "pes_dependencies": 0.3,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 1, 0],
+        "dependencies": {
+            "3d6n": 0.7,
+            "3d6s": 0.3
+        }
+    },
+    "3d7n": {
+        "pes_dependencies": 0.1,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 1, 0],
+        "dependencies": {
+            "3d6n": 1
+        }
+    },
+    "3d8sf": {
+        "pes_dependencies": 0.6,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 1, 0],
+        "dependencies": {
+            "3d7n": 1,
+        }
+    },
+    "ft3d8f": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d7": 1
+        }
+    },
+    "3d8f": {
+        "pes_dependencies": 0.2,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "ft3d8f": 1
+        }
+    },
+    "mt3d9fm": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "ft3d8f": 1
+        }
+    },
+    "ft3d9fm": {
+        "pes_dependencies": 0.8,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d8f": 0.8,
+            "mt3d9fm": 0.2
+        }
+    },
+    "3d9fm": {
+        "pes_dependencies": 0.2,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "ft3d9fm": 1
+        }
+    },
+    "3d5a": {
+        "pes_dependencies": 0.7,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d5": 0.6,
+            "pd3": 0.4
+        }
+    },
+    "3d6a": {
+        "pes_dependencies": 0.7,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d6": 0.6,
+            "pd4": 0.4
+        }
+    },
+    "3d7a": {
+        "pes_dependencies": 0.7,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d7": 0.6,
+            "pd5": 0.4
+        }
+    },
+    "ft3d8fa": {
+        "pes_dependencies": 0.8,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "3d7a": 1
+        }
+    },
+    "3d8fa": {
+        "pes_dependencies": 0.5,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "3d8f": 0.6,
+            "ft3d8fa": 0.4,
         }
     },
 }
@@ -424,48 +621,44 @@ COUNTS = {}
 
 STRATEGY = [
     {
-        "castell": "td4n",
+        "castell": "3d4n",
         "tries": 30
     },
     {
-        "castell": "td5n",
+        "castell": "3d5n",
         "tries": 30
     },
     {
-        "castell": "td6",
+        "castell": "3d6",
         "tries": 30
     },
     {
-        "castell": "fttd7f",
+        "castell": "3d6n",
         "tries": 30
     },
     {
-        "castell": "td7f",
+        "castell": "3d7",
+        "tries": 30
+    },
+    {
+        "castell": "ft3d8f",
+        "tries": 30
+    },
+    {
+        "castell": "3d8f",
+        "tries": 50
+    },
+    {
+        "castell": "mt3d9fm",
+        "tries": 30
+    },
+    {
+        "castell": "ft3d9fm",
         "tries": 40
     },
     {
-        "castell": "mttd8fm",
-        "tries": 30
-    },
-    {
-        "castell": "fttd8fm",
-        "tries": 30
-    },
-    {
-        "castell": "td8fm",
+        "castell": "3d9fm",
         "tries": 80
-    },
-    {
-        "castell": "td6",
-        "tries": 20
-    },
-    {
-        "castell": "td6n",
-        "tries": 80
-    },
-    {
-        "castell": "td7sf",
-        "tries": 30
     },
 ]
 
