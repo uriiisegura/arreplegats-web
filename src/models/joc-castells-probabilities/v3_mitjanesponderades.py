@@ -142,6 +142,9 @@ CASTELLS = {
     }
 }
 
+import copy
+CLONE_CASTELLS = copy.deepcopy(CASTELLS)
+
 def PFinal(castell):
     import numpy as np
 
@@ -169,12 +172,12 @@ def improve_unique(result, castell):
 
     if result == "D":
         npU[0] *= 1.2
-        npU[1] *= 0.9
+        npU[1] *= 0.85
         npU[2] *= 0.85
-        npU[3] *= 0.9
+        npU[3] *= 0.85
     elif result == "C":
-        npU[0] *= 1.05
-        npU[1] *= 1.1
+        npU[0] *= 1.1
+        npU[1] *= 1.05
         npU[2] *= 0.9
         npU[3] *= 1.05
     elif result == "I":
@@ -215,66 +218,78 @@ def simulate_play(castell):
     return result, newProbs
 
 # STRATEGY
+TOTAL_STEPS = 0
+DOMINATS = 0
 
-# pd3
-print("before pd3, pd3:", PFinal("pd3"))
+for j in range(1000):
+    # pd3
+    # print("before pd3, pd3:", PFinal("pd3"))
 
-for i in range(20):
-    result, newProbs = simulate_play("pd3")
-    # print(result, newProbs)
+    for i in range(20):
+        result, newProbs = simulate_play("pd3")
+        # print(result, newProbs)
 
-print("after pd3, pd3:", PFinal("pd3"))
+    TOTAL_STEPS += 20
+    # print("after pd3, pd3:", PFinal("pd3"))
+    # print("total steps for pd3:", TOTAL_STEPS)
 
-# pd3n
-print("before pd3n, pd3n:", PFinal("pd3n"))
+    # pd3n
+    # print("before pd3n, pd3n:", PFinal("pd3n"))
 
-for i in range(40):
-    result, newProbs = simulate_play("pd3n")
-    # print(result, newProbs)
+    for i in range(40):
+        result, newProbs = simulate_play("pd3n")
+        # print(result, newProbs)
 
-print("after pd3n, pd3n:", PFinal("pd3n"))
+    TOTAL_STEPS += 40
+    # print("after pd3n, pd3n:", round(PFinal("pd3n")[0]*100), PFinal("pd3n"))
+    # print("total steps for pd3n:", TOTAL_STEPS)
 
-# pd4
-print("before pd4, pd4:", PFinal("pd4"))
+    DOMINATS += 1 if PFinal("pd3n")[0] > 0.5 else 0
+    CASTELLS = copy.deepcopy(CLONE_CASTELLS)
 
-for i in range(20):
-    result, newProbs = simulate_play("pd4")
-    # print(result, newProbs)
+print("dominats:", DOMINATS, "de 1000")
 
-print("after pd4, pd4:", PFinal("pd4"))
+# # pd4
+# print("before pd4, pd4:", PFinal("pd4"))
 
-# pd4n
-print("before pd4n, pd4n:", PFinal("pd4n"))
+# for i in range(20):
+#     result, newProbs = simulate_play("pd4")
+#     # print(result, newProbs)
 
-for i in range(60):
-    result, newProbs = simulate_play("pd4n")
-    # print(result, newProbs)
+# print("after pd4, pd4:", PFinal("pd4"))
 
-print("after pd4n, pd4n:", PFinal("pd4n"))
+# # pd4n
+# print("before pd4n, pd4n:", PFinal("pd4n"))
 
-# pd5
-print("before pd5, pd5:", PFinal("pd5"))
+# for i in range(60):
+#     result, newProbs = simulate_play("pd4n")
+#     # print(result, newProbs)
 
-for i in range(30):
-    result, newProbs = simulate_play("pd5")
-    # print(result, newProbs)
+# print("after pd4n, pd4n:", PFinal("pd4n"))
 
-print("after pd5, pd5:", PFinal("pd5"))
+# # pd5
+# print("before pd5, pd5:", PFinal("pd5"))
 
-# pd5n
-print("before pd5n, pd5n:", PFinal("pd5n"))
+# for i in range(30):
+#     result, newProbs = simulate_play("pd5")
+#     # print(result, newProbs)
 
-for i in range(60):
-    result, newProbs = simulate_play("pd5n")
-    # print(result, newProbs)
+# print("after pd5, pd5:", PFinal("pd5"))
 
-print("after pd5n, pd5n:", PFinal("pd5n"))
+# # pd5n
+# print("before pd5n, pd5n:", PFinal("pd5n"))
 
-# pd6sf
-print("before pd6sf, pd6sf:", PFinal("pd6sf"))
+# for i in range(60):
+#     result, newProbs = simulate_play("pd5n")
+#     # print(result, newProbs)
 
-for i in range(10):
-    result, newProbs = simulate_play("pd6sf")
-    # print(result, newProbs)
+# print("after pd5n, pd5n:", PFinal("pd5n"))
 
-print("after pd6sf, pd6sf:", PFinal("pd6sf"))
+# # pd6sf
+# print("before pd6sf, pd6sf:", PFinal("pd6sf"))
+
+# for i in range(10):
+#     result, newProbs = simulate_play("pd6sf")
+#     # print(result, newProbs)
+
+# print("after pd6sf, pd6sf:", PFinal("pd6sf"))
