@@ -283,7 +283,7 @@ for j in range(1000):
     # pd6sf
     # print("before pd6sf, pd6sf:", PFinal("pd6sf"))
 
-    for i in range(10):
+    for i in range(20):
         result, newProbs = simulate_play("pd6sf")
         # print(result, newProbs)
 
