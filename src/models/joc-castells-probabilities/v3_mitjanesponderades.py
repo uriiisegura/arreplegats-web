@@ -24,8 +24,9 @@ def histogram(data, max_width=40):
 
     # print histogram
     for i in range(bins):
+        lower_limit = i / bins
         upper_limit = (i + 1) / bins
-        print(f'{upper_limit:.2f}: {"|" * bar_widths[i]}')
+        print(f'{lower_limit:.2f}-{upper_limit:.2f}: {"|" * bar_widths[i]}')
 
 # Define the multipliers
 EASY_MULTIPLIERS = {
@@ -295,7 +296,7 @@ def simulate_play(castell):
     return result, newProbs
 
 # STRATEGY
-N_ITERS = 10
+N_ITERS = 100
 COUNTS = {}
 
 for j in range(N_ITERS):
@@ -305,10 +306,16 @@ for j in range(N_ITERS):
         result, newProbs = simulate_play("pd3")
 
     for i in range(40):
+        result, newProbs = simulate_play("pd3s")
+
+    for i in range(40):
         result, newProbs = simulate_play("pd3n")
 
     for i in range(20):
         result, newProbs = simulate_play("pd4")
+
+    for i in range(40):
+        result, newProbs = simulate_play("pd4s")
 
     for i in range(100):
         result, newProbs = simulate_play("pd4n")
@@ -317,18 +324,21 @@ for j in range(N_ITERS):
         result, newProbs = simulate_play("pd5")
 
     for i in range(40):
+        result, newProbs = simulate_play("pd5s")
+
+    for i in range(20):
         result, newProbs = simulate_play("ftpd6f")
 
-    for i in range(50):
+    for i in range(40):
         result, newProbs = simulate_play("pd6f")
 
     for i in range(20):
         result, newProbs = simulate_play("mtpd7fm")
 
-    for i in range(40):
+    for i in range(30):
         result, newProbs = simulate_play("ftpd7fm")
 
-    for i in range(80):
+    for i in range(90):
         result, newProbs = simulate_play("pd7fm")
 
     for i in range(30):
@@ -337,10 +347,10 @@ for j in range(N_ITERS):
     for i in range(30):
         result, newProbs = simulate_play("mtftpd8fmp")
 
-    for i in range(40):
+    for i in range(50):
         result, newProbs = simulate_play("ftpd8fmp")
 
-    for i in range(80):
+    for i in range(100):
         result, newProbs = simulate_play("pd8fmp")
 
     for i in range(160):
