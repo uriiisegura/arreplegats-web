@@ -134,14 +134,14 @@ class CastellSelector extends Component {
 					</div>
 					}
 				{
-					this.props.is_assaig && this.state.from_group && <div className="game-proves-extra">
+					this.props.is_assaig && this.props.proves_left > 0 && this.state.from_group && <div className="game-proves-extra">
 						<div onClick={() => this.setNeta(!this.state.neta)}>
 							{ !this.state.neta ? ' Netes i a terra' : 'Pinyes i soques' }
 						</div>
 					</div>
 				}
 				{
-					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
+					(this.props.ronda && this.props.ronda >= 4) || (this.props.is_assaig && this.props.proves_left === 0) ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
 				}
 				{
 					this.props.is_assaig && this.props.proves_left > 0 ? <div className={`game-proves-left ${this.props.proves_left === 1 ? 'game-last-prova' : ''}`}>
