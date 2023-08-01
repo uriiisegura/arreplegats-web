@@ -2828,7 +2828,7 @@
             }
         },
         "castell": "Pd3n",
-        "neta": 1
+        "neta": true
     },
     "Pd4n": {
         "probabilitats": {
@@ -2874,7 +2874,7 @@
             }
         },
         "castell": "Pd4n",
-        "neta": 1
+        "neta": true
     },
     "Pd5n": {
         "probabilitats": {
@@ -2920,7 +2920,7 @@
             }
         },
         "castell": "Pd5n",
-        "neta": 1
+        "neta": true
     },
     "FT Pd6f": {
         "probabilitats": {
@@ -2966,7 +2966,7 @@
             }
         },
         "castell": "FT Pd6f",
-        "neta": 1
+        "neta": true
     },
     "MT Pd7fm": {
         "probabilitats": {
@@ -3012,7 +3012,7 @@
             }
         },
         "castell": "MT Pd7fm",
-        "neta": 1
+        "neta": true
     },
     "FT Pd7fm": {
         "probabilitats": {
@@ -3059,7 +3059,7 @@
             }
         },
         "castell": "FT Pd7fm",
-        "neta": 1
+        "neta": true
     },
     "PT Pd8fmp": {
         "probabilitats": {
@@ -3105,7 +3105,7 @@
             }
         },
         "castell": "PT Pd8fmp",
-        "neta": 1
+        "neta": true
     },
     "MT Pd8fmp": {
         "probabilitats": {
@@ -3152,7 +3152,7 @@
             }
         },
         "castell": "MT Pd8fmp",
-        "neta": 1
+        "neta": true
     },
     "FT Pd8fmp": {
         "probabilitats": {
@@ -3199,7 +3199,7 @@
             }
         },
         "castell": "FT Pd8fmp",
-        "neta": 1
+        "neta": true
     },
     "Td4n": {
         "probabilitats": {
@@ -3243,7 +3243,7 @@
             "dependencies": {}
         },
         "castell": "Td4n",
-        "neta": 1
+        "neta": true
     },
     "Td5n": {
         "probabilitats": {
@@ -3289,7 +3289,7 @@
             }
         },
         "castell": "Td5n",
-        "neta": 1
+        "neta": true
     },
     "Td6n": {
         "probabilitats": {
@@ -3335,7 +3335,7 @@
             }
         },
         "castell": "Td6n",
-        "neta": 1
+        "neta": true
     },
     "FT Td7f": {
         "probabilitats": {
@@ -3381,7 +3381,7 @@
             }
         },
         "castell": "FT Td7f",
-        "neta": 1
+        "neta": true
     },
     "MT Td8fm": {
         "probabilitats": {
@@ -3427,7 +3427,7 @@
             }
         },
         "castell": "MT Td8fm",
-        "neta": 1
+        "neta": true
     },
     "FT Td8fm": {
         "probabilitats": {
@@ -3474,7 +3474,7 @@
             }
         },
         "castell": "FT Td8fm",
-        "neta": 1
+        "neta": true
     },
     "3d4n": {
         "probabilitats": {
@@ -3518,7 +3518,7 @@
             "dependencies": {}
         },
         "castell": "3d4n",
-        "neta": 1
+        "neta": true
     },
     "3d5n": {
         "probabilitats": {
@@ -3564,7 +3564,7 @@
             }
         },
         "castell": "3d5n",
-        "neta": 1
+        "neta": true
     },
     "3d6n": {
         "probabilitats": {
@@ -3610,7 +3610,7 @@
             }
         },
         "castell": "3d6n",
-        "neta": 1
+        "neta": true
     },
     "3d7n": {
         "probabilitats": {
@@ -3656,7 +3656,7 @@
             }
         },
         "castell": "3d7n",
-        "neta": 1
+        "neta": true
     },
     "FT 3d8f": {
         "probabilitats": {
@@ -3702,7 +3702,7 @@
             }
         },
         "castell": "FT 3d8f",
-        "neta": 1
+        "neta": true
     },
     "MT 3d9fm": {
         "probabilitats": {
@@ -3748,7 +3748,7 @@
             }
         },
         "castell": "MT 3d9fm",
-        "neta": 1
+        "neta": true
     },
     "FT 3d9fm": {
         "probabilitats": {
@@ -3795,7 +3795,7 @@
             }
         },
         "castell": "FT 3d9fm",
-        "neta": 1
+        "neta": true
     },
     "FT 3d8fa": {
         "probabilitats": {
@@ -3841,7 +3841,7 @@
             }
         },
         "castell": "FT 3d8fa",
-        "neta": 1
+        "neta": true
     },
     "4d4n": {
         "probabilitats": {
@@ -3885,7 +3885,7 @@
             "dependencies": {}
         },
         "castell": "4d4n",
-        "neta": 1
+        "neta": true
     },
     "4d5n": {
         "probabilitats": {
@@ -3931,7 +3931,7 @@
             }
         },
         "castell": "4d5n",
-        "neta": 1
+        "neta": true
     },
     "4d6n": {
         "probabilitats": {
@@ -3977,7 +3977,7 @@
             }
         },
         "castell": "4d6n",
-        "neta": 1
+        "neta": true
     },
     "4d7n": {
         "probabilitats": {
@@ -4023,7 +4023,7 @@
             }
         },
         "castell": "4d7n",
-        "neta": 1
+        "neta": true
     },
     "FT 4d9f": {
         "probabilitats": {
@@ -4069,7 +4069,7 @@
             }
         },
         "castell": "FT 4d9f",
-        "neta": 1
+        "neta": true
     },
     "FT 4d8fa": {
         "probabilitats": {
@@ -4115,7 +4115,7 @@
             }
         },
         "castell": "FT 4d8fa",
-        "neta": 1
+        "neta": true
     },
     "5d4n": {
         "probabilitats": {
@@ -4161,7 +4161,7 @@
             }
         },
         "castell": "5d4n",
-        "neta": 1
+        "neta": true
     },
     "5d5n": {
         "probabilitats": {
@@ -4208,7 +4208,7 @@
             }
         },
         "castell": "5d5n",
-        "neta": 1
+        "neta": true
     },
     "5d6n": {
         "probabilitats": {
@@ -4255,7 +4255,7 @@
             }
         },
         "castell": "5d6n",
-        "neta": 1
+        "neta": true
     },
     "FT 5d8f": {
         "probabilitats": {
@@ -4301,7 +4301,7 @@
             }
         },
         "castell": "FT 5d8f",
-        "neta": 1
+        "neta": true
     },
     "7d4n": {
         "probabilitats": {
@@ -4347,7 +4347,7 @@
             }
         },
         "castell": "7d4n",
-        "neta": 1
+        "neta": true
     },
     "7d5n": {
         "probabilitats": {
@@ -4394,7 +4394,7 @@
             }
         },
         "castell": "7d5n",
-        "neta": 1
+        "neta": true
     },
     "7d6n": {
         "probabilitats": {
@@ -4441,7 +4441,7 @@
             }
         },
         "castell": "7d6n",
-        "neta": 1
+        "neta": true
     },
     "FT 7d8f": {
         "probabilitats": {
@@ -4487,7 +4487,7 @@
             }
         },
         "castell": "FT 7d8f",
-        "neta": 1
+        "neta": true
     },
     "9d4n": {
         "probabilitats": {
@@ -4533,7 +4533,7 @@
             }
         },
         "castell": "9d4n",
-        "neta": 1
+        "neta": true
     },
     "9d5n": {
         "probabilitats": {
@@ -4580,7 +4580,7 @@
             }
         },
         "castell": "9d5n",
-        "neta": 1
+        "neta": true
     },
     "9d6n": {
         "probabilitats": {
@@ -4627,7 +4627,7 @@
             }
         },
         "castell": "9d6n",
-        "neta": 1
+        "neta": true
     },
     "10d4n": {
         "probabilitats": {
@@ -4673,7 +4673,7 @@
             }
         },
         "castell": "10d4n",
-        "neta": 1
+        "neta": true
     },
     "10d5": {
         "probabilitats": {
@@ -4719,7 +4719,7 @@
             }
         },
         "castell": "10d5",
-        "neta": 1
+        "neta": true
     },
     "10d5n": {
         "probabilitats": {
@@ -4766,7 +4766,7 @@
             }
         },
         "castell": "10d5n",
-        "neta": 1
+        "neta": true
     },
     "10d6n": {
         "probabilitats": {
@@ -4813,6 +4813,6 @@
             }
         },
         "castell": "10d6n",
-        "neta": 1
+        "neta": true
     }
 }
