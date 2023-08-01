@@ -52,7 +52,7 @@ class CastellSelector extends Component {
 		}
 	}
 	setGroup(group) {
-		this.setState({from_group: Object.values(this.props.castells).filter(c => c.castell.includes(group))});
+		this.setState({from_group: Object.values(this.props.castells).filter(c => !c?.neta).filter(c => c.castell.includes(group))});
 	}
 	unsetGroup() {
 		this.setState({from_group: null});

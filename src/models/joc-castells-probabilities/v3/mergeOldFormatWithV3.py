@@ -1,7 +1,7 @@
 import json
 
 # Load the json data
-with open("./src/data/joc-castells.json") as file:
+with open("./src/data/old-joc-castells.json") as file:
     data = json.load(file)
 
 # Transform the list into a dictionary
@@ -27,6 +27,14 @@ for castell in data_dict:
     # Remove probabilitatsInicials and probabilitatsLimit keys
     data_dict[castell].pop("probabilitatsInicials", None)
     data_dict[castell].pop("probabilitatsLimit", None)
+
+# Add to the dictionary the keys that are missing
+for castell in probs:
+    if castell not in data_dict:
+        data_dict[castell] = {}
+        data_dict[castell]["probabilitats"] = probs[castell]
+        data_dict[castell]["castell"] = castell
+        data_dict[castell]["neta"] = 1
 
 # Export to JSON
 with open("./src/data/joc-castells.json", "w") as file:

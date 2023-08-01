@@ -2783,5 +2783,2036 @@
                 "FT 4d9f": 1
             }
         }
+    },
+    "Pd3n": {
+        "probabilitats": {
+            "pes_dependencies": 0.15,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0.1,
+                0.8,
+                0.1
+            ],
+            "dependencies": {
+                "Pd3": 1
+            }
+        },
+        "castell": "Pd3n",
+        "neta": 1
+    },
+    "Pd4n": {
+        "probabilitats": {
+            "pes_dependencies": 0.3,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "Pd3n": 1
+            }
+        },
+        "castell": "Pd4n",
+        "neta": 1
+    },
+    "Pd5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.2,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.8
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "Pd4n": 1
+            }
+        },
+        "castell": "Pd5n",
+        "neta": 1
+    },
+    "FT Pd6f": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "Pd5": 1
+            }
+        },
+        "castell": "FT Pd6f",
+        "neta": 1
+    },
+    "MT Pd7fm": {
+        "probabilitats": {
+            "pes_dependencies": 0.9,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "FT Pd6f": 1
+            }
+        },
+        "castell": "MT Pd7fm",
+        "neta": 1
+    },
+    "FT Pd7fm": {
+        "probabilitats": {
+            "pes_dependencies": 0.7,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.05,
+                0.95
+            ],
+            "dependencies": {
+                "Pd6f": 0.8,
+                "MT Pd7fm": 0.2
+            }
+        },
+        "castell": "FT Pd7fm",
+        "neta": 1
+    },
+    "PT Pd8fmp": {
+        "probabilitats": {
+            "pes_dependencies": 0.7,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "MT Pd7fm": 1
+            }
+        },
+        "castell": "PT Pd8fmp",
+        "neta": 1
+    },
+    "MT FT Pd8fmp": {
+        "probabilitats": {
+            "pes_dependencies": 0.7,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.05,
+                0.95
+            ],
+            "dependencies": {
+                "FT Pd7fm": 0.8,
+                "PT Pd8fmp": 0.2
+            }
+        },
+        "castell": "MT FT Pd8fmp",
+        "neta": 1
+    },
+    "FT Pd8fmp": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "dependencies": {
+                "Pd7fm": 0.8,
+                "MT FT Pd8fmp": 0.2
+            }
+        },
+        "castell": "FT Pd8fmp",
+        "neta": 1
+    },
+    "Td4n": {
+        "probabilitats": {
+            "pes_dependencies": 0,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0.1,
+                0.2,
+                0.4,
+                0.3
+            ],
+            "dependencies": {}
+        },
+        "castell": "Td4n",
+        "neta": 1
+    },
+    "Td5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "Td4n": 1
+            }
+        },
+        "castell": "Td5n",
+        "neta": 1
+    },
+    "Td6n": {
+        "probabilitats": {
+            "pes_dependencies": 0.2,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.9
+            ],
+            "unique": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "dependencies": {
+                "Td5n": 1
+            }
+        },
+        "castell": "Td6n",
+        "neta": 1
+    },
+    "FT Td7f": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.05,
+                0.95
+            ],
+            "dependencies": {
+                "Td6": 1
+            }
+        },
+        "castell": "FT Td7f",
+        "neta": 1
+    },
+    "MT Td8fm": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.05,
+                0.95
+            ],
+            "dependencies": {
+                "FT Td7f": 1
+            }
+        },
+        "castell": "MT Td8fm",
+        "neta": 1
+    },
+    "FT Td8fm": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.05,
+                0.95
+            ],
+            "dependencies": {
+                "Td7f": 0.6,
+                "MT Td8fm": 0.4
+            }
+        },
+        "castell": "FT Td8fm",
+        "neta": 1
+    },
+    "3d4n": {
+        "probabilitats": {
+            "pes_dependencies": 0,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0.2,
+                0.2,
+                0.3,
+                0.3
+            ],
+            "dependencies": {}
+        },
+        "castell": "3d4n",
+        "neta": 1
+    },
+    "3d5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "3d4n": 1
+            }
+        },
+        "castell": "3d5n",
+        "neta": 1
+    },
+    "3d6n": {
+        "probabilitats": {
+            "pes_dependencies": 0.4,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "dependencies": {
+                "3d5n": 1
+            }
+        },
+        "castell": "3d6n",
+        "neta": 1
+    },
+    "3d7n": {
+        "probabilitats": {
+            "pes_dependencies": 0.2,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.9
+            ],
+            "unique": [
+                0,
+                0,
+                1,
+                0
+            ],
+            "dependencies": {
+                "3d6n": 1
+            }
+        },
+        "castell": "3d7n",
+        "neta": 1
+    },
+    "FT 3d8f": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "3d7": 1
+            }
+        },
+        "castell": "FT 3d8f",
+        "neta": 1
+    },
+    "MT 3d9fm": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "FT 3d8f": 1
+            }
+        },
+        "castell": "MT 3d9fm",
+        "neta": 1
+    },
+    "FT 3d9fm": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "3d8f": 0.8,
+                "MT 3d9fm": 0.2
+            }
+        },
+        "castell": "FT 3d9fm",
+        "neta": 1
+    },
+    "FT 3d8fa": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "3d7a": 1
+            }
+        },
+        "castell": "FT 3d8fa",
+        "neta": 1
+    },
+    "4d4n": {
+        "probabilitats": {
+            "pes_dependencies": 0,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0.2,
+                0.2,
+                0.3,
+                0.3
+            ],
+            "dependencies": {}
+        },
+        "castell": "4d4n",
+        "neta": 1
+    },
+    "4d5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "4d4n": 1
+            }
+        },
+        "castell": "4d5n",
+        "neta": 1
+    },
+    "4d6n": {
+        "probabilitats": {
+            "pes_dependencies": 0.4,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0,
+                1
+            ],
+            "dependencies": {
+                "4d5n": 1
+            }
+        },
+        "castell": "4d6n",
+        "neta": 1
+    },
+    "4d7n": {
+        "probabilitats": {
+            "pes_dependencies": 0.3,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.9
+            ],
+            "unique": [
+                0,
+                0,
+                1,
+                0
+            ],
+            "dependencies": {
+                "4d6n": 1
+            }
+        },
+        "castell": "4d7n",
+        "neta": 1
+    },
+    "FT 4d9f": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "4d8": 1
+            }
+        },
+        "castell": "FT 4d9f",
+        "neta": 1
+    },
+    "FT 4d8fa": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "4d7a": 1
+            }
+        },
+        "castell": "FT 4d8fa",
+        "neta": 1
+    },
+    "5d4n": {
+        "probabilitats": {
+            "pes_dependencies": 0.5,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0.1,
+                0.2,
+                0.4,
+                0.3
+            ],
+            "dependencies": {
+                "3d4n": 1
+            }
+        },
+        "castell": "5d4n",
+        "neta": 1
+    },
+    "5d5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "5d4n": 0.7,
+                "3d5n": 0.3
+            }
+        },
+        "castell": "5d5n",
+        "neta": 1
+    },
+    "5d6n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "5d5n": 0.7,
+                "3d6n": 0.3
+            }
+        },
+        "castell": "5d6n",
+        "neta": 1
+    },
+    "FT 5d8f": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "5d7": 1
+            }
+        },
+        "castell": "FT 5d8f",
+        "neta": 1
+    },
+    "7d4n": {
+        "probabilitats": {
+            "pes_dependencies": 0.5,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0.1,
+                0.2,
+                0.4,
+                0.3
+            ],
+            "dependencies": {
+                "4d4n": 1
+            }
+        },
+        "castell": "7d4n",
+        "neta": 1
+    },
+    "7d5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "7d4n": 0.7,
+                "4d5n": 0.3
+            }
+        },
+        "castell": "7d5n",
+        "neta": 1
+    },
+    "7d6n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "7d5n": 0.7,
+                "4d6n": 0.3
+            }
+        },
+        "castell": "7d6n",
+        "neta": 1
+    },
+    "FT 7d8f": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "7d7": 1
+            }
+        },
+        "castell": "FT 7d8f",
+        "neta": 1
+    },
+    "9d4n": {
+        "probabilitats": {
+            "pes_dependencies": 0.5,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0.1,
+                0.2,
+                0.4,
+                0.3
+            ],
+            "dependencies": {
+                "3d4n": 1
+            }
+        },
+        "castell": "9d4n",
+        "neta": 1
+    },
+    "9d5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "9d4n": 0.7,
+                "3d5n": 0.3
+            }
+        },
+        "castell": "9d5n",
+        "neta": 1
+    },
+    "9d6n": {
+        "probabilitats": {
+            "pes_dependencies": 0.4,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.95,
+                    0.95,
+                    0.95
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.95,
+                    1.05
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.95
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "9d5n": 0.7,
+                "3d6n": 0.3
+            }
+        },
+        "castell": "9d6n",
+        "neta": 1
+    },
+    "10d4n": {
+        "probabilitats": {
+            "pes_dependencies": 0.5,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0.1,
+                0.2,
+                0.4,
+                0.3
+            ],
+            "dependencies": {
+                "4d4n": 1
+            }
+        },
+        "castell": "10d4n",
+        "neta": 1
+    },
+    "10d5": {
+        "probabilitats": {
+            "pes_dependencies": 0.8,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.2,
+                    0.85,
+                    0.85,
+                    0.8
+                ],
+                "CARREGAT": [
+                    1.1,
+                    1.1,
+                    0.9,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.8,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.8
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.2,
+                0.8
+            ],
+            "dependencies": {
+                "10d4n": 1
+            }
+        },
+        "castell": "10d5",
+        "neta": 1
+    },
+    "10d5n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.85,
+                    0.85,
+                    0.85
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "10d4n": 0.7,
+                "4d5n": 0.3
+            }
+        },
+        "castell": "10d5n",
+        "neta": 1
+    },
+    "10d6n": {
+        "probabilitats": {
+            "pes_dependencies": 0.6,
+            "multipliers": {
+                "DESCARREGAT": [
+                    1.1,
+                    0.9,
+                    0.9,
+                    0.9
+                ],
+                "CARREGAT": [
+                    1.05,
+                    1.05,
+                    0.95,
+                    1.05
+                ],
+                "INTENT": [
+                    0.95,
+                    0.95,
+                    0.85,
+                    1.1
+                ],
+                "INTENT DESMUNTAT": [
+                    1,
+                    1,
+                    1.05,
+                    0.85
+                ]
+            },
+            "caps": [
+                0.02,
+                0.96
+            ],
+            "unique": [
+                0,
+                0,
+                0.8,
+                0.2
+            ],
+            "dependencies": {
+                "10d5n": 0.7,
+                "4d6n": 0.3
+            }
+        },
+        "castell": "10d6n",
+        "neta": 1
     }
 }
