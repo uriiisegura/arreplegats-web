@@ -1,6 +1,5 @@
 import HexToRgb from "../functions/HexToRgb";
 import HexToFilter from "../functions/HexToFilter";
-import Normalize from "../functions/Normalize";
 import castells from "../data/joc-castells.json";
 
 import * as v3 from './joc-castells-probabilities/v3/generateCastellResult.js'
@@ -74,6 +73,7 @@ class Colla {
 			castell: castell.castell,
 		})
 
+		// eslint-disable-next-line
 		const { newProbs } = v3.updateProbs({
 			stats: this.stats,
 			castell: castell.castell,

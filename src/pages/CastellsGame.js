@@ -255,10 +255,10 @@ class CastellsGame extends Component {
 		return intentatAtA > intentatAtB ? -1 : 1;
 	}
 	deleteGame() {
-		if (window.confirm('Segur que vols eliminar la partida? Aquesta acció no es pot desfer.')) {
+		// if (window.confirm('Segur que vols eliminar la partida? Aquesta acció no es pot desfer.')) {
 			localStorage.removeItem('game');
 			window.location.reload();
-		}
+		// }
 	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
@@ -309,9 +309,9 @@ class CastellsGame extends Component {
 									{process.env.NODE_ENV === 'development' && <button onClick={() => {this.state.colla.addCastellers(10)}}>
 										<span>+10 castellers</span>
 									</button>}
-									<button onClick={this.deleteGame}>
+									{process.env.NODE_ENV === 'development' && <button onClick={this.deleteGame}>
 										<span>BORRA PARTIDA</span>
-									</button>
+									</button>}
 								</div>
 							</div>
 						</> : <></>

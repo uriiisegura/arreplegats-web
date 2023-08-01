@@ -1,6 +1,5 @@
 import numpy as np
 import random
-from os import system
 import copy
 
 from v3.calculateProbs import CASTELLS, CLONE_CASTELLS, RESULTS
