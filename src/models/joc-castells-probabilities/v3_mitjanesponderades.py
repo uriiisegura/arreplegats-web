@@ -700,6 +700,100 @@ CASTELLS = {
             "ft4d8fa": 0.4,
         }
     },
+    "5d4n": {
+        "pes_dependencies": 0.5,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0.1, 0.2, 0.4, 0.3],
+        "dependencies": {
+            "3d4n": 1
+        }
+    },
+    "5d5": {
+        "pes_dependencies": 0.8,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "5d4n": 1,
+        }
+    },
+    "5d5m": {
+        "pes_dependencies": 0.9,
+        "multipliers": EASY_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "5d5": 1
+        }
+    },
+    "5d5n": {
+        "pes_dependencies": 0.6,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "5d4n": 0.7,
+            "3d5n": 0.3
+        }
+    },
+    "5d6": {
+        "pes_dependencies": 0.8,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "5d5n": 0.8,
+            "5d5": 0.2
+        }
+    },
+    "5d6m": {
+        "pes_dependencies": 0.9,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "5d6": 1
+        }
+    },
+    "5d6n": {
+        "pes_dependencies": 0.6,
+        "multipliers": MEDIUM_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.8, 0.2],
+        "dependencies": {
+            "5d5n": 0.7,
+            "3d6n": 0.3
+        }
+    },
+    "5d7": {
+        "pes_dependencies": 0.8,
+        "multipliers": HARD_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "5d6n": 0.8,
+            "5d6": 0.2
+        }
+    },
+    "ft5d8f": {
+        "pes_dependencies": 0.8,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, DEFAULT_UPPER_CAP],
+        "unique": [0, 0, 0.2, 0.8],
+        "dependencies": {
+            "5d7": 1
+        }
+    },
+    "5d8f": {
+        "pes_dependencies": 0.2,
+        "multipliers": IMPOSSIBLE_MULTIPLIERS,
+        "caps": [DEFAULT_LOWER_CAP, 0.7],
+        "unique": [0, 0, 0, 1],
+        "dependencies": {
+            "ft5d8f": 1,
+        }
+    },
 }
 
 CLONE_CASTELLS = copy.deepcopy(CASTELLS)
@@ -764,7 +858,11 @@ STRATEGY = [
         "tries": 20
     },
     {
-        "castell": "3d5",
+        "castell": "5d4n",
+        "tries": 20
+    },
+    {
+        "castell": "5d5",
         "tries": 20
     },
     {
@@ -772,24 +870,32 @@ STRATEGY = [
         "tries": 20
     },
     {
-        "castell": "3d6",
+        "castell": "5d5n",
+        "tries": 30
+    },
+    {
+        "castell": "5d6",
         "tries": 20
     },
     {
         "castell": "3d6n",
-        "tries": 100
+        "tries": 30
     },
     {
-        "castell": "3d7",
-        "tries": 20
-    },
-    {
-        "castell": "3d7n",
-        "tries": 160
-    },
-    {
-        "castell": "3d8sf",
+        "castell": "5d6n",
         "tries": 40
+    },
+    {
+        "castell": "5d7",
+        "tries": 40
+    },
+    {
+        "castell": "ft5d8f",
+        "tries": 40
+    },
+    {
+        "castell": "5d8f",
+        "tries": 60
     },
 ]
 
