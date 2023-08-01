@@ -51,8 +51,16 @@ class CastellSelector extends Component {
 				this.setGroup('Pd');
 		}
 	}
+	setNeta(neta) {
+		this.setState({
+			neta: neta
+		});
+	}
 	setGroup(group) {
-		this.setState({from_group: Object.values(this.props.castells).filter(c => !c?.neta).filter(c => c.castell.includes(group))});
+		this.setState({
+			from_group: Object.values(this.props.castells)
+				.filter(c => c.castell.includes(group))
+		});
 	}
 	unsetGroup() {
 		this.setState({from_group: null});
@@ -74,7 +82,9 @@ class CastellSelector extends Component {
 					{
 						this.state.from_group ? <>
 							{
-								this.state.from_group.map((c, i) => {
+								this.state.from_group
+								.filter(c => c?.neta ? this.state.neta : !this.state.neta)
+								.map((c, i) => {
 									const blocked = c.gent > this.props.castellers;
 									
 									const difficulty = this.probToBracket(
@@ -113,7 +123,9 @@ class CastellSelector extends Component {
 					}
 				</div>
 				{
-					this.props.is_assaig && this.state.from_group && <div className="game-proves-extra"><div>Netes</div><div>Folres a terra</div></div>
+					this.props.is_assaig && this.state.from_group && <div className="game-proves-extra">
+						<div onClick={() => this.setNeta(!this.state.neta)}>Proves netes i a terra</div>
+					</div>
 				}
 				{
 					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
