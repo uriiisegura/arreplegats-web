@@ -244,52 +244,52 @@ for j in range(1000):
     # print("after pd3n, pd3n:", round(PFinal("pd3n")[0]*100), PFinal("pd3n"))
     # print("total steps for pd3n:", TOTAL_STEPS)
 
-    DOMINATS += 1 if PFinal("pd3n")[0] > 0.5 else 0
+    # pd4
+    # print("before pd4, pd4:", PFinal("pd4"))
+
+    for i in range(20):
+        result, newProbs = simulate_play("pd4")
+        # print(result, newProbs)
+
+    # print("after pd4, pd4:", PFinal("pd4"))
+
+    # pd4n
+    # print("before pd4n, pd4n:", PFinal("pd4n"))
+
+    for i in range(40):
+        result, newProbs = simulate_play("pd4n")
+        # print(result, newProbs)
+
+    # print("after pd4n, pd4n:", PFinal("pd4n"))
+
+    # pd5
+    # print("before pd5, pd5:", PFinal("pd5"))
+
+    for i in range(20):
+        result, newProbs = simulate_play("pd5")
+        # print(result, newProbs)
+
+    # print("after pd5, pd5:", PFinal("pd5"))
+
+    # pd5n
+    # print("before pd5n, pd5n:", PFinal("pd5n"))
+
+    for i in range(40):
+        result, newProbs = simulate_play("pd5n")
+        # print(result, newProbs)
+
+    # print("after pd5n, pd5n:", PFinal("pd5n"))
+
+    # pd6sf
+    # print("before pd6sf, pd6sf:", PFinal("pd6sf"))
+
+    for i in range(10):
+        result, newProbs = simulate_play("pd6sf")
+        # print(result, newProbs)
+
+    # print("after pd6sf, pd6sf:", PFinal("pd6sf"))
+
+    DOMINATS += 1 if PFinal("pd6sf")[0] > 0.5 else 0
     CASTELLS = copy.deepcopy(CLONE_CASTELLS)
 
 print("dominats:", DOMINATS, "de 1000")
-
-# # pd4
-# print("before pd4, pd4:", PFinal("pd4"))
-
-# for i in range(20):
-#     result, newProbs = simulate_play("pd4")
-#     # print(result, newProbs)
-
-# print("after pd4, pd4:", PFinal("pd4"))
-
-# # pd4n
-# print("before pd4n, pd4n:", PFinal("pd4n"))
-
-# for i in range(60):
-#     result, newProbs = simulate_play("pd4n")
-#     # print(result, newProbs)
-
-# print("after pd4n, pd4n:", PFinal("pd4n"))
-
-# # pd5
-# print("before pd5, pd5:", PFinal("pd5"))
-
-# for i in range(30):
-#     result, newProbs = simulate_play("pd5")
-#     # print(result, newProbs)
-
-# print("after pd5, pd5:", PFinal("pd5"))
-
-# # pd5n
-# print("before pd5n, pd5n:", PFinal("pd5n"))
-
-# for i in range(60):
-#     result, newProbs = simulate_play("pd5n")
-#     # print(result, newProbs)
-
-# print("after pd5n, pd5n:", PFinal("pd5n"))
-
-# # pd6sf
-# print("before pd6sf, pd6sf:", PFinal("pd6sf"))
-
-# for i in range(10):
-#     result, newProbs = simulate_play("pd6sf")
-#     # print(result, newProbs)
-
-# print("after pd6sf, pd6sf:", PFinal("pd6sf"))
