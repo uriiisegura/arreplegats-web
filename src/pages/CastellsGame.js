@@ -394,7 +394,10 @@ class CastellsGame extends Component {
 											result={this.state.selectedResult}
 											onNext={this.restartAssaig.bind(this)}
 											stats={this.state.colla.stats[this.state.selectedCastell.castell]}
-											/>
+											provesLeft={this.state.colla.today.provesLeft}
+											advanceDay={this.advanceDay.bind(this)}
+											goBack={this.goBack.bind(this)}
+										/>
 								}
 								<CastellSelector
 									castells={castells}

@@ -8,6 +8,13 @@ class CastellResult extends Component {
 	next() {
 		this.props.onNext();
 	}
+	advanceDay() {
+		this.props.advanceDay();
+		this.props.goBack();
+	}
+	goBack() {
+		this.props.goBack();
+	}
 	handleKeyDown(event) {
         if (event.key === 'Enter') {
 			this.props.onNext();
@@ -37,7 +44,23 @@ class CastellResult extends Component {
 							}
 						</div>
 
-						<button className="back-btn" onClick={this.next.bind(this)}>CONTINUA</button>
+						{
+							this.props.provesLeft > 0 ?
+								<button className="back-btn" onClick={this.next.bind(this)}>
+									CONTINUA
+								</button>
+							:
+								<>
+									<button className="back-btn" onClick={this.advanceDay.bind(this)}>
+										AVANÇA DE DIA
+									</button>
+
+									<button className="back-btn" onClick={this.goBack.bind(this)}>
+										ENRERE
+									</button>
+								</>
+						}
+						
 					</> : <>
 						<div className="loading game-loading"></div>
 					</>
