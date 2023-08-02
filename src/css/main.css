@@ -3477,12 +3477,7 @@ span.help {
 }
 
 .game-actuacio-result {
-	position: absolute;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	margin: 0 auto;
 	width: min(300px, 95%);
 	height: fit-content;
 	padding: 30px;
