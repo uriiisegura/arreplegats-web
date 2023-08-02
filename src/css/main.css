@@ -3043,7 +3043,7 @@ Joc Castells
 
 .menu {
 	position: absolute;
-	top: min(15rem, 10%);
+	top: 30px;
 	right: 0;
 	left: 0;
 	bottom: auto;
