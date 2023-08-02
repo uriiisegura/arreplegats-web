@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Howl } from 'howler';
+import Howler, { Howl } from 'howler';
 
 import castells from "../data/joc-castells.json";
 import CastellSelector from "../components/CastellSelector";
@@ -7,6 +7,9 @@ import CastellResult from "../components/CastellResult";
 import CastellStats from "../components/CastellStats";
 import TimestampToString from "../functions/TimestampToString";
 import Colla from "../models/Colla";
+
+Howler.autoUnlock = true;
+Howler.html5PoolSize = 100;
 
 const FILES_DICT = {
 	"pujada": '/sounds/toc-de-castells-pujada.mp3',
@@ -23,6 +26,8 @@ function playAudioFiles(files, durations, index = 0) {
 		resolve(); // end of files array reached, resolve promise
 		return;
 	  }
+
+	  let idSound;
 	
 	  let sound = new Howl({
 		html5: true,
@@ -31,6 +36,9 @@ function playAudioFiles(files, durations, index = 0) {
 		  segment: [0, durations[index] * 1000]  // Howler.js uses milliseconds
 		},
 		onend: function() {
+			sound.unload();
+			sound.stop(idSound);
+
 		  playAudioFiles(files, durations, index + 1)
 		  	.then(resolve)
 			.catch(reject)
@@ -40,7 +48,7 @@ function playAudioFiles(files, durations, index = 0) {
 		}
 	  });
 	
-	  sound.play('segment');
+	  idSound = sound.play('segment');
 	});
 }
 
