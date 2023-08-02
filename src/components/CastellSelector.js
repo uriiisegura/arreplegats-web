@@ -127,6 +127,47 @@ class CastellSelector extends Component {
 												<div style={{backgroundColor: difficulty > 3 ? difficulty_color : '#eee'}}></div>
 											</div>
 										}
+
+										{
+											!blocked &&
+											<div
+												style={{
+													display: 'flex',
+													justifyContent: 'space-around',
+													flexDirection: 'row',
+													backgroundColor: 'transparent',
+													gap: 10,
+												}}
+											>
+												<div
+													style={{
+														color: 'white',
+														display: 'flex',
+														alignItems: 'center',
+														backgroundColor: blocked ? '#555' : '#000',
+														padding: '1px 5px',
+														borderRadius: 5,
+														fontSize: 12,
+													}}
+												>
+													{this.props.stats?.[c.castell]?.descarregat}p
+												</div>
+
+												<div
+													style={{
+														color: 'white',
+														display: 'flex',
+														alignItems: 'center',
+														backgroundColor: blocked ? '#555' : '#af6000',
+														padding: '1px 5px',
+														borderRadius: 5,
+														fontSize: 12,
+													}}
+												>
+													{this.props.stats?.[c.castell]?.carregat}p
+												</div>
+											</div>
+										}
 									</div>;
 								})
 							}
