@@ -3054,9 +3054,22 @@ Joc Castells
 	margin: auto;
 }
 
+.game-header {
+	grid-column: span 3;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
 .game-menu-time {
 	grid-column: span 3;
 	color: var(--white);
+}
+
+.game-day-title {
+	font-size: 20px;
 }
 
 .game-current-day {

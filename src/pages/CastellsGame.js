@@ -315,8 +315,12 @@ class CastellsGame extends Component {
 						this.state.screen === 'HOME' ? <>
 							<div className="game-full-wrap game-bigger-wrap">
 								<div className="menu">
-									<div className="game-menu-time game-current-day"><img src="/font-awesome/calendar.svg" alt="calendar"/><span>{TimestampToString(this.state.colla.date)}</span></div>
-									<button className={`game-menu-time game-advance-day ${this.state.colla.today['type'] === 'actuacio' && !this.state.colla.today['done'] ? 'disabled' : ''}`} onClick={this.advanceDay.bind(this)}>Avança al següent dia</button>
+									<div className="game-header">
+										<div className="game-menu-time game-day-title">DIA D'{this.state.colla.today['type'] === 'assaig' ? 'ASSAIG' : 'ACTUACIÓ'}</div>
+										<div className="game-menu-time game-current-day"><img src="/font-awesome/calendar.svg" alt="calendar"/><span>{TimestampToString(this.state.colla.date)}</span></div>
+										<button className={`game-menu-time game-advance-day ${this.state.colla.today['type'] === 'actuacio' && !this.state.colla.today['done'] ? 'disabled' : ''}`} onClick={this.advanceDay.bind(this)}>Avança al següent dia</button>
+									</div>
+									
 									<button className={`btn ${this.state.colla.today['type'] === 'assaig' && this.state.colla.today.provesLeft > 0 ? '' : 'disabled'}`} onClick={() => this.changeScreen('ASSAIG')}>
 										<span>ASSAIG</span>
 									</button>
