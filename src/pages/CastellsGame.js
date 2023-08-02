@@ -7,8 +7,8 @@ import CastellSelector from "../components/CastellSelector";
 import CastellResult from "../components/CastellResult";
 import CastellStats from "../components/CastellStats";
 import TimestampToString from "../functions/TimestampToString";
-import Colla from "../models/Colla";
 import AmountCastellers from "../functions/AmountCastellers";
+import Colla from "../models/Colla";
 
 // A veure si cola
 Howler.autoUnlock = true;
@@ -268,7 +268,7 @@ class CastellsGame extends Component {
 	updateCastellersAfterActuacio() {
 		const amount = this.calculateAmountCastellersAddedAfterActuacio();
 
-		if (amount > 0) this.state.colla.addCastellers(amount);
+		if (amount >= 0) this.state.colla.addCastellers(amount);
 		else if (amount < 0) this.state.colla.takeCastellers(-amount);
 	}
 	endActuacio() {
