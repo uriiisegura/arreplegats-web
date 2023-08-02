@@ -8,6 +8,7 @@ import CastellResult from "../components/CastellResult";
 import CastellStats from "../components/CastellStats";
 import TimestampToString from "../functions/TimestampToString";
 import Colla from "../models/Colla";
+import AmountCastellers from "../functions/AmountCastellers";
 
 // A veure si cola
 Howler.autoUnlock = true;
@@ -263,10 +264,13 @@ class CastellsGame extends Component {
 		const punts = this.state.actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts
 		const castellers = this.state.colla.castellers;
 
-		// f(punts, castellers)
-		const amount = Math.floor(punts / 10);
+		console.log(
+			punts,
+			castellers,
+			AmountCastellers(punts, castellers)
+		)
 
-		return amount;
+		return AmountCastellers(punts, castellers)
 	}
 	updateCastellersAfterActuacio() {
 		const amount = this.calculateAmountCastellersAddedAfterActuacio();
