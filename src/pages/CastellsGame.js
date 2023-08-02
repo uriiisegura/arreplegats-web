@@ -184,6 +184,12 @@ class CastellsGame extends Component {
 	}
 	solveCastell() {
 		this.playCastell(this.state.colla.getCastellResult(this.state.selectedCastell, this.state.screen === 'ASSAIG'));
+
+		this.state.colla.checkIfMissionCompleted(this.state.screen.toLowerCase(), this.state.selectedCastell['castell'], resultat.toLowerCase());
+		
+		this.setState({
+			selectedResult: resultat
+		})
 	}
 	waitAudioToFinish(audio) {
 		return new Promise(res => {
@@ -229,12 +235,6 @@ class CastellsGame extends Component {
 		}
 
 		document.getElementById('game-screen').style.pointerEvents = 'all';
-
-		this.state.colla.checkIfMissionCompleted(this.state.screen.toLowerCase(), this.state.selectedCastell['castell'], resultat.toLowerCase());
-		
-		this.setState({
-			selectedResult: resultat
-		})
 	}
 	restartAssaig() {
 		if (this.state.colla.today['provesLeft'] === 0)
