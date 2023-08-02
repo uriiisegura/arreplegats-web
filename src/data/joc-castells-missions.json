@@ -2,6 +2,20 @@
 	{
 		"title": "Un nou inici",
 		"description": "Completa el Pd3 a assaig.",
-		"castellers": 5
+		"rewards": [
+			{
+				"type": "castellers",
+				"amount": 5
+			}
+		],
+		"objectives": {
+			"assaig": [
+				{
+					"castell": "Pd3",
+					"action": "descarregar",
+					"amount": 1
+				}
+			]
+		}
 	}
 ]
