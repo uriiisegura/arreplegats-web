@@ -115,14 +115,29 @@ class CastellsGame extends Component {
 		}
 	}
 	loadGame() {
+		// Load colla
 		try {
-			const fromLocalStorage = localStorage.getItem('game');
-			if (!fromLocalStorage) return;
+			const collaFromLocal = localStorage.getItem('game');
+			if (!collaFromLocal) return;
 
-			const result = JSON.parse(atob(fromLocalStorage));
+			const collaJSON = JSON.parse(atob(collaFromLocal));
 
 			this.setState({
-				colla: Colla.fromJson(result)
+				colla: Colla.fromJson(collaJSON)
+			});
+		} catch (e) {
+			document.getElementById('initial-error').innerHTML = e.message;
+		}
+
+		// Load actuació (if any)
+		try {
+			const actuacioFromLocal = localStorage.getItem('actuacio');
+			if (!actuacioFromLocal) return;
+
+			const actuacioJSON = JSON.parse(actuacioFromLocal);
+
+			this.setState({
+				actuacio: actuacioJSON
 			});
 		} catch (e) {
 			document.getElementById('initial-error').innerHTML = e.message;
@@ -131,6 +146,7 @@ class CastellsGame extends Component {
 	saveGame() {
 		try {
 			localStorage.setItem('game', btoa(JSON.stringify(this.state.colla, null, 4)));
+			localStorage.setItem('actuacio', JSON.stringify(this.state.actuacio));
 		} catch (e) {
 			console.error(e);
 		}
