@@ -296,7 +296,6 @@ class CastellsGame extends Component {
 			history: history,
 			selectedCastell: null,
 			selectedResult: null,
-			actuacio: [],
 			showStatsCastell: null
 		});
 	}
@@ -446,7 +445,7 @@ class CastellsGame extends Component {
 					{
 						this.state.screen === 'ACTUACIO' ? <>
 							{
-								this.state.actuacio.length === 0 && !this.state.selectedCastell ? <button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button> : <></>
+								!this.state.selectedCastell ? <button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button> : <></>
 							}
 							{
 								this.state.actuacio.length < 4 ? <>
