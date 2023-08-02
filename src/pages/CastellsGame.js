@@ -309,7 +309,7 @@ class CastellsGame extends Component {
 						{
 							this.state.colla.today['provesLeft'] > 0 ?
 								<div className="game-proves-left-short">
-									<span className="game-current-day">
+									<span className={`game-current-day ${this.state.colla.highContrast === 'black' ? 'invert' : ''}`}>
 										<img src="/font-awesome/align-justify.svg" alt="calendar" /></span>
 										<span>{this.state.colla.today['provesLeft']}</span>
 								</div>

@@ -3061,6 +3061,10 @@ Joc Castells
 
 .game-proves-left-short img {
 	width: 12px;
+	filter: invert(100%) opacity(100%) !important;
+}
+.game-proves-left-short .invert img {
+	filter: invert(0%) !important;
 }
 
 .game-header {
