@@ -3262,6 +3262,7 @@ span.help {
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	height: 80vh;
 }
 
 .game-castell-selector {
