@@ -22,6 +22,14 @@ const FILES_DICT = {
 	"caiguda": '/sounds/caiguda.mp3'
 }
 
+const ASSAIG_FILES = {
+	"colocats": '/sounds/assaigs/dossos-colocats.mp3',
+	"pujada": '/sounds/assaigs/dossos-pujada.mp3',
+	"silenci": '/sounds/assaigs/silenci.mp3',
+	"silenci2": '/sounds/assaigs/silenci2.mp3',
+	"caiguda": '/sounds/caiguda.mp3'
+}
+
 // Recursive function to play a segment from each audio file
 function playAudioFiles(files, durations, index = 0) {
 	return new Promise((resolve, reject) => {
@@ -185,7 +193,7 @@ class CastellsGame extends Component {
 	async solveCastell() {
 		const resultat = this.state.colla.getCastellResult(this.state.selectedCastell, this.state.screen === 'ASSAIG')
 
-		if (this.state.screen === 'ASSAIG') await this.waitForResult();
+		if (this.state.screen === 'ASSAIG') await this.playAssaig(resultat);
 		else this.playCastell(resultat);
 
 		this.state.colla.checkIfMissionCompleted(this.state.screen.toLowerCase(), this.state.selectedCastell['castell'], resultat.toLowerCase());
@@ -200,9 +208,57 @@ class CastellsGame extends Component {
 			audio.onended = res;
 		});
 	}
-	async waitForResult() {
-		const milliseconds = 1000;
+	async waitForResult(resultat) {
+		const milliseconds = !this.state.results.includes(resultat) ? 0 :
+			// DESCARREGAT
+			resultat === this.state.results[0] ? 7000 :
+			// CARREGAT
+			resultat === this.state.results[1] ? 6000 :
+			// INTENT
+			resultat === this.state.results[2] ? 4000 :
+			// INTENT
+			resultat === this.state.results[2] ? 2000 :
+			// ERROR
+			0
+
 		await new Promise(res => setTimeout(res, milliseconds));
+	}
+	async playAssaig(resultat) {
+		const files = !this.state.results.includes(resultat) ? [] :
+			// DESCARREGAT
+			resultat === this.state.results[0] ? ['pujada', 'colocats', 'silenci2'] :
+			// CARREGAT
+			resultat === this.state.results[1] ? ['pujada', 'colocats', 'silenci2', 'caiguda'] :
+			// INTENT 
+			resultat === this.state.results[2] ? ['pujada', 'caiguda'] :
+			// INTENT DESMUNTAT
+			resultat === this.state.results[3] ? ['pujada', 'silenci'] :
+			// ERROR
+			[]
+
+		const file_paths = files.map(f => ASSAIG_FILES[f]);
+
+		const times = !this.state.results.includes(resultat) ? [] :
+			// DESCARREGAT
+			resultat === this.state.results[0] ? [2, 4, 2] :
+			// CARREGAT
+			resultat === this.state.results[1] ? [2, 4, 2, 2] :
+			// INTENT 
+			resultat === this.state.results[2] ? [2, 2] :
+			// INTENT DESMUNTAT
+			resultat === this.state.results[3] ? [2, 2] :
+			// ERROR
+			[]
+
+		document.getElementById('game-screen').style.pointerEvents = 'none';
+
+		try {
+			await playAudioFiles(file_paths, times)
+		} catch	(e) {
+			console.error(e);
+		}
+
+		document.getElementById('game-screen').style.pointerEvents = 'all';
 	}
 	async playCastell(resultat) {
 		const files = !this.state.results.includes(resultat) ? [] :
