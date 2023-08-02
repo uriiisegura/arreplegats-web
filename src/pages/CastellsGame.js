@@ -353,7 +353,12 @@ class CastellsGame extends Component {
 											<span>ASSAIG</span>
 										</button>
 										<button className={`btn ${this.state.colla.castellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done']) ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
-											<span>ACTUACIÓ</span>
+											<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+												<span>ACTUACIÓ</span>
+												{ this.state.colla.castellers < 31 && <div className="btn-subtitle">
+													Mínim: 31 castellers
+												</div> }
+											</div>
 										</button>
 										<button className="btn" onClick={() => this.changeScreen('CASTELLS')}>
 											<span>CASTELLS</span>

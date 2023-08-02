@@ -3105,6 +3105,11 @@ Joc Castells
 	font-style: italic;
 }
 
+.menu .btn .btn-subtitle {
+	font-size: 12px;
+	font-style: italic;
+}
+
 .game-proves-left-short {
 	display: flex;
 	gap: 7px;
