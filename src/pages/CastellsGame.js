@@ -505,7 +505,7 @@ class CastellsGame extends Component {
 							<div className="game-full-wrap game-help">
 								<h3>Ajuda</h3>
 								<p>
-									LMAO vaya clown ets que mires l'ajuda. L'ajuda és per putaganàpies que són subnormals LOL. Enfaixa't i posat a la feina!
+									Ets putoganàpia o què? Enfaixa't i posat a la feina!
 								</p>
 								<div className="btn game-delete-game" onClick={() => {this.deleteGame(false)}}>BORRA PARTIDA</div>
 							</div>

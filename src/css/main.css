@@ -3506,6 +3506,8 @@ span.help {
 .game-help {
 	flex-direction: column;
 	padding: 0 1rem 2rem;
+	max-width: 800px;
+	margin: auto;
 }
 
 .game-help h3 {
