@@ -51,11 +51,11 @@ class CastellResult extends Component {
 								</button>
 							:
 								<>
-									<button className="back-btn" onClick={this.advanceDay.bind(this)}>
+									<button className="back-btn" style={{ margin: 5, marginTop: 30 }} onClick={this.advanceDay.bind(this)}>
 										AVANÇA DE DIA
 									</button>
 
-									<button className="back-btn" onClick={this.goBack.bind(this)}>
+									<button className="back-btn" style={{ margin: 5 }} onClick={this.goBack.bind(this)}>
 										ENRERE
 									</button>
 								</>
