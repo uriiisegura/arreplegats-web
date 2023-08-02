@@ -45,7 +45,7 @@ class CastellResult extends Component {
 						</div>
 
 						{
-							this.props.provesLeft > 0 ?
+							this.props.provesLeft > 0 || this.props.type === 'actuació' ?
 								<button className="back-btn" onClick={this.next.bind(this)}>
 									CONTINUA
 								</button>
