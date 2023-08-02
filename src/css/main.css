@@ -3261,11 +3261,7 @@ span.help {
 .game-full-wrap {
 	position: relative;
 	display: flex;
-	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height) - var(--game-back-btn-height) - 2rem);
 	flex-direction: column;
-}
-.game-bigger-wrap {
-	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height));
 }
 
 .game-castell-selector {
