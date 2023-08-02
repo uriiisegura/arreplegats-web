@@ -20,7 +20,7 @@
 	},
 	{
 		"title": "Agafant forma",
-		"description": "Completa cinc Pd3n i tres Pd4 a assaig.",
+		"description": "Descarrega cinc 3d5n i tres 3d5a a assaig.",
 		"rewards": [
 			{
 				"type": "castellers",
@@ -30,12 +30,12 @@
 		"objectives": {
 			"assaig": [
 				{
-					"castell": "Pd3n",
+					"castell": "3d5n",
 					"action": "descarregat",
 					"amount": 5
 				},
 				{
-					"castell": "Pd4",
+					"castell": "3d5a",
 					"action": "descarregat",
 					"amount": 3
 				}
