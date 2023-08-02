@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 const jocs_list = {
-	'Crea la teva pròpia colla!': 'joc-castells'
+	'Crea la teva pròpia colla!': 'joc-castells',
 	//'Penjat': 'penjat',
 	'Memory': 'memory',
 	'Mots encreuats': 'mots-encreuats',
-	'Sopa de lletres': 'sopa-de-lletres',
+	'Sopa de lletres': 'sopa-de-lletres'
 };
 
 class Jocs extends Component {
