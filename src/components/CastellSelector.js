@@ -128,7 +128,7 @@ class CastellSelector extends Component {
 										}
 
 										{
-											!blocked &&
+											!blocked && this.props.type === 'actuació' &&
 											<div
 												style={{
 													display: 'flex',

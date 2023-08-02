@@ -438,7 +438,8 @@ class CastellsGame extends Component {
 									is_assaig={true}
 									proves_left={this.state.colla.today.provesLeft}
 									onBack={this.goBack.bind(this)}
-									/>
+									type="assaig"
+								/>
 							</div>
 						</> : <></>
 					}
@@ -467,6 +468,7 @@ class CastellsGame extends Component {
 													ronda={this.state.actuacio.length + 1}
 													stats={this.state.colla.stats}
 													is_assaig={false}
+													type="actuació"
 												/>
 											</>
 										}
