@@ -272,6 +272,11 @@ class CastellsGame extends Component {
 	endActuacio() {
 		this.updateCastellersAfterActuacio();
 		this.state.colla.addActuacio(this.state.actuacio);
+
+		this.setState({
+			actuacio: []
+		});
+
 		this.goBack();
 	}
 	formatCastell(castell, result) {
