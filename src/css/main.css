@@ -3054,15 +3054,6 @@ Joc Castells
 	margin: auto;
 }
 
-.game-proves-left-short {
-	display: flex;
-	gap: 7px;
-}
-
-.game-proves-left-short img {
-	width: 12px;
-}
-
 .game-header {
 	grid-column: span 3;
 	color: var(--white);
