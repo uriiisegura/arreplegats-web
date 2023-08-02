@@ -174,7 +174,7 @@ class CastellSelector extends Component {
 						</> : <>
 							{
 								Object.values(this.state.structures).map((v, i) => {
-									return <div onClick={() => this.setGroup(v.component)} key={i}>
+									return <div className="group-wrap" onClick={() => this.setGroup(v.component)} key={i}>
 										<span className="castell">{v.name}</span>
 									</div>;
 								})

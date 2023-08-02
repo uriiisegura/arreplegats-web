@@ -3311,11 +3311,15 @@ span.help {
 }
 
 .game-castell-selector .box-wrap {
-	flex: 1 0 auto;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-auto-rows: 1fr;
 	gap: 3px;
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1;
+	justify-content: center;
+}
+
+.game-castell-selector .group-wrap {
+	flex-basis: 100px;
 }
 
 .game-castell-selector .box-wrap div {
@@ -3344,6 +3348,8 @@ span.help {
 	flex-direction: column;
 	gap: 10px;
 	min-height: 100px;
+	flex: 1;
+	flex-basis: 100px;
 }
 
 .game-selector-single span {
