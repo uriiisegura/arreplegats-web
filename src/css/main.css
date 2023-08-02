@@ -3095,12 +3095,6 @@ Joc Castells
 	color: var(--game-lightGray);
 }
 
-.menu .btn {
-	display: flex;
-	align-items: flex-end;
-	flex: 1;
-}
-
 .menu .btn span {
 	font-style: italic;
 }
@@ -3189,8 +3183,7 @@ Joc Castells
 	display: flex;
 	padding: 0.5rem;
 	align-items: flex-end;
-	flex: 1;
-	min-width: 200px;
+	flex: 1 1 30%;
 }
 
 .menu .btn span {
