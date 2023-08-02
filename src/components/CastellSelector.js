@@ -80,6 +80,21 @@ class CastellSelector extends Component {
 	}
 	render() {
 		return !this.props.hide && (<>
+			{
+				this.props.ronda && this.props.ronda < 4 &&
+				<div
+					style={{
+						display: 'flex',
+						justifyContent: 'center',
+						flex: 1,
+					}}
+				>
+					<h4 style={{ color: 'white' }}>
+						RONDA {this.props.ronda}
+					</h4>
+				</div>
+			}
+
 			<div className="game-castell-selector">
 				<h4>Escull un castell</h4>
 				<div className="box-wrap">
