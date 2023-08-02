@@ -8,6 +8,7 @@ import CastellStats from "../components/CastellStats";
 import TimestampToString from "../functions/TimestampToString";
 import Colla from "../models/Colla";
 
+// A veure si cola
 Howler.autoUnlock = true;
 Howler.html5PoolSize = 100;
 
@@ -27,8 +28,6 @@ function playAudioFiles(files, durations, index = 0) {
 		return;
 	  }
 
-	  let idSound;
-	
 	  let sound = new Howl({
 		html5: true,
 		src: [files[index]],
@@ -36,8 +35,8 @@ function playAudioFiles(files, durations, index = 0) {
 		  segment: [0, durations[index] * 1000]  // Howler.js uses milliseconds
 		},
 		onend: function() {
+		  // Això és el que realment ha funcionat
 			sound.unload();
-			sound.stop(idSound);
 
 		  playAudioFiles(files, durations, index + 1)
 		  	.then(resolve)
@@ -48,7 +47,7 @@ function playAudioFiles(files, durations, index = 0) {
 		}
 	  });
 	
-	  idSound = sound.play('segment');
+	  sound.play('segment');
 	});
 }
 
