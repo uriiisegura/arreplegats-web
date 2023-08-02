@@ -310,7 +310,7 @@ class CastellsGame extends Component {
 						{
 							this.state.colla.today['provesLeft'] > 0 ?
 								<div>
-									Et queden {this.state.colla.today['provesLeft']} prov{this.state.colla.today['provesLeft'] > 1 ? 'es' : 'a'} per fer
+									Et queden {this.state.colla.today['provesLeft']} prov{this.state.colla.today['provesLeft'] > 1 ? 'es' : 'a'} avui
 								</div>
 							:
 								<div
