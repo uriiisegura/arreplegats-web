@@ -182,8 +182,11 @@ class CastellsGame extends Component {
 	selectCastell(castell) {
 		this.setState({selectedCastell: castells[castell]}, this.solveCastell);
 	}
-	solveCastell() {
-		this.playCastell(this.state.colla.getCastellResult(this.state.selectedCastell, this.state.screen === 'ASSAIG'));
+	async solveCastell() {
+		const resultat = this.state.colla.getCastellResult(this.state.selectedCastell, this.state.screen === 'ASSAIG')
+
+		if (this.state.screen === 'ASSAIG') await this.waitForResult();
+		else this.playCastell(resultat);
 
 		this.state.colla.checkIfMissionCompleted(this.state.screen.toLowerCase(), this.state.selectedCastell['castell'], resultat.toLowerCase());
 		
@@ -196,6 +199,10 @@ class CastellsGame extends Component {
 			audio.play();
 			audio.onended = res;
 		});
+	}
+	async waitForResult() {
+		const milliseconds = 1000;
+		await new Promise(res => setTimeout(res, milliseconds));
 	}
 	async playCastell(resultat) {
 		const files = !this.state.results.includes(resultat) ? [] :
@@ -227,9 +234,7 @@ class CastellsGame extends Component {
 		document.getElementById('game-screen').style.pointerEvents = 'none';
 
 		try {
-			if (process.env.NODE_ENV !== 'development') {
-				await playAudioFiles(file_paths, times)
-			}
+			await playAudioFiles(file_paths, times)
 		} catch	(e) {
 			console.error(e);
 		}
