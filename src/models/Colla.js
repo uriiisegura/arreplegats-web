@@ -116,7 +116,7 @@ class Colla {
 		if (weekday === 4)
 			return {
 				type: 'actuacio',
-				done: this.castellers < MIN_CASTELLERS
+				done: false
 			}
 		return {
 			type: 'assaig',
@@ -130,7 +130,7 @@ class Colla {
 		if (weekday === 1)
 			date.setDate(date.getDate() + 1)
 		if (weekday === 2)
-			date.setDate(date.getDate() + 2)
+			date.setDate(date.getDate() + (this.castellers < MIN_CASTELLERS ? 6 : 2))
 		if (weekday === 4)
 			date.setDate(date.getDate() + 4)
 		
