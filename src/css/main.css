@@ -3186,6 +3186,12 @@ Joc Castells
 	flex: 1 1 30%;
 }
 
+.menu .span-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
 .menu .btn span {
 	font-style: italic;
 }
@@ -3266,7 +3272,8 @@ span.help {
 }
 
 .game-castell-selector {
-	margin: auto;
+	position: relative;
+	margin: 2rem auto;
 	background-color: var(--game-clearBlue);
 	border: 3px solid var(--game-lightBlue);
 	width: min(500px, 95%);
