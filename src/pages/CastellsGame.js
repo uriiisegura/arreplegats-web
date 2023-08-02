@@ -512,7 +512,7 @@ class CastellsGame extends Component {
 							<div className="game-table-wrap">
 								{
 									[...Array(9).keys()].map((g, i) => {
-										return <table className="score-table" key={`group-${i}`}>
+										return <table className="score-table" key={`group-${g}`}>
 											<thead>
 												<tr>
 													<th colSpan="4">Grup {g}</th>
@@ -530,7 +530,7 @@ class CastellsGame extends Component {
 													.filter(c => !c?.neta)
 													.map((c, j) => {
 														if (c.grup !== g) return <></>;
-														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={`group-${i}-row-${j}`}>
+														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={`group-${g}-row-${c.castell}`}>
 															<td>{c.castell}</td>
 															<td>{c.carregat}</td>
 															<td>{c.descarregat}</td>
