@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Howl } from 'howler';
+
 import castells from "../data/joc-castells.json";
 import CastellSelector from "../components/CastellSelector";
 import CastellResult from "../components/CastellResult";
@@ -7,11 +9,41 @@ import Delay from "../functions/Delay";
 import TimestampToString from "../functions/TimestampToString";
 import Colla from "../models/Colla";
 
-const pujada = new Audio('/sounds/toc-de-castells-pujada.mp3');
-const baixada = new Audio('/sounds/toc-de-castells-baixada.mp3');
-const aleta = new Audio('/sounds/toc-de-castells-aleta.mp3');
-const sortida = new Audio('/sounds/toc-de-castells-sortida.mp3');
-const caiguda = new Audio('/sounds/caiguda.mp3');
+const FILES_DICT = {
+	"pujada": '/sounds/toc-de-castells-pujada.mp3',
+	"baixada": '/sounds/toc-de-castells-baixada.mp3',
+	"aleta": '/sounds/toc-de-castells-aleta.mp3',
+	"sortida": '/sounds/toc-de-castells-sortida.mp3',
+	"caiguda": '/sounds/caiguda.mp3'
+}
+
+// Recursive function to play a segment from each audio file
+function playAudioFiles(files, durations, index = 0) {
+	return new Promise((resolve, reject) => {
+	  if (index >= files.length) {
+		resolve(); // end of files array reached, resolve promise
+		return;
+	  }
+	
+	  let sound = new Howl({
+		html5: true,
+		src: [files[index]],
+		sprite: {
+		  segment: [0, durations[index] * 1000]  // Howler.js uses milliseconds
+		},
+		onend: function() {
+		  playAudioFiles(files, durations, index + 1)
+		  	.then(resolve)
+			.catch(reject)
+		},
+		onloaderror: function(id, error) {
+		  reject(error); // if there's an error loading the sound, reject promise
+		}
+	  });
+	
+	  sound.play('segment');
+	});
+}
 
 class CastellsGame extends Component {
 	constructor(props) {
@@ -39,12 +71,6 @@ class CastellsGame extends Component {
 		this.saveGame();
 	}
 	componentWillUnmount() {
-		pujada.pause();
-		baixada.pause();
-		aleta.pause();
-		sortida.pause();
-		caiguda.pause();
-
 		if (this.state.colla)
 			this.saveGame();
 	}
@@ -142,54 +168,47 @@ class CastellsGame extends Component {
 		});
 	}
 	async playCastell(resultat) {
-		if (process.env.NODE_ENV !== 'development') {
-			pujada.currentTime = 0;
-			baixada.currentTime = 0;
-			aleta.currentTime = 0;
-			sortida.currentTime = 0;
-			caiguda.currentTime = 0;
+		const files = !this.state.results.includes(resultat) ? [] :
+			// DESCARREGAT
+			resultat === this.state.results[0] ? ['pujada', 'aleta', 'baixada', 'sortida'] :
+			// CARREGAT
+			resultat === this.state.results[1] ? ['pujada', 'aleta', 'baixada', 'caiguda'] :
+			// INTENT 
+			resultat === this.state.results[2] ? ['pujada', 'caiguda'] :
+			// INTENT DESMUNTAT
+			resultat === this.state.results[0] ? ['pujada', 'baixada'] :
+			// ERROR
+			[]
 
-			document.getElementById('game-screen').style.pointerEvents = 'none';
+		const file_paths = files.map(f => FILES_DICT[f]);
 
-			pujada.play();
-			await Delay(13000);
-			if (resultat === this.state.results[2]) { // INTENT
-				pujada.pause();
-				caiguda.play();
-				await Delay(3000);
-				caiguda.pause();
-			} else {
-				await Delay(5000);
-				pujada.pause();
-				if (resultat !== this.state.results[3]) { // not INTENT DESMUNTAT = DESCARREGAT or CARREGAT
-					await this.waitAudioToFinish(aleta);
-					baixada.play();
-					await Delay(6000);
-					if (resultat === this.state.results[1]) { // CARREGAT
-						baixada.pause();
-						caiguda.play();
-						await Delay(2000);
-						caiguda.pause();
-					} else { // not CARREGAT = DESCARREGAT
-						await Delay(8000);
-						baixada.pause();
-					}
-				}
-				if (resultat !== this.state.results[1]) { // not CARREGAT = DESCARREGAT or INTENT DESMUNTAT
-					sortida.play();
-					await Delay(8000);
-					sortida.pause();
-				}
+		const times = !this.state.results.includes(resultat) ? [] :
+			// DESCARREGAT
+			resultat === this.state.results[0] ? [18, 6, 14, 8] :
+			// CARREGAT
+			resultat === this.state.results[1] ? [18, 6, 6, 2] :
+			// INTENT 
+			resultat === this.state.results[2] ? [13, 3] :
+			// INTENT DESMUNTAT
+			resultat === this.state.results[0] ? [18, 8] :
+			// ERROR
+			[]
+
+		document.getElementById('game-screen').style.pointerEvents = 'none';
+
+		try {
+			if (process.env.NODE_ENV !== 'development') {
+				await playAudioFiles(file_paths, times)
 			}
-
-			document.getElementById('game-screen').style.pointerEvents = 'all';
+		} catch	(e) {
+			console.error(e);
 		}
 
-		console.log(this.state.colla.today);
-
+		document.getElementById('game-screen').style.pointerEvents = 'all';
+			
 		this.setState({
 			selectedResult: resultat
-		});
+		})
 	}
 	restartAssaig() {
 		this.setState({
