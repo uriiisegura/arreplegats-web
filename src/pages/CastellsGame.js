@@ -310,16 +310,10 @@ class CastellsGame extends Component {
 						{
 							this.state.colla.today['provesLeft'] > 0 ?
 								<div>
-									Et queden {this.state.colla.today['provesLeft']} prov{this.state.colla.today['provesLeft'] > 1 ? 'es' : 'a'} avui
+									Et qued{this.state.colla.today['provesLeft'] > 1 ? 'en' : 'a'} {this.state.colla.today['provesLeft']} prov{this.state.colla.today['provesLeft'] > 1 ? 'es' : 'a'} avui
 								</div>
 							:
-								<div
-									className="btn"
-									style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}
-									onClick={this.advanceDay.bind(this)}
-								>
-									Avança al següent dia
-								</div>
+								<button className="btn" onClick={this.advanceDay.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast, textTransform: 'none'}}>Avança al següent dia</button>
 						}
 					</div>
 					<div className="sub-bar">

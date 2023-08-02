@@ -3519,7 +3519,8 @@ span.help {
 	color: var(--white);
 }
 
-.game-delete-game {
+.game-delete-game,
+.game-export-game {
 	width: fit-content;
 	margin: 1rem auto 0;
 	border-radius: 0;
@@ -3530,15 +3531,6 @@ span.help {
 .game-delete-game:hover {
 	background-color: var(--red-dark);
 	opacity: 1;
-}
-
-.game-export-game {
-	width: fit-content;
-	margin: 1rem auto 0;
-	border-radius: 0;
-	background-color: var(--game-lightBlue);
-	transition: none;
-	opacity: 0.85;
 }
 .game-export-game:hover {
 	background-color: var(--green-dark);
