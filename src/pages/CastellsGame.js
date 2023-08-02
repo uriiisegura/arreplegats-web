@@ -626,6 +626,7 @@ class CastellsGame extends Component {
 										<div className="game-missions-wrap">
 											{
 												missions.map((m, i) => {
+													// eslint-disable-next-line
 													if (this.state.colla.missions_accepted.filter(ma => ma.title === m.title).length > 0) return;
 													return <div className="game-mission" key={`game-mission-${i}`}>
 														<div className="game-mission-info">
