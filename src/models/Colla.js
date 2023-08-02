@@ -69,9 +69,10 @@ class Colla {
 		return castellers;
 	}
 	takeCastellers(castellers) {
-		castellers = Math.min(castellers, MIN_CASTELLERS);
-		this.castellers -= castellers;
-		return castellers;
+		if (this.castellers <= MIN_CASTELLERS) return 0;
+		const prev_castellers = this.castellers;
+		this.castellers = Math.max(this.castellers - castellers, MIN_CASTELLERS);
+		return prev_castellers - this.castellers;
 	}
 	getCastellResult(castell, is_assaig) {
 		const { result, oldProbs } = v3.generateCastellResult({
