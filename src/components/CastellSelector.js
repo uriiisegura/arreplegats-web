@@ -82,69 +82,62 @@ class CastellSelector extends Component {
 		return !this.props.hide && (<>
 			<div className="game-castell-selector">
 				<h4>Escull un castell</h4>
+				<div className="box-wrap">
+					{
+						this.state.from_group ? <>
+							{
+								this.state.from_group
+								.filter(c => c?.neta ? this.state.neta : !this.state.neta)
+								.map((c, i) => {
+									const blocked = c.gent > this.props.castellers;
+									
+									const difficulty = this.probToBracket(
+										probCastell(this.props.stats, c.castell)?.[0] || 0
+									);
 
-				{
-					this.props.is_assaig && this.props.proves_left === 0 ? <div className="game-castell-selector-full-height">
-						<h5>No queden més proves :(</h5>
-						<button className="back-btn" onClick={this.props.onBack}>ENRERE</button>
-					</div>
-					: <div className="box-wrap">
-						{
-							this.state.from_group ? <>
-								{
-									this.state.from_group
-									.filter(c => c?.neta ? this.state.neta : !this.state.neta)
-									.map((c, i) => {
-										const blocked = c.gent > this.props.castellers;
-										
-										const difficulty = this.probToBracket(
-											probCastell(this.props.stats, c.castell)?.[0] || 0
-										);
+									const difficulty_color = {
+										1: 'darkred',
+										2: 'darkorange',
+										3: 'gold',
+										4: 'seagreen'
+									}[difficulty];
 
-										const difficulty_color = {
-											1: 'darkred',
-											2: 'darkorange',
-											3: 'gold',
-											4: 'seagreen'
-										}[difficulty];
-
-										return <div className={`game-selector-single ${blocked ? 'disabled' : ''}`} onClick={() => this.selectCastell(c.castell)} key={i}>
-											<span className="castell">{c.castell}</span>
-											{
-												blocked ? <span className="gent">{c.gent} persones</span> : <div className="game-castell-difficulty-wrap">
-													<div style={{backgroundColor: difficulty > 0 ? difficulty_color : '#eee'}}></div>
-													<div style={{backgroundColor: difficulty > 1 ? difficulty_color : '#eee'}}></div>
-													<div style={{backgroundColor: difficulty > 2 ? difficulty_color : '#eee'}}></div>
-													<div style={{backgroundColor: difficulty > 3 ? difficulty_color : '#eee'}}></div>
-												</div>
-											}
-										</div>;
-									})
-								}
-							</> : <>
-								{
-									Object.values(this.state.structures).map((v, i) => {
-										return <div onClick={() => this.setGroup(v.component)} key={i}>
-											<span className="castell">{v.name}</span>
-										</div>;
-									})
-								}
-							</>
-						}
-					</div>
+									return <div className={`game-selector-single ${blocked ? 'disabled' : ''}`} onClick={() => this.selectCastell(c.castell)} key={i}>
+										<span className="castell">{c.castell}</span>
+										{
+											blocked ? <span className="gent">{c.gent} persones</span> : <div className="game-castell-difficulty-wrap">
+												<div style={{backgroundColor: difficulty > 0 ? difficulty_color : '#eee'}}></div>
+												<div style={{backgroundColor: difficulty > 1 ? difficulty_color : '#eee'}}></div>
+												<div style={{backgroundColor: difficulty > 2 ? difficulty_color : '#eee'}}></div>
+												<div style={{backgroundColor: difficulty > 3 ? difficulty_color : '#eee'}}></div>
+											</div>
+										}
+									</div>;
+								})
+							}
+						</> : <>
+							{
+								Object.values(this.state.structures).map((v, i) => {
+									return <div onClick={() => this.setGroup(v.component)} key={i}>
+										<span className="castell">{v.name}</span>
+									</div>;
+								})
+							}
+						</>
 					}
+				</div>
 				{
-					this.props.is_assaig && this.props.proves_left > 0 && this.state.from_group && <div className="game-proves-extra">
+					this.props.is_assaig && this.state.from_group && <div className="game-proves-extra">
 						<div onClick={() => this.setNeta(!this.state.neta)}>
 							{ !this.state.neta ? ' Netes i a terra' : 'Pinyes i soques' }
 						</div>
 					</div>
 				}
 				{
-					(this.props.ronda && this.props.ronda >= 4) || (this.props.is_assaig && this.props.proves_left === 0) ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
+					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
 				}
 				{
-					this.props.is_assaig && this.props.proves_left > 0 ? <div className={`game-proves-left ${this.props.proves_left === 1 ? 'game-last-prova' : ''}`}>
+					this.props.is_assaig ? <div className={`game-proves-left ${this.props.proves_left === 1 ? 'game-last-prova' : ''}`}>
 						{this.props.proves_left > 1 ? `Queden ${this.props.proves_left} proves` : 'ÚLTIMA PROVA'}
 					</div> : <></>
 				}

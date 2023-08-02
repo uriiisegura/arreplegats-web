@@ -217,9 +217,8 @@ class CastellsGame extends Component {
 		})
 	}
 	restartAssaig() {
-		if (this.state.colla.today['provesLeft'] === 0) {
+		if (this.state.colla.today['provesLeft'] === 0)
 			this.goBack();
-		}
 
 		this.setState({
 			selectedCastell: null,
