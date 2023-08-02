@@ -5,7 +5,6 @@ import castells from "../data/joc-castells.json";
 import CastellSelector from "../components/CastellSelector";
 import CastellResult from "../components/CastellResult";
 import CastellStats from "../components/CastellStats";
-import Delay from "../functions/Delay";
 import TimestampToString from "../functions/TimestampToString";
 import Colla from "../models/Colla";
 
