@@ -3158,6 +3158,41 @@ Joc Castells
 	padding: 0.5rem;
 }
 
+.menu button {
+	border-radius: 0;
+	background-color: var(--game-mediumBlue);
+	border: 1px solid var(--game-lightBlue);
+	color: var(--white);
+	transition: 0.15s;
+	cursor: pointer;
+	text-transform: unset;
+	text-align: left;
+}
+.menu button:hover {
+	background-color: var(--game-cream);
+	color: var(--black);
+	transform: scale(1.02);
+}
+.menu button.disabled {
+	pointer-events: none;
+	background-color: var(--game-darkGray);
+	border-color: var(--game-lightGray);
+	color: var(--game-lightGray);
+}
+
+.menu .btn {
+	height: min(10rem, 15vh);
+	display: flex;
+	padding: 0.5rem;
+	align-items: flex-end;
+	flex: 1;
+	min-width: 200px;
+}
+
+.menu .btn span {
+	font-style: italic;
+}
+
 .back-btn {
 	width: calc(100% - 2rem);
 	margin: 1rem;
