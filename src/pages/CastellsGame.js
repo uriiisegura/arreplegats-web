@@ -264,9 +264,9 @@ class CastellsGame extends Component {
 		const castellers = this.state.colla.castellers;
 
 		// f(punts, castellers)
-		const amount = Math.floor(punts/10)
+		const amount = Math.floor(punts / 10);
 
-		return amount
+		return amount;
 	}
 	updateCastellersAfterActuacio() {
 		const amount = this.calculateAmountCastellersAddedAfterActuacio();
