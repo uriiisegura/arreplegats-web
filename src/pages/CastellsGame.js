@@ -354,18 +354,21 @@ class CastellsGame extends Component {
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
 						{
-							this.state.colla.today['provesLeft'] > 0 ?
+							// this.state.colla.today['provesLeft'] > 0 ?
+							this.state.colla.today['type'] === 'assaig' && true ?
 								<div className="game-proves-left-short">
 									<span className={`game-current-day ${this.state.colla.highContrast === 'black' ? 'invert' : ''}`}>
 										<img src="/font-awesome/align-justify.svg" alt="calendar" /></span>
 										<span>{this.state.colla.today['provesLeft']}</span>
 								</div>
-							:
+							: this.state.colla.today['type'] === 'assaig' ?
 								<button
 									className="btn"
 									style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}
 									onClick={this.advanceDay.bind(this)}
 								>Avança</button>
+							:
+								<></>
 						}
 					</div>
 					<div className="sub-bar">
