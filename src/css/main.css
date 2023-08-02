@@ -3609,6 +3609,7 @@ span.help {
 .game-missions-wrap .btn {
 	text-transform: unset;
 	height: fit-content;
+	white-space: nowrap;
 	background-color: var(--game-lightBlue);
 }
 
