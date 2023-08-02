@@ -137,6 +137,9 @@ class Colla {
 		this.date = date;
 		this.today = this.getToday();
 	}
+	acceptMission(mission) {
+		this.missions_accepted.push(mission);
+	}
 }
 
 export default Colla;

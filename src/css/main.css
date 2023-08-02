@@ -3179,7 +3179,6 @@ Joc Castells
 }
 
 .menu .btn {
-	height: min(10rem, 15vh);
 	display: flex;
 	padding: 0.5rem;
 	align-items: flex-end;
@@ -3268,7 +3267,10 @@ span.help {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	height: 80vh;
+	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height) - var(--game-back-btn-height) - 2rem);
+}
+.game-bigger-wrap {
+	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height));
 }
 
 .game-castell-selector {
@@ -3545,7 +3547,6 @@ span.help {
 .game-stats {
 	flex-direction: column;
 	padding: 0 1rem 2rem;
-	height: 85vh;
 }
 
 .game-stats h3 {
@@ -3583,6 +3584,43 @@ span.help {
 .game-missions h3 {
 	text-align: center;
 	color: var(--white);
+}
+
+.game-missions-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	overflow-y: scroll;
+	margin-bottom: 2rem;
+}
+
+.game-missions-wrap .game-mission {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+	background-color: var(--game-clearBlue);
+	border: 3px solid var(--game-lightBlue);
+	padding: 0.5rem;
+}
+
+.game-missions-wrap .btn {
+	text-transform: unset;
+	height: fit-content;
+	background-color: var(--game-lightBlue);
+}
+
+.game-missions-wrap .game-mission h5 {
+	text-transform: uppercase;
+	margin: 0;
+	margin-bottom: 0.5rem;
+}
+
+.game-missions-wrap .game-mission p {
+	margin: 0;
 }
 
 .game-help {

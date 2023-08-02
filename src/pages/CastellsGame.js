@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Howler, { Howl } from 'howler';
 
 import castells from "../data/joc-castells.json";
+import missions from "../data/joc-castells-missions.json";
 import CastellSelector from "../components/CastellSelector";
 import CastellResult from "../components/CastellResult";
 import CastellStats from "../components/CastellStats";
@@ -337,6 +338,10 @@ class CastellsGame extends Component {
 			window.location.reload();
 		}
 	}
+	acceptMission(mission) {
+		this.state.colla.acceptMission(mission);
+		this.forceUpdate();
+	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
 			{
@@ -403,7 +408,7 @@ class CastellsGame extends Component {
 										<button className={`btn ${this.state.colla.historic.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('HISTORIC')}>
 											<span>HISTÒRIC</span>
 										</button>
-										<button className="btn disabled" onClick={() => this.changeScreen('MISSIONS')}>
+										<button className="btn" onClick={() => this.changeScreen('MISSIONS')}>
 											<span>MISSIONS</span>
 										</button>
 										<button className="btn" onClick={() => this.changeScreen('AJUDA')}>
@@ -598,9 +603,42 @@ class CastellsGame extends Component {
 						this.state.screen === 'MISSIONS' ? <>
 							<button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button>
 							<div className="game-full-wrap game-missions">
-								<h3>Missions</h3>
-								<div className="game-missions-wrap">
-								</div>
+								{
+									this.state.colla.missions_accepted.length > 0 ? <>
+										<h3>Missions acceptades</h3>
+										<div className="game-missions-wrap">
+											{
+												this.state.colla.missions_accepted.map((m, i) => {
+													return <div className="game-mission" key={`game-mission-${i}`}>
+														<div className="game-mission-info">
+															<h5>{m.title}</h5>
+															<p>{m.description}</p>
+														</div>
+													</div>;
+												})
+											}
+										</div>
+									</> : <></>
+								}
+								{
+									this.state.colla.missions_accepted.length + this.state.colla.missions_completed.length !== missions.length ? <>
+										<h3>Missions proposades</h3>
+										<div className="game-missions-wrap">
+											{
+												missions.map((m, i) => {
+													if (this.state.colla.missions_accepted.filter(ma => ma.title === m.title).length > 0) return;
+													return <div className="game-mission" key={`game-mission-${i}`}>
+														<div className="game-mission-info">
+															<h5>{m.title}</h5>
+															<p>{m.description}</p>
+														</div>
+														<button className="btn" onClick={() => this.acceptMission(m)}>Accepta-la</button>
+													</div>;
+												})
+											}
+										</div>
+									</> : <></>
+								}
 							</div>
 						</> : <></>
 					}

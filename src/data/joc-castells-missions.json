@@ -17,5 +17,24 @@
 				}
 			]
 		}
+	},
+	{
+		"title": "Agafant forma",
+		"description": "Aconsegueix tres barres de dificultat en el Pd3n.",
+		"rewards": [
+			{
+				"type": "castellers",
+				"amount": 5
+			}
+		],
+		"objectives": {
+			"assaig": [
+				{
+					"castell": "Pd3n",
+					"action": "probability",
+					"range": [75, 100]
+				}
+			]
+		}
 	}
 ]
