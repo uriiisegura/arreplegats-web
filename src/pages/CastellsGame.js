@@ -240,7 +240,21 @@ class CastellsGame extends Component {
 			actuacio: actuacio
 		});
 	}
+	calculateAmountCastellersAddedAfterActuacio() {
+		const punts = this.state.actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts
+		const castellers = this.state.colla.castellers;
+
+		// f(punts, castellers)
+		const amount = Math.floor(punts/10)
+
+		return amount
+	}
+	updateCastellersAfterActuacio() {
+		const amount = this.calculateAmountCastellersAddedAfterActuacio();
+		this.state.colla.addCastellers(amount);
+	}
 	endActuacio() {
+		this.updateCastellersAfterActuacio();
 		this.state.colla.addActuacio(this.state.actuacio);
 		this.goBack();
 	}
@@ -457,7 +471,18 @@ class CastellsGame extends Component {
 											}
 											<h3>TOTAL: {this.state.actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts}</h3>
 
-											<button className="back-btn" onClick={this.endActuacio.bind(this)}>
+											<div
+												style={{
+													display: this.calculateAmountCastellersAddedAfterActuacio() !== 0 ? 'block' : 'none',
+													marginTop: 10,
+													marginBottom: 10,
+													fontSize: 14,
+												}}
+											>
+												{this.calculateAmountCastellersAddedAfterActuacio() > 0 ? '+' : ''}{this.calculateAmountCastellersAddedAfterActuacio()} castellers
+											</div>
+
+											<button className="back-btn" style={{ marginTop: 10 }} onClick={this.endActuacio.bind(this)}>
 												CONTINUA
 											</button>
 										</div>
