@@ -313,13 +313,11 @@ class CastellsGame extends Component {
 									<span>{this.state.colla.today['provesLeft']}</span>
 								</div>
 							:
-								<div
+								<button
 									className="btn"
 									style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}
 									onClick={this.advanceDay.bind(this)}
-								>
-									Avança
-								</div>
+								>Avança</button>
 						}
 					</div>
 					<div className="sub-bar">
