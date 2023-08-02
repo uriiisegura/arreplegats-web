@@ -297,12 +297,15 @@ class CastellsGame extends Component {
 		return (<><div id="game-screen" className="castells-game">
 			{
 				this.state.colla === null
-				? <div className="flex-page"><div className="btn-wrap">
-					<label htmlFor="import" className="btn" id="load-game">Carregar partida</label>
-					<input id="import" type="file" onChange={this.loadGameFile.bind(this)} accept=".bin" style={{display: 'none'}} />
-					<button className="btn" onClick={this.newGame.bind(this)} id="new-game">Nova partida</button>
-					<p id="initial-error" className="game-error"></p>
-				</div></div>
+				? <div className="flex-page">
+					<div className="btn-wrap">
+						<button className="btn" onClick={this.newGame.bind(this)} id="new-game">Nova partida</button>
+						<button className="btn disabled">Carregar partida</button>
+						<label htmlFor="import" className="btn" id="load-game">Importar partida</label>
+						<input id="import" type="file" onChange={this.loadGameFile.bind(this)} accept=".bin" style={{display: 'none'}} />
+						<p id="initial-error" className="game-error"></p>
+					</div>
+				</div>
 				: <>
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
