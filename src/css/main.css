@@ -3269,17 +3269,14 @@ span.help {
 	position: relative;
 	display: flex;
 	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height) - var(--game-back-btn-height) - 2rem);
+	flex-direction: column;
 }
 .game-bigger-wrap {
 	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height));
 }
 
 .game-castell-selector {
-	position: absolute;
-	margin: auto;
-	top: min(15rem, 10%);
-	right: 0;
-	left: 0;
+	margin: 0 auto;
 	background-color: var(--game-clearBlue);
 	border: 3px solid var(--game-lightBlue);
 	width: min(500px, 95%);

@@ -86,7 +86,6 @@ class CastellSelector extends Component {
 					style={{
 						display: 'flex',
 						justifyContent: 'center',
-						flex: 1,
 					}}
 				>
 					<h4 style={{ color: 'white' }}>
