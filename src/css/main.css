@@ -3532,6 +3532,19 @@ span.help {
 	opacity: 1;
 }
 
+.game-export-game {
+	width: fit-content;
+	margin: 1rem auto 0;
+	border-radius: 0;
+	background-color: var(--game-lightBlue);
+	transition: none;
+	opacity: 0.85;
+}
+.game-export-game:hover {
+	background-color: var(--green-dark);
+	opacity: 1;
+}
+
 @media screen and (max-width: 0px) {
 	.castells-game {
 		display: none;

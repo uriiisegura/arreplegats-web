@@ -308,7 +308,7 @@ class CastellsGame extends Component {
 					<div className="top-bar" style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>
 						<span>{this.state.colla.name}</span>
 						{
-							this.state.screen === 'HOME' ? <button className="btn" onClick={this.saveGameFile.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Exportar</button> : <></>
+							// this.state.screen === 'HOME' ? <button className="btn" onClick={this.saveGameFile.bind(this)} style={{backgroundColor: this.state.colla.color, color: this.state.colla.highContrast}}>Exportar</button> : <></>
 						}
 					</div>
 					<div className="sub-bar">
@@ -523,7 +523,8 @@ class CastellsGame extends Component {
 								<p>
 									Ets putoganàpia o què? Enfaixa't i posat a la feina!
 								</p>
-								<div className="btn game-delete-game" onClick={() => {this.deleteGame(false)}}>BORRA PARTIDA</div>
+								<div className="btn game-export-game" onClick={this.saveGameFile.bind(this)}>EXPORTA LA PARTIDA</div>
+								<div className="btn game-delete-game" onClick={() => {this.deleteGame(false)}}>BORRA LA PARTIDA</div>
 							</div>
 						</> : <></>
 					}
