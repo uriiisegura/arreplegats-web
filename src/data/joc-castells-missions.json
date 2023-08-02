@@ -5,14 +5,14 @@
 		"rewards": [
 			{
 				"type": "castellers",
-				"amount": 5
+				"amount": 10
 			}
 		],
 		"objectives": {
 			"assaig": [
 				{
 					"castell": "Pd3",
-					"action": "descarregar",
+					"action": "descarregat",
 					"amount": 1
 				}
 			]
@@ -20,19 +20,24 @@
 	},
 	{
 		"title": "Agafant forma",
-		"description": "Aconsegueix tres barres de dificultat en el Pd3n.",
+		"description": "Completa cinc Pd3n a assaig, i tres Pd4 a assaig.",
 		"rewards": [
 			{
 				"type": "castellers",
-				"amount": 5
+				"amount": 10
 			}
 		],
 		"objectives": {
 			"assaig": [
 				{
 					"castell": "Pd3n",
-					"action": "probability",
-					"range": [75, 100]
+					"action": "descarregat",
+					"amount": 5
+				},
+				{
+					"castell": "Pd4",
+					"action": "descarregat",
+					"amount": 3
 				}
 			]
 		}

@@ -138,7 +138,69 @@ class Colla {
 		this.today = this.getToday();
 	}
 	acceptMission(mission) {
+		const objectives_assaig = mission['objectives']['assaig'];
+		const objectives_actuacio = mission['objectives']['actuacio'];
+
+		let objectives = 0;
+		if (objectives_assaig) {
+			for (let i = 0; i < objectives_assaig.length; i++, objectives++)
+				objectives_assaig[i] = this.setObjectiveInitialValues(objectives_assaig[i]);
+			mission['objectives']['assaig'] = objectives_assaig;
+		}
+
+		if (objectives_actuacio) {
+			for (let i = 0; i < objectives_actuacio.length; i++, objectives++)
+				objectives_actuacio[i] = this.setObjectiveInitialValues(objectives_actuacio[i]);
+			mission['objectives']['actuacio'] = objectives_actuacio;
+		}
+
+		mission['todo'] = objectives;
+		mission['completed'] = 0;
+
 		this.missions_accepted.push(mission);
+	}
+	setObjectiveInitialValues(objective) {
+		if (objective['amount'])
+			objective['current'] = 0
+		
+		objective['completed'] = false;
+		
+		return objective;
+	}
+	checkIfMissionCompleted(context, castell, result) {
+		for (let mission of this.missions_accepted) {
+			let completed = 0;
+			for (let objective of mission['objectives'][context]) {
+				if (objective['completed']) continue;
+				if (objective['castell'] === castell) {
+					if (objective['action'] === result) {
+						objective['current'] += 1;
+						if (objective['current'] === objective['amount']) {
+							objective['completed'] = true;
+							completed += 1;
+						}
+					}
+				}
+			}
+			if (completed > 0) {
+				mission['completed'] += completed;
+				if (mission['todo'] === mission['completed'])
+					this.completeMission(mission);
+			}
+		}
+	}
+	completeMission(mission) {
+		this.missions_accepted.splice(this.missions_accepted.indexOf(mission), 1);
+
+		for (let reward of mission['rewards'])
+			this.giveReward(reward);
+
+		mission['completed'] = true;
+		this.missions_completed.push(mission);
+	}
+	giveReward(reward) {
+		if (reward['type'] === 'castellers')
+			this.addCastellers(reward['amount']);
 	}
 }
 

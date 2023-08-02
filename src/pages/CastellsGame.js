@@ -228,7 +228,9 @@ class CastellsGame extends Component {
 		}
 
 		document.getElementById('game-screen').style.pointerEvents = 'all';
-			
+
+		this.state.colla.checkIfMissionCompleted(this.state.screen.toLowerCase(), this.state.selectedCastell['castell'], resultat.toLowerCase());
+		
 		this.setState({
 			selectedResult: resultat
 		})
@@ -627,13 +629,30 @@ class CastellsGame extends Component {
 											{
 												missions.map((m, i) => {
 													// eslint-disable-next-line
-													if (this.state.colla.missions_accepted.filter(ma => ma.title === m.title).length > 0) return;
+													if (this.state.colla.missions_accepted.filter(ma => ma.title === m.title).length + this.state.colla.missions_completed.filter(mc => mc.title === m.title).length > 0) return;
 													return <div className="game-mission" key={`game-mission-${i}`}>
 														<div className="game-mission-info">
 															<h5>{m.title}</h5>
 															<p>{m.description}</p>
 														</div>
 														<button className="btn" onClick={() => this.acceptMission(m)}>Accepta-la</button>
+													</div>;
+												})
+											}
+										</div>
+									</> : <></>
+								}
+								{
+									this.state.colla.missions_completed.length > 0 ? <>
+										<h3>Missions completades</h3>
+										<div className="game-missions-wrap">
+											{
+												this.state.colla.missions_completed.map((m, i) => {
+													return <div className="game-mission" key={`game-mission-${i}`}>
+														<div className="game-mission-info">
+															<h5>{m.title}</h5>
+															<p>{m.description}</p>
+														</div>
 													</div>;
 												})
 											}
