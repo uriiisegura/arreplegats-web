@@ -191,11 +191,11 @@ class CastellSelector extends Component {
 				{
 					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
 				}
-				{
+				{/* {
 					this.props.is_assaig ? <div className={`game-proves-left ${this.props.proves_left === 1 ? 'game-last-prova' : ''}`}>
 						{this.props.proves_left > 1 ? `Queden ${this.props.proves_left} proves` : 'ÚLTIMA PROVA'}
 					</div> : <></>
-				}
+				} */}
 			</div>
 		</>);
 	}
