@@ -3269,7 +3269,7 @@ span.help {
 }
 
 .game-castell-selector {
-	margin: 0 auto;
+	margin: auto;
 	background-color: var(--game-clearBlue);
 	border: 3px solid var(--game-lightBlue);
 	width: min(500px, 95%);
