@@ -3343,6 +3343,7 @@ span.help {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	min-height: 100px;
 }
 
 .game-selector-single span {
