@@ -348,30 +348,32 @@ class CastellsGame extends Component {
 										<button className={`game-menu-time game-advance-day ${this.state.colla.today['type'] === 'actuacio' && !this.state.colla.today['done'] ? 'disabled' : ''}`} onClick={this.advanceDay.bind(this)}>Avança al següent dia</button>
 									</div>
 									
-									<button className={`btn ${this.state.colla.today['type'] === 'assaig' && this.state.colla.today.provesLeft > 0 ? '' : 'disabled'}`} onClick={() => this.changeScreen('ASSAIG')}>
-										<span>ASSAIG</span>
-									</button>
-									<button className={`btn ${this.state.colla.castellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done']) ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
-										<span>ACTUACIÓ</span>
-									</button>
-									<button className="btn" onClick={() => this.changeScreen('CASTELLS')}>
-										<span>CASTELLS</span>
-									</button>
-									<button className={`btn ${this.state.colla.historic.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('HISTORIC')}>
-										<span>HISTÒRIC</span>
-									</button>
-									<button className="btn disabled" onClick={() => this.changeScreen('MISSIONS')}>
-										<span>MISSIONS</span>
-									</button>
-									<button className="btn" onClick={() => this.changeScreen('AJUDA')}>
-										<span>AJUDA</span>
-									</button>
-									<button className={`btn ${this.state.colla.tried.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('STATS')}>
-										<span>ESTADÍSTIQUES</span>
-									</button>
-									{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.addTenCastellers.bind(this)}>
-										<span>+10 castellers</span>
-									</button>}
+									<div className="game-menu-buttons">
+										<button className={`btn ${this.state.colla.today['type'] === 'assaig' && this.state.colla.today.provesLeft > 0 ? '' : 'disabled'}`} onClick={() => this.changeScreen('ASSAIG')}>
+											<span>ASSAIG</span>
+										</button>
+										<button className={`btn ${this.state.colla.castellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done']) ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
+											<span>ACTUACIÓ</span>
+										</button>
+										<button className="btn" onClick={() => this.changeScreen('CASTELLS')}>
+											<span>CASTELLS</span>
+										</button>
+										<button className={`btn ${this.state.colla.historic.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('HISTORIC')}>
+											<span>HISTÒRIC</span>
+										</button>
+										<button className="btn disabled" onClick={() => this.changeScreen('MISSIONS')}>
+											<span>MISSIONS</span>
+										</button>
+										<button className="btn" onClick={() => this.changeScreen('AJUDA')}>
+											<span>AJUDA</span>
+										</button>
+										<button className={`btn ${this.state.colla.tried.length === 0 ? 'disabled' : ''}`} onClick={() => this.changeScreen('STATS')}>
+											<span>ESTADÍSTIQUES</span>
+										</button>
+										{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.addTenCastellers.bind(this)}>
+											<span>+10 castellers</span>
+										</button>}
+									</div>
 								</div>
 							</div>
 						</> : <></>

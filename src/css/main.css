@@ -3053,11 +3053,18 @@ Joc Castells
 	right: 0;
 	left: 0;
 	bottom: auto;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	flex-direction: column;
 	gap: 0.5rem;
 	width: min(60rem, 95%);
 	margin: auto;
+}
+
+.menu .game-menu-buttons {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
 .game-proves-left-short {
@@ -3139,6 +3146,8 @@ Joc Castells
 	display: flex;
 	padding: 0.5rem;
 	align-items: flex-end;
+	flex: 1;
+	min-width: 100px;
 }
 
 .menu .btn span {
