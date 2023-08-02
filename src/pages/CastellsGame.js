@@ -263,18 +263,13 @@ class CastellsGame extends Component {
 	calculateAmountCastellersAddedAfterActuacio() {
 		const punts = this.state.actuacio.reduce((sum, next) => { return { punts: sum.punts + next.punts } }).punts
 		const castellers = this.state.colla.castellers;
-
-		console.log(
-			punts,
-			castellers,
-			AmountCastellers(punts, castellers)
-		)
-
 		return AmountCastellers(punts, castellers)
 	}
 	updateCastellersAfterActuacio() {
 		const amount = this.calculateAmountCastellersAddedAfterActuacio();
-		this.state.colla.addCastellers(amount);
+
+		if (amount > 0) this.state.colla.addCastellers(amount);
+		else if (amount < 0) this.state.colla.takeCastellers(-amount);
 	}
 	endActuacio() {
 		this.updateCastellersAfterActuacio();
