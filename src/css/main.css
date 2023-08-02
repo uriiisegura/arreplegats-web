@@ -3537,6 +3537,7 @@ span.help {
 .game-stats {
 	flex-direction: column;
 	padding: 0 1rem 2rem;
+	height: 85vh;
 }
 
 .game-stats h3 {
