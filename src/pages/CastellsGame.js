@@ -72,8 +72,7 @@ class CastellsGame extends Component {
 		};
 	}
 	componentDidMount() {
-		if (process.env.NODE_ENV === 'development')
-			this.loadGame();
+		this.loadGame();
 	}
 	componentDidUpdate(prevProps, prevState) {
 		this.saveGame();
