@@ -3623,6 +3623,17 @@ span.help {
 	margin: 0;
 }
 
+.game-mission-progress h6 {
+	margin: 1rem 0 0;
+	font-weight: 500;
+	font-size: 0.8rem;
+}
+
+.game-mission-progress ul {
+	padding-left: 2rem;
+	list-style-type: disc;
+}
+
 .game-help {
 	flex-direction: column;
 	padding: 0 1rem 2rem;

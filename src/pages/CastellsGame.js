@@ -615,6 +615,22 @@ class CastellsGame extends Component {
 														<div className="game-mission-info">
 															<h5>{m.title}</h5>
 															<p>{m.description}</p>
+															<div className="game-mission-progress">
+																{
+																	m.objectives.assaig ? <>
+																		<h6>A assaig:</h6>
+																		<ul>
+																			{
+																				m.objectives.assaig.map((o, j) => {
+																					return <li key={`mission-${i}-step-${j}`}>
+																						{o.castell} {o.action}: {o.current}/{o.amount}
+																					</li>;
+																				})
+																			}
+																		</ul>
+																	</> : <></>
+																}
+															</div>
 														</div>
 													</div>;
 												})
