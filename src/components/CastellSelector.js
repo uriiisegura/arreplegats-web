@@ -169,7 +169,19 @@ class CastellSelector extends Component {
 								.sort((a, b) => a.ronda > b.ronda ? 1 : -1)
 								.map(ronda => <div style={{ display: 'flex', gap: 5, backgroundColor: 'white', color: 'darkblue', padding: '0 5px', borderRadius: 5, minWidth: 50 }} key={ronda.ronda}>
 									<div>{ronda.castell}</div>
-									<div style={{ backgroundColor: 'black', color: 'white', padding: '0 5px' }}>{ronda.resultat.split(' ').map(w => w[0]).join('')}</div>
+									<div
+										style={{
+											backgroundColor: ronda.resultat === "DESCARREGAT" ? 'darkgreen' :
+												ronda.resultat === "CARREGAT" ? 'darkyellow' :
+												ronda.resultat === "INTENT" ? 'darkred' :
+												ronda.resultat === "INTENT DESMUNTAT" ? 'darkred' :
+												"black",
+											color: 'white',
+											padding: '0 5px'
+										}}
+									>
+										{ronda.resultat.split(' ').map(w => w[0]).join('')}
+									</div>
 								</div>)
 								.concat(
 									[...Array(NRONDESMAX + 1 - this.props.actuacio.length)]
