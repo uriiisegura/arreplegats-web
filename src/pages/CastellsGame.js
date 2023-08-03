@@ -271,7 +271,7 @@ class CastellsGame extends Component {
 			// INTENT 
 			resultat === this.state.results[2] ? ['pujada', 'caiguda'] :
 			// INTENT DESMUNTAT
-			resultat === this.state.results[3] ? ['pujada', 'baixada'] :
+			resultat === this.state.results[3] ? ['pujada', 'sortida'] :
 			// ERROR
 			[]
 
