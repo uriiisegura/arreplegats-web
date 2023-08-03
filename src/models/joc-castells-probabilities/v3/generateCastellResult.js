@@ -37,9 +37,11 @@ function PFinal(stats, castell) {
     stats[castell]['probabilitats']['unique'] = mod_unique;
 
     const deps = Object.keys(D)
-        .map(d => PFinal(stats, d).map(el => el * D[d]))
+        .map(d => [d, PFinal(stats, d)])
         // If mod_unique is better than the dependency, use mod_unique.
-        .map(dep => dep?.[0] > mod_unique?.[0] ? dep : mod_unique)
+        .map(([d, dep]) => [d, dep?.[0] > mod_unique?.[0] ? dep : mod_unique])
+        // Apply weights
+        .map(([d, prob]) => prob.map(el => el * D[d]))
 
     if (deps.length === 0)
         return mod_unique;
