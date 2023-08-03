@@ -3268,6 +3268,8 @@ span.help {
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height) - var(--game-back-btn-height) - 2rem);
+	overflow: auto;
+    padding-bottom: 100px;
 }
 .game-bigger-wrap {
 	height: calc(100vh - var(--game-top-bar-height) - var(--game-sub-bar-height));
