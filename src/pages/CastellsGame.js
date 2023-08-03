@@ -226,13 +226,13 @@ class CastellsGame extends Component {
 	async playAssaig(resultat) {
 		const files = !this.state.results.includes(resultat) ? [] :
 			// DESCARREGAT
-			resultat === this.state.results[0] ? ['pujada', 'colocats', 'silenci2'] :
+			resultat === this.state.results[0] ? ['pujada', 'colocats', 'silenci'] :
 			// CARREGAT
-			resultat === this.state.results[1] ? ['pujada', 'colocats', 'silenci2', 'caiguda'] :
+			resultat === this.state.results[1] ? ['pujada', 'colocats', 'silenci', 'caiguda'] :
 			// INTENT 
 			resultat === this.state.results[2] ? ['pujada', 'caiguda'] :
 			// INTENT DESMUNTAT
-			resultat === this.state.results[3] ? ['pujada', 'silenci'] :
+			resultat === this.state.results[3] ? ['pujada', 'silenci2'] :
 			// ERROR
 			[]
 
@@ -240,13 +240,13 @@ class CastellsGame extends Component {
 
 		const times = !this.state.results.includes(resultat) ? [] :
 			// DESCARREGAT
-			resultat === this.state.results[0] ? [2, 4, 2] :
+			resultat === this.state.results[0] ? [3, 4, 4] :
 			// CARREGAT
-			resultat === this.state.results[1] ? [2, 4, 2, 2] :
+			resultat === this.state.results[1] ? [3, 4, 4, 2] :
 			// INTENT 
-			resultat === this.state.results[2] ? [2, 2] :
+			resultat === this.state.results[2] ? [3, 2] :
 			// INTENT DESMUNTAT
-			resultat === this.state.results[3] ? [2, 2] :
+			resultat === this.state.results[3] ? [3, 2] :
 			// ERROR
 			[]
 
