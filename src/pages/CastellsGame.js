@@ -254,7 +254,7 @@ class CastellsGame extends Component {
 
 		document.getElementById('game-screen').style.pointerEvents = 'none';
 
-		if (process.env.NODE_ENV === 'development') {
+		if (process.env.NODE_ENV !== 'development') {
 			try {
 				await playAudioFiles(file_paths, times)
 			} catch	(e) {
