@@ -31,7 +31,7 @@ HARD_MULTIPLIERS = {
 
 IMPOSSIBLE_MULTIPLIERS = {
     RESULTS[0]: [1.1, 0.95, 0.95, 0.95],
-    RESULTS[1]: [1.1, 1.1, 0.95, 0.95],
+    RESULTS[1]: [1.05, 1.05, 1, 0.95],
     RESULTS[2]: [0.95, 1.05, 0.95, 1.05],
     RESULTS[3]: [1, 1, 1.05, 0.95],
 }
