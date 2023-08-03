@@ -71,8 +71,8 @@ class CastellSelector extends Component {
 		if (this.props.type !== 'actuació') return false;
 
 		const alreadyTried = this.props.actuacio
-			.map(intent => intent.castell)
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
+			.map(intent => intent.castell)
 
 		const intentatsMesDe2Cops = Object.values(this.props.castells)
 			.filter(c => alreadyTried.filter(castell => castell === c.castell).length >= 2)
@@ -92,8 +92,8 @@ class CastellSelector extends Component {
 		if (this.props.type !== 'actuació') return false;
 
 		const alreadyTried = this.props.actuacio
-			.map(intent => intent.castell)
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
+			.map(intent => intent.castell)
 
 		const intentatsMesDe2Cops = Object.values(this.props.castells)
 			.filter(c => alreadyTried.filter(castell => castell === c.castell).length >= 2)
