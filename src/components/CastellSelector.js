@@ -128,6 +128,16 @@ class CastellSelector extends Component {
 										}
 
 										{
+											process.env.NODE_ENV === 'development' &&
+											<div style={{ fontSize: 11, backgroundColor: 'transparent' }}>
+												{ JSON.stringify(
+													probCastell(this.props.stats, c.castell)
+														.map(perc => Math.round(perc * 100))
+												) }
+											</div>
+										}
+
+										{
 											!blocked && this.props.type === 'actuació' &&
 											<div
 												style={{
