@@ -47,6 +47,7 @@ class CastellSelector extends Component {
 	noCastellsLeft() {
 		const alreadyTried = this.props.actuacio
 			.map(intent => intent.castell)
+			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
 
 		const availableCastells = Object.values(this.props.castells)
 			.filter(c => !c.castell.includes('Pd'))
@@ -176,7 +177,8 @@ class CastellSelector extends Component {
 								.filter(c => c?.neta ? this.state.neta : !this.state.neta)
 								.map((c, i) => {
 									const alreadyTried = this.props.type === 'actuació' && this.props.actuacio
-										.filter(a => a.castell === c.castell)
+										.filter(ronda => ['DESCARREGAT', 'CARREGAT'].includes(ronda.resultat))
+										.filter(ronda => ronda.castell === c.castell)
 										.length > 0;
 
 									const blocked = alreadyTried || c.gent > this.props.castellers;
