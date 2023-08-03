@@ -49,9 +49,14 @@ class CastellSelector extends Component {
 			.map(intent => intent.castell)
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
 
+		const intentatsMesDe2Cops = Object.values(this.props.castells)
+			.filter(c => alreadyTried.filter(castell => castell === c.castell).length >= 2)
+			.map(c => c.castell)
+
 		const availableCastells = Object.values(this.props.castells)
 			.filter(c => !c.castell.includes('Pd'))
 			.filter(c => !alreadyTried.includes(c.castell))
+			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
 			.filter(c => c.gent <= this.props.castellers)
 			.length
 
@@ -181,7 +186,11 @@ class CastellSelector extends Component {
 										.filter(ronda => ronda.castell === c.castell)
 										.length > 0;
 
-									const blocked = alreadyTried || c.gent > this.props.castellers;
+									const intentatMesDe2Cops = this.props.type === 'actuació' && this.props.actuacio
+										.filter(ronda => ronda.castell === c.castell)
+										.length > 1;
+
+									const blocked = intentatMesDe2Cops || alreadyTried || c.gent > this.props.castellers;
 									
 									const difficulty = this.probToBracket(
 										probCastell(this.props.stats, c.castell)?.[0] || 0
