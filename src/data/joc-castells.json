@@ -1526,13 +1526,13 @@
         "descarregat": 920,
         "gent": 31,
         "probabilitats": {
-            "pes_dependencies": 0.4,
+            "pes_dependencies": 0.2,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
-                    0.85,
-                    0.85,
-                    0.85
+                    0.9,
+                    0.9,
+                    0.9
                 ],
                 "CARREGAT": [
                     1.1,
@@ -1555,7 +1555,7 @@
             },
             "caps": [
                 0.02,
-                0.8
+                0.9
             ],
             "unique": [
                 0,
