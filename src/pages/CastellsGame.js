@@ -416,6 +416,10 @@ class CastellsGame extends Component {
 
 		return pilarFound !== undefined
 	}
+	amountRealCastellersGained() {
+		const amount = this.calculateAmountCastellersAddedAfterActuacio();
+		return this.state.colla.castellers + amount < 31 ? 0 : amount;
+	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
 			{
@@ -578,13 +582,13 @@ class CastellsGame extends Component {
 
 											<div
 												style={{
-													display: this.calculateAmountCastellersAddedAfterActuacio() !== 0 ? 'block' : 'none',
+													display: 'block',
 													marginTop: 10,
 													marginBottom: 10,
 													fontSize: 14,
 												}}
 											>
-												{this.calculateAmountCastellersAddedAfterActuacio() > 0 ? '+' : ''}{this.calculateAmountCastellersAddedAfterActuacio()} castellers
+												{this.amountRealCastellersGained() >= 0 ? '+' : ''}{this.amountRealCastellersGained()} castellers
 											</div>
 
 											<button className="back-btn" style={{ marginTop: 10 }} onClick={this.endActuacio.bind(this)}>
