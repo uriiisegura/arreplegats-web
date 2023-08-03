@@ -161,7 +161,11 @@ class CastellSelector extends Component {
 								this.state.from_group
 								.filter(c => c?.neta ? this.state.neta : !this.state.neta)
 								.map((c, i) => {
-									const blocked = c.gent > this.props.castellers;
+									const alreadyTried = this.props.type === 'actuació' && this.props.actuacio
+										.filter(a => a.castell === c.castell)
+										.length > 0;
+
+									const blocked = alreadyTried || c.gent > this.props.castellers;
 									
 									const difficulty = this.probToBracket(
 										probCastell(this.props.stats, c.castell)?.[0] || 0
