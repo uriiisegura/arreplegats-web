@@ -94,6 +94,8 @@ class CastellSelector extends Component {
 		return availableCastells === 0;
 	}
 	isPilarsTurn() {
+		if (this.props.type !== 'actuació') return false;
+
 		const nIntentsValids = this.props.actuacio
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
 			.length
@@ -216,7 +218,7 @@ class CastellSelector extends Component {
 			}
 
 			<div className="game-castell-selector">
-				<h4>Escull un castell</h4>
+				<h4>Escull un { this.isPilarsTurn() ? 'pilar' : 'castell' }</h4>
 				<div className="box-wrap">
 					{
 						this.state.from_group ? <>
