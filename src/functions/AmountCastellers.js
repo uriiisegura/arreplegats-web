@@ -10,8 +10,8 @@ function linearReg(point1, point2, x) {
 }
 
 function AmountCastellers(puntuacio, ngent) {
-    const L = [40*ngent - 1243, 0]
-    const H = [72*ngent - 1416, ngent*0.1]
+    const L = [50*ngent - 1643, 0]
+    const H = [60*ngent - 1216, ngent*0.1]
 
     const res = linearReg(L, H, puntuacio) + 1
     const rounded_res = Math.round(res)
