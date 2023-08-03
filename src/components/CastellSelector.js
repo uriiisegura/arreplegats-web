@@ -64,6 +64,8 @@ class CastellSelector extends Component {
 		return availableCastells === 0;
 	}
 	noCastellsLeftInGroup(group) {
+		if (this.props.type !== 'actuació') return false;
+
 		const alreadyTried = this.props.actuacio
 			.map(intent => intent.castell)
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
