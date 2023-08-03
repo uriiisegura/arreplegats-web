@@ -549,6 +549,7 @@ class CastellsGame extends Component {
 													ronda={this.state.actuacio.length + 1}
 													stats={this.state.colla.stats}
 													is_assaig={false}
+													actuacio={this.state.actuacio}
 													type="actuació"
 												/>
 											</>

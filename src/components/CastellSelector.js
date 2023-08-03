@@ -86,11 +86,36 @@ class CastellSelector extends Component {
 					style={{
 						display: 'flex',
 						justifyContent: 'center',
+						flexDirection: 'column',
+						alignItems: 'center',
 					}}
 				>
 					<h4 style={{ color: 'white' }}>
 						RONDA {this.props.ronda}
 					</h4>
+					<div
+						style={{
+							display: 'flex',
+							justifyContent: 'space-around',
+							flexDirection: 'row',
+							alignItems: 'center',
+							color: 'white',
+							gap: 10
+						}}
+					>
+						{
+							this.props.actuacio
+								.sort((a, b) => a.ronda > b.ronda ? 1 : -1)
+								.map(ronda => <div style={{ display: 'flex', gap: 5, backgroundColor: 'white', color: 'darkblue', padding: '0 5px', borderRadius: 5, minWidth: 50 }} key={ronda.ronda}>
+									<div>{ronda.castell}</div>
+									<div style={{ backgroundColor: 'black', color: 'white', padding: '0 5px' }}>{ronda.resultat.split(' ').map(w => w[0]).join('')}</div>
+								</div>)
+								.concat(
+									[...Array(4 - this.props.actuacio.length)]
+										.map((_, i) => <div style={{ backgroundColor: i === 0 ? '#ffff77' : 'white', color: 'darkblue', padding: '0 5px', borderRadius: 5, minWidth: 50 }} key={i}>&nbsp;</div>)
+								)
+						}
+					</div>
 				</div>
 			}
 
