@@ -176,7 +176,7 @@ class CastellSelector extends Component {
 									<div
 										style={{
 											backgroundColor: ronda.resultat === "DESCARREGAT" ? 'darkgreen' :
-												ronda.resultat === "CARREGAT" ? 'darkyellow' :
+												ronda.resultat === "CARREGAT" ? 'darkorange' :
 												ronda.resultat === "INTENT" ? 'darkred' :
 												ronda.resultat === "INTENT DESMUNTAT" ? 'darkred' :
 												"black",
