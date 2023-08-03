@@ -29,7 +29,7 @@ function PFinal(stats, castell) {
         .filter(c => castell in stats[c]['probabilitats']['dependencies'])
         .map(c => [stats[c]['probabilitats']['unique'], stats[c]['probabilitats']['dependencies'][castell]])
         // If I am dependency of something better, use that.
-        .map(([invDepUnique, pes]) => [sum_lists([invDepUnique.map(el => el * pes), unique.map(el => el * (1 - pes))])])
+        .map(([invDepUnique, pes]) => sum_lists([invDepUnique.map(el => el * pes), unique.map(el => el * (1 - pes))]))
         // Then, take the best one.
         .reduce((acc, cur) => cur[0] > acc[0] ? cur : acc, unique)
 
