@@ -49,7 +49,7 @@ class CastellSelector extends Component {
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
 			.length
 
-		return nIntentsValids >= 3 || this.props.ronda >= NRONDESMAX;
+		return nIntentsValids >= 3 || this.props.ronda > NRONDESMAX;
 	}
 	componentDidMount() {
 		if (this.props.ronda) {
