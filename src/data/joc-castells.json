@@ -2784,7 +2784,7 @@
     },
     "Pd3n": {
         "probabilitats": {
-            "pes_dependencies": 0.15,
+            "pes_dependencies": 0,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -2816,9 +2816,9 @@
                 0.96
             ],
             "unique": [
-                0,
                 0.1,
-                0.8,
+                0.15,
+                0.65,
                 0.1
             ],
             "dependencies": {
