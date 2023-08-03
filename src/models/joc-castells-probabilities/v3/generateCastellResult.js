@@ -89,7 +89,7 @@ function weightedRandomChoice(options, weights) {
     let random = Math.random() * cumWeights[cumWeights.length - 1];
     let index = cumWeights.findIndex(cumWeight => random < cumWeight);
 
-    console.log(random, cumWeights, index)
+    console.log(random, cumWeights, options[index])
 
     return options[index];
 }
