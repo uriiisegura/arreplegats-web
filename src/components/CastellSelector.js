@@ -45,7 +45,11 @@ class CastellSelector extends Component {
 		};
 	}
 	isPilarsTurn() {
-		return this.props.ronda >= 4;
+		const nIntentsValids = this.props.actuacio
+			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
+			.length
+
+		return nIntentsValids >= 3 || this.props.ronda >= NRONDESMAX;
 	}
 	componentDidMount() {
 		if (this.props.ronda) {
@@ -86,7 +90,7 @@ class CastellSelector extends Component {
 	render() {
 		return !this.props.hide && (<>
 			{
-				this.props.ronda && !this.isPilarsTurn() &&
+				this.props.ronda &&
 				<div
 					style={{
 						display: 'flex',
@@ -96,7 +100,10 @@ class CastellSelector extends Component {
 					}}
 				>
 					<h4 style={{ color: 'white' }}>
-						RONDA {this.props.ronda}
+						{
+							this.isPilarsTurn() ? <>RONDA DE PILARS</> :
+							<>RONDA {this.props.ronda}</>
+						}
 					</h4>
 					<div
 						style={{
@@ -117,7 +124,28 @@ class CastellSelector extends Component {
 								</div>)
 								.concat(
 									[...Array(NRONDESMAX + 1 - this.props.actuacio.length)]
-										.map((_, i) => <div style={{ backgroundColor: i === 0 ? '#ffff77' : i === NRONDESMAX - this.props.actuacio.length ? '#ffccff' : 'white', color: 'darkblue', padding: '0 5px', borderRadius: 5, minWidth: 50 }} key={i}>&nbsp;</div>)
+										.map((_, i) => <div
+												style={{
+													backgroundColor: this.isPilarsTurn() && i < NRONDESMAX - this.props.actuacio.length ? '#ccc' :
+														this.isPilarsTurn() && i === NRONDESMAX - this.props.actuacio.length ? '#ffff77' :
+														i === NRONDESMAX - this.props.actuacio.length ? '#ffccff' :
+														i === 0 ? '#ffff77' :
+														'white',
+													padding: '0 5px',
+													borderRadius: 5,
+													minWidth: 50,
+													display: 'flex',
+													justifyContent: 'center',
+													color: 'black'
+												}}
+												key={'ronda-container-' + i}
+											>
+												{
+													this.isPilarsTurn() && i < NRONDESMAX - this.props.actuacio.length ? <>-</> :
+													<>&nbsp;</>
+												}
+											</div>
+										)
 								)
 						}
 					</div>
