@@ -16,7 +16,7 @@ class CastellResult extends Component {
 		this.props.goBack();
 	}
 	handleKeyDown(event) {
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' || event.key === ' ') {
 			this.props.onNext();
         }
     }
