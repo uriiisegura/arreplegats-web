@@ -44,7 +44,32 @@ class CastellSelector extends Component {
 			from_group: null
 		};
 	}
+	isCastellPossible(castell) {
+		if (this.props.type !== 'actuació') {
+			return this.props.castellers >= castell.gent;
+		}
+
+		const alreadyTried = this.props.actuacio
+			.map(intent => intent.castell)
+			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
+		
+		const intentatsMesDe2Cops = Object.values(this.props.castells)
+			.filter(c => alreadyTried.filter(castell => castell === c.castell).length >= 2)
+			.map(c => c.castell)
+
+		const availableCastells = Object.values(this.props.castells)
+			.filter(c => !c?.neta)
+			.filter(c => !c.castell.includes('Pd'))
+			.filter(c => !alreadyTried.includes(c.castell))
+			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
+			.filter(c => c.gent <= this.props.castellers)
+			.filter(c => c.castell === castell.castell)
+
+		return availableCastells.length > 0;
+	}
 	noCastellsLeft() {
+		if (this.props.type !== 'actuació') return false;
+
 		const alreadyTried = this.props.actuacio
 			.map(intent => intent.castell)
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
@@ -81,15 +106,6 @@ class CastellSelector extends Component {
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
 			.filter(c => c.gent <= this.props.castellers)
 			.length
-
-		console.log(
-			group,
-			Object.values(this.props.castells)
-			.filter(c => c.castell.includes(group))
-			.filter(c => !alreadyTried.includes(c.castell))
-			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
-			.filter(c => c.gent <= this.props.castellers)
-		)
 
 		return availableCastells === 0;
 	}
@@ -226,16 +242,7 @@ class CastellSelector extends Component {
 								this.state.from_group
 								.filter(c => c?.neta ? this.state.neta : !this.state.neta)
 								.map((c, i) => {
-									const alreadyTried = this.props.type === 'actuació' && this.props.actuacio
-										.filter(ronda => ['DESCARREGAT', 'CARREGAT'].includes(ronda.resultat))
-										.filter(ronda => ronda.castell === c.castell)
-										.length > 0;
-
-									const intentatMesDe2Cops = this.props.type === 'actuació' && this.props.actuacio
-										.filter(ronda => ronda.castell === c.castell)
-										.length > 1;
-
-									const blocked = intentatMesDe2Cops || alreadyTried || c.gent > this.props.castellers;
+									const blocked = this.isCastellPossible(c) === false;
 									
 									const difficulty = this.probToBracket(
 										probCastell(this.props.stats, c.castell)?.[0] || 0
