@@ -54,11 +54,40 @@ class CastellSelector extends Component {
 			.map(c => c.castell)
 
 		const availableCastells = Object.values(this.props.castells)
+			.filter(c => !c?.neta)
 			.filter(c => !c.castell.includes('Pd'))
 			.filter(c => !alreadyTried.includes(c.castell))
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
 			.filter(c => c.gent <= this.props.castellers)
 			.length
+
+		return availableCastells === 0;
+	}
+	noCastellsLeftInGroup(group) {
+		const alreadyTried = this.props.actuacio
+			.map(intent => intent.castell)
+			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
+
+		const intentatsMesDe2Cops = Object.values(this.props.castells)
+			.filter(c => alreadyTried.filter(castell => castell === c.castell).length >= 2)
+			.map(c => c.castell)
+
+		const availableCastells = Object.values(this.props.castells)
+			.filter(c => !c?.neta)
+			.filter(c => c.castell.includes(group))
+			.filter(c => !alreadyTried.includes(c.castell))
+			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
+			.filter(c => c.gent <= this.props.castellers)
+			.length
+
+		console.log(
+			group,
+			Object.values(this.props.castells)
+			.filter(c => c.castell.includes(group))
+			.filter(c => !alreadyTried.includes(c.castell))
+			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
+			.filter(c => c.gent <= this.props.castellers)
+		)
 
 		return availableCastells === 0;
 	}
@@ -270,7 +299,7 @@ class CastellSelector extends Component {
 						</> : <>
 							{
 								Object.values(this.state.structures).map((v, i) => {
-									return <div className="group-wrap" onClick={() => this.setGroup(v.component)} key={i}>
+									return <div className={`group-wrap ${this.noCastellsLeftInGroup(v.component) ? 'disabled' : ''}`} onClick={() => this.setGroup(v.component)} key={i}>
 										<span className="castell">{v.name}</span>
 									</div>;
 								})

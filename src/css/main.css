@@ -2965,6 +2965,12 @@ Joc Castells
 	color: #ccc;
 }
 
+.group-wrap.disabled {
+	pointer-events: none;
+	background-color: #aaa;
+	color: #ccc;
+}
+
 .game-error {
 	color: var(--red-dark);
 }
