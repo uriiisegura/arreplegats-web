@@ -44,6 +44,17 @@ class CastellSelector extends Component {
 			from_group: null
 		};
 	}
+	castellFromSameClassHasAlreadyBeenTried(castell) {
+		const alreadyTried = this.props.actuacio
+			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
+			.map(intent => intent.castell)
+
+		const sameClass = alreadyTried
+			.filter(c => c.slice(0,2) === castell.slice(0,2))
+			.filter(c => (c.indexOf('a') > -1) === (castell.indexOf('a') > -1))
+
+		return sameClass.length > 0
+	}
 	isCastellPossible(castell) {
 		if (this.props.type !== 'actuació') {
 			return this.props.castellers >= castell.gent;
@@ -58,14 +69,14 @@ class CastellSelector extends Component {
 			.map(c => c.castell)
 
 		const availableCastells = Object.values(this.props.castells)
+			.filter(c => c.castell === castell.castell)
 			.filter(c => !c?.neta)
 			.filter(c => !c.castell.includes('Pd'))
 			.filter(c => !alreadyTried.includes(c.castell))
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
 			.filter(c => c.gent <= this.props.castellers)
-			.filter(c => c.castell === castell.castell)
 
-		return availableCastells.length > 0;
+		return availableCastells.length > 0 && !this.castellFromSameClassHasAlreadyBeenTried(castell.castell)
 	}
 	noCastellsLeft() {
 		if (this.props.type !== 'actuació') return false;
@@ -84,6 +95,7 @@ class CastellSelector extends Component {
 			.filter(c => !alreadyTried.includes(c.castell))
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
 			.filter(c => c.gent <= this.props.castellers)
+			.filter(c => !this.castellFromSameClassHasAlreadyBeenTried(c.castell))
 			.length
 
 		return availableCastells === 0;
@@ -105,6 +117,7 @@ class CastellSelector extends Component {
 			.filter(c => !alreadyTried.includes(c.castell))
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
 			.filter(c => c.gent <= this.props.castellers)
+			.filter(c => !this.castellFromSameClassHasAlreadyBeenTried(c.castell))
 			.length
 
 		return availableCastells === 0;
