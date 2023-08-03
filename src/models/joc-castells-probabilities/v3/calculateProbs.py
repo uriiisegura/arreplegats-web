@@ -11,8 +11,8 @@ RESULTS = [
 EASY_MULTIPLIERS = {
     RESULTS[0]: [1.1, 0.95, 0.9, 0.9],
     RESULTS[1]: [1.1, 1.1, 0.9, 0.9],
-    RESULTS[2]: [0.95, 0.95, 0.8, 1.1],
-    RESULTS[3]: [1, 1, 1.05, 0.8],
+    RESULTS[2]: [0.95, 1.1, 0.8, 1.1],
+    RESULTS[3]: [1, 1.05, 1.05, 0.8],
 }
 
 MEDIUM_MULTIPLIERS = {
