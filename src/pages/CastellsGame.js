@@ -333,7 +333,7 @@ class CastellsGame extends Component {
 		const addedByPuntuacio = AmountCastellers(punts, castellers)
 
 		const takenByIncidents = this.state.actuacio
-			.filter(ronda => ronda.resultat === 'INTENT')
+			.filter(ronda => ronda.resultat === 'INTENT' || ronda.resultat === 'CARREGAT')
 			.map(ronda => castells[ronda.castell].gent)
 			.map(gent => Math.round(gent * 0.05))
 			.reduce((sum, next) => sum + next, 0)
