@@ -58,6 +58,8 @@ class CastellSelector extends Component {
 	isCastellPossible(castell) {
 		if (this.props.type !== 'actuació') {
 			return this.props.castellers >= castell.gent;
+		} else if (castell.castell.includes('Pd')) {
+			return this.props.castellers >= castell.gent;
 		}
 
 		const alreadyTried = this.props.actuacio
