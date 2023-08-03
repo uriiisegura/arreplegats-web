@@ -27,7 +27,9 @@ const ASSAIG_FILES = {
 	"pujada": '/sounds/assaigs/dossos-pujada.mp3',
 	"silenci": '/sounds/assaigs/silenci.mp3',
 	"silenci2": '/sounds/assaigs/silenci2.mp3',
-	"caiguda": '/sounds/caiguda.mp3'
+	"caiguda": '/sounds/assaigs/caiguda.mp3',
+	"baixem": '/sounds/assaigs/baixem.mp3',
+	"agafeu": '/sounds/assaigs/agafeu.mp3',
 }
 
 // Recursive function to play a segment from each audio file
@@ -228,11 +230,11 @@ class CastellsGame extends Component {
 			// DESCARREGAT
 			resultat === this.state.results[0] ? ['pujada', 'colocats', 'silenci'] :
 			// CARREGAT
-			resultat === this.state.results[1] ? ['pujada', 'colocats', 'silenci', 'caiguda'] :
+			resultat === this.state.results[1] ? ['pujada', 'colocats', 'silenci', 'agafeu'] :
 			// INTENT 
 			resultat === this.state.results[2] ? ['pujada', 'caiguda'] :
 			// INTENT DESMUNTAT
-			resultat === this.state.results[3] ? ['pujada', 'silenci2'] :
+			resultat === this.state.results[3] ? ['pujada', 'baixem'] :
 			// ERROR
 			[]
 
@@ -242,7 +244,7 @@ class CastellsGame extends Component {
 			// DESCARREGAT
 			resultat === this.state.results[0] ? [3, 4, 4] :
 			// CARREGAT
-			resultat === this.state.results[1] ? [3, 4, 4, 2] :
+			resultat === this.state.results[1] ? [3, 4, 2, 2] :
 			// INTENT 
 			resultat === this.state.results[2] ? [3, 2] :
 			// INTENT DESMUNTAT
@@ -252,7 +254,7 @@ class CastellsGame extends Component {
 
 		document.getElementById('game-screen').style.pointerEvents = 'none';
 
-		if (process.env.NODE_ENV !== 'development') {
+		if (process.env.NODE_ENV === 'development') {
 			try {
 				await playAudioFiles(file_paths, times)
 			} catch	(e) {
