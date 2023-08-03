@@ -42,9 +42,12 @@ class CastellSelector extends Component {
 			from_group: null
 		};
 	}
+	isPilarsTurn() {
+		return this.props.ronda >= 4;
+	}
 	componentDidMount() {
 		if (this.props.ronda) {
-			if (this.props.ronda < 4) {
+			if (!this.isPilarsTurn()) {
 				const no_pilars = this.state.structures;
 				delete no_pilars[1];
 				this.setState({structures: no_pilars});
@@ -81,7 +84,7 @@ class CastellSelector extends Component {
 	render() {
 		return !this.props.hide && (<>
 			{
-				this.props.ronda && this.props.ronda < 4 &&
+				this.props.ronda && !this.isPilarsTurn() &&
 				<div
 					style={{
 						display: 'flex',
@@ -111,7 +114,7 @@ class CastellSelector extends Component {
 									<div style={{ backgroundColor: 'black', color: 'white', padding: '0 5px' }}>{ronda.resultat.split(' ').map(w => w[0]).join('')}</div>
 								</div>)
 								.concat(
-									[...Array(4 - this.props.actuacio.length)]
+									[...Array(6 - this.props.actuacio.length)]
 										.map((_, i) => <div style={{ backgroundColor: i === 0 ? '#ffff77' : 'white', color: 'darkblue', padding: '0 5px', borderRadius: 5, minWidth: 50 }} key={i}>&nbsp;</div>)
 								)
 						}
@@ -224,7 +227,7 @@ class CastellSelector extends Component {
 					</div>
 				}
 				{
-					this.props.ronda && this.props.ronda >= 4 ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
+					this.props.ronda && this.isPilarsTurn() ? <></> : this.state.from_group && <button className="back-btn" onClick={this.unsetGroup.bind(this)}>ENRERE</button>
 				}
 				{
 					this.props.is_assaig ? <div className={`game-proves-left ${this.props.proves_left === 1 ? 'game-last-prova' : ''}`}>

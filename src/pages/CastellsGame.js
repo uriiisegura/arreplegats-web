@@ -410,6 +410,9 @@ class CastellsGame extends Component {
 		this.state.colla.acceptMission(mission);
 		this.forceUpdate();
 	}
+	isActuacioFinished() {
+		return this.state.actuacio.length >= 4
+	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
 			{
@@ -530,7 +533,7 @@ class CastellsGame extends Component {
 								!this.state.selectedCastell ? <button className="back-btn" onClick={this.goBack.bind(this)}>ENRERE</button> : <></>
 							}
 							{
-								this.state.actuacio.length < 4 ? <>
+								!this.isActuacioFinished() ? <>
 									<div className={`game-full-wrap ${this.state.actuacio.length === 0 && !this.state.selectedCastell ? '' : 'game-bigger-wrap'}`}>
 										{
 											this.state.selectedCastell ? <>
