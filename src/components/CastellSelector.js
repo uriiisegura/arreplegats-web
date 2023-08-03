@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { probCastell } from '../models/joc-castells-probabilities/v3/generateCastellResult'
 
+const NRONDESMAX = 5;
+
 class CastellSelector extends Component {
 	constructor(props) {
 		super(props);
@@ -114,8 +116,8 @@ class CastellSelector extends Component {
 									<div style={{ backgroundColor: 'black', color: 'white', padding: '0 5px' }}>{ronda.resultat.split(' ').map(w => w[0]).join('')}</div>
 								</div>)
 								.concat(
-									[...Array(6 - this.props.actuacio.length)]
-										.map((_, i) => <div style={{ backgroundColor: i === 0 ? '#ffff77' : 'white', color: 'darkblue', padding: '0 5px', borderRadius: 5, minWidth: 50 }} key={i}>&nbsp;</div>)
+									[...Array(NRONDESMAX + 1 - this.props.actuacio.length)]
+										.map((_, i) => <div style={{ backgroundColor: i === 0 ? '#ffff77' : i === NRONDESMAX - this.props.actuacio.length ? '#ffccff' : 'white', color: 'darkblue', padding: '0 5px', borderRadius: 5, minWidth: 50 }} key={i}>&nbsp;</div>)
 								)
 						}
 					</div>
