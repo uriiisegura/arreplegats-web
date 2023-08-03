@@ -13,7 +13,7 @@ function AmountCastellers(puntuacio, ngent) {
     const L = [18*ngent - 243, 0]
     const H = [72*ngent - 1416, ngent*0.1]
 
-    const res = linearReg(L, H, puntuacio)
+    const res = linearReg(L, H, puntuacio) + 1
     const rounded_res = Math.round(res)
 
     return rounded_res   
