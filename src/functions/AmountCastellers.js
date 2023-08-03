@@ -10,7 +10,7 @@ function linearReg(point1, point2, x) {
 }
 
 function AmountCastellers(puntuacio, ngent) {
-    const L = [18*ngent - 243, 0]
+    const L = [40*ngent - 1243, 0]
     const H = [72*ngent - 1416, ngent*0.1]
 
     const res = linearReg(L, H, puntuacio) + 1
