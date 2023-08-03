@@ -49,9 +49,9 @@ class CastellSelector extends Component {
 			.map(intent => intent.castell)
 
 		const availableCastells = Object.values(this.props.castells)
-			.filter(c => c.castell.includes('Pd'))
+			.filter(c => !c.castell.includes('Pd'))
 			.filter(c => !alreadyTried.includes(c.castell))
-			.filter(c => c.gent > this.props.castellers.length)
+			.filter(c => c.gent <= this.props.castellers)
 			.length
 
 		return availableCastells === 0;
