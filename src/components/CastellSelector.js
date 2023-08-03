@@ -44,12 +44,24 @@ class CastellSelector extends Component {
 			from_group: null
 		};
 	}
+	noCastellsLeft() {
+		const alreadyTried = this.props.actuacio
+			.map(intent => intent.castell)
+
+		const availableCastells = Object.values(this.props.castells)
+			.filter(c => c.castell.includes('Pd'))
+			.filter(c => !alreadyTried.includes(c.castell))
+			.filter(c => c.gent > this.props.castellers.length)
+			.length
+
+		return availableCastells === 0;
+	}
 	isPilarsTurn() {
 		const nIntentsValids = this.props.actuacio
 			.filter(intent => ['DESCARREGAT', 'CARREGAT'].includes(intent.resultat))
 			.length
 
-		return nIntentsValids >= 3 || this.props.ronda > NRONDESMAX;
+		return this.noCastellsLeft() || nIntentsValids >= 3 || this.props.ronda > NRONDESMAX;
 	}
 	componentDidMount() {
 		if (this.props.ronda) {
