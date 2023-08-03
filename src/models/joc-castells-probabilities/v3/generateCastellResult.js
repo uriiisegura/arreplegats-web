@@ -33,6 +33,9 @@ function PFinal(stats, castell) {
         // Then, take the best one.
         .reduce((acc, cur) => cur[0] > acc[0] ? cur : acc, unique)
 
+    // Update unique
+    stats[castell]['probabilitats']['unique'] = mod_unique;
+
     const deps = Object.keys(D)
         .map(d => PFinal(stats, d).map(el => el * D[d]))
         // If mod_unique is better than the dependency, use mod_unique.
