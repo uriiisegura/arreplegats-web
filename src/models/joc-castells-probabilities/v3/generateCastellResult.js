@@ -27,13 +27,11 @@ function PFinal(stats, castell) {
 
     const mod_unique = Object.keys(stats)
         .filter(c => castell in stats[c]['probabilitats']['dependencies'])
-        .map(c => [stats[c]['probabilitats']['unique'], stats[c]['probabilitats']['dependencies'][castell]])
-        // If I am dependency of something better, use that.
-        .map(([invDepUnique, pes]) => sum_lists([invDepUnique.map(el => el * pes), unique.map(el => el * (1 - pes))]))
-        // Then, take the best one.
+        .map(c => stats[c]['probabilitats']['unique'])
+        // If some superior unique is better, take that one.
         .reduce((acc, cur) => cur[0] > acc[0] ? cur : acc, unique)
 
-    // Update unique
+    // Update the castell's unique
     stats[castell]['probabilitats']['unique'] = mod_unique;
 
     const deps = Object.keys(D)
