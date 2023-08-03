@@ -4151,7 +4151,7 @@
     "5d4n": {
         "gent": 12,
         "probabilitats": {
-            "pes_dependencies": 0.5,
+            "pes_dependencies": 0.75,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4198,7 +4198,7 @@
     "5d5n": {
         "gent": 17,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.75,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4246,7 +4246,7 @@
     "5d6n": {
         "gent": 22,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.75,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4341,7 +4341,7 @@
     "7d4n": {
         "gent": 14,
         "probabilitats": {
-            "pes_dependencies": 0.5,
+            "pes_dependencies": 0.75,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4388,7 +4388,7 @@
     "7d5n": {
         "gent": 21,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.75,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4436,7 +4436,7 @@
     "7d6n": {
         "gent": 28,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.75,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
