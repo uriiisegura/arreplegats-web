@@ -124,7 +124,9 @@ class CastellSelector extends Component {
 							flexDirection: 'row',
 							alignItems: 'center',
 							color: 'white',
-							gap: 10
+							gap: 10,
+							width: '60%',
+							flexWrap: 'wrap'
 						}}
 					>
 						{
@@ -143,7 +145,7 @@ class CastellSelector extends Component {
 														i === NRONDESMAX - this.props.actuacio.length ? '#ffccff' :
 														i === 0 ? '#ffff77' :
 														'white',
-													padding: '0 5px',
+													padding: '0px 30px',
 													borderRadius: 5,
 													minWidth: 50,
 													display: 'flex',
