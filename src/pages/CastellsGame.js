@@ -468,7 +468,7 @@ class CastellsGame extends Component {
 										<button className={`btn ${this.state.colla.today['type'] === 'assaig' && this.state.colla.today.provesLeft > 0 ? '' : 'disabled'}`} onClick={() => this.changeScreen('ASSAIG')}>
 											<span>ASSAIG</span>
 										</button>
-										<button className={`btn ${(this.state.colla.castellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done'])) && process.env.NODE_ENV !== 'development' ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
+										<button className={`btn ${(this.state.colla.castellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done'])) ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
 											<div className="span-wrap">
 												<span>ACTUACIÓ</span>
 												{ this.state.colla.castellers < 31 && <div className="btn-subtitle">
