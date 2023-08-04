@@ -14,6 +14,24 @@ import Colla from "../models/Colla";
 Howler.autoUnlock = true;
 Howler.html5PoolSize = 100;
 
+const getDateTimeToday = () => {
+	const today = new Date();
+    
+	// With Madrid time
+	const options = { 
+		year: 'numeric', 
+		month: '2-digit', 
+		day: '2-digit', 
+		hour: '2-digit', 
+		minute: '2-digit', 
+		second: '2-digit', 
+		hour12: false 
+	};
+	
+	const madridDateTime = today.toLocaleString('en-GB', { timeZone: 'Europe/Madrid', ...options });
+	return madridDateTime.replace(/: /g, ' ');
+}
+
 const FILES_DICT = {
 	"pujada": '/sounds/toc-de-castells-pujada.mp3',
 	"baixada": '/sounds/toc-de-castells-baixada.mp3',
@@ -110,9 +128,9 @@ class CastellsGame extends Component {
 		fr.readAsText(files[0]);
 	}
 	saveGameFile() {
-		const todayString = (new Date()).toISOString().split('T')[0];
+		const todayDateTimeString = getDateTimeToday();
 		const collaName = this.state.colla.name.replace(/[^a-z0-9\s]/gi, '_')
-		const filename = prompt('Guarda aquesta partida', `${collaName} (${todayString})`);
+		const filename = prompt('Guarda aquesta partida', `${collaName} (${todayDateTimeString})`);
 		if (!filename) return;
 
 		const file = new Blob([btoa(JSON.stringify(this.state.colla, null, 4))], {type: 'bin'});
