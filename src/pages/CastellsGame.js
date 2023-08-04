@@ -688,7 +688,9 @@ class CastellsGame extends Component {
 									</thead>
 									<tbody>
 										{
-											this.state.colla.historic.map((a, i) => {
+											this.state.colla.historic
+											.sort((a, b) => new Date(b.data) > new Date(a.data) ? 1 : -1)
+											.map((a, i) => {
 												const og_date = new Date(a.data);
 												const offset = og_date.getTimezoneOffset();
 												const date = new Date(og_date.getTime() - (offset * 60000));
