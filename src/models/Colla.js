@@ -8,17 +8,19 @@ const INITIAL_CASTELLERS = 15;
 const MIN_CASTELLERS = 31;
 
 class Colla {
-	constructor(name,
-				color,
-				castellers=INITIAL_CASTELLERS,
-				stats=null,
-				historic=[],
-				tried=[],
-				missions_accepted=[],
-				missions_completed=[],
-				date=Date.parse('2023-09-18'), // dilluns
-				today=null
-		) {
+	constructor({
+			name,
+			color,
+			castellers=INITIAL_CASTELLERS,
+			actualCastellers=INITIAL_CASTELLERS,
+			stats=null,
+			historic=[],
+			tried=[],
+			missions_accepted=[],
+			missions_completed=[],
+			date=Date.parse('2023-09-18'), // dilluns
+			today=null
+		}) {
 		this.name = name;
 		this.color = color;
 		const rgb = HexToRgb(color);
@@ -29,7 +31,7 @@ class Colla {
 			this.filter = filter.filter;
 		} while(filter.loss > 0.1);
 		this.castellers = castellers;
-		this.actualCastellers = castellers;
+		this.actualCastellers = actualCastellers;
 		if (!stats) {
 			this.stats = Object.fromEntries(
 				Object.entries(castells)
@@ -54,6 +56,7 @@ class Colla {
 		const name = json.name;
 		const color = json.color;
 		const castellers = json.castellers;
+		const actualCastellers = json.actualCastellers;
 		const stats = json.stats;
 		const historic = json.historic;
 		const tried = json.tried;
@@ -62,7 +65,20 @@ class Colla {
 		const date = json.date;
 		const today = json.today;
 		if (name && color && castellers && stats && historic && tried && missions_accepted && missions_completed && date && today)
-			return new Colla(name, color, castellers, stats, historic, tried, missions_accepted, missions_completed, date, today);
+			return new Colla({
+				name: name,
+				color: color,
+				castellers: castellers,
+				actualCastellers: actualCastellers,
+				stats: stats,
+				historic: historic,
+				tried: tried,
+				missions_accepted: missions_accepted,
+				missions_completed: missions_completed,
+				date: date,
+				today: today
+			});
+
 		throw new Error("L'arxiu no conté cap partida.");
 	}
 	addCastellers(castellers) {

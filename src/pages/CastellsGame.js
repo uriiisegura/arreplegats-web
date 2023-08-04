@@ -199,9 +199,10 @@ class CastellsGame extends Component {
 	createColla() {
 		document.getElementById('create-game').style.display = 'none';
 		this.setState({
-			colla: new Colla(	document.getElementById('colla-name').value,
-								document.getElementById('colla-color').value
-							)
+			colla: new Colla({
+				name: document.getElementById('colla-name').value,
+				color: document.getElementById('colla-color').value
+			})
 		});
 	}
 	changeScreen(screen) {
