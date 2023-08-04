@@ -3260,7 +3260,7 @@
     "Td5n": {
         "gent": 8,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.2,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
