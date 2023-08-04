@@ -212,6 +212,7 @@ class CastellsGame extends Component {
 			screen: screen,
 			history: history
 		});
+		this.forceUpdate();
 	}
 	selectCastell(castell) {
 		this.setState({selectedCastell: castells[castell]}, this.solveCastell);
