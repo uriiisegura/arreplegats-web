@@ -3355,6 +3355,7 @@ span.help {
 	gap: 10px;
 	flex: 1;
 	flex-basis: 100px;
+	min-height: 100px;
 }
 
 .game-selector-single span {
