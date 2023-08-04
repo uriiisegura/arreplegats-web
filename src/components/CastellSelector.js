@@ -57,9 +57,9 @@ class CastellSelector extends Component {
 	}
 	isCastellPossible(castell) {
 		if (this.props.type !== 'actuació') {
-			return this.props.castellers >= castell.gent;
+			return this.props.actualCastellers >= castell.gent;
 		} else if (castell.castell.includes('Pd')) {
-			return this.props.castellers >= castell.gent;
+			return this.props.actualCastellers >= castell.gent;
 		}
 
 		const alreadyTried = this.props.actuacio
@@ -79,7 +79,7 @@ class CastellSelector extends Component {
 			.filter(c => !c.castell.includes('Pd'))
 			.filter(c => !alreadyTriedSuccessfully.includes(c.castell))
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
-			.filter(c => c.gent <= this.props.castellers)
+			.filter(c => c.gent <= this.props.actualCastellers)
 
 		return availableCastells.length > 0 && !this.castellFromSameClassHasAlreadyBeenTried(castell.castell)
 	}
@@ -102,7 +102,7 @@ class CastellSelector extends Component {
 			.filter(c => !c.castell.includes('Pd'))
 			.filter(c => !alreadyTriedSuccessfully.includes(c.castell))
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
-			.filter(c => c.gent <= this.props.castellers)
+			.filter(c => c.gent <= this.props.actualCastellers)
 			.filter(c => !this.castellFromSameClassHasAlreadyBeenTried(c.castell))
 			.length
 
@@ -127,7 +127,7 @@ class CastellSelector extends Component {
 			.filter(c => c.castell.includes(group))
 			.filter(c => !alreadyTriedSuccessfully.includes(c.castell))
 			.filter(c => !intentatsMesDe2Cops.includes(c.castell))
-			.filter(c => c.gent <= this.props.castellers)
+			.filter(c => c.gent <= this.props.actualCastellers)
 			.filter(c => !this.castellFromSameClassHasAlreadyBeenTried(c.castell))
 			.length
 

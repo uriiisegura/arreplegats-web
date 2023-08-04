@@ -486,7 +486,7 @@ class CastellsGame extends Component {
 						}
 					</div>
 					<div className="sub-bar">
-						<span>{this.state.colla.castellers} persones a la colla</span>
+						<span>{this.state.colla.actualCastellers}/{this.state.colla.castellers} han vingut avui</span>
 					</div>
 					<div id="game-background"></div>
 					{
@@ -503,11 +503,11 @@ class CastellsGame extends Component {
 										<button className={`btn ${this.state.colla.today['type'] === 'assaig' && this.state.colla.today.provesLeft > 0 ? '' : 'disabled'}`} onClick={() => this.changeScreen('ASSAIG')}>
 											<span>ASSAIG</span>
 										</button>
-										<button className={`btn ${(this.state.colla.castellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done'])) ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
+										<button className={`btn ${(this.state.colla.actualCastellers < 31 || this.state.colla.today['type'] !== 'actuacio' || (this.state.colla.today['type'] === 'actuacio' && this.state.colla.today['done'])) ? 'disabled' : ''}`} onClick={() => this.changeScreen('ACTUACIO')}>
 											<div className="span-wrap">
 												<span>ACTUACIÓ</span>
-												{ this.state.colla.castellers < 31 && <div className="btn-subtitle">
-													Mínim: 31 castellers
+												{ this.state.colla.actualCastellers < 31 && <div className="btn-subtitle">
+													Mínim: 31 assistents
 												</div> }
 											</div>
 										</button>
@@ -553,7 +553,7 @@ class CastellsGame extends Component {
 								}
 								<CastellSelector
 									castells={castells}
-									castellers={this.state.colla.castellers}
+									actualCastellers={this.state.colla.actualCastellers}
 									onSelectCastell={this.selectCastell.bind(this)}
 									hide={this.state.selectedCastell !== null}
 									stats={this.state.colla.stats}
@@ -585,7 +585,7 @@ class CastellsGame extends Component {
 											</> : <>
 												<CastellSelector
 													castells={castells}
-													castellers={this.state.colla.castellers}
+													actualCastellers={this.state.colla.actualCastellers}
 													onSelectCastell={this.selectCastell.bind(this)}
 													ronda={this.state.actuacio.length + 1}
 													stats={this.state.colla.stats}
@@ -655,7 +655,7 @@ class CastellsGame extends Component {
 													.filter(c => !c?.neta)
 													.map((c, j) => {
 														if (c.grup !== g) return <></>;
-														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={`group-${g}-row-${c.castell}`}>
+														return <tr className={this.state.colla.actualCastellers >= c.gent ? '' : 'locked'} key={`group-${g}-row-${c.castell}`}>
 															<td>{c.castell}</td>
 															<td>{c.carregat}</td>
 															<td>{c.descarregat}</td>
