@@ -2971,6 +2971,12 @@ Joc Castells
 	color: #ccc;
 }
 
+.boto-netes.disabled {
+	pointer-events: none;
+    background-color: var(--game-darkGray);
+	color: #aaa;
+}
+
 .game-error {
 	color: var(--red-dark);
 }

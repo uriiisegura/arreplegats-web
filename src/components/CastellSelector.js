@@ -158,15 +158,25 @@ class CastellSelector extends Component {
 		});
 	}
 	setGroup(group) {
+		const availableCastells = Object.values(this.props.castells)
+			.filter(c => c.castell.includes(group))
+			.filter(c => c.gent <= this.props.actualCastellers)
+			.filter(c => !c?.neta)
+
+		const noPinyesAvailable = availableCastells.length === 0;
+
 		this.setState({
 			from_group: Object.values(this.props.castells)
-				.filter(c => c.castell.includes(group))
+				.filter(c => c.castell.includes(group)),
+			neta: noPinyesAvailable ? true : false,
+			noPinyesAvailable: noPinyesAvailable
 		});
 	}
 	unsetGroup() {
 		this.setState({
 			from_group: null,
-			neta: false
+			neta: false,
+			noPinyesAvailable: false
 		});
 	}
 	selectCastell(castell) {
@@ -356,7 +366,7 @@ class CastellSelector extends Component {
 				</div>
 				{
 					this.props.is_assaig && this.state.from_group && <div className="game-proves-extra">
-						<div onClick={() => this.setNeta(!this.state.neta)}>
+						<div onClick={() => this.setNeta(!this.state.neta)} className={(this.state.noPinyesAvailable ? 'disabled' : '') + ' boto-netes'}>
 							{ !this.state.neta ? ' Netes i a terra' : 'Pinyes i soques' }
 						</div>
 					</div>
