@@ -55,7 +55,7 @@
         "descarregat": 15,
         "gent": 22,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -255,7 +255,7 @@
         "descarregat": 40,
         "gent": 31,
         "probabilitats": {
-            "pes_dependencies": 0.7,
+            "pes_dependencies": 0.6,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -508,7 +508,7 @@
         "descarregat": 70,
         "gent": 40,
         "probabilitats": {
-            "pes_dependencies": 0.4,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -559,7 +559,7 @@
         "descarregat": 75,
         "gent": 42,
         "probabilitats": {
-            "pes_dependencies": 0.4,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -710,7 +710,7 @@
         "descarregat": 120,
         "gent": 30,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -863,7 +863,7 @@
         "descarregat": 250,
         "gent": 53,
         "probabilitats": {
-            "pes_dependencies": 0.7,
+            "pes_dependencies": 0.6,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -1629,7 +1629,7 @@
         "descarregat": 1200,
         "gent": 69,
         "probabilitats": {
-            "pes_dependencies": 0.7,
+            "pes_dependencies": 0.6,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -1732,7 +1732,7 @@
         "descarregat": 1650,
         "gent": 123,
         "probabilitats": {
-            "pes_dependencies": 0.4,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -2388,7 +2388,7 @@
         "descarregat": 4055,
         "gent": 182,
         "probabilitats": {
-            "pes_dependencies": 0.5,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -2439,7 +2439,7 @@
         "descarregat": 4120,
         "gent": 249,
         "probabilitats": {
-            "pes_dependencies": 0.5,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -2977,7 +2977,7 @@
     "MT Pd7fm": {
         "gent": 16,
         "probabilitats": {
-            "pes_dependencies": 0.9,
+            "pes_dependencies": 0.8,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -3541,7 +3541,7 @@
     "3d5n": {
         "gent": 10,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -3588,7 +3588,7 @@
     "3d6n": {
         "gent": 13,
         "probabilitats": {
-            "pes_dependencies": 0.4,
+            "pes_dependencies": 0.2,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -3916,7 +3916,7 @@
     "4d5n": {
         "gent": 12,
         "probabilitats": {
-            "pes_dependencies": 0.6,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -3963,7 +3963,7 @@
     "4d6n": {
         "gent": 16,
         "probabilitats": {
-            "pes_dependencies": 0.4,
+            "pes_dependencies": 0.2,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4626,7 +4626,7 @@
     "9d6n": {
         "gent": 40,
         "probabilitats": {
-            "pes_dependencies": 0.4,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
