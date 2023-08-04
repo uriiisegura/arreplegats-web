@@ -3222,6 +3222,8 @@ Joc Castells
 	display: flex;
 	margin: 0 1rem;
 	overflow: scroll;
+	height: 80vh;
+	padding-bottom: 50px;
 }
 .game-table-wrap::-webkit-scrollbar {
 	display: none;
