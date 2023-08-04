@@ -29,6 +29,7 @@ class Colla {
 			this.filter = filter.filter;
 		} while(filter.loss > 0.1);
 		this.castellers = castellers;
+		this.actualCastellers = castellers;
 		if (!stats) {
 			this.stats = Object.fromEntries(
 				Object.entries(castells)
@@ -124,9 +125,30 @@ class Colla {
 			provesLeft: 15
 		}
 	}
+	calculateActualCastellers(prev_weekday) {
+		const isAbleToDoDiada = this.castellers >= MIN_CASTELLERS
+
+		const min_assistance =
+			// Serà diada = 100%
+			prev_weekday === 2 && isAbleToDoDiada ? 0.9 :
+			// Serà dilluns = 60%
+			prev_weekday === 2 && !isAbleToDoDiada ? 0.6 :
+			// Serà dilluns (també) = 60%
+			prev_weekday === 4 ? 0.6 :
+			// Serà dimarts = 80%
+			prev_weekday === 1 ? 0.8 :
+			// ? = 100%
+			1
+
+		const scaledRandom = Math.random() * (1 - min_assistance) + min_assistance
+		const actualCastellers = Math.floor(this.castellers * scaledRandom);
+		return actualCastellers;
+	}
 	nextDay() {
 		const date = new Date(this.date);
 		const weekday = date.getDay();
+
+		this.actualCastellers = this.calculateActualCastellers(weekday)
 
 		if (weekday === 1)
 			date.setDate(date.getDate() + 1)
