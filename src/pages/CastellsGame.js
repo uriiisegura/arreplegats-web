@@ -110,14 +110,19 @@ class CastellsGame extends Component {
 		fr.readAsText(files[0]);
 	}
 	saveGameFile() {
+		const todayString = (new Date()).toISOString().split('T')[0];
+		const collaName = this.state.colla.name.replace(/[^a-z0-9\s]/gi, '_')
+		const filename = prompt('Guarda aquesta partida', `${collaName} (${todayString})`);
+		if (!filename) return;
+
 		const file = new Blob([btoa(JSON.stringify(this.state.colla, null, 4))], {type: 'bin'});
 		if (window.navigator.msSaveOrOpenBlob)
-			window.navigator.msSaveOrOpenBlob(file, 'joc-castells.bin');
+			window.navigator.msSaveOrOpenBlob(file, filename + '.bin');
 		else {
 			const a = document.createElement('a');
 			const url = URL.createObjectURL(file);
 			a.href = url;
-			a.download = 'joc-castells.bin';
+			a.download = filename + '.bin';
 			document.body.appendChild(a);
 			a.click();
 			setTimeout(() => {
