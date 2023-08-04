@@ -3289,7 +3289,6 @@ span.help {
 	background-color: var(--game-clearBlue);
 	border: 3px solid var(--game-lightBlue);
 	width: min(500px, 95%);
-	min-height: 400px;
 	padding: 8px;
 	display: flex;
 	gap: 3px;
