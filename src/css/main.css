@@ -3541,6 +3541,7 @@ span.help {
 	border-collapse: collapse;
 	width: 100%;
 	overflow: unset;
+	height: fit-content;
 }
 
 .game-historic-table th,

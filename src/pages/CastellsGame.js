@@ -531,6 +531,9 @@ class CastellsGame extends Component {
 										{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.addTenCastellers.bind(this)}>
 											<span>+10 castellers</span>
 										</button>}
+										{process.env.NODE_ENV === 'development' && <button className="btn" onClick={this.advanceDay.bind(this)}>
+											<span>Avaçar dia</span>
+										</button>}
 									</div>
 								</div>
 							</div>
