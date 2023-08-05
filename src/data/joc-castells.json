@@ -3531,7 +3531,7 @@
     "3d4an": {
         "gent": 8,
         "probabilitats": {
-            "pes_dependencies": 0.2,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -3625,7 +3625,7 @@
     "3d5an": {
         "gent": 12,
         "probabilitats": {
-            "pes_dependencies": 0.2,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -3721,7 +3721,7 @@
     "3d6an": {
         "gent": 16,
         "probabilitats": {
-            "pes_dependencies": 0.2,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4051,7 +4051,7 @@
     "4d4an": {
         "gent": 9,
         "probabilitats": {
-            "pes_dependencies": 0.2,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4145,7 +4145,7 @@
     "4d5an": {
         "gent": 14,
         "probabilitats": {
-            "pes_dependencies": 0.2,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -4241,7 +4241,7 @@
     "4d6an": {
         "gent": 19,
         "probabilitats": {
-            "pes_dependencies": 0.2,
+            "pes_dependencies": 0.3,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
