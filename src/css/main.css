@@ -677,6 +677,9 @@ Footer
 .twitter:hover {
 	filter: invert(57%) sepia(38%) saturate(1592%) hue-rotate(169deg) brightness(116%) contrast(90%);
 }
+.twitter-x:hover {
+	filter: invert(100%);
+}
 .instagram:hover {
 	filter: invert(70%) sepia(20%) saturate(6318%) hue-rotate(299deg) brightness(87%) contrast(86%);
 }
@@ -2571,6 +2574,10 @@ Agenda
 En construcció
 ===============
 */
+
+.in-construction {
+	user-select: none;
+}
 
 .in-construction h2 {
 	text-align: center;
