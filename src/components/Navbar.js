@@ -87,7 +87,14 @@ class Navbar extends Component {
 									<h4 className="sub-menu-title">Organització</h4>
 									<ul>
 										<li><NavLink to="/junta-directiva">Junta directiva</NavLink></li>
-										<li><NavLink to="/comissio-tecnica">Comissió tècnica</NavLink></li>
+										<li><NavLink to="/junta-tecnica">Junta tècnica</NavLink></li>
+									</ul>
+								</div>
+								<div className="sub-menu">
+									<h4 className="sub-menu-title">Uneix-t'hi</h4>
+									<ul>
+										<li><NavLink to="/uneixthi">Vine a fer castells!</NavLink></li>
+										<li><NavLink to="/patrocinadors">Patrocinadors</NavLink></li>
 									</ul>
 								</div>
 							</div>
@@ -98,7 +105,6 @@ class Navbar extends Component {
 							<span>Mèdia<img src="font-awesome/caret-down.svg" alt="" /></span>
 							<div id="media" className="sub-menus">
 								<div className="sub-menu">
-									<h4 className="sub-menu-title">Arxius multimèdia</h4>
 									<ul>
 										<li><NavLink to="/fotografies">Fotografies</NavLink></li>
 										<li><NavLink to="/videos">Vídeos</NavLink></li>

@@ -1,0 +1,36 @@
+{
+	"amb el suport de": [
+		{
+			"name": "Universitat de Barcelona",
+			"image": "ub.png"
+		},
+		{
+			"name": "Universitat Politècnica de Catalunya",
+			"image": "upc.png"
+		},
+		{
+			"name": "Agència de Gestió d'Ajuts Universitaris i de Recerca",
+			"image": "agaur.gif"
+		},
+		{
+			"name": "Generalitat de Catalunya",
+			"image": "gencat.png"
+		},
+		{
+			"name": "Ajuntament de Barcelona",
+			"image": "bcn.png"
+		}
+	],
+	"entitats": [
+		{
+			"name": "Coordinadora de Colles Castelleres de Catalunya",
+			"image": "cccc.png"
+		}
+	],
+	"patrocinadors cccc": [
+		{
+			"name": "Estrella Damm",
+			"image": "damm.png"
+		}
+	]
+}

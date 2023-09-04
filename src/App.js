@@ -18,7 +18,9 @@ import MillorsDiades from "./pages/MillorsDiades";
 import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
 import JuntaDirectiva from "./pages/JuntaDirectiva";
-import ComissioTecnica from "./pages/ComissioTecnica";
+import JuntaTecnica from "./pages/JuntaTecnica";
+import Uneixthi from "./pages/Uneixthi";
+import Patrocinadors from "./pages/Patrocinadors";
 import Agenda from "./pages/Agenda";
 import Noticies from "./pages/Noticies";
 import Fotografies from "./pages/Fotografies";
@@ -33,7 +35,6 @@ import Memory from "./pages/Memory";
 import Penjat from "./pages/Penjat";
 import CastellsGame from "./pages/CastellsGame";
 import Contractacions from "./pages/Contractacions";
-import Uneixthi from "./pages/Uneixthi";
 import Contactar from "./pages/Contactar";
 import BarraLliure from "./pages/BarraLliure";
 import PartsCastell from "./pages/PartsCastell";
@@ -68,7 +69,11 @@ function App() {
 					<Route path="/resum-historic" element={<ResumHistoric />} />
 					<Route path="/llista-de-diades" element={<LlistaDeDiades />} />
 					<Route path="/junta-directiva" element={<JuntaDirectiva />} />
-					<Route path="/comissio-tecnica" element={<ComissioTecnica />} />
+					<Route path="/junta-directiva/:any" element={<JuntaDirectiva />} />
+					<Route path="/junta-tecnica" element={<JuntaTecnica />} />
+					<Route path="/junta-tecnica/:any" element={<JuntaTecnica />} />
+					<Route path="/uneixthi" element={<Uneixthi />} />
+					<Route path="/patrocinadors" element={<Patrocinadors />} />
 					<Route path="/agenda" element={<Agenda />} />
 					<Route path="/noticies" element={<Noticies />} />
 					<Route path="/fotografies" element={<Fotografies />} />
@@ -83,7 +88,6 @@ function App() {
 					<Route path="/joc-castells" element={<></>} />
 					<Route path="/penjat/:idx" element={<Penjat />} />
 					<Route path="/contractacions" element={<Contractacions />} />
-					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
 					<Route path="/parts-castell" element={<PartsCastell />} />

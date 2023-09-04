@@ -19,7 +19,7 @@ class Jocs extends Component {
 					{
 						Object.entries(jocs_list).map(([k, v], i) => {
 							return <NavLink key={i} className="game btn" to={`/${v}`}>
-								{k}
+								<span>{k}</span>
 							</NavLink>;
 						})
 					}

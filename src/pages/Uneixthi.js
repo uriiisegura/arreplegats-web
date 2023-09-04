@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Assajos from "./Assajos";
+import Agenda from "./Agenda";
 
 class Uneixthi extends Component {
 	render() {
@@ -28,6 +29,7 @@ class Uneixthi extends Component {
 				</p>
 			</section>
 			<Assajos />
+			<Agenda />
 		</>);
 	}
 }

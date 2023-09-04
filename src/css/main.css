@@ -653,6 +653,7 @@ Footer
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	user-select: none;
 }
 
 .social-media {
@@ -674,11 +675,9 @@ Footer
 	max-width: 100%;
 }
 
-.twitter:hover {
-	filter: invert(57%) sepia(38%) saturate(1592%) hue-rotate(169deg) brightness(116%) contrast(90%);
-}
+.twitter:hover,
 .twitter-x:hover {
-	filter: invert(100%);
+	filter: invert(57%) sepia(38%) saturate(1592%) hue-rotate(169deg) brightness(116%) contrast(90%);
 }
 .instagram:hover {
 	filter: invert(70%) sepia(20%) saturate(6318%) hue-rotate(299deg) brightness(87%) contrast(86%);
@@ -745,7 +744,7 @@ h4 {
 @media screen and (max-width: 1250px) {
 	section {
 		width: var(--mobile-width);
-		padding-top: 0.3rem;
+		padding-top: 0.5rem;
 	}
 }
 
@@ -924,6 +923,7 @@ Castell Card
 	background-color: var(--white);
 	padding: 2px 8px;
 	opacity: 0.85;
+	user-select: none;
 }
 .castell-link a:hover {
 	opacity: 1;
@@ -966,6 +966,7 @@ Castell Top
 	max-height: 50vh;
 	float: left;
 	margin: 0 20px 10px 0;
+	user-select: none;
 }
 
 @media screen and (max-width: 800px) {
@@ -1015,7 +1016,9 @@ section p a:hover {
 	display: flex;
 	justify-content: center;
 	margin: 2.5rem auto 0;
+	user-select: none;
 }
+
 .read-more a {
 	background-color: var(--primary-600);
 	color: var(--white);
@@ -1064,6 +1067,7 @@ Assajos
 	max-height: 400px;
 	margin: 1rem auto;
 	display: block;
+	user-select: none;
 }
 
 /*
@@ -1142,16 +1146,6 @@ Quote
 	margin: 0;
 	font-size: 1.3rem;
 	padding: 0 2rem;
-}
-.quote p::before,
-.quote p::after {
-	font-size: 2rem;
-}
-.quote p::before {
-	content: '«';
-}
-.quote p::after {
-	content: '»';
 }
 
 .quote h4 {
@@ -1343,6 +1337,7 @@ Llista de diades
 	display: grid;
 	gap: 10px;
 	grid-template-columns: repeat(4, 1fr);
+	user-select: none;
 }
 
 .llista-diades .filters .container {
@@ -1398,6 +1393,7 @@ select {
 	color: var(--white);
 	cursor: pointer;
 	opacity: 0.85;
+	user-select: none;
 }
 .llista-diades .filter-btn:hover {
 	opacity: 1;
@@ -1408,6 +1404,7 @@ select {
 	font-weight: 300;
 	color: var(--primary-600);
 	margin: 0;
+	user-select: none;
 }
 
 .llista-diades .error {
@@ -1435,6 +1432,7 @@ select {
 	top: var(--navbar-height);
 	border-top: 3px solid var(--backgroundColor);
 	color: #ffffff;
+	user-select: none;
 }
 
 .diades-table tbody tr td:nth-child(1) {
@@ -1488,6 +1486,7 @@ Millors diades
 	border-top: 3px solid var(--backgroundColor);
 	color: #ffffff;
 	z-index: 1;
+	user-select: none;
 }
 
 
@@ -1550,6 +1549,7 @@ Vídeos
 	gap: 10px;
 	grid-template-columns: repeat(4, 1fr);
 	margin-top: 2rem;
+	user-select: none;
 }
 
 #videos-wrap iframe {
@@ -1582,6 +1582,23 @@ Vídeos
 Junta tècnica
 ===============
 */
+
+.junta-message {
+	margin-top: -1rem;
+	color: var(--red-dark);
+}
+
+.junta-message span {
+	font-weight: 700;
+}
+
+.junta-message a {
+	color: var(--red-dark);
+	text-decoration: underline;
+}
+.junta-message a:hover {
+	color: var(--red-dark);
+}
 
 .juntes {
 	margin-top: 3rem;
@@ -1879,12 +1896,24 @@ Jocs
 ===============
 */
 
+.game.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.game.btn span {
+	width: fit-content;
+	height: fit-content;
+}
+
 .game-levels {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	gap: 0.5rem;
 	width: 100%;
+	user-select: none;
 }
 
 .game-levels > * {
@@ -1909,6 +1938,7 @@ Jocs
 	display: grid;
 	gap: 3rem;
 	grid-template-columns: repeat(4, 1fr);
+	user-select: none;
 }
 
 .game {
@@ -2380,6 +2410,7 @@ Agenda
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	user-select: none;
 }
 
 #calendar .header span {
@@ -2410,6 +2441,7 @@ Agenda
 #calendar th {
 	padding-bottom: 0.3rem;
 	background-color: transparent;
+	user-select: none;
 }
 
 #calendar td {
@@ -2467,6 +2499,7 @@ Agenda
 	margin-top: 1rem;
 	width: 100%;
 	text-transform: none;
+	user-select: none;
 }
 
 #calendar .event-info {
@@ -3723,6 +3756,46 @@ div.person-animation {
 @keyframes playY {
 	from {background-position-y: 0px;}
 	to {background-position-y: -512px;}
+}
+
+/*
+=============== 
+Patrocinadors
+===============
+*/
+
+.sponsors-title {
+	text-transform: uppercase;
+	color: var(--grey-400);
+	user-select: none;
+}
+
+.sponsors-wrap {
+	display: grid;
+	gap: 3rem 10%;
+	grid-template-columns: 1fr 1fr 1fr;
+	user-select: none;
+	padding: 0 5%;
+	margin-bottom: 3rem;
+}
+
+.sponsor {
+	height: 7rem;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 850px) {
+	.sponsors-wrap {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.sponsors-wrap {
+		grid-template-columns: 1fr;
+	}
 }
 
 /*
