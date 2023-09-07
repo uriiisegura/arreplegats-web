@@ -172,7 +172,7 @@ class Agenda extends Component {
 					e["ID"] = `event-${e['DATA']}@${e['HORA']}|${e['NOM CURT']}`;
 				});
 				this.setState({
-					calendar: results.data
+					calendar: results.data.filter(e => e['VISIBLE'] === 'TRUE')
 				}, this.firstLoad);
 			}
 		});
