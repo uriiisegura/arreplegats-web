@@ -571,6 +571,7 @@ Navbar
 		flex-direction: column;
 		padding: 0;
 		width: 100%;
+		border: none !important;
 	}
 	.nav-link > span:hover,
 	.nav-link:hover > a,
@@ -586,7 +587,10 @@ Navbar
 		line-height: unset;
 		height: 100%;
 		width: 100%;
-		margin: 0.6rem 0;
+		height: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.nav-link span {

@@ -11,6 +11,10 @@ function ScrollToTop() {
 	const nav = document.getElementById('nav-links');
 	if (nav !== null)
 		nav.classList.remove('show');
+	
+	const subs = document.getElementsByClassName('sub-menus');
+	for (let e of subs)
+		e.classList.remove('active');
 
 	return;
 }

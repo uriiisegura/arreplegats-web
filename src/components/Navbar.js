@@ -54,7 +54,7 @@ class Navbar extends Component {
 					</div>
 					<ul id="nav-links">
 						<li onClick={() => this.showHide('azus')} className="nav-link">
-							<span>AZU's<img src="font-awesome/caret-down.svg" alt="" /></span>
+							<span><span>AZU's<img src="font-awesome/caret-down.svg" alt="" /></span></span>
 							<div id="azus" className="sub-menus">
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">La colla</h4>
@@ -99,10 +99,10 @@ class Navbar extends Component {
 								</div>
 							</div>
 						</li>
-						<li className="nav-link"><NavLink to="/agenda">Agenda</NavLink></li>
-						<li className="nav-link"><NavLink to="/noticies">Notícies</NavLink></li>
+						<li className="nav-link"><NavLink to="/agenda"><span>Agenda</span></NavLink></li>
+						<li className="nav-link"><NavLink to="/noticies"><span>Notícies</span></NavLink></li>
 						<li onClick={() => this.showHide('media')} className="nav-link">
-							<span>Mèdia<img src="font-awesome/caret-down.svg" alt="" /></span>
+							<span><span>Mèdia<img src="font-awesome/caret-down.svg" alt="" /></span></span>
 							<div id="media" className="sub-menus">
 								<div className="sub-menu">
 									<ul>
@@ -112,9 +112,9 @@ class Navbar extends Component {
 								</div>
 							</div>
 						</li>
-						<li className="nav-link"><NavLink to="/jocs">Jocs</NavLink></li>
-						<li className="nav-link"><NavLink to="/contractacions">Contractacions</NavLink></li>
-						<li className="nav-link join-btn"><NavLink to="/uneixthi">Uneix-t'hi</NavLink></li>
+						<li className="nav-link"><NavLink to="/jocs"><span>Jocs</span></NavLink></li>
+						<li className="nav-link"><NavLink to="/contractacions"><span>Contractacions</span></NavLink></li>
+						<li className="nav-link join-btn"><NavLink to="/uneixthi"><span>Uneix-t'hi</span></NavLink></li>
 					</ul>
 				</div>
 			</nav>
