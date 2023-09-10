@@ -23,6 +23,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap">
     <title>Arreplegats</title>
 
+    <!--
+      this script checks to see if a redirect is present in the query string,
+      converts it back into the correct url and adds it to the browser's history
+      using window.history.replaceState(...)
+    -->
+    <script>
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM0H0ZH6B6"></script>
