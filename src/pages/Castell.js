@@ -55,7 +55,7 @@ class Castell extends Component {
 					<div className="slideshow">
 						{
 							data.gallery.map((e, i) => {
-								return (<div key={i} className="slide" style={{display: i === 0 ? 'block' : 'none'}}>
+								return (<div key={`image-${i}`} className="slide" style={{display: i === 0 ? 'block' : 'none'}}>
 									<div className="counter">{i+1} / {data.gallery.length}</div>
 									<img className="slide-img" src={e.link} alt={data.name} />
 									<div className="caption">{e.caption}</div>
@@ -68,7 +68,7 @@ class Castell extends Component {
 					<div className="slid-dot-container">
 						{
 							data.gallery.map((_, i) => {
-								return <span key={i} className={`dot ${i === 0 ? ' active' : ''}`} onClick={() => this.currentSlide(i+1)}>{i+1}</span>;
+								return <span key={`dot-${i}`} className={`dot ${i === 0 ? ' active' : ''}`} onClick={() => this.currentSlide(i+1)}>{i+1}</span>;
 							})
 						}
 					</div>
@@ -76,7 +76,7 @@ class Castell extends Component {
 				: <img className="top-img" src={data.link} alt={data.name} />}
 				{
 					data.text.map((e, i) => {
-						return <p key={i}>{e}</p>;
+						return <p key={`par-${i}`}>{e}</p>;
 					})
 				}
 			</section>

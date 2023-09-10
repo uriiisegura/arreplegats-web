@@ -26,7 +26,7 @@ class BarraLliure extends Component {
 		return (<>
 			<section>
 				<div className="confirmation">
-					<img src="confirmation.png" alt="Confirmation" />
+					<img src="/confirmation.png" alt="Confirmation" />
 					<h3>S'ha generat un codi únic per a que puguis accedir a la barra lliure durant l'animació de la <span>XXVIII Diada dels Arreplegats de la Zona Universitària</span>, gaudeix de la festa!</h3>
 				</div>
 				<div className="barcode-wrap">

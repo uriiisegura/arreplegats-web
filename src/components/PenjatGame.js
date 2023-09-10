@@ -55,7 +55,7 @@ class PenjatGame extends Component {
 			k.style.pointerEvents = 'none';
 	}
 	finish() {
-		window.location.hash = '#/penjat';
+		window.location.href = '/penjat';
 	}
 	render() {
 		const gaps = this.props.word.split('');

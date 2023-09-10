@@ -38,7 +38,7 @@ class Navbar extends Component {
 				<div className="nav-center">
 					<div className="nav-header">
 						<NavLink to="/" className="nav-logo">
-							<img src="icon.png" alt="Arreplegats" />
+							<img src="/icon.png" alt="Arreplegats" />
 						</NavLink>
 						<NavLink to="/">
 							<h3 className="header-name">
@@ -49,12 +49,12 @@ class Navbar extends Component {
 					</div>
 					<div className="nav-btn">
 						<button onClick={this.expandMobile}>
-							<img src="font-awesome/align-justify.svg" alt="" />
+							<img src="/font-awesome/align-justify.svg" alt="" />
 						</button>
 					</div>
 					<ul id="nav-links">
 						<li onClick={() => this.showHide('azus')} className="nav-link">
-							<span><span>AZU's<img src="font-awesome/caret-down.svg" alt="" /></span></span>
+							<span><span>AZU's<img src="/font-awesome/caret-down.svg" alt="" /></span></span>
 							<div id="azus" className="sub-menus">
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">La colla</h4>
@@ -102,7 +102,7 @@ class Navbar extends Component {
 						<li className="nav-link"><NavLink to="/agenda"><span>Agenda</span></NavLink></li>
 						<li className="nav-link"><NavLink to="/noticies"><span>Notícies</span></NavLink></li>
 						<li onClick={() => this.showHide('media')} className="nav-link">
-							<span><span>Mèdia<img src="font-awesome/caret-down.svg" alt="" /></span></span>
+							<span><span>Mèdia<img src="/font-awesome/caret-down.svg" alt="" /></span></span>
 							<div id="media" className="sub-menus">
 								<div className="sub-menu">
 									<ul>

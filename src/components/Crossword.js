@@ -27,7 +27,7 @@ class Crossword extends Component {
 		}
 	}
 	finish() {
-		window.location.hash = '#/mots-encreuats';
+		window.location.href = '/mots-encreuats';
 	}
 	render() {
 		return(<>

@@ -240,7 +240,7 @@ class MillorsDiades extends Component {
 							diades_array.map((d, i) => {
 								count += 1;
 								return <tr key={i}>
-									<td>{GetTemporada(d.info.data) === todaySeason ? <img src="font-awesome/star.svg" alt="star" className="this-season" /> : <></>}</td>
+									<td>{GetTemporada(d.info.data) === todaySeason ? <img src="/font-awesome/star.svg" alt="star" className="this-season" /> : <></>}</td>
 									<td>{count}</td>
 									<td>{d.info.data}</td>
 									<td>{d.info.motiu}</td>

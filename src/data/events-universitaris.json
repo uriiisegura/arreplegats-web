@@ -46,7 +46,7 @@
 			{
 				"type": "a",
 				"props" : {
-					"href": "#/castells/4d8"
+					"href": "/castells/4d8"
 				},
 				"text": "4 de 8"
 			},
@@ -55,7 +55,7 @@
 				"text": " universitari, que seria també el primer castell de 8 format únicament per persones adultes. A més, vam esdevenir la primera colla en descarregar-lo al primer intent!"
 			}
 		],
-		"image": "images/gallery/4d8-diada-2009.jpeg",
+		"image": "/images/gallery/4d8-diada-2009.jpeg",
 		"color": "arreplegats"
 	},
 	{
@@ -69,7 +69,7 @@
 			{
 				"type": "a",
 				"props" : {
-					"href": "#/castells/Pd7fm"
+					"href": "/castells/Pd7fm"
 				},
 				"text": "pilar de 7 amb folre i manilles"
 			},
@@ -97,7 +97,7 @@
 			{
 				"type": "a",
 				"props" : {
-					"href": "#/castells/Pd7fm"
+					"href": "/castells/Pd7fm"
 				},
 				"text": "pilar de 7 amb folre i manilles"
 			},
@@ -106,7 +106,7 @@
 				"text": " per primer cop en la història."
 			}
 		],
-		"image": "images/pd7fm-2013.jpeg",
+		"image": "/images/pd7fm-2013.jpeg",
 		"color": "arreplegats"
 	},
 	{
@@ -179,7 +179,7 @@
 			{
 				"type": "a",
 				"props" : {
-					"href": "#/castells/Pd7fm"
+					"href": "/castells/Pd7fm"
 				},
 				"text": "pilar de 7 amb folre i manilles"
 			},

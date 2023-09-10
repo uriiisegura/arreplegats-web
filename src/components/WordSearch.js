@@ -120,7 +120,7 @@ class WordSearch extends Component {
 		document.getElementById(`wordsearch-wrap${this.props.map_id}`).appendChild(selector);
 	}
 	finish() {
-		window.location.hash = '#/sopa-de-lletres';
+		window.location.href = '/sopa-de-lletres';
 	}
 	render() {
 		window.addEventListener('mousemove', this.handleMouseMove);
