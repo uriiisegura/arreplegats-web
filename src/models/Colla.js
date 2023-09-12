@@ -164,12 +164,12 @@ class Colla {
 		const date = new Date(this.date);
 		const weekday = date.getDay();
 
-		this.actualCastellers = this.calculateActualCastellers(weekday)
+		this.actualCastellers = this.calculateActualCastellers(weekday);
 
 		if (weekday === 1)
 			date.setDate(date.getDate() + 1)
 		if (weekday === 2)
-			date.setDate(date.getDate() + (this.castellers < MIN_CASTELLERS ? 6 : 2))
+			date.setDate(date.getDate() + (this.actualCastellers < MIN_CASTELLERS ? 6 : 2))
 		if (weekday === 4)
 			date.setDate(date.getDate() + 4)
 		
