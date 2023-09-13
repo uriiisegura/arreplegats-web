@@ -5,6 +5,8 @@ import Agenda from "./Agenda";
 class Uneixthi extends Component {
 	render() {
 		return (<>
+			<Assajos />
+			<Agenda />
 			<section>
 				<h2>Uneix-t'hi</h2>
 				
@@ -28,8 +30,6 @@ class Uneixthi extends Component {
 					Quan arribis el primer dia l'equip d'acolliment t'explicarà tot el que necessites saber dels castells universitaris i del funcionament de la colla.
 				</p>
 			</section>
-			<Assajos />
-			<Agenda />
 		</>);
 	}
 }
