@@ -3804,6 +3804,17 @@ Patrocinadors
 
 /*
 =============== 
+Comifemi
+===============
+*/
+
+.comifemi-pdf {
+	width: 100%;
+	height: calc(100vh - var(--navbar-height) - 2rem);
+}
+
+/*
+=============== 
 
 ===============
 */

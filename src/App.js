@@ -19,6 +19,7 @@ import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
 import JuntaDirectiva from "./pages/JuntaDirectiva";
 import JuntaTecnica from "./pages/JuntaTecnica";
+import Comifemi from "./pages/Comifemi";
 import Uneixthi from "./pages/Uneixthi";
 import Patrocinadors from "./pages/Patrocinadors";
 import Agenda from "./pages/Agenda";
@@ -72,6 +73,7 @@ function App() {
 					<Route path="/junta-directiva/:any" element={<JuntaDirectiva />} />
 					<Route path="/junta-tecnica" element={<JuntaTecnica />} />
 					<Route path="/junta-tecnica/:any" element={<JuntaTecnica />} />
+					<Route path="/comissio-feminista" element={<Comifemi />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/patrocinadors" element={<Patrocinadors />} />
 					<Route path="/agenda" element={<Agenda />} />
