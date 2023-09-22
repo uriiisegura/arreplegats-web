@@ -119,7 +119,7 @@
 		]
 	},
 	{
-		"name": "Aina Margenat i Blanc",
+		"name": "Aina Margenat i Blanch",
 		"from": [2012],
 		"to": [2013],
 		"link": "",
@@ -214,8 +214,17 @@
 		"name": "Clara Montoya i García",
 		"mote": "Clarote",
 		"from": [2022],
-		"to": [null],
+		"to": [2023],
 		"link": "presidents/clarote.jpg",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Benet Antius i Lozano",
+		"from": [2023],
+		"to": [null],
+		"link": "presidents/benet.jpg",
 		"text": [
 			"—"
 		]

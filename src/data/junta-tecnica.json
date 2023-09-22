@@ -5,11 +5,11 @@
 			"components": [
 				{
 					"carrec": "Cap de colla",
-					"nom": "Xavier Marín i Rísquez"
+					"nom": "Júlia Font i Aguilar"
 				},
 				{
 					"carrec": "Sots-cap de colla",
-					"nom": "Pau Coll i Casellas"
+					"nom": "Oriol Segura i Niño"
 				}
 			]
 		},
@@ -19,34 +19,17 @@
 				"components": [
 					{
 						"carrec": "Cap de troncs",
-						"nom": "Júlia Font i Aguilar"
-					},
-					{
-						"nom": "Laia Boixet i Lladó"
-					},
-					{
-						"nom": "Pau Rosselló i Carreras"
-					},
-					{
-						"nom": "Júlia Montserrat i Ruiz"
-					},
-					{
-						"nom": "Eduard Llorens i Pomé"
-					},
-					{
-						"nom": "David Torras i Martín"
-					},
-					{
-						"nom": "Aina Vila i Pont"
-					},
-					{
 						"nom": "Biel Romera i Muñoz"
 					},
 					{
-						"nom": "Queralt Bautista i Rosas"
+						"carrec": "Cap de pilars",
+						"nom": "David Torras i Martín"
 					},
 					{
-						"nom": "Ignasi Tortras i de la Cruz"
+						"nom": "Sheikh Cordero i Rodríguez"
+					},
+					{
+						"nom": "Maria Reseco i Badia"
 					}
 				]
 			},
@@ -55,19 +38,22 @@
 				"components": [
 					{
 						"carrec": "Cap de poms",
-						"nom": "Paula Olivé i Roselló"
-					},
-					{
-						"nom": "Carlota Fornells"
-					},
-					{
-						"nom": "Carla Falguera i Garrido"
+						"nom": "Ignasi Tortras i de la Cruz"
 					},
 					{
 						"nom": "Núria Bautista i Rosas"
 					},
 					{
-						"nom": "Ana Paula i Monzón"
+						"nom": "Berta Boixet i Lladó"
+					},
+					{
+						"nom": "Carla Falguera i Garrido"
+					},
+					{
+						"nom": "Martí Gumà i Marín"
+					},
+					{
+						"nom": "Amanda Martínez i Vila"
 					}
 				]
 			},
@@ -76,44 +62,175 @@
 				"components": [
 					{
 						"carrec": "Cap de pinyes",
-						"nom": "Pau Coll i Casellas"
+						"nom": "Eudald Rovira i Rovira"
+					},
+					{
+						"nom": "Guillem Canals i Erill"
 					},
 					{
 						"nom": "Edgar Castellanos i Offroy"
 					},
 					{
-						"nom": "Aida Sanfeliu i Gubern"
-					},
-					{
-						"nom": "Oriol Segura i Niño"
-					},
-					{
-						"nom": "Pau Sánchez i Viol"
-					},
-					{
-						"nom": "Martí Puig i Vall"
-					},
-					{
-						"nom": "Bet Romera i Mirabent"
+						"nom": "Mariona Graupera i Clivillé"
 					},
 					{
 						"nom": "Laia Homs i Vilaseca"
 					},
 					{
+						"nom": "Pau Sánchez i Viol"
+					},
+					{
 						"nom": "Anna Santamaria i Balaguer"
+					},
+					{
+						"nom": "Nil Santaulària i Cruz"
 					},
 					{
 						"nom": "Jordi Torrens i Camprubí"
 					},
 					{
-						"nom": "Eudald Rovira i Rovira"
+						"nom": "Aina Vila i Pont"
+					}
+				]
+			},
+			{
+				"titol": "Equip d'acolliment físic i tecnificació",
+				"components": [
+					{
+						"nom": "Hèctor Carmona i López"
 					},
 					{
-						"nom": "Arnau Espinalt i Xixons"
+						"nom": "Edgar Castellanos i Offroy"
+					},
+					{
+						"nom": "Juli Serra i Balaguer"
+					},
+					{
+						"nom": "Alba Sirag i Grau"
+					},
+					{
+						"nom": "Pol Tibau i Rubau"
 					}
 				]
 			}
 		]
 	},
-	"antigues": {}
+	"antigues": {
+		"2022-2023": {
+			"direccio": {
+				"titol": "Direcció tècnica",
+				"components": [
+					{
+						"carrec": "Cap de colla",
+						"nom": "Xavier Marín i Rísquez"
+					},
+					{
+						"carrec": "Sots-cap de colla",
+						"nom": "Pau Coll i Casellas"
+					}
+				]
+			},
+			"junta": [
+				{
+					"titol": "Equip de troncs",
+					"components": [
+						{
+							"carrec": "Cap de troncs",
+							"nom": "Júlia Font i Aguilar"
+						},
+						{
+							"nom": "Queralt Bautista i Rosas"
+						},
+						{
+							"nom": "Laia Boixet i Lladó"
+						},
+						{
+							"nom": "Eduard Llorens i Pomé"
+						},
+						{
+							"nom": "Júlia Montserrat i Ruiz"
+						},
+						{
+							"nom": "Biel Romera i Muñoz"
+						},
+						{
+							"nom": "Pau Rosselló i Carreras"
+						},
+						{
+							"nom": "David Torras i Martín"
+						},
+						{
+							"nom": "Ignasi Tortras i de la Cruz"
+						},
+						{
+							"nom": "Aina Vila i Pont"
+						}
+					]
+				},
+				{
+					"titol": "Equip de poms",
+					"components": [
+						{
+							"carrec": "Cap de poms",
+							"nom": "Paula Olivé i Roselló"
+						},
+						{
+							"nom": "Núria Bautista i Rosas"
+						},
+						{
+							"nom": "Carla Falguera i Garrido"
+						},
+						{
+							"nom": "Carlota Fornells"
+						},
+						{
+							"nom": "Ana Paula Monzón i d'Anna"
+						}
+					]
+				},
+				{
+					"titol": "Equip de pinyes, folres, i manilles",
+					"components": [
+						{
+							"carrec": "Cap de pinyes",
+							"nom": "Pau Coll i Casellas"
+						},
+						{
+							"nom": "Edgar Castellanos i Offroy"
+						},
+						{
+							"nom": "Arnau Espinalt i Xixons"
+						},
+						{
+							"nom": "Laia Homs i Vilaseca"
+						},
+						{
+							"nom": "Martí Puig i Vall"
+						},
+						{
+							"nom": "Bet Romera i Mirabent"
+						},
+						{
+							"nom": "Eudald Rovira i Rovira"
+						},
+						{
+							"nom": "Pau Sánchez i Viol"
+						},
+						{
+							"nom": "Aida Sanfeliu i Gubern"
+						},
+						{
+							"nom": "Anna Santamaria i Balaguer"
+						},
+						{
+							"nom": "Oriol Segura i Niño"
+						},
+						{
+							"nom": "Jordi Torrens i Camprubí"
+						}
+					]
+				}
+			]
+		}
+	}
 }

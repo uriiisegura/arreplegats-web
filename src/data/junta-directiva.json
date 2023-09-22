@@ -4,16 +4,12 @@
 			"titol": "Direcció directiva",
 			"components": [
 				{
-					"carrec": "Presidenta",
-					"nom": "Clara Montoya i García"
-				},
-				{
-					"carrec": "Vicepresident",
+					"carrec": "President",
 					"nom": "Benet Antius i Lozano"
 				},
 				{
-					"carrec": "Secretària",
-					"nom": "Cristina Oliveira i Coll"
+					"carrec": "Vicepresidenta",
+					"nom": "Núria Fonts i Anglès"
 				},
 				{
 					"carrec": "Secretària",
@@ -27,9 +23,6 @@
 				"components": [
 					{
 						"carrec": "Tresorer",
-						"nom": "Pere Llopart i Roca"
-					},
-					{
 						"nom": "Hèctor Carmona i López"
 					},
 					{
@@ -42,22 +35,22 @@
 				"components": [
 					{
 						"carrec": "Cap de promoció",
-						"nom": "Núria Fonts i Anglès"
-					},
-					{
 						"nom": "Martina Soler i Collell"
 					},
 					{
-						"nom": "Arianda Sánchez i Rodríguez"
-					},
-					{
-						"nom": "Jordi Casañas i Dalmau"
+						"nom": "Martina Cusidó i Gascón"
 					},
 					{
 						"nom": "Ermengol Passola i Lizandra"
 					},
 					{
-						"nom": "Jordina Rué i Alcové"
+						"nom": "Berta Ramírez i Jou"
+					},
+					{
+						"nom": "Oriol Segura i Niño"
+					},
+					{
+						"nom": "David Torras i Martín"
 					}
 				]
 			},
@@ -66,22 +59,22 @@
 				"components": [
 					{
 						"carrec": "Cap de logística",
-						"nom": "Carla Rubio i Masferrer"
+						"nom": "Clara Llonch i Vidal"
 					},
 					{
-						"nom": "Jaume Oriol i Lladó"
+						"nom": "Maria Antònia Gaya i Torres"
 					},
 					{
-						"nom": "Arnau Mallén i Boronat"
-					},
-					{
-						"nom": "Eduard Càmara i Frias"
+						"nom": "Gina Giró i Aguilar"
 					},
 					{
 						"nom": "Martí Gumà i Marín"
 					},
 					{
-						"nom": "Clara Llonch i Pulido"
+						"nom": "Pau Pagès i Ramírez"
+					},
+					{
+						"nom": "Aida Sanfeliu i Gubern"
 					}
 				]
 			},
@@ -90,49 +83,19 @@
 				"components": [
 					{
 						"carrec": "Cap d'acollida",
-						"nom": "Maria Babià i Soler"
-					},
-					{
-						"nom": "Pere Llopart i Roca"
-					},
-					{
-						"nom": "Aida Sanfeliu i Gubern"
-					},
-					{
-						"nom": "Jordina Rué i Alcové"
-					},
-					{
-						"nom": "Núria Fonts i Anglès"
-					},
-					{
-						"nom": "Aina Oliu i Cordomí"
-					},
-					{
-						"nom": "Anna Santamaria i Balaguer"
-					},
-					{
 						"nom": "Queralt Casademont i Mir"
 					},
 					{
-						"nom": "Gina Giró i Aguilar"
+						"nom": "Marc Bombardó i Heras"
 					},
 					{
-						"nom": "Berta Ramírez i Jou"
-					}
-				]
-			},
-			{
-				"titol": "Gralles i tabals",
-				"components": [
-					{
-						"carrec": "Cap de músics",
-						"nom": "Genís Soler i Rafart"
+						"nom": "Paula Cid i Balcells"
 					},
 					{
-						"nom": "Oriol Pérez i Fernández"
+						"nom": "Mariona Graupera i Clivillé"
 					},
 					{
-						"nom": "Blai Bolea i Galvez"
+						"nom": "Pol Tibau i Rubau"
 					}
 				]
 			},
@@ -144,22 +107,19 @@
 						"nom": "Laia Soto i Gustamante"
 					},
 					{
+						"nom": "Jana Graupera i Salicrú"
+					},
+					{
+						"nom": "Adriana Guillermo i Cassà"
+					},
+					{
 						"nom": "Laura Llopis i Colom"
 					},
 					{
-						"nom": "Maria Llorach i Pulido"
+						"nom": "David Pato i Méndez"
 					},
 					{
 						"nom": "Blai Rosell i Ollé"
-					},
-					{
-						"nom": "Ares Font i Urpí"
-					},
-					{
-						"nom": "David Pato"
-					},
-					{
-						"nom": "Laura Baus i Samaranch"
 					}
 				]
 			},
@@ -171,13 +131,13 @@
 						"nom": "Sabina García i Sàbat"
 					},
 					{
+						"nom": "Marta Arnau i Piculla"
+					},
+					{
 						"nom": "Queralt Casademont i Mir"
 					},
 					{
-						"nom": "Laura Ribó i Roca"
-					},
-					{
-						"nom": "Marta Arnau i Piculla"
+						"nom": "Alba Sirag i Grau"
 					}
 				]
 			},
@@ -186,22 +146,25 @@
 				"components": [
 					{
 						"carrec": "Cap d'activitats",
-						"nom": "Pere Llopart i Roca"
-					},
-					{
-						"nom": "Ermengol Passola i Lizandra"
-					},
-					{
 						"nom": "Andreu Huguet i Segarra"
 					},
 					{
+						"nom": "Berta Boixet i Lladó"
+					},
+					{
+						"nom": "Marc Compte i Bastida"
+					},
+					{
+						"nom": "Laura Fuentes i Ibars"
+					},
+					{
+						"nom": "Pere Llopart i Roca"
+					},
+					{
+						"nom": "Aida Sanfeliu i Gubern"
+					},
+					{
 						"nom": "Edgar Tena i Marqués"
-					},
-					{
-						"nom": "Jordina Rué i Alcové"
-					},
-					{
-						"nom": "Anna Santamaria i Balaguer"
 					}
 				]
 			},
@@ -210,13 +173,40 @@
 				"components": [
 					{
 						"carrec": "Cap",
+						"nom": "Violeta Hernàndez i Arnal"
+					},
+					{
+						"nom": "Marta Alcaide i Vera"
+					},
+					{
+						"nom": "Víctor Andreu i Ferro"
+					},
+					{
+						"nom": "Marta Arnau i Piculla"
+					},
+					{
+						"nom": "Aina Bach i Manresa"
+					},
+					{
+						"nom": "Emma Ballesté i Seyós"
+					},
+					{
+						"nom": "Sheikh Cordero i Rodríguez"
+					},
+					{
+						"nom": "Júlia Cuenca i González"
+					},
+					{
+						"nom": "Enric Manzano i Verdaguer"
+					},
+					{
 						"nom": "Clàudia Masachs i Dilmé"
 					},
 					{
-						"nom": "Edgar Tena i Marqués"
+						"nom": "Jordina Rué i Alcové"
 					},
 					{
-						"nom": "Bet Romera i Mirabent"
+						"nom": "Edgar Tena i Marqués"
 					},
 					{
 						"nom": "Marina de la Torre i Lozano"
@@ -225,5 +215,232 @@
 			}
 		]
 	},
-	"antigues": {}
+	"antigues": {
+		"2022-2023": {
+			"direccio": {
+				"titol": "Direcció directiva",
+				"components": [
+					{
+						"carrec": "Presidenta",
+						"nom": "Clara Montoya i García"
+					},
+					{
+						"carrec": "Vicepresident",
+						"nom": "Benet Antius i Lozano"
+					},
+					{
+						"carrec": "Secretària",
+						"nom": "Cristina Oliveira i Coll"
+					},
+					{
+						"carrec": "Secretària",
+						"nom": "Aina Oliu i Cordomí"
+					}
+				]
+			},
+			"junta": [
+				{
+					"titol": "Tresoreria",
+					"components": [
+						{
+							"carrec": "Tresorer",
+							"nom": "Pere Llopart i Roca"
+						},
+						{
+							"nom": "Guillem Canals i Erill"
+						},
+						{
+							"nom": "Hèctor Carmona i López"
+						}
+					]
+				},
+				{
+					"titol": "Promoció i difusió",
+					"components": [
+						{
+							"carrec": "Cap de promoció",
+							"nom": "Núria Fonts i Anglès"
+						},
+						{
+							"nom": "Jordi Casañas i Dalmau"
+						},
+						{
+							"nom": "Ermengol Passola i Lizandra"
+						},
+						{
+							"nom": "Jordina Rué i Alcové"
+						},
+						{
+							"nom": "Arianda Sánchez i Rodríguez"
+						},
+						{
+							"nom": "Martina Soler i Collell"
+						}
+					]
+				},
+				{
+					"titol": "Logística i contractació",
+					"components": [
+						{
+							"carrec": "Cap de logística",
+							"nom": "Carla Rubio i Masferrer"
+						},
+						{
+							"nom": "Eduard Càmara i Frias"
+						},
+						{
+							"nom": "Martí Gumà i Marín"
+						},
+						{
+							"nom": "Clara Llonch i Vidal"
+						},
+						{
+							"nom": "Arnau Mallén i Boronat"
+						},
+						{
+							"nom": "Jaume Oriol i Lladó"
+						}
+					]
+				},
+				{
+					"titol": "Equip d'acollida",
+					"components": [
+						{
+							"carrec": "Cap d'acollida",
+							"nom": "Maria Babià i Soler"
+						},
+						{
+							"nom": "Queralt Casademont i Mir"
+						},
+						{
+							"nom": "Núria Fonts i Anglès"
+						},
+						{
+							"nom": "Gina Giró i Aguilar"
+						},
+						{
+							"nom": "Pere Llopart i Roca"
+						},
+						{
+							"nom": "Aina Oliu i Cordomí"
+						},
+						{
+							"nom": "Berta Ramírez i Jou"
+						},
+						{
+							"nom": "Jordina Rué i Alcové"
+						},
+						{
+							"nom": "Aida Sanfeliu i Gubern"
+						},
+						{
+							"nom": "Anna Santamaria i Balaguer"
+						}
+					]
+				},
+				{
+					"titol": "Gralles i tabals",
+					"components": [
+						{
+							"carrec": "Cap de músics",
+							"nom": "Genís Soler i Rafart"
+						},
+						{
+							"nom": "Blai Bolea i Gàlvez"
+						},
+						{
+							"nom": "Oriol Pérez i Fernández"
+						}
+					]
+				},
+				{
+					"titol": "Equip sanitari",
+					"components": [
+						{
+							"carrec": "Cap de sanitaris",
+							"nom": "Laia Soto i Gustamante"
+						},
+						{
+							"nom": "Laura Baus i Samaranch"
+						},
+						{
+							"nom": "Ares Font i Urpí"
+						},
+						{
+							"nom": "Laura Llopis i Colom"
+						},
+						{
+							"nom": "Maria Llorach i Pulido"
+						},
+						{
+							"nom": "David Pato i Méndez"
+						},
+						{
+							"nom": "Blai Rosell i Ollé"
+						}
+					]
+				},
+				{
+					"titol": "Equip de material",
+					"components": [
+						{
+							"carrec": "Cap de material",
+							"nom": "Sabina García i Sàbat"
+						},
+						{
+							"nom": "Marta Arnau i Piculla"
+						},
+						{
+							"nom": "Queralt Casademont i Mir"
+						},
+						{
+							"nom": "Laura Ribó i Roca"
+						}
+					]
+				},
+				{
+					"titol": "Comissió d'activitats",
+					"components": [
+						{
+							"carrec": "Cap d'activitats",
+							"nom": "Pere Llopart i Roca"
+						},
+						{
+							"nom": "Andreu Huguet i Segarra"
+						},
+						{
+							"nom": "Ermengol Passola i Lizandra"
+						},
+						{
+							"nom": "Jordina Rué i Alcové"
+						},
+						{
+							"nom": "Anna Santamaria i Balaguer"
+						},
+						{
+							"nom": "Edgar Tena i Marqués"
+						}
+					]
+				},
+				{
+					"titol": "Comissió feminista",
+					"components": [
+						{
+							"carrec": "Cap",
+							"nom": "Clàudia Masachs i Dilmé"
+						},
+						{
+							"nom": "Bet Romera i Mirabent"
+						},
+						{
+							"nom": "Edgar Tena i Marqués"
+						},
+						{
+							"nom": "Marina de la Torre i Lozano"
+						}
+					]
+				}
+			]
+		}
+	}
 }
