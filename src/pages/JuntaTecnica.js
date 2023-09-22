@@ -32,6 +32,16 @@ class JuntaTecnica extends Component {
 					S'encarrega de vetllar pel desenvolupament de l'activitat castellera. Organitza els assajos i decideix els castells que es faran durant el curs. Forma i prepara als castellers per a fer correctament la seva tasca. La Junta Tècnica és qui decideix, valorant els assajos durant el curs, quins castells es podran fer a les diades.
 				</p>
 
+				<p style={{color: 'var(--grey-400)'}}>Consulta la junta tècnica de temporades anteriors:</p>
+				<div className="junta-year-wrap">
+					{
+						Object.keys(junta.antigues).map((y, i) => {
+							return <NavLink className={`junta-year ${junta_temporada === junta.antigues[y]}`} to={`/junta-tecnica/${y}`} key={`year-${i}`}>{y}</NavLink>;
+						})
+					}
+					<NavLink className={`junta-year ${junta_temporada === junta.actual}`} to="/junta-tecnica">ACTUAL</NavLink>
+				</div>
+
 				<JuntaTeams
 					junta={junta_temporada}
 					/>

@@ -1629,6 +1629,29 @@ Junta tècnica
 	font-weight: 700;
 }
 
+.junta-year-wrap {
+	display: flex;
+	gap: 3px;
+}
+
+.junta-year {
+	background-color: var(--primary-600);
+	line-height: 1;
+	padding: 3px 5px;
+	border-radius: 3px;
+	user-select: none;
+	color: var(--black);
+	opacity: 0.75;
+}
+.junta-year:not(.false) {
+pointer-events: none;
+	color: var(--white);
+	opacity: 1;
+}
+.junta-year:hover {
+	opacity: 1;
+}
+
 @media screen and (max-width: 1000px) {
 	.juntes {
 		grid-template-columns: repeat(1, 1fr);

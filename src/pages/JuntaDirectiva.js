@@ -32,6 +32,16 @@ class JuntaDirectiva extends Component {
 					La funció de la Junta Directiva és representar, dirigir i administrar l'associació. Es controla el funcionament de la colla, el balanç i l'estat de comptes, s'organitzen les activitats i espais que es puguin necessitar. També es manté el control de les altes i baixes dins la colla i es convoquen assemblees.
 				</p>
 
+				<p style={{color: 'var(--grey-400)'}}>Consulta la junta directiva de temporades anteriors:</p>
+				<div className="junta-year-wrap">
+					{
+						Object.keys(junta.antigues).map((y, i) => {
+							return <NavLink className={`junta-year ${junta_temporada === junta.antigues[y]}`} to={`/junta-directiva/${y}`} key={`year-${i}`}>{y}</NavLink>;
+						})
+					}
+					<NavLink className={`junta-year ${junta_temporada === junta.actual}`} to="/junta-directiva">ACTUAL</NavLink>
+				</div>
+
 				<JuntaTeams
 					junta={junta_temporada}
 					/>
