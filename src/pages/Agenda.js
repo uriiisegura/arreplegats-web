@@ -7,6 +7,7 @@ const backgrounds = {
 	'ACTUACIÓ': '--red-medium',
 	'DINAR / SOPAR': '--orange-dark',
 	'ASSEMBLEA': '--blue-medium',
+	'TALLER': '--orange-medium',
 	'': '--grey-200'
 };
 const months = ["gener","febrer","març","abril","maig","juny","juliol","agost","setembre","octubre","novembre","desembre"];
