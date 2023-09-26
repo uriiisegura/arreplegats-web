@@ -87,8 +87,8 @@ function App() {
 					<Route path="/mots-encreuats/:idx" element={<MotsEncreuats />} />
 					<Route path="/memory" element={<Memory />} />
 					<Route path="/penjat" element={<NivellsPenjat />} />
-					<Route path="/joc-castells" element={<></>} />
 					<Route path="/penjat/:idx" element={<Penjat />} />
+					<Route path="/joc-castells" element={<></>} />
 					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
