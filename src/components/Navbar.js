@@ -49,12 +49,12 @@ class Navbar extends Component {
 					</div>
 					<div className="nav-btn">
 						<button onClick={this.expandMobile}>
-							<img src="/font-awesome/align-justify.svg" alt="" />
+							<img src="/font-awesome/align-justify.svg" alt="align-justify.svg" />
 						</button>
 					</div>
 					<ul id="nav-links">
 						<li onClick={() => this.showHide('azus')} className="nav-link">
-							<span><span>Castellers<img src="/font-awesome/caret-down.svg" alt="" /></span></span>
+							<span><span>Castellers<img src="/font-awesome/caret-down.svg" alt="caret-down.svg" /></span></span>
 							<div id="azus" className="sub-menus">
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">La colla</h4>
@@ -103,7 +103,7 @@ class Navbar extends Component {
 						<li className="nav-link"><NavLink to="/agenda"><span>Agenda</span></NavLink></li>
 						<li className="nav-link"><NavLink to="/noticies"><span>Notícies</span></NavLink></li>
 						<li onClick={() => this.showHide('media')} className="nav-link">
-							<span><span>Mèdia<img src="/font-awesome/caret-down.svg" alt="" /></span></span>
+							<span><span>Mèdia<img src="/font-awesome/caret-down.svg" alt="caret-down.svg" /></span></span>
 							<div id="media" className="sub-menus">
 								<div className="sub-menu">
 									<ul>
