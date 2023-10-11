@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import * as Papa from 'papaparse';
 import ResumCard from "../components/ResumCard";
 import GetCastell from "../functions/GetCastell";
+import GetTemporada from "../functions/GetTemporada";
+import FromEuropean from "../functions/FromEuropean";
+import IsFromTemporada from "../functions/IsFromTemporada";
 import castells_map from "../data/castells-top.json";
 import categories from "../data/categories-castells.json";
 
@@ -14,7 +17,11 @@ class ResumHistoric extends Component {
 		this.state = {
 			diades: {},
 			puntuacions: {},
-			load: false
+			hasDiades: false,
+			hasPuntuacions: false,
+			hasCastells: false,
+			temporada: null,
+			castells: []
 		};
 	}
 	aggregate(rows) {
@@ -78,7 +85,7 @@ class ResumHistoric extends Component {
 			complete: (results) => {
 				this.setState({
 					diades: this.aggregate(results.data),
-					load: true
+					hasDiades: true
 				});
 			}
 		});
@@ -88,21 +95,22 @@ class ResumHistoric extends Component {
 			complete: (results) => {
 				this.setState({
 					puntuacions: this.process_puntuacions(results.data),
-					load: true
+					hasPuntuacions: true
 				});
 			}
 		});
 	}
-	render() {
-		if (!this.state.load) {
-			return (<>
-				<section className="resum-historic">
-					<h2>Resum Històric</h2>
-					<div className="loading"></div>
-				</section>
-			</>);
-		}
-
+	getTemporades() {
+		const temporadesHTML = [];
+		const lastTemporada = GetTemporada(new Date());
+		temporadesHTML.push(<option value="null">--- TOTES ---</option>);
+		for (let y = 1994; y < new Date().getFullYear(); y++)
+			temporadesHTML.push(<option value={`${y}-${y+1}`}>Temporada {y}-{y+1}</option>);
+		if (temporadesHTML[temporadesHTML.length - 1].props.value !== lastTemporada)
+			temporadesHTML.push(<option value={lastTemporada}>Temporada {lastTemporada}</option>);
+		return temporadesHTML;
+	}
+	filterTemporada() {
 		const isSpecialSim = dict => {
 			const keys = Object.keys(dict);
 			const values = Object.values(dict);
@@ -161,80 +169,87 @@ class ResumHistoric extends Component {
 		let same_round = {};
 		let have_same_round = false;
 		[...Object.values(this.state.diades)].forEach((diada, i) => {
-			diada["castells"].forEach((dict) => {
-				const castell = Object.values(dict)[0];
-				if (castell[0] === "i" || (castell[0] === "p" && castell[1] === "d")) return;
-				const [cas, des] = GetCastell(castell, false);
-				const is_same_round = last_diada === i && last_order === Object.keys(dict)[0] && last_order !== "" ? true : false;
-	
-				last_diada = i;
-				last_order = Object.keys(dict)[0];
-	
-				if (is_same_round) {
-					have_same_round = true;
-					if (!(castell in same_round))
-						same_round[castell] = 0;
-					same_round[castell] += 1;
-					return;
-				} else if (!is_same_round && have_same_round) {
-					const [isSpecial, specialName] = isSpecialSim(same_round);
-					if (isSpecial) {
-						const [thisCas, thisDes] = GetCastell(specialName, false);
-	
-						if (!(thisCas.replace('T','2') in this.state.puntuacions)) {
-							if (!(thisCas in not_scored_castells))
-								not_scored_castells[thisCas] = [0, 0];
-							
-							if (thisDes) not_scored_castells[thisCas][0] += 1;
-							else		 not_scored_castells[thisCas][1] += 1;
-						} else {
-							if (!(thisCas in castells_dict))
-							castells_dict[thisCas] = [0, 0];
-			
-							if (thisDes) castells_dict[thisCas][0] += 1;
-							else		 castells_dict[thisCas][1] += 1;
-						}
-					} else {
-						Object.keys(same_round).forEach((thisCastell, i) => {
-							const [thisCas, thisDes] = GetCastell(thisCastell, false);
-	
+			let add_diada = true;
+			if (this.state.temporada) {
+				const diada_date = FromEuropean(diada['info']['data']);
+				add_diada = IsFromTemporada(diada_date, this.state.temporada);
+			}
+			if (add_diada) {
+				diada["castells"].forEach((dict) => {
+					const castell = Object.values(dict)[0];
+					if (castell[0] === "i" || (castell[0] === "p" && castell[1] === "d")) return;
+					const [cas, des] = GetCastell(castell, false);
+					const is_same_round = last_diada === i && last_order === Object.keys(dict)[0] && last_order !== "" ? true : false;
+		
+					last_diada = i;
+					last_order = Object.keys(dict)[0];
+		
+					if (is_same_round) {
+						have_same_round = true;
+						if (!(castell in same_round))
+							same_round[castell] = 0;
+						same_round[castell] += 1;
+						return;
+					} else if (!is_same_round && have_same_round) {
+						const [isSpecial, specialName] = isSpecialSim(same_round);
+						if (isSpecial) {
+							const [thisCas, thisDes] = GetCastell(specialName, false);
+		
 							if (!(thisCas.replace('T','2') in this.state.puntuacions)) {
 								if (!(thisCas in not_scored_castells))
 									not_scored_castells[thisCas] = [0, 0];
 								
-								if (thisDes) not_scored_castells[thisCas][0] += Object.values(same_round)[i];
-								else		 not_scored_castells[thisCas][1] += Object.values(same_round)[i];
+								if (thisDes) not_scored_castells[thisCas][0] += 1;
+								else		 not_scored_castells[thisCas][1] += 1;
 							} else {
 								if (!(thisCas in castells_dict))
-									castells_dict[thisCas] = [0, 0];
-					
-								if (thisDes) castells_dict[thisCas][0] += Object.values(same_round)[i];
-								else		 castells_dict[thisCas][1] += Object.values(same_round)[i];
+								castells_dict[thisCas] = [0, 0];
+				
+								if (thisDes) castells_dict[thisCas][0] += 1;
+								else		 castells_dict[thisCas][1] += 1;
 							}
-						});
+						} else {
+							Object.keys(same_round).forEach((thisCastell, i) => {
+								const [thisCas, thisDes] = GetCastell(thisCastell, false);
+		
+								if (!(thisCas.replace('T','2') in this.state.puntuacions)) {
+									if (!(thisCas in not_scored_castells))
+										not_scored_castells[thisCas] = [0, 0];
+									
+									if (thisDes) not_scored_castells[thisCas][0] += Object.values(same_round)[i];
+									else		 not_scored_castells[thisCas][1] += Object.values(same_round)[i];
+								} else {
+									if (!(thisCas in castells_dict))
+										castells_dict[thisCas] = [0, 0];
+						
+									if (thisDes) castells_dict[thisCas][0] += Object.values(same_round)[i];
+									else		 castells_dict[thisCas][1] += Object.values(same_round)[i];
+								}
+							});
+						}
+						have_same_round = false;
+						same_round = {};
+						same_round[castell] = 1;
+					} else {
+						same_round = {};
+						same_round[castell] = 1;
 					}
-					have_same_round = false;
-					same_round = {};
-					same_round[castell] = 1;
-				} else {
-					same_round = {};
-					same_round[castell] = 1;
-				}
-	
-				if (!(cas.replace('T','2') in this.state.puntuacions)) {
-					if (!(cas in not_scored_castells))
-						not_scored_castells[cas] = [0, 0];
-					
-					if (des)	not_scored_castells[cas][0] += 1;
-					else		not_scored_castells[cas][1] += 1;
-				} else {
-					if (!(cas in castells_dict))
-					castells_dict[cas] = [0, 0];
-	
-					if (des)	castells_dict[cas][0] += 1;
-					else		castells_dict[cas][1] += 1;
-				}
-			});
+		
+					if (!(cas.replace('T','2') in this.state.puntuacions)) {
+						if (!(cas in not_scored_castells))
+							not_scored_castells[cas] = [0, 0];
+						
+						if (des)	not_scored_castells[cas][0] += 1;
+						else		not_scored_castells[cas][1] += 1;
+					} else {
+						if (!(cas in castells_dict))
+						castells_dict[cas] = [0, 0];
+		
+						if (des)	castells_dict[cas][0] += 1;
+						else		castells_dict[cas][1] += 1;
+					}
+				});
+			}
 		});
 		if (have_same_round) {
 			const [isSpecial, specialName] = isSpecialSim(same_round);
@@ -311,25 +326,63 @@ class ResumHistoric extends Component {
 			return scoreB - scoreA;
 		});
 
-		castells = castells.concat(castells_no_puntuats);
+		this.setState({castells: castells.concat(castells_no_puntuats)});
+	}
+	updateTemporada(e) {
+		this.setState({temporada: e.target.value === 'null' ? null : e.target.value}, () => {
+			this.filterTemporada();
+		});
+	}
+	render() {
+		if (!(this.state.hasDiades && this.state.hasPuntuacions)) {
+			return (<>
+				<section className="resum-historic">
+					<h2>Resum Històric</h2>
+					<div className="loading"></div>
+				</section>
+			</>);
+		}
+
+		if (!this.state.hasCastells) {
+			this.setState({
+				hasCastells: true
+			}, () => {
+				this.filterTemporada();
+			});
+		}
 
 		return (<>
 			<section className="resum-historic">
 				<h2>Resum Històric</h2>
 
+				<div className="historic-filter-container">
+					<label htmlFor="date_from">Filtra per temporades:</label>
+					<div className="select-arrow">
+						<select type="text" id="castell" onChange={this.updateTemporada.bind(this)}>
+							{this.getTemporades()}
+						</select>
+						<div className="dblarrow"><b></b><i></i></div>
+					</div>
+				</div>
+
+				{
+					this.state.temporada === '2020-2021' && <p>Durant la temporada 2020-2021 no hi va haver castells universitaris a causa de l'aturada de l'activitat provocada per la COVID-19.</p>
+				}
+
 				{
 					categories.map((e, i) => {
-						const castells_category = castells.filter(c => {
+						const castells_category = this.state.castells.filter(c => {
 							return e.castells.includes(c[0]);
 						});
-						castells_category.forEach(c => castells.splice(castells.findIndex(k => k[0] === c[0]), 1));
-						return <>
+						castells_category.forEach(c => this.state.castells.splice(this.state.castells.findIndex(k => k[0] === c[0]), 1));
+						if (castells_category.length === 0) return <div key={`void-${i}`}></div>;
+						return <div className="resum-wrap-wrap" key={`resum-wrap-${i}`}>
 							<h4>{e.name}</h4>
 							<div className="resum-wrap">
 								{
 									castells_category.map((e, j) => {
 										return <ResumCard
-											key={j}
+											key={`resum-${i}-card-${j}`}
 											castell={e[0]}
 											descarregats={e[1][0]}
 											carregats={e[1][1]}
@@ -338,15 +391,15 @@ class ResumHistoric extends Component {
 									})
 								}
 							</div>
-						</>
+						</div>
 					})
 				}
-				<h4>Castells no puntuats</h4>
+				{this.state.castells.length > 0 && <h4>Castells no puntuats</h4>}
 				<div className="resum-wrap">
 					{
-						castells.map((e, i) => {
+						this.state.castells.map((e, i) => {
 							return <ResumCard
-								key={i}
+								key={`no-puntuat-${i}}`}
 								castell={e[0]}
 								descarregats={e[1][0]}
 								carregats={e[1][1]}

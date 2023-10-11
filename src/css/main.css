@@ -1185,14 +1185,21 @@ Resum històric
 	margin-bottom: 0.5rem;
 }
 
+.historic-filter-container {
+	margin-bottom: 2rem;
+}
+
+.resum-wrap-wrap {
+	margin-bottom: 2rem;
+}
+.resum-wrap-wrap:last-of-type {
+	margin-bottom: 0;
+}
+
 .resum-wrap {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	gap: 30px 15px;
-	margin-bottom: 2rem;
-}
-.resum-wrap:last-of-type {
-	margin-bottom: 0;
 }
 
 @media screen and (max-width: 1500px) {
