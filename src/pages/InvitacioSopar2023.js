@@ -120,7 +120,7 @@ function InvitacioSopar2023() {
                     <input
                         type="text"
                         readOnly
-                        value={'SALAMANDRA - {Nom} {Cognom}'}
+                        value={'{Colla convencional} - {Nom} {Cognom}'}
                         style={{
                             width: 'calc(100% - 10px)',
                             marginLeft: 10,
@@ -128,6 +128,8 @@ function InvitacioSopar2023() {
                             backgroundColor: '#eee',
                         }}
                     />
+
+                    <p><strong>Exemples:</strong> "Moixis - Joan Garcia", "Safa - Alba Grau", "Capgrossos - Laura Serra"...</p>
                 </div>
 
                 <div
