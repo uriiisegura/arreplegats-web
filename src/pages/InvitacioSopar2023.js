@@ -1,4 +1,16 @@
+import { useState } from "react";
+
 function InvitacioSopar2023() {
+    const [copiedIBAN, setCopiedIBAN] = useState(false);
+
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text);
+
+        // IBAN
+        setCopiedIBAN(true);
+        setTimeout(() => setCopiedIBAN(false), 1000);
+    };
+
     return (
         <div
             style={{
@@ -74,6 +86,37 @@ function InvitacioSopar2023() {
                             backgroundColor: '#eee',
                         }}
                     />
+
+                    <div
+                        onClick={() => copyToClipboard('ES64 3025 0011 7614 0012 8727')}
+                        style={{
+                            width: 'calc(100%)',   // Considering marginLeft
+                            marginLeft: 10,
+                            height: 40,
+                            background: '#007BFF',       // Button color
+                            color: 'white',              // Text color
+                            border: 'none',
+                            borderRadius: 5,             // Rounded corners
+                            display: 'flex',             // Flexbox for centering
+                            justifyContent: 'center',    // Center horizontally
+                            alignItems: 'center',        // Center vertically
+                            cursor: 'pointer',           // Hand cursor on hover
+                            transition: 'background 0.3s', // Transition for hover effect
+                            padding: '5px 15px',         // Padding to make button look nicer
+                            boxSizing: 'border-box',    // Include padding in width and height calculations
+                            userSelect: 'none',          // Prevent selection of text on double click
+                            marginBottom: 10,
+                        }}
+                        onPointerOver={(e) => e.currentTarget.style.background = '#0056b3'}   // Darker color on hover
+                        onPointerOut={(e) => e.currentTarget.style.background = '#007BFF'}    // Original color on mouse out
+                        onPointerDown={(e) => e.currentTarget.style.background = '#004085'}   // Even darker on click
+                        onPointerUp={(e) => e.currentTarget.style.background = '#0056b3'}     // Back to hover color on mouse up
+                    >
+                        {
+                            copiedIBAN ? 'Copiat!' :
+                            "Copia l'IBAN"
+                        }
+                    </div>
 
                     <p>I posa el següent concepte!</p>
 
