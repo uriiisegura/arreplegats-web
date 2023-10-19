@@ -38,9 +38,6 @@ function InvitacioSopar2023() {
 
             <div
                 style={{
-                    display: 'flex',
-                    flexDirection: 'row',
-                    flexWrap: 'wrap',
                 }}
             >
                 <div
