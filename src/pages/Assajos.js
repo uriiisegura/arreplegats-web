@@ -7,7 +7,7 @@ class Assajos extends Component {
 				<h2>Assajos</h2>
 
 				<p>
-					Els bons castells no surten del no res: s'han d'assajar. Ens reunim dos dies a la setmana per fer història assaig a assaig.
+					Els bons castells no surten del no-res: s'han d'assajar. Ens reunim dos dies a la setmana per fer història assaig a assaig.
 				</p>
 			</section>
 			{/* <section className="image-divider img-576" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-576_x_324.jpg')`}}></section>

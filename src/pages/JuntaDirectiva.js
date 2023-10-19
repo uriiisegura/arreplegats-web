@@ -25,7 +25,7 @@ class JuntaDirectiva extends Component {
 				{ any && <p className="junta-message"><span>Atenció!</span> Estàs consultant la junta d'una temporada anterior. Per veure'n l'actual fes click <NavLink to="/junta-directiva">aquí</NavLink>.</p> }
 
 				<p>
-					La Junta Directiva està dirigida per l'equip de presidència. Ha de constar també de secretaria, tresoreria, comissió tècnica i comissió feminista. Actualment, també existeixen les comissions: material, acolliment social, músics, logística i contractació, promoció i difusió, equip sanitari i activitats.
+					La Junta Directiva és dirigida per l'equip de presidència. Ha de constar també de secretaria, tresoreria, comissió tècnica i comissió feminista. Actualment, també existeixen les comissions: material, acolliment social, músics, logística i contractació, promoció i difusió, equip sanitari i activitats.
 				</p>
 
 				<p>

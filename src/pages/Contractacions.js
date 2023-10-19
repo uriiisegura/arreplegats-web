@@ -24,10 +24,10 @@ class Contractacions extends Component {
 				</p>
 
 				<p>
-					No dubtis en contactar-nos. Et respondrem en menys de 24 hores! Cap compromís. 
+					No dubtis a contactar amb nosaltres. Et respondrem en menys de 24 hores! Cap compromís. 
 				</p>
 
-				<h3>Què t'oferim al contractar castellers?</h3>
+				<h3>Què t'oferim en contractar castellers?</h3>
 
 				<p>
 					Alcem castells, torres o pilars al teu esdeveniment. Si vols, pots contractar un sol pilar o castell o una actuació completa.
@@ -48,7 +48,7 @@ class Contractacions extends Component {
 				<h3>Qui som els castellers Arreplegats?</h3>
 
 				<p>
-					Els Arreplegats som una colla amb més d'un quart de segle d'història –fundada el 1995– i només fem castells amb persones matrículades a la universitat. Fins i tot les enxanetes són adultes!
+					Els Arreplegats som una colla amb més d'un quart de segle d'història –fundada el 1995– i només fem castells amb persones matriculades a la universitat. Fins i tot les enxanetes són adultes!
 				</p>
 
 				<p>
@@ -63,7 +63,7 @@ class Contractacions extends Component {
 					/>
 
 				<p>
-					Contractar castellers Arreplegats de la Zona Universitària és una oportunitat perfecta per a qualsevol organitzador que busqui regalar un record inoblidable al seu públic local o extranger.
+					Contractar castellers Arreplegats de la Zona Universitària és una oportunitat perfecta per a qualsevol organitzador que busqui regalar un record inoblidable al seu públic local o estranger.
 				</p>
 
 				<img

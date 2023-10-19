@@ -25,7 +25,7 @@ class JuntaTecnica extends Component {
 				{ any && <p className="junta-message"><span>Atenció!</span> Estàs consultant la junta d'una temporada anterior. Per veure'n l'actual fes click <NavLink to="/junta-tecnica">aquí</NavLink>.</p> }
 
 				<p>
-					La Junta Tècnica està formada per cap de colla i sots-cap de colla al capdavant. Els equips de la Junta Tècnica els decideixen cap i sots-cap de colla. Actualment consta de l'equip de troncs; l'equip de pinyes, folres, i manilles; i l'equip de poms.
+					La Junta Tècnica està formada per cap de colla i sots-cap de colla al capdavant. Els equips de la Junta Tècnica els decideixen cap i sots-cap de colla. Generalment consta de d'un equip de troncs; un equip de pinyes, folres, i manilles; i un de poms.
 				</p>
 
 				<p>

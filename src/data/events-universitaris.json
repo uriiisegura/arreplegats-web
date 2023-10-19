@@ -8,7 +8,7 @@
 	{
 		"date": "4 d'abril de 1995",
 		"title": "Fundació dels Arreplegats",
-		"description": "Després ja vam venir nosaltres! La nostra primera diada va ser el 5 de maig, a la festa de la FIB, on hi vam carregar un Pd4. Des d'aleshores hem seguit actuant i hem esdevingut la colla universitària més gran d'entre totes!",
+		"description": "Després ja vam venir nosaltres! La nostra primera diada va ser el 5 de maig, a la festa de la FIB, on vam carregar un Pd4. Des d'aleshores hem continuat actuant i hem esdevingut la colla universitària més gran d'entre totes!",
 		"color": "arreplegats"
 	},
 	{
@@ -52,7 +52,7 @@
 			},
 			{
 				"type": "span",
-				"text": " universitari, que seria també el primer castell de 8 format únicament per persones adultes. A més, vam esdevenir la primera colla en descarregar-lo al primer intent!"
+				"text": " universitari, que seria també el primer castell de 8 format únicament per persones adultes. A més, vam esdevenir la primera colla a descarregar-lo al primer intent!"
 			}
 		],
 		"image": "/images/gallery/4d8-diada-2009.jpeg",
@@ -92,7 +92,7 @@
 		"description": [
 			{
 				"type": "span",
-				"text": "Després d'haver-lo carregat el maig de 2010, en la 18a Diada de la colla vam aconseguir descarregar el "
+				"text": "Després d'haver-lo carregat el maig de 2010, en la 18a Diada de la colla vam descarregar el "
 			},
 			{
 				"type": "a",

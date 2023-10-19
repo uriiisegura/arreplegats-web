@@ -7,7 +7,7 @@ class VidaUniversitaria extends Component {
 				<h2>Vida universitària</h2>
 
 				<p>
-					Arreplegats no només són castells. Dins la colla també es duen a terme diferents activitats en l'àmbit social que ajuden a fomentar l'amistat i la germanor entre els arreplegats i les arreplegades. N'hi ha que són activitats de cada dia, com el post-assaig, però també se n'organitzen d'altres periòdicament. Aquí us n'expliquem algunes.
+					Arreplegats no només són castells. Dins la colla també es duen a terme diferents activitats en l'àmbit social que ajuden a fomentar l'amistat i la germanor entre els arreplegats i les arreplegades. N'hi ha que són activitats de cada dia, com el postassaig, però també se n'organitzen d'altres periòdicament. Aquí us n'expliquem algunes.
 				</p>
 
 				<h4>Sopar del novato</h4>
@@ -19,13 +19,13 @@ class VidaUniversitaria extends Component {
 				<h4>Capdesetmanazu</h4>
 
 				<p>
-					A finals de novembre, qualsevol arreplegat que vulgui pot anar al Capdesetmanazu. Aquest cap de setmana es passa en una casa rural i es realitzen jocs, gimcanes, activitats esportives, i festa. És una de les primeres accions socials que es fan cada any, on la cohesió entre els membres i la germanor dins la colla es fa notar i va en augment.
+					A finals de novembre, qualsevol arreplegat que vulgui pot anar al Capdesetmanazu. Aquest cap de setmana es passa en una casa rural i es duen a terme jocs, gimcanes, activitats esportives, i festa. És una de les primeres accions socials que es fan cada any, on la cohesió entre els membres i la germanor dins la colla es fa notar i va en augment.
 				</p>
 
 				<h4>Perpinyà</h4>
 
 				<p>
-					Des de fa molts anys, poc després de tornar de les vacances de Nadal s'organitza el viatge a Perpinyà. Ens acullen els Castellers del Riberal, de la Catalunya Nord, amb qui tenim una molt bona relació i sempre ens tracten d'allò més bé. Es realitzen actuacions castelleres i assajos, però també és un viatge per passar-ho bé i fer gresca. L'assaig que es fa amb Riberal acostuma a ser el més important de l'any, i s'hi fan i es valoren les proves més grosses de la història d'Arreplegats.
+					Des de fa molts anys, poc després de tornar de les vacances de Nadal s'organitza el viatge a Perpinyà. Ens acullen els Castellers del Riberal, de la Catalunya Nord, amb qui tenim una molt bona relació i sempre ens tracten d'allò més bé. Es duen a terme actuacions castelleres i assajos, però també és un viatge per passar-ho bé i fer gresca. L'assaig que es fa amb Riberal acostuma a ser el més important de l'any, i s'hi fan i es valoren les proves més grosses de la història d'Arreplegats.
 				</p>
 
 				<p>
@@ -53,7 +53,7 @@ class VidaUniversitaria extends Component {
 				<h4>L'Arreplegator</h4>
 
 				<p>
-					Des del moment en que es va crear la colla l'any 1995, els Arreplegats hem tingut una revista interna: l'Arreplegator. Es publica 3 cops l'any: per Aniversari, per Perpinyà, i per Diada. L'organitza una persona anònima de la colla que un recull de les cartes i escrits que realitzen els arreplegats i les arreplegades.
+					Des del moment que es va crear la colla l'any 1995, els Arreplegats hem tingut una revista interna: l'Arreplegator. Es publica 3 cops l'any: per Aniversari, per Perpinyà, i per Diada. L'organitza una persona anònima de la colla que un recull de les cartes i escrits que realitzen els arreplegats i les arreplegades.
 				</p>
 
 				<p>
