@@ -40,6 +40,7 @@ import Contactar from "./pages/Contactar";
 import BarraLliure from "./pages/BarraLliure";
 import PartsCastell from "./pages/PartsCastell";
 import Palette from "./pages/Palette";
+import InvitacioSopar2023 from "./pages/InvitacioSopar2023";
 import NotFound from "./pages/NotFound";
 import './css/normalize.css';
 import './css/main.css';
@@ -94,6 +95,7 @@ function App() {
 					<Route path="/barra-lliure" element={<BarraLliure />} />
 					<Route path="/parts-castell" element={<PartsCastell />} />
 					<Route path="/palette" element={<Palette />} />
+					<Route path="/festanovatos2023" element={<InvitacioSopar2023 />} />
 
 					<Route path="*" element={<NotFound />} />
 				</Routes>
