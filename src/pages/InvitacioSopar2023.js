@@ -77,7 +77,7 @@ function InvitacioSopar2023() {
                         readOnly
                         value={'ES64 3025 0011 7614 0012 8727'}
                         style={{
-                            width: '100%',
+                            width: 'calc(100% - 10px)',
                             marginLeft: 10,
                             marginBottom: 20,
                             backgroundColor: '#eee',
@@ -87,7 +87,7 @@ function InvitacioSopar2023() {
                     <div
                         onClick={() => copyToClipboard('ES64 3025 0011 7614 0012 8727')}
                         style={{
-                            width: 'calc(100%)',   // Considering marginLeft
+                            width: 'calc(100% - 10px)',   // Considering marginLeft
                             marginLeft: 10,
                             height: 40,
                             background: '#007BFF',       // Button color
@@ -122,7 +122,7 @@ function InvitacioSopar2023() {
                         readOnly
                         value={'SALAMANDRA - {Nom} {Cognom}'}
                         style={{
-                            width: '100%',
+                            width: 'calc(100% - 10px)',
                             marginLeft: 10,
                             marginBottom: 20,
                             backgroundColor: '#eee',
