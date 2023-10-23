@@ -3,6 +3,7 @@ import * as Papa from 'papaparse';
 
 const backgrounds = {
 	'ASSAIG': '--primary-600',
+	'ASSAIG MÚSICS': '--green-musics',
 	'COMIFEMI': '--purple',
 	'ACTUACIÓ': '--red-medium',
 	'DINAR / SOPAR': '--orange-dark',
