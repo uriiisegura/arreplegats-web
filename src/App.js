@@ -77,7 +77,7 @@ function App() {
 					<Route path="/comissio-feminista" element={<Comifemi />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/patrocinadors" element={<Patrocinadors />} />
-					<Route path="/agenda" element={<Agenda />} />
+					<Route path="/agenda" element={<Agenda withAssajos={true} />} />
 					<Route path="/noticies" element={<Noticies />} />
 					<Route path="/fotografies" element={<Fotografies />} />
 					<Route path="/videos" element={<Videos />} />

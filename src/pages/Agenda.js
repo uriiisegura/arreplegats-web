@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as Papa from 'papaparse';
+import Assajos from "./Assajos";
 
 const colors = {
 	'ASSAIG': ['--primary-600', '--black'],
@@ -26,7 +27,8 @@ class Agenda extends Component {
 			calendar: [],
 			today: new Date(),
 			currentMonth: new Date().getMonth(),
-			currentYear: new Date().getFullYear()
+			currentYear: new Date().getFullYear(),
+			showAssajos: props?.withAssajos
 		};
 	}
 	showCalendar(month, year) {
@@ -237,6 +239,10 @@ class Agenda extends Component {
 						</div>
 					</div>
 				</div>
+
+				{
+					this.state.showAssajos && <Assajos />
+				}
 			</section>
 		</>);
 	}
