@@ -16,6 +16,7 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+					<NavLink to="/agenda" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
 				</div>
 			</section>
 			<section className="welcome-image img-768" style={{backgroundImage: `url('images/resized/2d8fm-arreplegats-2016-768_x_512.jpeg')`}}>
@@ -24,6 +25,7 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+					<NavLink to="/agenda" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
 				</div>
 			</section>
 			<section className="welcome-image img-992" style={{backgroundImage: `url('images/resized/2d8fm-arreplegats-2016-992_x_661.jpeg')`}}>
@@ -32,6 +34,7 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+					<NavLink to="/agenda" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
 				</div>
 			</section>
 			<section className="welcome-image img-1200" style={{backgroundImage: `url('images/resized/2d8fm-arreplegats-2016-1200_x_800.jpeg')`}}>
@@ -40,6 +43,7 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+					<NavLink to="/agenda" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
 				</div>
 			</section>
 			<section className="welcome-image img-1920" style={{backgroundImage: `url('images/resized/2d8fm-arreplegats-2016-1920_x_1280.jpeg')`}}>
@@ -48,6 +52,7 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+					<NavLink to="/agenda" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
 				</div>
 			</section>
 			<section className="welcome-image img-max" style={{backgroundImage: `url('images/2d8fm-arreplegats-2016.png')`}}>
@@ -56,6 +61,7 @@ class Home extends Component {
 					<h1>ARREPLEGATS</h1>
 					<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 					<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+					<NavLink to="/agenda" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
 				</div>
 			</section>
 			<section style={{paddingTop: `2rem`}}>
