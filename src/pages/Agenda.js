@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import * as Papa from 'papaparse';
 
-const backgrounds = {
-	'ASSAIG': '--primary-600',
-	'ASSAIG MÚSICS': '--green-musics',
-	'COMIFEMI': '--purple',
-	'ACTUACIÓ': '--red-medium',
-	'DINAR / SOPAR': '--orange-dark',
-	'ASSEMBLEA': '--blue-medium',
-	'TALLER': '--orange-medium',
-	'': '--grey-200'
+const colors = {
+	'ASSAIG': ['--primary-600', '--black'],
+	'ASSAIG MÚSICS': ['--green-musics', '--white'],
+	'COMIFEMI': ['--purple', '--black'],
+	'ACTUACIÓ': ['--red-medium', '--black'],
+	'DINAR / SOPAR': ['--orange-dark', '--black'],
+	'ASSEMBLEA': ['--blue-medium', '--black'],
+	'TALLER': ['--orange-medium', '--black'],
+	'DONACIÓ SANG': ['--red-blood', '--white'],
+	'': ['--grey-200', '--black']
 };
 const months = ["gener","febrer","març","abril","maig","juny","juliol","agost","setembre","octubre","novembre","desembre"];
 const CALENDAR_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSkqrUBB_E4K51C2-smUpmqShVH73TjIKtrFGA1DkofnTRPVthiv3USU-kSl3Cm0VgjxQ7ZIOqsQ2od/pub?gid=0&single=true&output=csv";
@@ -100,7 +101,8 @@ class Agenda extends Component {
 				event_div.innerHTML = event["NOM CURT"];
 				event_div.id = `event-${event['DATA']}@${event['HORA']}|${event['NOM CURT']}`;
 				event_div.addEventListener('click', this.showEventInfo);
-				event_div.style.backgroundColor = `var(${backgrounds[event['CATEGORIA']]})`;
+				event_div.style.backgroundColor = `var(${colors[event['CATEGORIA']][0]})`;
+				event_div.style.color = `var(${colors[event['CATEGORIA']][1]})`;
 				wrap.appendChild(event_div);
 			}
 		});
@@ -119,7 +121,8 @@ class Agenda extends Component {
 		const panel = document.getElementById('info-panel');
 
 		title.innerHTML = diada["NOM LLARG"];
-		cat.style.backgroundColor = `var(${backgrounds[diada['CATEGORIA']]})`;
+		cat.style.backgroundColor = `var(${colors[diada['CATEGORIA']][0]})`;
+		cat.style.color = `var(${colors[diada['CATEGORIA']][1]})`;
 		cat.innerHTML = diada["CATEGORIA"];
 		const ubi = diada["UBICACIÓ"] || null;
 		const city = diada["POBLACIÓ"] || null;
