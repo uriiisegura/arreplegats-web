@@ -5,7 +5,7 @@ import castells from "../data/joc-castells.json";
 import * as v3 from './joc-castells-probabilities/v3/generateCastellResult.js'
 
 const INITIAL_CASTELLERS = 15;
-const MIN_CASTELLERS = 31;
+const MIN_CASTELLERS = 35;
 
 class Colla {
 	constructor({
