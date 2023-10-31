@@ -251,6 +251,9 @@ class CastellsGame extends Component {
 		await new Promise(res => setTimeout(res, milliseconds));
 	}
 	async playAssaig(resultat) {
+		// Versió sense sleep
+		return;
+
 		// Versió sense música
 		document.getElementById('game-screen').style.pointerEvents = 'none';
 		await this.sleep(1000)
