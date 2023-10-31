@@ -168,7 +168,7 @@ class CastellSelector extends Component {
 		this.setState({
 			from_group: Object.values(this.props.castells)
 				.filter(c => c.castell.includes(group)),
-			neta: true,	// Netes as default
+			neta: this.props.is_assaig ? false : true,
 			noPinyesAvailable: noPinyesAvailable
 		});
 	}
