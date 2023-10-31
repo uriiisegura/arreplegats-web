@@ -6,6 +6,7 @@ import * as v3 from './joc-castells-probabilities/v3/generateCastellResult.js'
 
 const INITIAL_CASTELLERS = 15;
 const MIN_CASTELLERS = 35;
+const REQUIRED_CASTELLERS = 31;
 
 class Colla {
 	constructor({
@@ -142,7 +143,7 @@ class Colla {
 		}
 	}
 	calculateActualCastellers(prev_weekday) {
-		const isAbleToDoDiada = this.castellers >= MIN_CASTELLERS
+		const isAbleToDoDiada = this.castellers >= REQUIRED_CASTELLERS
 
 		const min_assistance =
 			// Serà diada = 100%
@@ -169,7 +170,7 @@ class Colla {
 		if (weekday === 1)
 			date.setDate(date.getDate() + 1)
 		if (weekday === 2)
-			date.setDate(date.getDate() + (this.actualCastellers < MIN_CASTELLERS ? 6 : 2))
+			date.setDate(date.getDate() + (this.actualCastellers < REQUIRED_CASTELLERS ? 6 : 2))
 		if (weekday === 4)
 			date.setDate(date.getDate() + 4)
 		
