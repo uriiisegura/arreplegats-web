@@ -253,7 +253,7 @@ class CastellsGame extends Component {
 	async playAssaig(resultat) {
 		// Versió sense música
 		document.getElementById('game-screen').style.pointerEvents = 'none';
-		await this.sleep(2000)
+		await this.sleep(1000)
 		document.getElementById('game-screen').style.pointerEvents = 'all';
 		return;
 		
