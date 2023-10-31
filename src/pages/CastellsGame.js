@@ -251,6 +251,12 @@ class CastellsGame extends Component {
 		await new Promise(res => setTimeout(res, milliseconds));
 	}
 	async playAssaig(resultat) {
+		// Versió sense música
+		document.getElementById('game-screen').style.pointerEvents = 'none';
+		await this.sleep(2000)
+		document.getElementById('game-screen').style.pointerEvents = 'all';
+		return;
+		
 		const files = !this.state.results.includes(resultat) ? [] :
 			// DESCARREGAT
 			resultat === this.state.results[0] ? ['colocats'] :
@@ -289,7 +295,17 @@ class CastellsGame extends Component {
 
 		document.getElementById('game-screen').style.pointerEvents = 'all';
 	}
+	sleep(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+	}
 	async playCastell(resultat) {
+		// Versió sense música
+		document.getElementById('game-screen').style.pointerEvents = 'none';
+		await this.sleep(4000)
+		document.getElementById('game-screen').style.pointerEvents = 'all';
+		return;
+
+		// Versió amb música
 		const files = !this.state.results.includes(resultat) ? [] :
 			// DESCARREGAT
 			resultat === this.state.results[0] ? ['pujada', 'aleta', 'baixada', 'sortida'] :
