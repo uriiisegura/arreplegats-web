@@ -30,7 +30,17 @@ class CastellResult extends Component {
 		const history = this.props.stats.stats.map(r => r?.resultat?.split(' ')?.map(w => w.charAt(0))?.join('') || '?').slice(-5);
 
 		return (
-			<div className="game-canvas-center">
+			<div
+				className="game-canvas-center"
+				style={{
+					height: '100%',
+					width: '100%',
+					display: 'flex',
+					flexDirection: 'column',
+					justifyContent: 'center',
+				}}
+				onClick={this.goBack.bind(this)}
+			>
 				<h1>{this.props.castell}</h1>
 				{
 					this.props.result ? <>
@@ -43,24 +53,16 @@ class CastellResult extends Component {
 								})
 							}
 						</div>
-
-						{
-							this.props.provesLeft > 0 || this.props.type === 'actuació' ?
-								<button className="back-btn" onClick={this.next.bind(this)}>
-									CONTINUA
-								</button>
-							:
-								<>
-									<button className="back-btn" style={{ margin: 5, marginTop: 30 }} onClick={this.advanceDay.bind(this)}>
-										AVANÇA DE DIA
-									</button>
-
-									<button className="back-btn" style={{ margin: 5 }} onClick={this.goBack.bind(this)}>
-										ENRERE
-									</button>
-								</>
-						}
 						
+						<div
+							style={{
+								fontSize: '1rem',
+								lineHeight: '4rem',
+							}}
+						>
+							Apreta on vulguis per continuar
+						</div>
+
 					</> : <>
 						<div className="loading game-loading"></div>
 					</>
