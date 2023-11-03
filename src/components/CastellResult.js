@@ -39,7 +39,16 @@ class CastellResult extends Component {
 					flexDirection: 'column',
 					justifyContent: 'center',
 				}}
-				onClick={this.goBack.bind(this)}
+				onClick={() => {
+					const theresStillProves = this.props.provesLeft > 0
+					const isActuacio = this.props.type === 'actuació';
+
+					if (theresStillProves || isActuacio) {
+						this.next();
+					} else {
+						this.goBack();
+					}
+				}}
 			>
 				<h1>{this.props.castell}</h1>
 				{
