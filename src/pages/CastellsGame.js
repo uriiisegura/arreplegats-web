@@ -470,7 +470,7 @@ class CastellsGame extends Component {
 	}
 	amountRealCastellersGained() {
 		const amount = this.calculateAmountCastellersAddedAfterActuacio();
-		return this.state.colla.castellers + amount < 31 ? 0 : amount;
+		return this.state.colla.castellers + amount < 35 ? 0 : amount;
 	}
 	render() {
 		return (<><div id="game-screen" className="castells-game">
