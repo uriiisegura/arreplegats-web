@@ -679,7 +679,7 @@ class CastellsGame extends Component {
 													.filter(c => !c?.neta)
 													.map((c, j) => {
 														if (c.grup !== g) return <></>;
-														return <tr className={this.state.colla.actualCastellers >= c.gent ? '' : 'locked'} key={`group-${g}-row-${c.castell}`}>
+														return <tr className={this.state.colla.castellers >= c.gent ? '' : 'locked'} key={`group-${g}-row-${c.castell}`}>
 															<td>{c.castell}</td>
 															<td>{c.carregat}</td>
 															<td>{c.descarregat}</td>
