@@ -528,7 +528,7 @@ Navbar
 	}
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1600px) {
 	.nav-btn {
 		display: flex;
 		justify-content: flex-end;
@@ -3837,13 +3837,13 @@ Patrocinadors
 
 /*
 =============== 
-Comifemi
+Fullscreen
 ===============
 */
 
-.comifemi-pdf {
+.fullscreen-pdf {
 	width: 100%;
-	height: calc(100vh - var(--navbar-height) - 2rem);
+	height: calc(100vh - var(--navbar-height) - var(--footer-height) - 2rem);
 }
 
 /*

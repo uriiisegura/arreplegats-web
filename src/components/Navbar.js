@@ -88,7 +88,6 @@ class Navbar extends Component {
 									<ul>
 										<li><NavLink to="/junta-directiva">Junta directiva</NavLink></li>
 										<li><NavLink to="/junta-tecnica">Junta tècnica</NavLink></li>
-										<li><NavLink to="/comissio-feminista">Comissió feminista</NavLink></li>
 									</ul>
 								</div>
 								<div className="sub-menu">
@@ -109,6 +108,19 @@ class Navbar extends Component {
 									<ul>
 										<li><NavLink to="/fotografies">Fotografies</NavLink></li>
 										<li><NavLink to="/videos">Vídeos</NavLink></li>
+										<li><NavLink to="/musica">Música</NavLink></li>
+									</ul>
+								</div>
+							</div>
+						</li>
+						<li onClick={() => this.showHide('legal')} className="nav-link">
+							<span><span>Legal<img src="/font-awesome/caret-down.svg" alt="caret-down.svg" /></span></span>
+							<div id="legal" className="sub-menus">
+								<div className="sub-menu">
+									<ul>
+										<li><NavLink to="/estatuts">Estatuts (2018)</NavLink></li>
+										<li><NavLink to="/reglament-regim-intern">Reglament de règim intern (2023)</NavLink></li>
+										<li><NavLink to="/protocol-agressions">Protocol d'agressions (2022)</NavLink></li>
 									</ul>
 								</div>
 							</div>

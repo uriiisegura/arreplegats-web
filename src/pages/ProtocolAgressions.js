@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-class Comifemi extends Component {
+class ProtocolAgressions extends Component {
 	render() {
 		return (<>
 			<section>
-				<h2>Comissió feminista</h2>
+				<h2>Protocol d'agressions (2022)</h2>
 
-				<object className="comifemi-pdf" data="/uploads/protocol-agressions-2022.pdf" type="application/pdf">
+				<object className="fullscreen-pdf" data="/uploads/protocol-agressions-2022.pdf" type="application/pdf">
 					<p>No s'ha pogut mostrar el PDF. <a href="/uploads/protocol-agressions-2022.pdf">Descarrega'l</a>.</p>
 				</object>
 			</section>
@@ -14,4 +14,4 @@ class Comifemi extends Component {
 	}
 }
 
-export default Comifemi;
+export default ProtocolAgressions;

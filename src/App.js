@@ -19,13 +19,16 @@ import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
 import JuntaDirectiva from "./pages/JuntaDirectiva";
 import JuntaTecnica from "./pages/JuntaTecnica";
-import Comifemi from "./pages/Comifemi";
 import Uneixthi from "./pages/Uneixthi";
 import Patrocinadors from "./pages/Patrocinadors";
 import Agenda from "./pages/Agenda";
 import Noticies from "./pages/Noticies";
 import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
+import Musica from "./pages/Musica";
+import Estatuts from "./pages/Estatuts";
+import ReglamentRegimIntern from "./pages/ReglamentRegimIntern";
+import ProtocolAgressions from "./pages/ProtocolAgressions";
 import Jocs from "./pages/Jocs";
 import NivellsSopaDeLletres from "./pages/NivellsSopaDeLletres";
 import SopaLletres from "./pages/SopaLletres";
@@ -73,13 +76,16 @@ function App() {
 					<Route path="/junta-directiva/:any" element={<JuntaDirectiva />} />
 					<Route path="/junta-tecnica" element={<JuntaTecnica />} />
 					<Route path="/junta-tecnica/:any" element={<JuntaTecnica />} />
-					<Route path="/comissio-feminista" element={<Comifemi />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/patrocinadors" element={<Patrocinadors />} />
 					<Route path="/agenda" element={<Agenda withAssajos={true} />} />
 					<Route path="/noticies" element={<Noticies />} />
 					<Route path="/fotografies" element={<Fotografies />} />
 					<Route path="/videos" element={<Videos />} />
+					<Route path="/musica" element={<Musica />} />
+					<Route path="/estatuts" element={<Estatuts />} />
+					<Route path="/reglament-regim-intern" element={<ReglamentRegimIntern />} />
+					<Route path="/protocol-agressions" element={<ProtocolAgressions />} />
 					<Route path="/jocs" element={<Jocs />} />
 					<Route path="/sopa-de-lletres" element={<NivellsSopaDeLletres />} />
 					<Route path="/sopa-de-lletres/:idx" element={<SopaLletres />} />
