@@ -132,6 +132,7 @@ html {
 	0 2px 8px 0 rgba(0, 0, 0, 0.08);
 	--shadow-6: inset 0 -3px 0 0 var(--primary-400);
 	--shadow-7: 0 0 8px 0 rgba(0, 0, 0, 0.6);
+	--shadow-8: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -1650,12 +1651,11 @@ Junta tècnica
 	padding: 3px 5px;
 	border-radius: 3px;
 	user-select: none;
-	color: var(--black);
-	opacity: 0.75;
+	color: var(--white);
+	opacity: 0.5;
 }
 .junta-year:not(.false) {
 pointer-events: none;
-	color: var(--white);
 	opacity: 1;
 }
 .junta-year:hover {
@@ -3837,13 +3837,41 @@ Patrocinadors
 
 /*
 =============== 
-Fullscreen
+Fullscreen PDF
 ===============
 */
 
 .fullscreen-pdf {
 	width: 100%;
 	height: calc(100vh - var(--navbar-height) - var(--footer-height) - 2rem);
+}
+
+/*
+=============== 
+Música
+===============
+*/
+
+.partitures-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.partitures-list li {
+	background-color: var(--primary-600);
+	border-radius: var(--borderRadius);
+	padding: 5px 15px;
+	width: fit-content;
+	cursor: pointer;
+}
+.partitures-list li:hover {
+	background-color: var(--primary-700);
+	box-shadow: var(--shadow-8);
+}
+
+.partitures-list a {
+	color: var(--white);
 }
 
 /*

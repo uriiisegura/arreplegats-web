@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 
+const partitures = {
+	'Toc de castells': 'toc-de-castells.pdf'
+};
+
 class Musica extends Component {
 	render() {return (<>
 			<section>
@@ -10,8 +14,14 @@ class Musica extends Component {
 				</p>
 
 				<h4 style={{marginTop: '2rem'}}>Partitures</h4>
-				<ul>
-					<li><a href="/uploads/toc-de-castells.pdf" target="_blank" rel="noreferrer">Toc de castells</a></li>
+				<ul className="partitures-list">
+					{
+						Object.entries(partitures).map(([k, v], i) => {
+							return <li>
+								<a href={`/uploads/partitures/${v}`} target="_blank" key={`partitura-${i}`} rel="noreferrer">{k}</a>
+							</li>;
+						})
+					}
 				</ul>
 			</section>
 		</>);
