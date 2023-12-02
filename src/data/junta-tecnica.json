@@ -116,6 +116,100 @@
 		]
 	},
 	"antigues": {
+		"2021-2022": {
+			"direccio": {
+				"titol": "Direcció tècnica",
+				"components": [
+					{
+						"carrec": "Cap de colla",
+						"nom": "Biel Romera i Muñoz"
+					},
+					{
+						"carrec": "Sots-cap de colla",
+						"nom": "Bru Barba i Vidal"
+					}
+				]
+			},
+			"junta": [
+				{
+					"titol": "Equip de troncs",
+					"components": [
+						{
+							"carrec": "Cap de troncs",
+							"nom": "Genís Tomàs i Massana"
+						},
+						{
+							"carrec": "Cap de pilars",
+							"nom": "Bru Barba i Vidal"
+						},
+						{
+							"nom": "Queralt Bautista i Rosas"
+						},
+						{
+							"nom": "Júlia Font i Aguilar"
+						},
+						{
+							"nom": "Anna Montenegro i Pallarès"
+						},
+						{
+							"nom": "Júlia Montserrat i Ruiz"
+						}
+					]
+				},
+				{
+					"titol": "Equip de poms",
+					"components": [
+						{
+							"carrec": "Cap de poms",
+							"nom": "Cristina Oliveira i Coll"
+						},
+						{
+							"nom": "Carlota Fornells"
+						},
+						{
+							"nom": "Ana Paula Monzón i d'Anna"
+						},
+						{
+							"nom": "Paula Olivé i Roselló"
+						}
+					]
+				},
+				{
+					"titol": "Equip de pinyes, folres, i manilles",
+					"components": [
+						{
+							"carrec": "Co-cap de pinyes",
+							"nom": "Lluc Isern i Pujol"
+						},
+						{
+							"carrec": "Co-cap de pinyes",
+							"nom": "Anna Juan i Font"
+						},
+						{
+							"nom": "Pau Coll i Casellas"
+						},
+						{
+							"nom": "Marina de la Torre i Lozano"
+						},
+						{
+							"nom": "Xavier Marín i Rísquez"
+						},
+						{
+							"nom": "Miquel Munné"
+						},
+						{
+							"nom": "Martí Puig i Vall"
+						},
+						{
+							"nom": "Andreu Roig i Salvat"
+						},
+						{
+							"nom": "Carlos Silva i Sánchez"
+						}
+					]
+				}
+			]
+		},
 		"2022-2023": {
 			"direccio": {
 				"titol": "Direcció tècnica",
@@ -139,6 +233,7 @@
 							"nom": "Júlia Font i Aguilar"
 						},
 						{
+							"carrec": "Cap de pilars",
 							"nom": "Queralt Bautista i Rosas"
 						},
 						{
@@ -151,19 +246,10 @@
 							"nom": "Júlia Montserrat i Ruiz"
 						},
 						{
-							"nom": "Biel Romera i Muñoz"
-						},
-						{
 							"nom": "Pau Rosselló i Carreras"
 						},
 						{
-							"nom": "David Torras i Martín"
-						},
-						{
 							"nom": "Ignasi Tortras i de la Cruz"
-						},
-						{
-							"nom": "Aina Vila i Pont"
 						}
 					]
 				},
