@@ -207,6 +207,30 @@
 							"nom": "Carlos Silva i Sánchez"
 						}
 					]
+				},
+				{
+					"titol": "Equip d'acolliment i tecnificació",
+					"components": [
+						{
+							"carrec": "Cap d'AiT",
+							"nom": "Eduard García"
+						},
+						{
+							"nom": "Pau Coll i Casellas"
+						},
+						{
+							"nom": "Maria Colomé"
+						},
+						{
+							"nom": "David Cuesta i García"
+						},
+						{
+							"nom": "Gabriel Herrera"
+						},
+						{
+							"nom": "Ivet Martín"
+						}
+					]
 				}
 			]
 		},
