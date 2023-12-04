@@ -693,6 +693,9 @@ Footer
 .youtube:hover {
 	filter: invert(82%) sepia(95%) saturate(7086%) hue-rotate(360deg) brightness(107%) contrast(119%);
 }
+.twitch:hover {
+	filter: invert(28%) sepia(10%) saturate(5397%) hue-rotate(227deg) brightness(101%) contrast(95%);
+}
 .tiktok:hover {
 	filter: invert(72%) sepia(100%) saturate(7497%) hue-rotate(335deg) brightness(98%) contrast(108%);
 }
