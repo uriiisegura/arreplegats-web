@@ -1,4 +1,18 @@
 {
+	"amb la col·laboració de": [
+		{
+			"name": "Estrella Damm",
+			"image": "estrella-damm.png"
+		},
+		{
+			"name": "Free Damm",
+			"image": "free-damm.png"
+		},
+		{
+			"name": "Veri",
+			"image": "veri.png"
+		}
+	],
 	"amb el suport de": [
 		{
 			"name": "Universitat de Barcelona",
