@@ -100,7 +100,7 @@ class Navbar extends Component {
 							</div>
 						</li>
 						<li className="nav-link"><NavLink to="/agenda"><span>Agenda</span></NavLink></li>
-						<li className="nav-link"><NavLink to="/noticies"><span>Notícies</span></NavLink></li>
+						{/*<li className="nav-link"><NavLink to="/noticies"><span>Notícies</span></NavLink></li>*/}
 						<li onClick={() => this.showHide('media')} className="nav-link">
 							<span><span>Mèdia<img src="/font-awesome/caret-down.svg" alt="caret-down.svg" /></span></span>
 							<div id="media" className="sub-menus">
