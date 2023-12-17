@@ -17,7 +17,7 @@ class PersonCard extends Component {
 		return (
 			<div className="person-card">
 				<div className="person-img" style={{backgroundImage: `url(${img})`}}></div>
-				<h4>{this.props.name} {this.props.mote === undefined ? <></> : <span>{this.props.mote}</span>}</h4>
+				<h4>{this.props.name} {this.props.mote === undefined ? <></> : <span>"{this.props.mote}"</span>}</h4>
 				<h6>{years.join(', ')}</h6>
 				{
 					this.props.text.map((e, i) => {

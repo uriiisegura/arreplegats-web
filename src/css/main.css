@@ -1131,10 +1131,6 @@ Person Card
 	font-style: italic;
 	font-size: 0.85rem;
 }
-.person-card span::before,
-.person-card span::after {
-	content: '"';
-}
 
 .person-card h6 {
 	font-size: 0.8rem;
