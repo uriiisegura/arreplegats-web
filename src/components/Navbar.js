@@ -100,7 +100,6 @@ class Navbar extends Component {
 							</div>
 						</li>
 						<li className="nav-link"><NavLink to="/agenda"><span>Agenda</span></NavLink></li>
-						{/*<li className="nav-link"><NavLink to="/noticies"><span>Notícies</span></NavLink></li>*/}
 						<li onClick={() => this.showHide('media')} className="nav-link">
 							<span><span>Mèdia<img src="/font-awesome/caret-down.svg" alt="caret-down.svg" /></span></span>
 							<div id="media" className="sub-menus">
@@ -126,7 +125,7 @@ class Navbar extends Component {
 							</div>
 						</li>
 						<li className="nav-link"><NavLink to="/jocs"><span>Jocs</span></NavLink></li>
-						<li className="nav-link"><NavLink to="/contractacions"><span>Contractacions</span></NavLink></li>
+						{/* <li className="nav-link"><a href="https://contractacions.arreplegats.cat" target="_blank" rel="noreferrer"><span>Contractacions</span></a></li> */}
 						<li className="nav-link join-btn"><NavLink to="/uneixthi"><span>Uneix-t'hi</span></NavLink></li>
 					</ul>
 				</div>

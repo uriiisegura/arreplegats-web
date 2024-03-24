@@ -22,7 +22,6 @@ import JuntaTecnica from "./pages/JuntaTecnica";
 import Uneixthi from "./pages/Uneixthi";
 import Patrocinadors from "./pages/Patrocinadors";
 import Agenda from "./pages/Agenda";
-import Noticies from "./pages/Noticies";
 import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
 import Musica from "./pages/Musica";
@@ -38,7 +37,6 @@ import NivellsPenjat from "./pages/NivellsPenjat";
 import Memory from "./pages/Memory";
 import Penjat from "./pages/Penjat";
 import CastellsGame from "./pages/CastellsGame";
-import Contractacions from "./pages/Contractacions";
 import Contactar from "./pages/Contactar";
 import BarraLliure from "./pages/BarraLliure";
 import PartsCastell from "./pages/PartsCastell";
@@ -79,7 +77,6 @@ function App() {
 					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/patrocinadors" element={<Patrocinadors />} />
 					<Route path="/agenda" element={<Agenda withAssajos={true} />} />
-					<Route path="/noticies" element={<Noticies />} />
 					<Route path="/fotografies" element={<Fotografies />} />
 					<Route path="/videos" element={<Videos />} />
 					<Route path="/musica" element={<Musica />} />
@@ -95,7 +92,6 @@ function App() {
 					<Route path="/penjat" element={<NivellsPenjat />} />
 					<Route path="/penjat/:idx" element={<Penjat />} />
 					<Route path="/joc-castells" element={<></>} />
-					<Route path="/contractacions" element={<Contractacions />} />
 					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
 					<Route path="/parts-castell" element={<PartsCastell />} />
