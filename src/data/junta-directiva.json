@@ -9,7 +9,7 @@
 				},
 				{
 					"carrec": "Vicepresidenta",
-					"nom": "Núria Fonts i Anglès"
+					"nom": "Clara Llonch i Vidal"
 				},
 				{
 					"carrec": "Secretària",
@@ -26,7 +26,17 @@
 						"nom": "Hèctor Carmona i López"
 					},
 					{
+						"carrec": "Tresorer",
 						"nom": "Guillem Canals i Erill"
+					},
+					{
+						"nom": "Marc Colomer i Xaus"
+					},
+					{
+						"nom": "Ot Godó i Estany"
+					},
+					{
+						"nom": "Marc Moranta i Mas"
 					}
 				]
 			},
@@ -34,7 +44,27 @@
 				"titol": "Promoció i difusió",
 				"components": [
 					{
+						"carrec": "Cap de prodi",
+						"nom": "David Torras i Martín"
+					},
+					{
+						"carrec": "Cap de prodi",
+						"nom": "Berta Ramírez i Jou"
+					},
+					{
+						"nom": "Coia Cruset i Rega"
+					},
+					{
+						"nom": "Berta Cuello i Viciano"
+					},
+					{
 						"nom": "Martina Cusidó i Gascón"
+					},
+					{
+						"nom": "Arnau Domènech i Bravin"
+					},
+					{
+						"nom": "Bet Esteve i Corbera"
 					},
 					{
 						"nom": "Xavier Marín i Rísquez"
@@ -43,13 +73,13 @@
 						"nom": "Ermengol Passola i Lizandra"
 					},
 					{
-						"nom": "Berta Ramírez i Jou"
-					},
-					{
 						"nom": "Oriol Segura i Niño"
 					},
 					{
-						"nom": "David Torras i Martín"
+						"nom": "Duart van Sintemaartensdijk Troncho"
+					},
+					{
+						"nom": "Georgina Vilà i Estrada"
 					}
 				]
 			},
@@ -58,22 +88,26 @@
 				"components": [
 					{
 						"carrec": "Cap de logística",
-						"nom": "Clara Llonch i Vidal"
+						"nom": "Gina Giró i Aguilar"
+					},
+					{
+						"carrec": "Cap de logística",
+						"nom": "Pau Pagès i Ramírez"
+					},
+					{
+						"nom": "Berta Bach i Manresa"
 					},
 					{
 						"nom": "Maria Antònia Gaya i Torres"
 					},
 					{
-						"nom": "Gina Giró i Aguilar"
-					},
-					{
 						"nom": "Martí Gumà i Marín"
 					},
 					{
-						"nom": "Pau Pagès i Ramírez"
+						"nom": "Aida Sanfeliu i Gubern"
 					},
 					{
-						"nom": "Aida Sanfeliu i Gubern"
+						"nom": "Laia Vinagre i Comerma"
 					}
 				]
 			},
@@ -99,11 +133,26 @@
 				]
 			},
 			{
+				"titol": "Gralles i tabals",
+				"components": [
+					{
+						"carrec": "Cap de músics",
+						"nom": "Laia Casas i Irure"
+					}
+				]
+			},
+			{
 				"titol": "Equip sanitari",
 				"components": [
 					{
 						"carrec": "Cap de sanitaris",
 						"nom": "Laia Soto i Gustamante"
+					},
+					{
+						"nom": "Anna Cos i Magallón"
+					},
+					{
+						"nom": "Ares Font i Urpí"
 					},
 					{
 						"nom": "Jana Graupera i Salicrú"
@@ -130,10 +179,10 @@
 						"nom": "Sabina García i Sàbat"
 					},
 					{
-						"nom": "Marta Arnau i Piculla"
+						"nom": "Ariadna González i Montagut"
 					},
 					{
-						"nom": "Queralt Casademont i Mir"
+						"nom": "Patrícia Sance i Rodway"
 					},
 					{
 						"nom": "Alba Sirag i Grau"
@@ -157,7 +206,7 @@
 						"nom": "Laura Fuentes i Ibars"
 					},
 					{
-						"nom": "Pere Llopart i Roca"
+						"nom": "Laura Llopis i Colom"
 					},
 					{
 						"nom": "Aida Sanfeliu i Gubern"
