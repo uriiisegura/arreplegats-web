@@ -529,7 +529,7 @@ Navbar
 	}
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 900px) {
 	.nav-btn {
 		display: flex;
 		justify-content: flex-end;
@@ -3734,8 +3734,8 @@ Patrocinadors
 
 .sponsors-wrap {
 	display: grid;
-	gap: 3rem 10%;
-	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3rem 5%;
+	grid-template-columns: repeat(4, 1fr);
 	user-select: none;
 	padding: 0 5%;
 	margin-bottom: 3rem;
@@ -3748,15 +3748,9 @@ Patrocinadors
 	background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 850px) {
-	.sponsors-wrap {
-		grid-template-columns: 1fr 1fr;
-	}
-}
-
 @media screen and (max-width: 500px) {
 	.sponsors-wrap {
-		grid-template-columns: 1fr;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 

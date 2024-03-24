@@ -7,7 +7,7 @@ class JuntaTeams extends Component {
 				<h4>{team.titol}</h4>
 				{
 					team.components.map((p, i) => {
-						return <p key={i}>{p.carrec ? <><span>{p.carrec}</span>: </> : <></>}{p.nom}</p>;
+						return <p key={i}>{p.carrec ? <><span>{p.carrec}:</span> </> : <></>}{p.nom}</p>;
 					})
 				}
 			</div>
