@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 // import RequireAuth from './components/RequireAuth';
 import Home from "./pages/Home";
 import QuiSom from "./pages/QuiSom";
+// import Agenda from "./pages/Agenda";
 import Assajos from "./pages/Assajos";
 import GrallesTabals from "./pages/GrallesTabals";
 import VidaUniversitaria from "./pages/VidaUniversitaria";
@@ -21,7 +22,6 @@ import JuntaDirectiva from "./pages/JuntaDirectiva";
 import JuntaTecnica from "./pages/JuntaTecnica";
 import Uneixthi from "./pages/Uneixthi";
 import Patrocinadors from "./pages/Patrocinadors";
-import Agenda from "./pages/Agenda";
 import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
 import Musica from "./pages/Musica";
@@ -58,6 +58,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/qui-som" element={<QuiSom />} />
+					{/* <Route path="/agenda" element={<Agenda withAssajos={true} />} /> */}
 					<Route path="/assajos" element={<Assajos />} />
 					<Route path="/gralles-i-tabals" element={<GrallesTabals />} />
 					<Route path="/vida-universitaria" element={<VidaUniversitaria />} />
@@ -76,7 +77,6 @@ function App() {
 					<Route path="/junta-tecnica/:any" element={<JuntaTecnica />} />
 					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/patrocinadors" element={<Patrocinadors />} />
-					<Route path="/agenda" element={<Agenda withAssajos={true} />} />
 					<Route path="/fotografies" element={<Fotografies />} />
 					<Route path="/videos" element={<Videos />} />
 					<Route path="/musica" element={<Musica />} />

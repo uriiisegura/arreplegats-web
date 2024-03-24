@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Assajos from "./Assajos";
-import Agenda from "./Agenda";
+// import Agenda from "./Agenda";
 
 class Uneixthi extends Component {
 	render() {
 		return (<>
 			<Assajos />
-			<Agenda />
+			{/* <Agenda /> */}
 			<section>
 				<h2>Uneix-t'hi</h2>
 				

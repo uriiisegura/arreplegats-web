@@ -60,6 +60,7 @@ class Navbar extends Component {
 									<h4 className="sub-menu-title">La colla</h4>
 									<ul>
 										<li><NavLink to="/qui-som">Qui som?</NavLink></li>
+										{/* <li><NavLink to="/agenda">Agenda</NavLink></li> */}
 										<li><NavLink to="/assajos">Assajos</NavLink></li>
 										<li><NavLink to="/gralles-i-tabals">Gralles i tabals</NavLink></li>
 										<li><NavLink to="/vida-universitaria">Vida universitària</NavLink></li>
@@ -99,7 +100,6 @@ class Navbar extends Component {
 								</div>
 							</div>
 						</li>
-						<li className="nav-link"><NavLink to="/agenda"><span>Agenda</span></NavLink></li>
 						<li onClick={() => this.showHide('media')} className="nav-link">
 							<span><span>Mèdia<img src="/font-awesome/caret-down.svg" alt="caret-down.svg" /></span></span>
 							<div id="media" className="sub-menus">
