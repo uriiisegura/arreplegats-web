@@ -476,6 +476,8 @@ Navbar
 }
 .nav-link:hover .sub-menus {
 	display: flex;
+	flex-wrap: wrap;
+	gap: 3rem 0;
 }
 
 .sub-menu-title {
@@ -494,6 +496,7 @@ Navbar
 .sub-menu li {
 	text-align: left;
 	font-size: 0.8rem;
+	white-space: nowrap;
 }
 .sub-menu a:hover,
 .sub-menu a.active {
