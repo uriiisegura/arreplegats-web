@@ -1,14 +1,21 @@
 [
 	{
+		"date": null,
+		"title": "Fundació dels Mineuetts",
+		"description": "Es creu que els Mineuetts de la Salle van ser la primera colla castellera universitària, però no se'n sap gaire cosa més.",
+		"color": "mineuetts"
+	},
+	{
 		"date": "1994",
 		"title": "Fundació dels Ganàpies",
-		"description": "Els Ganàpies de la UAB són la colla castellera universitària més antiga, amb gairebé 30 anys d'història!",
+		"description": "Els Ganàpies de la UAB són la colla castellera universitària més antiga encara activa.",
 		"color": "ganapies"
 	},
 	{
 		"date": "4 d'abril de 1995",
 		"title": "Fundació dels Arreplegats",
 		"description": "Després ja vam venir nosaltres! La nostra primera diada va ser el 5 de maig, a la festa de la FIB, on vam carregar un Pd4. Des d'aleshores hem continuat actuant i hem esdevingut la colla universitària més gran d'entre totes!",
+		"image": "/logo_512.png",
 		"color": "arreplegats"
 	},
 	{
@@ -27,13 +34,25 @@
 		"date": "2003",
 		"title": "Fundació dels Emboirats",
 		"description": "",
-		"color": "emboirats"
+		"color": "emboirats-1"
+	},
+	{
+		"date": "2004",
+		"title": "Fundació dels Gambirots",
+		"description": "",
+		"color": "gambirots"
 	},
 	{
 		"date": "2007",
 		"title": "Fundació dels Pataquers",
 		"description": "",
 		"color": "pataquers"
+	},
+	{
+		"date": "març de 2008",
+		"title": "Fundació dels Mangoners",
+		"description": "",
+		"color": "mangoners-1"
 	},
 	{
 		"date": "9 de maig de 2009",
@@ -85,6 +104,18 @@
 		"title": "Fundació dels Passerells",
 		"description": "",
 		"color": "passerells"
+	},
+	{
+		"date": "2012",
+		"title": "Refundació dels Mangoners",
+		"description": "",
+		"color": "mangoners-2"
+	},
+	{
+		"date": "2012",
+		"title": "Refundació dels Emboirats",
+		"description": "",
+		"color": "emboirats-2"
 	},
 	{
 		"date": "3 de maig de 2013",
@@ -151,7 +182,7 @@
 		"description": [
 			{
 				"type": "span",
-				"text": "El món casteller convencional ja tenia el seu propi baròmetre, però no va ser fins fa poc que va aparèixer-ne un pel món universitari. El podeu consultar "
+				"text": "El món casteller convencional ja tenia des de feia temps el seu propi baròmetre, però no va ser fins a finals de 2022 que va aparèixer-ne un pel món universitari. El podeu consultar "
 			},
 			{
 				"type": "a",

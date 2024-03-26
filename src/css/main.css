@@ -80,12 +80,17 @@ html {
     --marracos: #979db5;
     --trempats: #a48970;
     --xoriguers: #12c3f4;
-    --emboirats: #c80036;
+    --emboirats-1: #ff0000;
+    --emboirats-2: #c80036;
     --bergants: #9dd237;
     --engrescats: #ffdd00;
     --penjats: #f80000;
     --grillats: #cd157a;
     --llunatics: #21277c;
+    --mineuetts: #000000;
+    --mangoners-1: #d6b1ff;
+    --mangoners-2: #efa467;
+	--gambirots: #c6d6f1;
 
 	/* joc castells */
 	--game-clearBlue: #8fb1ec;
