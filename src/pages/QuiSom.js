@@ -3,6 +3,15 @@ import { NavLink } from "react-router-dom";
 
 class QuiSom extends Component {
 	render() {
+		const imageSizes = [
+			{ size: '576', url: 'images/resized/3d8f-cors-576_x_384.jpg' },
+			{ size: '768', url: 'images/resized/3d8f-cors-768_x_511.jpg' },
+			{ size: '992', url: 'images/resized/3d8f-cors-992_x_660.jpg' },
+			{ size: '1200', url: 'images/resized/3d8f-cors-1200_x_799.jpg' },
+			{ size: '1920', url: 'images/resized/3d8f-cors-1920_x_1279.jpg' },
+			{ size: 'max', url: 'images/3d8f-cors.jpg' },
+		];
+
 		return (<>
 			<section>
 				<h2>Qui som?</h2>
@@ -12,12 +21,11 @@ class QuiSom extends Component {
 					<p><span>adj. i m. i f.</span> [LC] Dit d'un grup de persones considerades incompetents per a una feina concreta. <i>Una colla d'arreplegats.</i></p>
 				</div>
 			</section>
-			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/3d8f-cors-576_x_384.jpg')`}}></section>
-			<section className="image-divider img-768" style={{backgroundImage: `url('images/resized/3d8f-cors-768_x_511.jpg')`}}></section>
-			<section className="image-divider img-992" style={{backgroundImage: `url('images/resized/3d8f-cors-992_x_660.jpg')`}}></section>
-			<section className="image-divider img-1200" style={{backgroundImage: `url('images/resized/3d8f-cors-1200_x_799.jpg')`}}></section>
-			<section className="image-divider img-1920" style={{backgroundImage: `url('images/resized/3d8f-cors-1920_x_1279.jpg')`}}></section>
-			<section className="image-divider img-max" style={{backgroundImage: `url('images/3d8f-cors.jpg')`}}></section>
+			{
+				imageSizes.map((img, i) => (
+					<section key={`resized-3d8f-${i}`} className={`image-divider resized-img img-${img.size}`} style={{backgroundImage: `url('${img.url}')`}}></section>
+				))
+			}
 			<section>
 				<h3>Som els <span>Arreplegats</span> de la Zona Universitària</h3>
 

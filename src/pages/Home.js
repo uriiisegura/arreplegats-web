@@ -21,7 +21,7 @@ class Home extends Component {
 		return (<>
 			{
 				imageSizes.map((img, i) => (
-					<section key={`resized-section-${i}`} className={`welcome-image img-${img.size}`} style={{backgroundImage: `url('${img.url}')`}}>
+					<section key={`resized-section-${i}`} className={`welcome-image resized-img img-${img.size}`} style={{backgroundImage: `url('${img.url}')`}}>
 						<div className="overlay"></div>
 						<div className="content">
 							<h1>ARREPLEGATS</h1>

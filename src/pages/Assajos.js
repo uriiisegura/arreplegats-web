@@ -10,11 +10,6 @@ class Assajos extends Component {
 					Els bons castells no surten del no-res: s'han d'assajar. Ens reunim dos dies a la setmana per fer història assaig a assaig.
 				</p>
 			</section>
-			{/* <section className="image-divider img-576" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-576_x_324.jpg')`}}></section>
-			<section className="image-divider img-768" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-768_x_432.jpg')`}}></section>
-			<section className="image-divider img-992" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-992_x_558.jpg')`}}></section>
-			<section className="image-divider img-1200" style={{backgroundImage: `url('images/resized/assaig-novembre-2022-1200_x_675.jpg')`}}></section>
-			<section className="image-divider img-max" style={{backgroundImage: `url('images/assaig-novembre-2022.jpg')`}}></section> */}
 			<section>
 				<div className="rehearsal">
 					<h3>Dimarts i dijous al migdia</h3>

@@ -3,6 +3,33 @@ import { NavLink } from "react-router-dom";
 
 class HistoriaDeLaColla extends Component {
 	render() {
+		const imageSizes_3d8f_StAlbert = [
+			{ size: '576', url: 'images/resized/3d8f-sant-albert-576_x_323.jpg' },
+			{ size: '768', url: 'images/resized/3d8f-sant-albert-768_x_431.jpg' },
+			{ size: '992', url: 'images/resized/3d8f-sant-albert-992_x_557.jpg' },
+			{ size: '1200', url: 'images/resized/3d8f-sant-albert-1200_x_674.jpg' },
+			{ size: '1920', url: 'images/resized/3d8f-sant-albert-1920_x_1079.jpg' },
+			{ size: 'max', url: 'images/3d8f-sant-albert.jpg' },
+		];
+
+		const imageSizes_Pd7fm_Aniversari = [
+			{ size: '576', url: 'images/resized/pd7fm-construccio-2022-576_x_383.jpg' },
+			{ size: '768', url: 'images/resized/pd7fm-construccio-2022-768_x_512.jpg' },
+			{ size: '992', url: 'images/resized/pd7fm-construccio-2022-992_x_661.jpg' },
+			{ size: '1200', url: 'images/pd7fm-construccio-2022.jpg' },
+			{ size: '1920', url: 'images/pd7fm-construccio-2022.jpg' },
+			{ size: 'max', url: 'images/pd7fm-construccio-2022.jpg' },
+		];
+
+		const imageSizes_3d8f_Aniversari = [
+			{ size: '576', url: 'images/resized/3d8f-sentiment-2022-576_x_418.jpg' },
+			{ size: '768', url: 'images/resized/3d8f-sentiment-2022-768_x_557.jpg' },
+			{ size: '992', url: 'images/resized/3d8f-sentiment-2022-992_x_720.jpg' },
+			{ size: '1200', url: 'images/resized/3d8f-sentiment-2022-1200_x_871.jpg' },
+			{ size: '1920', url: 'images/resized/3d8f-sentiment-2022-1920_x_1394.jpg' },
+			{ size: 'max', url: 'images/3d8f-sentiment-2022.jpg' },
+		];
+
 		return (<>
 			<section className="historia">
 				<h2>Història de la colla</h2>
@@ -21,12 +48,11 @@ class HistoriaDeLaColla extends Component {
 					Aquest castell, el 3 de 7, es va fer esperar més, sent el primer descarregat al final de la temporada 2000-2001. El següent any, es va carregar el primer 4 de 7 amb l'agulla, descarregat un any després. La temporada 2003-2004 va acabar amb dos nous castells: el <NavLink to="/castells/5d7">5 de 7</NavLink> i la torre de 7 amb folre, ambdós descarregats. El següent castell amb folre va arribar durant la temporada 2006-2007, quan vam carregar el primer pilar de 6 amb folre de la història castellera universitària. Aquest castell finalment es va descarregar a les acaballes de la temporada 2007-2008, en la Diada de Primavera dels Ganàpies de l'Autònoma.
 				</p>
 			</section>
-			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/3d8f-sant-albert-576_x_323.jpg')`}}></section>
-			<section className="image-divider img-768" style={{backgroundImage: `url('images/resized/3d8f-sant-albert-768_x_431.jpg')`}}></section>
-			<section className="image-divider img-992" style={{backgroundImage: `url('images/resized/3d8f-sant-albert-992_x_557.jpg')`}}></section>
-			<section className="image-divider img-1200" style={{backgroundImage: `url('images/resized/3d8f-sant-albert-1200_x_674.jpg')`}}></section>
-			<section className="image-divider img-1920" style={{backgroundImage: `url('images/resized/3d8f-sant-albert-1920_x_1079.jpg')`}}></section>
-			<section className="image-divider img-max" style={{backgroundImage: `url('images/3d8f-sant-albert.jpg')`}}></section>
+			{
+				imageSizes_3d8f_StAlbert.map((img, i) => (
+					<section key={`resized-3d8f-${i}`} className={`image-divider resized-img img-${img.size}`} style={{backgroundImage: `url('${img.url}')`}}></section>
+				))
+			}
 			<section className="historia">
 				<h5>Els únics que ho poden fer</h5>
 				<p>
@@ -39,12 +65,11 @@ class HistoriaDeLaColla extends Component {
 					No gaire més tard, l'hivern del 2014, vam portar a la Diada dels Ganàpies de la UAB el primer <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink> del món universitari, que veia com es feia història un altre cop en descarregar aquest castell fins aleshores inèdit. Aquell mateix desembre, pel nostre 19è Aniversari, sorpreníem el món sencer obrint plaça amb el <NavLink to="/castells/Vd6f">vano de 6</NavLink>.
 				</p>
 			</section>
-			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/pd7fm-construccio-2022-576_x_383.jpg')`}}></section>
-			<section className="image-divider img-768" style={{backgroundImage: `url('images/resized/pd7fm-construccio-2022-768_x_512.jpg')`}}></section>
-			<section className="image-divider img-992" style={{backgroundImage: `url('images/resized/pd7fm-construccio-2022-992_x_661.jpg')`}}></section>
-			<section className="image-divider img-1200" style={{backgroundImage: `url('images/pd7fm-construccio-2022.jpg')`}}></section>
-			<section className="image-divider img-1920" style={{backgroundImage: `url('images/pd7fm-construccio-2022.jpg')`}}></section>
-			<section className="image-divider img-max" style={{backgroundImage: `url('images/pd7fm-construccio-2022.jpg')`}}></section>
+			{
+				imageSizes_Pd7fm_Aniversari.map((img, i) => (
+					<section key={`resized-Pd7fm-${i}`} className={`image-divider resized-img img-${img.size}`} style={{backgroundImage: `url('${img.url}')`}}></section>
+				))
+			}
 			<section className="historia">
 				<h5>L'època d'or</h5>
 				<p>
@@ -57,12 +82,11 @@ class HistoriaDeLaColla extends Component {
 					Aquesta època gloriosa va assolir el seu punt més àlgid el 5 de maig del 2016, on vam ajuntar el <NavLink to="/castells/3d8f">3 de 8 amb folre</NavLink>, el <NavLink to="/castells/4d8">4 de 8</NavLink>, i vam carregar la inèdita <NavLink to="/castells/Td8fm">torre de 8 amb folre i manilles</NavLink> en una diada històrica.
 				</p>
 			</section>
-			<section className="image-divider img-576" style={{backgroundImage: `url('images/resized/3d8f-sentiment-2022-576_x_418.jpg')`}}></section>
-			<section className="image-divider img-768" style={{backgroundImage: `url('images/resized/3d8f-sentiment-2022-768_x_557.jpg')`}}></section>
-			<section className="image-divider img-992" style={{backgroundImage: `url('images/resized/3d8f-sentiment-2022-992_x_720.jpg')`}}></section>
-			<section className="image-divider img-1200" style={{backgroundImage: `url('images/resized/3d8f-sentiment-2022-1200_x_871.jpg')`}}></section>
-			<section className="image-divider img-1920" style={{backgroundImage: `url('images/resized/3d8f-sentiment-2022-1920_x_1394.jpg')`}}></section>
-			<section className="image-divider img-max" style={{backgroundImage: `url('images/3d8f-sentiment-2022.jpg')`}}></section>
+			{
+				imageSizes_3d8f_Aniversari.map((img, i) => (
+					<section key={`resized-Pd7fm-${i}`} className={`image-divider resized-img img-${img.size}`} style={{backgroundImage: `url('${img.url}')`}}></section>
+				))
+			}
 			<section className="historia">
 				<h5>Represa després de la COVID-19</h5>
 				<p>
