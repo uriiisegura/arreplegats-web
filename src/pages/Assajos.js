@@ -18,8 +18,8 @@ class Assajos extends Component {
 				</div>
 				<div className="rehearsal">
 					<h3>Dijous al vespre</h3>
-					<p>De <span style={{ fontWeight: '600' }}>20:00 a 22:00</span> al local d'assaig dels Castellers de Sants.</p>
-					<iframe title="Castellers de Sants" src="https://www.google.com/maps/embed?pb=!4v1588686806283!6m8!1m7!1sQ1IZy8ugdtmpL3os9NlaPg!2m2!1d41.38026520714731!2d2.137496427874611!3f35.12!4f-5.900000000000006!5f0.7820865974627469" />
+					<p>De <span style={{ fontWeight: '600' }}>20:00 a 22:00</span> al gimnàs d'assaig dels Castellers de Sants.</p>
+					<iframe title="Castellers de Sants" src="https://www.google.com/maps/embed?pb=!4v1711817231053!6m8!1m7!1sUAStG173tbDkSuIxpIOp_Q!2m2!1d41.38031047587492!2d2.137471285682687!3f53.58123436952216!4f6.161186546629949!5f0.7820865974627469" />
 				</div>
 			</section>
 		</>);
