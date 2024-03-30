@@ -3802,6 +3802,32 @@ Música
 }
 
 /*
+===============
+Legal
+===============
+*/
+
+.legal-title {
+	margin-bottom: 1rem;
+}
+
+.legal-doc {
+	margin-top: 5rem;
+}
+
+.legal-doc h3 {
+	margin-top: 2rem;
+}
+
+.legal-doc h4 {
+	margin-top: 1.5rem;
+}
+
+.text-bold {
+	font-weight: 600;
+}
+
+/*
 =============== 
 
 ===============

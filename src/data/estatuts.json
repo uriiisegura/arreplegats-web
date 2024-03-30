@@ -1,0 +1,124 @@
+{
+	"actual": {
+		"aprovats": {
+			"data": "2018-09-20",
+			"lloc": "Barcelona"
+		},
+		"seccions": [
+			{
+				"titol": "Preàmbul",
+				"text": "Aquests Estatuts representen una revisió dels Estatuts, aprovada durant l'Assemblea General Ordinària del 20 de setembre de 2018, celebrada a Barcelona."
+			},
+			{
+				"titol": "Capítol I. Denominació, fins i domicili",
+				"articles": [
+					{
+						"titol": "Article 1",
+						"text": "Amb la denominació Arreplegats de la Zona Universitària es constitueix l'associació, que, a l'empara de l'article 22 de la Constitució, regularà les seves activitats d'acord amb la Llei 191/1964, del 24 de desembre de 1964, i els seus estatuts."
+					},
+					{
+						"titol": "Article 2",
+						"components": [
+							{
+								"type": "p",
+								"text": "L'àmbit prioritari d'actuació de l'associació és la universitat."
+							},
+							{
+								"type": "p",
+								"text": "Els objectius socials de l'associació són:"
+							},
+							{
+								"type": "ol",
+								"items": [
+									"Difondre el món casteller dins la comunitat universitària.",
+									"Proporcionar un àmbit de relació social realitzant una activitat cultural pròpia del nostre país, com són els castells.",
+									"Participar en actes que organitzin universitats o estaments relacionats amb elles, com poden ser les escoles i facultats o les associacions universitàries.",
+									"Relacionar-se amb altres colles castelleres universitàries i establir-hi vincles per tal de col·laborar en l'assoliment dels objectius comuns participant, quan escaigui, en actes organitzats per aquestes.",
+									"La participació en aquells actes que per raons de finançament i/o de promoció ajudin a assolir l'objectiu social.",
+									"La participació a actes o l'adhesió a plataformes amb fins polítics que estiguin reconeguts en la Declaració Universal dels Drets Humans o protocols derivats. En queden exclosos els actes amb fi electoral i els actes partidistes."
+								]
+							}
+						]
+					},
+					{
+						"titol": "Article 3",
+						"text": "El domicili de l'associació s'estableix a l'Avinguda Diagonal número 696, 08034, Barcelona. El domicili social assenyala l'àmbit d'activitat principal de l'entitat si bé qualsevol altra referència geogràfica (local, estatal o internacional) resultarà igualment significativa de l'àmbit territorial."
+					}
+				]
+			},
+			{
+				"titol": "Capítol II. Membres de l'associació, drets i deures",
+				"articles": [
+					{
+						"titol": "Article 4",
+						"components": [
+							{
+								"type": "p",
+								"text": "Podran ser membres de l'associació totes les persones físiques que compleixin algun dels següents requisits:"
+							},
+							{
+								"type": "ol",
+								"items": [
+									"Ser, dintre del pla normatiu universitari previ a l'aplicació progressiva de l'Espai Educatiu Europeu Superior (Pla de Bolonya), estudiant matriculat de qualsevol ensenyament (homologat o títol propi) que condueixi a l'obtenció d'una diplomatura, llicenciatura, enginyeria, màster, postgrau i/o doctorat impartit en qualsevol universitat, pública o privada o bé, en aplicació de l'Espai Europeu Educatiu Superior (Pla de Bolonya), estudiant matriculat de qualsevol grau, postgrau, màster i/o doctorat.",
+									"Ser personal administratiu i de serveis (PAS) de qualsevol universitat, pública o privada.",
+									"Ser personal docent i investigador (PDI) de qualsevol universitat, pública o privada.",
+									"Ser estudiant de mòduls de grau superior, homologats o títols propis, impartits en centres públics o privats."
+								]
+							},
+							{
+								"type": "p",
+								"text": "En quedaran excloses totes aquelles persones que formin part d'una altra colla castellera universitària."
+							},
+							{
+								"type": "p",
+								"components": [
+									{
+										"type": "span",
+										"props": {
+											"className": "text-bold"
+										},
+										"text": "Nota: "
+									},
+									{
+										"type": "span",
+										"text": "No estan incloses les matrícules en idiomes (per molt que siguin impartits per les universitats), cursos d'estiu o altres, que no portin a l'obtenció d'un títol universitari.",
+										"comment": "TODO: Revisar: estudis de graus superiors no comporten l'obtenció d'un títol universitari."
+									}
+								]
+							},
+							{
+								"type": "p",
+								"text": "Els membres de l'associació ho són des del moment de la formalització de la matrícula i fins a la finalització oficial del curs acadèmic matriculat o des de la formalització del contracte laboral i fins a la seva finalització.",
+								"comment": "TODO: Nou article ???"
+							},
+							{
+								"type": "p",
+								"text": "Qui vulgui ser membre de l'associació ha de presentar una sol·licitud per escrit (full d'inscripció) a la Junta Directiva, la qual confirmarà els vincles en la següent reunió i ho comunicarà a la colla en l'Assemblea General més immediata, en la qual s'hauran de ratificar tots els socis nous que s'hagin incorporat a l'associació des de la darrera Assemblea.",
+								"comment": "TODO: Què ???"
+							}
+						]
+					},
+					{
+						"titol": "Article 5",
+						"components": [
+							{
+								"type": "p",
+								"text": "Són drets dels membres de l'associació:"
+							},
+							{
+								"type": "ol",
+								"items": [
+									"Assistir amb veu i vot a les reunions de l'Assemblea General.",
+									"Elegir o ser elegits per als llocs de representació o per exercir càrrecs directius.",
+									"Exercir la representació que se'ls confereixi en cada cas.",
+									"Intervenir en el govern i les gestions, en els serveis i les activitats de l'associació, d'acord amb les normes legals i estatutàries."
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"anteriors": {}
+}
