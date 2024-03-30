@@ -14,7 +14,7 @@ class JuntaDirectiva extends Component {
 
 		let junta_temporada = junta.actual;
 		if (any)
-			junta_temporada = junta.antigues[any];
+			junta_temporada = junta.anteriors[any];
 		
 		if (!junta_temporada)
 			return <NotFound />
@@ -35,8 +35,8 @@ class JuntaDirectiva extends Component {
 				<p style={{color: 'var(--grey-400)'}}>Consulta la junta directiva de temporades anteriors:</p>
 				<div className="junta-year-wrap">
 					{
-						Object.keys(junta.antigues).map((y, i) => {
-							return <NavLink className={`junta-year ${junta_temporada === junta.antigues[y]}`} to={`/junta-directiva/${y}`} key={`year-${i}`}>{y}</NavLink>;
+						Object.keys(junta.anteriors).map((y, i) => {
+							return <NavLink className={`junta-year ${junta_temporada === junta.anteriors[y]}`} to={`/junta-directiva/${y}`} key={`year-${i}`}>{y}</NavLink>;
 						})
 					}
 					<NavLink className={`junta-year ${junta_temporada === junta.actual}`} to="/junta-directiva">ACTUAL</NavLink>
