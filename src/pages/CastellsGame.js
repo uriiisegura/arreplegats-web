@@ -818,7 +818,7 @@ class CastellsGame extends Component {
 							<div className="game-full-wrap game-help">
 								<h3>Ajuda</h3>
 								<p>
-									Ets putoganàpia o què? Enfaixa't i posat a la feina!
+									Espavila. Enfaixa't i posat a la feina!
 								</p>
 								<div className="btn game-export-game" onClick={this.saveGameFile.bind(this)}>EXPORTA LA PARTIDA</div>
 								<div className="btn game-delete-game" onClick={() => {this.deleteGame(false)}}>BORRA LA PARTIDA</div>
