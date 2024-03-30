@@ -20,7 +20,6 @@ import ResumHistoric from "./pages/ResumHistoric";
 import LlistaDeDiades from "./pages/LlistaDeDiades";
 import JuntaDirectiva from "./pages/JuntaDirectiva";
 import JuntaTecnica from "./pages/JuntaTecnica";
-import Uneixthi from "./pages/Uneixthi";
 import Patrocinadors from "./pages/Patrocinadors";
 import Fotografies from "./pages/Fotografies";
 import Videos from "./pages/Videos";
@@ -75,7 +74,6 @@ function App() {
 					<Route path="/junta-directiva/:any" element={<JuntaDirectiva />} />
 					<Route path="/junta-tecnica" element={<JuntaTecnica />} />
 					<Route path="/junta-tecnica/:any" element={<JuntaTecnica />} />
-					<Route path="/uneixthi" element={<Uneixthi />} />
 					<Route path="/patrocinadors" element={<Patrocinadors />} />
 					<Route path="/fotografies" element={<Fotografies />} />
 					<Route path="/videos" element={<Videos />} />

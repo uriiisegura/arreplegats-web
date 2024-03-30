@@ -94,7 +94,7 @@ class Navbar extends Component {
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">Uneix-t'hi</h4>
 									<ul>
-										<li><NavLink to="/uneixthi">Vine a fer castells!</NavLink></li>
+										<li><NavLink to="/assajos">Vine a fer castells!</NavLink></li>
 										<li><NavLink to="/patrocinadors">Patrocinadors</NavLink></li>
 									</ul>
 								</div>
@@ -126,7 +126,7 @@ class Navbar extends Component {
 						</li>
 						<li className="nav-link"><NavLink to="/jocs"><span>Jocs</span></NavLink></li>
 						{/* <li className="nav-link"><a href="https://contractacions.arreplegats.cat" target="_blank" rel="noreferrer"><span>Contractacions</span></a></li> */}
-						<li className="nav-link join-btn"><NavLink to="/uneixthi"><span>Uneix-t'hi</span></NavLink></li>
+						<li className="nav-link join-btn"><NavLink to="/assajos"><span>Uneix-t'hi</span></NavLink></li>
 					</ul>
 				</div>
 			</nav>

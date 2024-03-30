@@ -26,7 +26,7 @@ class Home extends Component {
 						<div className="content">
 							<h1>ARREPLEGATS</h1>
 							<h3>ELS ÚNICS QUE HO PODEN FER</h3>
-							<NavLink to="/uneixthi" className="hero-btn">UNEIX-T'HI</NavLink>
+							<NavLink to="/assajos" className="hero-btn">UNEIX-T'HI</NavLink>
 							{/* <NavLink to="/agenda" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink> */}
 							{/* <a className="hero-btn" href="https://contractacions.arreplegats.cat" target="_blank" rel="noreferrer" style={{ display: 'block', width: 'fit-content', marginTop: '1.4rem' }}>CONTRACTA'NS!</a> */}
 						</div>
