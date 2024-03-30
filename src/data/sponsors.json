@@ -1,18 +1,4 @@
 {
-	"amb la col·laboració de": [
-		{
-			"name": "Estrella Damm",
-			"image": "estrella-damm.png"
-		},
-		{
-			"name": "Free Damm",
-			"image": "free-damm.png"
-		},
-		{
-			"name": "Veri",
-			"image": "veri.png"
-		}
-	],
 	"amb el suport de": [
 		{
 			"name": "Universitat de Barcelona",
@@ -27,8 +13,16 @@
 			"image": "agaur.gif"
 		},
 		{
+			"name": "Centre de Recursos per a les Associacions Juvenils de Barcelona",
+			"image": "craj.png"
+		},
+		{
 			"name": "Generalitat de Catalunya",
 			"image": "gencat.png"
+		},
+		{
+			"name": "Diputació de Barcelona",
+			"image": "diputacio.png"
 		},
 		{
 			"name": "Ajuntament de Barcelona",
