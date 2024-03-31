@@ -14,6 +14,10 @@
 				{
 					"carrec": "Secretària",
 					"nom": "Aina Oliu i Cordomí"
+				},
+				{
+					"carrec": "Secretària",
+					"nom": "Elena Balici i Balici"
 				}
 			]
 		},
@@ -23,17 +27,14 @@
 				"components": [
 					{
 						"carrec": "Tresorer",
-						"nom": "Hèctor Carmona i López"
-					},
-					{
-						"carrec": "Tresorer",
 						"nom": "Guillem Canals i Erill"
 					},
 					{
-						"nom": "Marc Colomer i Xaus"
+						"carrec": "Tresorer",
+						"nom": "Hèctor Carmona i López"
 					},
 					{
-						"nom": "Ot Godó i Estany"
+						"nom": "Marc Colomer i Xaus"
 					},
 					{
 						"nom": "Marc Moranta i Mas"
@@ -76,7 +77,7 @@
 						"nom": "Oriol Segura i Niño"
 					},
 					{
-						"nom": "Duart van Sintemaartensdijk Troncho"
+						"nom": "Duart van Sintemaartensdijk i Troncho"
 					},
 					{
 						"nom": "Georgina Vilà i Estrada"
@@ -84,7 +85,7 @@
 				]
 			},
 			{
-				"titol": "Logística i contractació",
+				"titol": "Equip de logística",
 				"components": [
 					{
 						"carrec": "Cap de logística",
@@ -152,19 +153,13 @@
 						"nom": "Anna Cos i Magallón"
 					},
 					{
-						"nom": "Ares Font i Urpí"
-					},
-					{
-						"nom": "Jana Graupera i Salicrú"
+						"nom": "Júlia Folqué i Lastra"
 					},
 					{
 						"nom": "Adriana Guillermo i Cassà"
 					},
 					{
 						"nom": "Laura Llopis i Colom"
-					},
-					{
-						"nom": "David Pato i Méndez"
 					},
 					{
 						"nom": "Blai Rosell i Ollé"
@@ -186,78 +181,36 @@
 					},
 					{
 						"nom": "Alba Sirag i Grau"
+					},
+					{
+						"nom": "Álvaro Taberner Viñals"
 					}
 				]
 			},
 			{
-				"titol": "Comissió d'activitats",
+				"titol": "Equip d'activitats",
 				"components": [
 					{
 						"carrec": "Cap d'activitats",
-						"nom": "Andreu Huguet i Segarra"
+						"nom": "Laura Fuentes i Ibars"
 					},
 					{
 						"nom": "Berta Boixet i Lladó"
 					},
 					{
-						"nom": "Marc Compte i Bastida"
-					},
-					{
-						"nom": "Laura Fuentes i Ibars"
-					},
-					{
 						"nom": "Laura Llopis i Colom"
+					},
+					{
+						"nom": "Berta Puig i Bagan"
 					},
 					{
 						"nom": "Aida Sanfeliu i Gubern"
 					},
 					{
-						"nom": "Edgar Tena i Marqués"
-					}
-				]
-			},
-			{
-				"titol": "Comissió feminista",
-				"components": [
-					{
-						"carrec": "Cap",
-						"nom": "Violeta Hernàndez i Arnal"
-					},
-					{
-						"nom": "Marta Alcaide i Vera"
-					},
-					{
-						"nom": "Víctor Andreu i Ferro"
-					},
-					{
-						"nom": "Marta Arnau i Piculla"
-					},
-					{
-						"nom": "Aina Bach i Manresa"
-					},
-					{
-						"nom": "Emma Ballesté i Seyós"
-					},
-					{
-						"nom": "Sheikh Cordero i Rodríguez"
-					},
-					{
-						"nom": "Júlia Cuenca i González"
-					},
-					{
-						"nom": "Enric Manzano i Verdaguer"
-					},
-					{
-						"nom": "Clàudia Masachs i Dilmé"
-					},
-					{
-						"nom": "Jordina Rué i Alcové"
+						"nom": "Albert Serra i Barceló"
 					},
 					{
 						"nom": "Edgar Tena i Marqués"
-					},
-					{
-						"nom": "Marina de la Torre i Lozano"
 					}
 				]
 			}
