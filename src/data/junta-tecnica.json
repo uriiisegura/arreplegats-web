@@ -113,6 +113,62 @@
 		]
 	},
 	"anteriors": {
+		"2002-2003": {
+			"direccio": {
+				"titol": "Direcció tècnica",
+				"components": [
+					{
+						"carrec": "Cap de colla",
+						"nom": "Roger Moncusí i Claramunt"
+					},
+					{
+						"carrec": "Sots-cap de colla",
+						"nom": "Anna Moreno i Bernat"
+					}
+				]
+			},
+			"junta": [
+				{
+					"titol": "Equip de troncs",
+					"components": [
+						{
+							"carrec": "Cap de troncs",
+							"nom": "Sergi Udina i Oliva"
+						},
+						{
+							"nom": "Roger Roca"
+						}
+					]
+				},
+				{
+					"titol": "Equip de canalla",
+					"components": [
+						{
+							"carrec": "Cap de canalla",
+							"nom": "Roger Moncusí i Claramunt"
+						},
+						{
+							"nom": "Lluís Barrera"
+						}
+					]
+				},
+				{
+					"titol": "Equip de pinyes",
+					"components": [
+						{
+							"carrec": "Cap de pinyes",
+							"nom": "Anna Moreno i Bernat"
+						},
+						{
+							"nom": "Oriol Artigas"
+						},
+						{
+							"nom": "Albert Recobenis"
+						}
+					]
+				}
+			]
+		},
 		"2021-2022": {
 			"direccio": {
 				"titol": "Direcció tècnica",

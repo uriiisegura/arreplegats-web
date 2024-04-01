@@ -217,6 +217,90 @@
 		]
 	},
 	"anteriors": {
+		"2002-2003": {
+			"direccio": {
+				"titol": "Direcció directiva",
+				"components": [
+					{
+						"carrec": "President",
+						"nom": "Manel Mendoza i García"
+					},
+					{
+						"carrec": "Vicepresident",
+						"nom": "Melcior Andreu i Nadal"
+					},
+					{
+						"carrec": "Secretària",
+						"nom": "Irene Gibrat"
+					}
+				]
+			},
+			"junta": [
+				{
+					"titol": "Tresoreria",
+					"components": [
+						{
+							"carrec": "Tresorer",
+							"nom": "Xavi Cruz i Senra"
+						}
+					]
+				},
+				{
+					"titol": "Promoció",
+					"components": [
+						{
+							"carrec": "Vocal",
+							"nom": "Melcior Andreu i Nadal"
+						}
+					]
+				},
+				{
+					"titol": "Material",
+					"components": [
+						{
+							"carrec": "Vocal",
+							"nom": "Jordi Barbany i Freixa"
+						}
+					]
+				},
+				{
+					"titol": "Campus Nord i Informàtica",
+					"components": [
+						{
+							"carrec": "Vocal",
+							"nom": "Francesc Figueras"
+						}
+					]
+				},
+				{
+					"titol": "Vall d'Hebron",
+					"components": [
+						{
+							"carrec": "Vocal",
+							"nom": "Miriam Coll i Viader"
+						}
+					]
+				},
+				{
+					"titol": "Comissió de festes",
+					"components": [
+						{
+							"carrec": "Col·laborador",
+							"nom": "Bernat Rotger i Dunyó"
+						}
+					]
+				},
+				{
+					"titol": "Comissió web",
+					"components": [
+						{
+							"carrec": "Col·laborador",
+							"nom": "Andreu Mendoza i Gilabert"
+						}
+					]
+				}
+			]
+		},
 		"2022-2023": {
 			"direccio": {
 				"titol": "Direcció directiva",
