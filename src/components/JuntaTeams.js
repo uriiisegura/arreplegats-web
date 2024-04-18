@@ -7,6 +7,8 @@ class JuntaTeams extends Component {
 				<h4>{team.titol}</h4>
 				{
 					team.components.map((p, i) => {
+						if (p.type)
+							return React.createElement(p.type, { key: i, ...p.props }, null);
 						return <p key={i}>{p.carrec ? <><span>{p.carrec}:</span> </> : <></>}{p.nom}</p>;
 					})
 				}

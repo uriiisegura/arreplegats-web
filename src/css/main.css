@@ -1647,6 +1647,10 @@ Junta tècnica
 	font-weight: 700;
 }
 
+.junta-team hr {
+	margin: 1rem 0;
+}
+
 .junta-year-wrap {
 	display: flex;
 	gap: 3px;

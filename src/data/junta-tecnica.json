@@ -10,6 +10,21 @@
 				{
 					"carrec": "Sots-cap de colla",
 					"nom": "Oriol Segura i Niño"
+				},
+				{
+					"type": "hr"
+				},
+				{
+					"carrec": "Cap de troncs",
+					"nom": "Biel Romera i Muñoz"
+				},
+				{
+					"carrec": "Cap de pinyes",
+					"nom": "Eudald Rovira i Rovira"
+				},
+				{
+					"carrec": "Cap de poms",
+					"nom": "Ignasi Tortras i de la Cruz"
 				}
 			]
 		},
@@ -180,6 +195,25 @@
 					{
 						"carrec": "Sots-cap de colla",
 						"nom": "Bru Barba i Vidal"
+					},
+					{
+						"type": "hr"
+					},
+					{
+						"carrec": "Cap de troncs",
+						"nom": "Genís Tomàs i Massana"
+					},
+					{
+						"carrec": "Co-cap de pinyes",
+						"nom": "Lluc Isern i Pujol"
+					},
+					{
+						"carrec": "Co-cap de pinyes",
+						"nom": "Anna Juan i Font"
+					},
+					{
+						"carrec": "Cap de poms",
+						"nom": "Cristina Oliveira i Coll"
 					}
 				]
 			},
@@ -298,6 +332,21 @@
 					{
 						"carrec": "Sots-cap de colla",
 						"nom": "Pau Coll i Casellas"
+					},
+					{
+						"type": "hr"
+					},
+					{
+						"carrec": "Cap de troncs",
+						"nom": "Júlia Font i Aguilar"
+					},
+					{
+						"carrec": "Cap de poms",
+						"nom": "Paula Olivé i Roselló"
+					},
+					{
+						"carrec": "Cap",
+						"nom": "Júlia Montserrat i Ruiz"
 					}
 				]
 			},
