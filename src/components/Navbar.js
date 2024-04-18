@@ -61,7 +61,7 @@ class Navbar extends Component {
 									<ul>
 										<li><NavLink to="/qui-som">Qui som?</NavLink></li>
 										{/* <li><NavLink to="/agenda">Agenda</NavLink></li> */}
-										<li><NavLink to="/assajos">Assajos</NavLink></li>
+										{/* <li><NavLink to="/assajos">Assajos</NavLink></li> */}
 										<li><NavLink to="/gralles-i-tabals">Gralles i tabals</NavLink></li>
 										<li><NavLink to="/vida-universitaria">Vida universitària</NavLink></li>
 									</ul>
