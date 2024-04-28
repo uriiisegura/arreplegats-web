@@ -14,9 +14,8 @@ class UnaNitDeMaig extends Component {
 	}
 	render() {
 		const { par } = this.props.params;
-		if (!par) this.goTo("0");
 
-		if (par === "0") {
+		if (!par || par === "0") {
 			const home = unaNitDeMaig.home;
 			return (<>
 				<section>
