@@ -39,6 +39,7 @@ import CastellsGame from "./pages/CastellsGame";
 import Contactar from "./pages/Contactar";
 import BarraLliure from "./pages/BarraLliure";
 import PartsCastell from "./pages/PartsCastell";
+import UnaNitDeMaig from "./pages/UnaNitDeMaig";
 import Palette from "./pages/Palette";
 import NotFound from "./pages/NotFound";
 import './css/normalize.css';
@@ -89,17 +90,23 @@ function App() {
 					<Route path="/memory" element={<Memory />} />
 					<Route path="/penjat" element={<NivellsPenjat />} />
 					<Route path="/penjat/:idx" element={<Penjat />} />
-					<Route path="/joc-castells" element={<></>} />
 					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
 					<Route path="/parts-castell" element={<PartsCastell />} />
+					<Route path="/una-nit-de-maig" element={<UnaNitDeMaig />} />
 					<Route path="/palette" element={<Palette />} />
 
+					<Route path="/joc-castells" element={<></>} />
+					<Route path="/una-nit-de-maig" element={<></>} />
+					<Route path="/una-nit-de-maig/:par" element={<></>} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</main>
 			<Routes>
 				<Route path="/joc-castells" element={<main className="page page-full"><CastellsGame /></main>} />
+				<Route path="/una-nit-de-maig" element={<UnaNitDeMaig />} />
+				<Route path="/una-nit-de-maig/:par" element={<UnaNitDeMaig />} />
+
 				<Route path="*" element={<Footer />} />
 			</Routes>
 		</Router>

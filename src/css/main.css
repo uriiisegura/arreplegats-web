@@ -219,6 +219,7 @@ ul {
 	transition: var(--transition);
 	text-transform: capitalize;
 	display: inline-block;
+	user-select: none;
 }
 .btn:hover {
 	background: var(--primary-700);
@@ -3833,6 +3834,40 @@ Legal
 
 /*
 =============== 
+Una nit de maig
+===============
+*/
+
+.una-nit-de-maig-btn {
+	margin: 1rem 0;
+	text-align: center;
+}
+
+.una-nit-de-maig-btn button {
+	padding: 0.5rem 1rem;
+	font-size: 1.25rem;
+}
+
+.una-nit-de-maig-title {
+	margin-top: 0.5rem;
+	text-decoration: underline;
+}
+
+.options-wrap {
+	margin: 2rem 0;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.options-wrap div {
+	text-transform: initial;
+	flex-basis: 0;
+	flex: 1 1 0;
+}
+
+/*
+===============
 
 ===============
 */

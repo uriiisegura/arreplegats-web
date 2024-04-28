@@ -1,0 +1,72 @@
+{
+	"home": {
+		"title": "És nit fresca per ser maig...",
+		"text": [
+			"TODO:"
+		],
+		"button": {
+			"text": "Començar",
+			"link": "1"
+		}
+	},
+	"1": {
+		"title": "És nit fresca per ser maig",
+		"text": [
+			"Bon dia! T'acaba de despertar el mòbil amb el to d'alarma que ahir vas escollir, un que encara no coneixies i que vas seleccionar, simplement, al llegir-ne el nom. Recordes que et van fer gràcia la majoria de títols. El que avui ha sonat es diu First light in the morning. Desendolles el mòbil i et fas un suc. És veritat, mai esmorzes suc, però avui t'ho permets. T'empasses un parell de croissants acompanyats de la pressa habitual dels matins dels dies de maig i et vesteixes amb ànsia de manera que, com gairebé sempre, perds l'equilibri a l'introduir la cama dreta dins els texans. Penses \"mare de Déu, avui prendrem mal. Avui no em pot fallar l'equilibri, que és diada!\". I et dones la raó, però et recordes que tampoc pot fallar-te el valor, la força ni el seny. Més endavant, al baixar les escales del metro, escoltes l'alarma corresponent al tancament de portes i dubtes. La gent del teu voltant ja ha arrencat a córrer per no perdre'l."
+		],
+		"options": [
+			{
+				"text": [
+					"Decideixes no afanyar-te més. Desitges sort mentalment a la gent que et rodeja, que tan de bo ho aconsegueixin, i penses que hi ha més metros que llonganisses. Agafaràs el següent."
+				],
+				"link": "3"
+			},
+			{
+				"text": [
+					"T'afanyes. No fas precisament tard, però avui et sents més viu que mai. Sempre has cregut que és inútil afanyar-se quan l'alarma ja està sonant, però que l'esperança és l'últim que es perd."
+				],
+				"link": "2"
+			}
+		]
+	},
+	"2": {
+		"title": "TODO:",
+		"text": [
+			"Has avançat a tothom a les escales i resultes ser l'únic guanyador de l'sprint, però t'adones que, si has entrat, és perquè algú t'ha aguantat les portes. Esbufegant, alces la mirada i et trobes l'Invasor, feliç d'haver estat el teu heroi. El paio ja porta la faixa sota el braç i això que encara no heu començat les hores de classe d'avui. Et proposa saltar-te la segona hora per anar directament a fer la prèvia a l'esmorzar de membres, a La Bullanga, com és degut. La setmana que ve tens examen de l'assignatura que en Invasor proposa que us salteu. Et penses la resposta i finalment li dius..."
+		],
+		"options": [
+			{
+				"text": [
+					"No, Invasor! Que ja vaig anar al sopar de metes, però avui no puc faltar a segona hora. Tu tampoc hauries de faltar-hi, de fet!"
+				],
+				"link": "9"
+			},
+			{
+				"text": [
+					"Vinga, clar que sí! Han passat ubicació del restaurant ja? A La Bullanga, com l'any passat?"
+				],
+				"link": "4"
+			}
+		]
+	},
+	"3": {
+		"title": "TODO:",
+		"text": [
+			"A l'andana tornes a mirar automàticament el coi de mòbil. El Telegram treu fum. Hi ha un moment en què aixeques els ulls i et sembla veure una persona que et sona. T'ho fas venir bé per quedar considerablement a prop seu dins el següent metro. Un cop dins, t'hi fixes bé. T'agrada, la trobes molt maca. Insisteixo en què la trobes realment molt maca. Sota seu, hi duu una motxilla Eastpak grisa amb un mocador casteller lligat. Però el metro s'atura, les portes s'obren i tu..."
+		],
+		"options": [
+			{
+				"text": [
+					"Decideixes allargar-ho una parada més, executar el primer valor del dia i saludar. Arribaràs tard a primera hora definitivament, però val la pena, tu."
+				],
+				"link": "5"
+			},
+			{
+				"text": [
+					"Faràs tard a primera hora. A més, és normal que et soni. Probablement ja t´hi hauries fixat abans. Et fixes en totes! Baixes del metro i fas un últim intent per fer-li creure que li has agradat, tot mirant-la, aquest cop, sense dissimular gens. Te'n vas. Si tens temps, en sortir de classe passaràs a fer la prèvia a La Bullanga."
+				],
+				"link": "7"
+			}
+		]
+	}
+}
