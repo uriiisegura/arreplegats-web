@@ -104,7 +104,7 @@ function App() {
 			</main>
 			<Routes>
 				<Route path="/joc-castells" element={<main className="page page-full"><CastellsGame /></main>} />
-				<Route path="/una-nit-de-maig" element={<UnaNitDeMaig />} />
+				<Route path="/una-nit-de-maig" element={<></>} />
 				<Route path="/una-nit-de-maig/:par" element={<UnaNitDeMaig />} />
 
 				<Route path="*" element={<Footer />} />
