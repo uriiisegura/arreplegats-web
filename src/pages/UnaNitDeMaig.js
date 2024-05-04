@@ -21,7 +21,7 @@ class UnaNitDeMaig extends Component {
 					<h1>{home.title}</h1>
 
 					{
-						home.text.map((p, i) => <p key={`text-${i}`} dangerouslySetInnerHTML={{ __html: p }} />)
+						home.text.map((p, i) => <p key={`text-${i}`}>{p}</p>)
 					}
 
 					<div className="una-nit-de-maig-btn">
@@ -39,7 +39,7 @@ class UnaNitDeMaig extends Component {
 				{/* <h4 className="una-nit-de-maig-title">Secció {par}: {part.title}</h4> */}
 
 				{
-					part.text.map((p, i) => <p key={`text-${i}`} dangerouslySetInnerHTML={{ __html: p }} />)
+					part.text.map((p, i) => <p key={`text-${i}`}>{p}</p>)
 				}
 
 				{
@@ -49,7 +49,7 @@ class UnaNitDeMaig extends Component {
 								{
 									part.options.map((o, i) => <div key={`opt-${i}`} className="btn" onClick={() => this.goTo(o.link)}>
 										{
-											o.text.map((t, j) => <p key={`opt-${i}-text-${j}`} dangerouslySetInnerHTML={{ __html: t }} />)
+											o.text.map((t, j) => <p key={`opt-${i}-text-${j}`}>{t}</p>)
 										}
 									</div>)
 								}
@@ -58,7 +58,7 @@ class UnaNitDeMaig extends Component {
 							<div className="options-wrap single-option">
 								<div className="btn" onClick={() => this.goTo(part.options[0].link)}>
 									{
-										part.options[0].text.map((t, i) => <p key={`text-${i}`} dangerouslySetInnerHTML={{ __html: t }} />)
+										part.options[0].text.map((t, i) => <p key={`text-${i}`}>{t}</p>)
 									}
 								</div>
 							</div>
