@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { useParams } from "react-router-dom";
+import NotFound from "./NotFound";
 
 import unaNitDeMaig from "../data/una-nit-de-maig-2024.json";
 
