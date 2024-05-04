@@ -63,7 +63,7 @@ class UnaNitDeMaig extends Component {
                 return { currentTexts: newCurrentTexts };
             });
             i++;
-        }, 50);
+        }, 25);
 
         this.setState(prevState => ({
             timerId: [...prevState.timerId, intervalId]
@@ -83,7 +83,7 @@ class UnaNitDeMaig extends Component {
         return (
             <>
                 <section>
-                    <h4 className="una-nit-de-maig-title">{part.title || 'Default Title'}</h4>
+                    <h4 className="una-nit-de-maig-title">{part.title || 'Un dijous de maig: el joc'}</h4>
                     {
                         this.state.currentTexts.map((p, i) => <p key={`text-${i}`} className="readable-text">{p}</p>)
                     }

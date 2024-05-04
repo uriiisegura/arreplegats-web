@@ -4,10 +4,12 @@
 		"text": [
 			"TODO:"
 		],
-		"button": {
-			"text": "Començar",
+		"options": [{
+			"text": [
+				"Començar"
+			],
 			"link": "1"
-		}
+		}]
 	},
 	"1": {
 		"title": "És nit fresca per ser maig",
