@@ -12,7 +12,7 @@
 	"1": {
 		"title": "És nit fresca per ser maig",
 		"text": [
-			"Bon dia! T'acaba de despertar el mòbil amb el to d'alarma que ahir vas escollir, un que encara no coneixies i que vas seleccionar, simplement, al llegir-ne el nom. Recordes que et van fer gràcia la majoria de títols. El que avui ha sonat es diu First light in the morning. Desendolles el mòbil i et fas un suc. És veritat, mai esmorzes suc, però avui t'ho permets. T'empasses un parell de croissants acompanyats de la pressa habitual dels matins dels dies de maig i et vesteixes amb ànsia de manera que, com gairebé sempre, perds l'equilibri a l'introduir la cama dreta dins els texans. Penses \"mare de Déu, avui prendrem mal. Avui no em pot fallar l'equilibri, que és diada!\". I et dones la raó, però et recordes que tampoc pot fallar-te el valor, la força ni el seny. Més endavant, al baixar les escales del metro, escoltes l'alarma corresponent al tancament de portes i dubtes. La gent del teu voltant ja ha arrencat a córrer per no perdre'l."
+			"Bon dia! T'acaba de despertar el mòbil amb el to d'alarma que ahir vas escollir, un que encara no coneixies i que vas seleccionar, simplement, en llegir-ne el nom. Recordes que et van fer gràcia la majoria de títols. El que avui ha sonat es diu <i>First light in the morning</i>. Desendolles el mòbil i et fas un suc. És veritat, mai esmorzes suc, però avui t'ho permets. T'empasses un parell de magdalenes acompanyades de la pressa habitual dels matins dels dies de maig i et vesteixes amb ànsia de manera que, com gairebé sempre, perds l'equilibri en introduir la cama dreta dins els texans. Penses \"Mare de Déu, avui prendrem mal. Avui no em pot fallar l'equilibri, que és diada!\". I et dones la raó, però et recordes que tampoc pot fallar-te el valor, la força ni el seny. Més endavant, en baixar les escales del metro, escoltes l'alarma corresponent al tancament de portes i dubtes. La gent del teu voltant ja ha arrencat a córrer per no perdre'l. Què fas?"
 		],
 		"options": [
 			{
@@ -52,7 +52,7 @@
 	"3": {
 		"title": "TODO:",
 		"text": [
-			"A l'andana tornes a mirar automàticament el coi de mòbil. El Telegram treu fum. Hi ha un moment en què aixeques els ulls i et sembla veure una persona que et sona. T'ho fas venir bé per quedar considerablement a prop seu dins el següent metro. Un cop dins, t'hi fixes bé. T'agrada, la trobes molt maca. Insisteixo en què la trobes realment molt maca. Sota seu, hi duu una motxilla Eastpak grisa amb un mocador casteller lligat. Però el metro s'atura, les portes s'obren i tu..."
+			"A l'andana tornes a mirar automàticament el coi de mòbil. El Telegram treu fum. Hi ha un moment en què aixeques els ulls i et sembla veure una persona que et sona. T'ho fas venir bé per quedar considerablement a prop seu dins el següent metro. Un cop dins, t'hi fixes bé. T'agrada, la trobes molt ben plantada. Insisteixo que la trobes realment molt ben plantada. Sota seu, hi duu una motxilla <i>Eastpak</i> grisa amb un mocador casteller lligat. Però el metro s'atura, les portes s'obren i tu..."
 		],
 		"options": [
 			{
@@ -63,9 +63,1273 @@
 			},
 			{
 				"text": [
-					"Faràs tard a primera hora. A més, és normal que et soni. Probablement ja t´hi hauries fixat abans. Et fixes en totes! Baixes del metro i fas un últim intent per fer-li creure que li has agradat, tot mirant-la, aquest cop, sense dissimular gens. Te'n vas. Si tens temps, en sortir de classe passaràs a fer la prèvia a La Bullanga."
+					"Faràs tard a primera hora. A més, és normal que et soni. Probablement ja t'hi hauries fixat abans. Et fixes en totes! Baixes del metro i fas un últim intent per fer-li creure que li has agradat, tot mirant-la, aquest cop, sense dissimular gens. Te'n vas. Si tens temps, en sortir de classe passaràs a fer la prèvia a La Bullanga."
 				],
 				"link": "7"
+			}
+		]
+	},
+	"4": {
+		"title": "TODO:",
+		"text": [
+			"Després de la primera classe –collons, quin <i>muermo</i>– t'escapes amb l'Invasor cap a La Bullanga, com cada any, per esmorzar. Encara que amb la majoria us veieu sovint, et fa gràcia tornar-te'ls a trobar. L'esmorzar està bé, està molt bé. I millor està el flam que et demanes de postres. I millor està el cigaló de Baileys que feu després per fer-ho baixar. I millor està mullar els teus llavis en un xarrup de moscatell per deixar bon gust a la boca… Però oh, sorpresa! Et sona el mòbil. L'ex t'està trucant."
+		],
+		"options": [
+			{
+				"text": [
+					"L'agafes."
+				],
+				"link": "6"
+			},
+			{
+				"text": [
+					"No l'agafes."
+				],
+				"link": "10"
+			}
+		]
+	},
+	"5": {
+		"title": "TODO:",
+		"text": [
+			"Saludes. Et somriu, però la conversa deriva lentament cap a un terreny que no calculaves. La inseguretat comença a créixer dins teu. Merda, no li hauries d'haver dit res. T'explica que estudia a la mateixa facultat que tu, que fa primer. No saps com omplir el temps que us queda fins a la pròxima parada, que et sembla infinitament lluny. T'han marxat les ganes de preguntar-li el nom, t'estàs morint de vergonya."
+		],
+		"options": [
+			{
+				"text": [
+					"Tanmateix, permets que les il·lusions agafin les regnes de la teva part de la conversa i li deixes anar un forçat \"…perquè, com et dius?\"."
+				],
+				"link": "8"
+			},
+			{
+				"text": [
+					"Recorres a parlar-li sobre una amiga –molt amiga– teva que també està estudiant la mateixa carrera, però que ja fa tercer. Això et permet arribar a la següent parada sense haver estat assassinat abans per un silenci que hagués estat demolidor. Un cop hi sou, baixes i te'n vas."
+				],
+				"link": "7"
+			}
+		]
+	},
+	"6": {
+		"title": "TODO:",
+		"text": [
+			"Vols dir? No l'hauries d'haver agafat. Sents una veu sorprenentment trista. Ara es veu que fa uns dies se li va morir la gossa (i tu sense saber-ho!) i que el lio aquell amb qui s'entenien ha decidit unilateralment no entendre-se'n més. Sí, necessita consol i et demana si pots passar una estona. De tots els ex, tots tenim L'EX, i aquest és el cas. Per tant, malgrat que et comporti bastant temps, tu hi vas. No haver-lo agafat, sinó. Tal com era d'esperar, la xerrameca li dura uns deu minuts i culmina amb una plorera que busca refugiar-se a la teva espatlla. Se t'estrella al damunt. En separar-se, hi ha aquell silenci incòmode, compromès. Ningú afluixa. Vas desitjar aquesta mirada durant molts mesos després de deixar-ho. Ja la tens. Ho vols, ho voleu, però havia de ser avui? Ara!? Era imprescindible, oi? Deu segons, quinze segons… Més o menys cap al segon 17, et fa un petó."
+		],
+		"options": [
+			{
+				"text": [
+					"T'agrada i l'allargaries. De cop, i no saps ben bé per què, te'n separes. Amb tot el que això comporta! Però tu, coi, has d'anar a diada i se t'està fent tard."
+				],
+				"link": "15"
+			},
+			{
+				"text": [
+					"T'agrada, l'allargaries, i l'allargues."
+				],
+				"link": "12"
+			}
+		]
+	},
+	"7": {
+		"title": "TODO:",
+		"text": [
+			"Tu t'ho perds. L'Apolo valia molt la pena, però mai més en sabràs res. Potser sí que a la diada us trobareu, potser sí que se sorprendrà, però passarà de tu pels segles dels segles. A més, en sortir de la universitat, ja no tindràs temps de passar per l'esmorzar. Esmorzaràs sol, un entrepà, i cap a diada. Un cop hi ets, encara falta molta gent per arribar. Quan arriba l'hora, busques algú que et pugui enfaixar."
+		],
+		"options": [
+			{
+				"text": [
+					"Ràpidament, trobes en Kortatu, que està molt disposat a enfaixar-te, sempre que l'enfaixis a ell també. En Kortatu és la persona de la colla que saps que t'enfaixarà com ningú."
+				],
+				"link": "17"
+			},
+			{
+				"text": [
+					"No acabes de trobar la persona. Una simpàtica veu se t'acosta pel darrere i et demana que l'enfaixis."
+				],
+				"link": "14"
+			}
+		]
+	},
+	"8": {
+		"title": "TODO:",
+		"text": [
+			"\"Apolo. Em diuen Apolo\". Et somriu. Somrius tu també. Quina escena més cursi, penses. Li preguntes de seguida com és que porta un mocador casteller a la motxilla. L'Apolo es pensa la resposta, però la següent parada és a tocar. Finalment, afanyant-se, et comenta que està començant a anar a una colla universitària que, no sap si la coneixes, però es diuen Arreplegats. En aquest punt et mors de ganes de proposar-li d'anar junts, en sortir de classe, cap a diada. Però fa un moment t'estaves morint de vergonya i potser és una mica precipitat. A més, encara que fos molt just, volies passar per La Bullanga a fer la prèvia."
+		],
+		"options": [
+			{
+				"text": [
+					"Al final, et decideixes per proposar-li de quedar després per anar plegats cap a diada."
+				],
+				"link": "9"
+			},
+			{
+				"text": [
+					"Optes per no comentar-li que ets AZU, ja li faràs una sorpresa després, i esculls passar per l'esmorzar."
+				],
+				"link": "7"
+			}
+		]
+	},
+	"9": {
+		"title": "TODO:",
+		"text": [
+			"En sortir de la universitat et trobes amb l'Apolo. Ara que teniu força més temps, t'explica que s'ha incorporat fa molt poc a la colla. Només fa dues setmanes que ve. De camí, et comenta que no té ni faixa ni camisa, només samarreta. Es veu que li ha preguntat a una amistat (que ja fa temps que és AZU) si n'hi pot aconseguir una. De cop, se't desperta la neurona i recordes la faixa que tens de sobres i que guardes a l'armari del pis."
+		],
+		"options": [
+			{
+				"text": [
+					"Uns segons després, li dius - com qui no vol la cosa - que tu tens una faixa de sobres al pis, que us heu de desviar una mica, però que, tot i això, arribareu a temps."
+				],
+				"link": "16"
+			},
+			{
+				"text": [
+					"No li ofereixes la faixa i continueu al mateix metro cap a Palau Reial."
+				],
+				"link": "11"
+			}
+		]
+	},
+	"10": {
+		"title": "TODO:",
+		"text": [
+			"No l'has despenjat. No torna a trucar. No ho tindràs en compte. Amb la penya us dirigiu a pas ferm cap a Diada cantant \"QUATRE DE VUIT\" en bucle. Arribeu al Campus Nord, l'ambient comença a palpar-se. T'enfaixa l'Amorós, que és més gran que tu i t'havies enrotllat alguna vegada el teu primer any. La diada va rodada, tot va segons el previst fins que arriba el moment del pilar de set. En aquest punt, tots sou un flam. L'expectació és desmesurada, el silenci és immens. I a tu, com a tothom, encara que sigui durant un sol segon, et passa pel cap aquesta sensació d'incertesa..."
+		],
+		"options": [
+			{
+				"text": [
+					"Caurà."
+				],
+				"link": "13"
+			},
+			{
+				"text": [
+					"No caurà."
+				],
+				"link": "22"
+			}
+		]
+	},
+	"11": {
+		"title": "TODO:",
+		"text": [
+			"Una estona més tard, l'Apolo rep una trucada. Ja li ha trobat una faixa i li demana si la pot anar a buscar. Penja el telèfon i et diu que se n'ha d'anar a buscar la faixa a ves a saber on. Un cop més, t'ha faltat iniciativa. Arribes a ZU tu i el teu entrepà. Com que et falta una mica d'empenta, aquest cop et dono només una sola opció (li hauries d'haver ofert la faixa):"
+		],
+		"options": [
+			{
+				"text": [
+					"Següent"
+				],
+				"link": "15"
+			}
+		]
+	},
+	"12": {
+		"title": "TODO:",
+		"text": [
+			"El petó et transporta als millors anys de la teva vida. En separar-vos, et somriu i et demana que l'acompanyis a casa. Encara tens la diada al cap, però l'acompanyes. Evidentment, et fa pujar al pis. Saps que es tracta d'un desig efímer, que acabareu fent-vos mal d'aquí ben poc temps, però les ganes et poden. Feia molt temps que no feies l'amor amb algú així. Pensaràs el típic d'\"ostres, ha millorat molt\", cosa que augmentarà encara més la teva set. Passaràs la tarda al seu pis, hivernant (tot i ser maig) i no voldràs sortir-ne mai més. L'endemà us llevareu emprenyats per un soroll, maleint alguna festa d'estudiants tronada."
+		],
+		"final": "1"
+	},
+	"13": {
+		"title": "TODO:",
+		"text": [
+			"Malauradament sí, carregat. En general, tots estan bé després de la patacada. Tots menys tu. No trigues gaire a adonar-te del mal que et fan les cervicals, fins al punt que decideixes anar a l'assistència mèdica. Al cap de deu minuts et veus irremeiablement facturat cap al Clínic. No només s'ha carregat, sinó que no pots participar de la tertúlia posterior perquè no hi seràs present. En aquest moment, cal que ens fixem en un petit detall que pot marcar una gran diferència:"
+		],
+		"options": [
+			{
+				"text": [
+					"Duies la cara pintada (amb les dues típiques ratlles hooligans, s'entén)"
+				],
+				"link": "25"
+			},
+			{
+				"text": [
+					"Duies la cara neta."
+				],
+				"link": "23"
+			}
+		]
+	},
+	"14": {
+		"title": "TODO:",
+		"text": [
+			"Tot girant-te, t'adones que es tracta del teu germanol! Estàs content de tornar-lo a veure. Les primeres rondes les passes comentant la jugada al seu costat. És nou de fa poc, post-Perpinyà, i els ulls encara li brillen. Sembla nerviós. El Miró, que també ronda pel teu voltant, us diu d'anar a fer un quinto ràpid abans del pilar. Et ve de gust, però dubtes."
+		],
+		"options": [
+			{
+				"text": [
+					"És clar, abans de fer un gran castell està pràcticament prohibit beure alcohol. Faràs bé en esperar-te."
+				],
+				"link": "19"
+			},
+			{
+				"text": [
+					"És una tradició, abans del castell més gran, anar a fer el quinto de rigor amb el Miró. Un cop us l'heu begut amb tres glops, et sents una mica atapeït, i ara toca fer el pilar…"
+				],
+				"link": "21"
+			}
+		]
+	},
+	"15": {
+		"title": "TODO:",
+		"text": [
+			"T'has entretingut, arribes passats els pilars d'entrada i sense companyia. La penya ja està tota enfaixada i a tu t'enfaixa el primer beneit que enxampes a la vora. La diada va rodada, tot va segons el previst fins que arriba el moment del pilar de set. En aquest punt, tots sou un flam. L'expectació és desmesurada, el silenci és immens. I a tu, com a tothom, encara que sigui durant un sol segon, et passa pel cap aquesta sensació d'incertesa:"
+		],
+		"options": [
+			{
+				"text": [
+					"Caurà."
+				],
+				"link": "13"
+			},
+			{
+				"text": [
+					"No caurà."
+				],
+				"link": "24"
+			}
+		]
+	},
+	"16": {
+		"title": "TODO:",
+		"text": [
+			"A l'Apolo li sembla genial que li puguis deixar la faixa tu. Quan canvieu de línia, en algun punt del túnel et ve al cap que potser tens una camisa de sobres i tot, però t'esperes a dir-li, ja que no n'estàs segur. Pateixes en entrar al teu pis, perquè no l'has deixat gens endreçat. No hi ha ningú més. A l'Apolo sembla haver-li agradat molt el pis. No para de preguntar-te d'on ha sortit cada element que decora el teu menjador. De fet, és, després d'haver obert el teu armari, qui descobreix la camisa. Sense miraments, es treu la dilatada samarreta que porta posada per emprovar-se la teva camisa i desvela un pírcing ben atrevit a la zona del mugró. Dins teu se t'encenen totes les llums d'emergència."
+		],
+		"options": [
+			{
+				"text": [
+					"No t'ho penses dues vegades. L'Apolo no se n'amaga, se't fa evident que vol tema amb tu."
+				],
+				"link": "18"
+			},
+			{
+				"text": [
+					"Dissimules. El que acaba de passar no t'ha d'alterar. Et costa, i et sap greu que et costi –perquè això et condueix a admetre un individu primerenc i afamat en tu–, però no l'apretes."
+				],
+				"link": "20"
+			}
+		]
+	},
+	"17": {
+		"title": "TODO:",
+		"text": [
+			"El noi ho fa de meravella, com de costum. Un cop esteu tots dos enfaixats, et pica a l'espatlla i et diu el de sempre: \"Bé, bé, mític!\". La diada va rodada, tot va segons el previst fins que arriba el moment del pilar de set. En aquest punt, tots sou un flam. L'expectació és desmesurada, el silenci és immens. I a tu, com a tothom, encara que sigui durant un sol segon, et passa pel cap aquesta sensació d'incertesa:"
+		],
+		"options": [
+			{
+				"text": [
+					"Caurà."
+				],
+				"link": "13"
+			},
+			{
+				"text": [
+					"No caurà."
+				],
+				"link": "22"
+			}
+		]
+	},
+	"18": {
+		"title": "TODO:",
+		"text": [
+			"L'apretes. Ho fas amb decisió, convençut del que fas. L'Apolo no triga ni mig segon a aguantar-se amb la paret amb un braç mentre amb l'altre intenta frenar l'impuls animal que has agafat. Que treure's la samarreta és un senyal que vol tema, a cas? Et cau la cara de vergonya. L'Apolo se't molesta, però podria haver estat molt més greu. Agafeu les coses i aneu cap a diada acompanyats d'una incomoditat que us arrissa tots els pèls. Arribeu una mica més tard que la resta i us enfaixen les primeres persones que trobeu. La diada va rodada, tot va segons el previst fins que arriba el moment del pilar de set. En aquest punt, tots sou un flam. L'expectació és desmesurada, el silenci és immens. I a tu, com a tothom, encara que sigui durant un sol segon, et passa pel cap aquesta sensació d'incertesa:"
+		],
+		"options": [
+			{
+				"text": [
+					"Caurà."
+				],
+				"link": "13"
+			},
+			{
+				"text": [
+					"No caurà."
+				],
+				"link": "22"
+			}
+		]
+	},
+	"19": {
+		"title": "TODO:",
+		"text": [
+			"Beus una mica d'aigua i et sents perfectament preparat per fer el pilar. Però és just en aquest moment quan, com a tothom, et passa pel cap de manera fugaç l'inevitable dilema que precedeix tot gran castell:"
+		],
+		"options": [
+			{
+				"text": [
+					"Caurà."
+				],
+				"link": "13"
+			},
+			{
+				"text": [
+					"No caurà."
+				],
+				"link": "28"
+			}
+		]
+	},
+	"20": {
+		"title": "TODO:",
+		"text": [
+			"És clar que sí, ja l'apretaràs a la nit. Al cap d'uns segons, però, l'Apolo se t'apropa i us feu un petó. L'arrambes automàticament a l'armari de la teva habitació i comenceu a riure. Us desenganxeu i et deixa clar que, a la nit, hi haurà guerra. Arribeu al Campus Nord una mica més tard que la majoria i us enfaixeu mútuament. La diada va rodada, tot va segons el previst fins que arriba el moment del pilar de set. En aquest punt, tots sou un flam. L'expectació és desmesurada, el silenci és immens. I a tu, com a tothom, encara que sigui durant un sol segon, et passa pel cap aquesta sensació d'incertesa:"
+		],
+		"options": [
+			{
+				"text": [
+					"Caurà."
+				],
+				"link": "13"
+			},
+			{
+				"text": [
+					"No caurà."
+				],
+				"link": "27"
+			}
+		]
+	},
+	"21": {
+		"title": "TODO:",
+		"text": [
+			"Què collons! Estàs a tot gas. El pilar es carrega i es descarrega com si l'haguéssiu fet tota la puta vida. La plaça és un clam. És una bogeria verd quiròfan. Ha anat tan bé, que només et dono una opció:"
+		],
+		"options": [
+			{
+				"text": [
+					"Següent"
+				],
+				"link": "28"
+			}
+		]
+	},
+	"22": {
+		"title": "TODO:",
+		"text": [
+			"Tot ha anat de meravella. Heu descarregat la bèstia més gran de totes les descarregades, impensable quan començaren les gestes verd quiròfan. El motiu és immillorable i no trigueu gens a anar directe a l'animació. Un cop allà, l'ambient ve del tot rodat i a tu et toca servir birres i cali. Dures 5 minuts darrere la barra. Comences a anar força content quan et criden per l'esquena. Immediatament després de girar-te, la cap de colla et passa un gel. \"Tot un honor!\", penses, i et sorprens perquè t'ha agradat. Tens un glaçó a la boca que se t'està fonent. Què fas?"
+		],
+		"options": [
+			{
+				"text": [
+					"Passes el gel a l'Amorós, que tens molt a prop."
+				],
+				"link": "31"
+			},
+			{
+				"text": [
+					"Passes el gel a qui fa estona que balla –gens malament– molt a prop d'on ets, amb un parell de trempats que tampoc coneixes de res."
+				],
+				"link": "36"
+			}
+		]
+	},
+	"23": {
+		"title": "TODO:",
+		"text": [
+			"Gràcies. El mateix vespre comences a no sentir cap mena de dolor (probablement, fruit dels calmants que t'han fotut) i tu i el teu nou collarí arribeu al local per celebrar com toca una gran diada. Encara que no s'hagi fet el pilar, la colla està molt satisfeta i tu notes que no pots faltar-hi! Seràs l'ídol de la nit."
+		],
+		"options": [
+			{
+				"text": [
+					"Següent"
+				],
+				"link": "28"
+			}
+		]
+	},
+	"24": {
+		"title": "TODO:",
+		"text": [
+			"Quina passada! Després de descarregar-lo, us torneu tots ben bojos! El que heu fet és simplement inigualable, sou els únics que ho poden fer. Quan ja estàs prou cansat d'abraçar-te amb tothom qui t'envolta, et separes de la gran munió verd quiròfan i et ve a saludar el teu padrí. Ets més feliç que mai d'haver-lo escollit. Ell, avui, ha vingut acompanyat de l'Acosta amb uns ulls blaus penetrants, que estudia la mateixa carrera que el teu padrí i que, es veu, sempre li havia promès d'anar a alguna diada. Finalment, avui era el dia. Avui, a partir d'ara, és el dia de tothom. La diada ja és història i tu tens ganes de ser dels primers a arribar a l'animació. En aquest moment, però, entre alguns membres de colles convidades, es munta una Polca."
+		],
+		"options": [
+			{
+				"text": [
+					"Tu, sense dubtar-ho gens, t'hi sumes. Sempre t'ha meravellat la cohesió."
+				],
+				"link": "26"
+			},
+			{
+				"text": [
+					"Trobes la Marta, l'Anna i el Pau que van ja a l'animació. A més, et toca preparar la barra i el sopar."
+				],
+				"link": "73"
+			}
+		]
+	},
+	"25": {
+		"title": "TODO:",
+		"text": [
+			"Tenies la cara pintada mentre has estat fent grans castells. Isidre de Rabassó, al cel sia, es veu obligat a intervenir –encara que es tracti d'un cas del món casteller universitari–, tot procurant que un casteller indigne com és el teu cas vegi estroncada la seva desencertada trajectòria, en forma de paraplegia. Passaràs diverses nits ingressat al Clínic per acabar sortint-ne assegut en una cadira de rodes, fins a la fi dels teus dies."
+		],
+		"final": "3"
+	},
+	"26": {
+		"title": "TODO:",
+		"text": [
+			"Arribo a saber que esculls la Polca i ja faig que moris de bon matí al metro."
+		],
+		"final": "2"
+	},
+	"27": {
+		"title": "TODO:",
+		"text": [
+			"Res podia anar millor. Ho heu aconseguit! La diada s'ha acabat (tard, com sempre) i es munta ràpidament una gran olla mentre sona prolongadament la lletra \"A\" <i>a cappella</i> i us col·loqueu tots una mà al pit. A tu et fa una mica de mal el peu i, tot i això, notes com el Biel ja t'està empenyent per darrere. Canteu la cançó. És el moment de decidir si entres a l'olla, tu que mai falles, o si deixes passar l'ocasió."
+		],
+		"options": [
+			{
+				"text": [
+					"Avui, tenint en compte que és avui, entres a l'olla. Per molt mal que et faci el peu."
+				],
+				"link": "30"
+			},
+			{
+				"text": [
+					"Et fa mal el peu i avui hi ha moltes coses a celebrar. Més val no fer el ruc."
+				],
+				"link": "32"
+			}
+		]
+	},
+	"28": {
+		"title": "TODO:",
+		"text": [
+			"Pel que fa a colla és un èxit enorme. Heu fet la millor temporada de totes i la festa ha d'estar-ne a l'alçada. Tu arribes un pèl tard a l'animació, però ben de pressa captes quin és el pla. La birra i el cali t'ajuden a trobar el camí. Mentre veus com la teva cap de colla passa glaçons a tort i a dret, de cop, t'agafen per l'espatlla, et giren i et trobes la cara de l'Amorós amorrant-se't i dipositant un glaçó dins la teva boca. Quan et situes, t'adones que la seva parella és just allà mateix. Us mira i comença a riure. Tothom riu. Malgrat tot, tu et sents una mica incòmode i tens un glaçó a la boca pendent de gestionar. Què en fas?"
+		],
+		"options": [
+			{
+				"text": [
+					"Passes el glaçó a la parella de l'Amorós."
+				],
+				"link": "34"
+			},
+			{
+				"text": [
+					"Tornes el glaçó a l'Amorós, amb el que això pot comportar."
+				],
+				"link": "31"
+			}
+		]
+	},
+	"29": {
+		"title": "TODO:",
+		"text": [
+			"Sembla que no has après res de 6è de primària. Acabeu en un acte final d'eufòria que ràpidament passa a dues mirades perdudes que miren a l'abisme i l'abisme els mira a elles. Sabeu què ha passat i tampoc ho comentareu massa. L'Apolo surt del cotxe aguantant la mirada perduda sense dir cap comentari. A tu t'entren els remordiments. Et quedes en solitari a l'escena del crim. Reconeixes que el cali us ha estovat la prudència i mors dins el Micra de la Cristina, fastiguejat i enfonsat."
+		],
+		"final": "4"
+	},
+	"30": {
+		"title": "TODO:",
+		"text": [
+			"T'ho passes com mai. \"Som més bons que la mare que ens va parir!\", crides somrient al ritme d'una coreografia que consisteix a saltar els uns damunt els altres. No recordaves cap cant AZU amb tanta gent participant de l'olla final. Des de dins el grumoll de hooligans et sembla veure com l'Amorós, amb qui t'havies enrotllat alguna vegada quan eres putx novatx, et pica l'ullet. Però tu tens d'altres assumptes entre cella i cella. Més tard, coincideixes amb la Marta, el Pau i l'Anna, que estan a punt de marxar cap a l'animació."
+		],
+		"options": [
+			{
+				"text": [
+					"Tu vols ser dels primers a arribar a l'animació i decideixes immediatament anar amb ells."
+				],
+				"link": "73"
+			},
+			{
+				"text": [
+					"T'esperes fent abraçades a la gent que encara no has trobat. Segur que d'aquí ben poc la gent comença a moure's cap allà."
+				],
+				"link": "35"
+			}
+		]
+	},
+	"31": {
+		"title": "TODO:",
+		"text": [
+			"La parella de l'Amorós, tot i ser just al vostre costat, ni ho ha vist. En aquest moment, l'Amorós t'agafa pel braç i se t'endú. Mentre us allunyeu del local, entre la poca llum i el cali que ha entrat sense treva dins teu, no aconsegueixes diferenciar gaire les cares dels fumadors compulsius i els <i>tronquetis</i> ratllats que custodien la porta des del carrer. L'Amorós et guia fins a un espai entre una Califòrnia i una Berlingo, prou apartat, i comença a devorar-te. La teva reacció és clavar-li els dits a l'entrecuix. Tots dos rieu, animats, quan notes que comença a ajupir-se lentament. L'Amorós té parella –de Madrid, per cert, força bona gent– i tu has estat sempre dels que creuen que, mentre l'altre no se n'assabenti, <i>ancha es Castilla</i>. Però, a l'hora de la veritat, la realitat és una altra. Et sap una mica de greu i t'ho planteges: "
+		],
+		"options": [
+			{
+				"text": [
+					"Ens hem embalat massa. Ho aturo, ho freno."
+				],
+				"link": "49"
+			},
+			{
+				"text": [
+					"<i>Carpe diem</i>."
+				],
+				"link": "53"
+			}
+		]
+	},
+	"32": {
+		"title": "TODO:",
+		"text": [
+			"Et quedes al perímetre de l'olla amb la Gisela, plegant les vostres respectives faixes mentre comenteu la jugada i us repetiu que ja teniu una edat. En acabat, observes com, entre alguns membres de colles convidades, es munta una Polca."
+		],
+		"options": [
+			{
+				"text": [
+					"Tu, sense dubtar-ho gens, t'hi sumes. Sempre t'ha meravellat la cohesió."
+				],
+				"link": "26"
+			},
+			{
+				"text": [
+					"No vas a ballar la polca. Ara mateix, si et pregunten què volen dir les lletres Z, N i T, a tu només et venen coses agradables i intranscendents al cap, com ara zebra, Nemo o Tintín."
+				],
+				"link": "35"
+			}
+		]
+	},
+	"33": {
+		"title": "TODO:",
+		"text": [
+			"És l'Apolo qui et fa entendre que vol que sortiu d'aquell local com més aviat millor. Abans d'arribar a la sortida, aprofiteu –molt encertadament– la topada amb la Cristina per aconseguir les claus del seu Micra. En sortir li poses la mà a la butxaca del darrere, apropant suaument el seu tors cap al teu, l'Apolo respon amb la seva mà rodejant-te la cintura. A fora, arrambats a la paret a uns metres de la porta, el teu padrí i l'Acosta s'estimen d'una forma literal. Amb llengua, amb baves, amb esgarrapades i perforacions subcutànies. Els mireu, feu veure que flipeu més enllà del que en realitat flipeu, i potser us heu imaginat els dos tocant-vos com ho fan aquests dos afamats. És el millor moment. Imagines què li faràs. Imagines què et farà. L'expectativa encara és un mar infinit, desconegut i prometedor. Per la manera com et mira pronostiques que no voldrà ni despullar-se. A un seient davanter del Micra hi trobeu unes calces de color verd, troballa que us fa riure uns minuts per acabar fent-vos fer petons i llepades. Primer de tot, conscient que les primeres impressions són les bones, comences amb deu minuts d'oral de nivell alt i intensitat estàndard. Seguidament, l'Apolo indica que és hora de deixar l'oral. En el moment de posar fil a l'agulla, us adoneu que cap dels dos porta protecció a sobre. Tampoc en trobeu cap mena de protecció a la guantera."
+		],
+		"options": [
+			{
+				"text": [
+					"Aneu ben calents, us admireu mútuament, però, fent un esforç molt gran, reprimiu el desig."
+				],
+				"link": "57"
+			},
+			{
+				"text": [
+					"Aneu ben calents, us admireu mútuament i us estimeu més acabar el què ha estat començat, peti qui peti. Tots dos hi esteu d'acord."
+				],
+				"link": "29"
+			}
+		]
+	},
+	"34": {
+		"title": "TODO:",
+		"text": [
+			"Mentre li passes, t'agafa amb les dues mans i deixa anar riallades. No ho dubta gens: et torna el glaçó en menys d'un segon i encara et somriu més, aquest cop, amb cara de provocació. Sorpresa. Tu, de nou, li tornes a passar. El glaçó va reduint la seva mida amb el trànsit que heu establert només entre les vostres dues boques. Un trànsit que, mentre encara dura, fa que et passi pel cap de liar-t'hi. Potser ha pensat el mateix. Un cop algú dels dos cedeix, sense dir-vos res d'important, observeu a l'Amorós com està fent exactament el mateix que vosaltres però, en aquest cas, amb l'Anna. Ho trobeu molt divertit."
+		],
+		"options": [
+			{
+				"text": [
+					"Continues allà, xerrant i fent broma."
+				],
+				"link": "52"
+			},
+			{
+				"text": [
+					"El moment ha estat divertit, però no dona per a més i te'n vas a ballar amb la gent de la teva generació, que són just a l'altra punta."
+				],
+				"link": "37"
+			}
+		]
+	},
+	"35": {
+		"title": "TODO:",
+		"text": [
+			"Ben fet. Decideixes anar en metro amb gent de la teva generació cap a Salamandra. En arribar, l'ambient encara s'ha de cuinar. El moment de començar a absorbir l'alcohol com una esponja és dels que tradicionalment més t'ha agradat. L'arribada de cada cop més gent fa que, ben aviat, el lloc tregui fum. Es comença a constatar la fluïdesa en la circulació de glaçons. Tal com els reps, els passes amb tan poca cura com esperança. De cop, quan te n'adones, hi ha set persones darrere teu que s'estan traient la roba al ritme de \"Passos Importants\", d'Oques Grasses. A la vegada, veus l'Apolo com, a prop teu, et mira amb el ganivet entre les dents. En té ganes. Feia estona que n'havies perdut la pista. Ara potser et toca a tu moure fitxa."
+		],
+		"options": [
+			{
+				"text": [
+					"\"Passos Importants\" tampoc et posa la pell de gallina, però consideres que vas prou bé per a deixar-te anar i unir-te a la gent que, darrere teu, cada cop van més tal com van arribar al món."
+				],
+				"link": "72"
+			},
+			{
+				"text": [
+					"Decideixes no despullar-te. Ja tenim una edat, tornes a pensar."
+				],
+				"link": "77"
+			}
+		]
+	},
+	"36": {
+		"title": "TODO:",
+		"text": [
+			"Aquesta misteriosa persona no se't sorprèn gens després d'haver rebut el glaçó. Et diu, sense cap problema, que feia estona que et mirava. La trobes molt dolça. Xarreu durant una estona, curta, suficient perquè t'acabi dient el seu nom sense haver-lo de preguntar. Et diu que li diuen Al·leda a Trempats. Però tu vas força borratxo i l'entens cada cop menys. Li comentes que no el sents bé i, al moment, t'agafa per l'avantbraç i et porta al lavabo. Sorprenentment, l'Al·leda no et diu res més. Li preguntes què fa, que no diu res ara que us podeu escoltar. I, picant-te l'ullet i recolzant-se només damunt una cama, girant el cos lleugerament cap a la dreta es treu de la butxaca unes claus. Les alça i et fa entendre que vol alguna cosa més que una simple amistat nova amb qui xerrar per oblidar-la immediatament després, en conèixer el següent candidat. És a les teves mans."
+		],
+		"options": [
+			{
+				"text": [
+					"Segueixes l'Al·leda."
+				],
+				"link": "50"
+			},
+			{
+				"text": [
+					"No vols seguir l'Al·leda. Ja n'has tingut prou amb Trempats aquesta temporada."
+				],
+				"link": "58"
+			}
+		]
+	},
+	"37": {
+		"title": "TODO:",
+		"text": [
+			"De cop i volta, l'Espasa t'agafa per l'espatlla i no entens com és que té tanta pressa. Mira que en fa, d'anys que us coneixeu. Encara recordes com us vau fer tan amics, en aquella extraescolar de cuina tradicional espanyola. L'Espasa feia una truita de patates que enamorava. Però ara simplement no comprens què coi li agafa. Així, sense explicació, se t'endú a un racó i comença a parlar-te dels seus problemes. Vas més perdut que un ganàpia a unes manilles. L'Espasa t'estranya. Et fa entendre que fa temps que et vol dir aquesta cosa. Comences a sospitar d'alguna cosa inevitablement transcendent. Finalment, t'ho deixa anar. Cert, clar i breu: et diu que t'estima com mai ha estimat a ningú més. Fa molts anys que ho arrossega i avui ha aconseguit reunir prou forces i valentia i encarar la realitat. El primer que penses és en el pollastre que t'ha caigut al damunt. Ara és d'aquells casos en què qualsevol cosa que diguis, l'Espasa serà capaç d'analitzar-la fins al matís més insospitat que se'n pugui extreure. T'ho has de pensar bé, però has de ser ràpid. Agafes aire:"
+		],
+		"options": [
+			{
+				"text": [
+					"Vas amb una calentura a sobre potent. Saps que és molt perillós, però l'Espasa, malgrat ser una amistat de tota la vida, te l'has mirat més d'una vegada. Saps que no l'estimes i que res funcionaria, però la teva frescura respon per tu i li menges la boca."
+				],
+				"link": "54"
+			},
+			{
+				"text": [
+					"Li dius que és una de les millors amistats que tens, però que tu, ara, no t'hi veus. Que això no t'ho esperaves i que t'agrada i t'afecta molt, però que no saps què dir-li."
+				],
+				"link": "60"
+			}
+		]
+	},
+	"38": {
+		"title": "TODO:",
+		"text": [
+			"Ets de les últimes ànimes en arribar a Salamandra. Encara duus el got ple de calimotxo a la mà. A fora fa una mica de rasca i tu voldries entrar, però un cop dins saps que els preus seran inhumans i encara et queda cali. A més, no et trobes en solitud. Uns metres més amunt veus a tot d'arreplegats asseguts davant de l'aparador de Barimueble (ho donen TOT en mobles). La majoria són Patinazus i els escoltes cantar des d'aquí."
+		],
+		"options": [
+			{
+				"text": [
+					"T'acabes el cali d'un glop i entres a dins la sala. No tens res d'abric i comences a agafar fred."
+				],
+				"link": "42"
+			},
+			{
+				"text": [
+					"Entre els pocs calés i la poca set que tens, no et veus capaç d'empassar-te el que et queda de calimotxo. A més, està massa calent. T'acostes als Patinazus, a veure què es cou."
+				],
+				"link": "69"
+			}
+		]
+	},
+	"41": {
+		"title": "TODO:",
+		"text": [
+			"Un cop dins, te'n fas creus. El jardí és de disseny, no gaire gran, però espectacular. A les fosques, l'Al·leda no ho dubta gens i en qüestió de segons ja desfila sense roba per la vora de la piscina. Sembla no tenir gens de pressa per entrar. Darrere, tu t'afanyes a descalçar-te. Et despulles amb molt menys estil i t'apropes a l'aigua per ficar-hi només els peus, seient a la vorera. Davant teu, l'Al·leda salta de cap. El cabell desmelenat li cau, degotejant per darrere les espatlles, en sortir per l'altre costat de la piscina. Mentre surt, te l'imagines de manera automàtica pujant a un pilar. Té la mecànica perfecta. S'acosta caminant fins al teu darrere. Se t'asseu, amb les cames obertes, i et clava el seu cos contra la teva esquena deixant-te-la xopa. Et torna a col·locar el dit – aquest cop, mullat d'aigua clorada – retenint-te els llavis. Tornes a no dir res. L'ensumes. Notes com se't desenganxa de l'esquena la seva pell d'amfibi, com s'alça per asseure's, aquest cop, davant teu. Abans de seure, el seu entrecuix et queda a l'alçada de la teva mirada, a menys d'un pam. Ho té tot controlat i sap molt bé el que fa, ho notes, i tu ets tot adrenalina i tremolor. Se t'ha assegut al davant i ja t'ha passat els braços per darrere el cap. Es recolza a les teves espatlles, quan aprofita per dir-te que les tens molt donades. Això ja et destrossa, et ven per complet. És en aquest moment quan es menja per segona vegada els teus llavis tensos, mentre amb la mà dreta avança feina a la teva zona procreativa. S'adona ràpidament que la situació ja fa estona que es troba en una fase força avançada. Entens que no hi ha més alternatives, que has escollit deixar-te portar i que has de ser conseqüent. Al cap de poca estona et dirà que \"la vida és ara i aquí\" i, dins l'aigua, faràs un dels millors claus de la teva vida. Us quedareu fent-vos petons l'estona justa, fins que decidirà sortir i vestir-se sense perdre temps. Tu estaràs tan a la glòria que no trobaràs cap motiu vàlid per haver-te d'afanyar. Quan menys t'ho esperis, sentiràs la creixent remor d'unes sirenes i en menys de 30 segons tindràs a dues unitats mòbils de la urbana a fora el carrer. Passaràs la nit al calabós, en solitud, i començaràs a entendre que no tornaràs a veure mai més a l'Al·leda. Et fotran una pallissa, maleiràs la puta guàrdia urbana d'aquesta ciutat i la broma et sortirà molt més cara del que havies previst."
+		],
+		"final": "5"
+	},
+	"42": {
+		"title": "TODO:",
+		"text": [
+			"Ja fa força estona que ets dins la discoteca i arriba el primer trumfo del DJ. No saps per què, però la cançó d'Indecent sempre t'ha eriçat els pèls. Oblides el món, per tu només existeix la pista, els colors de les llums de neó i els Xana greatest hits. Ho dones tot. En el punt més hooligan de la cançó veus de lluny el que ni t'imagines: ha vingut l'Oslo. No t'ho creus. L'Oslo MAI surt de festa. Pensa que \"ja no està per aquests rodeos\" –té 23 anys…– però, tot i això, avui veus que és l'ànima festa. Balla d'aquella manera entranyable que queda lluny de les noves tendències i somriu d'orella a orella amb el seu grup.",
+			"L'Oslo no només és crush per a tu. Té una llarga cua de pretendents i pretendentes que ui quan s'adonin que és per aquí encenent la nit. És com un \"crush international\", té aquella fama de persona inaccessible que tan molesta als lliguetis del món casteller. Avui, però, amb el valor d'una gran diada penses un astut pla:"
+		],
+		"options": [
+			{
+				"text": [
+					"Vas a parlar amb la teva amiga més propera."
+				],
+				"link": "AA"
+			},
+			{
+				"text": [
+					"Vas a parlar amb la seva amiga més propera."
+				],
+				"link": "BB"
+			}
+		]
+	},
+	"AA": {
+		"title": "TODO:",
+		"text": [
+			"Busques en tota la discoteca la teva amiga més propera i te la trobes ben dins la gola d'un jove de nova incorporació a Arreplegats. És el típic guaperes que ha entrat nou d'una altra colla petita, ja que la gent de la seva edat amb qui es portava ja s'han graduat o han parat de venir. \"Colles petites…\", penses. Mirant-se l'espectacle, però, trobes la Sabi. A qui, mira ves per on, li expliques que és aquí l'Oslo i que com t'agrada l'Oslo. La Sabi somriu d'aquella manera que fa i et diu el seu característic \"QUÈEEE?\". No entens per què el sorprèn tant que t'agradi l'international crush del món casteller universitari ja fa de Sabi això. Els dos Romeu i Julieta t'atropellen –ni t'han vist– ja que junts són com una baldufa que van fent voltes a la discoteca enllaçats amb les seves llengües i carregant-se tot el que passa pel seu voltant. Veuràs com uns segons després li tiraran un combinat a un Grillat que mirarà amb cara d'ofès esperant rebre una disculpa, evidentment aquells dos ni s'immutaran i seguiran destrossant tot el que trobin al seu camí.",
+			"On és la Sabi? Amb la tonteria de l'huracà aquest fa uns segons que l'has perduda. Veus com reapareix amb la boca oberta, els ulls com dues taronges i somrient de bat a bat. \"Li he preguntat a l'Oslo si es liaria amb tu.\" SABI!! \"I m'ha dit que \"no s'ho havia plantejat mai, però que no seria la fi del món, no?\"\". Et quedes de pedra. No és un no, no? És un sí? No se sap, s'ha de pensar bé una estratègia, un pla. Cridin als reforços de cavalleria! Anunciïn atac imminent!"
+		],
+		"options": [
+			{
+				"text": [
+					"Et són igual les estratègies i els plans, tu vas allà i tires fitxa directe."
+				],
+				"link": "CC"
+			},
+			{
+				"text": [
+					"Elabores un atac amb suport aliat perquè no sembli tan directe."
+				],
+				"link": "DD"
+			}
+		]
+	},
+	"CC": {
+		"title": "TODO:",
+		"text": [
+			"Apareixes per la zona. La teva presa està a 1 metre i 49 centímetres fent el seu ball característic. Fas tres passes endarrere i una endavant. L'Oslo es gira mentre balla, et veu, però segueix ballant. Pots veure com somriu una mica per sota del nas. Mentre agafa una integrant del seu grup per fer-li fer tres voltes et torna a mirar. 1 metre i 11 centímetres. Quan deixa anar la seva amiga et proposa el seu braç com a següent parella de ball i us mireu fixament als ulls. A l'Oslo li peta un somriure. Et fa el senyal que voltis i fas una volta. Acabeu la volta bastant més a prop que abans. 22 centímetres. És aquell moment que agraeixes a la teva gran tècnica de ball que vas aprendre a la primària i heu quedat perfectament encaixats amb els dos cossos i les dues cares mirant-vos directament. És el moment: li fas un petó. L'Oslo respon i us comenceu a menjar la boca sota el fort so de l'altaveu del Sala. \"No sabia que em tenies l'ull posat…\", et diu suaument a l'orella. \"Li he dit a la Sabi abans que sempre m'havies fet molta gràcia.\" SABI!! Tu encara no et creus que l'international crush t'estigui dient aquestes paraules i no et surt cap expressió verbal més que no sigui un somriure. Intentes respondre amb alguna frase que escalfi encara més la situació. Mm… \"Ja… A mi també.\" Ni Gabriel García Márquez s'havia expressat amb tanta làvia en tota la seva antologia. A l'Oslo li ha fet gràcia, millor. Et respon: \"Avui tu i jo ens entendrem\". Té la paella pel mànec al complet. Sempre t'han agradat més les persones que saben el que volen i saben com aconseguir-ho.",
+			"Acabaràs la nit a casa seva. Entrareu els dos al seu pis d'estudiants, gran, per cert, i entrareu al seu estret llit per a una persona en el qual us apretareu fort perquè els dos hi capigueu. Quan estigueu fent manetes al llit et proposarà anar directe a dormir ja que no aguantaria ni un segon sense sobar-se. Estaves secretament esperant que ho proposés. \"Em sembla la millor idea del món, estava esperant que algú ho digués\". Us despertareu amb el millor polvo de la teva vida, seguits d'un dinar que et farà molt insistentment amb la recepta de la mare i estareu fins a les vuit de la tarda al seu pis parlant i fent manetes. Penses que et podries acostumar a això. Intentareu tornar a quedar, però amb els exàmens, l'estiu i les dues apretades vides que dureu aquest dia es quedarà a la memòria i potser, només potser, hi pensaràs tal vegada els anys que vinguin després."
+		],
+		"final": "13"
+	},
+	"DD": {
+		"text": [
+			"Penses que és una gran idea portar algú expert en la matèria, un exemplar de lligueti castellerus. Trobes l'Arona tirant canyes a tort i a dret a un grup de pobres Bergants. \"Arona, el deure ens crida!\", li dius. Hi ha coses molt més importants que Bergants, activem alerta Oslo. L'Arona se li encén la llum. Que hi és, l'Oslo?? Històric! L'international crush del món casteller. \"Arona, ara anirem allà i entrarem en mode d'atac. Tu distreus el grup i jo vaig directe a per l'Oslo\". L'Arona no ha entès res. \"Sí, sí.\" fa amb el cap.",
+			"Us apropeu al grup de l'Oslo, evidentment l'Arona no ha entès res i va directe a tirar canya a l'Oslo (!!) mentre li diu que què fa per aquestes contrades si mai es deixa veure per aquestes festes. Tu no saps què dir. Veus com l'Oslo li somriu i sembla que s'ho passen bé junts. No ha sigut la millor idea, diguéssim. Et convidaran 4 anys després a la seva boda, ningú entendrà com algú ha aconseguit centrar a l'Arona, però és que l'Oslo és molt Oslo. Tu de moment millor ves tirant que molestes:"
+		],
+		"options": [
+			{
+				"text": [
+					"Ja que això de l'Oslo no ha funcionat, penses que potser és hora de sortir a buscar l'Apolo."
+				],
+				"link": "62"
+			},
+			{
+				"text": [
+					"Vas directe a la barra que toca recàrrega - imminent - de rom amb cola."
+				],
+				"link": "61"
+			}
+		]
+	},
+	"BB": {
+		"title": "TODO:",
+		"text": [
+			"Entre la forta música dels altaveus creues entre la mar de gent per arribar a la zona on hi ha l'Oslo amb el seu grupet. Agafes la Maria del braç i te l'emportes a un racó. És important dius. Ella va ben embriagada ja, respon amb un \"hihihi\" sense quasi bé obrir els ulls. \"Maria, és molt important. Tu l'Oslo mai t'ha parlat de mi?\". Somriu, \"hihihi\". No creus que treuràs massa informació amb aquesta via. La deixes anar. Ella torna al grup fent esses i saludant des de lluny. Veus com parla amb l'Oslo, i et miren. Pànic. Definitivament estan parlant de tu. Tu dissimules i saludes al grup de Trempats del costat treient qualsevol tema. Després de l'any que ens han donat i tu aquí fent amics. Per la teva fortuna, la conversa de com fer castells de vuit quan la resta no poden, respectar la tradició i assajar massa ens fa el major mal del món casteller universitari acaba fortuïtament amb la tornada de la Maria, que et menciona que han parlat de tu amb l'Oslo i que definitivament l'Oslo ja li ha arribat que t'agrada. Ella et va fent l'ullet i et diu \"a topee, llum vvverda\" embriagada com va."
+		],
+		"options": [
+			{
+				"text": [
+					"Ep! Ni et creus que l'Oslo vol tema. Vas allà ara mateix."
+				],
+				"link": "EE"
+			},
+			{
+				"text": [
+					"No et creus ni un segon la Maria. Quina vergonya ara anar a parlar amb l'Oslo. Millor surts a buscar l'Apolo que ho veus més clar."
+				],
+				"link": "62"
+			}
+		]
+	},
+	"EE": {
+		"title": "TODO:",
+		"text": [
+			"Vas a buscar l'Oslo amb una actitud triomfant i fent ullets. L'Oslo, mentrestant, balla amb el seu grup i fa la seva. Entre ball i ball te'n vas apropant. Quan ets a prop, li tires una mirada seductora que mai podria fallar. El que no havies previst, però, és que en un acte reflex, l'Oslo agafa ràpidament una parella de ball i comença a fer-li uns avançaments importants fins que es llença en temps rècord a menjar-li la boca. No podia haver agafat una parella de ball més ganàpia, perroflauta, mal gust en el vestir i a sobre ganàpia. Ni t'ho creus… Els de blau lligant més que tu."
+		],
+		"options": [
+			{
+				"text": [
+					"Espavila i surt a fora a buscar l'Apolo. A veure si podem salvar això."
+				],
+				"link": "62"
+			},
+			{
+				"text": [
+					"No per ser ganàpia i vestir alternativament podem jutjar una persona. A més els Ganàpies són una colla més antiga que els Arreplegats i amb més gent als assajos. Et quedes ballant amb ells."
+				],
+				"link": "51"
+			}
+		]
+	},
+	"44": {
+		"title": "TODO:",
+		"text": [
+			"Et surt l'ànima del cos quan veus que agafeu la Ronda de Dalt. No saps on aneu, ni si ha begut gaire, i aneu damunt d'un vehicle en el qual l'única carcassa que hi ha en cas d'accident és el vostre cos. L'Al·leda agafa aviat una sortida i us perdeu pels amples carrers de Pedralbes fins a arribar a un lloc on, aparentment, no hi ha res d'especial. Aparca la moto i t'arramba contra la tanca d'una de les cases. Tu ja t'has tret el casc, l'Al·leda encara no. S'aixeca la visera i et clava una mirada fosca i afamada. Et posa les dues mans sobre el pit i et pregunta com et dius. És veritat, encara no li havies dit el teu nom! Després de revelar-li, es treu el casc, el deixa a terra amb cura i et torna a mirar amb el pèl despentinat. \"És el meu honor\", et diu, i comença a menjar-se els teus llavis. Quan us separeu, després d'uns dos minuts de llengua amunt i llengua avall, et diu que saltis a dins d'aquesta casa. Tu penses que és una bogeria i ho confirmes quan veus com, davant teu, s'enfila com un gat i escoltes com els peus li piquen al terra del jardí."
+		],
+		"options": [
+			{
+				"text": [
+					"Et fa por el que pugui passar i optes per no saltar. Esperes que l'Al·leda es cansi d'estar sola al jardí d'una casa que no és la seva i li demanaràs que et torni a portar on hi ha la festa."
+				],
+				"link": "55"
+			},
+			{
+				"text": [
+					"Et fa por el que pugui passar, però la vida són dos dies i s'ha d'anar a per totes. Saltes."
+				],
+				"link": "41"
+			}
+		]
+	},
+	"46": {
+		"title": "TODO:",
+		"text": [
+			"Manel Urbano amb cota de malla i unes botes de canya alta rosades obra la porta principal de la Seu i la seva silueta, a contrallum sota la gran rosassa, es posa a córrer cap a vosaltres pel passadís central al crit de \"jo m'hi oposo!\". Ara sí que estàs ben desorientat. Mentre s'acosta a tota velocitat, veus com treu unes ulleres de protecció negres amb detalls grocs de dins una butxaca de la cota de malla i se les posa amb una certa dificultat deguda al cabriolar de la seva marxa. Amb coratge, sense frenar, sense miraments, l'home desenfunda a cinc metres d'allà on ets tu i pronuncia les paraules \"au vengue\" just abans de perforar els teus intestins amb la fulla d'una espasa reforjada, un mes abans, aprofitant la lluna nova, pels monjos cistercencs de Santes Creus. Mentre caus a terra i perds la consciència poc a poc a causa de la pèrdua irremeiable de sang, pots escoltar com, prenent-li la mà a Peronella, li demana que es casin. Que abandoni aquest talòs de Ramon Berenguer IV i que, amb el Tractat de Puigpelat, creïn la Corona Vallencoaragonesa, amb capital a Bràfim i delegació governamental a Picamoixons. La teva mort és a punt d'interrompre't la proposta d'estructures d'estat del Manel, però encara tens aire per exhalar unes últimes paraules. Les teves últimes paraules són:"
+		],
+		"options": [
+			{
+				"text": [
+					"Visca Arreplegats."
+				],
+				"link": "80"
+			},
+			{
+				"text": [
+					"Puta Vella."
+				],
+				"link": "80"
+			}
+		]
+	},
+	"49": {
+		"title": "TODO:",
+		"text": [
+			"Després d'això tornes a l'animació. Ja queda poca gent, tothom ha anat tirant cap a Salamandra. Et trobes el Philip, el típic alemany que està d'Erasmus a Barcelona i tornes a pensar que el català que és capaç de parlar és extraordinari. Et demana que recullis amb ell i, amb això, comenceu una conversa força interessant de la qual no n'entendràs ni la meitat – ni ell tampoc –, però que encararàs amb la mateixa paciència i energia que t'agradaria que tinguessin els alemanys en el cas que fossis tu l'estudiant que està d'Erasmus a Alemanya. Teniu una conversa molt mediterrània, molt poc europea, en la qual també  participarà, tot recollint, l'Acosta, que el teu padrí no s'ha gosat a presentar-te com cal. Després de recollir (o quan decidiu que ja no cal recollir més) aneu tots tres junts cap a la disco. L'ambient que hi trobeu és molt semblant al del local, heu conquerit la discoteca, com de costum. L'Acosta, tot i que sigui missió impossible, t'agrada amb ganes. És molt més gran que tu, però des del local que esteu tenint una conversa d'allò més profunda i en la qual tots dos us heu sentit comodíssims. Encaixeu. En algun moment poc concret veus el Messies com s'arramba a una columna i balla al so dels xumba-xumbas amb uns moviments completament anormals. El noi, de cop, vomita a un costat. Merda!"
+		],
+		"options": [
+			{
+				"text": [
+					"Deixes l'Acosta i t'apropes corrents cap al Messies, que necessita l'ajuda d'un amic com tu i te l'emportes al lavabo a refrescar-lo."
+				],
+				"link": "61"
+			},
+			{
+				"text": [
+					"Rius. L'Acosta et pregunta perquè rius i tu dissimules com pots. Ràpidament repreneu el fil."
+				],
+				"link": "76"
+			}
+		]
+	},
+	"50": {
+		"title": "TODO:",
+		"text": [
+			"Segueixes la ruta que l'Al·leda traça enmig de la gent que balla entre la porta dels lavabos i la del local. Mentre sortiu, se't gira un moment i, posant-se't de puntetes, et comenta a l'orella no-sé-què de les claus i del seu veí. Et condueix fins a un parell de carrers més avall, on té aparcada una moto. Res de l'altre món, la típica moto vella. Ni te n'adones i ja t'està oferint un casc. Li preguntes on pretén portar-te. Et respon que, si t'hi atreveixes, que pugis. Immediatament després de dir-te això, es mossega els llavis de la forma més sensual que una persona pot mossegar-se els llavis i, somrient, et col·loca el dit damunt els teus. A tu se t'escapa el riure. No dius res. El cert és que gent com l'Al·leda, tan formoses i alhora tan enigmàtiques, d'unes intencions que vessen de lascívia, no n'havies tingut mai cap al davant, a l'abast. Et veu pensar un moment i et diu que et deixis estar de romanços i que, junts, fugiu d'aquell lloc tan trist. El que t'ofereix et sembla bucòlic, et sembla bonic. Mires l'Al·leda i li dius que seria realment molt divertit. Torna a mostrar-te les seves dents perfectament alineades en deixar-te anar un últim somriure que et convida a pensar que no tenim tot el dia. T'has de decidir. Mires fixament i li dius:"
+		],
+		"options": [
+			{
+				"text": [
+					"Ara no. La pròxima vegada clar que vinc, però ara no. Ho sento, no vull pujar. Prefereixo tornar al local, Al·leda. Vens?"
+				],
+				"link": "58"
+			},
+			{
+				"text": [
+					"Dona'm el casc i fotem el camp."
+				],
+				"link": "44"
+			}
+		]
+	},
+	"51": {
+		"title": "TODO:",
+		"text": [
+			"La teva colla són els Ganàpies."
+		],
+		"final": "7",
+		"extra": "com el nombre màxim de pisos de les seves construccions"
+	},
+	"52": {
+		"title": "TODO:",
+		"text": [
+			"T'explica que és de Madrid, de Chamartín. Que es van conèixer amb l'Amorós –a qui s'ha referit amb el terme \"mi Amor\", suposes que aprofitant que joc de paraules– mentre feia el màster a la Complutense. Que, sens dubte, és una de les millors èpoques de la seva vida i que està realment molt feliç de la rebuda que està tenint a Barcelona. A tu, com més et parla, més t'agrada el seu castellà. Parlant sense embuts, acabes trobant-hi tanta atracció que finalment us acabeu enrotllant allà mateix. Et proposa d'anar al seu cotxe."
+		],
+		"options": [
+			{
+				"text": [
+					"Et preocupa què pot pensar l'Amorós. Malgrat tot, hi vas."
+				],
+				"link": "71"
+			},
+			{
+				"text": [
+					"Et preocupa què pot pensar l'Amorós i tens la sensació d'haver-te embalat massa. No vas al cotxe."
+				],
+				"link": "60"
+			}
+		]
+	},
+	"53": {
+		"title": "TODO:",
+		"text": [
+			"Comença a fer-ho amb la boca. T'ho fa d'una manera força més humiliant per tu que per la seva persona. Després, tu li ho fas amb la boca. Tens la desagradable sensació de rebre unes superlatives mostres de plaer únicament simulat. En qualsevol cas, és d'aquells dubtes que probablement mai acabaràs resolent. La teràpia oral es veu estroncada per l'arribada de la xoriguera propietària de la Berlingo, que ve a buscar alguna cosa. La noia fa cara de voler-se morir després d'haver-vos enganxat. Tots dos us aixequeu força de pressa per fugir d'aquell espai i finalment acabeu tornant (per separat, no fos cas) i anar tirant cap a Salamandra. Una vegada hi ets fent cua, just abans d'entrar, observes tot un grup de companys arreplegats davant l'aparador del Barimueble que canten."
+		],
+		"options": [
+			{
+				"text": [
+					"Passes d'ells com tants cops has passat de companys arreplegats al llarg de la nit. Cap dins."
+				],
+				"link": "42"
+			},
+			{
+				"text": [
+					"T'hi apropes encara que tinguis una mica de fred per riure una estona amb ells –o d'ells– mentre esperes per acabar-te el cali que encara escalfes i esbraves dins el got."
+				],
+				"link": "69"
+			}
+		]
+	},
+	"54": {
+		"title": "TODO:",
+		"text": [
+			"Us feu un petó. Per tu, haurà durat massa. Per l'Espasa, massa poc. Per tu no representarà res i per l'altre ho serà tot. Malgrat això, has de reconèixer que no ha estat gens malament. La cosa promet i comences a adonar-te que és d'aquelles personalitats que domina l'assumpte. De les que remenen les cireres. De les que tallen el bacallà. Us mireu amb uns altres ulls, uns d'encesos per flames lascives. Immediatament augures una nit de sexe eixelebrat. Saps prou bé que li tens molta confiança i saps prou bé – perquè t'ho ha dit mentre et cantava les excel·lències quan t'ha explicat que ets l'amor de la seva vida – que sempre t'ha admirat, seguit i escoltat – amb devoció – tot el que has fet i dit. Se t'entrega sense reserves. Tu, com que has tingut bons mestres, decideixes recórrer a la retòrica que els teus referents, als seus anys d'esplendor, van predicar. Per tant, per acabar la seducció al complet li confesses que ets \"trobador, boletaire, casteller i bandoler. També guanyador de Jocs Florals, mestre en Gai saber, locutor, tècnic de so i actor i portador de grans bèsties de foc. També alpinista de tresmils i, per si no fos prou, pare dels seus fills\". No ho ha entès massa la referència però et somriu. És el moment més feliç de la seva vida. És dels moments més curiosos de la teva. Fareu l'amor al teu pis i l'endemà al matí dormirà sota el teu braç. Li pujaràs el cafè i voldràs marcar distància, voldràs fer les coses bé. Per dinar, t'enamorarà amb una truita de patates. Però al vespre, després d'un primer dia junts, pensaràs que potser l'amor enardit únicament per una truita de patates no serà suficient per bastir res sòlid i decidiràs deixar-ho córrer. Li trencaràs el cor, etc. Al cap d'un temps hi tornareu. Ho tornareu a deixar. La vida no és un camí de roses."
+		],
+		"final": "12"
+	},
+	"55": {
+		"title": "TODO:",
+		"text": [
+			"Però l'Al·leda no torna. Ves a saber, potser ha sortit per una altra banda. Potser ha fugit. Tot i que, ben pensat, quin sentit tindria fugir quan la seva moto està aparcada just davant teu? L'abandona? T'abandona? Reculls el seu casc del terra per col·locar-lo al manillar. Quan t'alces, el cap et dona mil voltes. Comences a trobar-te molt malament. Decideixes marxar, carrer avall, a la recerca d'alguna cosa que no ets capaç de concretar. Camines fent esses, recolzant-te a cada arbre del carrer. Tens la sensació de ser molt lluny de tot el que coneixes i no t'agrada ser aquí, sol. T'agafa molt de fred als braços i als peus, fins al punt que t'asseus a un portal per refugiar-te de la rasca. T'estàs adormint sense poder-hi fer res. Abans de caure rodó, treus el mòbil de la butxaca un últim cop, per tornar a trucar algú que et serveixi d'ajuda. Res, ningú te l'agafa i no et queda bateria. T'adorms. Una estona després, dins el teu nirvana agònic, notes com et toquen, et remenen i t'arrosseguen fins a algun lloc, i et sembla sentir l'arrencada d'una moto que se t'allunya. L'endemà a la tarda et despertaràs a la Vall d'Hebron entre al·lucinacions i et comentaran que vas ser trobat inconscient al mig de l'asfalt d'un carrer de Pedralbes, amb una quantitat de GHB en vena capaç de paralitzar-te un hemisferi cerebral sencer. Et diran que has tingut sort i et preguntaran qui ets. No hauran pogut identificar-te perquè no duràs ni mòbil ni moneder. Tampoc recordaràs mai més res de la nit anterior. Ja ho veuràs, quan ho sàpiga ta mare."
+		],
+		"final": "6"
+	},
+	"56": {
+		"title": "TODO:",
+		"text": [
+			"Després de les teves paraules, com preveies, la tècnica es posa a riure i et venen a abraçar tots alhora. És un moment d'allò més bonic. Després d'això, t'agafa el Segura i et convida ell a tu. Et sents una mica malament, perquè fa un moment et plantejaves de fer-ho tu, però no pots fer-lo canviar d'opinió. L'Espasa, que era allà al costat, s'incorpora a la discussió sobre qui convida a qui. Al final, el Segura us acaba convidant a tots dos (a l'Espasa i a tu), afegint que tu –referint-se a tu com a \"ttttu\" mentre et clava un dit a l'estèrnum– ets molt bona gent i que, aquest xarrup, és per celebrar-ho! Un cop fet el glop, et quedes amb l'Espasa sense sospitar res. De lluny, però, veus l'Apolo com surt per la porta de la sala cap a fora al carrer. L'Espasa et dona conversa, però tu li fas ben poc cas. Us coneixeu de fa molts anys i sap que, quan es tracta de fer fresqueries, perds el cap. Potser hauries de fer-li cas. Al final, fins i tot els millors amics es cansen d'aguantar sempre uns defectes que no donen mai senyals de millora."
+		],
+		"options": [
+			{
+				"text": [
+					"És igual. T'apropes ràpidament cap a l'Apolo. Feia molta estona que no us vèieu i és ara o mai."
+				],
+				"link": "65"
+			},
+			{
+				"text": [
+					"Notes que a l'Espasa li passa alguna cosa i potser toca cultivar més aquesta amistat, que la tens abandonada des de fa unes setmanes. Ho perceps en el to de les seves paraules."
+				],
+				"link": "37"
+			}
+		]
+	},
+	"57": {
+		"title": "TODO:",
+		"text": [
+			"Aneu plegats cap a Salamandra lamentant-vos del que acaba de passar. Abans d'entrar escolteu la conversa d'uns companys que comenten l'última edició de l'Arreplegator i llancen alguna opinió referent a aquesta autora anònima i perversa que té tant de temps lliure. Tu, que ja n'has llegit una part, sincerament penses que, qui ho hagi escrit, està ben tocat del bolet i que, per la manera com escriu, s'ho té força cregut. I que fa anar les comes com vol. Però mira, com a mínim penses que si et distreu algun moment mort d'aquests que esperes que et creixi la barba mentre el tren no arriba, o si recuperes aquest Arreplegator d'aquí a uns anys i et fa recordar aquella gran (i, per a bé o per a mal, nocturna) època; ja farà el fet... Per tant, guardaràs aquesta revista allà on  deixes les cosetes que cal no perdre. De l'Apolo, no en saps res més fins al cap d'una bona estona, quan us veieu de lluny com fa el gest d'anar-se'n. Pateixes. Potser tens davant l'última oportunitat."
+		],
+		"options": [
+			{
+				"text": [
+					"Hi vas, de pressa."
+				],
+				"link": "65"
+			},
+			{
+				"text": [
+					"Et quedes ballant al centre de la pista. Sabent el que us ha passat, et fa vergonya."
+				],
+				"link": "51"
+			}
+		]
+	},
+	"58": {
+		"title": "TODO:",
+		"text": [
+			"Per desfer-te de l'Al·leda aprofites que passa un company que et sona pel costat i tu, molt hàbil, el crides. Li presentes l'Al·leda per sortir del pas i ell, el primer que fa després de dir el seu nom, és dir que pertany a la millor colla de castells del món, la colla degana, la primera, la gloriosa Colla Vella dels Xiquets de Valls. Caram! L'Al·leda et mira de reüll i no entén res. En aquest moment, un cop més, rieu junts i penses que, en el fons, es tracta només d'un cas més de vellaco completament obsessionat en el seu nacionalisme casteller excloent i que, si es tractés d'alguna altra colla, se li podria tirar la cavalleria per sobre, però que, en estar parlant d'algú de la Colla Vella, no se t'està permès. Ho trobes una mica injust i excessiu, però és divertit. Què hi farem. Tot seguit, ell es fixa que encara et queda mig got de cali plena i te'n demana perquè, a l'animació, ja s'ha acabat."
+		],
+		"options": [
+			{
+				"text": [
+					"Li'n dones."
+				],
+				"link": "49"
+			},
+			{
+				"text": [
+					"No li'n dones. El vols per tu, que per això l'has racionat."
+				],
+				"link": "38"
+			}
+		]
+	},
+	"59": {
+		"title": "TODO:",
+		"text": [
+			"Total, aviat hi haureu d'anar passant i allà sí que ja et gastaràs una morterada, si és necessari. A l'animació la gent comença a escampar la boira. Passerells, Trempats, Llunàtics, Ganàpies i fins i tot Xoriguers comencen a passar. Tant és així que t'estimes més marxar amb ells. Fora la discoteca, mentre tothom es preocupa per si els seus noms figuren a la llista d'entrada o per si han perdut la clàssica polsera, et fixes en una de les parets del carrer. No ho fas mai, però aquest cop llegeixes concentrat un dels grafitis. Si t'hagués fet el petó, hauria perdut el tren. Firmat: Comandant Bagster. Mentre esperes per entrar – no tens res millor a fer – penses en com deu ser la història d'en Bagster, mires d'esbrinar quin sentit guarden aquestes paraules, si és que en guarden un. Compadeixes en Bagster per haver d'anar escrivint quatre tonteries que ves a saber si l'altre mai llegirà. ¿Si no li va fer el petó, si va agafar el tren, on devia anar? ¿Tan poc la pena valia, aquell petó? Agafar un tren per perdre'n un altre. Tant de bo pogués tornar, en Bagster. Tant de bo encara pensi en ell, malgrat no haver donat senyals de vida, tal com ell, en secret, encara ho fa. Tant de bo els vagi bé. Un cop dins, observes que hi ha tota la tècnica de la colla a l'única barra de la sala i et planteges convidar-los a tots, que són la tècnica més ben parida de la història:"
+		],
+		"options": [
+			{
+				"text": [
+					"Els convides."
+				],
+				"link": "75"
+			},
+			{
+				"text": [
+					"No els convides –la pela és la pela– però els fas un discurs digne de transgredir."
+				],
+				"link": "56"
+			}
+		]
+	},
+	"60": {
+		"title": "TODO:",
+		"text": [
+			"Després del que acaba de passar sents com el teu món acaba de fer una volta de 180 graus. Al cap d'uns moments et trobes al carrer enmig d'una buidor oceànica. Només hi ha dos trempats beguts que desafinen en cantar \"les veles s'inflaran\". T'has de replantejar coses importants que, fins ara, sempre havien anat en una direcció concreta. I ara, de cop i volta, han canviat fins al punt de fer-te creure que el més indicat que pots fer és agafar un nocturn i enfilar cap a casa. No tens més ganes de continuar en una festa on no vols ser. Sí, són motius personals i et sembla prou trist. Però alhora, després d'entrar al pis i escarxofar-te al sofà, entens que potser t'has de donar una oportunitat i no tancar cap mena de porta. Demà serà un altre dia i, qui sap, potser serà també el principi d'una nova etapa."
+		],
+		"final": "19"
+	},
+	"61": {
+		"title": "TODO:",
+		"text": [
+			"Vas directe a la barra ja que tanta gestió t'ha estressat i necessites una recàrrega d'importància. Mentres esperes que et serveixin a l'atapeïda barra del Salamandra –aquesta nit sí que facturaran…– tens al costat algú que clarament no és d'aquí. Si una nacionalitat és igual de sorollosa, simpàtica i extrovertida que nosaltres són els italians. No saps ni què fa aquí. Li preguntes en anglès macarronic \"Where are you from?\" a la que et respon amb una mirada d'allò més sensual un \"Bologna.\" mirant-te els llavis. Si algú sap lligar més que nosaltres, són els italians. La teva sorpresa ve quan revela que l'acompanya una altra persona que assumeixes que també és del seu mateix poble. En aquell moment dius:"
+		],
+		"options": [
+			{
+				"text": [
+					"\"<i>Want to go outside?</i>\""
+				],
+				"link": "AAA"
+			},
+			{
+				"text": [
+					"\"<i>I only talk in threes.</i>\""
+				],
+				"link": "BBB"
+			}
+		]
+	},
+	"AAA": {
+		"title": "TODO:",
+		"text": [
+			"Aneu a fora i us comenceu a tirar els trastos arrepenjats contra la paret del Barimueble. El segurata ja us està enviant \"detrás del coche rojo\" i us comenceu a conèixer. Diu que no en té ni puta idea de què és un castell, que l'han portat directament aquí els Bergants i ha vingut per la festa. Tu comences a explicar les grans gestes de la tripleta de vuit, de com de difícil és descarregar el pilar de set i de lo fort que és ser l'única colla en poder fer el 4d8 - amb tot el què comporta. La teva xapa, segur que l'estaves encisant, es veu sobtadament tallada per l'arribada d'una persona que considera que has deixat de banda durant tot el dia: l'ex. Quan dic \"considera\" vol dir que està cridant-te als quatre vents i t'està montant un pollo de categoria davant de tot Itàlia. Li fas cas a l'ex. No vols que et torni a montar aquests pollos al mig de tothom i ho talles d'arrel. L'ex no li valen amb les paraules, vol una demostració que realment li importes i fa el senyal amb el cap de pico:"
+		],
+		"options": [
+			{
+				"text": [
+					"Bueno va… Amb un piquito s'acabarà el tema."
+				],
+				"link": "12"
+			},
+			{
+				"text": [
+					"Sí home. Tu estàs aquí amb una persona interessantíssima que necessita ser culturitzada i encisada a parts iguals."
+				],
+				"link": "CCC"
+			}
+		]
+	},
+	"CCC": {
+		"title": "TODO:",
+		"text": [
+			"L'ex marxa plorant i montant encara més el pollastre. Ho ha vist tothom. Veus com l'Apolo s'ho mira des de l'altre banda del carrer amb cara de shock. No s'esperava que fossis tan mala persona. Ja veus tu la que t'han liat. Decideixes concentrar-te en reempendre la conversa de les grans gestes. Veus que evidentment, la llegenda italiana està arrepenjada a la paret quasi sobant-la i no veus massa futur ni en la conversa ni en un possible lio. En aquests casos tan bo és insistir com saber-se retirar. La que t'han liat… Haver près millors decisions, suposo."
+		],
+		"options": [
+			{
+				"text": [
+					"Et quedes a fora. Ja no veus l'Apolo però t'agradaria saber què pensa sobre aquest tema."
+				],
+				"link": "62"
+			},
+			{
+				"text": [
+					"Tornes a dins. La festa sempre pot millorar, ho saps."
+				],
+				"link": "69"
+			}
+		]
+	},
+	"62": {
+		"title": "TODO:",
+		"text": [
+			"Fa força rasca. Ets a fora sense jaqueta i hi ha un parell de neurones que t'encenen l'alarma dels refredats. Tu només hi vols fer un cop d'ull i t'apropes al grupet de Patinazus que, asseguts davant el Barimueble, canten. Els preguntes de manera encriptada si saben on para l'Apolo. Et diuen que l'Apolo és a Paral·lel però que Salamandra mola més i t'insisteixen perquè et quedis cantant amb ells."
+		],
+		"options": [
+			{
+				"text": [
+					"A prendre pel cul. Jo vull trobar l'Apolo."
+				],
+				"link": "42"
+			},
+			{
+				"text": [
+					"És pràcticament impossible trobar l'Apolo, així que, com a mínim, riuràs desafinant amb aquesta gent."
+				],
+				"link": "69"
+			}
+		]
+	},
+	"65": {
+		"title": "TODO:",
+		"text": [
+			"L'Apolo, precisament, sortia al carrer a la recerca d'algun conegut i li vas com anell al dit. És clar, en portar poc temps, encara coneix a poca gent i suposes que es deu haver atabalat a dins la sala. Li ofereixes de tornar a entrar i quedar-vos allà mateix, a l'entrada. Ho feu. Estàs decidit a apretar. Ho fas. No se t'aparta pas. Fantàstic. Us feu petons i li arrapes les dues mans a les galtes del cul. La nota negativa arriba quan l'ex de l'Apolo –que resulta ser ganàpia, fixa't quines coses–, aguaita la zona des del centre de la sala, on hi ha un petit entarimat. L'Apolo s'adona de seguida que sou just sota la imponent mirada de l'ex. T'ho explica fluixet, a l'orella, mentre avança cap a la sortida esquivant motxilles. Quan sou fora veus una molèstia clara. No suporta que l'ex sigui així d'omnipresent. Ho porta fatal. Tu, com no podia ser d'altra manera, no evites parlar-ne però tampoc t'hi esmerces en excés. Us col·loqueu tocant a una paret asfixiada de grafitis i us mireu als ulls durant una bona estona. Acabareu la nit al pis de l'Apolo a Gràcia, on hi arribareu després d'enllaçar L1 (Fondo) i L3 (Trinitat Nova) amb els primers metros del primer divendres de maig. Enganxareu al seu germà gran en plena còpula al sofà del menjador amb una mallorquina que, després d'haver-li-ho preguntat, et dirà, escabellada i esbufegant encara una mica, que és de Porto Cristo. Tornaràs a admirar les mallorquines. Tornaràs a pensar que, si l'estiu fos una persona, seria una noia i seria mallorquina. O menorquina, tan se val. Com fan a les pelis, no recrearem amb pèls i senyals com anirà el clau amb l'Apolo, sinó que saltarem a l'endemà al matí, quan et despertaràs amb Alpinistes-samurais d'un grup que reconeixes que ja han fet bé en tornar i que sonarà des del mòbil de l'Apolo. Un cigarro, un tallat. Entendràs que l'estiu és tan proper que l'olor de roses de fa dos diumenges que encara ambienta el pis no serà més que un detall desfasat. I tot t'anirà bé i seràs feliç. Capullo/a."
+		],
+		"final": "8"
+	},
+	"69": {
+		"title": "TODO:",
+		"text": [
+			"Arribats a aquest punt, crec oportú deixar un final inacabat, a l'aire, de lliure elecció. La llibertat és el dret més fonamental. No cal que tot estigui escrit, reglat, emmarcat. Podria parlar-vos d'una orgia AZU, podria parlar-vos de cotxes que s'estampen a skateparks, podria seguir parlant-vos de la vida i miracles d'una nit de Diada. Sí, podria fer-ho. Però em sedueix més la idea de deixar un forat d'escapament dins el relat, un possible fil argumental sense punt final. Qui sap si mai cap motivat tindrà prou paciència per encarar de nou una nova versió per la seva generació! Ha estat un enorme plaer recrear-m'hi durant tots aquests dies. Espero que ho hagi estat també, per a tu, llegir-me. Gràcies!"
+		],
+		"final": "9"
+	},
+	"71": {
+		"title": "TODO:",
+		"text": [
+			"Et fa molt respecte pensar que la porta del cotxe no sigui l'única porta que la parella de l'Amorós t'obri. Figuradament, et disposes a descobrir una nova orientació i el teu estat lleugerament ebri t'acompanya en aquesta aventura. Dins el cotxe comences a despullar-te entre petons i sensacions noves. Mai hauries pensat que algú podria arribar a estimular-te d'aquesta manera tan obscena, tan salaç i alhora tan extranya. L'ambient es talla de cop quan uns cops al vidre us fan girar ràpidament els caps que teníeu encaixats bilateralment. L'Amorós, amb una expressió atònita des de l'altre costat de la finestra, us mira amb una cara que no necessita explicacions. La seva parella baixa ràpidament del cotxe i, mig en boles, intenta anar a per l'abraçada. L'Amorós rebutja. En castellà, es caga en mitja cosmogonia i envia a parir l'altre meitat. Surts del cotxe i et col·loques dret al costat de la seva parella. Tots dos mireu l'Amorós, en xoc, que no sap què dir. \"Amorós...\". Hi ha uns deu segons en silenci. Acaba responent un \"Què.\" aïllat. El silenci es prolonga encara una estona més fins que repeteix, censurant-se un somriure, el \"què\" d'abans. Tots tres comenceu a riure exponencialment. Finalment entreu tots tres dins el cotxe i continueu rient després de què l'Amorós comenti que fot una olor a tancat que t'hi cagues. La seva parella li llepa el coll agafant-li amb una mà mentre ella et mira a tu. Tu l'aguantes en silenci. Quan se li separa, et fa un petó a mode de declaració de principis. Mai abans havies notat una energia similar a la que ara mateix triangula els vostres tres cossos. Te'n faràs creus de la llarga llista de combinacions corporals ergonòmiques possible. Viuràs una nit diferent i no et penediràs de cap mena de decisió. L'endemà ningú sabrà què se'n va fer de tu, ni de la parella madrilenyo-barcelonina."
+		],
+		"final": "20"
+	},
+	"72": {
+		"title": "TODO:",
+		"text": [
+			"Damunt la plataforma ja t'has tret i has llançat la samarreta i pateixes per si la trobaràs després. Et descordes els pantalons, però el botó és feixuc de collons de descordar. Abaixes el cap per mirar el que les teves mans poc coordinades intenten obrir i, just sota teu, hi tornes a veure l'Apolo, entre ganàpies i observant-te sense amagarse'n. Però el botó no se't descorda. Tan fa, t'estimes més continuar ballant i ho fas. El ritual d'aparellament segueix amb escreix els passos habitualment establerts i la vostra actual disposició et remet als matins de dissabte de quan tenies deu anys, mirant el canal 33. Et sents talment com un exemplar mascle de Lophorina Superba de Nova Guinea estarrufant les plomes davant la teva presa sexual, ara que és l'època. La presa, ben aviat, es treu la seva samarreta. Seguidament, puja a la plataforma i es col·loca de genolls davant teu. Et descorda el coi de botó dels pantalons amb la boca, fet que revertirà els papers en la seducció, per acabar sent l'altre qui et captivi a tu per complet. La situació està absolutament encarrilada. Tot va molt bé. Oli en un llum."
+		],
+		"options": [
+			{
+				"text": [
+					"Sí, va molt bé, però encara és massa d'hora! No voleu marxar a fer un clau i perdre-us el festival!"
+				],
+				"link": "78"
+			},
+			{
+				"text": [
+					"Per què esperar-se? No té cap sentit allargar-ho. Agafes l'Apolo i sortiu del local."
+				],
+				"link": "33"
+			}
+		]
+	},
+	"73": {
+		"title": "TODO:",
+		"text": [
+			"La direcció és clara. Toca animació. Tu normalment hi participes passivament, però avui no és dia menor. Et trobes a primera fila amb la convicció de beure el que faci falta perquè Arreplegats quedi entre les primeres tres colles de l'animació. Sí, sou quatre colles i una és Llunàtics, tot i així ens guanyen igual, penses. Però aquest any no toca quedar últims. No passaran. Tens un problema, però, ja que prop teu hi ha l'Atenes –amb poquíssima roba ja– que cada prova que passa s'apropa més a tu i et llença mirades mossegant-se el llavi. L'Atenes i tu teniu una d'aquells lios que ningú entén, tothom intenta parar però seguiran passant pels temps del temps. Ho heu intentat deixar –per les dues bandes– varis cops, però sempre hi acabeu caient de nou.",
+			"Arriba un moment on la gent comença a fer la clàssica cadena de roba (aquest any tampoc han innovat amb les proves, millor) i de cop us trobeu tan a prop que els vostres cossos quasi es toquen. Les vostres pelvis sembla que encaixin a la perfecció mentre mireu com el vostre president intenta fer trampes afegint a la cadena els cordons de les seves sabates. Els dos sentiu aquella calor dins el cos que és molt més potent que la que ve del cali que us heu fotut i no calen paraules per descriure l'atracció absoluta i innegable que torneu a sentir, per desfortuna de les vostres amistats respectives. Diada històrica, t'ha tocat tornar-hi a caure. Els dos ho sabeu, però no sabeu a on."
+		],
+		"options": [
+			{
+				"text": [
+					"Al <i>backstage</i> de l'animació."
+				],
+				"link": "A"
+			},
+			{
+				"text": [
+					"Intenteu colar-vos dins la universitat i tancar-vos a una aula."
+				],
+				"link": "B"
+			}
+		]
+	},
+	"A": {
+		"title": "TODO:",
+		"text": [
+			"És veritat, tothom està fent la cadena de roba i el caos i desorganització és tan gran que ningú us enxamparà al backstage de l'animació. No saps perquè ningú no ho ha pensat abans. Sense dir res, agafes el canell de l'Atenes i et dirigeixes decididament al backstage. Només al tancar la porta, l'estires pel seu braç i li menges directament la boca sense cap mena de preàmbul. Després de tant de temps entre aquest sí i no, sobren les paraules per comunicar les vostres intencions si amb una mirada ho dius tot. L'Atenes ja gemega sense que li hagis posat un dit a sobre. T'empotra contra la paret amb una força descomunal provinguda de l'energia sexual que desprèn, provinguda del litro i mig de cali que fa tan sols uns minuts ha ingerit.",
+			"Ara bé, ja hauries de saber que el backstage és un lloc famós no pels seus grans polvos si no pels seus grans polvus interruptus. Evidentment, el Tomàtic havia vist amb quines intencions havíeu entrat dins el backstage, propietat material i intransferible del magestuós equip de logística i us fot fora a patades. El Telegram ja deu tenir el primers missatges de \"PILLAN A\" i us heu quedat amb tot el calentament global orfes d'on matar-lo. En aquesta situació, doncs:"
+		],
+		"options": [
+			{
+				"text": [
+					"Quina tallada de rotllo… Tornem a l'animació i ja acabarem la nit junts."
+				],
+				"link": "77"
+			},
+			{
+				"text": [
+					"Pla B. Aula de la universitat."
+				],
+				"link": "B"
+			}
+		]
+	},
+	"B": {
+		"title": "TODO:",
+		"text": [
+			"Aneu calents com dos mones i tots els moviments que feu són ràpids i bruscs. Les portes de la uni estan tancades però saps que les finestres de Campus Nord estan donadíssimes de sí i no t'extranyaria que alguna cedís. Comenceu a provar amb les primeres finestres que trobeu a peu de carrer. Una. Dues. Tres… Res. L'Atenes veus que exclama \"Aquí!\": una finestra entreoberta a segona planta. Agafareu la vestida de la sortida d'emergència per arribar-hi i entrareu per la finestra entreoberta al que de sobte - \"sí home…\" - resulta ser el despatx de la cap de congressos de Campus Nord, que tu vas tenir el semestre passat a la carrera i quin avorriment de classes que fotia.",
+			"Us comenceu a besar amb passió al bell mig del despatx però sabeu que inevitablement la taula és la millor opció. Amb el teu braç fas allò que sempre has volgut fer d'escombrar tots els papers d'una passada fent un forat idoni per començar a fer el que toca. L'impacte de la pelvis de l'Atenes contra la taula fa caure tot els objectes que hi queden, entre d'ells el ratolí de l'ordinador, que el seu moviment revela la safata de correus d'entrada de la cap. La teva curiositat provoca que mentres fas petons al cos mig nu de l'Atenes, et fixes amb la paraula \"Ganàpies\" a un dels assumptes dels correus no llegits. De fet, hi llegeixes \"Col·laboració Ganàpies + UPC\", t'hi fixes un altre cop."
+		],
+		"options": [
+			{
+				"text": [
+					"Ni de conya! Aquí cal una intervenció de la, sempre atenta, junta dels Arreplegats. Tens la intenció de respondre el correu fent-te passar per la cap."
+				],
+				"link": "D"
+			},
+			{
+				"text": [
+					"Després et llegeixes de què va. Ni de conya els de blau et tallaran un polvo després de la diada històrica que ens hem marcat."
+				],
+				"link": "E"
+			}
+		]
+	},
+	"D": {
+		"title": "TODO: format letter",
+		"text": [
+			"T'apartes de l'Atenes en un segon i vas directe a la cadira, sense cap mena de roba damunt, a veure de què va això i arreglar aquesta situació.",
+			"\"Benvolguda cap de congressos,",
+			"Després de mesos de negociacions, restem a l'espera de la seva firma final pel conveni UPC-Ganàpies valorat en 8.000€ anuals + variables en concepte de fer pilars de 3 margarita als congressos de Campus Nord durant el següent curs acadèmic.",
+			"Salut i porros,",
+			"Ganàpies de la UAB\"",
+			"NI DE CONYA! El que faltava ja. Els Ganàpies intenant robar-nos comercials a la UPC per malmetre de nou l'honor i glòria dels castells amb les seves esperpèntiques falconades. Ho tens claríssim. Respons:",
+			"\"Benvolguts Ganàpies,",
+			"He demanat personalment a Hisenda que us faci una auditoria exprés que puc cancel·lar amb la sola condició que no torneu a contactar mai més amb ningú d'aquest centre o similars. Feu-vos un favor, i encara que estiguem en sequera, dutxeu-vos.",
+			"Atentament,",
+			"La UPC\"",
+			"Enhorabona. Has salvat la colla un altre cop. L'Atenes ja li ha baixat tot però tu estàs amb el cor ple després d'evitar una altre derrota, ets totalment imprescindible a la colla i ho saps. El sexe no li arriba ni a la sola de la sabata al sentiment que sents quan aportes tant per aquesta colla i l'orgull que sents en ser part d'aquesta junta històrica. Agafes la roba i decideixes que és hora de tornar a la festa, l'Atenes ja fa 10 minuts que a marxat mentres tu seguies pensant en la importància de fer les coses ben fetes. Veus que l'animació ja està acabant però per sort encara queden xarrups de l'Hòstia ©️ (patrocinador de la diada)!"
+		],
+		"options": [
+			{
+				"text": [
+					"Tens molta set i saps que és perillós, però vols beure'n molt per anar content al Sala."
+				],
+				"link": "77"
+			},
+			{
+				"text": [
+					"Prefereixes beure pocs xarrups que després no arribes ni a Salamandra."
+				],
+				"link": "59"
+			}
+		]
+	},
+	"E": {
+		"title": "TODO:",
+		"text": [
+			"Vergonya t'hauria de fer deixar als Ganàpies robar-nos comercials! Vens a la del 10 de maig, no? Segur que ja t'has intentat inventar alguna excusa. Vergonya! Si no salvem la colla entre tots, qui l'ha de salvar? Els Ganàpies aconseguiran fer firmar a la UPC un contracte de milers d'euros per comercials on malmetran el nom dels castells mentres cobren el que Arreplegats li faltarà. No hi haurà viatjazu. Ens costarà 25€ anar a Aniverfest. I si et pensaves que tornaria Perpi, ho portes ben clar. La colla entrarà a una recessió tan bèstia que tresoreria anunciarà una derrama a tots els socis i sòcies (tu també) de 40€. I sí, tot això passarà mentres Ganàpies farà un 10d6 tsumani al Liceu pel seu 30è. Molt bé, xato/a."
+		],
+		"final": "14"
+	},
+	"75": {
+		"title": "TODO:",
+		"text": [
+			"Després de convidar-los a tots i de justificar el convit argumentant que són el pal de paller de la millor temporada de la història dels Arreplegats, com havies previst, et venen a fer petons i abraçades. Al cap d'una estona, ja amb el plus que el xarrup t'ha injectat, sona una de les teves cançons preferides (preferida sempre que es tracti de ballar-la a una discoteca). Amb Xana, a tu, et debiliten. Però sempre t'acaba passant el mateix. Si sona un temazo, tu vols ballar-lo amb aquella persona especial. Però, on és? Fa massa estona que has perdut a l'Apolo de vista i la seva absència t'acaba de caure plomada al damunt. No ho pots evitar, et preocupes."
+		],
+		"options": [
+			{
+				"text": [
+					"Te'n vas a ballar Xana."
+				],
+				"link": "42"
+			},
+			{
+				"text": [
+					"Surts a buscar l'Apolo."
+				],
+				"link": "62"
+			}
+		]
+	},
+	"76": {
+		"title": "TODO:",
+		"text": [
+			"Però l'estona va passant i cada cop trobeu menys les paraules. La conversa ja ha assolit els seus punts clímax i ara et sembla impossible suggerir cap tema prou adient. Ja fa estona que has perdut de vista el Messi i no trobes la solució per tal atzucac. Alhora, la festa comença a quedar-te gran. Se t'acut comentar-li a l'Acosta. És en aquest moment quan se li desperta una iniciativa que no preveies i et diu que també el cansament l'està matant i que se'n va a casa, que ja en té prou. \"Uf! Jo també hi aniria, però visc a l'altra punta... M'he de quedar aquí, quin remei\", li dius. I sorpresa! L'Acosta et diu que cap problema, que pots quedar-te a dormir a casa seva, que viu a deu minuts d'allà. No trigueu gens a arribar al pis. Us mengeu uns talls de fuet – pocs, pel teu gust – i, després de xerrar encara una estona, t'ensenya el llit de la seva companya de pis absent. T'asseus al llit i mires a la porta. A la desesperada li deixes anar un comentari un pèl absurd. Li dius que \"Bueno, també està bé si no fem l'amor, no?\". L'Acosta et somriu i et diu que et deixa aquí sobre un cobrellit perquè, ara no, però després fot rasca. L'endemà et despertaràs molt d'hora sense entendre què ha fallat, deixaràs una noteta sobre la taula del menjador i tancaràs la porta del pis fent el menys escàndol possible. No hi haurà hagut petó, però hauràs conegut a una persona que et semblarà increïble. Ui, quan li expliquis al teu padrí."
+		],
+		"final": "10"
+	},
+	"77": {
+		"title": "TODO:",
+		"text": [
+			"Consideres que has d'anar força més begut i enllaces cinc xupitos de l'Hòstia ©️ seguits. No hi ha treva. A l'animació, però, la festa no dura gaire més estona i ben aviat tothom comença a moure's cap a Salamandra. A tu no et toca recollir, però com que et tocava muntar i no ho has fet, ara, voluntàriament, et quedes una estona més traslladant bosses de merda als contenidors d'allà al costat. No trigaràs gaire a arribar a la discoteca. Un cop dins, tot i les dificultats per pensar amb claredat, t'acostes a la barra amb la intenció de demanar-te un cubata. Allà, juntets, hi veus tots els membres de la tècnica i et passa pel cap un pla molt astut. Com que es tracta de la tècnica que ha fet la puta millor temporada de la història de les colles universitàries, els vols convidar a tots a un xarrup."
+		],
+		"options": [
+			{
+				"text": [
+					"Els crides a tots, els fas un discurs a títol propi que els farà riure molt i els convides a un xarrup, perquè se'l mereixen."
+				],
+				"link": "75"
+			},
+			{
+				"text": [
+					"Els crides a tots, els fas un discurs a títol propi que els farà riure molt, però ningú diu res de convidar a ningú. La pela és la pela."
+				],
+				"link": "56"
+			}
+		]
+	},
+	"78": {
+		"title": "TODO:",
+		"text": [
+			"La festa a l'animació ha estat una bogeria i ara és moment d'enfilar cap a Salamandra. A tu no et ve gaire de gust marxar, però ja ets dels últims i t'està fent fora la gent que, amb una disciplina que tu no tens, han de netejar. La discoteca planteja un ambient semblant, amb la diferència del preu en les consumicions. Precisament, a la barra, hi trobes l'Asier, que et dedica una accelerada i gratuïta masterclass relativa a l'arsenal de Whiskys de darrere la barra que escoltes amb un interès fingit. Parlar (o sentir com parlen) de Whisky i no beure'n ni un trist glop, com és el cas, et comença a frustrar. Però t'ensumes l'alt ventall de preus i tampoc tens ganes d'hipotecar-te. Finalment, et demanes una cervesa, que et costa un ronyó i part del pàncrees. La nit avança a pas ferm i hi ha un moment, mentre sona Xana, en què observes un home alt i esvelt, vestit amb toga, amb una barba blanca llarga que fa por. \"Hi ha cada flipat!\", penses. I tot seguit, de casualitat, per la porta veus com l'Apolo camina en direcció al carrer. Marxa?"
+		],
+		"options": [
+			{
+				"text": [
+					"No hi vas, Xana et motiva massa i segur que tornarà a entrar. No sabies que fumava, l'Apolo."
+				],
+				"link": "51"
+			},
+			{
+				"text": [
+					"Malgrat t'agradi Xana més que qualsevol altre cosa, vas darrere seu. No pot ser que marxi!"
+				],
+				"link": "65"
 			}
 		]
 	}

@@ -1,6 +1,5 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import { useParams } from "react-router-dom";
-import NotFound from "./NotFound";
 
 import unaNitDeMaig from "../data/una-nit-de-maig-2024.json";
 
@@ -22,7 +21,7 @@ class UnaNitDeMaig extends Component {
 					<h1>{home.title}</h1>
 
 					{
-						home.text.map((p, i) => <p key={`text-${i}`}>{p}</p>)
+						home.text.map((p, i) => <p key={`text-${i}`} dangerouslySetInnerHTML={{ __html: p }} />)
 					}
 
 					<div className="una-nit-de-maig-btn">
@@ -33,27 +32,49 @@ class UnaNitDeMaig extends Component {
 		}
 
 		const part = unaNitDeMaig[par];
-		if (!part) return <NotFound />;
-
-		console.log(part);
+		if (!part) this.goTo("0");
 
 		return (<>
 			<section>
-				<h4 className="una-nit-de-maig-title">Secció {par}: {part.title}</h4>
+				{/* <h4 className="una-nit-de-maig-title">Secció {par}: {part.title}</h4> */}
 
 				{
-					part.text.map((p, i) => <p key={`text-${i}`}>{p}</p>)
+					part.text.map((p, i) => <p key={`text-${i}`} dangerouslySetInnerHTML={{ __html: p }} />)
 				}
 
-				<div className="options-wrap">
-					{
-						part.options.map((o, i) => <div key={`opt-${i}`} className="btn" onClick={() => this.goTo(o.link)}>
-							{
-								o.text.map((t, j) => <p key={`opt-${i}-text-${j}`}>{t}</p>)
-							}
-						</div>)
-					}
-				</div>
+				{
+					part.options && (
+						part.options.length > 1 ? (
+							<div className="options-wrap">
+								{
+									part.options.map((o, i) => <div key={`opt-${i}`} className="btn" onClick={() => this.goTo(o.link)}>
+										{
+											o.text.map((t, j) => <p key={`opt-${i}-text-${j}`} dangerouslySetInnerHTML={{ __html: t }} />)
+										}
+									</div>)
+								}
+							</div>
+						) : (
+							<div className="options-wrap single-option">
+								<div className="btn" onClick={() => this.goTo(part.options[0].link)}>
+									{
+										part.options[0].text.map((t, i) => <p key={`text-${i}`} dangerouslySetInnerHTML={{ __html: t }} />)
+									}
+								</div>
+							</div>
+						)
+					)
+				}
+
+				{
+					part.final && <>
+						<h5 className="final-h5">Has arribat al <u>FINAL {part.final}</u></h5>
+						{part.extra && <p className="final-extra">({part.extra})</p>}
+						<div className="final-btn">
+							<button className="btn" onClick={() => this.goTo("0")}>Torna-hi a jugar</button>
+						</div>
+					</>
+				}
 			</section>
 		</>);
 	}
