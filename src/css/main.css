@@ -3873,22 +3873,9 @@ Una nit de maig
 
 .options-wrap div {
 	text-transform: initial;
-<<<<<<< HEAD
 	height: fit-content;
 	flex-basis: 0;
 	flex: 1 1 0;
-=======
-	/* flex-basis: 0; */
-	/* flex: 1 1 0; */
-	font-size: 14px;
-	padding: 10px;
-}
-
-.readable-text {
-	/* text-align: justify; */
-	/* font-family: 'Times New Roman', Times, serif; */
-	font-size: 14px;
->>>>>>> ed3da019a8230389f8b6c64fceb87afa3efc832d
 }
 
 .single-option div {
