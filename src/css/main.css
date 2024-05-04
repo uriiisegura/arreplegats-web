@@ -3858,6 +3858,12 @@ Una nit de maig
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
+	opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.options-wrap.show-options {
+    opacity: 1;
 }
 
 .options-wrap div {

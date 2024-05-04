@@ -13,7 +13,8 @@ class UnaNitDeMaig extends Component {
         super(props);
         this.state = {
             currentTexts: [],
-            timerId: []
+            timerId: [],
+            allTextsShown: false
         };
     }
 
@@ -37,19 +38,23 @@ class UnaNitDeMaig extends Component {
         const initialTexts = part.text.map(() => "");
 
         this.setState({
-            currentTexts: initialTexts
+            currentTexts: initialTexts,
+            allTextsShown: false
         });
 
         part.text.forEach((text, index) => {
-            this.handleTextAnimation(text.split(" "), index);
+            this.handleTextAnimation(text.split(" "), index, part.text.length);
         });
     }
 
-    handleTextAnimation(words, textIndex) {
+    handleTextAnimation(words, textIndex, totalTexts) {
         let i = 0;
         const intervalId = setInterval(() => {
             if (i >= words.length) {
                 clearInterval(intervalId);
+                if (textIndex === totalTexts - 1) { // This is the last text part
+                    this.setState({ allTextsShown: true });
+                }
                 return;
             }
             this.setState(prevState => {
@@ -58,7 +63,7 @@ class UnaNitDeMaig extends Component {
                 return { currentTexts: newCurrentTexts };
             });
             i++;
-        }, 20);
+        }, 50);
 
         this.setState(prevState => ({
             timerId: [...prevState.timerId, intervalId]
@@ -82,7 +87,7 @@ class UnaNitDeMaig extends Component {
                     {
                         this.state.currentTexts.map((p, i) => <p key={`text-${i}`} className="readable-text">{p}</p>)
                     }
-                    <div className="options-wrap">
+                    <div className={`options-wrap ${this.state.allTextsShown ? "show-options" : ""}`}>
                         {
                             part.options?.map((o, i) => (
                                 <div key={`opt-${i}`} className="btn" onClick={() => this.goTo(o.link)}>
