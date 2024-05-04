@@ -17,21 +17,16 @@ class UnaNitDeMaig extends Component {
 			allTextsShown: false
 		};
 	}
-
 	componentDidMount() {
 		this.initializeTexts();
 	}
-
 	componentDidUpdate(prevProps) {
-		if (this.props.params.par !== prevProps.params.par) {
+		if (this.props.params.par !== prevProps.params.par)
 			this.initializeTexts();
-		}
 	}
-
 	componentWillUnmount() {
 		this.state.timerId.forEach(clearTimeout);
 	}
-
 	initializeTexts() {
 		const { par } = this.props.params;
 		const part = unaNitDeMaig[par] || unaNitDeMaig.home;
@@ -46,7 +41,6 @@ class UnaNitDeMaig extends Component {
 			this.handleTextAnimation(text.split(" "), index, part.text.length);
 		});
 	}
-
 	handleTextAnimation(words, textIndex, totalTexts) {
 		let i = 0;
 		const intervalId = setInterval(() => {
@@ -69,11 +63,9 @@ class UnaNitDeMaig extends Component {
 			timerId: [...prevState.timerId, intervalId]
 		}));
 	}
-
 	goTo(n) {
 		window.location.pathname = `/una-nit-de-maig/${n}`;
 	}
-
 	render() {
 		const { par } = this.props.params;
 		const part = unaNitDeMaig[par] || unaNitDeMaig.home;
@@ -103,6 +95,16 @@ class UnaNitDeMaig extends Component {
 							))
 						}
 					</div>
+
+					{
+						part.final && <>
+							<h5 className="final-h5">Has arribat al <u>FINAL {part.final}</u></h5>
+							{part.extra && <p className="final-extra">({part.extra})</p>}
+							<div className="final-btn">
+								<button className="btn" onClick={() => this.goTo("0")}>Torna-hi a jugar</button>
+							</div>
+						</>
+					}
 				</section>
 			</>
 		);
