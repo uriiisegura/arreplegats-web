@@ -39,10 +39,11 @@ class UnaNitDeMaig extends Component {
 
 		return (<>
 			<section>
-				<h4 className="una-nit-de-maig-title">Secció {par}: {part.title}</h4>
+				{/* <h4 className="una-nit-de-maig-title">Secció {par}: {part.title}</h4> */}
+				<h4 className="una-nit-de-maig-title">Un dijous de maig: el joc</h4>
 
 				{
-					part.text.map((p, i) => <p key={`text-${i}`}>{p}</p>)
+					part.text.map((p, i) => <p key={`text-${i}`} className="readable-text">{p}</p>)
 				}
 
 				<div className="options-wrap">

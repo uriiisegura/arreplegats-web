@@ -3856,14 +3856,22 @@ Una nit de maig
 .options-wrap {
 	margin: 2rem 0;
 	display: flex;
-	flex-direction: row;
+	flex-wrap: wrap;
 	gap: 1rem;
 }
 
 .options-wrap div {
 	text-transform: initial;
-	flex-basis: 0;
-	flex: 1 1 0;
+	/* flex-basis: 0; */
+	/* flex: 1 1 0; */
+	font-size: 14px;
+	padding: 10px;
+}
+
+.readable-text {
+	/* text-align: justify; */
+	/* font-family: 'Times New Roman', Times, serif; */
+	font-size: 14px;
 }
 
 /*
