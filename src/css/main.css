@@ -3838,6 +3838,11 @@ Una nit de maig
 ===============
 */
 
+.una-nit-de-maig-title {
+	margin-top: 0.5rem;
+	text-decoration: underline;
+}
+
 .una-nit-de-maig-btn {
 	margin: 1rem 0;
 	text-align: center;
@@ -3848,11 +3853,6 @@ Una nit de maig
 	font-size: 1.25rem;
 }
 
-.una-nit-de-maig-title {
-	margin-top: 0.5rem;
-	text-decoration: underline;
-}
-
 .options-wrap {
 	margin: 2rem 0;
 	display: flex;
@@ -3860,10 +3860,10 @@ Una nit de maig
 	gap: 1rem;
 	opacity: 0;
     transition: opacity 0.5s ease-in-out;
-}
 
-.options-wrap.show-options {
-    opacity: 1;
+	&.show-options {
+		opacity: 1;
+	}
 }
 
 .single-option {
@@ -3873,16 +3873,16 @@ Una nit de maig
 
 .options-wrap div {
 	text-transform: initial;
-	/* flex-basis: 0; */
-	/* flex: 1 1 0; */
-	font-size: 14px;
-	padding: 10px;
 }
 
-.readable-text {
-	/* text-align: justify; */
-	/* font-family: 'Times New Roman', Times, serif; */
-	font-size: 14px;
+@media screen and (max-width: 500px) {
+	.readable-text {
+		font-size: 14px;
+	}
+
+	.options-wrap div {
+		font-size: 14px;
+	}
 }
 
 .single-option div {
