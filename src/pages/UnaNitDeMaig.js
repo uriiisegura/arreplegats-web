@@ -5,59 +5,96 @@ import NotFound from "./NotFound";
 import unaNitDeMaig from "../data/una-nit-de-maig-2024.json";
 
 function withParams(Component) {
-	return props => <Component {...props} params={useParams()} />;
+    return props => <Component {...props} params={useParams()} />;
 }
 
 class UnaNitDeMaig extends Component {
-	goTo(n) {
-		window.location.pathname = `/una-nit-de-maig/${n}`;
-	}
-	render() {
-		const { par } = this.props.params;
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentTexts: [],
+            timerId: []
+        };
+    }
 
-		if (!par || par === "0") {
-			const home = unaNitDeMaig.home;
-			return (<>
-				<section>
-					<h1>{home.title}</h1>
+    componentDidMount() {
+        this.initializeTexts();
+    }
 
-					{
-						home.text.map((p, i) => <p key={`text-${i}`}>{p}</p>)
-					}
+    componentDidUpdate(prevProps) {
+        if (this.props.params.par !== prevProps.params.par) {
+            this.initializeTexts();
+        }
+    }
 
-					<div className="una-nit-de-maig-btn">
-						<button className="btn" onClick={() => this.goTo(home.button.link)}>{home.button.text}</button>
-					</div>
-				</section>
-			</>);
-		}
+    componentWillUnmount() {
+        this.state.timerId.forEach(clearTimeout);
+    }
 
-		const part = unaNitDeMaig[par];
-		if (!part) return <NotFound />;
+    initializeTexts() {
+        const { par } = this.props.params;
+        const part = unaNitDeMaig[par] || unaNitDeMaig.home;
+        const initialTexts = part.text.map(() => "");
 
-		console.log(part);
+        this.setState({
+            currentTexts: initialTexts
+        });
 
-		return (<>
-			<section>
-				{/* <h4 className="una-nit-de-maig-title">Secció {par}: {part.title}</h4> */}
-				<h4 className="una-nit-de-maig-title">Un dijous de maig: el joc</h4>
+        part.text.forEach((text, index) => {
+            this.handleTextAnimation(text.split(" "), index);
+        });
+    }
 
-				{
-					part.text.map((p, i) => <p key={`text-${i}`} className="readable-text">{p}</p>)
-				}
+    handleTextAnimation(words, textIndex) {
+        let i = 0;
+        const intervalId = setInterval(() => {
+            if (i >= words.length) {
+                clearInterval(intervalId);
+                return;
+            }
+            this.setState(prevState => {
+                const newCurrentTexts = [...prevState.currentTexts];
+                newCurrentTexts[textIndex] += (i > 0 ? " " : "") + words[i-1];
+                return { currentTexts: newCurrentTexts };
+            });
+            i++;
+        }, 20);
 
-				<div className="options-wrap">
-					{
-						part.options.map((o, i) => <div key={`opt-${i}`} className="btn" onClick={() => this.goTo(o.link)}>
-							{
-								o.text.map((t, j) => <p key={`opt-${i}-text-${j}`}>{t}</p>)
-							}
-						</div>)
-					}
-				</div>
-			</section>
-		</>);
-	}
+        this.setState(prevState => ({
+            timerId: [...prevState.timerId, intervalId]
+        }));
+    }
+
+    goTo(n) {
+        window.location.pathname = `/una-nit-de-maig/${n}`;
+    }
+
+    render() {
+        const { par } = this.props.params;
+        const part = unaNitDeMaig[par] || unaNitDeMaig.home;
+
+        if (!part) return <NotFound />;
+
+        return (
+            <>
+                <section>
+                    <h4 className="una-nit-de-maig-title">{part.title || 'Default Title'}</h4>
+                    {
+                        this.state.currentTexts.map((p, i) => <p key={`text-${i}`} className="readable-text">{p}</p>)
+                    }
+                    <div className="options-wrap">
+                        {
+                            part.options?.map((o, i) => (
+                                <div key={`opt-${i}`} className="btn" onClick={() => this.goTo(o.link)}>
+                                    {o.text.map((t, j) => <p key={`opt-${i}-text-${j}`}>{t}</p>)}
+                                </div>
+                            ))
+                        }
+                    </div>
+                </section>
+            </>
+        );
+    }
 }
 
 export default withParams(UnaNitDeMaig);
