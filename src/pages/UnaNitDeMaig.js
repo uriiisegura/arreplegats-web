@@ -98,10 +98,11 @@ class UnaNitDeMaig extends Component {
 
 					{
 						part.final && <>
-							<h5 className="final-h5">Has arribat al <u>FINAL {part.final}</u></h5>
+							{/* <h5 className="final-h5">Has arribat al <u>FINAL {part.final}</u></h5> */}
+							<h5 className="final-h5">FINAL</h5>
 							{part.extra && <p className="final-extra">({part.extra})</p>}
 							<div className="final-btn">
-								<button className="btn" onClick={() => this.goTo("0")}>Torna-hi a jugar</button>
+								<button className="btn" onClick={() => this.goTo("1")}>Torna-hi a jugar</button>
 							</div>
 						</>
 					}
