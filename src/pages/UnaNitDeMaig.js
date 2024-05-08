@@ -89,7 +89,7 @@ class UnaNitDeMaig extends Component {
 				<section>
 					{
 						part === unaNitDeMaig.home ?
-							<h1 className="nit-fresca-per-ser-maig-title" style={{ textDecoration: 'none' }}>{part.title}</h1>
+							<h3 className="nit-fresca-per-ser-maig-title" style={{ textDecoration: 'none' }}>{part.title}</h3>
 						: <h4 className="nit-fresca-per-ser-maig-title">{unaNitDeMaig.home.title}</h4>
 						/*: <h4 className="nit-fresca-per-ser-maig-title">Secció {par}: {part.title}</h4> */
 					}
