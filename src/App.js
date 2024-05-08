@@ -93,19 +93,19 @@ function App() {
 					<Route path="/contactar" element={<Contactar subject="Subjecte" text="Missatge" />} />
 					<Route path="/barra-lliure" element={<BarraLliure />} />
 					<Route path="/parts-castell" element={<PartsCastell />} />
-					<Route path="/una-nit-de-maig" element={<UnaNitDeMaig />} />
+					<Route path="/nit-fresca-per-ser-maig" element={<UnaNitDeMaig />} />
 					<Route path="/palette" element={<Palette />} />
 
 					<Route path="/joc-castells" element={<></>} />
-					<Route path="/una-nit-de-maig" element={<></>} />
-					<Route path="/una-nit-de-maig/:par" element={<></>} />
+					<Route path="/nit-fresca-per-ser-maig" element={<></>} />
+					<Route path="/nit-fresca-per-ser-maig/:par" element={<></>} />
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</main>
 			<Routes>
 				<Route path="/joc-castells" element={<main className="page page-full"><CastellsGame /></main>} />
-				<Route path="/una-nit-de-maig" element={<></>} />
-				<Route path="/una-nit-de-maig/:par" element={<UnaNitDeMaig />} />
+				<Route path="/nit-fresca-per-ser-maig" element={<></>} />
+				<Route path="/nit-fresca-per-ser-maig/:par" element={<UnaNitDeMaig />} />
 
 				<Route path="*" element={<Footer />} />
 			</Routes>

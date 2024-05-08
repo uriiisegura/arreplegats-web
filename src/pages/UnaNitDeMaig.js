@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import NotFound from "./NotFound";
 
-import unaNitDeMaig from "../data/una-nit-de-maig-2024.json";
+import unaNitDeMaig from "../data/nit-fresca-per-ser-maig-2024.json";
 
 function withParams(Component) {
 	return props => <Component {...props} params={useParams()} />;
@@ -76,7 +76,7 @@ class UnaNitDeMaig extends Component {
         }));
     }
     goTo(n) {
-        window.location.pathname = `/una-nit-de-maig/${n}`;
+        window.location.pathname = `/nit-fresca-per-ser-maig/${n}`;
     }
 	render() {
 		const { par } = this.props.params;
@@ -89,9 +89,9 @@ class UnaNitDeMaig extends Component {
 				<section>
 					{
 						part === unaNitDeMaig.home ?
-							<h1 className="una-nit-de-maig-title" style={{ textDecoration: 'none' }}>{part.title}</h1>
-						: <h4 className="una-nit-de-maig-title">{unaNitDeMaig.home.title}</h4>
-						/*: <h4 className="una-nit-de-maig-title">Secció {par}: {part.title}</h4> */
+							<h1 className="nit-fresca-per-ser-maig-title" style={{ textDecoration: 'none' }}>{part.title}</h1>
+						: <h4 className="nit-fresca-per-ser-maig-title">{unaNitDeMaig.home.title}</h4>
+						/*: <h4 className="nit-fresca-per-ser-maig-title">Secció {par}: {part.title}</h4> */
 					}
 
 					{
