@@ -9,63 +9,75 @@ function withParams(Component) {
 }
 
 class UnaNitDeMaig extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			currentTexts: [],
-			timerId: [],
-			allTextsShown: false
-		};
-	}
-	componentDidMount() {
-		this.initializeTexts();
-	}
-	componentDidUpdate(prevProps) {
-		if (this.props.params.par !== prevProps.params.par)
-			this.initializeTexts();
-	}
-	componentWillUnmount() {
-		this.state.timerId.forEach(clearTimeout);
-	}
-	initializeTexts() {
-		const { par } = this.props.params;
-		const part = unaNitDeMaig[par] || unaNitDeMaig.home;
-		const initialTexts = part.text.map(() => "");
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentTexts: [],
+            timerId: [],
+            allTextsShown: false,
+            currentAnimatingText: 0 // Added to control which text is currently animating
+        };
+    }
+    componentDidMount() {
+        this.initializeTexts();
+    }
+    componentDidUpdate(prevProps) {
+        if (this.props.params.par !== prevProps.params.par)
+            this.initializeTexts();
+    }
+    componentWillUnmount() {
+        this.state.timerId.forEach(clearTimeout);
+    }
+    initializeTexts() {
+        const { par } = this.props.params;
+        const part = unaNitDeMaig[par] || unaNitDeMaig.home;
+        const initialTexts = part.text.map(() => "");
 
-		this.setState({
-			currentTexts: initialTexts,
-			allTextsShown: false
-		});
+        this.setState({
+            currentTexts: initialTexts,
+            allTextsShown: false,
+            currentAnimatingText: 0
+        }, () => {
+            // Start animating the first text if any
+            if (part.text.length > 0) {
+                this.handleTextAnimation(part.text[0].split(" "), 0, part.text.length, part);
+            }
+        });
+    }
+    handleTextAnimation(words, textIndex, totalTexts, part) {
+        let i = 0;
+        const intervalId = setInterval(() => {
+            if (i >= words.length) {
+                clearInterval(intervalId);
+                // Check if there are more texts to animate
+                if (textIndex < totalTexts - 1) {
+                    this.setState(prevState => ({
+                        currentAnimatingText: prevState.currentAnimatingText + 1
+                    }), () => {
+                        const nextTextIndex = this.state.currentAnimatingText;
+                        const nextText = part.text[nextTextIndex].split(" ");
+                        this.handleTextAnimation(nextText, nextTextIndex, totalTexts, part);
+                    });
+                } else {
+                    this.setState({ allTextsShown: true });
+                }
+                return;
+            }
+            this.setState(prevState => {
+                const newCurrentTexts = [...prevState.currentTexts];
+                newCurrentTexts[textIndex] += (i > 0 ? " " : "") + words[i - 1];
+                return { currentTexts: newCurrentTexts };
+            });
+            i++;
+        }, 25);
 
-		part.text.forEach((text, index) => {
-			this.handleTextAnimation(text.split(" "), index, part.text.length);
-		});
-	}
-	handleTextAnimation(words, textIndex, totalTexts) {
-		let i = 0;
-		const intervalId = setInterval(() => {
-			if (i >= words.length) {
-				clearInterval(intervalId);
-				if (textIndex === totalTexts - 1) { // This is the last text part
-					this.setState({ allTextsShown: true });
-				}
-				return;
-			}
-			this.setState(prevState => {
-				const newCurrentTexts = [...prevState.currentTexts];
-				newCurrentTexts[textIndex] += (i > 0 ? " " : "") + words[i-1];
-				return { currentTexts: newCurrentTexts };
-			});
-			i++;
-		}, 25);
-
-		this.setState(prevState => ({
-			timerId: [...prevState.timerId, intervalId]
-		}));
-	}
-	goTo(n) {
-		window.location.pathname = `/una-nit-de-maig/${n}`;
-	}
+        this.setState(prevState => ({
+            timerId: [...prevState.timerId, intervalId]
+        }));
+    }
+    goTo(n) {
+        window.location.pathname = `/una-nit-de-maig/${n}`;
+    }
 	render() {
 		const { par } = this.props.params;
 		const part = unaNitDeMaig[par] || unaNitDeMaig.home;
@@ -97,9 +109,8 @@ class UnaNitDeMaig extends Component {
 					</div>
 
 					{
-						part.final && <>
-							{/* <h5 className="final-h5">Has arribat al <u>FINAL {part.final}</u></h5> */}
-							<h5 className="final-h5">FINAL</h5>
+						part.final && this.state.allTextsShown && <>
+							<h5 className="final-h5">Has arribat al <u>FINAL {part.final}</u></h5>
 							{part.extra && <p className="final-extra">({part.extra})</p>}
 							<div className="final-btn">
 								<button className="btn" onClick={() => this.goTo("1")}>Torna-hi a jugar</button>
