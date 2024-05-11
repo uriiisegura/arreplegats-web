@@ -57,6 +57,15 @@
 			"Descarregat, a la primera, el 7 de maig del 2015, en la 20a Diada de la colla. No s'ha tornat a intentar."
 		]
 	},
+	"4d7s": {
+		"name": "4 de 7 per sota",
+		"notation": "4d7s",
+		"link": "/images/4d7ps-arreplegats.png",
+		"text": [
+			""
+		]
+	
+	},
 	"3d7s": {
 		"name": "3 de 7 per sota",
 		"notation": "3d7s",
@@ -69,6 +78,14 @@
 		"name": "3 i 4 de 7 simultanis",
 		"notation": "3d7+4d7",
 		"link": "/images/3i4d7sim-2016.jpg",
+		"text": [
+			""
+		]
+	},
+	"10d7": {
+		"name": "10 de 7",
+		"notation": "10d7",
+		"link": "/images/10d7-arreplegats.jpeg",
 		"text": [
 			""
 		]
