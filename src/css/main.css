@@ -711,6 +711,12 @@ Footer
 .facebook:hover {
 	filter: invert(67%) sepia(99%) saturate(497%) hue-rotate(185deg) brightness(90%) contrast(81%);
 }
+.mail:hover {
+	filter: invert(88%) sepia(12%) saturate(748%) hue-rotate(72deg) brightness(95%) contrast(85%);
+}
+.phone:hover {
+	filter: invert(88%) sepia(12%) saturate(748%) hue-rotate(72deg) brightness(95%) contrast(85%);
+}
 
 .universities {
 	display: flex;

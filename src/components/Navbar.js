@@ -125,6 +125,7 @@ class Navbar extends Component {
 							</div>
 						</li>
 						<li className="nav-link"><NavLink to="/jocs"><span>Jocs</span></NavLink></li>
+						<li className="nav-link"><NavLink to="/contactar"><span>Contacta'ns</span></NavLink></li>
 						{/* <li className="nav-link"><a href="https://contractacions.arreplegats.cat" target="_blank" rel="noreferrer"><span>Contractacions</span></a></li> */}
 						<li className="nav-link join-btn"><NavLink to="/assajos"><span>Uneix-t'hi</span></NavLink></li>
 					</ul>
