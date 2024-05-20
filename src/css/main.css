@@ -538,7 +538,7 @@ Navbar
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1050px) {
 	.nav-btn {
 		display: flex;
 		justify-content: flex-end;
@@ -847,6 +847,12 @@ h4 {
 Home
 ===============
 */
+
+.home-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
 
 .welcome-image {
 	height: calc(100vh - 5rem);

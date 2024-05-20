@@ -26,9 +26,11 @@ class Home extends Component {
 						<div className="content">
 							<h1>ARREPLEGATS</h1>
 							<h3>ELS ÚNICS QUE HO PODEN FER</h3>
-							<NavLink to="/assajos" className="hero-btn">UNEIX-T'HI</NavLink>
-							<NavLink to="/assajos" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
-							<NavLink to="/contactar" className="hero-btn" style={{ marginLeft: 10 }}>CONTACTA'NS!</NavLink>
+							<div className="home-buttons">
+								<NavLink to="/assajos" className="hero-btn">UNEIX-T'HI</NavLink>
+								<NavLink to="/assajos" className="hero-btn">AGENDA</NavLink>
+								<NavLink to="/contactar" className="hero-btn">CONTACTA'NS!</NavLink>
+							</div>
 						</div>
 					</section>
 				))
