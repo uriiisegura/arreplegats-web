@@ -4,7 +4,7 @@ class Contactar extends Component {
 	render() {
 		return (<>
 			<section>
-				<h2>Contactar</h2>
+				<h2>Contacta'ns</h2>
 
 				<ul className="contact-info">
 					<li><img src="/font-awesome/mail.svg" alt="Email" style={{ width: '14px', height: '14px' }} /> Correu electrònic: <a href="mailto:junta.arreplegats@gmail.com">junta.arreplegats@gmail.com</a></li>
