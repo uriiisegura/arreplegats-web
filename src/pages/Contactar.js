@@ -8,7 +8,7 @@ class Contactar extends Component {
 
 				<ul className="contact-info">
 					<li><img src="/font-awesome/mail.svg" alt="Email" style={{ width: '14px', height: '14px' }} /> Correu electrònic: <a href="mailto:junta.arreplegats@gmail.com">junta.arreplegats@gmail.com</a></li>
-					<li><img src="/font-awesome/phone.svg" alt="Phone" style={{ width: '14px', height: '14px' }} /> Mòbil/Whatsapp: <a href="tel:+34681236024">+34 681 236 024</a></li>
+					<li><img src="/font-awesome/phone.svg" alt="Phone" style={{ width: '14px', height: '14px' }} /> Mòbil/Whatsapp: <a href="tel:+34681236024">+34 681 236 024</a> (Andreu)</li>
 					<br />
 					<li><img src="/font-awesome/twitter-x.svg" alt="Twitter" style={{ width: '14px', height: '14px' }} /> Twitter: <a href="https://www.x.com/arreplegats" target="_blank" rel="noreferrer">@arreplegats</a></li>
 					<li><img src="/font-awesome/instagram.svg" alt="Instagram" style={{ width: '14px', height: '14px' }} /> Instagram: <a href="https://www.instagram.com/arreplegats" target="_blank" rel="noreferrer">@arreplegats</a></li>
