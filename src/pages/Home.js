@@ -28,6 +28,7 @@ class Home extends Component {
 							<h3>ELS ÚNICS QUE HO PODEN FER</h3>
 							<NavLink to="/assajos" className="hero-btn">UNEIX-T'HI</NavLink>
 							<NavLink to="/assajos" className="hero-btn" style={{ marginLeft: 10 }}>AGENDA</NavLink>
+							<NavLink to="/contactar" className="hero-btn" style={{ marginLeft: 10 }}>CONTACTA'NS!</NavLink>
 						</div>
 					</section>
 				))
