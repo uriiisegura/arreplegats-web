@@ -733,74 +733,6 @@ Footer
 	margin-right: 0;
 }
 
-.popup {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: var(--overlay);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 99999;
-}
-
-.popup-content {
-	position: relative;
-	background: var(--white);
-	border-radius: var(--borderRadius);
-	box-shadow: var(--shadow-2);
-	padding: 3rem 4rem 2rem 4rem;
-	color: var(--black);
-	max-width: 90%;
-	max-height: 90%;
-	overflow-y: auto;
-}
-
-.popup-buttons {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 1rem;
-	width: 100%;
-}
-
-.popup-button {
-	background: var(--primary-500);
-	color: var(--white);
-	border: none;
-	border-radius: var(--borderRadius);
-	padding: 0.5rem 1rem;
-	cursor: pointer;
-	transition: var(--transition);
-	width: 100%;
-}
-
-.popup-button:hover {
-	background: var(--primary-700);
-}
-
-.popup-text {
-	margin-bottom: 1rem;
-	user-select: text;
-}
-
-.popup .close-popup {
-	position: absolute;
-	top: 1rem;
-	right: 1rem;
-	cursor: pointer;
-	filter: invert(0.5);
-}
-
-.popup .close-popup:hover {
-	filter: invert(0.25);
-}
-
-.popup .close-popup img {
-	width: 1.5rem;
-}
-
 /*
 =============== 
 Page
@@ -2270,6 +2202,14 @@ label.required::after {
 
 .contact-form button {
 	margin-top: 1rem;
+}
+
+.contact-info a {
+	color: var(--arreplegats);
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 /*
@@ -3863,6 +3803,10 @@ Fullscreen PDF
 Música
 ===============
 */
+
+.music-iframe-wrap {
+	margin: 1rem 0 2rem;
+}
 
 .partitures-list {
 	display: flex;

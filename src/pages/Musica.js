@@ -13,11 +13,12 @@ class Musica extends Component {
 					Els Arreplegats, de del desembre de 2022, tenim un perfil d'<a href="https://open.spotify.com/artist/6aUOk2F87SCtPfCML7YX27" target="_blank" rel="noreferrer">Spotify</a> i d'<a href="https://music.apple.com/es/artist/arreplegats-de-la-zona-universit%C3%A0ria/1676157265" target="_blank" rel="noreferrer">Apple Music</a> en el que hi pugem diverses cançons relacionades amb la colla i els castells. No ho dubtis i fes-li un cop d'ull als nostres últims hits!
 				</p>
 
-				<div style={{ padding: '1rem' }}>
-					<iframe style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/artist/6aUOk2F87SCtPfCML7YX27?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+				<div className="music-iframe-wrap">
+					<iframe title="Spotify" style={{borderRadius: '12px'}} src="https://open.spotify.com/embed/artist/6aUOk2F87SCtPfCML7YX27?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 				</div>
 
-				<h4 style={{marginTop: '2rem'}}>Partitures</h4>
+				<h4>Partitures</h4>
+				
 				<ul className="partitures-list">
 					{
 						Object.entries(partitures).map(([k, v], i) => {
