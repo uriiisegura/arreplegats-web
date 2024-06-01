@@ -35,6 +35,7 @@
 		"name": "Gamma bàsica de 7",
 		"castells": [
 			"3d7",
+			"Vd5",
 			"Pd5",
 			"4d7"
 		]
@@ -44,7 +45,6 @@
 		"castells": [
 			"Td6s",
 			"3d6s",
-			"Vd5",
 			"9d6"
 		]
 	},
