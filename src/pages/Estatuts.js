@@ -10,10 +10,10 @@ class Estatuts extends Component {
 					title="Estatuts"
 					doc={estatuts.actual}
 					/> */}
-				<h2>Estatuts (2018)</h2>
+				<h2>Estatuts (2024)</h2>
 
-				<object className="fullscreen-pdf" data="/uploads/estatuts-2018.pdf" type="application/pdf">
-					<p>No s'ha pogut mostrar el PDF. <a href="/uploads/estatuts-2018.pdf">Descarrega'l</a>.</p>
+				<object className="fullscreen-pdf" data="/uploads/estatuts-2024.pdf" type="application/pdf">
+					<p>No s'ha pogut mostrar el PDF. <a href="/uploads/estatuts-2024.pdf">Descarrega'l</a>.</p>
 				</object>
 			</section>
 		</>);

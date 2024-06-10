@@ -117,7 +117,7 @@ class Navbar extends Component {
 							<div id="legal" className="sub-menus">
 								<div className="sub-menu">
 									<ul>
-										<li><NavLink to="/estatuts">Estatuts (2018)</NavLink></li>
+										<li><NavLink to="/estatuts">Estatuts (2024)</NavLink></li>
 										<li><NavLink to="/reglament-regim-intern">Reglament de Règim Intern (2023)</NavLink></li>
 										<li><NavLink to="/protocol-agressions">Protocol d'agressions (2022)</NavLink></li>
 									</ul>
