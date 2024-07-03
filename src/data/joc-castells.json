@@ -2873,7 +2873,7 @@
     "Pd5n": {
         "gent": 5,
         "probabilitats": {
-            "pes_dependencies": 0.2,
+            "pes_dependencies": 0.0,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -2882,7 +2882,7 @@
                     0.95
                 ],
                 "CARREGAT": [
-                    1.05,
+                    1.1,
                     1.05,
                     1,
                     0.95
