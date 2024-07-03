@@ -4290,7 +4290,7 @@
     "4d7n": {
         "gent": 20,
         "probabilitats": {
-            "pes_dependencies": 0.3,
+            "pes_dependencies": 0.2,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
