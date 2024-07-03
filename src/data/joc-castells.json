@@ -1418,7 +1418,7 @@
         "descarregat": 750,
         "gent": 33,
         "probabilitats": {
-            "pes_dependencies": 0.8,
+            "pes_dependencies": 0.6,
             "multipliers": {
                 "DESCARREGAT": [
                     1.1,
@@ -1447,7 +1447,7 @@
             },
             "caps": [
                 0.02,
-                0.90
+                0.8
             ],
             "unique": [
                 0,
