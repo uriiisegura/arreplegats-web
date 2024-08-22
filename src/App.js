@@ -45,11 +45,13 @@ import NotFound from "./pages/NotFound";
 import './css/normalize.css';
 import './css/main.css';
 import './css/resizer.css';
+import TitleUpdater from './components/TitleUpdater';
 
 function App() {
 	return (<>
 		<Router>
 			<ScrollToTop />
+			<TitleUpdater />
 			<Routes>
 				<Route path="/joc-castells" element={<></>} />
 				<Route path="*" element={<NavBar />} />
