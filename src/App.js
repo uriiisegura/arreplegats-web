@@ -46,6 +46,7 @@ import './css/normalize.css';
 import './css/main.css';
 import './css/resizer.css';
 import TitleUpdater from './components/TitleUpdater';
+import AssajosCalendar from "./pages/AssajosCalendar";
 
 function App() {
 	return (<>
@@ -61,6 +62,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/qui-som" element={<QuiSom />} />
 					{/* <Route path="/agenda" element={<Agenda withAssajos={true} />} /> */}
+					<Route path="/agenda" element={<AssajosCalendar />} />
 					<Route path="/assajos" element={<Assajos />} />
 					<Route path="/gralles-i-tabals" element={<GrallesTabals />} />
 					<Route path="/vida-universitaria" element={<VidaUniversitaria />} />

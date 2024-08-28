@@ -22,6 +22,18 @@ class Assajos extends Component {
 					<iframe title="Castellers de Sants" src="https://www.google.com/maps/embed?pb=!4v1711817231053!6m8!1m7!1sUAStG173tbDkSuIxpIOp_Q!2m2!1d41.38031047587492!2d2.137471285682687!3f53.58123436952216!4f6.161186546629949!5f0.7820865974627469" />
 				</div>
 			</section>
+			<section>
+				<h3 id="calendar">Calendari d'assajos, activitats i actuacions</h3>
+				<iframe
+					src="https://calendar.google.com/calendar/embed?src=2c30ed570877769fb9aefadc08ac2bc1787003ad587075216f92c48dc0a29f71%40group.calendar.google.com&ctz=Europe%2FMadrid"
+					style={{ border: 0 }}
+					width="100%"
+					height="600"
+					frameBorder="0"
+					scrolling="no"
+					title="Calendari d'assajos"
+				></iframe>
+			</section>
 		</>);
 	}
 }
