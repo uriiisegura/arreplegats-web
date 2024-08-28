@@ -9,6 +9,10 @@ class AssajosCalendar extends Component {
 				<p>
                     Aquesta és la nostra agenda d'assajos, activitats i actuacions.
 				</p>
+
+                <p>
+                    Totes les activitats són obertes a tothom qui vulgui participar. Vine-hi tu també!
+				</p>
 			</section>
             <section>
 				<h3 id="calendar">Calendari d'assajos, activitats i actuacions</h3>
