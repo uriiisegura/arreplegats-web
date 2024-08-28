@@ -9,6 +9,10 @@ class Assajos extends Component {
 				<p>
 					Els bons castells no surten del no-res: s'han d'assajar. Ens reunim dos dies a la setmana per fer història assaig a assaig.
 				</p>
+
+				<p>
+					Vine-hi! El nostre equip d'acollida et rebrà amb els braços oberts. No cal saber-ne gens, només et cal una camisa antiga.
+				</p>
 			</section>
 			<section>
 				<div className="rehearsal">
