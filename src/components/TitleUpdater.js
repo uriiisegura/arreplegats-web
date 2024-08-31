@@ -6,131 +6,117 @@ const TitleUpdater = () => {
 
   useEffect(() => {
     const path = location.pathname;
-    let title = "Arreplegats"; 
+    let title = "Arreplegats";
 
-    switch (path) {
-      case "/":
+    // Extract the first word after the slash
+    const firstWord = path.split("/")[1];
+
+    // Set the title based on the first word
+    switch (firstWord) {
+      case "":
         title = "Arreplegats";
         break;
-      case "/qui-som":
+      case "qui-som":
         title = "Qui Som - Arreplegats";
         break;
-      case "/agenda":
+      case "agenda":
         title = "Agenda - Arreplegats";
         break;
-      case "/assajos":
+      case "assajos":
         title = "Assajos - Arreplegats";
         break;
-      case "/gralles-i-tabals":
+      case "gralles-i-tabals":
         title = "Gralles i Tabals - Arreplegats";
         break;
-      case "/vida-universitaria":
+      case "vida-universitaria":
         title = "Vida Universitària - Arreplegats";
         break;
-      case "/historia-de-la-colla":
+      case "historia-de-la-colla":
         title = "Història de la Colla - Arreplegats";
         break;
-      case "/llista-de-caps-de-colla":
+      case "llista-de-caps-de-colla":
         title = "Llista de Caps de Colla - Arreplegats";
         break;
-      case "/llista-de-presidents":
+      case "llista-de-presidents":
         title = "Llista de Presidents - Arreplegats";
         break;
-      case "/els-castells-universitaris":
+      case "els-castells-universitaris":
         title = "Els Castells Universitaris - Arreplegats";
         break;
-      case "/millors-castells":
+      case "millors-castells":
         title = "Millors Castells - Arreplegats";
         break;
-      case "/castells/:castell":
+      case "castells":
         title = "Castell - Arreplegats";
         break;
-      case "/millors-diades":
+      case "millors-diades":
         title = "Millors Diades - Arreplegats";
         break;
-      case "/resum-historic":
+      case "resum-historic":
         title = "Resum Històric - Arreplegats";
         break;
-      case "/llista-de-diades":
+      case "llista-de-diades":
         title = "Llista de Diades - Arreplegats";
         break;
-      case "/junta-directiva":
+      case "junta-directiva":
         title = "Junta Directiva - Arreplegats";
         break;
-      case "/junta-directiva/:any":
-        title = "Junta Directiva - Arreplegats";
-        break;
-      case "/junta-tecnica":
+      case "junta-tecnica":
         title = "Junta Tècnica - Arreplegats";
         break;
-      case "/junta-tecnica/:any":
-        title = "Junta Tècnica - Arreplegats";
-        break;
-      case "/patrocinadors":
+      case "patrocinadors":
         title = "Patrocinadors - Arreplegats";
         break;
-      case "/fotografies":
+      case "fotografies":
         title = "Fotografies - Arreplegats";
         break;
-      case "/videos":
+      case "videos":
         title = "Vídeos - Arreplegats";
         break;
-      case "/musica":
+      case "musica":
         title = "Música - Arreplegats";
         break;
-      case "/estatuts":
+      case "estatuts":
         title = "Estatuts - Arreplegats";
         break;
-      case "/reglament-regim-intern":
+      case "reglament-regim-intern":
         title = "Reglament Règim Intern - Arreplegats";
         break;
-      case "/protocol-agressions":
+      case "protocol-agressions":
         title = "Protocol Agressions - Arreplegats";
         break;
-      case "/jocs":
+      case "jocs":
         title = "Jocs - Arreplegats";
         break;
-      case "/sopa-de-lletres":
+      case "sopa-de-lletres":
         title = "Sopa de Lletres - Arreplegats";
         break;
-      case "/sopa-de-lletres/:idx":
-        title = "Sopa de Lletres - Arreplegats";
-        break;
-      case "/mots-encreuats":
+      case "mots-encreuats":
         title = "Mots Encreuats - Arreplegats";
         break;
-      case "/mots-encreuats/:idx":
-        title = "Mots Encreuats - Arreplegats";
-        break;
-      case "/memory":
+      case "memory":
         title = "Memory - Arreplegats";
         break;
-      case "/penjat":
+      case "penjat":
         title = "Penjat - Arreplegats";
         break;
-      case "/penjat/:idx":
-        title = "Penjat - Arreplegats";
-        break;
-      case "/contactar":
+      case "contactar":
         title = "Contactar - Arreplegats";
         break;
-      case "/barra-lliure":
+      case "barra-lliure":
         title = "Barra Lliure - Arreplegats";
         break;
-      case "/parts-castell":
+      case "parts-castell":
         title = "Parts Castell - Arreplegats";
         break;
-      case "/nit-fresca-per-ser-maig":
+      case "nit-fresca-per-ser-maig":
         title = "Una Nit de Maig - Arreplegats";
         break;
-      case "/palette":
+      case "palette":
         title = "Palette - Arreplegats";
         break;
-      case "/joc-castells":
+      case "joc-castells":
         title = "Joc Castells - Arreplegats";
-        break;
-      case "/nit-fresca-per-ser-maig/:par":
-        title = "Una Nit de Maig - Arreplegats";
         break;
       default:
         title = "Arreplegats";
