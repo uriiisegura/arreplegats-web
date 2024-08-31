@@ -9,7 +9,7 @@ const TitleUpdater = () => {
     let title = "Arreplegats";
 
     // Extract the first word after the slash
-    const firstWord = path.split("/")[1];
+    const firstWord = path.split("/")?.[1] || "";
 
     // Set the title based on the first word
     switch (firstWord) {
