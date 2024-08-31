@@ -15,6 +15,9 @@ const TitleUpdater = () => {
       case "/qui-som":
         title = "Qui Som - Arreplegats";
         break;
+      case "/agenda":
+        title = "Agenda - Arreplegats";
+        break;
       case "/assajos":
         title = "Assajos - Arreplegats";
         break;
