@@ -14,7 +14,7 @@ const TitleUpdater = () => {
     // Set the title based on the first word
     switch (firstWord) {
       case "":
-        title = "Arreplegats";
+        title = "Inici - Arreplegats";
         break;
       case "qui-som":
         title = "Qui Som - Arreplegats";
