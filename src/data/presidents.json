@@ -225,8 +225,18 @@
 	{
 		"name": "Benet Antius i Lozano",
 		"from": [2023],
-		"to": [null],
+		"to": [2024],
 		"link": "presidents/benet.jpg",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Cristina Oliveira i Coll",
+		"mote": "Crispeta",
+		"from": [2024],
+		"to": [null],
+		"link": "presidents/crispeta.jpg",
 		"text": [
 			"—"
 		]

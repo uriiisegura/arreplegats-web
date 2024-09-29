@@ -5,26 +5,22 @@
 			"components": [
 				{
 					"carrec": "Cap de colla",
-					"nom": "Júlia Font i Aguilar"
-				},
-				{
-					"carrec": "Sots-cap de colla",
-					"nom": "Oriol Segura i Niño"
+					"nom": "Jordi Torrens i Camprubí"
 				},
 				{
 					"type": "hr"
 				},
 				{
 					"carrec": "Cap de troncs",
-					"nom": "Biel Romera i Muñoz"
+					"nom": "Berta Bach i Manresa"
 				},
 				{
 					"carrec": "Cap de pinyes",
-					"nom": "Eudald Rovira i Rovira"
+					"nom": "Anna Santamaria i Balaguer"
 				},
 				{
 					"carrec": "Cap de poms",
-					"nom": "Ignasi Tortras i de la Cruz"
+					"nom": "Berta Marqués i Saleta"
 				}
 			]
 		},
@@ -34,17 +30,23 @@
 				"components": [
 					{
 						"carrec": "Cap de troncs",
-						"nom": "Biel Romera i Muñoz"
+						"nom": "Berta Bach i Manresa"
 					},
 					{
 						"carrec": "Cap de pilars",
-						"nom": "David Torras i Martín"
+						"nom": "Alba Sirag i Grau"
 					},
 					{
-						"nom": "Sheikh Cordero i Rodríguez"
+						"nom": "Hèctor Carmona i Lòpez"
 					},
 					{
-						"nom": "Maria Reseco i Badia"
+						"nom": "Edgar Castellanos i Offroy"
+					},
+					{
+						"nom": "Martina Cusidó i Gascón"
+					},
+					{
+						"nom": "Pau Puente i Mollfulleda"
 					}
 				]
 			},
@@ -53,7 +55,7 @@
 				"components": [
 					{
 						"carrec": "Cap de poms",
-						"nom": "Ignasi Tortras i de la Cruz"
+						"nom": "Berta Marqués i Saleta"
 					},
 					{
 						"nom": "Núria-Xi Bautista i Rosas"
@@ -62,10 +64,7 @@
 						"nom": "Berta Boixet i Lladó"
 					},
 					{
-						"nom": "Carla Falguera i Garrido"
-					},
-					{
-						"nom": "Martí Gumà i Marín"
+						"nom": "Laia Homs i Vilaseca"
 					},
 					{
 						"nom": "Amanda Martínez i Vila"
@@ -77,51 +76,31 @@
 				"components": [
 					{
 						"carrec": "Cap de pinyes",
-						"nom": "Eudald Rovira i Rovira"
-					},
-					{
-						"nom": "Edgar Castellanos i Offroy"
-					},
-					{
-						"nom": "Laia Homs i Vilaseca"
-					},
-					{
-						"nom": "Aniol Puig Massaguer"
-					},
-					{
-						"nom": "Pau Sánchez i Viol"
-					},
-					{
 						"nom": "Anna Santamaria i Balaguer"
 					},
-					{
-						"nom": "Nil Santaulària i Cruz"
-					},
-					{
-						"nom": "Jordi Torrens i Camprubí"
-					},
-					{
-						"nom": "Aina Vila i Pont"
-					}
-				]
-			},
-			{
-				"titol": "Equip d'acolliment, formació, i tecnificació",
-				"components": [
 					{
 						"nom": "Mariona Graupera i Clivillé"
 					},
 					{
-						"nom": "Edgar Castellanos i Offroy"
+						"nom": "Pablo López i García"
+					},
+					{
+						"nom": "Roger Miró i Nogués"
+					},
+					{
+						"nom": "Ariadna González i Montagut"
+					},
+					{
+						"nom": "Pau Puente i Mollfulleda"
+					},
+					{
+						"nom": "Pol Salvador i Matas"
 					},
 					{
 						"nom": "Juli Serra i Balaguer"
 					},
 					{
-						"nom": "Alba Sirag i Grau"
-					},
-					{
-						"nom": "Pol Tibau i Rubau"
+						"nom": "Èric Tusquets i Bartos"
 					}
 				]
 			}
@@ -204,16 +183,16 @@
 						"nom": "Genís Tomàs i Massana"
 					},
 					{
+						"carrec": "Cap de poms",
+						"nom": "Cristina Oliveira i Coll"
+					},
+					{
 						"carrec": "Co-cap de pinyes",
 						"nom": "Lluc Isern i Pujol"
 					},
 					{
 						"carrec": "Co-cap de pinyes",
 						"nom": "Anna Juan i Font"
-					},
-					{
-						"carrec": "Cap de poms",
-						"nom": "Cristina Oliveira i Coll"
 					}
 				]
 			},
@@ -345,6 +324,10 @@
 						"nom": "Paula Olivé i Roselló"
 					},
 					{
+						"carrec": "Cap de pinyes",
+						"nom": "Pau Coll i Casellas"
+					},
+					{
 						"carrec": "Cap",
 						"nom": "Júlia Montserrat i Ruiz"
 					}
@@ -439,6 +422,134 @@
 						},
 						{
 							"nom": "Jordi Torrens i Camprubí"
+						}
+					]
+				}
+			]
+		},
+		"2023-2024": {
+			"direccio": {
+				"titol": "Direcció tècnica",
+				"components": [
+					{
+						"carrec": "Cap de colla",
+						"nom": "Júlia Font i Aguilar"
+					},
+					{
+						"carrec": "Sots-cap de colla",
+						"nom": "Oriol Segura i Niño"
+					},
+					{
+						"type": "hr"
+					},
+					{
+						"carrec": "Cap de troncs",
+						"nom": "Biel Romera i Muñoz"
+					},
+					{
+						"carrec": "Cap de pinyes",
+						"nom": "Eudald Rovira i Rovira"
+					},
+					{
+						"carrec": "Cap de poms",
+						"nom": "Ignasi Tortras i de la Cruz"
+					}
+				]
+			},
+			"junta": [
+				{
+					"titol": "Equip de troncs",
+					"components": [
+						{
+							"carrec": "Cap de troncs",
+							"nom": "Biel Romera i Muñoz"
+						},
+						{
+							"carrec": "Cap de pilars",
+							"nom": "David Torras i Martín"
+						},
+						{
+							"nom": "Sheikh Cordero i Rodríguez"
+						},
+						{
+							"nom": "Maria Reseco i Badia"
+						}
+					]
+				},
+				{
+					"titol": "Equip de poms",
+					"components": [
+						{
+							"carrec": "Cap de poms",
+							"nom": "Ignasi Tortras i de la Cruz"
+						},
+						{
+							"nom": "Núria-Xi Bautista i Rosas"
+						},
+						{
+							"nom": "Berta Boixet i Lladó"
+						},
+						{
+							"nom": "Carla Falguera i Garrido"
+						},
+						{
+							"nom": "Martí Gumà i Marín"
+						},
+						{
+							"nom": "Amanda Martínez i Vila"
+						}
+					]
+				},
+				{
+					"titol": "Equip de pinyes, folres, i manilles",
+					"components": [
+						{
+							"carrec": "Cap de pinyes",
+							"nom": "Eudald Rovira i Rovira"
+						},
+						{
+							"nom": "Edgar Castellanos i Offroy"
+						},
+						{
+							"nom": "Laia Homs i Vilaseca"
+						},
+						{
+							"nom": "Aniol Puig Massaguer"
+						},
+						{
+							"nom": "Pau Sánchez i Viol"
+						},
+						{
+							"nom": "Anna Santamaria i Balaguer"
+						},
+						{
+							"nom": "Nil Santaulària i Cruz"
+						},
+						{
+							"nom": "Jordi Torrens i Camprubí"
+						},
+						{
+							"nom": "Aina Vila i Pont"
+						}
+					]
+				},
+				{
+					"titol": "Equip d'acolliment, formació, i tecnificació",
+					"components": [
+						{
+							"nom": "Mariona Graupera i Clivillé"
+						},
+						{
+							"nom": "Edgar Castellanos i Offroy"
+						},
+						{
+							"nom": "Juli Serra i Balaguer"
+						},
+						{
+							"nom": "Alba Sirag i Grau"
+						},
+						{
+							"nom": "Pol Tibau i Rubau"
 						}
 					]
 				}

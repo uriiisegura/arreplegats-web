@@ -220,8 +220,17 @@
 	{
 		"name": "Júlia Font i Aguilar",
 		"from": [2023],
-		"to": [null],
+		"to": [2024],
 		"link": "caps-de-colla/julia-font.jpg",
+		"text": [
+			"—"
+		]
+	},
+	{
+		"name": "Jordi Torrens i Camprubí",
+		"from": [2024],
+		"to": [null],
+		"link": "",
 		"text": [
 			"—"
 		]
