@@ -1666,6 +1666,7 @@ Junta tècnica
 
 .junta-year-wrap {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 3px;
 }
 
@@ -1676,6 +1677,8 @@ Junta tècnica
 	border-radius: 3px;
 	user-select: none;
 	color: var(--white);
+	text-align: center;
+	text-wrap: nowrap;
 	opacity: 0.5;
 }
 .junta-year:not(.false) {
