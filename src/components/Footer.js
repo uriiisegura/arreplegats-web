@@ -25,7 +25,7 @@ class Footer extends Component {
 					<a href="https://www.facebook.com/arreplegats" className="icon facebook" target="_blank" rel="noreferrer"><img src="/font-awesome/facebook.svg" alt="Facebook" /></a>
 				</div>
 				<div className="email">
-					<span className="email-text">junta@arreplegats.cat</span>
+					<span className="email-text">contacte@arreplegats.cat</span>
 					<button 
 						className={`copy-btn ${this.state.copied ? 'copied' : ''}`}
 						onClick={this.handleCopy}
