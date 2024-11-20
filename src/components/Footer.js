@@ -12,6 +12,12 @@ class Footer extends Component {
 					<a href="https://www.tiktok.com/@arreplegats" className="icon tiktok" target="_blank" rel="noreferrer"><img src="/font-awesome/tiktok.svg" alt="TikTok" /></a>
 					<a href="https://www.facebook.com/arreplegats" className="icon facebook" target="_blank" rel="noreferrer"><img src="/font-awesome/facebook.svg" alt="Facebook" /></a>
 				</div>
+				<div className="email">
+					<a href="mailto:junta@arreplegats.cat" onClick={(e) => {
+						e.preventDefault();
+						navigator.clipboard.writeText('junta@arreplegats.cat');
+					}}>junta@arreplegats.cat</a>
+				</div>
 				<div className="universities">
 					<img
 						src="/ub.png"

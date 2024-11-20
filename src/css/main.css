@@ -123,7 +123,7 @@ html {
 	--page-width: 80vw;
 	--mobile-width: 95vw;
 	--navbar-height: 5rem;
-	--footer-height: 7rem;
+	--footer-height: 10rem;
 
 	/* box shadow*/
 	--shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -718,10 +718,25 @@ Footer
 	filter: invert(88%) sepia(12%) saturate(748%) hue-rotate(72deg) brightness(95%) contrast(85%);
 }
 
+.email {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.email a {
+  color: var(--white);
+  transition: var(--transition);
+  font-size: 0.8rem;
+}
+
+.email a:hover {
+  color: var(--primary-600);
+}
+
 .universities {
 	display: flex;
 	flex-direction: row;
-	margin: 1rem auto 0;
+	margin: 0.5rem auto 0;
 }
 
 .universities img {
