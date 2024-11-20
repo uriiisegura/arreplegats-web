@@ -10,7 +10,7 @@ class Footer extends Component {
 		this.setState({ copied: true });
 		setTimeout(() => {
 			this.setState({ copied: false });
-		}, 2000); // Show check for 2 seconds
+		}, 500); // Show check for 0.5 seconds
 	};
 
 	render() {

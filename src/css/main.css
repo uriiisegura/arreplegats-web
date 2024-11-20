@@ -753,10 +753,6 @@ Footer
   cursor: default;
 }
 
-.copy-btn.copied img {
-  filter: invert(1) sepia(100%) saturate(2000%) hue-rotate(90deg);
-}
-
 .copy-btn img {
   filter: invert(1);
   width: 100%;
