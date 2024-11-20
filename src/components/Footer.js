@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 
 class Footer extends Component {
+	state = {
+		copied: false
+	};
+
+	handleCopy = () => {
+		navigator.clipboard.writeText('junta@arreplegats.cat');
+		this.setState({ copied: true });
+		setTimeout(() => {
+			this.setState({ copied: false });
+		}, 2000); // Show check for 2 seconds
+	};
+
 	render() {
 		return (
 			<footer className="page-footer">
@@ -13,20 +25,26 @@ class Footer extends Component {
 					<a href="https://www.facebook.com/arreplegats" className="icon facebook" target="_blank" rel="noreferrer"><img src="/font-awesome/facebook.svg" alt="Facebook" /></a>
 				</div>
 				<div className="email">
-					<a href="mailto:junta@arreplegats.cat" onClick={(e) => {
-						e.preventDefault();
-						navigator.clipboard.writeText('junta@arreplegats.cat');
-					}}>junta@arreplegats.cat</a>
+					<span className="email-text">junta@arreplegats.cat</span>
+					<button 
+						className={`copy-btn ${this.state.copied ? 'copied' : ''}`}
+						onClick={this.handleCopy}
+					>
+						<img 
+							src={this.state.copied ? "/font-awesome/check.svg" : "/font-awesome/copy.svg"} 
+							alt={this.state.copied ? "Copied" : "Copy"} 
+						/>
+					</button>
 				</div>
 				<div className="universities">
 					<img
 						src="/ub.png"
 						alt="Universitat de Barcelona"
-						/>
+						 />
 					<img
 						src="/upc.png"
 						alt="Universitat Politècnica de Catalunya"
-						/>
+						 />
 				</div>
 			</footer>
 		);

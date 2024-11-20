@@ -720,17 +720,48 @@ Footer
 
 .email {
   text-align: center;
-  margin: 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  user-select: text;
 }
 
-.email a {
+.email-text {
   color: var(--white);
-  transition: var(--transition);
   font-size: 0.8rem;
 }
 
-.email a:hover {
-  color: var(--primary-600);
+.copy-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: var(--transition);
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+.copy-btn.copied {
+  opacity: 1;
+  cursor: default;
+}
+
+.copy-btn.copied img {
+  filter: invert(1) sepia(100%) saturate(2000%) hue-rotate(90deg);
+}
+
+.copy-btn img {
+  filter: invert(1);
+  width: 100%;
+  height: 100%;
+  transition: filter var(--transition);
 }
 
 .universities {
