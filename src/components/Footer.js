@@ -6,7 +6,7 @@ class Footer extends Component {
 	};
 
 	handleCopy = () => {
-		navigator.clipboard.writeText('junta@arreplegats.cat');
+		navigator.clipboard.writeText('contacte@arreplegats.cat');
 		this.setState({ copied: true });
 		setTimeout(() => {
 			this.setState({ copied: false });
