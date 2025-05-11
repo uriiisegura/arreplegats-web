@@ -6,7 +6,7 @@ class Footer extends Component {
 	};
 
 	handleCopy = () => {
-		navigator.clipboard.writeText('contacte@arreplegats.cat');
+		navigator.clipboard.writeText('junta.arreplegats@gmail.com');
 		this.setState({ copied: true });
 		setTimeout(() => {
 			this.setState({ copied: false });
@@ -25,7 +25,7 @@ class Footer extends Component {
 					<a href="https://www.facebook.com/arreplegats" className="icon facebook" target="_blank" rel="noreferrer"><img src="/font-awesome/facebook.svg" alt="Facebook" /></a>
 				</div>
 				<div className="email">
-					<span className="email-text">contacte@arreplegats.cat</span>
+					<span className="email-text">junta.arreplegats@gmail.com</span>
 					<button 
 						className={`copy-btn ${this.state.copied ? 'copied' : ''}`}
 						onClick={this.handleCopy}
