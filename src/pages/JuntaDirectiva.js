@@ -35,7 +35,7 @@ class JuntaDirectiva extends Component {
 				<p style={{color: 'var(--grey-400)'}}>Consulta la junta directiva de temporades anteriors:</p>
 				<div className="junta-year-wrap">
 					{
-						Object.keys(junta.anteriors).map((y, i) => {
+						Object.keys(junta.anteriors).sort().map((y, i) => {
 							return <NavLink className={`junta-year ${junta_temporada === junta.anteriors[y]}`} to={`/junta-directiva/${y}`} key={`year-${i}`}>{y}</NavLink>;
 						})
 					}
