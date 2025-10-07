@@ -1,0 +1,43 @@
+{
+	"actual": {
+		"junta": [
+			{
+				"titol": "Comissió de gènere",
+				"components": [
+					{
+						"carrec": "Cap de comissió de gènere",
+						"nom": "Ariadna Civit i Velayos"
+					},
+					{
+						"nom": "Rodrigo Alcázar i Vega"
+					},
+					{
+						"nom": "Álex Álvarez i Albertí"
+					},
+					{
+						"nom": "Martina Duque i Albacete"
+					},
+					{
+						"nom": "Gerard Pérez i Carceller"
+					}
+				]
+			},
+			{
+				"titol": "Grup treball",
+				"components": [
+					{
+						"carrec": "Cap de grup treball",
+						"nom": "Aina Cañabate i Pérez"
+					},
+					{
+						"nom": "Mar Casabona i Suñé"
+					},
+					{
+						"nom": "Eloi Genebat i López"
+					}
+				]
+			}
+		]
+	},
+	"anteriors": {}
+}
