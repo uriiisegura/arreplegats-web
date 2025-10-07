@@ -89,6 +89,7 @@ class Navbar extends Component {
 									<ul>
 										<li><NavLink to="/junta-directiva">Junta directiva</NavLink></li>
 										<li><NavLink to="/junta-tecnica">Junta tècnica</NavLink></li>
+										<li><NavLink to="/comissio-genere-grup-treball">Comissió de gènere i grup treball</NavLink></li>
 									</ul>
 								</div>
 								<div className="sub-menu">
