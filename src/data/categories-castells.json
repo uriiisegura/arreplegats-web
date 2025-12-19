@@ -2,6 +2,8 @@
 	{
 		"name": "Castells de 8 i amb manilles",
 		"castells": [
+			"3d8",
+			"3d8sf",
 			"Td8fm",
 			"Pd7fm",
 			"4d8",
