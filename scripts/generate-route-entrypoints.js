@@ -10,6 +10,7 @@ const castellsTopPath = path.join(rootDir, "src", "data", "castells-top.json");
 const routeMetaPath = path.join(rootDir, "src", "data", "routeMeta.json");
 const siteUrl = "https://arreplegats.cat";
 const routeMeta = JSON.parse(fs.readFileSync(routeMetaPath, "utf8"));
+const dynamicRouteSegments = ["castells"];
 
 // Keep this list to public, stable routes that should deep-link on static hosts.
 // Utility, private, event-specific, and generated game-level routes stay on the
@@ -52,6 +53,15 @@ function getCastellRoutes() {
   const castellsTop = JSON.parse(fs.readFileSync(castellsTopPath, "utf8"));
 
   return Object.keys(castellsTop).map((slug) => `/castells/${slug}`);
+}
+
+function getStaticRoutes() {
+  const routes = [...publicRoutes];
+  const castellsIndex = routes.indexOf("/millors-castells") + 1;
+
+  routes.splice(castellsIndex, 0, ...getCastellRoutes());
+
+  return [...new Set(routes)];
 }
 
 function assertSafeRoute(route) {
@@ -126,7 +136,7 @@ function main() {
   }
 
   const indexHtml = fs.readFileSync(indexHtmlPath, "utf8");
-  const routes = [...new Set([...publicRoutes, ...getCastellRoutes()])];
+  const routes = getStaticRoutes();
 
   for (const route of routes) {
     const outputPath = getOutputPath(route);
@@ -142,7 +152,10 @@ if (require.main === module) {
 }
 
 module.exports = {
+  dynamicRouteSegments,
   getCanonicalUrl,
   getRouteMeta,
+  getStaticRoutes,
+  publicRoutes,
   setRouteUrlMeta,
 };

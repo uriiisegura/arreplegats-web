@@ -1,5 +1,9 @@
 const fs = require("fs");
 const path = require("path");
+const {
+	getCanonicalUrl,
+	getStaticRoutes,
+} = require("../scripts/generate-route-entrypoints");
 
 const sitemapPath = path.join(__dirname, "..", "public", "sitemap.xml");
 
@@ -22,5 +26,15 @@ describe("sitemap URLs", () => {
 
 			expect(pathname.endsWith("/")).toBe(true);
 		}
+	});
+
+	test("stays aligned with static public route entrypoints", () => {
+		const urls = getSitemapUrls();
+		const expectedUrls = [
+			"https://arreplegats.cat/",
+			...getStaticRoutes().map(getCanonicalUrl),
+		];
+
+		expect(urls).toEqual(expectedUrls);
 	});
 });
