@@ -71,44 +71,44 @@ class Navbar extends Component {
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">La colla</h4>
 									<ul>
-										<li><NavLink to="/qui-som">Qui som?</NavLink></li>
-										{/* <li><NavLink to="/agenda">Agenda</NavLink></li> */}
-										{/* <li><NavLink to="/assajos">Assajos</NavLink></li> */}
-										<li><NavLink to="/gralles-i-tabals">Gralles i tabals</NavLink></li>
-										<li><NavLink to="/vida-universitaria">Vida universitària</NavLink></li>
+										<li><NavLink to="/qui-som/">Qui som?</NavLink></li>
+										{/* <li><NavLink to="/agenda/">Agenda</NavLink></li> */}
+										{/* <li><NavLink to="/assajos/">Assajos</NavLink></li> */}
+										<li><NavLink to="/gralles-i-tabals/">Gralles i tabals</NavLink></li>
+										<li><NavLink to="/vida-universitaria/">Vida universitària</NavLink></li>
 									</ul>
 								</div>
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">Història</h4>
 									<ul>
-										<li><NavLink to="/historia-de-la-colla">Història de la colla</NavLink></li>
-										<li><NavLink to="/llista-de-caps-de-colla">Llista de caps de colla</NavLink></li>
-										<li><NavLink to="/llista-de-presidents">Llista de presidents</NavLink></li>
-										<li><NavLink to="/els-castells-universitaris">Els castells universitaris</NavLink></li>
+										<li><NavLink to="/historia-de-la-colla/">Història de la colla</NavLink></li>
+										<li><NavLink to="/llista-de-caps-de-colla/">Llista de caps de colla</NavLink></li>
+										<li><NavLink to="/llista-de-presidents/">Llista de presidents</NavLink></li>
+										<li><NavLink to="/els-castells-universitaris/">Els castells universitaris</NavLink></li>
 									</ul>
 								</div>
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">Castells</h4>
 									<ul>
-										<li><NavLink to="/millors-castells">Millors castells</NavLink></li>
-										<li><NavLink to="/millors-diades">Millors diades</NavLink></li>
-										<li><NavLink to="/resum-historic">Resum històric</NavLink></li>
-										<li><NavLink to="/llista-de-diades">Llista de diades</NavLink></li>
+										<li><NavLink to="/millors-castells/">Millors castells</NavLink></li>
+										<li><NavLink to="/millors-diades/">Millors diades</NavLink></li>
+										<li><NavLink to="/resum-historic/">Resum històric</NavLink></li>
+										<li><NavLink to="/llista-de-diades/">Llista de diades</NavLink></li>
 									</ul>
 								</div>
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">Organització</h4>
 									<ul>
-										<li><NavLink to="/junta-directiva">Junta directiva</NavLink></li>
-										<li><NavLink to="/junta-tecnica">Junta tècnica</NavLink></li>
-										<li><NavLink to="/comissio-genere-grup-treball">Comissió de gènere i grup treball</NavLink></li>
+										<li><NavLink to="/junta-directiva/">Junta directiva</NavLink></li>
+										<li><NavLink to="/junta-tecnica/">Junta tècnica</NavLink></li>
+										<li><NavLink to="/comissio-genere-grup-treball/">Comissió de gènere i grup treball</NavLink></li>
 									</ul>
 								</div>
 								<div className="sub-menu">
 									<h4 className="sub-menu-title">Uneix-t'hi</h4>
 									<ul>
-										<li><NavLink to="/assajos">Vine a fer castells!</NavLink></li>
-										<li><NavLink to="/patrocinadors">Patrocinadors</NavLink></li>
+										<li><NavLink to="/assajos/">Vine a fer castells!</NavLink></li>
+										<li><NavLink to="/patrocinadors/">Patrocinadors</NavLink></li>
 									</ul>
 								</div>
 							</div>
@@ -118,9 +118,9 @@ class Navbar extends Component {
 							<div id="media" className="sub-menus">
 								<div className="sub-menu">
 									<ul>
-										<li><NavLink to="/fotografies">Fotografies</NavLink></li>
-										<li><NavLink to="/videos">Vídeos</NavLink></li>
-										<li><NavLink to="/musica">Música</NavLink></li>
+										<li><NavLink to="/fotografies/">Fotografies</NavLink></li>
+										<li><NavLink to="/videos/">Vídeos</NavLink></li>
+										<li><NavLink to="/musica/">Música</NavLink></li>
 									</ul>
 								</div>
 							</div>
@@ -130,17 +130,17 @@ class Navbar extends Component {
 							<div id="legal" className="sub-menus">
 								<div className="sub-menu">
 									<ul>
-										<li><NavLink to="/estatuts">Estatuts (2024)</NavLink></li>
-										<li><NavLink to="/reglament-regim-intern">Reglament de Règim Intern (2023)</NavLink></li>
-										<li><NavLink to="/protocol-agressions">Protocol d'agressions (2022)</NavLink></li>
+										<li><NavLink to="/estatuts/">Estatuts (2024)</NavLink></li>
+										<li><NavLink to="/reglament-regim-intern/">Reglament de Règim Intern (2023)</NavLink></li>
+										<li><NavLink to="/protocol-agressions/">Protocol d'agressions (2022)</NavLink></li>
 									</ul>
 								</div>
 							</div>
 						</li>
-						<li className="nav-link"><NavLink to="/jocs"><span>Jocs</span></NavLink></li>
-						<li className="nav-link"><NavLink to="/contactar"><span>Contacta'ns</span></NavLink></li>
+						<li className="nav-link"><NavLink to="/jocs/"><span>Jocs</span></NavLink></li>
+						<li className="nav-link"><NavLink to="/contactar/"><span>Contacta'ns</span></NavLink></li>
 						{/* <li className="nav-link"><a href="https://contractacions.arreplegats.cat" target="_blank" rel="noreferrer"><span>Contractacions</span></a></li> */}
-						<li className="nav-link join-btn"><NavLink to="/assajos"><span>Uneix-t'hi</span></NavLink></li>
+						<li className="nav-link join-btn"><NavLink to="/assajos/"><span>Uneix-t'hi</span></NavLink></li>
 					</ul>
 				</div>
 			</nav>

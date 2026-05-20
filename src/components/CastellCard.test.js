@@ -18,5 +18,6 @@ describe("CastellCard", () => {
 		expect(screen.getByText("Torre de 8 amb folre i manilles").closest(".castell-card")).toHaveStyle({
 			backgroundImage: "url(/images/2d8fm-arreplegats-2016.webp)",
 		});
+		expect(screen.getByRole("link", { name: "Saber-ne més" })).toHaveAttribute("href", "/castells/Td8fm/");
 	});
 });

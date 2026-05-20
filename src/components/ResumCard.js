@@ -18,7 +18,7 @@ class ResumCard extends Component {
 				<div className="resum-card-inner">
 					{card}
 					<div className="resum-card-back">
-						<NavLink to={`/castells/${this.props.castell}`}>
+						<NavLink to={`/castells/${this.props.castell}/`}>
 							<span>Saber-ne més</span>
 						</NavLink>
 					</div>

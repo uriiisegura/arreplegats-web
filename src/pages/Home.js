@@ -15,7 +15,7 @@ class Home extends Component {
 			<section style={{paddingTop: `2rem`}}>
 				<div className="floating-titles">
 					<h4>Els millors castells</h4>
-					<NavLink to="/millors-castells">Descobreix-los tots!</NavLink>
+					<NavLink to="/millors-castells/">Descobreix-los tots!</NavLink>
 				</div>
 				<div className="top-gallery">
 					{

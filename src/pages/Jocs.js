@@ -18,7 +18,7 @@ class Jocs extends Component {
 				<div className="games">
 					{
 						Object.entries(jocs_list).map(([k, v], i) => {
-							return <NavLink key={i} className="game btn" to={`/${v}`}>
+							return <NavLink key={i} className="game btn" to={`/${v}/`}>
 								<span>{k}</span>
 							</NavLink>;
 						})

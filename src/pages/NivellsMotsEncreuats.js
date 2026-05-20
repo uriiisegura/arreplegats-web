@@ -20,7 +20,7 @@ class NivellsMotsEncreuats extends Component {
 				<div className="game-levels">
 					{
 						maps.map((_, i) => {
-							return <NavLink key={i} className={`btn ${this.getCookie(`mots-${i}`) === 'true' ? '' : 'incomplete'}`} to={`/mots-encreuats/${i}`}>Nivell {i+1}</NavLink>;
+							return <NavLink key={i} className={`btn ${this.getCookie(`mots-${i}`) === 'true' ? '' : 'incomplete'}`} to={`/mots-encreuats/${i}/`}>Nivell {i+1}</NavLink>;
 						})
 					}
 				</div>

@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import { buildHeroSrcSet, buildHeroWebpSrcSet, getHeroFallbackImage, HOME_HERO_IMAGES } from "../data/homeHeroImages";
 
 const HERO_LINKS = [
-	{ to: "/assajos", label: "UNEIX-T'HI" },
-	{ to: "/agenda", label: "AGENDA" },
-	{ to: "/contactar", label: "CONTACTA'NS!" },
+	{ to: "/assajos/", label: "UNEIX-T'HI" },
+	{ to: "/agenda/", label: "AGENDA" },
+	{ to: "/contactar/", label: "CONTACTA'NS!" },
 ];
 
 function HomeHero({ images = HOME_HERO_IMAGES }) {
