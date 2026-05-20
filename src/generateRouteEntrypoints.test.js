@@ -1,8 +1,12 @@
 const {
+  dynamicRouteSegments,
   getCanonicalUrl,
   getRouteMeta,
+  getStaticRoutes,
+  publicRoutes,
   setRouteUrlMeta,
 } = require("../scripts/generate-route-entrypoints");
+const routeMeta = require("./data/routeMeta.json");
 
 const baseHtml = `
   <title>Arreplegats de la Zona Universitària | Colla Castellera</title>
@@ -30,6 +34,33 @@ describe("route entrypoint metadata", () => {
       title: "Assajos - Arreplegats",
       description: "Vine als assajos dels Arreplegats: dimarts i dijous al migdia a l'ETSEIB i dijous al vespre amb Castellers de Sants.",
     });
+  });
+
+  test("keeps route metadata scoped to static entrypoints and dynamic namespaces", () => {
+    const staticRouteSegments = publicRoutes.map((route) => route.split("/")[1]);
+    const allowedRouteMetaSegments = new Set([
+      "",
+      ...staticRouteSegments,
+      ...dynamicRouteSegments,
+    ]);
+
+    const staleRouteMeta = Object.keys(routeMeta.routes).filter(
+      (routeSegment) => !allowedRouteMetaSegments.has(routeSegment)
+    );
+
+    expect(staleRouteMeta).toEqual([]);
+  });
+
+  test("generates static routes for every public route and top castell page", () => {
+    const staticRoutes = getStaticRoutes();
+
+    for (const route of publicRoutes) {
+      expect(staticRoutes).toContain(route);
+    }
+
+    expect(new Set(staticRoutes).size).toBe(staticRoutes.length);
+    expect(staticRoutes).toContain("/castells/Td8fm");
+    expect(staticRoutes.filter((route) => route.startsWith("/castells/")).length).toBeGreaterThan(0);
   });
 
   test("replaces home URL metadata on generated route entrypoints", () => {
