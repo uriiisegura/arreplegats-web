@@ -45,7 +45,7 @@ class Navbar extends Component {
 				<div className="nav-center">
 					<div className="nav-header">
 						<NavLink to="/" className="nav-logo">
-							<img src="/icon.png" alt="Arreplegats" />
+							<img src="/icon-96.png" alt="Arreplegats" width="96" height="93" />
 						</NavLink>
 						<NavLink to="/">
 							<h3 className="header-name">
