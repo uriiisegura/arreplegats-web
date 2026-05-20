@@ -3,8 +3,9 @@
   "name": "Arreplegats de la Zona Universitària",
   "icons": [
     {
-      "src": "icon.png",
-      "type": "image/png"
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x187"
     }
   ],
   "start_url": ".",

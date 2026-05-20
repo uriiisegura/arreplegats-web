@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { buildHeroSrcSet, getHeroFallbackImage, HOME_HERO_IMAGES } from "../data/homeHeroImages";
+import { buildHeroSrcSet, buildHeroWebpSrcSet, getHeroFallbackImage, HOME_HERO_IMAGES } from "../data/homeHeroImages";
 
 const HERO_LINKS = [
 	{ to: "/assajos", label: "UNEIX-T'HI" },
@@ -11,10 +11,12 @@ const HERO_LINKS = [
 function HomeHero({ images = HOME_HERO_IMAGES }) {
 	const fallbackImage = getHeroFallbackImage(images);
 	const srcSet = buildHeroSrcSet(images);
+	const webpSrcSet = buildHeroWebpSrcSet(images);
 
 	return (
 		<section className="home-hero" aria-labelledby="home-hero-title">
 			<picture className="home-hero__picture">
+				<source srcSet={webpSrcSet} sizes="100vw" type="image/webp" />
 				<source srcSet={srcSet} sizes="100vw" />
 				<img
 					className="home-hero__image"
