@@ -105,6 +105,19 @@
       #root:not(:empty) + .azu-seo-fallback {
         display: none;
       }
+
+      .azu-noscript {
+        max-width: 960px;
+        margin: 1rem auto 0;
+        padding: 1rem 1.25rem 0;
+        color: #1f1f1f;
+        font-family: Roboto, Arial, sans-serif;
+        line-height: 1.55;
+      }
+
+      .azu-noscript a {
+        color: #8a1538;
+      }
     </style>
     <title>Arreplegats de la Zona Universitària | Colla Castellera</title>
 
@@ -137,7 +150,18 @@
     </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <section class="azu-noscript" aria-label="Avís sobre JavaScript">
+        <strong>La web interactiva dels Arreplegats funciona millor amb JavaScript activat.</strong>
+        <p>
+          També pots consultar el contingut principal més avall o anar directament a
+          <a href="/assajos">assajos</a>,
+          <a href="/qui-som">qui som</a>,
+          <a href="/historia-de-la-colla">història de la colla</a> o
+          <a href="/contactar">contactar</a>.
+        </p>
+      </section>
+    </noscript>
     <div id="root"></div>
     <section class="azu-seo-fallback" aria-label="Contingut principal dels Arreplegats">
       <h1>Arreplegats de la Zona Universitària</h1>
