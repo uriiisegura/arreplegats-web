@@ -49,7 +49,7 @@ class Castell extends Component {
 
 		return (<>
 			<section>
-				<h2>{data.name}</h2>
+				<h1 className="page-title">{data.name}</h1>
 				{data.gallery ? <>
 				<div id="slideshow" className="slideshow-container">
 					<div className="slideshow">

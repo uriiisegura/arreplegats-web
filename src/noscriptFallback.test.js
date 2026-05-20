@@ -16,4 +16,11 @@ describe("noscript fallback", () => {
 		expect(indexHtml).toContain('<a href="/assajos">assajos</a>');
 		expect(indexHtml).toContain('<a href="/contactar">contactar</a>');
 	});
+
+	test("does not ship a duplicate SEO fallback outside the React root", () => {
+		const indexHtml = getIndexHtml();
+
+		expect(indexHtml).not.toContain("azu-seo-fallback");
+		expect(indexHtml).not.toContain("Contingut principal dels Arreplegats");
+	});
 });
