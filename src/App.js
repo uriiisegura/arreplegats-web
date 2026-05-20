@@ -47,7 +47,6 @@ import './css/normalize.css';
 import './css/main.css';
 import './css/resizer.css';
 import TitleUpdater from './components/TitleUpdater';
-import RemoveSeoFallback from './components/RemoveSeoFallback';
 import AssajosCalendar from "./pages/AssajosCalendar";
 
 function App() {
@@ -55,7 +54,6 @@ function App() {
 		<Router>
 			<ScrollToTop />
 			<TitleUpdater />
-			<RemoveSeoFallback />
 			<Routes>
 				<Route path="/joc-castells" element={<></>} />
 				<Route path="*" element={<NavBar />} />
