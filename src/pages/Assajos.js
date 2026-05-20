@@ -4,7 +4,7 @@ class Assajos extends Component {
 	render() {
 		return (<>
 			<section>
-				<h2>Assajos</h2>
+				<h1 className="page-title">Assajos</h1>
 
 				<p>
 					Els bons castells no surten del no-res: s'han d'assajar. Ens reunim dos dies a la setmana per fer història assaig a assaig.

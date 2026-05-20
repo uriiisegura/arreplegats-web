@@ -6,7 +6,7 @@ class MillorsCastells extends Component {
 	render() {
 		return (<>
 			<section>
-				<h2>Millors Castells</h2>
+				<h1 className="page-title">Millors Castells</h1>
 
 				<div className="top-gallery">
 					{

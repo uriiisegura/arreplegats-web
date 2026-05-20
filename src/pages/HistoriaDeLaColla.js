@@ -32,7 +32,7 @@ class HistoriaDeLaColla extends Component {
 
 		return (<>
 			<section className="historia">
-				<h2>Història de la colla</h2>
+				<h1 className="page-title">Història de la colla</h1>
 
 				<h5>Els inicis</h5>
 				<p>

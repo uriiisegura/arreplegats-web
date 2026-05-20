@@ -14,7 +14,7 @@ class QuiSom extends Component {
 
 		return (<>
 			<section>
-				<h2>Qui som?</h2>
+				<h1 className="page-title">Qui som?</h1>
 				
 				<div className="dictionary-entry">
 					<h4>arreplegat -ada</h4>
