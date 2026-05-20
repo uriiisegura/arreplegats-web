@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import routeMeta from "../data/routeMeta.json";
+import routeMetadata from "../data/routeMetadata";
 
 function setMetaContent(selector, content) {
 	const element = document.head.querySelector(selector);
@@ -11,9 +11,7 @@ function setMetaContent(selector, content) {
 }
 
 export function getRouteMeta(pathname) {
-	const firstWord = pathname.split("/")?.[1] || "";
-
-	return routeMeta.routes[firstWord] || routeMeta.default;
+	return routeMetadata.getRouteMeta(pathname);
 }
 
 const TitleUpdater = () => {

@@ -7,10 +7,9 @@ const rootDir = path.resolve(__dirname, "..");
 const buildDir = path.join(rootDir, "build");
 const indexHtmlPath = path.join(buildDir, "index.html");
 const castellsTopPath = path.join(rootDir, "src", "data", "castells-top.json");
-const routeMetaPath = path.join(rootDir, "src", "data", "routeMeta.json");
 const siteUrl = "https://arreplegats.cat";
-const routeMeta = JSON.parse(fs.readFileSync(routeMetaPath, "utf8"));
 const dynamicRouteSegments = ["castells"];
+const { getRouteMeta } = require("../src/data/routeMetadata");
 
 // Keep this list to public, stable routes that should deep-link on static hosts.
 // Utility, private, event-specific, and generated game-level routes stay on the
@@ -91,12 +90,6 @@ function getCanonicalUrl(route) {
   assertSafeRoute(route);
 
   return `${siteUrl}${route.replace(/\/?$/, "/")}`;
-}
-
-function getRouteMeta(route) {
-  const firstWord = route.split("/")?.[1] || "";
-
-  return routeMeta.routes[firstWord] || routeMeta.default;
 }
 
 function escapeHtml(value) {

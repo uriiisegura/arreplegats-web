@@ -6,6 +6,7 @@ const {
   publicRoutes,
   setRouteUrlMeta,
 } = require("../scripts/generate-route-entrypoints");
+const castellsTop = require("./data/castells-top.json");
 const routeMeta = require("./data/routeMeta.json");
 
 const baseHtml = `
@@ -31,8 +32,8 @@ describe("route entrypoint metadata", () => {
 
   test("shares route metadata with the client title updater", () => {
     expect(getRouteMeta("/assajos")).toEqual({
-      title: "Assajos - Arreplegats",
-      description: "Vine als assajos dels Arreplegats: dimarts i dijous al migdia a l'ETSEIB i dijous al vespre amb Castellers de Sants.",
+      title: "Assajos castellers universitaris a Barcelona | Arreplegats",
+      description: "Horaris i espais d'assaig dels Arreplegats de la Zona Universitària, amb assajos a l'ETSEIB i sessions conjuntes amb Castellers de Sants.",
     });
   });
 
@@ -63,6 +64,38 @@ describe("route entrypoint metadata", () => {
     expect(staticRoutes.filter((route) => route.startsWith("/castells/")).length).toBeGreaterThan(0);
   });
 
+  test("generates unique metadata for castell detail entrypoints", () => {
+    expect(getRouteMeta("/castells/Td8fm")).toEqual({
+      title: "Torre de 8 amb folre i manilles (Td8fm) | Arreplegats",
+      description: "Fitxa de la Torre de 8 amb folre i manilles (Td8fm) dels Arreplegats, amb imatges, història i context dins dels castells universitaris.",
+    });
+
+    expect(getRouteMeta("/castells/Pd7fm").title).toBe(
+      "Pilar de 7 amb folre i manilles (Pd7fm) | Arreplegats"
+    );
+  });
+
+  test("keeps public route titles descriptive without becoming too long", () => {
+    for (const meta of Object.values(routeMeta.routes)) {
+      expect(meta.title.length).toBeGreaterThanOrEqual(30);
+      expect(meta.title.length).toBeLessThanOrEqual(60);
+      expect(meta.description.length).toBeGreaterThanOrEqual(80);
+      expect(meta.description.length).toBeLessThanOrEqual(165);
+    }
+  });
+
+  test("keeps every castell route title unique and descriptive", () => {
+    const castellTitles = Object.keys(castellsTop).map((slug) => getRouteMeta(`/castells/${slug}`).title);
+
+    expect(new Set(castellTitles).size).toBe(castellTitles.length);
+    expect(castellTitles).not.toContain("Castell - Arreplegats");
+
+    for (const title of castellTitles) {
+      expect(title.length).toBeGreaterThanOrEqual(30);
+      expect(title.length).toBeLessThanOrEqual(60);
+    }
+  });
+
   test("replaces home URL metadata on generated route entrypoints", () => {
     const routeHtml = setRouteUrlMeta(baseHtml, "/assajos");
 
@@ -74,18 +107,18 @@ describe("route entrypoint metadata", () => {
   test("replaces static title and description metadata on generated route entrypoints", () => {
     const routeHtml = setRouteUrlMeta(baseHtml, "/qui-som");
 
-    expect(routeHtml).toContain("<title>Qui Som - Arreplegats</title>");
-    expect(routeHtml).toContain('<meta name="title" content="Qui Som - Arreplegats">');
+    expect(routeHtml).toContain("<title>Qui són els Arreplegats de la Zona Universitària</title>");
+    expect(routeHtml).toContain('<meta name="title" content="Qui són els Arreplegats de la Zona Universitària">');
     expect(routeHtml).toContain(
-      '<meta name="description" content="Coneix els Arreplegats de la Zona Universitària, una colla castellera universitària de Barcelona amb més de 25 anys d\'història." />'
+      '<meta name="description" content="Coneix la colla castellera universitària de Barcelona: qui forma els Arreplegats, què fem i com vivim els castells a la Zona Universitària." />'
     );
-    expect(routeHtml).toContain('<meta property="og:title" content="Qui Som - Arreplegats">');
+    expect(routeHtml).toContain('<meta property="og:title" content="Qui són els Arreplegats de la Zona Universitària">');
     expect(routeHtml).toContain(
-      '<meta property="og:description" content="Coneix els Arreplegats de la Zona Universitària, una colla castellera universitària de Barcelona amb més de 25 anys d\'història.">'
+      '<meta property="og:description" content="Coneix la colla castellera universitària de Barcelona: qui forma els Arreplegats, què fem i com vivim els castells a la Zona Universitària.">'
     );
-    expect(routeHtml).toContain('<meta property="twitter:title" content="Qui Som - Arreplegats">');
+    expect(routeHtml).toContain('<meta property="twitter:title" content="Qui són els Arreplegats de la Zona Universitària">');
     expect(routeHtml).toContain(
-      '<meta property="twitter:description" content="Coneix els Arreplegats de la Zona Universitària, una colla castellera universitària de Barcelona amb més de 25 anys d\'història.">'
+      '<meta property="twitter:description" content="Coneix la colla castellera universitària de Barcelona: qui forma els Arreplegats, què fem i com vivim els castells a la Zona Universitària.">'
     );
   });
 
@@ -93,7 +126,16 @@ describe("route entrypoint metadata", () => {
     const routeHtml = setRouteUrlMeta(minifiedHtml, "/contactar");
 
     expect(routeHtml).toContain('<link rel="canonical" href="https://arreplegats.cat/contactar/" />');
-    expect(routeHtml).toContain("<title>Contactar - Arreplegats</title>");
-    expect(routeHtml).toContain('<meta property="og:title" content="Contactar - Arreplegats">');
+    expect(routeHtml).toContain("<title>Contacta amb els Arreplegats de la Zona Universitària</title>");
+    expect(routeHtml).toContain('<meta property="og:title" content="Contacta amb els Arreplegats de la Zona Universitària">');
+  });
+
+  test("replaces metadata on castell route entrypoints", () => {
+    const routeHtml = setRouteUrlMeta(baseHtml, "/castells/Td8fm");
+
+    expect(routeHtml).toContain("<title>Torre de 8 amb folre i manilles (Td8fm) | Arreplegats</title>");
+    expect(routeHtml).toContain(
+      '<meta name="description" content="Fitxa de la Torre de 8 amb folre i manilles (Td8fm) dels Arreplegats, amb imatges, història i context dins dels castells universitaris." />'
+    );
   });
 });

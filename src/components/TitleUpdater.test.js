@@ -35,34 +35,48 @@ describe("TitleUpdater", () => {
 
 	test("returns route-specific metadata for important pages", () => {
 		expect(getRouteMeta("/assajos")).toEqual({
-			title: "Assajos - Arreplegats",
-			description: "Vine als assajos dels Arreplegats: dimarts i dijous al migdia a l'ETSEIB i dijous al vespre amb Castellers de Sants.",
+			title: "Assajos castellers universitaris a Barcelona | Arreplegats",
+			description: "Horaris i espais d'assaig dels Arreplegats de la Zona Universitària, amb assajos a l'ETSEIB i sessions conjuntes amb Castellers de Sants.",
 		});
 	});
 
 	test("updates document title and description meta tags for the active route", () => {
 		renderTitleUpdater("/qui-som");
 
-		expect(document.title).toBe("Qui Som - Arreplegats");
-		expect(document.head.querySelector('meta[name="title"]')).toHaveAttribute("content", "Qui Som - Arreplegats");
+		expect(document.title).toBe("Qui són els Arreplegats de la Zona Universitària");
+		expect(document.head.querySelector('meta[name="title"]')).toHaveAttribute("content", "Qui són els Arreplegats de la Zona Universitària");
 		expect(document.head.querySelector('meta[name="description"]')).toHaveAttribute(
 			"content",
-			"Coneix els Arreplegats de la Zona Universitària, una colla castellera universitària de Barcelona amb més de 25 anys d'història."
+			"Coneix la colla castellera universitària de Barcelona: qui forma els Arreplegats, què fem i com vivim els castells a la Zona Universitària."
 		);
+	});
+
+	test("keeps the home route from downgrading the static social title", () => {
+		expect(getRouteMeta("/")).toEqual({
+			title: "Arreplegats de la Zona Universitària | Colla Castellera",
+			description: "Web oficial dels Arreplegats de la Zona Universitària: castells universitaris, assajos, agenda i vida de la colla.",
+		});
+	});
+
+	test("returns castell-specific metadata for castell detail pages", () => {
+		expect(getRouteMeta("/castells/Td8fm/")).toEqual({
+			title: "Torre de 8 amb folre i manilles (Td8fm) | Arreplegats",
+			description: "Fitxa de la Torre de 8 amb folre i manilles (Td8fm) dels Arreplegats, amb imatges, història i context dins dels castells universitaris.",
+		});
 	});
 
 	test("keeps Open Graph and Twitter metadata aligned with route metadata", () => {
 		renderTitleUpdater("/contactar");
 
-		expect(document.head.querySelector('meta[property="og:title"]')).toHaveAttribute("content", "Contactar - Arreplegats");
-		expect(document.head.querySelector('meta[property="twitter:title"]')).toHaveAttribute("content", "Contactar - Arreplegats");
+		expect(document.head.querySelector('meta[property="og:title"]')).toHaveAttribute("content", "Contacta amb els Arreplegats de la Zona Universitària");
+		expect(document.head.querySelector('meta[property="twitter:title"]')).toHaveAttribute("content", "Contacta amb els Arreplegats de la Zona Universitària");
 		expect(document.head.querySelector('meta[property="og:description"]')).toHaveAttribute(
 			"content",
-			"Contacta amb els Arreplegats de la Zona Universitària per correu electrònic o xarxes socials."
+			"Canals per contactar amb la colla castellera Arreplegats de la Zona Universitària: correu electrònic, xarxes socials i informació de contacte."
 		);
 		expect(document.head.querySelector('meta[property="twitter:description"]')).toHaveAttribute(
 			"content",
-			"Contacta amb els Arreplegats de la Zona Universitària per correu electrònic o xarxes socials."
+			"Canals per contactar amb la colla castellera Arreplegats de la Zona Universitària: correu electrònic, xarxes socials i informació de contacte."
 		);
 	});
 });
