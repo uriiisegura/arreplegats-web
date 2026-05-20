@@ -5,136 +5,136 @@
 	},
 	"routes": {
 		"": {
-			"title": "Inici - Arreplegats",
+			"title": "Arreplegats de la Zona Universitària | Colla Castellera",
 			"description": "Web oficial dels Arreplegats de la Zona Universitària: castells universitaris, assajos, agenda i vida de la colla."
 		},
 		"qui-som": {
-			"title": "Qui Som - Arreplegats",
-			"description": "Coneix els Arreplegats de la Zona Universitària, una colla castellera universitària de Barcelona amb més de 25 anys d'història."
+			"title": "Qui són els Arreplegats de la Zona Universitària",
+			"description": "Coneix la colla castellera universitària de Barcelona: qui forma els Arreplegats, què fem i com vivim els castells a la Zona Universitària."
 		},
 		"agenda": {
-			"title": "Agenda - Arreplegats",
-			"description": "Consulta l'agenda d'assajos, activitats i actuacions dels Arreplegats de la Zona Universitària."
+			"title": "Agenda d'assajos i actuacions | Arreplegats",
+			"description": "Consulta l'agenda d'assajos, activitats i actuacions dels Arreplegats de la Zona Universitària al calendari casteller universitari."
 		},
 		"assajos": {
-			"title": "Assajos - Arreplegats",
-			"description": "Vine als assajos dels Arreplegats: dimarts i dijous al migdia a l'ETSEIB i dijous al vespre amb Castellers de Sants."
+			"title": "Assajos castellers universitaris a Barcelona | Arreplegats",
+			"description": "Horaris i espais d'assaig dels Arreplegats de la Zona Universitària, amb assajos a l'ETSEIB i sessions conjuntes amb Castellers de Sants."
 		},
 		"gralles-i-tabals": {
-			"title": "Gralles i Tabals - Arreplegats",
-			"description": "Descobreix el grup de gralles i tabals dels Arreplegats i la música que acompanya els castells universitaris."
+			"title": "Gralles i tabals castellers | Arreplegats",
+			"description": "Descobreix el grup de gralles i tabals dels Arreplegats, la música que acompanya els castells universitaris i com participar-hi."
 		},
 		"vida-universitaria": {
-			"title": "Vida Universitària - Arreplegats",
-			"description": "Activitats, convivència i vida universitària al voltant de la colla castellera Arreplegats de la Zona Universitària."
+			"title": "Vida universitària i activitats | Arreplegats",
+			"description": "Activitats, convivència i vida universitària al voltant dels Arreplegats de la Zona Universitària més enllà dels castells."
 		},
 		"historia-de-la-colla": {
-			"title": "Història de la Colla - Arreplegats",
-			"description": "Repàs de la història dels Arreplegats, des de la fundació el 1995 fins als grans castells universitaris."
+			"title": "Història dels Arreplegats de la Zona Universitària",
+			"description": "Repàs de la història dels Arreplegats, des de la fundació el 1995 fins als grans castells que han marcat el món universitari."
 		},
 		"llista-de-caps-de-colla": {
-			"title": "Llista de Caps de Colla - Arreplegats",
-			"description": "Llista històrica de caps de colla dels Arreplegats de la Zona Universitària."
+			"title": "Caps de colla dels Arreplegats | Històric",
+			"description": "Llista històrica dels caps de colla dels Arreplegats de la Zona Universitària i de les temporades que han liderat."
 		},
 		"llista-de-presidents": {
-			"title": "Llista de Presidents - Arreplegats",
-			"description": "Llista històrica de presidents i presidentes dels Arreplegats de la Zona Universitària."
+			"title": "Presidències dels Arreplegats | Històric",
+			"description": "Llista històrica de presidents i presidentes dels Arreplegats de la Zona Universitària al llarg de les temporades de la colla."
 		},
 		"els-castells-universitaris": {
-			"title": "Els Castells Universitaris - Arreplegats",
-			"description": "Història i evolució dels castells universitaris, amb els principals fets i colles del món casteller universitari."
+			"title": "Castells universitaris: història i colles | Arreplegats",
+			"description": "Història i evolució dels castells universitaris, amb els principals fets, colles i fites del món casteller universitari."
 		},
 		"millors-castells": {
-			"title": "Millors Castells - Arreplegats",
-			"description": "Consulta els millors castells descarregats i carregats pels Arreplegats de la Zona Universitària."
+			"title": "Millors castells dels Arreplegats | Rànquing",
+			"description": "Consulta el rànquing dels millors castells descarregats i carregats pels Arreplegats de la Zona Universitària."
 		},
 		"castells": {
-			"title": "Castell - Arreplegats",
-			"description": "Fitxa d'un castell dels Arreplegats amb imatges, informació i context històric de la construcció."
+			"title": "Fitxes de castells universitaris | Arreplegats",
+			"description": "Fitxes dels castells dels Arreplegats de la Zona Universitària amb imatges, informació i context històric de cada construcció."
 		},
 		"millors-diades": {
-			"title": "Millors Diades - Arreplegats",
-			"description": "Rànquing de les millors diades dels Arreplegats segons les puntuacions del Baròmetre Universitari."
+			"title": "Millors diades dels Arreplegats | Rànquing",
+			"description": "Rànquing de les millors diades dels Arreplegats segons les puntuacions del Baròmetre Universitari i els castells assolits."
 		},
 		"resum-historic": {
-			"title": "Resum Històric - Arreplegats",
-			"description": "Resum històric de temporades, castells i actuacions dels Arreplegats de la Zona Universitària."
+			"title": "Resum històric de temporades | Arreplegats",
+			"description": "Resum històric de temporades, castells, actuacions i evolució dels Arreplegats de la Zona Universitària."
 		},
 		"llista-de-diades": {
-			"title": "Llista de Diades - Arreplegats",
-			"description": "Consulta la llista de diades i actuacions dels Arreplegats amb els castells de cada jornada."
+			"title": "Llista de diades i actuacions | Arreplegats",
+			"description": "Consulta la llista de diades i actuacions dels Arreplegats de la Zona Universitària amb els castells de cada jornada."
 		},
 		"junta-directiva": {
-			"title": "Junta Directiva - Arreplegats",
-			"description": "Equip de junta directiva dels Arreplegats de la Zona Universitària."
+			"title": "Junta directiva dels Arreplegats | Equip actual",
+			"description": "Equip de junta directiva dels Arreplegats de la Zona Universitària i responsabilitats organitzatives de la colla."
 		},
 		"junta-tecnica": {
-			"title": "Junta Tècnica - Arreplegats",
-			"description": "Equip de junta tècnica dels Arreplegats de la Zona Universitària."
+			"title": "Junta tècnica dels Arreplegats | Equip actual",
+			"description": "Equip de junta tècnica dels Arreplegats de la Zona Universitària i àrees responsables del treball casteller."
 		},
 		"comissio-genere-grup-treball": {
-			"title": "Comissió de Gènere - Arreplegats",
-			"description": "Comissió de gènere i grup de treball dels Arreplegats de la Zona Universitària."
+			"title": "Comissió de gènere dels Arreplegats",
+			"description": "Comissió de gènere i grup de treball dels Arreplegats de la Zona Universitària per construir una colla més segura i inclusiva."
 		},
 		"patrocinadors": {
-			"title": "Patrocinadors - Arreplegats",
-			"description": "Patrocinadors, col·laboradors i entitats que donen suport als Arreplegats de la Zona Universitària."
+			"title": "Patrocinadors i col·laboradors | Arreplegats",
+			"description": "Patrocinadors, col·laboradors i entitats que donen suport als Arreplegats de la Zona Universitària i al projecte casteller."
 		},
 		"fotografies": {
-			"title": "Fotografies - Arreplegats",
-			"description": "Galeria fotogràfica dels Arreplegats de la Zona Universitària."
+			"title": "Fotografies de castells universitaris | Arreplegats",
+			"description": "Galeria fotogràfica dels Arreplegats de la Zona Universitària amb imatges de castells, diades i vida de la colla."
 		},
 		"videos": {
-			"title": "Vídeos - Arreplegats",
-			"description": "Vídeos de castells, actuacions i continguts dels Arreplegats de la Zona Universitària."
+			"title": "Vídeos de castells dels Arreplegats",
+			"description": "Vídeos de castells, actuacions, assajos i continguts dels Arreplegats de la Zona Universitària."
 		},
 		"musica": {
-			"title": "Música - Arreplegats",
-			"description": "Cançons, partitures i música dels Arreplegats de la Zona Universitària."
+			"title": "Música, gralles i tabals | Arreplegats",
+			"description": "Cançons, partitures i música dels Arreplegats de la Zona Universitària, amb recursos per a gralles i tabals."
 		},
 		"estatuts": {
-			"title": "Estatuts - Arreplegats",
-			"description": "Estatuts vigents i documents històrics dels Arreplegats de la Zona Universitària."
+			"title": "Estatuts dels Arreplegats | Documents oficials",
+			"description": "Estatuts vigents i documents històrics dels Arreplegats de la Zona Universitària per consultar l'organització de la colla."
 		},
 		"reglament-regim-intern": {
-			"title": "Reglament Règim Intern - Arreplegats",
-			"description": "Reglament de règim intern dels Arreplegats de la Zona Universitària."
+			"title": "Reglament de règim intern | Arreplegats",
+			"description": "Reglament de règim intern dels Arreplegats de la Zona Universitària i documents relacionats amb el funcionament de la colla."
 		},
 		"protocol-agressions": {
-			"title": "Protocol Agressions - Arreplegats",
-			"description": "Protocol d'agressions i documents de prevenció dels Arreplegats de la Zona Universitària."
+			"title": "Protocol d'agressions | Arreplegats",
+			"description": "Protocol d'agressions i documents de prevenció dels Arreplegats de la Zona Universitària per a espais segurs dins la colla."
 		},
 		"jocs": {
-			"title": "Jocs - Arreplegats",
-			"description": "Jocs i activitats interactives dels Arreplegats sobre castells i cultura de la colla."
+			"title": "Jocs de castells dels Arreplegats",
+			"description": "Jocs i activitats interactives dels Arreplegats sobre castells, vocabulari casteller i cultura de la colla."
 		},
 		"sopa-de-lletres": {
-			"title": "Sopa de Lletres - Arreplegats",
-			"description": "Sopa de lletres dels Arreplegats amb vocabulari de castells i de la colla."
+			"title": "Sopa de lletres de castells | Arreplegats",
+			"description": "Sopa de lletres dels Arreplegats amb vocabulari de castells, música i vida universitària de la colla."
 		},
 		"mots-encreuats": {
-			"title": "Mots Encreuats - Arreplegats",
-			"description": "Mots encreuats dels Arreplegats amb pistes sobre castells, música i vida universitària."
+			"title": "Mots encreuats de castells | Arreplegats",
+			"description": "Mots encreuats dels Arreplegats amb pistes sobre castells, música, cultura castellera i vida universitària."
 		},
 		"memory": {
-			"title": "Memory - Arreplegats",
-			"description": "Joc de memory dels Arreplegats amb elements del món casteller universitari."
+			"title": "Memory de cultura castellera | Arreplegats",
+			"description": "Joc de memory dels Arreplegats amb elements del món casteller universitari i objectes de la cultura castellera."
 		},
 		"penjat": {
-			"title": "Penjat - Arreplegats",
-			"description": "Joc del penjat dels Arreplegats amb paraules relacionades amb castells i la colla."
+			"title": "Penjat de vocabulari casteller | Arreplegats",
+			"description": "Joc del penjat dels Arreplegats amb paraules relacionades amb castells, música, assajos i vida de la colla."
 		},
 		"contactar": {
-			"title": "Contactar - Arreplegats",
-			"description": "Contacta amb els Arreplegats de la Zona Universitària per correu electrònic o xarxes socials."
+			"title": "Contacta amb els Arreplegats de la Zona Universitària",
+			"description": "Canals per contactar amb la colla castellera Arreplegats de la Zona Universitària: correu electrònic, xarxes socials i informació de contacte."
 		},
 		"parts-castell": {
-			"title": "Parts Castell - Arreplegats",
-			"description": "Aprèn les parts principals d'un castell amb els Arreplegats de la Zona Universitària."
+			"title": "Parts d'un castell explicades | Arreplegats",
+			"description": "Aprèn les parts principals d'un castell amb els Arreplegats de la Zona Universitària i vocabulari bàsic del món casteller."
 		},
 		"joc-castells": {
-			"title": "Joc Castells - Arreplegats",
-			"description": "Joc de gestió castellera dels Arreplegats de la Zona Universitària."
+			"title": "Joc de gestió castellera | Arreplegats",
+			"description": "Joc de gestió castellera dels Arreplegats de la Zona Universitària per crear una colla i fer créixer els seus castells."
 		}
 	}
 }

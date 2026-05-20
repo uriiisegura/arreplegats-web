@@ -3,6 +3,7 @@ const path = require("path");
 
 const projectRoot = path.join(__dirname, "..");
 const whatsappRecommendedImageSize = 600 * 1024;
+const routeMeta = require("./data/routeMeta.json");
 
 const getIndexHtml = () => {
   return fs.readFileSync(
@@ -102,6 +103,14 @@ describe("OG image metadata", () => {
     expect(getDocumentTitle()).toBe(title);
     expect(title.length).toBeGreaterThanOrEqual(50);
     expect(title.length).toBeLessThanOrEqual(60);
+  });
+
+  test("uses the homepage SEO description for static social previews", () => {
+    const description = routeMeta.routes[""].description;
+
+    expect(getMetaContent("name", "description")).toBe(description);
+    expect(getMetaContent("property", "og:description")).toBe(description);
+    expect(getMetaContent("property", "twitter:description")).toBe(description);
   });
 
   test("uses the shared social image for Open Graph and Twitter", () => {
