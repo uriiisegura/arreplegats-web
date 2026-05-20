@@ -7,7 +7,9 @@ const rootDir = path.resolve(__dirname, "..");
 const buildDir = path.join(rootDir, "build");
 const indexHtmlPath = path.join(buildDir, "index.html");
 const castellsTopPath = path.join(rootDir, "src", "data", "castells-top.json");
+const routeMetaPath = path.join(rootDir, "src", "data", "routeMeta.json");
 const siteUrl = "https://arreplegats.cat";
+const routeMeta = JSON.parse(fs.readFileSync(routeMetaPath, "utf8"));
 
 // Keep this list to public, stable routes that should deep-link on static hosts.
 // Utility, private, event-specific, and generated game-level routes stay on the
@@ -81,13 +83,41 @@ function getCanonicalUrl(route) {
   return `${siteUrl}${route.replace(/\/?$/, "/")}`;
 }
 
+function getRouteMeta(route) {
+  const firstWord = route.split("/")?.[1] || "";
+
+  return routeMeta.routes[firstWord] || routeMeta.default;
+}
+
+function escapeHtml(value) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function escapeAttribute(value) {
+  return escapeHtml(value).replace(/"/g, "&quot;");
+}
+
 function setRouteUrlMeta(indexHtml, route) {
   const canonicalUrl = getCanonicalUrl(route);
+  const meta = getRouteMeta(route);
+  const title = escapeHtml(meta.title);
+  const description = escapeAttribute(meta.description);
+  const attributeTitle = escapeAttribute(meta.title);
 
   return indexHtml
+    .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
+    .replace(/<meta name="title" content="[^"]*">/, `<meta name="title" content="${attributeTitle}">`)
+    .replace(/<meta\s+name="description"\s+content="[^"]*"\s*\/>/, `<meta name="description" content="${description}" />`)
     .replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${canonicalUrl}" />`)
     .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonicalUrl}">`)
-    .replace(/<meta property="twitter:url" content="[^"]*">/, `<meta property="twitter:url" content="${canonicalUrl}">`);
+    .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${attributeTitle}">`)
+    .replace(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="${description}">`)
+    .replace(/<meta property="twitter:url" content="[^"]*">/, `<meta property="twitter:url" content="${canonicalUrl}">`)
+    .replace(/<meta property="twitter:title" content="[^"]*">/, `<meta property="twitter:title" content="${attributeTitle}">`)
+    .replace(/<meta property="twitter:description" content="[^"]*">/, `<meta property="twitter:description" content="${description}">`);
 }
 
 function main() {
@@ -113,5 +143,6 @@ if (require.main === module) {
 
 module.exports = {
   getCanonicalUrl,
+  getRouteMeta,
   setRouteUrlMeta,
 };
