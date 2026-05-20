@@ -7,6 +7,7 @@ const rootDir = path.resolve(__dirname, "..");
 const buildDir = path.join(rootDir, "build");
 const indexHtmlPath = path.join(buildDir, "index.html");
 const castellsTopPath = path.join(rootDir, "src", "data", "castells-top.json");
+const siteUrl = "https://arreplegats.cat";
 
 // Keep this list to public, stable routes that should deep-link on static hosts.
 // Utility, private, event-specific, and generated game-level routes stay on the
@@ -74,21 +75,43 @@ function getOutputPath(route) {
   return path.join(outputDir, "index.html");
 }
 
+function getCanonicalUrl(route) {
+  assertSafeRoute(route);
+
+  return `${siteUrl}${route.replace(/\/?$/, "/")}`;
+}
+
+function setRouteUrlMeta(indexHtml, route) {
+  const canonicalUrl = getCanonicalUrl(route);
+
+  return indexHtml
+    .replace(/<link rel="canonical" href="[^"]*"\s*\/>/, `<link rel="canonical" href="${canonicalUrl}" />`)
+    .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${canonicalUrl}">`)
+    .replace(/<meta property="twitter:url" content="[^"]*">/, `<meta property="twitter:url" content="${canonicalUrl}">`);
+}
+
 function main() {
   if (!fs.existsSync(indexHtmlPath)) {
     throw new Error("Cannot generate route entrypoints before build/index.html exists.");
   }
 
-  const indexHtml = fs.readFileSync(indexHtmlPath);
+  const indexHtml = fs.readFileSync(indexHtmlPath, "utf8");
   const routes = [...new Set([...publicRoutes, ...getCastellRoutes()])];
 
   for (const route of routes) {
     const outputPath = getOutputPath(route);
     fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-    fs.writeFileSync(outputPath, indexHtml);
+    fs.writeFileSync(outputPath, setRouteUrlMeta(indexHtml, route));
   }
 
   console.log(`Generated ${routes.length} static route entrypoints.`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = {
+  getCanonicalUrl,
+  setRouteUrlMeta,
+};
