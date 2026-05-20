@@ -391,6 +391,7 @@ Navbar
 
 .nav-header img {
 	margin-right: 0.7rem;
+	width: auto;
 	height: 3rem;
 	user-select: none;
 }
