@@ -22,7 +22,7 @@ class GrallesTabals extends Component {
 				</p>
 				
 				<div className="read-more">
-					<NavLink to="/contactar">CONTACTA'NS</NavLink>
+					<NavLink to="/contactar/">CONTACTA'NS</NavLink>
 				</div>
 			</section>
 		</>);

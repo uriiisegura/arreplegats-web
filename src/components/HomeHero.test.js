@@ -26,8 +26,8 @@ describe("HomeHero", () => {
 		expect(heroImage).toHaveAttribute("width", String(fallbackImage.width));
 		expect(heroImage).toHaveAttribute("height", String(fallbackImage.height));
 		expect(heroImage).toHaveAttribute("fetchpriority", "high");
-		expect(screen.getByRole("link", { name: "UNEIX-T'HI" })).toHaveAttribute("href", "/assajos");
-		expect(screen.getByRole("link", { name: "AGENDA" })).toHaveAttribute("href", "/agenda");
-		expect(screen.getByRole("link", { name: "CONTACTA'NS!" })).toHaveAttribute("href", "/contactar");
+		expect(screen.getByRole("link", { name: "UNEIX-T'HI" })).toHaveAttribute("href", "/assajos/");
+		expect(screen.getByRole("link", { name: "AGENDA" })).toHaveAttribute("href", "/agenda/");
+		expect(screen.getByRole("link", { name: "CONTACTA'NS!" })).toHaveAttribute("href", "/contactar/");
 	});
 });

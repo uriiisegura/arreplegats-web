@@ -22,7 +22,7 @@ class JuntaDirectiva extends Component {
 		return (<>
 			<section>
 				<h2>Junta directiva</h2>
-				{ any && <p className="junta-message"><span>Atenció!</span> Estàs consultant la junta d'una temporada anterior. Per veure'n l'actual fes click <NavLink to="/junta-directiva">aquí</NavLink>.</p> }
+				{ any && <p className="junta-message"><span>Atenció!</span> Estàs consultant la junta d'una temporada anterior. Per veure'n l'actual fes click <NavLink to="/junta-directiva/">aquí</NavLink>.</p> }
 
 				<p>
 					La Junta Directiva és dirigida per l'equip de presidència. Ha de constar també de secretaria, tresoreria, comissió tècnica i comissió feminista. Actualment, també existeixen les comissions: material, acolliment social, músics, logística i contractació, promoció i difusió, equip sanitari i activitats.
@@ -36,10 +36,10 @@ class JuntaDirectiva extends Component {
 				<div className="junta-year-wrap">
 					{
 						Object.keys(junta.anteriors).sort().map((y, i) => {
-							return <NavLink className={`junta-year ${junta_temporada === junta.anteriors[y]}`} to={`/junta-directiva/${y}`} key={`year-${i}`}>{y}</NavLink>;
+							return <NavLink className={`junta-year ${junta_temporada === junta.anteriors[y]}`} to={`/junta-directiva/${y}/`} key={`year-${i}`}>{y}</NavLink>;
 						})
 					}
-					<NavLink className={`junta-year ${junta_temporada === junta.actual}`} to="/junta-directiva">ACTUAL</NavLink>
+					<NavLink className={`junta-year ${junta_temporada === junta.actual}`} to="/junta-directiva/">ACTUAL</NavLink>
 				</div>
 
 				<JuntaTeams
