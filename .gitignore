@@ -9,6 +9,9 @@
 # production
 /build
 
+# Codex local outputs (mai versionar dades operatives o personals)
+/outputs/
+
 # misc
 .DS_Store
 .vscode
